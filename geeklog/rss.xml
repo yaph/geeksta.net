@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel><title>Geeklog</title>
+    <link>https://geeksta.net</link>
+    <description>Geeklog</description>
+    <lastBuildDate>Tue, 09 Jul 2019 16:44:18 </lastBuildDate>
+    <generator>Logya</generator>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Installing and Setting up Python on Shared Hosting]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/python-shared-hosting/]]></link>
+        <description><![CDATA[<p>This tutorial outlines the steps of installing and setting up  Python on a shared hosting platform and how to enable the creation of virtual environments.</p><img src="https://geeksta.net/img/geeklog/python-fcgi-sample.png" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/python-shared-hosting/]]></guid>
+        <pubDate>Thu, 09 Jul 2015 14:04:15 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Customizing Matplotlib's Plotting Styles]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/custom-matplotlib-styles/]]></link>
+        <description><![CDATA[<p>A tutorial on how to customize the look and feel of plots created with the Matplotlib library for Python.</p><img src="http://i.imgur.com/yNUl6V4.png" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/custom-matplotlib-styles/]]></guid>
+        <pubDate>Fri, 19 Jun 2015 19:12:51 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Automating Browser Tasks without Distraction on Ubuntu]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/automating-browser-tasks-without-distraction-on-ubuntu/]]></link>
+        <description><![CDATA[<p>How to automate browser tasks on Ubuntu using Selenium from Python without displaying a browser window.</p><img src="https://geeksta.net/img/geeklog/automating-browser-tasks-without-distraction-on-ubuntu.png" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/automating-browser-tasks-without-distraction-on-ubuntu/]]></guid>
+        <pubDate>Sat, 23 May 2015 13:21:48 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[A Simple Hack to Write Better Commit Messages]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/better-commit-messages/]]></link>
+        <description><![CDATA[<p>This article describes a simple and effective method to write better commit messages for people who commit directly from the command line.</p><img src="https://imgs.xkcd.com/comics/git_commit.png" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/better-commit-messages/]]></guid>
+        <pubDate>Wed, 20 May 2015 12:52:54 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Python Script to Delete Delicious Bookmarks]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/delete-delicious-bookmarks/]]></link>
+        <description><![CDATA[<p>A Python script to delete all bookmarks from the Delicious bookmarking service for the authenticated user.</p><img src="https://geeksta.net/img/geeklog/delete-delicious-bookmarks.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/delete-delicious-bookmarks/]]></guid>
+        <pubDate>Sat, 09 Feb 2013 22:07:37 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[(Ab)using Pandas to Migrate Disqus Threads]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/abusing-pandas-migrate-disqus/]]></link>
+        <description><![CDATA[<p>A short tutorial on how to use the pandas Python toolkit to create a URL map for migrating Disqus comment threads.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/abusing-pandas-migrate-disqus/]]></guid>
+        <pubDate>Thu, 07 Feb 2013 01:20:21 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Quick and Dirty Site Monitoring with Google Apps Script]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/quick-dirty-site-monitoring-google-apps-script/]]></link>
+        <description><![CDATA[<p>A tutorial on how to use Google Drive and Apps Script to set up a free Website monitoring service that runs on Google's infrastructure.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/quick-dirty-site-monitoring-google-apps-script/]]></guid>
+        <pubDate>Fri, 14 Sep 2012 22:33:17 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Taking Web Page Screenshots with PhantomJS and Python]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/web-page-screenshots-phantomjs-python/]]></link>
+        <description><![CDATA[<p>A brief tutorial on how to create screenshots with common browser resolutions and save them as PNG files using PhantomJS and Python.</p><img src="https://geeksta.net/img/geeklog/web-page-screenshots-phantomjs-python.png" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/web-page-screenshots-phantomjs-python/]]></guid>
+        <pubDate>Wed, 12 Sep 2012 23:04:55 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Free Software and Content Licenses You Should Totally Use]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/free-software-content-licenses/]]></link>
+        <description><![CDATA[<p>A look at notable but rarely used free software licenses to consider for free and open projects.</p><img src="https://geeksta.net/img/free-software-content-licenses.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/free-software-content-licenses/]]></guid>
+        <pubDate>Thu, 30 Aug 2012 01:32:26 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Exploring Expressions of Emotions in GitHub Commit Messages]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/exploring-expressions-emotions-github-commit-messages/]]></link>
+        <description><![CDATA[<p>An exploration of expressions of emotions, issues and swearing in GitHub commit messages based on data from the GitHub Archive accessed via Google BigQuery.</p><img src="https://geeksta.net/img/emotions-github-commit-messages/commit-messages-anger-percentage.png" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/exploring-expressions-emotions-github-commit-messages/]]></guid>
+        <pubDate>Thu, 10 May 2012 14:11:58 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Diving into Ruby, Sinatra and MongoDB on OpenShift]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/diving-into-ruby-sinatra-mongodb-openshift/]]></link>
+        <description><![CDATA[<p>A howto on creating and running an application using Ruby, Sinatra and MongoDB on Redhat's OpenShift platform for hosting apps in the cloud.</p><img src="https://geeksta.net/img/geeklog/ruby-sinatra-mongodb-openshift.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/diving-into-ruby-sinatra-mongodb-openshift/]]></guid>
+        <pubDate>Thu, 29 Mar 2012 22:57:23 </pubDate>
+    </item>
+    
+</channel></rss>

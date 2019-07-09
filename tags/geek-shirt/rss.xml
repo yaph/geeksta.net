@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel><title>Tags » Geek Shirt</title>
+    <link>https://geeksta.net</link>
+    <description>Tags » Geek Shirt</description>
+    <lastBuildDate>Tue, 09 Jul 2019 16:44:18 </lastBuildDate>
+    <generator>Logya</generator>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Magic Numbers Shirt Generator]]></title>
+        <link><![CDATA[https://geeksta.net/tools/magic-numbers-shirt-generator/index/]]></link>
+        <description><![CDATA[<p>Pick a magic hexspeak number to print it on a shirt for computer programmers and geeks.</p><img src="https://geeksta.net/img/tools/magic-number-0x1BADB002-shirt.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/tools/magic-numbers-shirt-generator/index/]]></guid>
+        <pubDate>Tue, 23 Jun 2015 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Leetspeak Shirt Generator]]></title>
+        <link><![CDATA[https://geeksta.net/tools/leetspeak-shirt-generator/]]></link>
+        <description><![CDATA[<p>Enter text to translate into leetspeak and get it printed on a t-shirt.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/tools/leetspeak-shirt-generator/]]></guid>
+        <pubDate>Sun, 08 Jul 2012 20:09:27 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Born at Unix Time: Get Your Birthday Shirt]]></title>
+        <link><![CDATA[https://geeksta.net/tools/born-at-unix-time/]]></link>
+        <description><![CDATA[<p>Enter the date and time of your birth to get a t-shirt with the Unix time stamp of your birth printed on it.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/tools/born-at-unix-time/]]></guid>
+        <pubDate>Wed, 05 Oct 2011 00:00:00 </pubDate>
+    </item>
+    
+</channel></rss>

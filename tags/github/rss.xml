@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel><title>Tags » Github</title>
+    <link>https://geeksta.net</link>
+    <description>Tags » Github</description>
+    <lastBuildDate>Tue, 09 Jul 2019 16:44:18 </lastBuildDate>
+    <generator>Logya</generator>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[GitHub Commit Map]]></title>
+        <link><![CDATA[https://geeksta.net/visualizations/github-commit-map/]]></link>
+        <description><![CDATA[<p>A geographic map that displays location information extracted from GitHub commit data grouped by the countries of the world.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/visualizations/github-commit-map/]]></guid>
+        <pubDate>Sat, 23 Jun 2012 22:51:55 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Web Browser Word Clouds from GitHub Commit Messages]]></title>
+        <link><![CDATA[https://geeksta.net/visualizations/web-browser-word-clouds-github-commit-messages/]]></link>
+        <description><![CDATA[<p>Visualization of GitHub commit messages with web browser mentions as word clouds created with the D3.js JavaScript library.</p><img src="https://geeksta.net/img/vis/web-browser-word-clouds-from-github-commit-messages.png" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/visualizations/web-browser-word-clouds-github-commit-messages/]]></guid>
+        <pubDate>Fri, 11 May 2012 15:15:52 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Exploring Expressions of Emotions in GitHub Commit Messages]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/exploring-expressions-emotions-github-commit-messages/]]></link>
+        <description><![CDATA[<p>An exploration of expressions of emotions, issues and swearing in GitHub commit messages based on data from the GitHub Archive accessed via Google BigQuery.</p><img src="https://geeksta.net/img/emotions-github-commit-messages/commit-messages-anger-percentage.png" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/exploring-expressions-emotions-github-commit-messages/]]></guid>
+        <pubDate>Thu, 10 May 2012 14:11:58 </pubDate>
+    </item>
+    
+</channel></rss>

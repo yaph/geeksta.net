@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel><title>Js Drawing</title>
+    <link>https://geeksta.net</link>
+    <description>Js Drawing</description>
+    <lastBuildDate>Tue, 09 Jul 2019 16:44:18 </lastBuildDate>
+    <generator>Logya</generator>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Drawing Ramones Style Circular Text with D3.js]]></title>
+        <link><![CDATA[https://geeksta.net/js-drawing/circular-text-ramones/]]></link>
+        <description><![CDATA[<p>Example JavaScript on how to draw circular text as seen in the Ramones logo with SVG paths and SVG text elements using the D3.js API.</p><img src="https://geeksta.net/img/js-drawing/circular-text-gof.png" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/js-drawing/circular-text-ramones/]]></guid>
+        <pubDate>Tue, 22 Sep 2015 14:25:56 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Drawing the New York Hardcore Logo with D3.js]]></title>
+        <link><![CDATA[https://geeksta.net/js-drawing/nyhc-logo/]]></link>
+        <description><![CDATA[<p>Example JavaScript code of how you can draw the New York Hardcore (NYHC) logo with D3.js using SVG shapes and text.</p><img src="https://geeksta.net/img/js-drawing/nyhc-white-on-black.png" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/js-drawing/nyhc-logo/]]></guid>
+        <pubDate>Sat, 07 Mar 2015 00:15:49 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Drawing Crosshairs with D3.js Using SVG Shapes]]></title>
+        <link><![CDATA[https://geeksta.net/js-drawing/svg-crosshairs/]]></link>
+        <description><![CDATA[<p>Example JavaScript code of how you can draw SVG crosshairs with D3.js using SVG shapes.</p><img src="https://geeksta.net/img/js-drawing/svg-crosshairs.png" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/js-drawing/svg-crosshairs/]]></guid>
+        <pubDate>Thu, 05 Mar 2015 12:58:06 </pubDate>
+    </item>
+    
+</channel></rss>

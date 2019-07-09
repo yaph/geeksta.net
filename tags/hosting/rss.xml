@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel><title>Tags » Hosting</title>
+    <link>https://geeksta.net</link>
+    <description>Tags » Hosting</description>
+    <lastBuildDate>Tue, 09 Jul 2019 16:44:18 </lastBuildDate>
+    <generator>Logya</generator>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Installing and Setting up Python on Shared Hosting]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/python-shared-hosting/]]></link>
+        <description><![CDATA[<p>This tutorial outlines the steps of installing and setting up  Python on a shared hosting platform and how to enable the creation of virtual environments.</p><img src="https://geeksta.net/img/geeklog/python-fcgi-sample.png" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/python-shared-hosting/]]></guid>
+        <pubDate>Thu, 09 Jul 2015 14:04:15 </pubDate>
+    </item>
+    
+</channel></rss>
