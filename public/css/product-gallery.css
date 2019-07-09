@@ -1,0 +1,5 @@
+.thumbnails h3 {height:38px;overflow:hidden;font-size:1em;}
+.thumbnails img {width:100%;}
+
+.thumbnails.books img {height:340px;width:260px;}
+.thumbnails.books h3 {font-size:.8em;}

@@ -1,0 +1,21 @@
+path {
+    stroke: #888;
+}
+.yes {
+    fill: #b2df8a;
+}
+.no {
+    fill: #1f78b4;
+}
+.open {
+    fill: #a6cee3;
+}
+.female {
+    fill: #ef8a62;
+}
+.male {
+    fill: #67a9cf;
+}
+.pie-legend svg {
+    margin: 0 .2em 0 1em;
+}

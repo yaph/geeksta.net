@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head itemscope itemtype="http://schema.org/WebSite">
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title itemprop="name">What Area can you Buy for $1M in different US Cities | Geeksta</title>
+        <meta name="description" content="A set of data visualizations that display what area of land you could buy for 1 million US dollar in different US cities.">
+        <meta name="author" content="Ramiro Gómez">
+        
+            <meta property="og:image" content="http://i.imgur.com/OkS5jW1.png">
+            
+
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@yaph">
+    <meta name="twitter:title" content="What Area can you Buy for $1M in different US Cities">
+    <meta name="twitter:description" content="A set of data visualizations that display what area of land you could buy for 1 million US dollar in different US cities.">
+    <meta name="twitter:image:src" content="http://i.imgur.com/OkS5jW1.png">
+
+        
+        
+        <meta name="flattr:id" content="4pzdyq">
+        <link href="https://geeksta.net/visualizations/us-housing-prices/" rel="canonical" itemprop="url">
+        <link href="/img/icon-small.png" rel="icon" type="image/png">
+        <link href="/rss.xml" rel="alternate" type="application/rss+xml" title="Geeksta All Posts RSS feed">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
+        
+            
+        
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+    </head>
+    <body>
+    <div class="navbar navbar-fixed-top navbar-inverse">
+        <div class="container">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" id="site-name" href="/">Geeksta</a>
+            <div class="collapse navbar-collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav pull-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sections <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/reviews/">Book Reviews</a></li>
+                            <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
+                            <li><a href="/visualizations/">Data Visualizations</a></li>
+                            <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
+                            <li><a href="/events/">Geek Events</a></li>
+                            <li><a href="/videos/">Videos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/geeklog/">Geeklog</a></li>
+                    <li><a href="/shirts/">Shirts</a></li>
+                    <li><a href="/tools/">Tools</a></li>
+                    <li id="sharemenu" class="dropdown">
+  <button type="button" class="dropdown-toggle btn btn-success navbar-btn" data-toggle="dropdown"><i class="fa fa-share"></i></button>
+  <ul class="share dropdown-menu pull-right">
+    <li><a href="/rss.xml" class="btn btn-default"><i class="fa fa-rss"></i> RSS Feed</a></li>
+    <li><a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/visualizations/us-housing-prices/&title=What%20Area%20can%20you%20Buy%20for%20%241M%20in%20different%20US%20Cities" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
+    <li><a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/visualizations/us-housing-prices/&text=What%20Area%20can%20you%20Buy%20for%20%241M%20in%20different%20US%20Cities" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
+    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/visualizations/us-housing-prices/&t=What%20Area%20can%20you%20Buy%20for%20%241M%20in%20different%20US%20Cities" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
+    <li><a rel="nofollow" href="https://plus.google.com/share?url=https%3A//geeksta.net/visualizations/us-housing-prices/" class="btn btn-default"><i class="fa fa-google-plus"></i> Google+</a></li>
+    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geeksta.net/visualizations/us-housing-prices/&title=What%20Area%20can%20you%20Buy%20for%20%241M%20in%20different%20US%20Cities" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+    <li><a rel="nofollow" href="https://www.stumbleupon.com/submit?url=https%3A//geeksta.net/visualizations/us-housing-prices/&title=What%20Area%20can%20you%20Buy%20for%20%241M%20in%20different%20US%20Cities" class="btn btn-default"><i class="fa fa-stumbleupon"></i> Stumble</a></li>
+  </ul>
+</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="wrapper" class="container">
+        
+        
+<div class="row">
+    <div itemscope itemtype="http://schema.org/Article" class="col-md-9">
+        <header><h1 itemprop="name">What Area can you Buy for $1M in different US Cities</h1></header>
+        
+        <p>Probably my favorite resource for discovering interesting data visualizations is Reddit, specifically the subreddits <a href="http://www.reddit.com/r/dataisbeautiful/">Data is Beautiful</a> and <a href="http://www.reddit.com/r/mapporn/">Map Porn</a>. But there is also <a href="http://www.reddit.com/r/dataisugly/">Data is Ugly</a>, a showcase of not so well done visualizations.</p>
+<p>This sub recently <a href="http://www.reddit.com/r/dataisugly/comments/23zwij/part_ii_of_the_worstof_rdataisbeautiful_contest/">started a contest</a> to fix a data visualization, that was nominated by the community as a particularly bad example submitted to Data is Beautiful. The first edition was about fixing the <a href="http://www.reddit.com/r/dataisbeautiful/comments/20pr8i/how_much_of_a_house_in_square_feet_can_be_bought/">following chart</a>.</p>
+<p><a href="http://i.imgur.com/QfD6qIw.png" title="How much of a house (in square feet) can be bought with $1 million in major US cities"><img class="img-responsive" src="http://i.imgur.com/QfD6qIw.png" alt="Number of Square Feet for $1,000,000"/></a></p>
+<p>While this chart was popular on Reddit and sparked a lot of discussion, the visual representation of the data is not good for comparing the numbers. One chart type that is well-suited for comparisons is the bar chart, which is what I submitted as a possible improvement.</p>
+<p><a href="http://i.imgur.com/nkcxpMU.png" title="US Housing Prices"><img class="img-responsive" src="http://i.imgur.com/nkcxpMU.png" alt="US Housing Prices Bar Chart"/></a></p>
+<p>This chart is less engaging, but makes it easier to compare the values. After some discussion in the contest thread, I also created the following visualizations which use areas to represent the number of square feet. I used <a href="http://raw.densitydesign.org/">Raw from Density Design</a>, a neat online tool built on top of D3.js for creating charts from CSV files.</p>
+<p><a href="http://i.imgur.com/bxoozUk.png" title="US Housing Prices Treemap"><img class="img-responsive" src="http://i.imgur.com/bxoozUk.png" alt="US Housing Prices Treemap"/></a></p>
+<p>One drawback of this Treemap is it doesn't show the actual numbers, also compared to the bar chart it is harder to figure out that the area you get in Detroit is about 4 times as big as that in Cleveland. How to improve that?</p>
+<p><a href="http://i.imgur.com/udqrq9E.jpg" title="US Housing Prices Bubbles"><img class="img-responsive" src="http://i.imgur.com/udqrq9E.jpg" alt="US Housing Prices Bubbles"/></a></p>
+<p>Certainly not using a bubble chart, but I still created this one as it was so easy using Raw. Last but not least, after <a href="http://www.reddit.com/r/dataisugly/comments/23zwij/part_ii_of_the_worstof_rdataisbeautiful_contest/che4a52">TheIndigoSky suggested</a> coming up with a nicer visual metaphor than simply displaying the number of square feet, I created the following chart.</p>
+<p><a href="http://i.imgur.com/OkS5jW1.png" title="How many Basketball courts could you buy for $1M in US cities"><img class="img-responsive" src="http://i.imgur.com/OkS5jW1.png" alt="How many Basketball courts could you buy for $1M in US cities"/></a></p>
+<p>Here the area is represented as Basketball courts, which <a href="http://www.wolframalpha.com/input/?i=basketball+court+dimensions">according to Wolfram Alpha</a> are 94 feet x 50 feet or 4700 square feet. It turns out that you could buy an area the size of almost 18 Basketball courts in Detroit and not even a third of a court in San Francisco. I think this is a fairly good representation as it uses a metaphor that makes sense to most people in the US, and since Basketball is a quite popular sport I assume it does so outside the US as well. Moreover, it overcomes the problems people used to the metric system have with square feet.</p>
+<p>If you have feedback please share it in the comments below or in the <a href="http://www.reddit.com/r/dataisugly/comments/23zwij/part_ii_of_the_worstof_rdataisbeautiful_contest/">contest thread</a>. Also, I'd like to see more people participating in the next contest.</p>
+    </div>
+    <div class="col-md-3">
+        
+
+<h2>Featured Posts</h2>
+<ul class="list-unstyled">
+  <li class="voffset"><a href="/geeklog/exploring-expressions-emotions-github-commit-messages/">Exploring Expressions of Emotions in GitHub Commit Messages</a></li>
+  <li class="voffset"><a href="/geeklog/web-page-screenshots-phantomjs-python/">Taking Web Page Screenshots with PhantomJS and Python</a></li>
+  <li class="voffset"><a href="/visualizations/age-musicians-die/">What Age Do Musicians Die at</a></li>
+</ul>
+<hr>
+<h2>Featured T-Shirt</h2>
+
+
+<a href="/design/no-braces-red-white/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/no-braces-red-white.jpg" alt="No Braces - Funny Python Coding Design Red/White" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">No Braces - Funny Python Coding Design Red/White</figcaption>
+    </figure>
+</a>
+
+<hr>
+<h2>Latest Posts</h2>
+<ul class="list-unstyled">
+
+    <li class="voffset"><a href="/geeklog/python-shared-hosting/">Installing and Setting up Python on Shared Hosting</a></li>
+
+    <li class="voffset"><a href="/geeklog/custom-matplotlib-styles/">Customizing Matplotlib's Plotting Styles</a></li>
+
+    <li class="voffset"><a href="/geeklog/automating-browser-tasks-without-distraction-on-ubuntu/">Automating Browser Tasks without Distraction on Ubuntu</a></li>
+
+    <li class="voffset"><a href="/geeklog/better-commit-messages/">A Simple Hack to Write Better Commit Messages</a></li>
+
+    <li class="voffset"><a href="/geeklog/delete-delicious-bookmarks/">Python Script to Delete Delicious Bookmarks</a></li>
+
+</ul>
+<hr>
+<a href="/rss.xml" class="btn btn-warning"><i class="fa fa-rss"></i> Subscribe to new content</a></li>
+    </div>
+</div>
+
+        
+<hr class="clearfix">
+<h4>Share this post on:</h4>
+<div class="share">
+    <a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/visualizations/us-housing-prices/&t=What%20Area%20can%20you%20Buy%20for%20%241M%20in%20different%20US%20Cities" class="btn btn-default btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
+    <a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/visualizations/us-housing-prices/&title=What%20Area%20can%20you%20Buy%20for%20%241M%20in%20different%20US%20Cities" class="btn btn-default btn-lg"><i class="fa fa-reddit-alien"></i> Reddit</a>
+    <a rel="nofollow" href="https://www.stumbleupon.com/submit?url=https%3A//geeksta.net/visualizations/us-housing-prices/&title=What%20Area%20can%20you%20Buy%20for%20%241M%20in%20different%20US%20Cities" class="btn btn-default btn-lg"><i class="fa fa-stumbleupon"></i> StumbleUpon</a>
+    <a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/visualizations/us-housing-prices/&text=What%20Area%20can%20you%20Buy%20for%20%241M%20in%20different%20US%20Cities" class="btn btn-default btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
+</div>
+<hr class="clearfix">
+<div class="postinfo">
+<p>This post was written by <a href="http://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time itemprop="datePublished" datetime="2014-05-10T14:20">May 10, 2014</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+
+<p>
+<strong>Tags:</strong>
+
+<span class="label label-info"><a href="/tags/visualization/">visualization</a></span>
+
+<span class="label label-info"><a href="/tags/economy/">economy</a></span>
+
+</p>
+
+<p class="text-muted"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h2>Featured T-Shirts</h2></div>
+    <div class="panel-body">
+
+
+    <div class="row">
+        <div class="col-md-3">
+            
+<a href="/design/caution-i-curse-when-i-commit-code/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/caution-i-curse-when-i-commit-code.jpg" alt="Caution I Curse When I Commit Code - Funny Programmer Design" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Caution I Curse When I Commit Code - Funny Programmer Design</figcaption>
+    </figure>
+</a>
+
+        </div>
+    
+
+    
+        <div class="col-md-3">
+            
+<a href="/design/hack-the-planet-green/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/hack-the-planet-green.jpg" alt="Hack the Planet - Green Design for Computer Hackers" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Hack the Planet - Green Design for Computer Hackers</figcaption>
+    </figure>
+</a>
+
+        </div>
+    
+
+    
+        <div class="col-md-3">
+            
+<a href="/design/shrug-it-works-on-my-machine-medium-white/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/shrug-it-works-on-my-machine-medium-white.jpg" alt="Shrug it works on my machine - Programmer Excuse Design - White Text" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Shrug it works on my machine - Programmer Excuse Design - White Text</figcaption>
+    </figure>
+</a>
+
+        </div>
+    
+
+    
+        <div class="col-md-3">
+            
+<a href="/design/bash-fork-bomb-white/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/bash-fork-bomb-white.jpg" alt="Bash Fork Bomb - White Text for Unix/Linux Hackers" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Bash Fork Bomb - White Text for Unix/Linux Hackers</figcaption>
+    </figure>
+</a>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+    </div>
+
+    <div id="footer" class="container">
+        <p>Geeksta.net: programming, data mining, data visualization, tech books, and tools for tech geeks.<br>
+        © <script>document.write(new Date().getFullYear())</script> Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/sitemap/">Sitemap</a></p>
+    </div>
+
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/js/script.js"></script>
+    
+        
+    
+    <script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-5102014-10', 'auto');
+ga('send', 'pageview');
+(function(c,a){function d(){var e=a.getElementsByTagName("a");var f=[];for(var g=0;g<e.length;++g){var h=e[g];if(h.host!=c.location.host){f.push(h)}}return f}function b(f){var e=f.srcElement||f.target;while(e&&(typeof e.tagName=="undefined"||e.tagName.toLowerCase()!="a"||!e.href)){e=e.parentNode}if(!e||!e.href){return}if(c.ga){ga("send","event","Outbound link","Click",e.href)}if(!e.target||e.target.match(/^_(self|parent|top)$/i)){setTimeout(function(){a.location.href=e.href},150);if(f.preventDefault){f.preventDefault()}else{f.returnValue=false}}}c.addEventListener("load",function(){var e=d();for(var f in e){e[f].addEventListener("click",b)}})}(window,document));
+</script>
+    </body>
+</html>

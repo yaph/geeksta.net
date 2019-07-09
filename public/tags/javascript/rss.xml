@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel><title>Tags » Javascript</title>
+    <link>https://geeksta.net</link>
+    <description>Tags » Javascript</description>
+    <lastBuildDate>Tue, 09 Jul 2019 16:02:24 </lastBuildDate>
+    <generator>Logya</generator>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Gender Comparison: Would you Tell your Weight?]]></title>
+        <link><![CDATA[https://geeksta.net/visualizations/tell-weight/]]></link>
+        <description><![CDATA[<p>A look at the results of a poll about whether people disclose their body weight and how to present results of such a pool using data visualization.</p><img src="https://geeksta.net/img/vis/gender-comparison-tell-weight.png" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/visualizations/tell-weight/]]></guid>
+        <pubDate>Fri, 05 Jun 2015 14:37:22 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Quick and Dirty Site Monitoring with Google Apps Script]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/quick-dirty-site-monitoring-google-apps-script/]]></link>
+        <description><![CDATA[<p>A tutorial on how to use Google Drive and Apps Script to set up a free Website monitoring service that runs on Google's infrastructure.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/quick-dirty-site-monitoring-google-apps-script/]]></guid>
+        <pubDate>Fri, 14 Sep 2012 22:33:17 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Taking Web Page Screenshots with PhantomJS and Python]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/web-page-screenshots-phantomjs-python/]]></link>
+        <description><![CDATA[<p>A brief tutorial on how to create screenshots with common browser resolutions and save them as PNG files using PhantomJS and Python.</p><img src="https://geeksta.net/img/geeklog/web-page-screenshots-phantomjs-python.png" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/web-page-screenshots-phantomjs-python/]]></guid>
+        <pubDate>Wed, 12 Sep 2012 23:04:55 </pubDate>
+    </item>
+    
+</channel></rss>

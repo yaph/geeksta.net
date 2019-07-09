@@ -1,0 +1,36 @@
+#pickerform label {
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+.glyphicon-ok {
+    color: #008800;
+}
+
+.glyphicon-remove {
+    color: #af0000;
+}
+
+.color-list li {
+    float: left;
+    width: 162px;
+}
+
+.color-list .box {
+    border: 1px solid #000;
+    width: 142px;
+    height: 80px;
+    text-align: center;
+    padding-top: 4px;
+    font: bold 24px/36px sans;
+    color: #000;
+}
+
+.color-list .name, .color-list .cratio {
+    font: 13px/20px sans;
+    margin-bottom: 10px;
+}
+
+.color-list .cratio {
+    margin-right: 20px;
+}

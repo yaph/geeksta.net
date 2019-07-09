@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel><title>Shirts » Software Development</title>
+    <link>https://geeksta.net</link>
+    <description>Shirts » Software Development</description>
+    <lastBuildDate>Tue, 09 Jul 2019 16:02:24 </lastBuildDate>
+    <generator>Logya</generator>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Caution I Curse When I Commit Code - Funny Programmer Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/caution-i-curse-when-i-commit-code/]]></link>
+        <description><![CDATA[<p>Profanity is a language all programmers speak fluently. Coding can be frustrating, which is manifested in some commit messages for Git and other version control systems. Warn your co-workers, if you tend to curse or swear in commit messages. / This design...</p><img src="https://geeksta.net/img/large/caution-i-curse-when-i-commit-code.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/caution-i-curse-when-i-commit-code/]]></guid>
+        <pubDate>Thu, 09 May 2019 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Caution I Curse When I Review Code - Funny Programmer design]]></title>
+        <link><![CDATA[https://geeksta.net/design/caution-i-curse-when-i-review-code/]]></link>
+        <description><![CDATA[<p>Profanity is a language all programmers speak fluently. The amount of cursing and swearing can get excessive when doing a code review, especially if you are the BDFL of a project like Linux, so better warn your co-workers if you can&#8217;t hold back. /...</p><img src="https://geeksta.net/img/large/caution-i-curse-when-i-review-code.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/caution-i-curse-when-i-review-code/]]></guid>
+        <pubDate>Wed, 29 Nov 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[It Works In My Container Funny Developer Design Black]]></title>
+        <link><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-v-black/]]></link>
+        <description><![CDATA[<p>IT teams who practice DevOps often use containers in their workflow. In such an environment &#8220;It works in my container&#8221; is a programmer excuse you may here more often than its popular predecessor &#8220;It works on my machine&#8221;. / A design...</p><img src="https://geeksta.net/img/large/shrug-it-works-in-my-container-v-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-v-black/]]></guid>
+        <pubDate>Sun, 12 Nov 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[It Works In My Container Funny Developer Design White/Green]]></title>
+        <link><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-v-white-green/]]></link>
+        <description><![CDATA[<p>IT teams who practice DevOps often use containers in their workflow. In such an environment &#8220;It works in my container&#8221; is a programmer excuse you may here more often than its popular predecessor &#8220;It works on my machine&#8221;. / A design...</p><img src="https://geeksta.net/img/large/shrug-it-works-in-my-container-v-white-green.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-v-white-green/]]></guid>
+        <pubDate>Sun, 12 Nov 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[It Works In My Container Funny Developer Design White]]></title>
+        <link><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-v-white/]]></link>
+        <description><![CDATA[<p>IT teams who practice DevOps often use containers in their workflow. In such an environment &#8220;It works in my container&#8221; is a programmer excuse you may here more often than its popular predecessor &#8220;It works on my machine&#8221;. / A design...</p><img src="https://geeksta.net/img/large/shrug-it-works-in-my-container-v-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-v-white/]]></guid>
+        <pubDate>Sun, 12 Nov 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Straight Outta Green Tests - Funny QA Engineer Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/straight-outta-green-tests/]]></link>
+        <description><![CDATA[<p>Many tools used in software quality assurance show successful tests in green and failed ones in red. So better don&#8217;t run straight out of green tests. A design for computer programmers and software engineers with a sense of self deprecating humor. •...</p><img src="https://geeksta.net/img/large/straight-outta-green-tests.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/straight-outta-green-tests/]]></guid>
+        <pubDate>Thu, 26 Oct 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Broken Gets Fixed Crappy Stays Forever - White Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/broken-gets-fixed-crappy-stays-forever-white/]]></link>
+        <description><![CDATA[<p>The message of this design applies to many parts of (work) life. Programmers deal with broken software all the time. If a user notices a bug, it&#8217;ll get fixed, but crappy code and poor application design stay until the project is reimplemented from...</p><img src="https://geeksta.net/img/large/broken-gets-fixed-crappy-stays-forever-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/broken-gets-fixed-crappy-stays-forever-white/]]></guid>
+        <pubDate>Wed, 05 Jul 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Broken Gets Fixed Crappy Stays Forever - Black Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/broken-gets-fixed-crappy-stays-forever-black/]]></link>
+        <description><![CDATA[<p>The message of this design applies to many parts of (work) life. Programmers deal with broken software all the time. If a user notices a bug, it&#8217;ll get fixed, but crappy code and poor application design stay until the project is reimplemented from...</p><img src="https://geeksta.net/img/large/broken-gets-fixed-crappy-stays-forever-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/broken-gets-fixed-crappy-stays-forever-black/]]></guid>
+        <pubDate>Wed, 05 Jul 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Weeks of programming can save you hours of planning - Black Text]]></title>
+        <link><![CDATA[https://geeksta.net/design/weeks-of-programming-black/]]></link>
+        <description><![CDATA[<p>Trying to save time in the wrong place typically results in more work, in case of software projects you also get additional bugs for free. Be bold and let your co-workers know that planing is an important part of writing code. / A funny design for computer...</p><img src="https://geeksta.net/img/large/weeks-of-programming-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/weeks-of-programming-black/]]></guid>
+        <pubDate>Sat, 13 May 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Weeks of programming can save you hours of planning - White Text]]></title>
+        <link><![CDATA[https://geeksta.net/design/weeks-of-programming-white/]]></link>
+        <description><![CDATA[<p>Trying to save time in the wrong place typically results in more work, in case of software projects you also get additional bugs for free. Be bold and let your co-workers know that planing is an important part of writing code. / A funny design for computer...</p><img src="https://geeksta.net/img/large/weeks-of-programming-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/weeks-of-programming-white/]]></guid>
+        <pubDate>Sat, 13 May 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Code Rebel - git push --force - Software Developer Design - White]]></title>
+        <link><![CDATA[https://geeksta.net/design/git-rebel-white/]]></link>
+        <description><![CDATA[<p>Using the force option of the git push command is usually frowned upon in software development projects. But being a rebel coder means to oppose rules and push with force when necessary. / This design is for computer programmers who like to live...</p><img src="https://geeksta.net/img/large/git-rebel-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/git-rebel-white/]]></guid>
+        <pubDate>Mon, 17 Apr 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Code Rebel - git push --force - Software Developer Design - Black]]></title>
+        <link><![CDATA[https://geeksta.net/design/git-rebel-black/]]></link>
+        <description><![CDATA[<p>Using the force option of the git push command is usually frowned upon in software development projects. But being a rebel coder means to oppose rules and push with force when necessary. / This design is for computer programmers who like to live...</p><img src="https://geeksta.net/img/large/git-rebel-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/git-rebel-black/]]></guid>
+        <pubDate>Mon, 17 Apr 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Shrug it works on my machine - Programmer Excuse Design - White/Green Text]]></title>
+        <link><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-medium-green/]]></link>
+        <description><![CDATA[<p>This design consists of the unicode emoticon for shrugging your shoulders and smiling and the text &#8220;it works on my machine&#8221;, one of the most frequent excuses you hear when confronting a programmer with a bug. / The design elements are white and...</p><img src="https://geeksta.net/img/large/shrug-it-works-on-my-machine-medium-green.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-medium-green/]]></guid>
+        <pubDate>Sun, 12 Feb 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Gang of Four Parody Design for Programmers]]></title>
+        <link><![CDATA[https://geeksta.net/design/gof-ramones-style/]]></link>
+        <description><![CDATA[<p>A parody design dedicated to the Gang of Four (GoF), the authors of the software engineering classic book &#8220;Design Patterns&#8221; Erich Gamma, Richard Helm, Ralph Johnson, John Vlissidis. / The design consists of the text &#8220;GANG OF FOUR&#8221;...</p><img src="https://geeksta.net/img/large/gof-ramones-style.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/gof-ramones-style/]]></guid>
+        <pubDate>Wed, 23 Mar 2016 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[BUG HUNTER with Keyboard - Design for Test Engineers White Font]]></title>
+        <link><![CDATA[https://geeksta.net/design/bug-hunter-keyboard-white/]]></link>
+        <description><![CDATA[<p>Whether you are a dedicated test engineer working on quality assurance in software projects or a regular programmer, bug hunting is part of your job. Show that you are a notorious bug hunter with this design that features the text &#8220;BUG HUNTER&#8221;...</p><img src="https://geeksta.net/img/large/bug-hunter-keyboard-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/bug-hunter-keyboard-white/]]></guid>
+        <pubDate>Fri, 18 Mar 2016 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Git Hero - Parody Design for Version Control Heros]]></title>
+        <link><![CDATA[https://geeksta.net/design/git-hero/]]></link>
+        <description><![CDATA[<p>Are you proficient at using git or are you even one of the developers of this popular version control system? If the answer is yes, you are a &#8220;git hero&#8221;. / This typographic design consists of the words &#8220;git hero&#8221; in black outlined...</p><img src="https://geeksta.net/img/large/git-hero.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/git-hero/]]></guid>
+        <pubDate>Fri, 18 Mar 2016 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[BUG HUNTER with Keyboard - Design for Test Engineers Black Font]]></title>
+        <link><![CDATA[https://geeksta.net/design/bug-hunter-keyboard-black/]]></link>
+        <description><![CDATA[<p>Whether you are a dedicated test engineer working on quality assurance in software projects or a regular programmer, bug hunting is part of your job. Show that you are a notorious bug hunter with this design that features the text &#8220;BUG HUNTER&#8221;...</p><img src="https://geeksta.net/img/large/bug-hunter-keyboard-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/bug-hunter-keyboard-black/]]></guid>
+        <pubDate>Fri, 18 Mar 2016 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Shrug it works on my machine - Programmer Excuse Design - White Text]]></title>
+        <link><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-medium-white/]]></link>
+        <description><![CDATA[<p>This design consists of the unicode emoticon for shrugging your shoulders and smiling and the text &#8220;it works on my machine&#8221;, one of the most frequent excuses you hear when confronting a programmer with a bug. / The design elements are white and...</p><img src="https://geeksta.net/img/large/shrug-it-works-on-my-machine-medium-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-medium-white/]]></guid>
+        <pubDate>Tue, 10 Nov 2015 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Shrug it works on my machine - Programmer Excuse Design - Grey Text]]></title>
+        <link><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-medium-black/]]></link>
+        <description><![CDATA[<p>This design consists of the unicode emoticon for shrugging your shoulders and smiling and the text &#8220;it works on my machine&#8221;, one of the most frequent excuses you hear when confronting a programmer with a bug. / The design elements are dark grey...</p><img src="https://geeksta.net/img/large/shrug-it-works-on-my-machine-medium-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-medium-black/]]></guid>
+        <pubDate>Tue, 10 Nov 2015 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Debug Life - Parody Design for Thug Programmers - White on Black/Dark]]></title>
+        <link><![CDATA[https://geeksta.net/design/debug-life-white/]]></link>
+        <description><![CDATA[<p>A typographic design for thug computer Programmers with the text &#8220;Debug Life&#8221; printed in a medieval style white font. / The design is available on a black background on different products, such as stickers, phone and tablet cases and laptop...</p><img src="https://geeksta.net/img/large/debug-life-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/debug-life-white/]]></guid>
+        <pubDate>Wed, 04 Nov 2015 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Debug Life - Parody Design for Thug Programmers - Black on White/Light]]></title>
+        <link><![CDATA[https://geeksta.net/design/debug-life-black/]]></link>
+        <description><![CDATA[<p>A typographic design for thug computer Programmers with the text &#8220;Debug Life&#8221; printed in a medieval style black font. / The design is available on a white background on different products, such as stickers, phone and tablet cases and laptop...</p><img src="https://geeksta.net/img/large/debug-life-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/debug-life-black/]]></guid>
+        <pubDate>Wed, 04 Nov 2015 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Full Stack Developer - Design for Web Developers White Font]]></title>
+        <link><![CDATA[https://geeksta.net/design/full-stack-developer-white/]]></link>
+        <description><![CDATA[<p>Full stack developer is a relatively young term mostly used in a Web development context. It refers to developers who have working experience and knowledge about databases, the whole application stack on servers (back end), network communication, and the...</p><img src="https://geeksta.net/img/large/full-stack-developer-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/full-stack-developer-white/]]></guid>
+        <pubDate>Mon, 02 Nov 2015 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Full Stack Developer - Design for Web Developers Black Font]]></title>
+        <link><![CDATA[https://geeksta.net/design/full-stack-developer-black/]]></link>
+        <description><![CDATA[<p>Full stack developer is a relatively young term mostly used in a Web development context. It refers to developers who have working experience and knowledge about databases, the whole application stack on servers (back end), network communication, and the...</p><img src="https://geeksta.net/img/large/full-stack-developer-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/full-stack-developer-black/]]></guid>
+        <pubDate>Mon, 02 Nov 2015 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Full Stack Developer - Design for Web Developers Green Font]]></title>
+        <link><![CDATA[https://geeksta.net/design/full-stack-developer-green/]]></link>
+        <description><![CDATA[<p>Full stack developer is a relatively young term mostly used in a Web development context. It refers to developers who have working experience and knowledge about databases, the whole application stack on servers (back end), network communication, and the...</p><img src="https://geeksta.net/img/large/full-stack-developer-green.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/full-stack-developer-green/]]></guid>
+        <pubDate>Mon, 02 Nov 2015 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[git pull - Black/White Parody Design for Software Developers]]></title>
+        <link><![CDATA[https://geeksta.net/design/git-pull-pitbull-white/]]></link>
+        <description><![CDATA[<p>Git (/ɡɪt/) is a popular version control system for software development initially designed and developed by Linus Torvalds for Linux kernel development in 2005. / This design features the text &#8220;git pull&#8221; in a white Euler Fraktur medium font...</p><img src="https://geeksta.net/img/large/git-pull-pitbull-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/git-pull-pitbull-white/]]></guid>
+        <pubDate>Thu, 08 Oct 2015 00:00:00 </pubDate>
+    </item>
+    
+</channel></rss>

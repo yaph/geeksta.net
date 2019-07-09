@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head itemscope itemtype="http://schema.org/WebSite">
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title itemprop="name">Shirt Search - Search for Popular T-Shirts in Multiple Shops | Geeksta</title>
+        <meta name="description" content="Search for best-selling and top-rated t-shirts in online shops such as Amazon, Redbubble, Teepublic and Zazzle.">
+        <meta name="author" content="Ramiro Gómez">
+        
+        
+        <meta name="flattr:id" content="4pzdyq">
+        <link href="https://geeksta.net/tools/shirt-search/" rel="canonical" itemprop="url">
+        <link href="/img/icon-small.png" rel="icon" type="image/png">
+        <link href="/rss.xml" rel="alternate" type="application/rss+xml" title="Geeksta All Posts RSS feed">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
+        
+            
+        
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+    </head>
+    <body>
+    <div class="navbar navbar-fixed-top navbar-inverse">
+        <div class="container">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" id="site-name" href="/">Geeksta</a>
+            <div class="collapse navbar-collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav pull-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sections <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/reviews/">Book Reviews</a></li>
+                            <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
+                            <li><a href="/visualizations/">Data Visualizations</a></li>
+                            <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
+                            <li><a href="/events/">Geek Events</a></li>
+                            <li><a href="/videos/">Videos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/geeklog/">Geeklog</a></li>
+                    <li><a href="/shirts/">Shirts</a></li>
+                    <li><a href="/tools/">Tools</a></li>
+                    <li id="sharemenu" class="dropdown">
+  <button type="button" class="dropdown-toggle btn btn-success navbar-btn" data-toggle="dropdown"><i class="fa fa-share"></i></button>
+  <ul class="share dropdown-menu pull-right">
+    <li><a href="/rss.xml" class="btn btn-default"><i class="fa fa-rss"></i> RSS Feed</a></li>
+    <li><a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/tools/shirt-search/&title=Shirt%20Search%20-%20Search%20for%20Popular%20T-Shirts%20in%20Multiple%20Shops" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
+    <li><a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/tools/shirt-search/&text=Shirt%20Search%20-%20Search%20for%20Popular%20T-Shirts%20in%20Multiple%20Shops" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
+    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/tools/shirt-search/&t=Shirt%20Search%20-%20Search%20for%20Popular%20T-Shirts%20in%20Multiple%20Shops" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
+    <li><a rel="nofollow" href="https://plus.google.com/share?url=https%3A//geeksta.net/tools/shirt-search/" class="btn btn-default"><i class="fa fa-google-plus"></i> Google+</a></li>
+    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geeksta.net/tools/shirt-search/&title=Shirt%20Search%20-%20Search%20for%20Popular%20T-Shirts%20in%20Multiple%20Shops" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+    <li><a rel="nofollow" href="https://www.stumbleupon.com/submit?url=https%3A//geeksta.net/tools/shirt-search/&title=Shirt%20Search%20-%20Search%20for%20Popular%20T-Shirts%20in%20Multiple%20Shops" class="btn btn-default"><i class="fa fa-stumbleupon"></i> Stumble</a></li>
+  </ul>
+</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="wrapper" class="container">
+        
+        
+<div itemscope itemtype="http://schema.org/Article">
+    <header><h1 itemprop="name">Shirt Search - Search for Popular T-Shirts in Multiple Shops</h1></header>
+    <p>This tool makes it easy to search for popular t-shirts in several online shops including Amazon, Redbubble, Teepublic and Zazzle. Just enter your search terms in the text field and click on a link below to open the respective search result page.</p>
+<div class="well">
+    <form class="form-inline voffset">
+        <label class="big" for="keywords">Search keywords</label>
+        <input type="text" class="form-control input-lg" id="keywords" size="50">
+        <div class="small">When you enter or change text in this field, the links below will automatically be updated.</div>
+    </form>
+    <ul id="site-links" class="voffset big">
+    </ul>
+    <div class="small">To open a link in a new tab, hold the Ctrl or Cmd (Mac) key and click on the respective link. You don't need to enter the term "shirt", it is added automatically where appropriate. Some of these links contain referral tokens. This means if you click on such a link and buy a product, I will receive a commission and the product price is the same for you.</div>
+</div>
+
+<h2>Why these websites?</h2>
+<p>In my experience these are the best websites to find awesome t-shirts to buy online. Moreover, if you are a designer who sells or wants to sell t-shirts online, you can quickly get a glimpse of what is popular at the moment and which designs sell. Be inspired by what you see, but don't just copy popular designs. Below you find some additional information about the individual sites.</p>
+<h3>Amazon</h3>
+<p>Shirts have been sold on Amazon for several years and in fall of 2015 the online retail giant entered the <em>Print on Demand</em> (POD) sector with its <em>Merch by Amazon</em> program. This means that you can find a huge variety of shirts from different designers with all kinds of themes on Amazon. Moreover, the prices are often below the competition.</p>
+<p>Search results are limited to the <em>Clothing, Shoes &amp; Jewelry : Novelty &amp; More : Clothing</em> category and sorted by average customer review.</p>
+<h3>Redbubble</h3>
+<p>Redbubble was founded in 2006 and has grown to one of the most popular places to buy and sell t-shirts on the web. There are a many talented designers who create great works of graphic art and sell exclusively through Redbubble. You won't find these designs elsewhere, unless they were ripped off by copycats. In addition to t-shirts, you can buy many of the designs on hoodies, dresses, mugs, stickers, posters, bags, phone cases, laptop sleeves and some even on duvet covers.</p>
+<p>Search results are limited to the t-shirts product type and sorted so best selling shirts appear first.</p>
+<h3>Teepublic</h3>
+<p>Teepublic is another place where you find many unique designs. In contrast to the other shops listed here, all shirts have the same price on Teepublic. At the time of writing this is US $20 for a classic t-shirt or $14 when there is a sale or during the first 3 days after a product is released. Teepublic also offers products like mugs, device cases or wall art.</p>
+<p>Search results are limited to the t-shirts product type and sorted so best selling shirts appear first.</p>
+<h3>Zazzle</h3>
+<p>Zazzle was founded in 2005 and is one of the veteran POD sites. There are a huge number of designs on many different products available. I know of no other POD site, that offers such a product variety. Another feature that distinguishes Zazzle are the customization options for buyers. You can customize designs by adding your own text or graphic and some designs come with one or more blank spaces that you can fill with your own text, such as your name or birth year. Zazzle also offers an API so you can even come up with your own shirt creation tool, such as the <a href="/tools/born-at-unix-time/">Born at Unix time shirt creator</a>.</p>
+<p>Search results are limited to the t-shirts product type and sorted so the most popular shirts appear first.</p>
+</div>
+
+        
+<hr class="clearfix">
+<h4>Share this post on:</h4>
+<div class="share">
+    <a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/tools/shirt-search/&t=Shirt%20Search%20-%20Search%20for%20Popular%20T-Shirts%20in%20Multiple%20Shops" class="btn btn-default btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
+    <a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/tools/shirt-search/&title=Shirt%20Search%20-%20Search%20for%20Popular%20T-Shirts%20in%20Multiple%20Shops" class="btn btn-default btn-lg"><i class="fa fa-reddit-alien"></i> Reddit</a>
+    <a rel="nofollow" href="https://www.stumbleupon.com/submit?url=https%3A//geeksta.net/tools/shirt-search/&title=Shirt%20Search%20-%20Search%20for%20Popular%20T-Shirts%20in%20Multiple%20Shops" class="btn btn-default btn-lg"><i class="fa fa-stumbleupon"></i> StumbleUpon</a>
+    <a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/tools/shirt-search/&text=Shirt%20Search%20-%20Search%20for%20Popular%20T-Shirts%20in%20Multiple%20Shops" class="btn btn-default btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
+</div>
+<hr class="clearfix">
+<div class="postinfo">
+<p>This post was written by <a href="http://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time itemprop="datePublished" datetime="2016-11-16T23:14">November 16, 2016</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+
+<p>
+<strong>Tags:</strong>
+
+<span class="label label-info"><a href="/tags/shirts/">shirts</a></span>
+
+<span class="label label-info"><a href="/tags/print-on-demand/">print on demand</a></span>
+
+<span class="label label-info"><a href="/tags/research/">research</a></span>
+
+</p>
+
+<p class="text-muted"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h2>Featured T-Shirts</h2></div>
+    <div class="panel-body">
+
+
+    <div class="row">
+        <div class="col-md-3">
+            
+<a href="/design/caution-i-curse-when-i-commit-code/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/caution-i-curse-when-i-commit-code.jpg" alt="Caution I Curse When I Commit Code - Funny Programmer Design" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Caution I Curse When I Commit Code - Funny Programmer Design</figcaption>
+    </figure>
+</a>
+
+        </div>
+    
+
+    
+        <div class="col-md-3">
+            
+<a href="/design/hack-the-planet-green/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/hack-the-planet-green.jpg" alt="Hack the Planet - Green Design for Computer Hackers" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Hack the Planet - Green Design for Computer Hackers</figcaption>
+    </figure>
+</a>
+
+        </div>
+    
+
+    
+        <div class="col-md-3">
+            
+<a href="/design/shrug-it-works-on-my-machine-medium-white/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/shrug-it-works-on-my-machine-medium-white.jpg" alt="Shrug it works on my machine - Programmer Excuse Design - White Text" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Shrug it works on my machine - Programmer Excuse Design - White Text</figcaption>
+    </figure>
+</a>
+
+        </div>
+    
+
+    
+        <div class="col-md-3">
+            
+<a href="/design/bash-fork-bomb-white/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/bash-fork-bomb-white.jpg" alt="Bash Fork Bomb - White Text for Unix/Linux Hackers" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Bash Fork Bomb - White Text for Unix/Linux Hackers</figcaption>
+    </figure>
+</a>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+    </div>
+
+    <div id="footer" class="container">
+        <p>Geeksta.net: programming, data mining, data visualization, tech books, and tools for tech geeks.<br>
+        © <script>document.write(new Date().getFullYear())</script> Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/sitemap/">Sitemap</a></p>
+    </div>
+
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/js/script.js"></script>
+    
+        <script src="/js/shirtsearch.js"></script>
+    
+    <script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-5102014-10', 'auto');
+ga('send', 'pageview');
+(function(c,a){function d(){var e=a.getElementsByTagName("a");var f=[];for(var g=0;g<e.length;++g){var h=e[g];if(h.host!=c.location.host){f.push(h)}}return f}function b(f){var e=f.srcElement||f.target;while(e&&(typeof e.tagName=="undefined"||e.tagName.toLowerCase()!="a"||!e.href)){e=e.parentNode}if(!e||!e.href){return}if(c.ga){ga("send","event","Outbound link","Click",e.href)}if(!e.target||e.target.match(/^_(self|parent|top)$/i)){setTimeout(function(){a.location.href=e.href},150);if(f.preventDefault){f.preventDefault()}else{f.returnValue=false}}}c.addEventListener("load",function(){var e=d();for(var f in e){e[f].addEventListener("click",b)}})}(window,document));
+</script>
+    </body>
+</html>

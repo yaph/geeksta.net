@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head itemscope itemtype="http://schema.org/WebSite">
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title itemprop="name">Python Script to Delete Delicious Bookmarks | Geeksta</title>
+        <meta name="description" content="A Python script to delete all bookmarks from the Delicious bookmarking service for the authenticated user.">
+        <meta name="author" content="Ramiro Gómez">
+        
+            <meta property="og:image" content="https://geeksta.net/img/geeklog/delete-delicious-bookmarks.jpg">
+            
+
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@yaph">
+    <meta name="twitter:title" content="Python Script to Delete Delicious Bookmarks">
+    <meta name="twitter:description" content="A Python script to delete all bookmarks from the Delicious bookmarking service for the authenticated user.">
+    <meta name="twitter:image:src" content="https://geeksta.net/img/geeklog/delete-delicious-bookmarks.jpg">
+
+        
+        
+        <meta name="flattr:id" content="4pzdyq">
+        <link href="https://geeksta.net/geeklog/delete-delicious-bookmarks/" rel="canonical" itemprop="url">
+        <link href="/img/icon-small.png" rel="icon" type="image/png">
+        <link href="/rss.xml" rel="alternate" type="application/rss+xml" title="Geeksta All Posts RSS feed">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
+        
+            <link href="/vendor/highlight/github.css" rel="stylesheet">
+        
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+    </head>
+    <body>
+    <div class="navbar navbar-fixed-top navbar-inverse">
+        <div class="container">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" id="site-name" href="/">Geeksta</a>
+            <div class="collapse navbar-collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav pull-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sections <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/reviews/">Book Reviews</a></li>
+                            <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
+                            <li><a href="/visualizations/">Data Visualizations</a></li>
+                            <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
+                            <li><a href="/events/">Geek Events</a></li>
+                            <li><a href="/videos/">Videos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/geeklog/">Geeklog</a></li>
+                    <li><a href="/shirts/">Shirts</a></li>
+                    <li><a href="/tools/">Tools</a></li>
+                    <li id="sharemenu" class="dropdown">
+  <button type="button" class="dropdown-toggle btn btn-success navbar-btn" data-toggle="dropdown"><i class="fa fa-share"></i></button>
+  <ul class="share dropdown-menu pull-right">
+    <li><a href="/rss.xml" class="btn btn-default"><i class="fa fa-rss"></i> RSS Feed</a></li>
+    <li><a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/geeklog/delete-delicious-bookmarks/&title=Python%20Script%20to%20Delete%20Delicious%20Bookmarks" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
+    <li><a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/geeklog/delete-delicious-bookmarks/&text=Python%20Script%20to%20Delete%20Delicious%20Bookmarks" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
+    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/geeklog/delete-delicious-bookmarks/&t=Python%20Script%20to%20Delete%20Delicious%20Bookmarks" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
+    <li><a rel="nofollow" href="https://plus.google.com/share?url=https%3A//geeksta.net/geeklog/delete-delicious-bookmarks/" class="btn btn-default"><i class="fa fa-google-plus"></i> Google+</a></li>
+    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geeksta.net/geeklog/delete-delicious-bookmarks/&title=Python%20Script%20to%20Delete%20Delicious%20Bookmarks" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+    <li><a rel="nofollow" href="https://www.stumbleupon.com/submit?url=https%3A//geeksta.net/geeklog/delete-delicious-bookmarks/&title=Python%20Script%20to%20Delete%20Delicious%20Bookmarks" class="btn btn-default"><i class="fa fa-stumbleupon"></i> Stumble</a></li>
+  </ul>
+</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="wrapper" class="container">
+        
+        
+<div class="row">
+    <div itemscope itemtype="http://schema.org/Article" class="col-md-9">
+        <header><h1 itemprop="name">Python Script to Delete Delicious Bookmarks</h1></header>
+        
+            <figure class="post_image">
+                <img src="https://geeksta.net/img/geeklog/delete-delicious-bookmarks.jpg" alt="Python Script to Delete Delicious Bookmarks" class="img-responsive">
+                <figcaption>Source: <a href="http://memegenerator.net/instance/34614839">Meme Generator</a></figcaption>
+            </figure>
+        
+        <p><a href="https://delicious.com/">Delicious</a> has been one of my most frequently used services for several years, but using it has become painfully slow. I moved my bookmarks back to the browser, which can sync them across different computers, is fast, and offers a well working search feature.</p>
+<p>Delicious stopped being useful for me, so I decided to delete all my bookmarks. There is no function for doing that, but the API still works, as does the export function to save your bookmarks in a browser compatible format. It's good they retained this feature.</p>
+<p>The following Python script deletes all delicious bookmarks for the authenticated user. It receives user name and password in clear text as command line arguments. Thus, it may be worth putting it into background and deleting the command history after running it. I had to call it a few times, since API requests can obviously fail.</p>
+<pre class="clearfix"><code class="python">
+#!/usr/bin/env python
+# coding: utf-8
+# remove all your bookmarks from delicious
+import sys, json, requests
+
+if 3 != len(sys.argv):
+    print "Usage\n%s user password" %sys.argv[0]
+
+user = sys.argv[1]
+pw = sys.argv[2]
+
+r = requests.get('https://api.delicious.com/v1/json/posts/all', auth=(user, pw))
+posts = json.loads(r.content)['posts']
+for p in posts:
+    requests.get('https://api.delicious.com/v1/posts/delete', params={'md5': p['post']['hash']}, auth=(user, pw))
+</code></pre>
+    </div>
+    <div class="col-md-3">
+        
+
+<h2>Featured Posts</h2>
+<ul class="list-unstyled">
+  <li class="voffset"><a href="/geeklog/exploring-expressions-emotions-github-commit-messages/">Exploring Expressions of Emotions in GitHub Commit Messages</a></li>
+  <li class="voffset"><a href="/geeklog/web-page-screenshots-phantomjs-python/">Taking Web Page Screenshots with PhantomJS and Python</a></li>
+  <li class="voffset"><a href="/visualizations/age-musicians-die/">What Age Do Musicians Die at</a></li>
+</ul>
+<hr>
+<h2>Featured T-Shirt</h2>
+
+
+<a href="/design/no-braces-red-white/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/no-braces-red-white.jpg" alt="No Braces - Funny Python Coding Design Red/White" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">No Braces - Funny Python Coding Design Red/White</figcaption>
+    </figure>
+</a>
+
+<hr>
+<h2>Latest Posts</h2>
+<ul class="list-unstyled">
+
+    <li class="voffset"><a href="/geeklog/python-shared-hosting/">Installing and Setting up Python on Shared Hosting</a></li>
+
+    <li class="voffset"><a href="/geeklog/custom-matplotlib-styles/">Customizing Matplotlib's Plotting Styles</a></li>
+
+    <li class="voffset"><a href="/geeklog/automating-browser-tasks-without-distraction-on-ubuntu/">Automating Browser Tasks without Distraction on Ubuntu</a></li>
+
+    <li class="voffset"><a href="/geeklog/better-commit-messages/">A Simple Hack to Write Better Commit Messages</a></li>
+
+</ul>
+<hr>
+<a href="/rss.xml" class="btn btn-warning"><i class="fa fa-rss"></i> Subscribe to new content</a></li>
+    </div>
+</div>
+
+        
+<hr class="clearfix">
+<h4>Share this post on:</h4>
+<div class="share">
+    <a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/geeklog/delete-delicious-bookmarks/&t=Python%20Script%20to%20Delete%20Delicious%20Bookmarks" class="btn btn-default btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
+    <a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/geeklog/delete-delicious-bookmarks/&title=Python%20Script%20to%20Delete%20Delicious%20Bookmarks" class="btn btn-default btn-lg"><i class="fa fa-reddit-alien"></i> Reddit</a>
+    <a rel="nofollow" href="https://www.stumbleupon.com/submit?url=https%3A//geeksta.net/geeklog/delete-delicious-bookmarks/&title=Python%20Script%20to%20Delete%20Delicious%20Bookmarks" class="btn btn-default btn-lg"><i class="fa fa-stumbleupon"></i> StumbleUpon</a>
+    <a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/geeklog/delete-delicious-bookmarks/&text=Python%20Script%20to%20Delete%20Delicious%20Bookmarks" class="btn btn-default btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
+</div>
+<hr class="clearfix">
+<div class="postinfo">
+<p>This post was written by <a href="http://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time itemprop="datePublished" datetime="2013-02-09T22:07">February 09, 2013</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+
+<p>
+<strong>Tags:</strong>
+
+<span class="label label-info"><a href="/tags/delicious/">delicious</a></span>
+
+<span class="label label-info"><a href="/tags/python/">python</a></span>
+
+<span class="label label-info"><a href="/tags/data-deletion/">data deletion</a></span>
+
+<span class="label label-info"><a href="/tags/api/">api</a></span>
+
+<span class="label label-info"><a href="/tags/code/">code</a></span>
+
+</p>
+
+<p class="text-muted"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h2>Featured T-Shirts</h2></div>
+    <div class="panel-body">
+
+
+    <div class="row">
+        <div class="col-md-3">
+            
+<a href="/design/caution-i-curse-when-i-commit-code/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/caution-i-curse-when-i-commit-code.jpg" alt="Caution I Curse When I Commit Code - Funny Programmer Design" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Caution I Curse When I Commit Code - Funny Programmer Design</figcaption>
+    </figure>
+</a>
+
+        </div>
+    
+
+    
+        <div class="col-md-3">
+            
+<a href="/design/hack-the-planet-green/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/hack-the-planet-green.jpg" alt="Hack the Planet - Green Design for Computer Hackers" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Hack the Planet - Green Design for Computer Hackers</figcaption>
+    </figure>
+</a>
+
+        </div>
+    
+
+    
+        <div class="col-md-3">
+            
+<a href="/design/shrug-it-works-on-my-machine-medium-white/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/shrug-it-works-on-my-machine-medium-white.jpg" alt="Shrug it works on my machine - Programmer Excuse Design - White Text" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Shrug it works on my machine - Programmer Excuse Design - White Text</figcaption>
+    </figure>
+</a>
+
+        </div>
+    
+
+    
+        <div class="col-md-3">
+            
+<a href="/design/bash-fork-bomb-white/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/bash-fork-bomb-white.jpg" alt="Bash Fork Bomb - White Text for Unix/Linux Hackers" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Bash Fork Bomb - White Text for Unix/Linux Hackers</figcaption>
+    </figure>
+</a>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+    </div>
+
+    <div id="footer" class="container">
+        <p>Geeksta.net: programming, data mining, data visualization, tech books, and tools for tech geeks.<br>
+        © <script>document.write(new Date().getFullYear())</script> Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/sitemap/">Sitemap</a></p>
+    </div>
+
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/js/script.js"></script>
+    
+        <script src="/vendor/highlight/highlight.pack.js"></script><script src="/js/highlight.js"></script>
+    
+    <script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-5102014-10', 'auto');
+ga('send', 'pageview');
+(function(c,a){function d(){var e=a.getElementsByTagName("a");var f=[];for(var g=0;g<e.length;++g){var h=e[g];if(h.host!=c.location.host){f.push(h)}}return f}function b(f){var e=f.srcElement||f.target;while(e&&(typeof e.tagName=="undefined"||e.tagName.toLowerCase()!="a"||!e.href)){e=e.parentNode}if(!e||!e.href){return}if(c.ga){ga("send","event","Outbound link","Click",e.href)}if(!e.target||e.target.match(/^_(self|parent|top)$/i)){setTimeout(function(){a.location.href=e.href},150);if(f.preventDefault){f.preventDefault()}else{f.returnValue=false}}}c.addEventListener("load",function(){var e=d();for(var f in e){e[f].addEventListener("click",b)}})}(window,document));
+</script>
+    </body>
+</html>

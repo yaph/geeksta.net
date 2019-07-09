@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head itemscope itemtype="http://schema.org/WebSite">
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title itemprop="name">YAML Markdown Page Summary Bookmarklet | Geeksta</title>
+        <meta name="description" content="YAML Markdown Page Summary is a browser bookmarklet that creates a summary of the currently viewed page for use with static site generators.">
+        <meta name="author" content="Ramiro Gómez">
+        
+        
+        <meta name="flattr:id" content="4pzdyq">
+        <link href="https://geeksta.net/tools/yaml-markdown-page-summary/" rel="canonical" itemprop="url">
+        <link href="/img/icon-small.png" rel="icon" type="image/png">
+        <link href="/rss.xml" rel="alternate" type="application/rss+xml" title="Geeksta All Posts RSS feed">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
+        
+            
+        
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+    </head>
+    <body>
+    <div class="navbar navbar-fixed-top navbar-inverse">
+        <div class="container">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" id="site-name" href="/">Geeksta</a>
+            <div class="collapse navbar-collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav pull-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sections <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/reviews/">Book Reviews</a></li>
+                            <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
+                            <li><a href="/visualizations/">Data Visualizations</a></li>
+                            <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
+                            <li><a href="/events/">Geek Events</a></li>
+                            <li><a href="/videos/">Videos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/geeklog/">Geeklog</a></li>
+                    <li><a href="/shirts/">Shirts</a></li>
+                    <li><a href="/tools/">Tools</a></li>
+                    <li id="sharemenu" class="dropdown">
+  <button type="button" class="dropdown-toggle btn btn-success navbar-btn" data-toggle="dropdown"><i class="fa fa-share"></i></button>
+  <ul class="share dropdown-menu pull-right">
+    <li><a href="/rss.xml" class="btn btn-default"><i class="fa fa-rss"></i> RSS Feed</a></li>
+    <li><a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/tools/yaml-markdown-page-summary/&title=YAML%20Markdown%20Page%20Summary%20Bookmarklet" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
+    <li><a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/tools/yaml-markdown-page-summary/&text=YAML%20Markdown%20Page%20Summary%20Bookmarklet" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
+    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/tools/yaml-markdown-page-summary/&t=YAML%20Markdown%20Page%20Summary%20Bookmarklet" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
+    <li><a rel="nofollow" href="https://plus.google.com/share?url=https%3A//geeksta.net/tools/yaml-markdown-page-summary/" class="btn btn-default"><i class="fa fa-google-plus"></i> Google+</a></li>
+    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geeksta.net/tools/yaml-markdown-page-summary/&title=YAML%20Markdown%20Page%20Summary%20Bookmarklet" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+    <li><a rel="nofollow" href="https://www.stumbleupon.com/submit?url=https%3A//geeksta.net/tools/yaml-markdown-page-summary/&title=YAML%20Markdown%20Page%20Summary%20Bookmarklet" class="btn btn-default"><i class="fa fa-stumbleupon"></i> Stumble</a></li>
+  </ul>
+</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="wrapper" class="container">
+        
+        
+<div class="row">
+    <div itemscope itemtype="http://schema.org/Article" class="col-md-9">
+        <header><h1 itemprop="name">YAML Markdown Page Summary Bookmarklet</h1></header>
+        
+        <p>YAML Markdown Page Summary is a browser bookmarklet that creates a summary of
+the currently viewed page.</p>
+<p>The output text is split into header and body sections, with header properties
+marked up in YAML and the body in markdown.</p>
+<p>I use this bookmarklet to create stub posts for a static site generator, e. g.
+this page you're reading right now. The header properties are compatible with
+<a href="http://pythonhosted.org/logya/">logya</a>, my generator of choice, I may be biased...</p>
+<p>It shouldn't be too hard though to adjust them for use with jekyll, pelican et al.</p>
+<p>Drag to add the bookmarklet to your bookmarks bar</p>
+<div class="bookmarklet">
+<a class="btn btn-large btn-primary" href="">YAML Markdown Page Summary</a>
+<textarea cols="100" rows"5">
+javascript:void(function(){var g,a,t,d,u,q,n,k,s,v,f,e,r,m,o,A,h,w,j,x,c,b,y,z,l;f=function(i){var p;p=document.querySelector('meta[property="og:'+i+'"]');if(p===null){p=document.querySelector('meta[name="'+i+'"]')}if(p&&p.content){return p.content}};v=function(i,p){return i+": '"+p+"'"};A=f("title");if(!A){A=document.title}h="/"+A.toLowerCase().replace(/\W+/g,"-")+"/";k=document.location.href;t=f("description");n=[];q=f("image");if(q){n.push(q)}w=f("video");g=document.querySelectorAll('img:not([src=""])');for(c=0,y=g.length;c<y;c++){u=g[c];if(u.src.match("https?://"&&(u.width*u.height>40000))){n.push(u.src)}}m=[];l=document.getElementsByTagName("p");for(b=0,z=l.length;b<z;b++){r=l[b];if(r.textContent){m.push(r.textContent.trim())}}d=[];d.push(v("title",A));d.push(v("url",h));d.push(v("link",k));if(t){d.push(v("description",t))}if(n.length>0){d.push(v("image",n[0]))}if(w){d.push(v("video",w))}e=new Date();d.push(v("created",e.toISOString()));j="---\nCONTENT\ntemplate: page.html\n---\n";s=j.replace("CONTENT",d.join("\n"))+m.join("\n\n");x=document.createElement("div");x.id="ymdps";x.setAttribute("style","position:relative;padding:20px;border:5px solid #eee;width:80%;margin-left:10%;");a=document.createElement("button");a.setAttribute("style","position:absolute;top:5px;right:5px;cursor:pointer;font-weight:bold;");a.setAttribute("onclick","javascript:document.getElementById('ymdps').remove();");a.textContent="Close preview";o=document.createElement("textarea");o.setAttribute("style","width:98%;height:600px;margin:1%;");o.textContent=s;x.appendChild(a);x.appendChild(o);document.body.insertBefore(x,document.body.firstChild);window.scroll(0,0)}).call(this);
+</textarea>
+</div>
+
+<p>You can get the MIT licensed <a href="https://github.com/yaph/ymdps">source code on GitHub</a>.</p>
+<p>And this is how it looks when creating a preview of this page:</p>
+<p><img alt="YAML Markdown Preview" src="/img/tools/ymdps-preview.jpg" /></p>
+    </div>
+    <div class="col-md-3">
+        
+
+<h2>Featured Posts</h2>
+<ul class="list-unstyled">
+  <li class="voffset"><a href="/geeklog/exploring-expressions-emotions-github-commit-messages/">Exploring Expressions of Emotions in GitHub Commit Messages</a></li>
+  <li class="voffset"><a href="/geeklog/web-page-screenshots-phantomjs-python/">Taking Web Page Screenshots with PhantomJS and Python</a></li>
+  <li class="voffset"><a href="/visualizations/age-musicians-die/">What Age Do Musicians Die at</a></li>
+</ul>
+<hr>
+<h2>Featured T-Shirt</h2>
+
+
+<a href="/design/no-braces-red-white/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/no-braces-red-white.jpg" alt="No Braces - Funny Python Coding Design Red/White" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">No Braces - Funny Python Coding Design Red/White</figcaption>
+    </figure>
+</a>
+
+<hr>
+<h2>Latest Posts</h2>
+<ul class="list-unstyled">
+
+    <li class="voffset"><a href="/geeklog/python-shared-hosting/">Installing and Setting up Python on Shared Hosting</a></li>
+
+    <li class="voffset"><a href="/geeklog/custom-matplotlib-styles/">Customizing Matplotlib's Plotting Styles</a></li>
+
+    <li class="voffset"><a href="/geeklog/automating-browser-tasks-without-distraction-on-ubuntu/">Automating Browser Tasks without Distraction on Ubuntu</a></li>
+
+    <li class="voffset"><a href="/geeklog/better-commit-messages/">A Simple Hack to Write Better Commit Messages</a></li>
+
+    <li class="voffset"><a href="/geeklog/delete-delicious-bookmarks/">Python Script to Delete Delicious Bookmarks</a></li>
+
+</ul>
+<hr>
+<a href="/rss.xml" class="btn btn-warning"><i class="fa fa-rss"></i> Subscribe to new content</a></li>
+    </div>
+</div>
+
+        
+<hr class="clearfix">
+<h4>Share this post on:</h4>
+<div class="share">
+    <a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/tools/yaml-markdown-page-summary/&t=YAML%20Markdown%20Page%20Summary%20Bookmarklet" class="btn btn-default btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
+    <a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/tools/yaml-markdown-page-summary/&title=YAML%20Markdown%20Page%20Summary%20Bookmarklet" class="btn btn-default btn-lg"><i class="fa fa-reddit-alien"></i> Reddit</a>
+    <a rel="nofollow" href="https://www.stumbleupon.com/submit?url=https%3A//geeksta.net/tools/yaml-markdown-page-summary/&title=YAML%20Markdown%20Page%20Summary%20Bookmarklet" class="btn btn-default btn-lg"><i class="fa fa-stumbleupon"></i> StumbleUpon</a>
+    <a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/tools/yaml-markdown-page-summary/&text=YAML%20Markdown%20Page%20Summary%20Bookmarklet" class="btn btn-default btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
+</div>
+<hr class="clearfix">
+<div class="postinfo">
+<p>This post was written by <a href="http://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time itemprop="datePublished" datetime="2013-08-22T22:07">August 22, 2013</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+
+<p>
+<strong>Tags:</strong>
+
+<span class="label label-info"><a href="/tags/bookmarklet/">bookmarklet</a></span>
+
+<span class="label label-info"><a href="/tags/yaml/">yaml</a></span>
+
+<span class="label label-info"><a href="/tags/markdown/">markdown</a></span>
+
+</p>
+
+<p class="text-muted"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h2>Featured T-Shirts</h2></div>
+    <div class="panel-body">
+
+
+    <div class="row">
+        <div class="col-md-3">
+            
+<a href="/design/caution-i-curse-when-i-commit-code/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/caution-i-curse-when-i-commit-code.jpg" alt="Caution I Curse When I Commit Code - Funny Programmer Design" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Caution I Curse When I Commit Code - Funny Programmer Design</figcaption>
+    </figure>
+</a>
+
+        </div>
+    
+
+    
+        <div class="col-md-3">
+            
+<a href="/design/hack-the-planet-green/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/hack-the-planet-green.jpg" alt="Hack the Planet - Green Design for Computer Hackers" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Hack the Planet - Green Design for Computer Hackers</figcaption>
+    </figure>
+</a>
+
+        </div>
+    
+
+    
+        <div class="col-md-3">
+            
+<a href="/design/shrug-it-works-on-my-machine-medium-white/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/shrug-it-works-on-my-machine-medium-white.jpg" alt="Shrug it works on my machine - Programmer Excuse Design - White Text" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Shrug it works on my machine - Programmer Excuse Design - White Text</figcaption>
+    </figure>
+</a>
+
+        </div>
+    
+
+    
+        <div class="col-md-3">
+            
+<a href="/design/bash-fork-bomb-white/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/bash-fork-bomb-white.jpg" alt="Bash Fork Bomb - White Text for Unix/Linux Hackers" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Bash Fork Bomb - White Text for Unix/Linux Hackers</figcaption>
+    </figure>
+</a>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+    </div>
+
+    <div id="footer" class="container">
+        <p>Geeksta.net: programming, data mining, data visualization, tech books, and tools for tech geeks.<br>
+        © <script>document.write(new Date().getFullYear())</script> Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/sitemap/">Sitemap</a></p>
+    </div>
+
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/js/script.js"></script>
+    
+        <script src="/js/bookmarklet.js"></script>
+    
+    <script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-5102014-10', 'auto');
+ga('send', 'pageview');
+(function(c,a){function d(){var e=a.getElementsByTagName("a");var f=[];for(var g=0;g<e.length;++g){var h=e[g];if(h.host!=c.location.host){f.push(h)}}return f}function b(f){var e=f.srcElement||f.target;while(e&&(typeof e.tagName=="undefined"||e.tagName.toLowerCase()!="a"||!e.href)){e=e.parentNode}if(!e||!e.href){return}if(c.ga){ga("send","event","Outbound link","Click",e.href)}if(!e.target||e.target.match(/^_(self|parent|top)$/i)){setTimeout(function(){a.location.href=e.href},150);if(f.preventDefault){f.preventDefault()}else{f.returnValue=false}}}c.addEventListener("load",function(){var e=d();for(var f in e){e[f].addEventListener("click",b)}})}(window,document));
+</script>
+    </body>
+</html>

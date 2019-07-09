@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head itemscope itemtype="http://schema.org/WebSite">
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title itemprop="name">Introducing b2tob3: Easier Migration to Bootstrap 3 | Geeksta</title>
+        <meta name="description" content="b2tob3 is a command line tool to help migrate Web projects from bootstrap 2 to bootstrap 3 by performing a set of replacements that reflect bootstrap 3...">
+        <meta name="author" content="Ramiro Gómez">
+        
+        
+        <meta name="flattr:id" content="4pzdyq">
+        <link href="https://geeksta.net/tools/b2tob3-migrate-bootstrap/" rel="canonical" itemprop="url">
+        <link href="/img/icon-small.png" rel="icon" type="image/png">
+        <link href="/rss.xml" rel="alternate" type="application/rss+xml" title="Geeksta All Posts RSS feed">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
+        
+            
+        
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+    </head>
+    <body>
+    <div class="navbar navbar-fixed-top navbar-inverse">
+        <div class="container">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" id="site-name" href="/">Geeksta</a>
+            <div class="collapse navbar-collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav pull-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sections <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/reviews/">Book Reviews</a></li>
+                            <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
+                            <li><a href="/visualizations/">Data Visualizations</a></li>
+                            <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
+                            <li><a href="/events/">Geek Events</a></li>
+                            <li><a href="/videos/">Videos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/geeklog/">Geeklog</a></li>
+                    <li><a href="/shirts/">Shirts</a></li>
+                    <li><a href="/tools/">Tools</a></li>
+                    <li id="sharemenu" class="dropdown">
+  <button type="button" class="dropdown-toggle btn btn-success navbar-btn" data-toggle="dropdown"><i class="fa fa-share"></i></button>
+  <ul class="share dropdown-menu pull-right">
+    <li><a href="/rss.xml" class="btn btn-default"><i class="fa fa-rss"></i> RSS Feed</a></li>
+    <li><a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/tools/b2tob3-migrate-bootstrap/&title=Introducing%20b2tob3%3A%20Easier%20Migration%20to%20Bootstrap%203" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
+    <li><a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/tools/b2tob3-migrate-bootstrap/&text=Introducing%20b2tob3%3A%20Easier%20Migration%20to%20Bootstrap%203" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
+    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/tools/b2tob3-migrate-bootstrap/&t=Introducing%20b2tob3%3A%20Easier%20Migration%20to%20Bootstrap%203" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
+    <li><a rel="nofollow" href="https://plus.google.com/share?url=https%3A//geeksta.net/tools/b2tob3-migrate-bootstrap/" class="btn btn-default"><i class="fa fa-google-plus"></i> Google+</a></li>
+    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geeksta.net/tools/b2tob3-migrate-bootstrap/&title=Introducing%20b2tob3%3A%20Easier%20Migration%20to%20Bootstrap%203" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+    <li><a rel="nofollow" href="https://www.stumbleupon.com/submit?url=https%3A//geeksta.net/tools/b2tob3-migrate-bootstrap/&title=Introducing%20b2tob3%3A%20Easier%20Migration%20to%20Bootstrap%203" class="btn btn-default"><i class="fa fa-stumbleupon"></i> Stumble</a></li>
+  </ul>
+</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="wrapper" class="container">
+        
+        
+<div class="row">
+    <div itemscope itemtype="http://schema.org/Article" class="col-md-9">
+        <header><h1 itemprop="name">Introducing b2tob3: Easier Migration to Bootstrap 3</h1></header>
+        
+        <p><a href="http://badge.fury.io/py/b2tob3"><img src="https://badge.fury.io/py/b2tob3.png" alt="PyPI package"></a>
+<a href="https://travis-ci.org/yaph/b2tob3"><img src="https://travis-ci.org/yaph/b2tob3.png?branch=master" alt="Travis CI"></a></p>
+<p>Having created several Web sites with Bootstrap 2 and migrated just 2 of them
+to the new version using command line tools like find, sed and a text editor,
+I figured that this process could be better automated.</p>
+<p>So I started working on <a href="https://github.com/yaph/b2tob3">b2tob3</a> a command
+line Python script, that replaces class names that changed form Bootstrap
+version 2 to Bootstrap 3 in HTML files.</p>
+<h2>Quickstart</h2>
+<p>Before you use b2tob3 make sure to have your project files under version
+control so you can review and if necessary revert the changes made by b2tob3.</p>
+<pre><code># install b2tob3 from PyPI
+pip install b2tob3
+
+# change to your version controlled project directory
+cd /my/web/project
+
+# run b2tob3
+b2tob3
+</code></pre>
+<h2>What is Changed?</h2>
+<p>b2tob3 searches all files ending in .html, .htm, .css or .js in the current
+directory and its subdirectories and replaces most of the changed class names
+listed in the <a href="http://getbootstrap.com/getting-started/#migration">Bootstrap documentation</a>.</p>
+<p>Some of the Bootstrap 2 class names like <code>inline</code> or <code>add-on</code> may be replaced
+in places where they shouldn't, especially when your html files are not
+templates, but contain the content too.</p>
+<h2>Review and Edit</h2>
+<p>b2tob3 takes away part of the tedious work of migrating a Web project, but most
+likely not all of it. So you need to review and test the changes and fix things
+manually that are not working in Bootstrap 3.</p>
+<p>That being said, I <a href="https://github.com/yaph/b2tob3">appreciate your help</a>
+making b2tob3 better and migrating from Bootstrap 2 to 3 easier.</p>
+    </div>
+    <div class="col-md-3">
+        
+
+<h2>Featured Posts</h2>
+<ul class="list-unstyled">
+  <li class="voffset"><a href="/geeklog/exploring-expressions-emotions-github-commit-messages/">Exploring Expressions of Emotions in GitHub Commit Messages</a></li>
+  <li class="voffset"><a href="/geeklog/web-page-screenshots-phantomjs-python/">Taking Web Page Screenshots with PhantomJS and Python</a></li>
+  <li class="voffset"><a href="/visualizations/age-musicians-die/">What Age Do Musicians Die at</a></li>
+</ul>
+<hr>
+<h2>Featured T-Shirt</h2>
+
+
+<a href="/design/no-braces-red-white/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/no-braces-red-white.jpg" alt="No Braces - Funny Python Coding Design Red/White" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">No Braces - Funny Python Coding Design Red/White</figcaption>
+    </figure>
+</a>
+
+<hr>
+<h2>Latest Posts</h2>
+<ul class="list-unstyled">
+
+    <li class="voffset"><a href="/geeklog/python-shared-hosting/">Installing and Setting up Python on Shared Hosting</a></li>
+
+    <li class="voffset"><a href="/geeklog/custom-matplotlib-styles/">Customizing Matplotlib's Plotting Styles</a></li>
+
+    <li class="voffset"><a href="/geeklog/automating-browser-tasks-without-distraction-on-ubuntu/">Automating Browser Tasks without Distraction on Ubuntu</a></li>
+
+    <li class="voffset"><a href="/geeklog/better-commit-messages/">A Simple Hack to Write Better Commit Messages</a></li>
+
+    <li class="voffset"><a href="/geeklog/delete-delicious-bookmarks/">Python Script to Delete Delicious Bookmarks</a></li>
+
+</ul>
+<hr>
+<a href="/rss.xml" class="btn btn-warning"><i class="fa fa-rss"></i> Subscribe to new content</a></li>
+    </div>
+</div>
+
+        
+<hr class="clearfix">
+<h4>Share this post on:</h4>
+<div class="share">
+    <a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/tools/b2tob3-migrate-bootstrap/&t=Introducing%20b2tob3%3A%20Easier%20Migration%20to%20Bootstrap%203" class="btn btn-default btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
+    <a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/tools/b2tob3-migrate-bootstrap/&title=Introducing%20b2tob3%3A%20Easier%20Migration%20to%20Bootstrap%203" class="btn btn-default btn-lg"><i class="fa fa-reddit-alien"></i> Reddit</a>
+    <a rel="nofollow" href="https://www.stumbleupon.com/submit?url=https%3A//geeksta.net/tools/b2tob3-migrate-bootstrap/&title=Introducing%20b2tob3%3A%20Easier%20Migration%20to%20Bootstrap%203" class="btn btn-default btn-lg"><i class="fa fa-stumbleupon"></i> StumbleUpon</a>
+    <a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/tools/b2tob3-migrate-bootstrap/&text=Introducing%20b2tob3%3A%20Easier%20Migration%20to%20Bootstrap%203" class="btn btn-default btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
+</div>
+<hr class="clearfix">
+<div class="postinfo">
+<p>This post was written by <a href="http://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time itemprop="datePublished" datetime="2013-09-09T20:22">September 09, 2013</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+
+<p>
+<strong>Tags:</strong>
+
+<span class="label label-info"><a href="/tags/bootstrap/">bootstrap</a></span>
+
+<span class="label label-info"><a href="/tags/web-development/">web development</a></span>
+
+<span class="label label-info"><a href="/tags/python/">python</a></span>
+
+<span class="label label-info"><a href="/tags/open-source/">open source</a></span>
+
+<span class="label label-info"><a href="/tags/cli/">cli</a></span>
+
+</p>
+
+<p class="text-muted"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h2>Featured T-Shirts</h2></div>
+    <div class="panel-body">
+
+
+    <div class="row">
+        <div class="col-md-3">
+            
+<a href="/design/caution-i-curse-when-i-commit-code/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/caution-i-curse-when-i-commit-code.jpg" alt="Caution I Curse When I Commit Code - Funny Programmer Design" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Caution I Curse When I Commit Code - Funny Programmer Design</figcaption>
+    </figure>
+</a>
+
+        </div>
+    
+
+    
+        <div class="col-md-3">
+            
+<a href="/design/hack-the-planet-green/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/hack-the-planet-green.jpg" alt="Hack the Planet - Green Design for Computer Hackers" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Hack the Planet - Green Design for Computer Hackers</figcaption>
+    </figure>
+</a>
+
+        </div>
+    
+
+    
+        <div class="col-md-3">
+            
+<a href="/design/shrug-it-works-on-my-machine-medium-white/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/shrug-it-works-on-my-machine-medium-white.jpg" alt="Shrug it works on my machine - Programmer Excuse Design - White Text" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Shrug it works on my machine - Programmer Excuse Design - White Text</figcaption>
+    </figure>
+</a>
+
+        </div>
+    
+
+    
+        <div class="col-md-3">
+            
+<a href="/design/bash-fork-bomb-white/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/bash-fork-bomb-white.jpg" alt="Bash Fork Bomb - White Text for Unix/Linux Hackers" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Bash Fork Bomb - White Text for Unix/Linux Hackers</figcaption>
+    </figure>
+</a>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+    </div>
+
+    <div id="footer" class="container">
+        <p>Geeksta.net: programming, data mining, data visualization, tech books, and tools for tech geeks.<br>
+        © <script>document.write(new Date().getFullYear())</script> Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/sitemap/">Sitemap</a></p>
+    </div>
+
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/js/script.js"></script>
+    
+        
+    
+    <script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-5102014-10', 'auto');
+ga('send', 'pageview');
+(function(c,a){function d(){var e=a.getElementsByTagName("a");var f=[];for(var g=0;g<e.length;++g){var h=e[g];if(h.host!=c.location.host){f.push(h)}}return f}function b(f){var e=f.srcElement||f.target;while(e&&(typeof e.tagName=="undefined"||e.tagName.toLowerCase()!="a"||!e.href)){e=e.parentNode}if(!e||!e.href){return}if(c.ga){ga("send","event","Outbound link","Click",e.href)}if(!e.target||e.target.match(/^_(self|parent|top)$/i)){setTimeout(function(){a.location.href=e.href},150);if(f.preventDefault){f.preventDefault()}else{f.returnValue=false}}}c.addEventListener("load",function(){var e=d();for(var f in e){e[f].addEventListener("click",b)}})}(window,document));
+</script>
+    </body>
+</html>

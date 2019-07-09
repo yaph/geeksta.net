@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel><title>Tags » Mongodb</title>
+    <link>https://geeksta.net</link>
+    <description>Tags » Mongodb</description>
+    <lastBuildDate>Tue, 09 Jul 2019 16:02:24 </lastBuildDate>
+    <generator>Logya</generator>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Diving into Ruby, Sinatra and MongoDB on OpenShift]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/diving-into-ruby-sinatra-mongodb-openshift/]]></link>
+        <description><![CDATA[<p>A howto on creating and running an application using Ruby, Sinatra and MongoDB on Redhat's OpenShift platform for hosting apps in the cloud.</p><img src="https://geeksta.net/img/geeklog/ruby-sinatra-mongodb-openshift.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/diving-into-ruby-sinatra-mongodb-openshift/]]></guid>
+        <pubDate>Thu, 29 Mar 2012 22:57:23 </pubDate>
+    </item>
+    
+</channel></rss>

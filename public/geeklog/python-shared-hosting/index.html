@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head itemscope itemtype="http://schema.org/WebSite">
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title itemprop="name">Installing and Setting up Python on Shared Hosting | Geeksta</title>
+        <meta name="description" content="This tutorial outlines the steps of installing and setting up  Python on a shared hosting platform and how to enable the creation of virtual environments.">
+        <meta name="author" content="Ramiro Gómez">
+        
+            <meta property="og:image" content="https://geeksta.net/img/geeklog/python-fcgi-sample.png">
+            
+
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@yaph">
+    <meta name="twitter:title" content="Installing and Setting up Python on Shared Hosting">
+    <meta name="twitter:description" content="This tutorial outlines the steps of installing and setting up  Python on a shared hosting platform and how to enable the creation of virtual environments.">
+    <meta name="twitter:image:src" content="https://geeksta.net/img/geeklog/python-fcgi-sample.png">
+
+        
+        
+        <meta name="flattr:id" content="4pzdyq">
+        <link href="https://geeksta.net/geeklog/python-shared-hosting/" rel="canonical" itemprop="url">
+        <link href="/img/icon-small.png" rel="icon" type="image/png">
+        <link href="/rss.xml" rel="alternate" type="application/rss+xml" title="Geeksta All Posts RSS feed">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
+        
+            <link href="/vendor/highlight/github.css" rel="stylesheet">
+        
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+    </head>
+    <body>
+    <div class="navbar navbar-fixed-top navbar-inverse">
+        <div class="container">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" id="site-name" href="/">Geeksta</a>
+            <div class="collapse navbar-collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav pull-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sections <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/reviews/">Book Reviews</a></li>
+                            <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
+                            <li><a href="/visualizations/">Data Visualizations</a></li>
+                            <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
+                            <li><a href="/events/">Geek Events</a></li>
+                            <li><a href="/videos/">Videos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/geeklog/">Geeklog</a></li>
+                    <li><a href="/shirts/">Shirts</a></li>
+                    <li><a href="/tools/">Tools</a></li>
+                    <li id="sharemenu" class="dropdown">
+  <button type="button" class="dropdown-toggle btn btn-success navbar-btn" data-toggle="dropdown"><i class="fa fa-share"></i></button>
+  <ul class="share dropdown-menu pull-right">
+    <li><a href="/rss.xml" class="btn btn-default"><i class="fa fa-rss"></i> RSS Feed</a></li>
+    <li><a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/geeklog/python-shared-hosting/&title=Installing%20and%20Setting%20up%20Python%20on%20Shared%20Hosting" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
+    <li><a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/geeklog/python-shared-hosting/&text=Installing%20and%20Setting%20up%20Python%20on%20Shared%20Hosting" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
+    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/geeklog/python-shared-hosting/&t=Installing%20and%20Setting%20up%20Python%20on%20Shared%20Hosting" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
+    <li><a rel="nofollow" href="https://plus.google.com/share?url=https%3A//geeksta.net/geeklog/python-shared-hosting/" class="btn btn-default"><i class="fa fa-google-plus"></i> Google+</a></li>
+    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geeksta.net/geeklog/python-shared-hosting/&title=Installing%20and%20Setting%20up%20Python%20on%20Shared%20Hosting" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+    <li><a rel="nofollow" href="https://www.stumbleupon.com/submit?url=https%3A//geeksta.net/geeklog/python-shared-hosting/&title=Installing%20and%20Setting%20up%20Python%20on%20Shared%20Hosting" class="btn btn-default"><i class="fa fa-stumbleupon"></i> Stumble</a></li>
+  </ul>
+</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="wrapper" class="container">
+        
+        
+<div class="row">
+    <div itemscope itemtype="http://schema.org/Article" class="col-md-9">
+        <header><h1 itemprop="name">Installing and Setting up Python on Shared Hosting</h1></header>
+        
+        <p>Most shared hosting providers offer out of the box support for PHP, some let you use Perl via CGI or Ruby, but Python is rarely usable without additional setup. Often it is not installed at all or the Python version is hopelessly outdated.</p>
+<p>In this post I'll outline the steps to install and set up Python on a shared hosting platform that runs on Linux and offers SSH access to the server.</p>
+<h2>Python 2.7.10 Installation</h2>
+<p>I show the process using the current Python 2 version, the steps for the Python 3 core distribution are equivalent. After you logged in to your hosting platform via SSH, execute the following commands.</p>
+<pre><code>mkdir ~/python27
+cd ~/python27
+wget https://www.python.org/ftp/python/2.7.10/Python-2.7.10.tar.xz
+</code></pre>
+<p>When the download is finished, verify the checksum to make sure the archive has not been corrupted.</p>
+<pre><code>md5sum Python-2.7.10.tar.xz
+</code></pre>
+<p>Extract the archive and change the permissions of directories contained in the archive so they can be read and accessed by all groups and users.</p>
+<pre><code>tar xfv Python-2.7.10.tar.xz
+find ~/python27 -type d -exec chmod 755 {} \;
+</code></pre>
+<p>Now execute the following commands to configure and actually install Python, these commands will take a while to finish.</p>
+<pre><code>cd Python-2.7.10
+./configure --prefix=$HOME/python27
+make
+make install
+</code></pre>
+<h2>Python 2.7.10 Setup</h2>
+<p>For the just installed version of Python to be accessible you need to edit your <code>.bashrc</code> file.</p>
+<pre><code>vim ~/.bashrc
+</code></pre>
+<p>Add the following 2 lines to the <code>.bashrc</code>.</p>
+<pre><code>PYTHON=$HOME/python27/bin
+export PATH=$PYTHON:$PATH
+</code></pre>
+<p>Now execute the commands in your <code>.bashrc</code> and check the Python interpreter version. If your installation was successful the output should correspond to the downloaded version.</p>
+<pre><code>source ~/.bashrc
+python -V
+</code></pre>
+<h2>Python Packages</h2>
+<div class="alert alert-info" role="alert">This section is specific to Python 2. If you install Python 3.4 or higher you'll already have pip and can use the <code>pyvenv</code> command for virtual environments.</div>
+
+<p>Python has a "batteries included" philosophy, which means that the standard distribution offers a lot of functionality. Nonetheless, you'll want to be able to install additional Python packages from PyPI and use them in your applications.</p>
+<p>In the remainder of this post, you'll see how to install the prerequisite packages and create virtual environments for your applications. First install easy_install.</p>
+<pre><code>wget https://bootstrap.pypa.io/ez_setup.py
+python ez_setup.py
+</code></pre>
+<p>Quit your SSH session and log in again. Now you can install pip</p>
+<pre><code>easy_install pip
+</code></pre>
+<p>and then virtualenvwrapper.</p>
+<pre><code>pip install virtualenvwrapper
+</code></pre>
+<p>Finally make the virtualenvwrapper commands available by modifying your <code>.bashrc</code> again.</p>
+<pre><code>export WORKON_HOME=~/.virtualenvs
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
+export VIRTUALENVWRAPPER_PYTHON=~/python27/bin/python
+export VIRTUALENVWRAPPER_VIRTUALENV=~/python27/bin/virtualenv
+source ~/python27/bin/virtualenvwrapper.sh
+</code></pre>
+<p>You can choose another <code>WORKON_HOME</code> directory. Setting <code>VIRTUALENVWRAPPER_VIRTUALENV_ARGS</code> to <code>--no-site-packages</code> makes sure that newly created virtual environments are isolated from the system <code>site-packages</code>.</p>
+<h2>Conclusion</h2>
+<p>As you saw in this tutorial installing and setting up Python on a shared hosting platform requires a bit of work and SSH access. But it certainly pays off to be able to write your applications in a sane and accessible programming language that offers many features out of the box and a large number of additional packages for creating all kinds of applications.</p>
+<p>I've used this procedure on <a href="//www.hostmonster.com/track/rg/">Hostmonster</a>, where I host several Python applications. If you have trouble reproducing it or want to point out differences on another hosting platform, leave a comment below.</p>
+    </div>
+    <div class="col-md-3">
+        
+
+<h2>Featured Posts</h2>
+<ul class="list-unstyled">
+  <li class="voffset"><a href="/geeklog/exploring-expressions-emotions-github-commit-messages/">Exploring Expressions of Emotions in GitHub Commit Messages</a></li>
+  <li class="voffset"><a href="/geeklog/web-page-screenshots-phantomjs-python/">Taking Web Page Screenshots with PhantomJS and Python</a></li>
+  <li class="voffset"><a href="/visualizations/age-musicians-die/">What Age Do Musicians Die at</a></li>
+</ul>
+<hr>
+<h2>Featured T-Shirt</h2>
+
+
+<a href="/design/no-braces-red-white/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/no-braces-red-white.jpg" alt="No Braces - Funny Python Coding Design Red/White" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">No Braces - Funny Python Coding Design Red/White</figcaption>
+    </figure>
+</a>
+
+<hr>
+<h2>Latest Posts</h2>
+<ul class="list-unstyled">
+
+    <li class="voffset"><a href="/geeklog/custom-matplotlib-styles/">Customizing Matplotlib's Plotting Styles</a></li>
+
+    <li class="voffset"><a href="/geeklog/automating-browser-tasks-without-distraction-on-ubuntu/">Automating Browser Tasks without Distraction on Ubuntu</a></li>
+
+    <li class="voffset"><a href="/geeklog/better-commit-messages/">A Simple Hack to Write Better Commit Messages</a></li>
+
+    <li class="voffset"><a href="/geeklog/delete-delicious-bookmarks/">Python Script to Delete Delicious Bookmarks</a></li>
+
+</ul>
+<hr>
+<a href="/rss.xml" class="btn btn-warning"><i class="fa fa-rss"></i> Subscribe to new content</a></li>
+    </div>
+</div>
+
+        
+<hr class="clearfix">
+<h4>Share this post on:</h4>
+<div class="share">
+    <a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/geeklog/python-shared-hosting/&t=Installing%20and%20Setting%20up%20Python%20on%20Shared%20Hosting" class="btn btn-default btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
+    <a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/geeklog/python-shared-hosting/&title=Installing%20and%20Setting%20up%20Python%20on%20Shared%20Hosting" class="btn btn-default btn-lg"><i class="fa fa-reddit-alien"></i> Reddit</a>
+    <a rel="nofollow" href="https://www.stumbleupon.com/submit?url=https%3A//geeksta.net/geeklog/python-shared-hosting/&title=Installing%20and%20Setting%20up%20Python%20on%20Shared%20Hosting" class="btn btn-default btn-lg"><i class="fa fa-stumbleupon"></i> StumbleUpon</a>
+    <a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/geeklog/python-shared-hosting/&text=Installing%20and%20Setting%20up%20Python%20on%20Shared%20Hosting" class="btn btn-default btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
+</div>
+<hr class="clearfix">
+<div class="postinfo">
+<p>This post was written by <a href="http://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time itemprop="datePublished" datetime="2015-07-09T14:04">July 09, 2015</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+
+<p>
+<strong>Tags:</strong>
+
+<span class="label label-info"><a href="/tags/python/">python</a></span>
+
+<span class="label label-info"><a href="/tags/tutorial/">tutorial</a></span>
+
+<span class="label label-info"><a href="/tags/hosting/">hosting</a></span>
+
+<span class="label label-info"><a href="/tags/linux/">linux</a></span>
+
+</p>
+
+<p class="text-muted"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h2>Featured T-Shirts</h2></div>
+    <div class="panel-body">
+
+
+    <div class="row">
+        <div class="col-md-3">
+            
+<a href="/design/caution-i-curse-when-i-commit-code/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/caution-i-curse-when-i-commit-code.jpg" alt="Caution I Curse When I Commit Code - Funny Programmer Design" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Caution I Curse When I Commit Code - Funny Programmer Design</figcaption>
+    </figure>
+</a>
+
+        </div>
+    
+
+    
+        <div class="col-md-3">
+            
+<a href="/design/hack-the-planet-green/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/hack-the-planet-green.jpg" alt="Hack the Planet - Green Design for Computer Hackers" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Hack the Planet - Green Design for Computer Hackers</figcaption>
+    </figure>
+</a>
+
+        </div>
+    
+
+    
+        <div class="col-md-3">
+            
+<a href="/design/shrug-it-works-on-my-machine-medium-white/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/shrug-it-works-on-my-machine-medium-white.jpg" alt="Shrug it works on my machine - Programmer Excuse Design - White Text" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Shrug it works on my machine - Programmer Excuse Design - White Text</figcaption>
+    </figure>
+</a>
+
+        </div>
+    
+
+    
+        <div class="col-md-3">
+            
+<a href="/design/bash-fork-bomb-white/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/bash-fork-bomb-white.jpg" alt="Bash Fork Bomb - White Text for Unix/Linux Hackers" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Bash Fork Bomb - White Text for Unix/Linux Hackers</figcaption>
+    </figure>
+</a>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+    </div>
+
+    <div id="footer" class="container">
+        <p>Geeksta.net: programming, data mining, data visualization, tech books, and tools for tech geeks.<br>
+        © <script>document.write(new Date().getFullYear())</script> Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/sitemap/">Sitemap</a></p>
+    </div>
+
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/js/script.js"></script>
+    
+        <script src="/vendor/highlight/highlight.pack.js"></script><script src="/js/highlight.js"></script>
+    
+    <script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-5102014-10', 'auto');
+ga('send', 'pageview');
+(function(c,a){function d(){var e=a.getElementsByTagName("a");var f=[];for(var g=0;g<e.length;++g){var h=e[g];if(h.host!=c.location.host){f.push(h)}}return f}function b(f){var e=f.srcElement||f.target;while(e&&(typeof e.tagName=="undefined"||e.tagName.toLowerCase()!="a"||!e.href)){e=e.parentNode}if(!e||!e.href){return}if(c.ga){ga("send","event","Outbound link","Click",e.href)}if(!e.target||e.target.match(/^_(self|parent|top)$/i)){setTimeout(function(){a.location.href=e.href},150);if(f.preventDefault){f.preventDefault()}else{f.returnValue=false}}}c.addEventListener("load",function(){var e=d();for(var f in e){e[f].addEventListener("click",b)}})}(window,document));
+</script>
+    </body>
+</html>

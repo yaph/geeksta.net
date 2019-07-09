@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head itemscope itemtype="http://schema.org/WebSite">
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title itemprop="name">Quick and Dirty Site Monitoring with Google Apps Script | Geeksta</title>
+        <meta name="description" content="A tutorial on how to use Google Drive and Apps Script to set up a free Website monitoring service that runs on Google's infrastructure.">
+        <meta name="author" content="Ramiro Gómez">
+        
+        
+        <meta name="flattr:id" content="4pzdyq">
+        <link href="https://geeksta.net/geeklog/quick-dirty-site-monitoring-google-apps-script/" rel="canonical" itemprop="url">
+        <link href="/img/icon-small.png" rel="icon" type="image/png">
+        <link href="/rss.xml" rel="alternate" type="application/rss+xml" title="Geeksta All Posts RSS feed">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
+        
+            
+        
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+    </head>
+    <body>
+    <div class="navbar navbar-fixed-top navbar-inverse">
+        <div class="container">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" id="site-name" href="/">Geeksta</a>
+            <div class="collapse navbar-collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav pull-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sections <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/reviews/">Book Reviews</a></li>
+                            <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
+                            <li><a href="/visualizations/">Data Visualizations</a></li>
+                            <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
+                            <li><a href="/events/">Geek Events</a></li>
+                            <li><a href="/videos/">Videos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/geeklog/">Geeklog</a></li>
+                    <li><a href="/shirts/">Shirts</a></li>
+                    <li><a href="/tools/">Tools</a></li>
+                    <li id="sharemenu" class="dropdown">
+  <button type="button" class="dropdown-toggle btn btn-success navbar-btn" data-toggle="dropdown"><i class="fa fa-share"></i></button>
+  <ul class="share dropdown-menu pull-right">
+    <li><a href="/rss.xml" class="btn btn-default"><i class="fa fa-rss"></i> RSS Feed</a></li>
+    <li><a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/geeklog/quick-dirty-site-monitoring-google-apps-script/&title=Quick%20and%20Dirty%20Site%20Monitoring%20with%20Google%20Apps%20Script" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
+    <li><a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/geeklog/quick-dirty-site-monitoring-google-apps-script/&text=Quick%20and%20Dirty%20Site%20Monitoring%20with%20Google%20Apps%20Script" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
+    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/geeklog/quick-dirty-site-monitoring-google-apps-script/&t=Quick%20and%20Dirty%20Site%20Monitoring%20with%20Google%20Apps%20Script" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
+    <li><a rel="nofollow" href="https://plus.google.com/share?url=https%3A//geeksta.net/geeklog/quick-dirty-site-monitoring-google-apps-script/" class="btn btn-default"><i class="fa fa-google-plus"></i> Google+</a></li>
+    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geeksta.net/geeklog/quick-dirty-site-monitoring-google-apps-script/&title=Quick%20and%20Dirty%20Site%20Monitoring%20with%20Google%20Apps%20Script" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+    <li><a rel="nofollow" href="https://www.stumbleupon.com/submit?url=https%3A//geeksta.net/geeklog/quick-dirty-site-monitoring-google-apps-script/&title=Quick%20and%20Dirty%20Site%20Monitoring%20with%20Google%20Apps%20Script" class="btn btn-default"><i class="fa fa-stumbleupon"></i> Stumble</a></li>
+  </ul>
+</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="wrapper" class="container">
+        
+        
+<div class="row">
+    <div itemscope itemtype="http://schema.org/Article" class="col-md-9">
+        <header><h1 itemprop="name">Quick and Dirty Site Monitoring with Google Apps Script</h1></header>
+        
+        <p>A few months ago I came across the article <a href="http://www.labnol.org/internet/website-uptime-monitor/21060/">Monitor your Website's Uptime with Google Docs</a> by <a href="http://www.labnol.org/about/">Amit Agarwal</a>. His idea to use Google Apps Script for monitoring Websites is compelling, it's free and downtimes of your monitoring script are very unlikely.</p>
+<p>I've used Amit's solution for a few sites, but I didn't like to have one copy of the script per site. So I created the simple monitoring script below, that retrieves all URLs to check from one Spreadsheet. While this solution is more convenient to use and maintain, especially if you monitor many sites, it sacrifices flexibility.</p>
+<h2>Site Monitoring Code</h2>
+<div><script src="https://gist.github.com/3724237.js?file=sitemonitor.js"></script></div>
+<p>I think the code is pretty easy to follow, it basically gets the rows from the current spreadsheet, performs an HTTP request for each URL, and in case of an exception, adds the status code and the URL to the <code>errors</code> array.</p>
+<del><p> Unfortunately, <code>UrlFetchApp.fetch</code> throws an exception, instead of returning an object, that allows to retrieve the HTTP status code, therefore the gross exception message parsing.</p>
+<p>This has been a <a href="http://productforums.google.com/forum/#!topic/apps-script/m_HOPHx64X8">known issue</a> since 2010, and the <cite>ugly design</cite> design was supposed to be fixed according to a reply from a Google employee. Meanwhile, the Google Apps Script group was closed and support moved to <a href="http://stackoverflow.com/questions/tagged/google-apps-script">Stack Overflow</a>. So be it.</p>
+</del>
+<p class="label-info"><small>Updated the code to include the <code>muteHttpExceptions</code> parameter to <code>UrlFetchApp.fetch()</code> as pointed out by Eric Koleda in the comments below.</small></p>
+<p>At the end of the code, an email will be sent to the owner of the document, if errors were encountered during script execution.</p>
+<h2>How to use it</h2>
+<ol>
+<li>Go to <a href="https://drive.google.com/">Google Drive</a> and create a new spreadsheet, give it a meaningful name, e. g. <code>sitemonitor.ss</code>.</li>
+<li>Add all URLs you want to monitor in the first column, starting with the first row, one URL per row.</li>
+<li>From the <code>Tools</code> menu choose <code>Script Editor</code>. When you do this the first time for a document, you'll see a popup like the one below, simply close it.<div><img src="/img/geeklog/google-apps-script-welcome-popup.png" alt="Google Apps Script Welcome Popup" /></li>
+<li>Paste the script code from above into the file and save it.</li>
+<li>From the <code>Resources</code> menu choose <code>Current script's triggers...</code>.</li>
+<li>Enter a project name, when prompted and then click on the <code>No triggers set up. Click here to add one now.</code> link.</li>
+<li>You'll see an overview of the script's triggers. In the <code>Run</code> column <code>checkURLs</code> is already selected, since it's the only function.</li>
+<li>To set up a time based trigger choose <code>Time-driven</code>, and from the next dropdowns the interval you deem appropriate. If you set it to run every 6 hours, it will look like the following:<div><img src="/img/geeklog/google-apps-script-current-project-triggers.png" alt="Google Apps Script Project Triggers" /></li>
+<li>Finally, click on the <code>save</code> button. Doing this the first time, you'll be prompted to authorize the script, to do so click on the <code>Authorize</code> button.<div><img src="/img/geeklog/google-apps-script-authorization-required.png" alt="Google Apps Script Authorization Required" /></li>
+<li>You can close the document and are done!</li>
+</ol>
+<p>Even though this is a straightforward process, I'm sure you get, why I don't want to repeat it for every site. Now, whenever I add a URL it will be monitored from the next execution of the script. To stop monitoring a certain site, the corresponding row simply needs to be deleted in the spreadsheet.</p>
+<h2>Caveats and Limitations</h2>
+<p>You may want to set different intervals or specific times for checking sites, or different email recipients, which doesn't work with this solution. Of course, you can have several copies with sets of URLs, but this would defeat the purpose of having something more maintainable.</p>
+<p>For more sophisticated stuff, you will need to extend the script's functionality. That being said, Google Apps Script offers a rich set of APIs and an extensive <a href="https://developers.google.com/apps-script/">developer documentation</a>.</p>
+<p>One more thing to keep in mind are quota limits for the different services used in scripts, in this case HTTP requests and sending emails. For more information see the table on the <a href="https://docs.google.com/macros/dashboard">Apps Script Dashboard's</a> Quota Limits tab.</p>
+<p>Happy scripting!</p>
+    </div>
+    <div class="col-md-3">
+        
+
+<h2>Featured Posts</h2>
+<ul class="list-unstyled">
+  <li class="voffset"><a href="/geeklog/exploring-expressions-emotions-github-commit-messages/">Exploring Expressions of Emotions in GitHub Commit Messages</a></li>
+  <li class="voffset"><a href="/geeklog/web-page-screenshots-phantomjs-python/">Taking Web Page Screenshots with PhantomJS and Python</a></li>
+  <li class="voffset"><a href="/visualizations/age-musicians-die/">What Age Do Musicians Die at</a></li>
+</ul>
+<hr>
+<h2>Featured T-Shirt</h2>
+
+
+<a href="/design/no-braces-red-white/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/no-braces-red-white.jpg" alt="No Braces - Funny Python Coding Design Red/White" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">No Braces - Funny Python Coding Design Red/White</figcaption>
+    </figure>
+</a>
+
+<hr>
+<h2>Latest Posts</h2>
+<ul class="list-unstyled">
+
+    <li class="voffset"><a href="/geeklog/python-shared-hosting/">Installing and Setting up Python on Shared Hosting</a></li>
+
+    <li class="voffset"><a href="/geeklog/custom-matplotlib-styles/">Customizing Matplotlib's Plotting Styles</a></li>
+
+    <li class="voffset"><a href="/geeklog/automating-browser-tasks-without-distraction-on-ubuntu/">Automating Browser Tasks without Distraction on Ubuntu</a></li>
+
+    <li class="voffset"><a href="/geeklog/better-commit-messages/">A Simple Hack to Write Better Commit Messages</a></li>
+
+    <li class="voffset"><a href="/geeklog/delete-delicious-bookmarks/">Python Script to Delete Delicious Bookmarks</a></li>
+
+</ul>
+<hr>
+<a href="/rss.xml" class="btn btn-warning"><i class="fa fa-rss"></i> Subscribe to new content</a></li>
+    </div>
+</div>
+
+        
+<hr class="clearfix">
+<h4>Share this post on:</h4>
+<div class="share">
+    <a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/geeklog/quick-dirty-site-monitoring-google-apps-script/&t=Quick%20and%20Dirty%20Site%20Monitoring%20with%20Google%20Apps%20Script" class="btn btn-default btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
+    <a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/geeklog/quick-dirty-site-monitoring-google-apps-script/&title=Quick%20and%20Dirty%20Site%20Monitoring%20with%20Google%20Apps%20Script" class="btn btn-default btn-lg"><i class="fa fa-reddit-alien"></i> Reddit</a>
+    <a rel="nofollow" href="https://www.stumbleupon.com/submit?url=https%3A//geeksta.net/geeklog/quick-dirty-site-monitoring-google-apps-script/&title=Quick%20and%20Dirty%20Site%20Monitoring%20with%20Google%20Apps%20Script" class="btn btn-default btn-lg"><i class="fa fa-stumbleupon"></i> StumbleUpon</a>
+    <a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/geeklog/quick-dirty-site-monitoring-google-apps-script/&text=Quick%20and%20Dirty%20Site%20Monitoring%20with%20Google%20Apps%20Script" class="btn btn-default btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
+</div>
+<hr class="clearfix">
+<div class="postinfo">
+<p>This post was written by <a href="http://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time itemprop="datePublished" datetime="2012-09-14T22:33">September 14, 2012</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+
+<p>
+<strong>Tags:</strong>
+
+<span class="label label-info"><a href="/tags/google-apps-script/">google apps script</a></span>
+
+<span class="label label-info"><a href="/tags/web-development/">web development</a></span>
+
+<span class="label label-info"><a href="/tags/code/">code</a></span>
+
+<span class="label label-info"><a href="/tags/javascript/">javascript</a></span>
+
+<span class="label label-info"><a href="/tags/tutorial/">tutorial</a></span>
+
+</p>
+
+<p class="text-muted"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h2>Featured T-Shirts</h2></div>
+    <div class="panel-body">
+
+
+    <div class="row">
+        <div class="col-md-3">
+            
+<a href="/design/caution-i-curse-when-i-commit-code/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/caution-i-curse-when-i-commit-code.jpg" alt="Caution I Curse When I Commit Code - Funny Programmer Design" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Caution I Curse When I Commit Code - Funny Programmer Design</figcaption>
+    </figure>
+</a>
+
+        </div>
+    
+
+    
+        <div class="col-md-3">
+            
+<a href="/design/hack-the-planet-green/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/hack-the-planet-green.jpg" alt="Hack the Planet - Green Design for Computer Hackers" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Hack the Planet - Green Design for Computer Hackers</figcaption>
+    </figure>
+</a>
+
+        </div>
+    
+
+    
+        <div class="col-md-3">
+            
+<a href="/design/shrug-it-works-on-my-machine-medium-white/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/shrug-it-works-on-my-machine-medium-white.jpg" alt="Shrug it works on my machine - Programmer Excuse Design - White Text" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Shrug it works on my machine - Programmer Excuse Design - White Text</figcaption>
+    </figure>
+</a>
+
+        </div>
+    
+
+    
+        <div class="col-md-3">
+            
+<a href="/design/bash-fork-bomb-white/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/bash-fork-bomb-white.jpg" alt="Bash Fork Bomb - White Text for Unix/Linux Hackers" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Bash Fork Bomb - White Text for Unix/Linux Hackers</figcaption>
+    </figure>
+</a>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+    </div>
+
+    <div id="footer" class="container">
+        <p>Geeksta.net: programming, data mining, data visualization, tech books, and tools for tech geeks.<br>
+        © <script>document.write(new Date().getFullYear())</script> Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/sitemap/">Sitemap</a></p>
+    </div>
+
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/js/script.js"></script>
+    
+        
+    
+    <script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-5102014-10', 'auto');
+ga('send', 'pageview');
+(function(c,a){function d(){var e=a.getElementsByTagName("a");var f=[];for(var g=0;g<e.length;++g){var h=e[g];if(h.host!=c.location.host){f.push(h)}}return f}function b(f){var e=f.srcElement||f.target;while(e&&(typeof e.tagName=="undefined"||e.tagName.toLowerCase()!="a"||!e.href)){e=e.parentNode}if(!e||!e.href){return}if(c.ga){ga("send","event","Outbound link","Click",e.href)}if(!e.target||e.target.match(/^_(self|parent|top)$/i)){setTimeout(function(){a.location.href=e.href},150);if(f.preventDefault){f.preventDefault()}else{f.returnValue=false}}}c.addEventListener("load",function(){var e=d();for(var f in e){e[f].addEventListener("click",b)}})}(window,document));
+</script>
+    </body>
+</html>

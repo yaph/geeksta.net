@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel><title>Tags » Translator</title>
+    <link>https://geeksta.net</link>
+    <description>Tags » Translator</description>
+    <lastBuildDate>Tue, 09 Jul 2019 16:02:24 </lastBuildDate>
+    <generator>Logya</generator>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Leetspeak Shirt Generator]]></title>
+        <link><![CDATA[https://geeksta.net/tools/leetspeak-shirt-generator/]]></link>
+        <description><![CDATA[<p>Enter text to translate into leetspeak and get it printed on a t-shirt.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/tools/leetspeak-shirt-generator/]]></guid>
+        <pubDate>Sun, 08 Jul 2012 20:09:27 </pubDate>
+    </item>
+    
+</channel></rss>

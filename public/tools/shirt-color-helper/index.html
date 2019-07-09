@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head itemscope itemtype="http://schema.org/WebSite">
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title itemprop="name">Shirt Color Helper for Amazon Merch, Redbubble and Zazzle | Geeksta</title>
+        <meta name="description" content="The Shirt Color Helper is a tool to help choosing colors when you create t-shirt designs for Amazon Merch, Redbubble and Zazzle.">
+        <meta name="author" content="Ramiro Gómez">
+        
+            <meta property="og:image" content="https://geeksta.net/img/tools/shirt-color-helper.png">
+            
+
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@yaph">
+    <meta name="twitter:title" content="Shirt Color Helper for Amazon Merch, Redbubble and Zazzle">
+    <meta name="twitter:description" content="The Shirt Color Helper is a tool to help choosing colors when you create t-shirt designs for Amazon Merch, Redbubble and Zazzle.">
+    <meta name="twitter:image:src" content="https://geeksta.net/img/tools/shirt-color-helper.png">
+
+        
+        
+        <meta name="flattr:id" content="4pzdyq">
+        <link href="https://geeksta.net/tools/shirt-color-helper/" rel="canonical" itemprop="url">
+        <link href="/img/icon-small.png" rel="icon" type="image/png">
+        <link href="/rss.xml" rel="alternate" type="application/rss+xml" title="Geeksta All Posts RSS feed">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
+        
+            <link href="/vendor/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet"><link href="/css/shirt-color-helper/style.css" rel="stylesheet">
+        
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+    </head>
+    <body>
+    <div class="navbar navbar-fixed-top navbar-inverse">
+        <div class="container">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" id="site-name" href="/">Geeksta</a>
+            <div class="collapse navbar-collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav pull-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sections <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/reviews/">Book Reviews</a></li>
+                            <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
+                            <li><a href="/visualizations/">Data Visualizations</a></li>
+                            <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
+                            <li><a href="/events/">Geek Events</a></li>
+                            <li><a href="/videos/">Videos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/geeklog/">Geeklog</a></li>
+                    <li><a href="/shirts/">Shirts</a></li>
+                    <li><a href="/tools/">Tools</a></li>
+                    <li id="sharemenu" class="dropdown">
+  <button type="button" class="dropdown-toggle btn btn-success navbar-btn" data-toggle="dropdown"><i class="fa fa-share"></i></button>
+  <ul class="share dropdown-menu pull-right">
+    <li><a href="/rss.xml" class="btn btn-default"><i class="fa fa-rss"></i> RSS Feed</a></li>
+    <li><a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/tools/shirt-color-helper/&title=Shirt%20Color%20Helper%20for%20Amazon%20Merch%2C%20Redbubble%20and%20Zazzle" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
+    <li><a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/tools/shirt-color-helper/&text=Shirt%20Color%20Helper%20for%20Amazon%20Merch%2C%20Redbubble%20and%20Zazzle" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
+    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/tools/shirt-color-helper/&t=Shirt%20Color%20Helper%20for%20Amazon%20Merch%2C%20Redbubble%20and%20Zazzle" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
+    <li><a rel="nofollow" href="https://plus.google.com/share?url=https%3A//geeksta.net/tools/shirt-color-helper/" class="btn btn-default"><i class="fa fa-google-plus"></i> Google+</a></li>
+    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geeksta.net/tools/shirt-color-helper/&title=Shirt%20Color%20Helper%20for%20Amazon%20Merch%2C%20Redbubble%20and%20Zazzle" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+    <li><a rel="nofollow" href="https://www.stumbleupon.com/submit?url=https%3A//geeksta.net/tools/shirt-color-helper/&title=Shirt%20Color%20Helper%20for%20Amazon%20Merch%2C%20Redbubble%20and%20Zazzle" class="btn btn-default"><i class="fa fa-stumbleupon"></i> Stumble</a></li>
+  </ul>
+</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="wrapper" class="container">
+        
+<div class="row"><div class="col-md-12">
+    <form id="pickerform" class="form-inline pull-right">
+        <div class="form-group">
+            <label for="colorpicker" class="control-label">Pick a text color</label>
+            <input id="colorpicker" type="text" class="form-control colorpicker-element" value="#000">
+        </div>
+    </form>
+</div></div>
+
+<div class="row"><div class="col-md-12">
+    <ul id="store-tabs" class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="#am">Amazon Merch</a></li>
+        <li role="presentation"><a href="#rb">Redbubble</a></li>
+        <li role="presentation"><a href="#zll">Zazzle light</a></li>
+        <li role="presentation"><a href="#zld">Zazzle dark</a></li>
+    </ul>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="am"></div>
+        <div role="tabpanel" class="tab-pane" id="rb"></div>
+        <div role="tabpanel" class="tab-pane" id="zll"></div>
+        <div role="tabpanel" class="tab-pane" id="zld"></div>
+    </div>
+    <hr class="clearfix">
+</div></div>
+
+        
+<div class="row">
+    <div itemscope itemtype="http://schema.org/Article" class="col-md-9">
+        <header><h1 itemprop="name">Shirt Color Helper for Amazon Merch, Redbubble and Zazzle</h1></header>
+        
+        <p>I create <a href="/shirts/">customizable shirts</a> and other products for sale through shops offering a Print On Demand service including Amazon, Redbubble and Zazzle. To help choosing colors for texts and graphics that go well with the colors available for different t-shirt design options, I created the <strong>Shirt Color Helper</strong> tool.</p>
+<h2>How to Use the Shirt Color Helper</h2>
+<p>The Shirt Color Helper is hopefully easy to use and self-explanatory. Nonetheless, I'll explain what it does and how to use it.</p>
+<p>Right on top you can pick the text color you want to use for printing on a shirt, by default it is set to black.</p>
+<p>In the first tab pane below you see the different colors you can pick on Merch By Amazon when creating a shirt. Colors are displayed in rectangular boxes with the phrase "Sample Text" printed on top in the selected text color. Below each box you see the shirt color name and whether the contrast with the text color is okay to use.</p>
+<p>When you choose a different text color, the sample texts and contrast indicators are updated on the fly. The remaining tabs do the same for Redbubble, and Zazzle, the latter being divided in light and dark shirt colors.</p>
+<p>Move the mouse over a color box or name to see the corresponding RGB and hex values of the shirt color. Please note that color values for Heather type shirts are an approximation, since these types of shirts don't have a single color.</p>
+<h2>What Contrast Values are Okay?</h2>
+<p>Choosing a good color combination is not only a matter of good contrast, but readability matters especially when printing meaningful text.</p>
+<p>Whether the contrast of a color combination is indicated as okay to use (<i class="glyphicon glyphicon-ok"></i>) or not (<i class="glyphicon glyphicon-remove"></i>) is based on recommendations and formulae from the <a href="http://www.w3.org/TR/WCAG20/">Web Content Accessibility Guidelines</a>.</p>
+<p>A <a href="http://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast">contrast ratio</a> of 3 or higher (WCAG Level AA for large scale text) for shirt and text colors passes as okay, assuming that the font sizes used on shirts are larger than 18pt or 14pt bold. The calculated ratio is shown in a tooltip, when you move your mouse over the indicator icon next to the shirt color name. Values range from 1 to 21, the higher the better the contrast.</p>
+<h2>Credits</h2>
+<p>This tool is made with the help of fine open source libraries, including <a href="http://mjolnic.com/bootstrap-colorpicker/">Bootstrap Colorpicker</a>, <a href="https://github.com/alexei/sprintf.js">sprintf.js</a> and <a href="https://github.com/doochik/wcag-color-contrast">wcag-color-contrast</a>.</p>
+<p>If you find the Shirt Color Helper useful, share it with your shirt-creating friends and don't forget to <a href="/shirts/">check out my products</a> to see if you find something nice for yourself or someone you love.</p>
+<p>Happy shirt creation!</p>
+    </div>
+    <div class="col-md-3">
+        
+
+<h2>Featured Posts</h2>
+<ul class="list-unstyled">
+  <li class="voffset"><a href="/geeklog/exploring-expressions-emotions-github-commit-messages/">Exploring Expressions of Emotions in GitHub Commit Messages</a></li>
+  <li class="voffset"><a href="/geeklog/web-page-screenshots-phantomjs-python/">Taking Web Page Screenshots with PhantomJS and Python</a></li>
+  <li class="voffset"><a href="/visualizations/age-musicians-die/">What Age Do Musicians Die at</a></li>
+</ul>
+<hr>
+<h2>Featured T-Shirt</h2>
+
+
+<a href="/design/no-braces-red-white/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/no-braces-red-white.jpg" alt="No Braces - Funny Python Coding Design Red/White" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">No Braces - Funny Python Coding Design Red/White</figcaption>
+    </figure>
+</a>
+
+<hr>
+<h2>Latest Posts</h2>
+<ul class="list-unstyled">
+
+    <li class="voffset"><a href="/geeklog/python-shared-hosting/">Installing and Setting up Python on Shared Hosting</a></li>
+
+    <li class="voffset"><a href="/geeklog/custom-matplotlib-styles/">Customizing Matplotlib's Plotting Styles</a></li>
+
+    <li class="voffset"><a href="/geeklog/automating-browser-tasks-without-distraction-on-ubuntu/">Automating Browser Tasks without Distraction on Ubuntu</a></li>
+
+    <li class="voffset"><a href="/geeklog/better-commit-messages/">A Simple Hack to Write Better Commit Messages</a></li>
+
+    <li class="voffset"><a href="/geeklog/delete-delicious-bookmarks/">Python Script to Delete Delicious Bookmarks</a></li>
+
+</ul>
+<hr>
+<a href="/rss.xml" class="btn btn-warning"><i class="fa fa-rss"></i> Subscribe to new content</a></li>
+    </div>
+</div>
+
+        
+<hr class="clearfix">
+<h4>Share this post on:</h4>
+<div class="share">
+    <a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/tools/shirt-color-helper/&t=Shirt%20Color%20Helper%20for%20Amazon%20Merch%2C%20Redbubble%20and%20Zazzle" class="btn btn-default btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
+    <a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/tools/shirt-color-helper/&title=Shirt%20Color%20Helper%20for%20Amazon%20Merch%2C%20Redbubble%20and%20Zazzle" class="btn btn-default btn-lg"><i class="fa fa-reddit-alien"></i> Reddit</a>
+    <a rel="nofollow" href="https://www.stumbleupon.com/submit?url=https%3A//geeksta.net/tools/shirt-color-helper/&title=Shirt%20Color%20Helper%20for%20Amazon%20Merch%2C%20Redbubble%20and%20Zazzle" class="btn btn-default btn-lg"><i class="fa fa-stumbleupon"></i> StumbleUpon</a>
+    <a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/tools/shirt-color-helper/&text=Shirt%20Color%20Helper%20for%20Amazon%20Merch%2C%20Redbubble%20and%20Zazzle" class="btn btn-default btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
+</div>
+<hr class="clearfix">
+<div class="postinfo">
+<p>This post was written by <a href="http://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time itemprop="datePublished" datetime="2015-03-03T21:44">March 03, 2015</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+
+<p>
+<strong>Tags:</strong>
+
+<span class="label label-info"><a href="/tags/redbubble/">redbubble</a></span>
+
+<span class="label label-info"><a href="/tags/zazzle/">zazzle</a></span>
+
+<span class="label label-info"><a href="/tags/color/">color</a></span>
+
+<span class="label label-info"><a href="/tags/design/">design</a></span>
+
+</p>
+
+<p class="text-muted"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h2>Featured T-Shirts</h2></div>
+    <div class="panel-body">
+
+
+    <div class="row">
+        <div class="col-md-3">
+            
+<a href="/design/caution-i-curse-when-i-commit-code/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/caution-i-curse-when-i-commit-code.jpg" alt="Caution I Curse When I Commit Code - Funny Programmer Design" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Caution I Curse When I Commit Code - Funny Programmer Design</figcaption>
+    </figure>
+</a>
+
+        </div>
+    
+
+    
+        <div class="col-md-3">
+            
+<a href="/design/hack-the-planet-green/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/hack-the-planet-green.jpg" alt="Hack the Planet - Green Design for Computer Hackers" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Hack the Planet - Green Design for Computer Hackers</figcaption>
+    </figure>
+</a>
+
+        </div>
+    
+
+    
+        <div class="col-md-3">
+            
+<a href="/design/shrug-it-works-on-my-machine-medium-white/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/shrug-it-works-on-my-machine-medium-white.jpg" alt="Shrug it works on my machine - Programmer Excuse Design - White Text" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Shrug it works on my machine - Programmer Excuse Design - White Text</figcaption>
+    </figure>
+</a>
+
+        </div>
+    
+
+    
+        <div class="col-md-3">
+            
+<a href="/design/bash-fork-bomb-white/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/bash-fork-bomb-white.jpg" alt="Bash Fork Bomb - White Text for Unix/Linux Hackers" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Bash Fork Bomb - White Text for Unix/Linux Hackers</figcaption>
+    </figure>
+</a>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+    </div>
+
+    <div id="footer" class="container">
+        <p>Geeksta.net: programming, data mining, data visualization, tech books, and tools for tech geeks.<br>
+        © <script>document.write(new Date().getFullYear())</script> Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/sitemap/">Sitemap</a></p>
+    </div>
+
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/js/script.js"></script>
+    
+        <script src="/js/shirt-color-helper.min.js"></script>
+    
+    <script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-5102014-10', 'auto');
+ga('send', 'pageview');
+(function(c,a){function d(){var e=a.getElementsByTagName("a");var f=[];for(var g=0;g<e.length;++g){var h=e[g];if(h.host!=c.location.host){f.push(h)}}return f}function b(f){var e=f.srcElement||f.target;while(e&&(typeof e.tagName=="undefined"||e.tagName.toLowerCase()!="a"||!e.href)){e=e.parentNode}if(!e||!e.href){return}if(c.ga){ga("send","event","Outbound link","Click",e.href)}if(!e.target||e.target.match(/^_(self|parent|top)$/i)){setTimeout(function(){a.location.href=e.href},150);if(f.preventDefault){f.preventDefault()}else{f.returnValue=false}}}c.addEventListener("load",function(){var e=d();for(var f in e){e[f].addEventListener("click",b)}})}(window,document));
+</script>
+    </body>
+</html>

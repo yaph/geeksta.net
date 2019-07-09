@@ -1,0 +1,409 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head itemscope itemtype="http://schema.org/WebSite">
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title itemprop="name">Gender Comparison: Would you Tell your Weight? | Geeksta</title>
+        <meta name="description" content="A look at the results of a poll about whether people disclose their body weight and how to present results of such a pool using data visualization.">
+        <meta name="author" content="Ramiro Gómez">
+        
+            <meta property="og:image" content="https://geeksta.net/img/vis/gender-comparison-tell-weight.png">
+            
+
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@yaph">
+    <meta name="twitter:title" content="Gender Comparison: Would you Tell your Weight?">
+    <meta name="twitter:description" content="A look at the results of a poll about whether people disclose their body weight and how to present results of such a pool using data visualization.">
+    <meta name="twitter:image:src" content="https://geeksta.net/img/vis/gender-comparison-tell-weight.png">
+
+        
+        
+        <meta name="flattr:id" content="4pzdyq">
+        <link href="https://geeksta.net/visualizations/tell-weight/" rel="canonical" itemprop="url">
+        <link href="/img/icon-small.png" rel="icon" type="image/png">
+        <link href="/rss.xml" rel="alternate" type="application/rss+xml" title="Geeksta All Posts RSS feed">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
+        
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/styles/github-gist.min.css" rel="stylesheet"><link href="/css/tell-weight.css" rel="stylesheet">
+        
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+    </head>
+    <body>
+    <div class="navbar navbar-fixed-top navbar-inverse">
+        <div class="container">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" id="site-name" href="/">Geeksta</a>
+            <div class="collapse navbar-collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav pull-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sections <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/reviews/">Book Reviews</a></li>
+                            <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
+                            <li><a href="/visualizations/">Data Visualizations</a></li>
+                            <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
+                            <li><a href="/events/">Geek Events</a></li>
+                            <li><a href="/videos/">Videos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/geeklog/">Geeklog</a></li>
+                    <li><a href="/shirts/">Shirts</a></li>
+                    <li><a href="/tools/">Tools</a></li>
+                    <li id="sharemenu" class="dropdown">
+  <button type="button" class="dropdown-toggle btn btn-success navbar-btn" data-toggle="dropdown"><i class="fa fa-share"></i></button>
+  <ul class="share dropdown-menu pull-right">
+    <li><a href="/rss.xml" class="btn btn-default"><i class="fa fa-rss"></i> RSS Feed</a></li>
+    <li><a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/visualizations/tell-weight/&title=Gender%20Comparison%3A%20Would%20you%20Tell%20your%20Weight%3F" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
+    <li><a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/visualizations/tell-weight/&text=Gender%20Comparison%3A%20Would%20you%20Tell%20your%20Weight%3F" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
+    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/visualizations/tell-weight/&t=Gender%20Comparison%3A%20Would%20you%20Tell%20your%20Weight%3F" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
+    <li><a rel="nofollow" href="https://plus.google.com/share?url=https%3A//geeksta.net/visualizations/tell-weight/" class="btn btn-default"><i class="fa fa-google-plus"></i> Google+</a></li>
+    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geeksta.net/visualizations/tell-weight/&title=Gender%20Comparison%3A%20Would%20you%20Tell%20your%20Weight%3F" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+    <li><a rel="nofollow" href="https://www.stumbleupon.com/submit?url=https%3A//geeksta.net/visualizations/tell-weight/&title=Gender%20Comparison%3A%20Would%20you%20Tell%20your%20Weight%3F" class="btn btn-default"><i class="fa fa-stumbleupon"></i> Stumble</a></li>
+  </ul>
+</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="wrapper" class="container">
+        
+        
+<div class="row">
+    <div itemscope itemtype="http://schema.org/Article" class="col-md-9">
+        <header><h1 itemprop="name">Gender Comparison: Would you Tell your Weight?</h1></header>
+        
+        <div class="charts row">
+    <div class="col-sm-4">
+        <h4 class="text-center">How females responded</h3>
+        <svg class="pie" id="pie-female"></svg>
+    </div>
+    <div class="col-sm-4">
+        <h4 class="text-center">How males responded</h3>
+        <svg class="pie" id="pie-male"></svg>
+    </div>
+    <div class="col-sm-4">
+        <h4 class="text-center">Gender Ratio</h3>
+        <svg class="pie" id="pie-ratio"></svg>
+    </div>
+</div>
+
+<div class="charts row">
+    <div class="col-sm-8 pie-legend text-center">
+        <svg width="10" height="10"><rect class="yes" x="0" y="0" width="10" height="10"></rect></svg> Would tell
+        <svg width="10" height="10"><rect class="no" x="0" y="0" width="10" height="10"></rect></svg> Would not tell
+        <svg width="10" height="10"><rect class="open" x="0" y="0" width="10" height="10"></rect></svg> Not sure
+    </div>
+    <div class="col-sm-4 pie-legend text-center">
+        <svg width="10" height="10"><rect class="female" x="0" y="0" width="10" height="10"></rect></svg> Female
+        <svg width="10" height="10"><rect class="male" x="0" y="0" width="10" height="10"></rect></svg> Male
+    </div>
+</div>
+
+<div class="row voffset">
+    <div class="col-sm-12">
+        <p class="small text-muted">
+        How <span class="count-females"></span> females and <span class="count-males"></span> males responded to the poll: <cite>If a friend asked how much you weighed out of curiosity, would you tell them?</cite> as of June 5, 2015.
+        <br>
+        (cc by-sa) 2015 Ramiro Gómez • Data: redd.it/37ylv1 • Source: geeksta.net/visualizations/tell-weight/</p>
+    </div>
+</div>
+
+<hr>
+
+<p>The charts above show how <span class="count-total"></span> people responded to the poll <em>If a friend asked how much you weighed out of curiosity, would you tell them?</em> created by Redditor Honeycone, who <a href="https://www.reddit.com/r/SampleSize/comments/37ylv1/casualgender_differences_would_you_tell_people/">submitted it in the SampleSize</a> subreddit.</p>
+<p>Presumably most participants came via Reddit, so if the results are representative of any group of people, it is the subscribers of /r/SampleSize. Keeping that in mind, we can see that females are more willing to tell their weight, but also less certain about how they'd answer.</p>
+<p>For me the most reasonable conclusion of this poll is that far more males seem to be subscribed to the SampleSize subreddit. So why bother about it at all?</p>
+<p>I found this poll while looking for an existing graphic to critique as part of a project for the <a href="https://www.udacity.com/course/ud507">Data Visualization and D3.js</a> course on Udacity, which is excellent by the way.</p>
+<h2>Critique of the Straw Poll presentation</h2>
+<p>Below you can see a screenshot of how the poll results are <a href="https://strawpoll.me/4502802/r">presented on Straw Poll</a> as of June 5, 2015. I don't want to bash Straw Poll for their design choices or argue about aesthetics, but the presentation has several problems from a functional point of view.</p>
+<figure>
+<img src="http://i.imgur.com/QCmdDpA.png" alt="Straw Poll Screen Tell Weight" class="img-responsive img-thumbnail">
+<figcaption class="hcaption">Straw Poll screenshot</figcaption>
+</figure>
+
+<p>There are instances of <a href="https://en.wikipedia.org/wiki/Chartjunk">chartjunk</a> such as using a font that is not very readable or rounding the corners of bars. Also showing the corresponding answer text above each bar and having arguably too many slices in one pie chart are problematic.</p>
+<p>The most fundamental problem though is, that this presentation is not helpful for comparing gender differences, which is what the creator of the poll was apparently interested in. Straw Poll is a very simple tool which only seems to allow for single questions. It is not the right tool for the job, because Honeycone actually asked two questions: <em>Would you tell your weight?</em> and <em>Are you male or female?</em></p>
+<h2>Improving the presentation</h2>
+<p>Course participants were not only asked to critique a graphic, but also to improve it. You can see my attempt at the beginning of this article.</p>
+<p>To show gender differences I decided to create 2 pie charts next to each other, one for females and one for males. This way you can see which answer got what share within each of the 2 groups. The 3rd chart is to make it obvious that there is a gender imbalance, which also suggests that this is not a representative result.</p>
+<p>While pie charts are not the best choice for comparisons, there are particularly good at showing part of the whole relations, which is why I chose them. Alternatives I had in mind were a stacked bar or a 2-sided bar chart showing percent values for each group.</p>
+<h2>Conclusion</h2>
+<p>I don't want to interpret too much into the poll results. For whatever reason you might not want to disclose your weight to a friend, at least be aware of it yourself. If you are ashamed of your weight, there is probably something you should work on to make your life better.</p>
+<p>If you want to critique my graphic, you can do so in the comments at the end of this post. The last section is about how I created the charts.</p>
+<h2>Source code and data</h2>
+<p>One of the tools the teachers of the D3 course suggested is <a href="http://dimplejs.org/">dimple</a>. Of all the general purpose charting libraries built on top of D3 I've seen, the creators of dimple seem to have put the most thought into creating an API that allows designers to think in terms of the basic building blocks, that make up a chart: axes, columns, data types and relationships.</p>
+<p>By providing a higher abstraction level than D3 itself, dimple allows chart designers to iterate quickly and use dimple for data exploration with chart types like bar, pie, scatter and line.</p>
+<h3>ECMAScript 6 code to draw the charts</h3>
+<p>I recently started writing browser code in ECMAScript 6, which I find a lot more pleasant than the current standard supported by browsers. Thanks to <a href="http://babeljs.io/">Babel</a> for making it very easy to use.</p>
+<p>Most of the ES6 code below should look familiar to JavaScript developers, except for the arrow (<code>=&gt;</code>) notation for creating functions and template strings as used in the <code>getTooltipText</code> function.</p>
+<p>With dimplejs you can create charts with just a few lines of code as seen in the <code>drawPie</code> function. The main "complexities" in the code result from creating custom legends and tooltip texts. I didn't want to show the legend for the 2 charts on the left twice and also make sure that the 3rd chart uses different colors to better separate it.</p>
+<pre><code class="javascript">// Map data keys to more meaningful labels for display.
+let labelMap = {
+    &#39;yes&#39;: &#39;Would tell&#39;,
+    &#39;no&#39;: &#39;Would not tell&#39;,
+    &#39;open&#39;: &#39;Not sure&#39;,
+    &#39;female&#39;: &#39;Female&#39;,
+    &#39;male&#39;: &#39;Male&#39;,
+};
+
+function drawPie(selector, data, measure=&#39;Count&#39;, series=&#39;Response&#39;) {
+    let pie = new dimple.chart(getSVG(selector, 1), data);
+
+    pie.addMeasureAxis(&#39;p&#39;, measure);
+    let s = pie.addSeries(series, dimple.plot.pie);
+
+    // Customize tooltip text, so it takes up less space.
+    s.getTooltipText = (e) =&gt; {
+        let percent = d3.format(&#39;%&#39;)(e.piePct);
+        return [`${labelMap[e.aggField[0]]}: ${e.pValue} (${percent})`];
+    };
+
+    // Set bounds so that tooltips are visible for all slices.
+    pie.setBounds(&#39;8%&#39;, &#39;8%&#39;, &#39;84%&#39;, &#39;84%&#39;)
+
+    // Assign CSS classes from data keys for custom colors.
+    data.forEach((d) =&gt; pie.assignClass(d[series], d[series]));
+
+    pie.draw();
+}
+
+d3.csv(&#39;/data/tell-weight.csv&#39;, (data) =&gt; {
+    let females = data.filter((d) =&gt; d.Gender == &#39;female&#39;);
+    let males = data.filter((d) =&gt; d.Gender == &#39;male&#39;);
+    let byGender = d3.nest()
+        .key((d) =&gt; d.Gender)
+        .rollup((v) =&gt; d3.sum(v, (d) =&gt; d.Count))
+        .entries(data);
+
+    drawPie(&#39;#pie-female&#39;, females);
+    drawPie(&#39;#pie-male&#39;, males);
+    drawPie(&#39;#pie-ratio&#39;, byGender, &#39;values&#39;, &#39;key&#39;);
+
+    d3.select(&#39;.count-females&#39;)
+        .text(byGender.filter((d) =&gt; d.key == &#39;female&#39;).pop().values);
+    d3.select(&#39;.count-males&#39;)
+        .text(byGender.filter((d) =&gt; d.key == &#39;male&#39;).pop().values);
+    d3.select(&#39;.count-total&#39;)
+        .text(d3.sum(data, (d) =&gt; d.Count));
+});</code></pre>
+
+<h3>CSS code</h3>
+<p>For each data key used in the CSV file below a color is defined, which is used for pie slices and legends.</p>
+<pre><code class="css">path {
+    stroke: #888;
+}
+.yes {
+    fill: #b2df8a;
+}
+.no {
+    fill: #1f78b4;
+}
+.open {
+    fill: #a6cee3;
+}
+.female {
+    fill: #ef8a62;
+}
+.male {
+    fill: #67a9cf;
+}
+.pie-legend svg {
+    margin: 0 .2em 0 1em;
+}</code></pre>
+
+<h3>CSV dataset</h3>
+<pre><code class="text">Gender,Response,Count
+female,yes,330
+female,no,83
+female,open,73
+male,yes,688
+male,no,452
+male,open,46</code></pre>
+
+<p>To see how the chart layout as well as the legends are created, simply look for <code>div</code>-tags with the class <code>charts</code> in the page source.</p>
+    </div>
+    <div class="col-md-3">
+        
+
+<h2>Featured Posts</h2>
+<ul class="list-unstyled">
+  <li class="voffset"><a href="/geeklog/exploring-expressions-emotions-github-commit-messages/">Exploring Expressions of Emotions in GitHub Commit Messages</a></li>
+  <li class="voffset"><a href="/geeklog/web-page-screenshots-phantomjs-python/">Taking Web Page Screenshots with PhantomJS and Python</a></li>
+  <li class="voffset"><a href="/visualizations/age-musicians-die/">What Age Do Musicians Die at</a></li>
+</ul>
+<hr>
+<h2>Featured T-Shirt</h2>
+
+
+<a href="/design/no-braces-red-white/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/no-braces-red-white.jpg" alt="No Braces - Funny Python Coding Design Red/White" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">No Braces - Funny Python Coding Design Red/White</figcaption>
+    </figure>
+</a>
+
+<hr>
+<h2>Latest Posts</h2>
+<ul class="list-unstyled">
+
+    <li class="voffset"><a href="/geeklog/python-shared-hosting/">Installing and Setting up Python on Shared Hosting</a></li>
+
+    <li class="voffset"><a href="/geeklog/custom-matplotlib-styles/">Customizing Matplotlib's Plotting Styles</a></li>
+
+    <li class="voffset"><a href="/geeklog/automating-browser-tasks-without-distraction-on-ubuntu/">Automating Browser Tasks without Distraction on Ubuntu</a></li>
+
+    <li class="voffset"><a href="/geeklog/better-commit-messages/">A Simple Hack to Write Better Commit Messages</a></li>
+
+    <li class="voffset"><a href="/geeklog/delete-delicious-bookmarks/">Python Script to Delete Delicious Bookmarks</a></li>
+
+</ul>
+<hr>
+<a href="/rss.xml" class="btn btn-warning"><i class="fa fa-rss"></i> Subscribe to new content</a></li>
+    </div>
+</div>
+
+        
+<hr class="clearfix">
+<h4>Share this post on:</h4>
+<div class="share">
+    <a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/visualizations/tell-weight/&t=Gender%20Comparison%3A%20Would%20you%20Tell%20your%20Weight%3F" class="btn btn-default btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
+    <a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/visualizations/tell-weight/&title=Gender%20Comparison%3A%20Would%20you%20Tell%20your%20Weight%3F" class="btn btn-default btn-lg"><i class="fa fa-reddit-alien"></i> Reddit</a>
+    <a rel="nofollow" href="https://www.stumbleupon.com/submit?url=https%3A//geeksta.net/visualizations/tell-weight/&title=Gender%20Comparison%3A%20Would%20you%20Tell%20your%20Weight%3F" class="btn btn-default btn-lg"><i class="fa fa-stumbleupon"></i> StumbleUpon</a>
+    <a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/visualizations/tell-weight/&text=Gender%20Comparison%3A%20Would%20you%20Tell%20your%20Weight%3F" class="btn btn-default btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
+</div>
+<hr class="clearfix">
+<div class="postinfo">
+<p>This post was written by <a href="http://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time itemprop="datePublished" datetime="2015-06-05T14:37">June 05, 2015</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+
+<p>
+<strong>Tags:</strong>
+
+<span class="label label-info"><a href="/tags/visualization/">visualization</a></span>
+
+<span class="label label-info"><a href="/tags/gender/">gender</a></span>
+
+<span class="label label-info"><a href="/tags/code/">code</a></span>
+
+<span class="label label-info"><a href="/tags/javascript/">javascript</a></span>
+
+<span class="label label-info"><a href="/tags/es6/">es6</a></span>
+
+<span class="label label-info"><a href="/tags/reddit/">reddit</a></span>
+
+</p>
+
+<p class="text-muted"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h2>Featured T-Shirts</h2></div>
+    <div class="panel-body">
+
+
+    <div class="row">
+        <div class="col-md-3">
+            
+<a href="/design/caution-i-curse-when-i-commit-code/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/caution-i-curse-when-i-commit-code.jpg" alt="Caution I Curse When I Commit Code - Funny Programmer Design" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Caution I Curse When I Commit Code - Funny Programmer Design</figcaption>
+    </figure>
+</a>
+
+        </div>
+    
+
+    
+        <div class="col-md-3">
+            
+<a href="/design/hack-the-planet-green/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/hack-the-planet-green.jpg" alt="Hack the Planet - Green Design for Computer Hackers" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Hack the Planet - Green Design for Computer Hackers</figcaption>
+    </figure>
+</a>
+
+        </div>
+    
+
+    
+        <div class="col-md-3">
+            
+<a href="/design/shrug-it-works-on-my-machine-medium-white/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/shrug-it-works-on-my-machine-medium-white.jpg" alt="Shrug it works on my machine - Programmer Excuse Design - White Text" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Shrug it works on my machine - Programmer Excuse Design - White Text</figcaption>
+    </figure>
+</a>
+
+        </div>
+    
+
+    
+        <div class="col-md-3">
+            
+<a href="/design/bash-fork-bomb-white/" class="design-preview">
+    <figure>
+        
+            <img src="/img/preview/bash-fork-bomb-white.jpg" alt="Bash Fork Bomb - White Text for Unix/Linux Hackers" class="img-responsive" />
+        
+        <br>
+        <figcaption class="hcaption">Bash Fork Bomb - White Text for Unix/Linux Hackers</figcaption>
+    </figure>
+</a>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+    </div>
+
+    <div id="footer" class="container">
+        <p>Geeksta.net: programming, data mining, data visualization, tech books, and tools for tech geeks.<br>
+        © <script>document.write(new Date().getFullYear())</script> Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/sitemap/">Sitemap</a></p>
+    </div>
+
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/js/script.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script><script src="http://dimplejs.org/dist/dimple.v2.1.2.min.js"></script><script src="/js/tell-weight.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script><script src="/js/highlight.js"></script>
+    
+    <script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-5102014-10', 'auto');
+ga('send', 'pageview');
+(function(c,a){function d(){var e=a.getElementsByTagName("a");var f=[];for(var g=0;g<e.length;++g){var h=e[g];if(h.host!=c.location.host){f.push(h)}}return f}function b(f){var e=f.srcElement||f.target;while(e&&(typeof e.tagName=="undefined"||e.tagName.toLowerCase()!="a"||!e.href)){e=e.parentNode}if(!e||!e.href){return}if(c.ga){ga("send","event","Outbound link","Click",e.href)}if(!e.target||e.target.match(/^_(self|parent|top)$/i)){setTimeout(function(){a.location.href=e.href},150);if(f.preventDefault){f.preventDefault()}else{f.returnValue=false}}}c.addEventListener("load",function(){var e=d();for(var f in e){e[f].addEventListener("click",b)}})}(window,document));
+</script>
+    </body>
+</html>

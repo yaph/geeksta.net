@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel><title>Tags » Pycon</title>
+    <link>https://geeksta.net</link>
+    <description>Tags » Pycon</description>
+    <lastBuildDate>Tue, 09 Jul 2019 16:02:24 </lastBuildDate>
+    <generator>Logya</generator>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[David Beazley: The Fun of Reinvention (Screencast)]]></title>
+        <link><![CDATA[https://geeksta.net/videos/david-beazley-the-fun-of-reinvention/]]></link>
+        <description><![CDATA[<p>In his keynote from PyCon Israel 2017 Python expert David Beazley talks about the fun of reinventing things and using and abusing new features in Python 3.6.</p><img src="https://i.ytimg.com/vi/js_0wjzuMfc/maxresdefault.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/videos/david-beazley-the-fun-of-reinvention/]]></guid>
+        <pubDate>Thu, 15 Jun 2017 22:56:50 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Pycon 2015: Beyond PEP 8 by Raymond Hettinger]]></title>
+        <link><![CDATA[https://geeksta.net/videos/pycon-2015-beyond-pep-8/]]></link>
+        <description><![CDATA[<p>This talk from PyCon 2015 by Raymond Hettinger is about how to leverage Python language features to writer better and more beautiful code.</p><img src="https://geeksta.net/img/geeklog/logya-contrib-graph.png" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/videos/pycon-2015-beyond-pep-8/]]></guid>
+        <pubDate>Wed, 20 May 2015 20:12:10 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Asset Management in Python by Robert Kluin and Beau Lyddon]]></title>
+        <link><![CDATA[https://geeksta.net/videos/python-asset-management-robert-kluin-beau-lyddon/]]></link>
+        <description><![CDATA[<p>This talk from PyCon 2013 by Robert Kluin and Beau Lyddon is about strategies for managing frontend assets like CSS and JavaScript files in Python.</p><img src="https://i.ytimg.com/vi/AQB9eECueSI/maxresdefault.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/videos/python-asset-management-robert-kluin-beau-lyddon/]]></guid>
+        <pubDate>Thu, 31 Oct 2013 12:20:24 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Raymond Hettinger: Transforming code into Beautiful, Idiomatic Python]]></title>
+        <link><![CDATA[https://geeksta.net/videos/raymond-hettinger-beautiful-idiomatic-python/]]></link>
+        <description><![CDATA[<p>In this talk from PyCon 2013 Python core developer Raymond Hettinger provides a fast-paced overview of Python idioms that make your code faster and more beautiful.</p><img src="https://i.ytimg.com/vi/OSGv2VnC0go/maxresdefault.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/videos/raymond-hettinger-beautiful-idiomatic-python/]]></guid>
+        <pubDate>Sat, 12 Oct 2013 20:47:14 </pubDate>
+    </item>
+    
+</channel></rss>

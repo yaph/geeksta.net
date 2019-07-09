@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel><title>Tags » Open Source</title>
+    <link>https://geeksta.net</link>
+    <description>Tags » Open Source</description>
+    <lastBuildDate>Tue, 09 Jul 2019 16:02:24 </lastBuildDate>
+    <generator>Logya</generator>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Introducing b2tob3: Easier Migration to Bootstrap 3]]></title>
+        <link><![CDATA[https://geeksta.net/tools/b2tob3-migrate-bootstrap/]]></link>
+        <description><![CDATA[<p>b2tob3 is a command line tool to help migrate Web projects from bootstrap 2 to bootstrap 3 by performing a set of replacements that reflect bootstrap 3 class name changes.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/tools/b2tob3-migrate-bootstrap/]]></guid>
+        <pubDate>Mon, 09 Sep 2013 20:22:03 </pubDate>
+    </item>
+    
+</channel></rss>

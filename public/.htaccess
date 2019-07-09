@@ -1,0 +1,33 @@
+Options -Indexes
+DirectoryIndex index.html
+
+<ifmodule mod_expires.c>
+ExpiresActive On
+# Cache images for a year from the time they were changed
+ExpiresByType image/gif M31557600
+ExpiresByType image/jpg M31557600
+ExpiresByType image/jpeg M31557600
+ExpiresByType image/png M31557600
+# Cache HTML documents for a week from the time they were changed
+ExpiresByType text/html M604800
+</ifmodule>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www|fit|hot|planetdatavis|datavisdaily\.(.*)$ [OR]
+RewriteCond %{HTTP_HOST} ^geeksta\.webhostingfm\.com$ [NC]
+RewriteRule ^(.*)$ http://geeksta.net/$1 [R=301,L]
+</IfModule>
+
+# 301 redirects
+Redirect 301 /custom-matplotlib-styles/ /geeklog/custom-matplotlib-styles/
+Redirect 301 /geeklog/kurt-cobain-suicide-note/ http://punknroll.net/artist/kurt-cobain/
+Redirect 301 /gallery/visualization-of-programming-language-influence-by-paradigm/ /visualizations/programming-language-influence-by-paradigm-gallery/
+Redirect 301 /lists/ /events/
+Redirect 301 /lists/free-software-programmers-birthdays/ /events/free-software-programmers-birthdays/
+Redirect 301 /tools/tweet-shirt-generator/ /tools/
+Redirect 301 /us-housing/ /visualizations/us-housing-prices/
+Redirect 301 /visualizations/visualization-slideshow/ /
+
+# Broken external links reported by Webmaster tools
+Redirect 301 /geeklog/exploring-expressions-emotions-GitHub-commit-messages/ /geeklog/exploring-expressions-emotions-github-commit-messages/
