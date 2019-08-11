@@ -3,7 +3,7 @@
 <channel><title>Shirts » Working Life</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Working Life</description>
-    <lastBuildDate>Tue, 09 Jul 2019 16:44:18 </lastBuildDate>
+    <lastBuildDate>Sun, 11 Aug 2019 23:05:53 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
@@ -29,6 +29,22 @@
         <description><![CDATA[<p>RTFM is an initialism for the expression &#8220;read the fucking manual&#8221; or more in the context of the Unix computer operating system, &#8220;read the fucking man page&#8221;. It is usually expressed when the speaker is irritated by another...</p><img src="https://geeksta.net/img/large/read-the-fucking-manual-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/read-the-fucking-manual-black/]]></guid>
         <pubDate>Sun, 20 Mar 2016 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[402 Payment Required - Black Text for Web Developers]]></title>
+        <link><![CDATA[https://geeksta.net/design/402-payment-required-black/]]></link>
+        <description><![CDATA[<p>A design for professional web developers to underpin that they require payment for their work. It has the HTTP status code &#8220;402&#8221; and its meaning &#8220;Payment Required&#8221; printed in a black bold font. A good shirt to wear when applying for...</p><img src="https://geeksta.net/img/large/402-payment-required-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/402-payment-required-black/]]></guid>
+        <pubDate>Tue, 25 Nov 2014 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[408 Request Timeout - HTTP Status Code Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/408-request-timeout-black/]]></link>
+        <description><![CDATA[<p>A shirt for web developers who need a break. It has the HTTP status code &#8220;408&#8221; and its meaning &#8220;Request Timeout&#8221; printed in a black bold font. • Millions of unique designs by independent artists. Find your thing.</p><img src="https://geeksta.net/img/large/408-request-timeout-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/408-request-timeout-black/]]></guid>
+        <pubDate>Tue, 25 Nov 2014 00:00:00 </pubDate>
     </item>
     
 </channel></rss>

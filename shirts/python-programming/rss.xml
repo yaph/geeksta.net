@@ -3,7 +3,7 @@
 <channel><title>Shirts » Python Programming</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Python Programming</description>
-    <lastBuildDate>Tue, 09 Jul 2019 16:44:18 </lastBuildDate>
+    <lastBuildDate>Sun, 11 Aug 2019 23:05:53 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
@@ -133,6 +133,14 @@
         <description><![CDATA[<p>Python is a widely used general-purpose, high-level programming language. Python 3.0 was released on 3 December 2008, 7 years ago and Python 2 is still pretty dominant. It is time to move on. / Show your support for Python 3 with this vintage design, that...</p><img src="https://geeksta.net/img/large/python-3-vintage-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/python-3-vintage-white/]]></guid>
         <pubDate>Fri, 09 Oct 2015 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Python 3 - White on Blue Design for Python Programmers]]></title>
+        <link><![CDATA[https://geeksta.net/design/python-3/]]></link>
+        <description><![CDATA[<p>Python is a widely used general-purpose, high-level programming language. Python 3.0 was released on 3 December 2008, 7 years ago and Python 2 is still pretty dominant. It is time to move on. / Show your support for Python 3 with this design, that consists...</p><img src="https://geeksta.net/img/large/python-3.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/python-3/]]></guid>
+        <pubDate>Tue, 06 Oct 2015 00:00:00 </pubDate>
     </item>
     
     <item>

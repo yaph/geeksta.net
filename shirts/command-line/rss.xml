@@ -3,7 +3,7 @@
 <channel><title>Shirts » Command Line</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Command Line</description>
-    <lastBuildDate>Tue, 09 Jul 2019 16:44:18 </lastBuildDate>
+    <lastBuildDate>Sun, 11 Aug 2019 23:05:53 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
@@ -13,6 +13,14 @@
         <description><![CDATA[<p>If you write shell scripts for Linux and Unix based computer operating systems, the hashbang line is your constant companion. The one on this design is for the Z shell (Zsh). It shows the hashbang line &#8220;#!/bin/zsh&#8221;, used to start a Z shell...</p><img src="https://geeksta.net/img/large/bin-zsh-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/bin-zsh-white/]]></guid>
         <pubDate>Thu, 28 Sep 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Bash Fork Bomb - Pink Text for Unix/Linux Hackers]]></title>
+        <link><![CDATA[https://geeksta.net/design/bash-fork-bomb-pink/]]></link>
+        <description><![CDATA[<p>How to create a fork bomb to crash a computer system running Linux or Unix? Use this cryptic Bash command &#8220;:(){ :|:&amp; };:&#8221;, but actually don&#8217;t do it. Better show off your hacker knowledge. / Administrators, hackers, and some regular...</p><img src="https://geeksta.net/img/large/bash-fork-bomb-pink.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/bash-fork-bomb-pink/]]></guid>
+        <pubDate>Tue, 18 Apr 2017 00:00:00 </pubDate>
     </item>
     
     <item>
@@ -197,14 +205,6 @@
         <description><![CDATA[<p>A humorous black on white design for command line hackers with the bash commands “cd ~” &amp; “reset” printed in a black monospace font. • Millions of unique designs by independent artists. Find your thing.</p><img src="https://geeksta.net/img/large/cd-home-reset-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/cd-home-reset-black/]]></guid>
         <pubDate>Thu, 11 Dec 2014 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Bash Fork Bomb - White Text for Unix/Linux Hackers]]></title>
-        <link><![CDATA[https://geeksta.net/design/bash-fork-bomb-white/]]></link>
-        <description><![CDATA[<p>How to create a fork bomb to crash a computer system? Use this cryptic bash command &#8220;:(){ :|:&amp; };:&#8221;, but actually don&#8217;t do it. This design for Unix/Linux hackers consists of a bash fork bomb printed in a white monospace font. / This...</p><img src="https://geeksta.net/img/large/bash-fork-bomb-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/bash-fork-bomb-white/]]></guid>
-        <pubDate>Tue, 25 Nov 2014 00:00:00 </pubDate>
     </item>
     
 </channel></rss>

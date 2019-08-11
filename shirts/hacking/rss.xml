@@ -3,7 +3,7 @@
 <channel><title>Shirts » Hacking</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Hacking</description>
-    <lastBuildDate>Tue, 09 Jul 2019 16:44:18 </lastBuildDate>
+    <lastBuildDate>Sun, 11 Aug 2019 23:05:53 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
@@ -141,6 +141,14 @@
         <description><![CDATA[<p>Hacker is an ambiguous term. It may mean tinkerer or someone who breaks computer systems, be it with good or bad intentions. Generally hackers are knowledgeable people and their knowledge can mean danger. / This design for computer hackers is meant to...</p><img src="https://geeksta.net/img/large/hacker-biohazard-fork-bomb-pink.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/hacker-biohazard-fork-bomb-pink/]]></guid>
         <pubDate>Wed, 19 Apr 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Bash Fork Bomb - Light Green Text for Unix/Linux Hackers]]></title>
+        <link><![CDATA[https://geeksta.net/design/bash-fork-bomb-light-green/]]></link>
+        <description><![CDATA[<p>How to create a fork bomb to crash a computer system running Linux or Unix? Use this cryptic Bash command &#8220;:(){ :|:&amp; };:&#8221;, but actually don&#8217;t do it. Better show off your hacker knowledge. / Administrators, hackers, and some regular...</p><img src="https://geeksta.net/img/large/bash-fork-bomb-light-green.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/bash-fork-bomb-light-green/]]></guid>
+        <pubDate>Tue, 18 Apr 2017 00:00:00 </pubDate>
     </item>
     
     <item>

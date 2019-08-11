@@ -3,7 +3,7 @@
 <channel><title>Shirts » Web Development</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Web Development</description>
-    <lastBuildDate>Tue, 09 Jul 2019 16:44:18 </lastBuildDate>
+    <lastBuildDate>Sun, 11 Aug 2019 23:05:53 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
@@ -29,6 +29,14 @@
         <description><![CDATA[<p>Hexadecimal color values are supported in all major web browsers and thus frequently used to assign colors in HTML, CSS or JavaScript code. In the web context hexadecimal color codes are preceded by a hash or pound sign. / This design is for badass web...</p><img src="https://geeksta.net/img/large/hash-bada55.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/hash-bada55/]]></guid>
         <pubDate>Thu, 01 Dec 2016 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[When Web Developers Need Irish Coffee]]></title>
+        <link><![CDATA[https://geeksta.net/design/when-web-developers-need-irish-coffee/]]></link>
+        <description><![CDATA[<p>A coffee mug for web developers in the terrible situation, where IE8 support is required. In this case Whiskey is needed to turn their coffee into an Irish coffee and mitigate the pains they have to live through. / The mug has the following JavaScript code...</p><img src="https://geeksta.net/img/large/when-web-developers-need-irish-coffee.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/when-web-developers-need-irish-coffee/]]></guid>
+        <pubDate>Sun, 13 Mar 2016 00:00:00 </pubDate>
     </item>
     
     <item>

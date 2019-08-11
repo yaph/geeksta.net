@@ -3,7 +3,7 @@
 <channel><title>Shirts » Data Science</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Data Science</description>
-    <lastBuildDate>Tue, 09 Jul 2019 16:44:18 </lastBuildDate>
+    <lastBuildDate>Sun, 11 Aug 2019 23:05:53 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
@@ -21,6 +21,14 @@
         <description><![CDATA[<p>Data scientists spent a lot of time preparing data in order to analyze it and they like to point out how much time goes into this process. Are you one of those? Then get this design on a shirt, sticker, mug or other product to show at work and data science...</p><img src="https://geeksta.net/img/large/preparing-data-joke-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/preparing-data-joke-white/]]></guid>
         <pubDate>Sat, 07 Oct 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Is it misleading to truncate the y-axis? Funny Chart]]></title>
+        <link><![CDATA[https://geeksta.net/design/truncating-y-axis-misleading/]]></link>
+        <description><![CDATA[<p>Truncating the y-axis when visualizing data can often be misleading. When done with bar charts this is most probably intended, for line charts it can be okay if explained. / This design consists of the question &#8220;Is it misleading to truncate the...</p><img src="https://geeksta.net/img/large/truncating-y-axis-misleading.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/truncating-y-axis-misleading/]]></guid>
+        <pubDate>Tue, 22 Nov 2016 00:00:00 </pubDate>
     </item>
     
     <item>
@@ -45,6 +53,14 @@
         <description><![CDATA[<p>Data science is a scientific field that combines different areas of expertise such as statistics and computer science. A buzz term that sooner or later appears in the context of data science is big data. / Hence, this self-ironic design consists of the...</p><img src="https://geeksta.net/img/large/big-data-scientist-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/big-data-scientist-white/]]></guid>
         <pubDate>Wed, 07 Oct 2015 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Outlier moved off the Center for Statisticians]]></title>
+        <link><![CDATA[https://geeksta.net/design/outlier-666/]]></link>
+        <description><![CDATA[<p>In statistics, an outlier is an observation point that is distant from other observations. / This design consists of the text &#8220;outlier&#8221; moved off the center of the design canvas. It is neither centered horizontally or vertically. This may put...</p><img src="https://geeksta.net/img/large/outlier-666.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/outlier-666/]]></guid>
+        <pubDate>Wed, 30 Sep 2015 00:00:00 </pubDate>
     </item>
     
 </channel></rss>

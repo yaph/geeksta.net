@@ -3,9 +3,17 @@
 <channel><title>Design</title>
     <link>https://geeksta.net</link>
     <description>Design</description>
-    <lastBuildDate>Tue, 09 Jul 2019 16:44:18 </lastBuildDate>
+    <lastBuildDate>Sun, 11 Aug 2019 23:05:53 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Evolution of the Smartphone Zombie / Smombie - White Graphic]]></title>
+        <link><![CDATA[https://geeksta.net/design/smombie-evolution-white/]]></link>
+        <description><![CDATA[<p>Many people are completely absorbed by their cell phone, walking around and staring at it without taking notice of their environment. This behavior is ignorant, reckless and dumb. It is also extremely bad for your posture. It seems a bit like humanity is...</p><img src="https://geeksta.net/img/large/smombie-evolution-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/smombie-evolution-white/]]></guid>
+        <pubDate>Fri, 24 May 2019 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Evolution of the Smartphone Zombie / Smombie - Black Graphic]]></title>
@@ -20,6 +28,14 @@
         <link><![CDATA[https://geeksta.net/design/smombi-evolution-white/]]></link>
         <description><![CDATA[<p>Many people are completely absorbed by their cell phone, walking around and staring at it without taking notice of their environment. This behavior is ignorant, reckless and dumb. It is also extremely bad for your posture. It seems a bit like humanity is...</p><img src="https://geeksta.net/img/large/smombi-evolution-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/smombi-evolution-white/]]></guid>
+        <pubDate>Fri, 24 May 2019 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Evolution of the Smartphone Zombie / Smombie - Black Graphic]]></title>
+        <link><![CDATA[https://geeksta.net/design/smombie-evolution-black/]]></link>
+        <description><![CDATA[<p>Many people are completely absorbed by their cell phone, walking around and staring at it without taking notice of their environment. This behavior is ignorant, reckless and dumb. It is also extremely bad for your posture. It seems a bit like humanity is...</p><img src="https://geeksta.net/img/large/smombie-evolution-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/smombie-evolution-black/]]></guid>
         <pubDate>Fri, 24 May 2019 00:00:00 </pubDate>
     </item>
     
@@ -189,22 +205,6 @@
         <description><![CDATA[<p>A kernel panic happens when an operating system detects an internal fatal error from which it cannot safely recover. The term is used for Unix and Unix-like systems in contrast to the infamous BSoD (Blue Screen of Death) on Windows system. / This design...</p><img src="https://geeksta.net/img/large/col-panic-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/col-panic-black/]]></guid>
         <pubDate>Fri, 27 Jul 2018 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[It Works On My Machine Funny Programmer Design Black]]></title>
-        <link><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-v-hoodie-black/]]></link>
-        <description><![CDATA[<p>Every programmer experiences this: software works on their computer but not in production. Who is to blame and how to react as the identified culprit? Humor always helps, even if you have to fix your code. / A shirt design for programmers to wear in the...</p><img src="https://geeksta.net/img/large/shrug-it-works-on-my-machine-v-hoodie-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-v-hoodie-black/]]></guid>
-        <pubDate>Fri, 11 May 2018 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Happiness Requires Action - Self Improvement Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/happiness-requires-action-hoodie/]]></link>
-        <description><![CDATA[<p>Everyone is capable of being happy, but happiness does not come to you without you taking action. Be aware of your accountability when it comes to leading a happy life and spread the word to the people around you. This design shows the text...</p><img src="https://geeksta.net/img/large/happiness-requires-action-hoodie.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/happiness-requires-action-hoodie/]]></guid>
-        <pubDate>Sun, 06 May 2018 00:00:00 </pubDate>
     </item>
     
 </channel></rss>
