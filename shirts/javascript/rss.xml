@@ -3,9 +3,25 @@
 <channel><title>Shirts » Javascript</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Javascript</description>
-    <lastBuildDate>Tue, 20 Aug 2019 23:11:48 </lastBuildDate>
+    <lastBuildDate>Mon, 26 Aug 2019 01:09:00 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[JavaScript 1995 Year of 1st Release White Retro Text Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/javascript-1995-white/]]></link>
+        <description><![CDATA[<p>JavaScript was first released in 1995 and since then has become one of the most important and widely used programming languages. Its unique status as a language supported by most web browsers and the introduction of server side JS are two key factors. /...</p><img src="https://geeksta.net/img/large/javascript-1995-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/javascript-1995-white/]]></guid>
+        <pubDate>Sun, 25 Aug 2019 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[JavaScript 1995 Year of 1st Release Black Retro Text Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/javascript-1995-black/]]></link>
+        <description><![CDATA[<p>JavaScript was first released in 1995 and since then has become one of the most important and widely used programming languages. Its unique status as a language supported by most web browsers and the introduction of server side JS are two key factors. /...</p><img src="https://geeksta.net/img/large/javascript-1995-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/javascript-1995-black/]]></guid>
+        <pubDate>Sun, 25 Aug 2019 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Retro Programmer Design Fluent in Coding JavaScript]]></title>
