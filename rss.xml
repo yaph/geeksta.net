@@ -3,9 +3,25 @@
 <channel><title>RSS Feed</title>
     <link>https://geeksta.net</link>
     <description>RSS Feed</description>
-    <lastBuildDate>Mon, 26 Aug 2019 01:09:00 </lastBuildDate>
+    <lastBuildDate>Mon, 26 Aug 2019 16:11:21 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[WONTFIX Say Forget It at Work in a Nicer Way - Black Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/wontfix-black/]]></link>
+        <description><![CDATA[<p>Refusing a work request is not an easy thing to do. The term WONTFIX is a common way to do so in the software development business. It is arguably more polite than saying &#8220;forget it&#8221;, but the person who made the request may still be offended. /...</p><img src="https://geeksta.net/img/large/wontfix-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/wontfix-black/]]></guid>
+        <pubDate>Mon, 26 Aug 2019 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[WONTFIX Say Forget It at Work in a Nicer Way - White Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/wontfix-white/]]></link>
+        <description><![CDATA[<p>Refusing a work request is not an easy thing to do. The term WONTFIX is a common way to do so in the software development business. It is arguably more polite than saying &#8220;forget it&#8221;, but the person who made the request may still be offended. /...</p><img src="https://geeksta.net/img/large/wontfix-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/wontfix-white/]]></guid>
+        <pubDate>Mon, 26 Aug 2019 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[JavaScript 1995 Year of 1st Release White Retro Text Design]]></title>
@@ -189,22 +205,6 @@
         <description><![CDATA[<p>Containers are a popular choice in modern software development. In such an environment &#8220;It works in my container&#8221; is a programmer excuse you may here more often than its popular predecessor &#8220;It works on my machine&#8221;. A design for...</p><img src="https://geeksta.net/img/large/shrug-it-works-in-my-container-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-white/]]></guid>
         <pubDate>Thu, 27 Sep 2018 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Falcon Mouse Python Squirrel Programming Language Geek Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/falcon-mouse-python-squirrel-black/]]></link>
-        <description><![CDATA[<p>This design for computer programmers and software developers shows the 4 programming language and animal names Falcon, Mouse, Python and Squirrel in a vertical layout. The first 3 words end with an ampersand and the last with a period. Great for work, tech...</p><img src="https://geeksta.net/img/large/falcon-mouse-python-squirrel-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/falcon-mouse-python-squirrel-black/]]></guid>
-        <pubDate>Wed, 29 Aug 2018 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Falcon Mouse Python Squirrel Programming Language Nerd Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/falcon-mouse-python-squirrel-white/]]></link>
-        <description><![CDATA[<p>This design for computer programmers and software developers shows the 4 programming language and animal names Falcon, Mouse, Python and Squirrel in a vertical layout. The first 3 words end with an ampersand and the last with a period. Great for work, tech...</p><img src="https://geeksta.net/img/large/falcon-mouse-python-squirrel-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/falcon-mouse-python-squirrel-white/]]></guid>
-        <pubDate>Tue, 28 Aug 2018 00:00:00 </pubDate>
     </item>
     
 </channel></rss>
