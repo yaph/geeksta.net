@@ -29,7 +29,7 @@
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="/css/style.css" rel="stylesheet">
         
-            <link href="/vendor/highlight/github.css" rel="stylesheet">
+            <link href="/vendor/highlight/styles/github.css" rel="stylesheet">
         
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -118,17 +118,17 @@ page.open(url, function(status) {
 <h2>Installing and using webshots</h2>
 <p>To use webshots you need to <a href="http://phantomjs.org/download.html">download and install</a> PhantomJS first. If you run Ubuntu Linux, you can install it via <code>sudo apt-get install phantomjs</code>, which will give you version 1.4.0 and not the latest 1.6.1 at the time of writing.</p>
 <p>Then clone the <a href="https://github.com/yaph/webshots">webshots repository</a> and create symbolic links to the Python and JavaScript files in a directory that contains executable scripts. On Linux based systems you would do something along the lines of:</p>
-<pre><code class="shell">
+<pre><code class="bash">
 git clone https://github.com/yaph/webshots.git
 ln -s /path/to/webshots/webshots $HOME/bin
 ln -s /path/to/webshots/webshots.js $HOME/bin
 </code></pre>
 <p>If that's all done, you can create several screenshots at common browser resolutions by calling:</p>
-<pre><code class="shell">
+<pre><code class="bash">
 webshots http://example.com
 </code></pre>
 <p>or a single screenshot at the given browser resolution with:</p>
-<pre><code class="shell">
+<pre><code class="bash">
 webshots --width=800 --height=600 http://example.com
 </code></pre>
 <h2>What's next?</h2>

@@ -29,7 +29,7 @@
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="/css/style.css" rel="stylesheet">
         
-            <link href="/vendor/highlight/github.css" rel="stylesheet">
+            <link href="/vendor/highlight/styles/github.css" rel="stylesheet">
         
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -90,56 +90,70 @@
 <p>In this post I'll outline the steps to install and set up Python on a shared hosting platform that runs on Linux and offers SSH access to the server.</p>
 <h2>Python 2.7.10 Installation</h2>
 <p>I show the process using the current Python 2 version, the steps for the Python 3 core distribution are equivalent. After you logged in to your hosting platform via SSH, execute the following commands.</p>
-<pre><code>mkdir ~/python27
+<pre><code class="bash">
+mkdir ~/python27
 cd ~/python27
 wget https://www.python.org/ftp/python/2.7.10/Python-2.7.10.tar.xz
 </code></pre>
+
 <p>When the download is finished, verify the checksum to make sure the archive has not been corrupted.</p>
-<pre><code>md5sum Python-2.7.10.tar.xz
-</code></pre>
+<pre><code class="bash">md5sum Python-2.7.10.tar.xz</code></pre>
+
 <p>Extract the archive and change the permissions of directories contained in the archive so they can be read and accessed by all groups and users.</p>
-<pre><code>tar xfv Python-2.7.10.tar.xz
+<pre><code class="bash">
+tar xfv Python-2.7.10.tar.xz
 find ~/python27 -type d -exec chmod 755 {} \;
 </code></pre>
+
 <p>Now execute the following commands to configure and actually install Python, these commands will take a while to finish.</p>
-<pre><code>cd Python-2.7.10
+<pre><code class="bash">
+cd Python-2.7.10
 ./configure --prefix=$HOME/python27
 make
 make install
 </code></pre>
+
 <h2>Python 2.7.10 Setup</h2>
 <p>For the just installed version of Python to be accessible you need to edit your <code>.bashrc</code> file.</p>
-<pre><code>vim ~/.bashrc
-</code></pre>
+<pre><code class="bash">vim ~/.bashrc</code></pre>
+
 <p>Add the following 2 lines to the <code>.bashrc</code>.</p>
-<pre><code>PYTHON=$HOME/python27/bin
+<pre><code class="bash">
+PYTHON=$HOME/python27/bin
 export PATH=$PYTHON:$PATH
 </code></pre>
+
 <p>Now execute the commands in your <code>.bashrc</code> and check the Python interpreter version. If your installation was successful the output should correspond to the downloaded version.</p>
-<pre><code>source ~/.bashrc
+<pre><code class="bash">
+source ~/.bashrc
 python -V
 </code></pre>
+
 <h2>Python Packages</h2>
 <div class="alert alert-info" role="alert">This section is specific to Python 2. If you install Python 3.4 or higher you'll already have pip and can use the <code>pyvenv</code> command for virtual environments.</div>
 
 <p>Python has a "batteries included" philosophy, which means that the standard distribution offers a lot of functionality. Nonetheless, you'll want to be able to install additional Python packages from PyPI and use them in your applications.</p>
 <p>In the remainder of this post, you'll see how to install the prerequisite packages and create virtual environments for your applications. First install easy_install.</p>
-<pre><code>wget https://bootstrap.pypa.io/ez_setup.py
+<pre><code class="bash">
+wget https://bootstrap.pypa.io/ez_setup.py
 python ez_setup.py
 </code></pre>
+
 <p>Quit your SSH session and log in again. Now you can install pip</p>
-<pre><code>easy_install pip
-</code></pre>
+<pre><code class="bash">easy_install pip</code></pre>
+
 <p>and then virtualenvwrapper.</p>
-<pre><code>pip install virtualenvwrapper
-</code></pre>
+<pre><code class="bash">pip install virtualenvwrapper</code></pre>
+
 <p>Finally make the virtualenvwrapper commands available by modifying your <code>.bashrc</code> again.</p>
-<pre><code>export WORKON_HOME=~/.virtualenvs
+<pre><code class="bash">
+export WORKON_HOME=~/.virtualenvs
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 export VIRTUALENVWRAPPER_PYTHON=~/python27/bin/python
 export VIRTUALENVWRAPPER_VIRTUALENV=~/python27/bin/virtualenv
 source ~/python27/bin/virtualenvwrapper.sh
 </code></pre>
+
 <p>You can choose another <code>WORKON_HOME</code> directory. Setting <code>VIRTUALENVWRAPPER_VIRTUALENV_ARGS</code> to <code>--no-site-packages</code> makes sure that newly created virtual environments are isolated from the system <code>site-packages</code>.</p>
 <h2>Conclusion</h2>
 <p>As you saw in this tutorial installing and setting up Python on a shared hosting platform requires a bit of work and SSH access. But it certainly pays off to be able to write your applications in a sane and accessible programming language that offers many features out of the box and a large number of additional packages for creating all kinds of applications.</p>

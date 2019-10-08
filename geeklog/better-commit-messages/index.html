@@ -94,8 +94,8 @@
         <p>According to <a href="http://www.wall.org/~larry/">Larry Wall</a> laziness is one of the 3 virtues of a programmer, because it makes you <em>document what you wrote so you don't have to answer so many questions about it.</em></p>
 <p>While commit messages may not become part of the user facing documentation, they certainly are an important part of documenting development, especially when you work with other people.</p>
 <p>Unfortunately, many developers interpret the laziness virtue not as intended and write <a href="/geeklog/exploring-expressions-emotions-github-commit-messages/">pretty bad commit messages</a>. Being guilty of that myself, I changed my git workflow to improve the usefulness of my commit messages, by adding the following shell alias:</p>
-<pre><code>alias gac='git add . &amp;&amp; git commit -a'
-</code></pre>
+<pre><code class="bash">alias gac='git add . && git commit -a'</code></pre>
+
 <p>Usually, I want to add or remove files from source code management, when I added or removed them from a project, but I tend to forget running <code>git add .</code>. But more importantly when I run <code>gac</code> an editor is opened to write my commit message.</p>
 <p>Before, I simply wrote them directly on the command line being rather sloppy about spelling and grammar and sometimes just repeating previous messages by "abusing" command history.</p>
 <p>With this little hack I get a shortcut for a longer command, I cannot simply repeat a previous message and just having an editor open makes me reason more about what I want to write, which is probably the most important part of it.</p>
