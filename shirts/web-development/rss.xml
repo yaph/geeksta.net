@@ -3,9 +3,25 @@
 <channel><title>Shirts » Web Development</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Web Development</description>
-    <lastBuildDate>Thu, 26 Sep 2019 14:55:45 </lastBuildDate>
+    <lastBuildDate>Wed, 09 Oct 2019 00:13:27 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[console.log() - JavaScript/Web Developer Black Text Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/console.log-black/]]></link>
+        <description><![CDATA[<p>For computer programmers and software developers who write JavaScript code for web browsers, console.log() is likely to be their most used debugging statement by far. Show your love for web development &amp; JS with this simple text design. / A design for...</p><img src="https://geeksta.net/img/large/console.log-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/console.log-black/]]></guid>
+        <pubDate>Tue, 08 Oct 2019 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[console.log() - JavaScript/Web Developer White Text Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/console.log-white/]]></link>
+        <description><![CDATA[<p>For computer programmers and software developers who write JavaScript code for web browsers, console.log() is likely to be their most used debugging statement by far. Show your love for web development &amp; JS with this simple text design. / A design for...</p><img src="https://geeksta.net/img/large/console.log-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/console.log-white/]]></guid>
+        <pubDate>Tue, 08 Oct 2019 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[c0ffee - Web Developer Hexadecimal Color Code Design]]></title>
