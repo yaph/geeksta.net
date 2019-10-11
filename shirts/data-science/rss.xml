@@ -3,9 +3,17 @@
 <channel><title>Shirts » Data Science</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Data Science</description>
-    <lastBuildDate>Wed, 09 Oct 2019 01:23:48 </lastBuildDate>
+    <lastBuildDate>Fri, 11 Oct 2019 15:26:54 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Outlier - Cool Data Scientist/Statistician Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/outlier-red-white/]]></link>
+        <description><![CDATA[<p>In statistics, an outlier is an observation point that differs significantly from others, which can cause problems in statistical analyses. Outlier also refers to people differing from all other members of a group. Do you sometimes feel like an outlier? /...</p><img src="https://geeksta.net/img/large/outlier-red-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/outlier-red-white/]]></guid>
+        <pubDate>Fri, 11 Oct 2019 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[How Time is Spent in Data Science - Data Nerd Joke Design]]></title>

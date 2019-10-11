@@ -3,9 +3,17 @@
 <channel><title>RSS Feed</title>
     <link>https://geeksta.net</link>
     <description>RSS Feed</description>
-    <lastBuildDate>Wed, 09 Oct 2019 01:23:48 </lastBuildDate>
+    <lastBuildDate>Fri, 11 Oct 2019 15:26:54 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Outlier - Cool Data Scientist/Statistician Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/outlier-red-white/]]></link>
+        <description><![CDATA[<p>In statistics, an outlier is an observation point that differs significantly from others, which can cause problems in statistical analyses. Outlier also refers to people differing from all other members of a group. Do you sometimes feel like an outlier? /...</p><img src="https://geeksta.net/img/large/outlier-red-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/outlier-red-white/]]></guid>
+        <pubDate>Fri, 11 Oct 2019 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[console.log() - JavaScript/Web Developer Black Text Design]]></title>
@@ -197,14 +205,6 @@
         <description><![CDATA[<p>F-strings were introduced in Python 3.6 so be happy if you can type f&#8217;yeah&#8217; in the interpreter shell and it works. This design shows &#8220;&gt;&gt;&gt; f&#8217;yeah&#8217;&#8221; in a bold, monospace font. It is for computer programmers and...</p><img src="https://geeksta.net/img/large/f-yeah-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/f-yeah-black/]]></guid>
         <pubDate>Wed, 17 Oct 2018 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[It Works In My Container Funny Developer Design Black]]></title>
-        <link><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-black/]]></link>
-        <description><![CDATA[<p>Containers are a popular choice in modern software development. In such an environment &#8220;It works in my container&#8221; is a programmer excuse you may here more often than its popular predecessor &#8220;It works on my machine&#8221;. A design for...</p><img src="https://geeksta.net/img/large/shrug-it-works-in-my-container-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-black/]]></guid>
-        <pubDate>Thu, 27 Sep 2018 00:00:00 </pubDate>
     </item>
     
 </channel></rss>
