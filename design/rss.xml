@@ -3,9 +3,57 @@
 <channel><title>Design</title>
     <link>https://geeksta.net</link>
     <description>Design</description>
-    <lastBuildDate>Mon, 21 Oct 2019 21:11:06 </lastBuildDate>
+    <lastBuildDate>Wed, 06 Nov 2019 00:31:03 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Shell/Perl Default Variable $_ White Design for Coders & Sysadmins]]></title>
+        <link><![CDATA[https://geeksta.net/design/dollar_-white/]]></link>
+        <description><![CDATA[<p>Many system administrators, computer programmers and hackers love to use the command line interface of their operating system, preferably one based on Unix or Linux. Show with pride that you are one of this special kind of people. / This design shows...</p><img src="https://geeksta.net/img/large/dollar_-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/dollar_-white/]]></guid>
+        <pubDate>Wed, 06 Nov 2019 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Shell/Perl Default Variable $_ Black Design for Coders & Sysadmins]]></title>
+        <link><![CDATA[https://geeksta.net/design/dollar_-black/]]></link>
+        <description><![CDATA[<p>Many system administrators, computer programmers and hackers love to use the command line interface of their operating system, preferably one based on Unix or Linux. Show with pride that you are one of this special kind of people. / This design shows...</p><img src="https://geeksta.net/img/large/dollar_-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/dollar_-black/]]></guid>
+        <pubDate>Wed, 06 Nov 2019 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Shell/Perl Default Variable $_ White Design for Coders & Sysadmins]]></title>
+        <link><![CDATA[https://geeksta.net/design/dollar_-zip-hoodie-white/]]></link>
+        <description><![CDATA[<p>Many system administrators, computer programmers and hackers love to use the command line interface of their operating system, preferably one based on Unix or Linux. Show with pride that you are one of this special kind of people. / This design shows...</p><img src="https://geeksta.net/img/large/dollar_-zip-hoodie-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/dollar_-zip-hoodie-white/]]></guid>
+        <pubDate>Tue, 05 Nov 2019 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Shell Prompt >_ Command Line Interpreter Geek/Nerd White Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/shell-prompt-zip-hoodie-white/]]></link>
+        <description><![CDATA[<p>Many system administrators, computer programmers and hackers love to use the command line interface of their operating system, preferably one based on Unix or Linux. Show with pride that you are one of this special kind of people. / This design shows a...</p><img src="https://geeksta.net/img/large/shell-prompt-zip-hoodie-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/shell-prompt-zip-hoodie-white/]]></guid>
+        <pubDate>Tue, 05 Nov 2019 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Shell/Perl Default Variable $_ Black Design for Coders & Sysadmins]]></title>
+        <link><![CDATA[https://geeksta.net/design/dollar_-zip-hoodie-black/]]></link>
+        <description><![CDATA[<p>Many system administrators, computer programmers and hackers love to use the command line interface of their operating system, preferably one based on Unix or Linux. Show with pride that you are one of this special kind of people. / This design shows...</p><img src="https://geeksta.net/img/large/dollar_-zip-hoodie-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/dollar_-zip-hoodie-black/]]></guid>
+        <pubDate>Tue, 05 Nov 2019 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Shell Prompt >_ Command Line Interpreter Geek/Nerd Black Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/shell-prompt-zip-hoodie-black/]]></link>
+        <description><![CDATA[<p>Many system administrators, computer programmers and hackers love to use the command line interface of their operating system, preferably one based on Unix or Linux. Show with pride that you are one of this special kind of people. / This design shows a...</p><img src="https://geeksta.net/img/large/shell-prompt-zip-hoodie-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/shell-prompt-zip-hoodie-black/]]></guid>
+        <pubDate>Tue, 05 Nov 2019 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Outlier - Cool Data Scientist/Statistician Design]]></title>
@@ -61,6 +109,14 @@
         <description><![CDATA[<p>JavaScript was first released in 1995 and since then has become one of the most important and widely used programming languages. Its unique status as a language supported by most web browsers and the introduction of server side JS are two key factors. /...</p><img src="https://geeksta.net/img/large/javascript-1995-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/javascript-1995-black/]]></guid>
         <pubDate>Sun, 25 Aug 2019 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Hacker in Chinese Characters - Green/Pink Space Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/hacker-chinese-zip-hoodie-black/]]></link>
+        <description><![CDATA[<p>In the world of IT, hackers are seen as computer experts with operating system, networking and programming skills who use their power to solve problems be it for good or evil. / Do you consider yourself a hacker? Then this design is perfect for you. It...</p><img src="https://geeksta.net/img/large/hacker-chinese-zip-hoodie-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/hacker-chinese-zip-hoodie-black/]]></guid>
+        <pubDate>Fri, 09 Aug 2019 00:00:00 </pubDate>
     </item>
     
     <item>
@@ -149,62 +205,6 @@
         <description><![CDATA[<p>Using the sudo program instead of logging into a superuser account is a good practice for system administrators on Unix/Linux operating systems. This design is for admins with a sense of humor who enjoy Rock&#8217;n&#8217;Roll and Hard Rock music. Suitable...</p><img src="https://geeksta.net/img/large/sudo-for-those-about-to-root-hoodie-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/sudo-for-those-about-to-root-hoodie-black/]]></guid>
         <pubDate>Fri, 04 Jan 2019 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[SUDO For Those About To Root Funny White Design for Computer Geeks]]></title>
-        <link><![CDATA[https://geeksta.net/design/sudo-for-those-about-to-root-white/]]></link>
-        <description><![CDATA[<p>Using the sudo program instead of logging into a superuser account is a good practice for system administrators on Unix/Linux operating systems. This design is for admins with a sense of humor who enjoy Rock&#8217;n&#8217;Roll and Hard Rock music. Suitable...</p><img src="https://geeksta.net/img/large/sudo-for-those-about-to-root-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/sudo-for-those-about-to-root-white/]]></guid>
-        <pubDate>Fri, 04 Jan 2019 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[SUDO For Those About To Root Funny Black Design for Computer Geeks]]></title>
-        <link><![CDATA[https://geeksta.net/design/sudo-for-those-about-to-root-black/]]></link>
-        <description><![CDATA[<p>Using the sudo program instead of logging into a superuser account is a good practice for system administrators on Unix/Linux operating systems. This design is for admins with a sense of humor who enjoy Rock&#8217;n&#8217;Roll and Hard Rock music. Suitable...</p><img src="https://geeksta.net/img/large/sudo-for-those-about-to-root-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/sudo-for-those-about-to-root-black/]]></guid>
-        <pubDate>Fri, 04 Jan 2019 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[SUDO For Those About To Root Funny White Design for Computer Geeks]]></title>
-        <link><![CDATA[https://geeksta.net/design/sudo-for-those-about-to-root-hoodie-white/]]></link>
-        <description><![CDATA[<p>Using the sudo program instead of logging into a superuser account is a good practice for system administrators on Unix/Linux operating systems. This design is for admins with a sense of humor who enjoy Rock&#8217;n&#8217;Roll and Hard Rock music. Suitable...</p><img src="https://geeksta.net/img/large/sudo-for-those-about-to-root-hoodie-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/sudo-for-those-about-to-root-hoodie-white/]]></guid>
-        <pubDate>Fri, 04 Jan 2019 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Funny Python Shell Code Design F-string >>> f'yeah']]></title>
-        <link><![CDATA[https://geeksta.net/design/f-yeah-white/]]></link>
-        <description><![CDATA[<p>F-strings were introduced in Python 3.6 so be happy if you can type f&#8217;yeah&#8217; in the interpreter shell and it works. This design shows &#8220;&gt;&gt;&gt; f&#8217;yeah&#8217;&#8221; in a bold, monospace font. It is for computer programmers and...</p><img src="https://geeksta.net/img/large/f-yeah-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/f-yeah-white/]]></guid>
-        <pubDate>Wed, 17 Oct 2018 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Geek in Chinese Characters - Green/Pink Space Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/geek-chinese/]]></link>
-        <description><![CDATA[<p>Geek typically refers to experts, enthusiasts or persons obsessed with a hobby. Take pride in being a geek with this cool design. It shows the word &#8220;geek&#8221; in Simplified Chinese characters in a lucid green with pink stars shining through. •...</p><img src="https://geeksta.net/img/large/geek-chinese.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/geek-chinese/]]></guid>
-        <pubDate>Wed, 17 Oct 2018 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Funny Python Shell Code Design F-string >>> f'yeah']]></title>
-        <link><![CDATA[https://geeksta.net/design/f-yeah-black/]]></link>
-        <description><![CDATA[<p>F-strings were introduced in Python 3.6 so be happy if you can type f&#8217;yeah&#8217; in the interpreter shell and it works. This design shows &#8220;&gt;&gt;&gt; f&#8217;yeah&#8217;&#8221; in a bold, monospace font. It is for computer programmers and...</p><img src="https://geeksta.net/img/large/f-yeah-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/f-yeah-black/]]></guid>
-        <pubDate>Wed, 17 Oct 2018 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[It Works In My Container Funny Developer Design Black]]></title>
-        <link><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-black/]]></link>
-        <description><![CDATA[<p>Containers are a popular choice in modern software development. In such an environment &#8220;It works in my container&#8221; is a programmer excuse you may here more often than its popular predecessor &#8220;It works on my machine&#8221;. A design for...</p><img src="https://geeksta.net/img/large/shrug-it-works-in-my-container-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-black/]]></guid>
-        <pubDate>Thu, 27 Sep 2018 00:00:00 </pubDate>
     </item>
     
 </channel></rss>

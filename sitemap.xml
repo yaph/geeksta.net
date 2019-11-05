@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+<url><loc><![CDATA[https://geeksta.net/design/dollar_-white/]]></loc><lastmod>2019-11-06</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/dollar_-black/]]></loc><lastmod>2019-11-06</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/dollar_-zip-hoodie-white/]]></loc><lastmod>2019-11-06</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/shell-prompt-zip-hoodie-white/]]></loc><lastmod>2019-11-06</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/dollar_-zip-hoodie-black/]]></loc><lastmod>2019-11-06</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/shell-prompt-zip-hoodie-black/]]></loc><lastmod>2019-11-06</lastmod></url>
+
 <url><loc><![CDATA[https://geeksta.net/design/outlier-red-white/]]></loc><lastmod>2019-10-11</lastmod></url>
 
 <url><loc><![CDATA[https://geeksta.net/design/console.log-black/]]></loc><lastmod>2019-10-09</lastmod></url>
@@ -14,6 +26,8 @@
 <url><loc><![CDATA[https://geeksta.net/design/javascript-1995-white/]]></loc><lastmod>2019-08-26</lastmod></url>
 
 <url><loc><![CDATA[https://geeksta.net/design/javascript-1995-black/]]></loc><lastmod>2019-08-26</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hacker-chinese-zip-hoodie-black/]]></loc><lastmod>2019-11-06</lastmod></url>
 
 <url><loc><![CDATA[https://geeksta.net/reviews/python-data-science-handbook/]]></loc><lastmod>2019-06-15</lastmod></url>
 
@@ -794,6 +808,10 @@
 <url><loc><![CDATA[https://geeksta.net/design/shell-prompt-white/]]></loc><lastmod>2019-05-11</lastmod></url>
 
 <url><loc><![CDATA[https://geeksta.net/design/data-scientist-statistics-on-a-mac-gray/]]></loc><lastmod>2019-05-11</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/data-scientist-statistics-on-a-mac-light-gray/]]></loc><lastmod>2019-11-06</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/data-scientist-statistics-on-a-mac-dark-gray/]]></loc><lastmod>2019-11-06</lastmod></url>
 
 <url><loc><![CDATA[https://geeksta.net/design/pixel-bash-ccc/]]></loc><lastmod>2019-05-11</lastmod></url>
 

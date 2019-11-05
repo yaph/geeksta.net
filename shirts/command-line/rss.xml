@@ -3,9 +3,25 @@
 <channel><title>Shirts » Command Line</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Command Line</description>
-    <lastBuildDate>Mon, 21 Oct 2019 21:11:06 </lastBuildDate>
+    <lastBuildDate>Wed, 06 Nov 2019 00:31:03 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Shell/Perl Default Variable $_ White Design for Coders & Sysadmins]]></title>
+        <link><![CDATA[https://geeksta.net/design/dollar_-white/]]></link>
+        <description><![CDATA[<p>Many system administrators, computer programmers and hackers love to use the command line interface of their operating system, preferably one based on Unix or Linux. Show with pride that you are one of this special kind of people. / This design shows...</p><img src="https://geeksta.net/img/large/dollar_-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/dollar_-white/]]></guid>
+        <pubDate>Wed, 06 Nov 2019 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Shell/Perl Default Variable $_ Black Design for Coders & Sysadmins]]></title>
+        <link><![CDATA[https://geeksta.net/design/dollar_-black/]]></link>
+        <description><![CDATA[<p>Many system administrators, computer programmers and hackers love to use the command line interface of their operating system, preferably one based on Unix or Linux. Show with pride that you are one of this special kind of people. / This design shows...</p><img src="https://geeksta.net/img/large/dollar_-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/dollar_-black/]]></guid>
+        <pubDate>Wed, 06 Nov 2019 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Hashbang /bin/zsh - Command Line Hacker Design - White Text]]></title>
@@ -189,22 +205,6 @@
         <description><![CDATA[<p>Alias yolo (you only live once) to &#8216;git push &#8212;force&#8217; for moments when you live dangerously as a programmer and enforce to push your code changes to the master git repository. / A funny programmer shirt with the text &#8220;alias...</p><img src="https://geeksta.net/img/large/alias-yolo-git-push-force-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/alias-yolo-git-push-force-black/]]></guid>
         <pubDate>Mon, 09 Feb 2015 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[cd ~ reset - White on Black Design for Command Line Hackers]]></title>
-        <link><![CDATA[https://geeksta.net/design/cd-home-reset-white/]]></link>
-        <description><![CDATA[<p>A humorous white on black design for command line hackers with the bash commands “cd ~” &amp; “reset” printed in a black monospace font. • Millions of unique designs by independent artists. Find your thing.</p><img src="https://geeksta.net/img/large/cd-home-reset-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/cd-home-reset-white/]]></guid>
-        <pubDate>Fri, 12 Dec 2014 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[cd ~ reset - Black on White Design for Command Line Hackers]]></title>
-        <link><![CDATA[https://geeksta.net/design/cd-home-reset-black/]]></link>
-        <description><![CDATA[<p>A humorous black on white design for command line hackers with the bash commands “cd ~” &amp; “reset” printed in a black monospace font. • Millions of unique designs by independent artists. Find your thing.</p><img src="https://geeksta.net/img/large/cd-home-reset-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/cd-home-reset-black/]]></guid>
-        <pubDate>Thu, 11 Dec 2014 00:00:00 </pubDate>
     </item>
     
 </channel></rss>
