@@ -3,9 +3,17 @@
 <channel><title>Design</title>
     <link>https://geeksta.net</link>
     <description>Design</description>
-    <lastBuildDate>Sat, 09 Nov 2019 14:18:08 </lastBuildDate>
+    <lastBuildDate>Tue, 12 Nov 2019 14:29:00 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[JS Yellow Text Design for JavaScript Developers/Programmers]]></title>
+        <link><![CDATA[https://geeksta.net/design/js-zip-hoodie-yellow/]]></link>
+        <description><![CDATA[<p>JavaScript is one of the most popular and widely used computer programming languages. Some programmers dislike and try to avoid writing code in it and others love this quirky language. If you belong to the latter group, this design is for you. / A cool and...</p><img src="https://geeksta.net/img/large/js-zip-hoodie-yellow.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/js-zip-hoodie-yellow/]]></guid>
+        <pubDate>Tue, 12 Nov 2019 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Shell/Perl Default Variable $_ White Design for Coders & Sysadmins]]></title>
@@ -197,14 +205,6 @@
         <description><![CDATA[<p>Do you edit text and write code in vi or Vim and love New York hardcore music? Then this cool design is right for you as it combines your tastes into a simple and effective design. It shows vi&#8217;s basic navigation keys H, J, K, L in capital letters...</p><img src="https://geeksta.net/img/large/hjkl-nyhc-capital-letters-hoodie-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/hjkl-nyhc-capital-letters-hoodie-black/]]></guid>
         <pubDate>Tue, 26 Feb 2019 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[SUDO For Those About To Root Funny Black Design for Computer Geeks]]></title>
-        <link><![CDATA[https://geeksta.net/design/sudo-for-those-about-to-root-hoodie-black/]]></link>
-        <description><![CDATA[<p>Using the sudo program instead of logging into a superuser account is a good practice for system administrators on Unix/Linux operating systems. This design is for admins with a sense of humor who enjoy Rock&#8217;n&#8217;Roll and Hard Rock music. Suitable...</p><img src="https://geeksta.net/img/large/sudo-for-those-about-to-root-hoodie-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/sudo-for-those-about-to-root-hoodie-black/]]></guid>
-        <pubDate>Fri, 04 Jan 2019 00:00:00 </pubDate>
     </item>
     
 </channel></rss>

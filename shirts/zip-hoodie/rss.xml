@@ -3,9 +3,17 @@
 <channel><title>Shirts » Zip Hoodie</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Zip Hoodie</description>
-    <lastBuildDate>Sat, 09 Nov 2019 14:18:08 </lastBuildDate>
+    <lastBuildDate>Tue, 12 Nov 2019 14:29:00 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[JS Yellow Text Design for JavaScript Developers/Programmers]]></title>
+        <link><![CDATA[https://geeksta.net/design/js-zip-hoodie-yellow/]]></link>
+        <description><![CDATA[<p>JavaScript is one of the most popular and widely used computer programming languages. Some programmers dislike and try to avoid writing code in it and others love this quirky language. If you belong to the latter group, this design is for you. / A cool and...</p><img src="https://geeksta.net/img/large/js-zip-hoodie-yellow.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/js-zip-hoodie-yellow/]]></guid>
+        <pubDate>Tue, 12 Nov 2019 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Shell/Perl Default Variable $_ White Design for Coders & Sysadmins]]></title>
