@@ -3,9 +3,25 @@
 <channel><title>Shirts » Sysadmin</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Sysadmin</description>
-    <lastBuildDate>Sun, 15 Dec 2019 23:21:29 </lastBuildDate>
+    <lastBuildDate>Tue, 31 Dec 2019 14:53:21 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Core Dumps Happen White Pun Design For Computer Sysadmins]]></title>
+        <link><![CDATA[https://geeksta.net/design/core-dumps-happen-white/]]></link>
+        <description><![CDATA[<p>A core dump in computing consists of the recorded state of the working memory of a computer program that has crashed. As a sysadmin you are hopefully able to analyze the dump and maybe even fix the problem that caused the crash. A funny pun design for...</p><img src="https://geeksta.net/img/large/core-dumps-happen-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/core-dumps-happen-white/]]></guid>
+        <pubDate>Tue, 31 Dec 2019 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Core Dumps Happen Black Pun Design For Computer Sysadmins]]></title>
+        <link><![CDATA[https://geeksta.net/design/core-dumps-happen-black/]]></link>
+        <description><![CDATA[<p>A core dump in computing consists of the recorded state of the working memory of a computer program that has crashed. As a sysadmin you are hopefully able to analyze the dump and maybe even fix the problem that caused the crash. A funny pun design for...</p><img src="https://geeksta.net/img/large/core-dumps-happen-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/core-dumps-happen-black/]]></guid>
+        <pubDate>Tue, 31 Dec 2019 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[SUDO For Those About To Root Funny White Design for Computer Geeks]]></title>
@@ -189,22 +205,6 @@
         <description><![CDATA[<p>This design for computer system administrators shows the text &#8220;I think therefore I am root&#8221; in narrow white typefaces for good contrast with dark colors. It is a parody on the famous proposition &#8220;Cogito ergo sum&#8221; (I think, therefore...</p><img src="https://geeksta.net/img/large/i-think-therefore-i-am-root-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/i-think-therefore-i-am-root-white/]]></guid>
         <pubDate>Tue, 04 Apr 2017 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[SYSADMIN I have unrestricted access to your hardware]]></title>
-        <link><![CDATA[https://geeksta.net/design/sysadmin-unrestricted-access-hardware/]]></link>
-        <description><![CDATA[<p>System administrators love the position they are in and showing their power. Being root on a computer system basically allows them to do everything, whether that is used for good or not. / This design consists of the text pieces &#8220;SYSADMIN&#8221; in...</p><img src="https://geeksta.net/img/large/sysadmin-unrestricted-access-hardware.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/sysadmin-unrestricted-access-hardware/]]></guid>
-        <pubDate>Tue, 10 Nov 2015 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[./configure make make install for sysadmins and Linux users]]></title>
-        <link><![CDATA[https://geeksta.net/design/configure-make-make-install-black/]]></link>
-        <description><![CDATA[<p>Traditionally software packages on Unix/Linux systems had to be installed by downloading the source code, compiling and installing it using the well-known command sequence: / ./configure / make / make install / Nowadays, sysadmins and Unix/Linux users can...</p><img src="https://geeksta.net/img/large/configure-make-make-install-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/configure-make-make-install-black/]]></guid>
-        <pubDate>Mon, 05 Oct 2015 00:00:00 </pubDate>
     </item>
     
 </channel></rss>

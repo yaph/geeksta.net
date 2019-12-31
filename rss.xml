@@ -3,9 +3,25 @@
 <channel><title>RSS Feed</title>
     <link>https://geeksta.net</link>
     <description>RSS Feed</description>
-    <lastBuildDate>Sun, 15 Dec 2019 23:21:30 </lastBuildDate>
+    <lastBuildDate>Tue, 31 Dec 2019 14:53:21 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Core Dumps Happen White Pun Design For Computer Sysadmins]]></title>
+        <link><![CDATA[https://geeksta.net/design/core-dumps-happen-white/]]></link>
+        <description><![CDATA[<p>A core dump in computing consists of the recorded state of the working memory of a computer program that has crashed. As a sysadmin you are hopefully able to analyze the dump and maybe even fix the problem that caused the crash. A funny pun design for...</p><img src="https://geeksta.net/img/large/core-dumps-happen-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/core-dumps-happen-white/]]></guid>
+        <pubDate>Tue, 31 Dec 2019 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Core Dumps Happen Black Pun Design For Computer Sysadmins]]></title>
+        <link><![CDATA[https://geeksta.net/design/core-dumps-happen-black/]]></link>
+        <description><![CDATA[<p>A core dump in computing consists of the recorded state of the working memory of a computer program that has crashed. As a sysadmin you are hopefully able to analyze the dump and maybe even fix the problem that caused the crash. A funny pun design for...</p><img src="https://geeksta.net/img/large/core-dumps-happen-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/core-dumps-happen-black/]]></guid>
+        <pubDate>Tue, 31 Dec 2019 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Funny Perl Code Pun Design - sub procrastinate ...]]></title>
@@ -189,22 +205,6 @@
         <description><![CDATA[<p>A positive attitude towards life comes from within and laughter helps to emphasize the beauty of life and to hide the negative. Spread a good mood and joy of life among your fellow human beings with this simple message. / The design shows the German text...</p><img src="https://geeksta.net/img/large/hi-lach-mal-wieder-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/hi-lach-mal-wieder-black/]]></guid>
         <pubDate>Mon, 20 May 2019 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Hi Lach Mal Wieder - Spread Positivity Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/hi-lach-mal-wieder-white/]]></link>
-        <description><![CDATA[<p>A positive attitude towards life comes from within and laughter helps to emphasize the beauty of life and to hide the negative. Spread a good mood and joy of life among your fellow human beings with this simple message. / The design shows the German text...</p><img src="https://geeksta.net/img/large/hi-lach-mal-wieder-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/hi-lach-mal-wieder-white/]]></guid>
-        <pubDate>Mon, 20 May 2019 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Caution I Curse When I Commit Code - Funny Programmer Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/caution-i-curse-when-i-commit-code/]]></link>
-        <description><![CDATA[<p>Profanity is a language all programmers speak fluently. Coding can be frustrating, which is manifested in some commit messages for Git and other version control systems. Warn your co-workers, if you tend to curse or swear in commit messages. / This design...</p><img src="https://geeksta.net/img/large/caution-i-curse-when-i-commit-code.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/caution-i-curse-when-i-commit-code/]]></guid>
-        <pubDate>Thu, 09 May 2019 00:00:00 </pubDate>
     </item>
     
 </channel></rss>

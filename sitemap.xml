@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+<url><loc><![CDATA[https://geeksta.net/design/core-dumps-happen-white/]]></loc><lastmod>2019-12-31</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/core-dumps-happen-black/]]></loc><lastmod>2019-12-31</lastmod></url>
+
 <url><loc><![CDATA[https://geeksta.net/design/sub-procrastinate-monokai/]]></loc><lastmod>2019-12-14</lastmod></url>
 
 <url><loc><![CDATA[https://geeksta.net/design/js-zip-hoodie-yellow/]]></loc><lastmod>2019-11-12</lastmod></url>
