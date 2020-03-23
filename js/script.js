@@ -1,1 +1,1 @@
-"use strict";function getSVG(t,e){var n=d3.select(t),i=n.node().parentElement.getBoundingClientRect();return n.attr("width",i.width).attr("height",i.width/e)}
+"use strict";function getSVG(t,e){var n=d3.select(t),a=n.node().parentElement.getBoundingClientRect();return n.attr("width",a.width).attr("height",a.width/e)}Array.from(document.getElementsByClassName("e")).forEach(function(t){t.innerHTML='<a href="mailto:'+t.dataset.to+"@geeksta.net?subject="+t.dataset.subject+'">'+t.textContent+"</a>"});
