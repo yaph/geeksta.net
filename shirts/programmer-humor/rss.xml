@@ -3,9 +3,17 @@
 <channel><title>Shirts » Programmer Humor</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Programmer Humor</description>
-    <lastBuildDate>Tue, 24 Mar 2020 00:22:01 </lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2020 22:08:01 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Daredevil Programmer Design: Biohazard Symbol & git push --force]]></title>
+        <link><![CDATA[https://geeksta.net/design/git-push-force-orange/]]></link>
+        <description><![CDATA[<p>A design for daring & adventurous computer programmers, software developers and coders who like to live dangerously and use the force option when pushing to a git repository. Whether at work or in a side project of your own, use this sparingly. A funny...</p><img src="https://geeksta.net/img/large/git-push-force-orange.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/git-push-force-orange/]]></guid>
+        <pubDate>Thu, 16 Apr 2020 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Funny Perl Code Pun Design - sub procrastinate ...]]></title>
@@ -196,14 +204,6 @@
         <link><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-white/]]></link>
         <description><![CDATA[<p>This design consists of the unicode emoticon for shrugging your shoulders and smiling and the text &#8220;it works on my machine&#8221;, one of the most frequent excuses you hear when confronting a programmer with a bug. / The design elements are white and...</p><img src="https://geeksta.net/img/large/shrug-it-works-on-my-machine-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-white/]]></guid>
-        <pubDate>Tue, 10 Nov 2015 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Shrug it works on my machine - Programmer Excuse Design - Grey Text]]></title>
-        <link><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-black/]]></link>
-        <description><![CDATA[<p>This design consists of the unicode emoticon for shrugging your shoulders and smiling and the text &#8220;it works on my machine&#8221;, one of the most frequent excuses you hear when confronting a programmer with a bug. / The design elements are dark grey...</p><img src="https://geeksta.net/img/large/shrug-it-works-on-my-machine-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-black/]]></guid>
         <pubDate>Tue, 10 Nov 2015 00:00:00 </pubDate>
     </item>
     
