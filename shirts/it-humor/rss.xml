@@ -3,7 +3,7 @@
 <channel><title>Shirts » It Humor</title>
     <link>https://geeksta.net</link>
     <description>Shirts » It Humor</description>
-    <lastBuildDate>Mon, 18 May 2020 00:22:12 </lastBuildDate>
+    <lastBuildDate>Mon, 01 Jun 2020 11:12:11 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
@@ -140,6 +140,14 @@
         <link><![CDATA[https://geeksta.net/design/enter-sandman-666/]]></link>
         <description><![CDATA[<p>The design consists of a Unicode enter symbol on top and the text &#8220;Sandman&#8221; below it in a bold font with the appropriate color #666. / A parody on the Metallica Song &#8220;Enter Sandman&#8221; for metal fans who are tech geeks or the other way...</p><img src="https://geeksta.net/img/large/enter-sandman-666.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/enter-sandman-666/]]></guid>
+        <pubDate>Mon, 05 Oct 2015 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Enter Sandman Parody Design for Metal Geeks]]></title>
+        <link><![CDATA[https://geeksta.net/design/enter-sandman-gray/]]></link>
+        <description><![CDATA[<p>The design consists of a Unicode enter symbol on top and the text "Sandman" below it in a bold font with the appropriate color #666. A parody on the Metallica Song "Enter Sandman" for metal fans who are tech geeks or the other way around.</p><img src="https://geeksta.net/img/large/enter-sandman-gray.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/enter-sandman-gray/]]></guid>
         <pubDate>Mon, 05 Oct 2015 00:00:00 </pubDate>
     </item>
     

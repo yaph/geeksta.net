@@ -3,7 +3,7 @@
 <channel><title>Shirts » Data Science</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Data Science</description>
-    <lastBuildDate>Mon, 18 May 2020 00:22:12 </lastBuildDate>
+    <lastBuildDate>Mon, 01 Jun 2020 11:12:11 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
@@ -84,6 +84,14 @@
         <link><![CDATA[https://geeksta.net/design/outlier-666/]]></link>
         <description><![CDATA[<p>In statistics, an outlier is an observation point that is distant from other observations. / This design consists of the text &#8220;outlier&#8221; moved off the center of the design canvas. It is neither centered horizontally or vertically. This may put...</p><img src="https://geeksta.net/img/large/outlier-666.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/outlier-666/]]></guid>
+        <pubDate>Wed, 30 Sep 2015 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Outlier moved off the Center for Statisticians]]></title>
+        <link><![CDATA[https://geeksta.net/design/outlier-gray/]]></link>
+        <description><![CDATA[<p>In statistics, an outlier is an observation point that is distant from other observations. This design consists of the text "outlier" moved off the center of the design canvas. It is neither centered horizontally or vertically. This may put off designers,...</p><img src="https://geeksta.net/img/large/outlier-gray.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/outlier-gray/]]></guid>
         <pubDate>Wed, 30 Sep 2015 00:00:00 </pubDate>
     </item>
     
