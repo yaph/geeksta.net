@@ -3,9 +3,17 @@
 <channel><title>Tags</title>
     <link>https://geeksta.net</link>
     <description>Tags</description>
-    <lastBuildDate>Fri, 03 Jul 2020 22:44:07 </lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2020 20:36:50 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Automating Browser Screenshots for Social Media]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/automating-browser-screenshots-social-media/]]></link>
+        <description><![CDATA[<p>An article describing how I automated the creation of social media images using web page screenshots.</p><img src="https://ukealong.com/img/key/c.png" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/automating-browser-screenshots-social-media/]]></guid>
+        <pubDate>Mon, 27 Jul 2020 20:35:05 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Python Data Science Handbook: Essential Tools for Working with Data]]></title>
@@ -197,14 +205,6 @@
         <description><![CDATA[<p>A set of data visualizations that display what area of land you could buy for 1 million US dollar in different US cities.</p><img src="http://i.imgur.com/OkS5jW1.png" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/visualizations/us-housing-prices/]]></guid>
         <pubDate>Sat, 10 May 2014 14:20:06 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Bookmarklet to make reading news more fun xkcd style]]></title>
-        <link><![CDATA[https://geeksta.net/tools/make-reading-news-fun-bookmarklet/]]></link>
-        <description><![CDATA[<p>This bookmarklet replaces certain pieces of text on Web pages with other texts that supposedly make reading them more fun. Based on xkcd 1288.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/tools/make-reading-news-fun-bookmarklet/]]></guid>
-        <pubDate>Fri, 08 Nov 2013 14:05:03 </pubDate>
     </item>
     
 </channel></rss>

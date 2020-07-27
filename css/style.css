@@ -48,10 +48,15 @@ font-size:1.2em;
 line-height:1.2em;
 }
 
+/* images */
 .post_image {
 margin:.4em 1em 1em 0;
 float:left;
 }
+.content img {
+    max-width: 100%;
+}
+
 /* ul.thumbnails does not exist in bootstrap 3 */
 .thumbnails {
 list-style:none;

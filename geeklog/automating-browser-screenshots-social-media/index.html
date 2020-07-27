@@ -5,31 +5,31 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title itemprop="name">Taking Web Page Screenshots with PhantomJS and Python | Geeksta</title>
-        <meta name="description" content="A brief tutorial on how to create screenshots with common browser resolutions and save them as PNG files using PhantomJS and Python.">
+        <title itemprop="name">Automating Browser Screenshots for Social Media | Geeksta</title>
+        <meta name="description" content="An article describing how I automated the creation of social media images using web page screenshots.">
         <meta name="author" content="Ramiro Gómez">
         
-            <meta property="og:image" content="https://geeksta.net/img/geeklog/web-page-screenshots-phantomjs-python.png">
+            <meta property="og:image" content="https://ukealong.com/img/key/c.png">
             
 
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@yaph">
-    <meta name="twitter:title" content="Taking Web Page Screenshots with PhantomJS and Python">
-    <meta name="twitter:description" content="A brief tutorial on how to create screenshots with common browser resolutions and save them as PNG files using PhantomJS and Python.">
-    <meta name="twitter:image:src" content="https://geeksta.net/img/geeklog/web-page-screenshots-phantomjs-python.png">
+    <meta name="twitter:title" content="Automating Browser Screenshots for Social Media">
+    <meta name="twitter:description" content="An article describing how I automated the creation of social media images using web page screenshots.">
+    <meta name="twitter:image:src" content="https://ukealong.com/img/key/c.png">
 
         
         
         <meta name="flattr:id" content="4pzdyq">
-        <link href="https://geeksta.net/geeklog/web-page-screenshots-phantomjs-python/" rel="canonical" itemprop="url">
+        <link href="https://geeksta.net/geeklog/automating-browser-screenshots-social-media/" rel="canonical" itemprop="url">
         <link href="/img/icon-small.png" rel="icon" type="image/png">
         <link href="/rss.xml" rel="alternate" type="application/rss+xml" title="Geeksta All Posts RSS feed">
         <link href="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="/css/style.css" rel="stylesheet">
         
-            <link href="/vendor/highlight/styles/github.css" rel="stylesheet">
+            <link href="/vendor/highlight/styles/idea.css" rel="stylesheet">
         
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -66,12 +66,12 @@
   <button type="button" class="dropdown-toggle btn btn-success navbar-btn" data-toggle="dropdown"><i class="fa fa-share"></i></button>
   <ul class="share dropdown-menu pull-right">
     <li><a href="/rss.xml" class="btn btn-default"><i class="fa fa-rss"></i> RSS Feed</a></li>
-    <li><a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/geeklog/web-page-screenshots-phantomjs-python/&title=Taking%20Web%20Page%20Screenshots%20with%20PhantomJS%20and%20Python" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
-    <li><a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/geeklog/web-page-screenshots-phantomjs-python/&text=Taking%20Web%20Page%20Screenshots%20with%20PhantomJS%20and%20Python" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
-    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/geeklog/web-page-screenshots-phantomjs-python/&t=Taking%20Web%20Page%20Screenshots%20with%20PhantomJS%20and%20Python" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
-    <li><a rel="nofollow" href="https://plus.google.com/share?url=https%3A//geeksta.net/geeklog/web-page-screenshots-phantomjs-python/" class="btn btn-default"><i class="fa fa-google-plus"></i> Google+</a></li>
-    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geeksta.net/geeklog/web-page-screenshots-phantomjs-python/&title=Taking%20Web%20Page%20Screenshots%20with%20PhantomJS%20and%20Python" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
-    <li><a rel="nofollow" href="https://www.stumbleupon.com/submit?url=https%3A//geeksta.net/geeklog/web-page-screenshots-phantomjs-python/&title=Taking%20Web%20Page%20Screenshots%20with%20PhantomJS%20and%20Python" class="btn btn-default"><i class="fa fa-stumbleupon"></i> Stumble</a></li>
+    <li><a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&title=Automating%20Browser%20Screenshots%20for%20Social%20Media" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
+    <li><a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&text=Automating%20Browser%20Screenshots%20for%20Social%20Media" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
+    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&t=Automating%20Browser%20Screenshots%20for%20Social%20Media" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
+    <li><a rel="nofollow" href="https://plus.google.com/share?url=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/" class="btn btn-default"><i class="fa fa-google-plus"></i> Google+</a></li>
+    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&title=Automating%20Browser%20Screenshots%20for%20Social%20Media" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+    <li><a rel="nofollow" href="https://www.stumbleupon.com/submit?url=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&title=Automating%20Browser%20Screenshots%20for%20Social%20Media" class="btn btn-default"><i class="fa fa-stumbleupon"></i> Stumble</a></li>
   </ul>
 </li>
                 </ul>
@@ -84,55 +84,62 @@
         
 <div class="row">
     <div itemscope itemtype="http://schema.org/Article" class="col-md-9 content">
-        <header><h1 itemprop="name">Taking Web Page Screenshots with PhantomJS and Python</h1></header>
+        <header><h1 itemprop="name">Automating Browser Screenshots for Social Media</h1></header>
         
-        <p>Taking screenshots of Web pages is a common task for Web developers and publishers, so it's a good idea to automate it. Searching for existing solutions to the problem, I found <a href="http://phantomjs.org/">PhantomJS</a>, a headless WebKit with a JavaScript API, that makes it pretty easy to do so.</p>
-<h2>Simple PhantomJS example</h2>
-<p>With just the few lines of PhantomJS code below, you fetch the Web page at <code>http://example.com</code>, render it, and save the screenshot as a PNG file with the specified width and height.</p>
-<pre class="clearfix"><code class="javascript">
-var page = require('webpage').create(),
-    url = 'http://example.com',
-    w = 1024,
-    h = 768
+        <p>I have two websites, <a href="https://ukealong.com/">ukealong.com</a> and <a href="https://programminglanguages.info/">programminglanguages.info</a>, with many pages showing graphics rendered with JavaScript. When I shared one of those pages on social media, I created a screenshot first, optimized the image and added the page URL as text to it. I realized that I don't want to do this manually for hundreds of pages and wrote some code to automate these tasks.</p>
+<p>I looked at existing screenshot libraries for Python first, but the packages I tried didn't capture the dynamic graphics that I wanted to include on the screenshots. So I wrote a tool called <a href="https://pypi.org/project/wcap/">wcap (web page capture)</a> that is built on top of <a href="https://www.selenium.dev/">Selenium</a> and <a href="https://github.com/mozilla/geckodriver">geckodriver</a>. It can be used as a command line tool or from within Python programs.</p>
+<p>At the time of writing <code>wcap</code> allows you to set the dimensions of the screenshot and a wait time in seconds to ensure that page rendering has finished. Any form of image manipulation like cropping or adding text has to be done separately.</p>
+<p>Below you find the code to create the social media image for the <a href="https://ukealong.com/key/c/">Key of C page on ukealong.com</a>. The first step is to import the necessary libraries and set some display variables like margins and font size that are specific for the design and layout of the captured web page and the portion to show. My goal was to show the fretboard diagram and the first two rows of video preview images.</p>
+<pre><code class="python">from PIL import Image, ImageDraw, ImageFont
+from wcap import get_browser, capture
 
-page.viewportSize = { width: w, height: h }
-page.open(url, function(status) {
-    if (status !== 'success') {
-        console.log('Unable to load url: ' + url)
-    } else {
-        window.setTimeout(function() {
-            page.clipRect = { top: 0, left: 0, width: w, height: h }
-            page.render('img.png')
-            phantom.exit()
-        }, 200)
-    }
-})
+font_color = (0, 35, 102)  # Royal Blue
+font_margin = 10
+font_size = 18
+
+margin_vertical = 45
+margin_horizontal = 50
+scale_factor = 0.8
 </code></pre>
-<p>This code creates a webpage object, defines some variables, sets the browser viewport to the given values, requests the URL, and if successful, crops the image to the desired size and saves it as <code>img.png</code>.</p>
-<p>Without setting <code>page.clipRect</code> the height of the created image may be bigger, since PhantomJS renders the entire Web page and not only the portion that fits into the viewport.</p>
-<p>Of course, it's not satisfying to modify a script each time a different URL or resolution is required. Thankfully, the <a href="http://code.google.com/p/phantomjs/wiki/Interface">PhantomJS API</a> enables you to process command-line options, so that variables can be passed to the script.</p>
-<p>I ended up creating the <a href="https://github.com/yaph/webshots">webshots project</a>. It currently consists of a Python script, that simply calls phantomjs repeatedly to create screenshots for common browser resolutions or, if called with width and height arguments, creates one screenshot image with the appropriate dimensions.</p>
-<h2>Why Python?</h2>
-<p>Initially I created a JavaScript only solution, but repeatedly calling a function, that opened and rendered the page at different resolutions, wasn't working well without setting high timeout values. And even then, in case of errors, it either did not terminate, because of never calling <code>phantom.exit()</code> or produced weird JavaScript error messages.</p>
-<p>Instead of constantly getting these errors or ending in callback hell, I decided to write a Python script that spawns one phantomjs process for each screenshot, which works well.</p>
-<h2>Installing and using webshots</h2>
-<p>To use webshots you need to <a href="http://phantomjs.org/download.html">download and install</a> PhantomJS first. If you run Ubuntu Linux, you can install it via <code>sudo apt-get install phantomjs</code>, which will give you version 1.4.0 and not the latest 1.6.1 at the time of writing.</p>
-<p>Then clone the <a href="https://github.com/yaph/webshots">webshots repository</a> and create symbolic links to the Python and JavaScript files in a directory that contains executable scripts. On Linux based systems you would do something along the lines of:</p>
-<pre><code class="bash">
-git clone https://github.com/yaph/webshots.git
-ln -s /path/to/webshots/webshots $HOME/bin
-ln -s /path/to/webshots/webshots.js $HOME/bin
+
+<p>Next we set the URL of the page and the file name for storing the image.</p>
+<pre><code class="python">url = 'https://ukealong.com/key/c/'
+file_name = 'img/c.png'
 </code></pre>
-<p>If that's all done, you can create several screenshots at common browser resolutions by calling:</p>
-<pre><code class="bash">
-webshots http://example.com
+
+<p>You probably wouldn't read this, if you wanted to create a screenshot for a single page. So for creating multiple images, you can put the code that comes after creating the <code>browser</code> object in a function and pass URL and image name as parameters. The purpose of the <code>get_browser()</code> function in the <code>wcap</code> package is to make a single browser instance usable for multiple screen captures.</p>
+<pre><code class="python">browser = get_browser()
+capture(browser, url, file_name, dimensions='1500x1100', wait=5)
 </code></pre>
-<p>or a single screenshot at the given browser resolution with:</p>
-<pre><code class="bash">
-webshots --width=800 --height=600 http://example.com
+
+<p>The next steps are resizing and cropping the downloaded image. In the call of <code>resize</code> the <code>resample</code> parameter is set to <code>Image.BICUBIC</code>. The default resampling filter didn't work well, so this is something you may need to adjust if you want to make it work for a different page.</p>
+<pre><code class="python">im = Image.open(file_name)
+w, h = im.size
+resized = im.resize((int(w * scale_factor), int(h * scale_factor)), resample=Image.BICUBIC)
+resized_w, resized_h = resized.size
+cropped = resized.crop((margin_horizontal, margin_vertical, resized_w - margin_horizontal, resized_h))
 </code></pre>
-<h2>What's next?</h2>
-<p>Right now webshots works well for me, on the one system I used it. A potential next step would be to release it as a PyPI package to make installation and possible future upgrades easier. If you have ideas for how to improve webshots or run into trouble, feel free to leave feedback in the comments below or <a href="https://github.com/yaph/webshots/issues">create an issue</a> on GitHub.</p>
+
+<p>Now that the image is reduced to the desired size and portion of the page, the web page URL is added as text to the top right corner. The first parameter of the <code>ImageDraw.text</code> method is a tuple specifying the <code>x</code> and <code>y</code> coordinates of the top left corner of the text relative to the top left corner of the image. To make the text fit the <code>x</code> value is calculated from the width of the image and the text given the font family and size to use.</p>
+<pre><code class="python">font = ImageFont.truetype('DejaVuSansMono-Bold.ttf', font_size)
+font_w, font_h = font.getsize(url)
+text_x = cropped.size[0] - font_w - font_margin
+text_y = font_margin
+ImageDraw.Draw(cropped).text((text_x, text_y), url, fill=font_color, font=font)
+</code></pre>
+
+<p>In the final statement the <code>quantize</code> method is called to reduce the file size of the image. <code>256</code> is the number of colors in the result image. It is the highest possible value, because of the video previews. If you have very few colors on your page, you can set a lower value. If you have lots of colors, calling <code>quantize</code> may not be an option at all because of the loss of information.</p>
+<p>I prefer fast load times over image quality, especially since these images are meant as previews of web pages and are not intended for print. The unedited file in this case is almost 10 times bigger than the final one.</p>
+<pre><code class="python">cropped.quantize(256).save(file_name)
+</code></pre>
+
+<p>The resulting image looks like that:</p>
+<p><img alt="Final image" src="https://ukealong.com/img/key/c.png" /></p>
+<p>The final step is to set the <code>og:image</code> meta property on the corresponding web page:</p>
+<pre><code>&lt;meta property="og:image" content="https://ukealong.com/img/key/c.png"&gt;
+</code></pre>
+<p>There are other meta tags you can set for specific social media sites. I like to stick to the one above and not bloat the source code of the web page. It works on the relevant sites and will show the image as the preview image when someone shares the URL of the web page.</p>
+<p>In this article I showed how I automated the creation of social media images for the <a href="https://ukealong.com/keys/">key</a> and <a href="https://ukealong.com/chords/">chord</a> pages on ukealong.com. I could reuse this code with different parameters for the language pages on <a href="https://programminglanguages.info/">programminglanguages.info</a> and hope other people who want to accomplish something similar can make use of <code>wcap</code> and the image editing code as well.</p>
     </div>
     <div class="col-md-3">
         
@@ -160,8 +167,6 @@ webshots --width=800 --height=600 http://example.com
 <hr>
 <h2>Latest Posts</h2>
 <ul class="list-unstyled">
-
-    <li class="voffset"><a href="/geeklog/automating-browser-screenshots-social-media/">Automating Browser Screenshots for Social Media</a></li>
 
     <li class="voffset"><a href="/geeklog/python-shared-hosting/">Installing and Setting up Python on Shared Hosting</a></li>
 
@@ -191,27 +196,27 @@ webshots --width=800 --height=600 http://example.com
 <hr class="clearfix">
 <h4>Share this post on:</h4>
 <div class="share">
-    <a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/geeklog/web-page-screenshots-phantomjs-python/&t=Taking%20Web%20Page%20Screenshots%20with%20PhantomJS%20and%20Python" class="btn btn-default btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
-    <a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/geeklog/web-page-screenshots-phantomjs-python/&title=Taking%20Web%20Page%20Screenshots%20with%20PhantomJS%20and%20Python" class="btn btn-default btn-lg"><i class="fa fa-reddit-alien"></i> Reddit</a>
-    <a rel="nofollow" href="https://www.stumbleupon.com/submit?url=https%3A//geeksta.net/geeklog/web-page-screenshots-phantomjs-python/&title=Taking%20Web%20Page%20Screenshots%20with%20PhantomJS%20and%20Python" class="btn btn-default btn-lg"><i class="fa fa-stumbleupon"></i> StumbleUpon</a>
-    <a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/geeklog/web-page-screenshots-phantomjs-python/&text=Taking%20Web%20Page%20Screenshots%20with%20PhantomJS%20and%20Python" class="btn btn-default btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
+    <a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&t=Automating%20Browser%20Screenshots%20for%20Social%20Media" class="btn btn-default btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
+    <a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&title=Automating%20Browser%20Screenshots%20for%20Social%20Media" class="btn btn-default btn-lg"><i class="fa fa-reddit-alien"></i> Reddit</a>
+    <a rel="nofollow" href="https://www.stumbleupon.com/submit?url=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&title=Automating%20Browser%20Screenshots%20for%20Social%20Media" class="btn btn-default btn-lg"><i class="fa fa-stumbleupon"></i> StumbleUpon</a>
+    <a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&text=Automating%20Browser%20Screenshots%20for%20Social%20Media" class="btn btn-default btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
 </div>
 <hr class="clearfix">
 <div class="postinfo">
-<p>This post was written by <a href="http://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time itemprop="datePublished" datetime="2012-09-12T23:04">September 12, 2012</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+<p>This post was written by <a href="http://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time itemprop="datePublished" datetime="2020-07-27T20:35">July 27, 2020</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
 
 <p>
 <strong>Tags:</strong>
 
-<span class="label label-info"><a href="/tags/web-development/">web development</a></span>
+<span class="label label-info"><a href="/tags/selenium/">selenium</a></span>
 
 <span class="label label-info"><a href="/tags/python/">python</a></span>
 
-<span class="label label-info"><a href="/tags/javascript/">javascript</a></span>
+<span class="label label-info"><a href="/tags/automation/">automation</a></span>
+
+<span class="label label-info"><a href="/tags/firefox/">firefox</a></span>
 
 <span class="label label-info"><a href="/tags/code/">code</a></span>
-
-<span class="label label-info"><a href="/tags/phantomjs/">phantomjs</a></span>
 
 <span class="label label-info"><a href="/tags/tutorial/">tutorial</a></span>
 
