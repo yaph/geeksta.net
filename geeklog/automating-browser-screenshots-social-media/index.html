@@ -133,8 +133,8 @@ ImageDraw.Draw(cropped).text((text_x, text_y), url, fill=font_color, font=font)
 <pre><code class="python">cropped.quantize(256).save(file_name)
 </code></pre>
 
-<p>The resulting image looks like that:</p>
-<p><img alt="Final image" src="https://ukealong.com/img/key/c.png" /></p>
+<p>Below you can see how the original screenshot was changed:</p>
+<p><img alt="How the image changed" src="https://geeksta.net/img/geeklog/automating-browser-screenshots-social-media.png" /></p>
 <p>The final step is to set the <code>og:image</code> meta property on the corresponding web page:</p>
 <pre><code>&lt;meta property="og:image" content="https://ukealong.com/img/key/c.png"&gt;
 </code></pre>
