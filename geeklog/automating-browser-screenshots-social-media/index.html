@@ -5,19 +5,19 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title itemprop="name">Automating Browser Screenshots for Social Media | Geeksta</title>
+        <title itemprop="name">Automating Browser Screenshots for Social Media using wcap and Pillow | Geeksta</title>
         <meta name="description" content="An article describing how I automated the creation of social media images for two websites with graphics rendered in JavaScript by using screenshots.">
         <meta name="author" content="Ramiro Gómez">
         
-            <meta property="og:image" content="https://ukealong.com/img/key/c.png">
+            <meta property="og:image" content="https://geeksta.net/img/geeklog/automating-browser-screenshots-social-media.png">
             
 
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@yaph">
-    <meta name="twitter:title" content="Automating Browser Screenshots for Social Media">
+    <meta name="twitter:title" content="Automating Browser Screenshots for Social Media using wcap and Pillow">
     <meta name="twitter:description" content="An article describing how I automated the creation of social media images for two websites with graphics rendered in JavaScript by using screenshots.">
-    <meta name="twitter:image:src" content="https://ukealong.com/img/key/c.png">
+    <meta name="twitter:image:src" content="https://geeksta.net/img/geeklog/automating-browser-screenshots-social-media.png">
 
         
         
@@ -66,12 +66,12 @@
   <button type="button" class="dropdown-toggle btn btn-success navbar-btn" data-toggle="dropdown"><i class="fa fa-share"></i></button>
   <ul class="share dropdown-menu pull-right">
     <li><a href="/rss.xml" class="btn btn-default"><i class="fa fa-rss"></i> RSS Feed</a></li>
-    <li><a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&title=Automating%20Browser%20Screenshots%20for%20Social%20Media" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
-    <li><a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&text=Automating%20Browser%20Screenshots%20for%20Social%20Media" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
-    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&t=Automating%20Browser%20Screenshots%20for%20Social%20Media" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
+    <li><a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&title=Automating%20Browser%20Screenshots%20for%20Social%20Media%20using%20wcap%20and%20Pillow" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
+    <li><a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&text=Automating%20Browser%20Screenshots%20for%20Social%20Media%20using%20wcap%20and%20Pillow" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
+    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&t=Automating%20Browser%20Screenshots%20for%20Social%20Media%20using%20wcap%20and%20Pillow" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
     <li><a rel="nofollow" href="https://plus.google.com/share?url=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/" class="btn btn-default"><i class="fa fa-google-plus"></i> Google+</a></li>
-    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&title=Automating%20Browser%20Screenshots%20for%20Social%20Media" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
-    <li><a rel="nofollow" href="https://www.stumbleupon.com/submit?url=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&title=Automating%20Browser%20Screenshots%20for%20Social%20Media" class="btn btn-default"><i class="fa fa-stumbleupon"></i> Stumble</a></li>
+    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&title=Automating%20Browser%20Screenshots%20for%20Social%20Media%20using%20wcap%20and%20Pillow" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+    <li><a rel="nofollow" href="https://www.stumbleupon.com/submit?url=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&title=Automating%20Browser%20Screenshots%20for%20Social%20Media%20using%20wcap%20and%20Pillow" class="btn btn-default"><i class="fa fa-stumbleupon"></i> Stumble</a></li>
   </ul>
 </li>
                 </ul>
@@ -84,7 +84,7 @@
         
 <div class="row">
     <div itemscope itemtype="http://schema.org/Article" class="col-md-9 content">
-        <header><h1 itemprop="name">Automating Browser Screenshots for Social Media</h1></header>
+        <header><h1 itemprop="name">Automating Browser Screenshots for Social Media using wcap and Pillow</h1></header>
         
         <p>I have two websites, <a href="https://ukealong.com/">ukealong.com</a> and <a href="https://programminglanguages.info/">programminglanguages.info</a>, with many pages showing graphics rendered with JavaScript. When I shared one of those pages on social media, I created a screenshot first, optimized the image and added the page URL as text to it. I realized that I don't want to do this manually for hundreds of pages and wrote some code to automate these tasks.</p>
 <p>I looked at existing screenshot libraries for Python first, but the packages I tried didn't capture the dynamic graphics that I wanted to include on the screenshots. So I wrote a tool called <a href="https://pypi.org/project/wcap/">wcap (web page capture)</a> that is built on top of <a href="https://www.selenium.dev/">Selenium</a> and <a href="https://github.com/mozilla/geckodriver">geckodriver</a>. It can be used as a command line tool or from within Python programs.</p>
@@ -196,10 +196,10 @@ ImageDraw.Draw(cropped).text((text_x, text_y), url, fill=font_color, font=font)
 <hr class="clearfix">
 <h4>Share this post on:</h4>
 <div class="share">
-    <a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&t=Automating%20Browser%20Screenshots%20for%20Social%20Media" class="btn btn-default btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
-    <a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&title=Automating%20Browser%20Screenshots%20for%20Social%20Media" class="btn btn-default btn-lg"><i class="fa fa-reddit-alien"></i> Reddit</a>
-    <a rel="nofollow" href="https://www.stumbleupon.com/submit?url=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&title=Automating%20Browser%20Screenshots%20for%20Social%20Media" class="btn btn-default btn-lg"><i class="fa fa-stumbleupon"></i> StumbleUpon</a>
-    <a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&text=Automating%20Browser%20Screenshots%20for%20Social%20Media" class="btn btn-default btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
+    <a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&t=Automating%20Browser%20Screenshots%20for%20Social%20Media%20using%20wcap%20and%20Pillow" class="btn btn-default btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
+    <a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&title=Automating%20Browser%20Screenshots%20for%20Social%20Media%20using%20wcap%20and%20Pillow" class="btn btn-default btn-lg"><i class="fa fa-reddit-alien"></i> Reddit</a>
+    <a rel="nofollow" href="https://www.stumbleupon.com/submit?url=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&title=Automating%20Browser%20Screenshots%20for%20Social%20Media%20using%20wcap%20and%20Pillow" class="btn btn-default btn-lg"><i class="fa fa-stumbleupon"></i> StumbleUpon</a>
+    <a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&text=Automating%20Browser%20Screenshots%20for%20Social%20Media%20using%20wcap%20and%20Pillow" class="btn btn-default btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
 </div>
 <hr class="clearfix">
 <div class="postinfo">

@@ -3,14 +3,14 @@
 <channel><title>Tags</title>
     <link>https://geeksta.net</link>
     <description>Tags</description>
-    <lastBuildDate>Mon, 27 Jul 2020 20:40:54 </lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2020 22:41:00 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
     <item>
-        <title><![CDATA[Automating Browser Screenshots for Social Media]]></title>
+        <title><![CDATA[Automating Browser Screenshots for Social Media using wcap and Pillow]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/automating-browser-screenshots-social-media/]]></link>
-        <description><![CDATA[<p>An article describing how I automated the creation of social media images for two websites with graphics rendered in JavaScript by using screenshots.</p><img src="https://ukealong.com/img/key/c.png" alt="Preview Image">]]></description>
+        <description><![CDATA[<p>An article describing how I automated the creation of social media images for two websites with graphics rendered in JavaScript by using screenshots.</p><img src="https://geeksta.net/img/geeklog/automating-browser-screenshots-social-media.png" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/automating-browser-screenshots-social-media/]]></guid>
         <pubDate>Mon, 27 Jul 2020 20:35:05 </pubDate>
     </item>
