@@ -23,7 +23,7 @@ $(function(){
   var update = function(params){
     $('#shirt').html(z3l.getProductHTML(
       '/api/create/at-238355915198956003?rf=238355915198956003&ax=Linkover&pd=235859552074883586&fwd=ProductPage&ed=true&tc=&ic=',
-      'http://rlv.zcache.com/tweet_from_twitter_user_shirt-r906cf28e92a745ab9ce8a655b4b242ba_f0cjc_325.jpg',
+      'https://rlv.zcache.com/tweet_from_twitter_user_shirt-r906cf28e92a745ab9ce8a655b4b242ba_f0cjc_325.jpg',
       'Tweet from Twitter User Shirt',
       params));
   };

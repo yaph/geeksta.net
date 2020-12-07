@@ -9,7 +9,7 @@ $(function(){
   var update = function(){
     $('#shirt').html(z3l.getProductHTML(
       '/api/create/at-238355915198956003?rf=238355915198956003&ax=Linkover&pd=235934790893325513&fwd=ProductPage&ed=true&tc=gkst&ic=',
-      'http://rlv.zcache.com/born_at_unix_time_basic_dark_t_shirt-r96f6037456404e76bb32c5baf2487327_k2gm8_512.jpg',
+      'https://rlv.zcache.com/born_at_unix_time_basic_dark_t_shirt-r96f6037456404e76bb32c5baf2487327_k2gm8_512.jpg',
       'Born at Unix Time',
       [{'name': 'uts', 'value': dateToUts()}]));
   };

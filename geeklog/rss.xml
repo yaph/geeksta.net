@@ -3,7 +3,7 @@
 <channel><title>Geeklog</title>
     <link>https://geeksta.net</link>
     <description>Geeklog</description>
-    <lastBuildDate>Tue, 08 Dec 2020 00:09:19 </lastBuildDate>
+    <lastBuildDate>Tue, 08 Dec 2020 00:37:31 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
@@ -26,7 +26,7 @@
     <item>
         <title><![CDATA[Customizing Matplotlib's Plotting Styles]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/custom-matplotlib-styles/]]></link>
-        <description><![CDATA[<p>A tutorial on how to customize the look and feel of plots created with the Matplotlib library for Python.</p><img src="http://i.imgur.com/yNUl6V4.png" alt="Preview Image">]]></description>
+        <description><![CDATA[<p>A tutorial on how to customize the look and feel of plots created with the Matplotlib library for Python.</p><img src="https://i.imgur.com/yNUl6V4.png" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/custom-matplotlib-styles/]]></guid>
         <pubDate>Fri, 19 Jun 2015 19:12:51 </pubDate>
     </item>

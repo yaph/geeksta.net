@@ -3,7 +3,7 @@
 <channel><title>Tags » Health</title>
     <link>https://geeksta.net</link>
     <description>Tags » Health</description>
-    <lastBuildDate>Tue, 08 Dec 2020 00:09:19 </lastBuildDate>
+    <lastBuildDate>Tue, 08 Dec 2020 00:37:31 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
@@ -18,7 +18,7 @@
     <item>
         <title><![CDATA[Daily Calorie Intake in the US from 1970-2010]]></title>
         <link><![CDATA[https://geeksta.net/visualizations/calories-us/]]></link>
-        <description><![CDATA[<p>A stacked area graph to visualize the evolution of calorie intake by food group from 1970-2010 in the United States.</p><img src="http://i.imgur.com/dFo3zit.png" alt="Preview Image">]]></description>
+        <description><![CDATA[<p>A stacked area graph to visualize the evolution of calorie intake by food group from 1970-2010 in the United States.</p><img src="https://i.imgur.com/dFo3zit.png" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/visualizations/calories-us/]]></guid>
         <pubDate>Wed, 01 Oct 2014 16:24:06 </pubDate>
     </item>

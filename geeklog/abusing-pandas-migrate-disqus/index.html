@@ -75,7 +75,7 @@
     <div itemscope itemtype="http://schema.org/Article" class="col-md-9 content">
         <header><h1 itemprop="name">(Ab)using Pandas to Migrate Disqus Threads</h1></header>
         
-        <p>I recently converted an <a href="http://ramiro.org/">old site of mine</a> from <a href="http://drupal.org/">Drupal</a> to a static Web site created with <a href="http://pythonhosted.org/logya/">Logya</a> to <a href="http://talks.php.net/show/drupal08/33">save some kittens' lives</a>. I intend to write a more detailed post about the process, but will focus on a URL issue here.</p>
+        <p>I recently converted an <a href="https://ramiro.org/">old site of mine</a> from <a href="https://drupal.org/">Drupal</a> to a static Web site created with <a href="https://pythonhosted.org/logya/">Logya</a> to <a href="http://talks.php.net/show/drupal08/33">save some kittens' lives</a>. I intend to write a more detailed post about the process, but will focus on a URL issue here.</p>
 <p>Logya is flexible regarding URLs, accepting common file extensions like <code>.htm</code>, <code>.html</code> and even <code>.php</code>, but the most straightforward way is to end them with a forward slash. On the old Drupal site I had a mix of URLs ending with <code>.html</code> or no file extension but without an ending slash, e. g. <a href="http://www.ramiro.org/blog/umstellung-von-joomla-auf-drupal">www.ramiro.org/blog/umstellung-von-joomla-auf-drupal</a>.</p>
 <p>In theory I could have kept all URLs like they were, because <a href="http://httpd.apache.org/">Apache</a> takes care of redirects, if the path corresponds to a directory on the server, which it does. But reality is different, since I use <a href="http://disqus.com/">Disqus</a> for comments and the redirected URLs differed from the ones Disqus knew about.</p>
 <p>To resolve this issue I took advantage of the Migrate Threads tool Disqus offers. You find it at <code>your-site-id.disqus.com/admin/tools/migrate/</code>. For cases like this you can download a file containing the URLs Disqus knows about on your site and upload a CSV file which maps old URLs to new ones, hence URL mapper.</p>
@@ -149,7 +149,7 @@
 </div>
 <hr class="clearfix">
 <div class="postinfo">
-<p>This post was written by <a href="http://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time itemprop="datePublished" datetime="2013-02-07T01:20">February 07, 2013</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+<p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time itemprop="datePublished" datetime="2013-02-07T01:20">February 07, 2013</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
 
 <p>
 <strong>Tags:</strong>

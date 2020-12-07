@@ -3,14 +3,14 @@
 <channel><title>Tags » Visualization</title>
     <link>https://geeksta.net</link>
     <description>Tags » Visualization</description>
-    <lastBuildDate>Tue, 08 Dec 2020 00:09:19 </lastBuildDate>
+    <lastBuildDate>Tue, 08 Dec 2020 00:37:31 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
     <item>
         <title><![CDATA[Everything is 4 in English Network Graph]]></title>
         <link><![CDATA[https://geeksta.net/visualizations/everything-is-4-graphed/]]></link>
-        <description><![CDATA[<p>When you take any word in English and count its letters, then count the number of letters in that numeral and so on, you'll end up at 4.</p><img src="http://i.imgur.com/gNgnNV2.jpg" alt="Preview Image">]]></description>
+        <description><![CDATA[<p>When you take any word in English and count its letters, then count the number of letters in that numeral and so on, you'll end up at 4.</p><img src="https://i.imgur.com/gNgnNV2.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/visualizations/everything-is-4-graphed/]]></guid>
         <pubDate>Mon, 13 Jul 2015 13:06:58 </pubDate>
     </item>
@@ -42,7 +42,7 @@
     <item>
         <title><![CDATA[Daily Calorie Intake in the US from 1970-2010]]></title>
         <link><![CDATA[https://geeksta.net/visualizations/calories-us/]]></link>
-        <description><![CDATA[<p>A stacked area graph to visualize the evolution of calorie intake by food group from 1970-2010 in the United States.</p><img src="http://i.imgur.com/dFo3zit.png" alt="Preview Image">]]></description>
+        <description><![CDATA[<p>A stacked area graph to visualize the evolution of calorie intake by food group from 1970-2010 in the United States.</p><img src="https://i.imgur.com/dFo3zit.png" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/visualizations/calories-us/]]></guid>
         <pubDate>Wed, 01 Oct 2014 16:24:06 </pubDate>
     </item>
@@ -50,7 +50,7 @@
     <item>
         <title><![CDATA[What Area can you Buy for $1M in different US Cities]]></title>
         <link><![CDATA[https://geeksta.net/visualizations/us-housing-prices/]]></link>
-        <description><![CDATA[<p>A set of data visualizations that display what area of land you could buy for 1 million US dollar in different US cities.</p><img src="http://i.imgur.com/OkS5jW1.png" alt="Preview Image">]]></description>
+        <description><![CDATA[<p>A set of data visualizations that display what area of land you could buy for 1 million US dollar in different US cities.</p><img src="https://i.imgur.com/OkS5jW1.png" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/visualizations/us-housing-prices/]]></guid>
         <pubDate>Sat, 10 May 2014 14:20:06 </pubDate>
     </item>

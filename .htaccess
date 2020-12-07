@@ -16,7 +16,7 @@ ExpiresByType text/html M604800
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www|fit|hot|planetdatavis|datavisdaily\.(.*)$ [OR]
 RewriteCond %{HTTP_HOST} ^geeksta\.webhostingfm\.com$ [NC]
-RewriteRule ^(.*)$ http://geeksta.net/$1 [R=301,L]
+RewriteRule ^(.*)$ https://geeksta.net/$1 [R=301,L]
 </IfModule>
 
 # 301 redirects

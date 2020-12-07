@@ -12,7 +12,7 @@ jQuery(function($){
                     var url = item['feedburner:origLink'] ?
                         item['feedburner:origLink'] : item.link;
 
-                    carousel.append('<div class="item"><img src="' + 
+                    carousel.append('<div class="item"><img src="' +
                         i.attr('src') + '"><div class="carousel-caption"><h4><a href="' + url + '">' +
                         item.title + '</a></h4><p>' + item.description + '</p></div></div>'
                     );
@@ -30,4 +30,4 @@ jQuery(function($){
     });
 });
 
-// http://www.google.com/reader/public/atom/user%2F06178999268132965789%2Fbundle%2FData%20Vis
+// https://www.google.com/reader/public/atom/user%2F06178999268132965789%2Fbundle%2FData%20Vis
