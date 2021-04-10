@@ -3,7 +3,7 @@
 <channel><title>Shirts » Software Development</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Software Development</description>
-    <lastBuildDate>Wed, 16 Dec 2020 21:38:04 </lastBuildDate>
+    <lastBuildDate>Sat, 10 Apr 2021 23:19:22 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
@@ -24,14 +24,6 @@
     </item>
     
     <item>
-        <title><![CDATA[It Works In My Container Funny Developer Design Black]]></title>
-        <link><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-v-black/]]></link>
-        <description><![CDATA[<p>IT teams who practice DevOps often use containers in their workflow. In such an environment &#8220;It works in my container&#8221; is a programmer excuse you may here more often than its popular predecessor &#8220;It works on my machine&#8221;. / A design...</p><img src="https://geeksta.net/img/large/shrug-it-works-in-my-container-v-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-v-black/]]></guid>
-        <pubDate>Sun, 12 Nov 2017 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[It Works In My Container Funny Developer Design White/Green]]></title>
         <link><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-v-white-green/]]></link>
         <description><![CDATA[<p>IT teams who practice DevOps often use containers in their workflow. In such an environment &#8220;It works in my container&#8221; is a programmer excuse you may here more often than its popular predecessor &#8220;It works on my machine&#8221;. / A design...</p><img src="https://geeksta.net/img/large/shrug-it-works-in-my-container-v-white-green.jpg" alt="Preview Image">]]></description>
@@ -48,6 +40,14 @@
     </item>
     
     <item>
+        <title><![CDATA[It Works In My Container Funny Developer Design Black]]></title>
+        <link><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-v-black/]]></link>
+        <description><![CDATA[<p>IT teams who practice DevOps often use containers in their workflow. In such an environment &#8220;It works in my container&#8221; is a programmer excuse you may here more often than its popular predecessor &#8220;It works on my machine&#8221;. / A design...</p><img src="https://geeksta.net/img/large/shrug-it-works-in-my-container-v-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-v-black/]]></guid>
+        <pubDate>Sun, 12 Nov 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
         <title><![CDATA[Straight Outta Green Tests - Funny QA Engineer Design]]></title>
         <link><![CDATA[https://geeksta.net/design/straight-outta-green-tests/]]></link>
         <description><![CDATA[<p>Many tools used in software quality assurance show successful tests in green and failed ones in red. So better don&#8217;t run straight out of green tests. A design for computer programmers and software engineers with a sense of self deprecating humor. •...</p><img src="https://geeksta.net/img/large/straight-outta-green-tests.jpg" alt="Preview Image">]]></description>
@@ -56,18 +56,18 @@
     </item>
     
     <item>
-        <title><![CDATA[Broken Gets Fixed Crappy Stays Forever - White Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/broken-gets-fixed-crappy-stays-forever-white/]]></link>
-        <description><![CDATA[<p>The message of this design applies to many parts of (work) life. Programmers deal with broken software all the time. If a user notices a bug, it&#8217;ll get fixed, but crappy code and poor application design stay until the project is reimplemented from...</p><img src="https://geeksta.net/img/large/broken-gets-fixed-crappy-stays-forever-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/broken-gets-fixed-crappy-stays-forever-white/]]></guid>
-        <pubDate>Wed, 05 Jul 2017 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[Broken Gets Fixed Crappy Stays Forever - Black Design]]></title>
         <link><![CDATA[https://geeksta.net/design/broken-gets-fixed-crappy-stays-forever-black/]]></link>
         <description><![CDATA[<p>The message of this design applies to many parts of (work) life. Programmers deal with broken software all the time. If a user notices a bug, it&#8217;ll get fixed, but crappy code and poor application design stay until the project is reimplemented from...</p><img src="https://geeksta.net/img/large/broken-gets-fixed-crappy-stays-forever-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/broken-gets-fixed-crappy-stays-forever-black/]]></guid>
+        <pubDate>Wed, 05 Jul 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Broken Gets Fixed Crappy Stays Forever - White Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/broken-gets-fixed-crappy-stays-forever-white/]]></link>
+        <description><![CDATA[<p>The message of this design applies to many parts of (work) life. Programmers deal with broken software all the time. If a user notices a bug, it&#8217;ll get fixed, but crappy code and poor application design stay until the project is reimplemented from...</p><img src="https://geeksta.net/img/large/broken-gets-fixed-crappy-stays-forever-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/broken-gets-fixed-crappy-stays-forever-white/]]></guid>
         <pubDate>Wed, 05 Jul 2017 00:00:00 </pubDate>
     </item>
     

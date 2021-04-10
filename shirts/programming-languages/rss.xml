@@ -3,7 +3,7 @@
 <channel><title>Shirts » Programming Languages</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Programming Languages</description>
-    <lastBuildDate>Wed, 16 Dec 2020 21:38:04 </lastBuildDate>
+    <lastBuildDate>Sat, 10 Apr 2021 23:19:22 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
@@ -25,14 +25,6 @@
     
     <item>
         <title><![CDATA[There Are Two Types of Programming Languages - Green Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/there-are-two-types-of-programming-languages-white/]]></link>
-        <description><![CDATA[<p>People love to argue about things they are passionate about and for many computer programmers, programming languages are a topic of contention. Languages like C++, Java, JavaScript and PHP get a lot of hate, but they are the ones being used a lot. / You...</p><img src="https://geeksta.net/img/large/there-are-two-types-of-programming-languages-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/there-are-two-types-of-programming-languages-white/]]></guid>
-        <pubDate>Mon, 16 Oct 2017 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[There Are Two Types of Programming Languages - Green Design]]></title>
         <link><![CDATA[https://geeksta.net/design/there-are-two-types-of-programming-languages-green/]]></link>
         <description><![CDATA[<p>People love to argue about things they are passionate about and for many computer programmers, programming languages are a topic of contention. Languages like C++, Java, JavaScript and PHP get a lot of hate, but they are the ones being used a lot. / You...</p><img src="https://geeksta.net/img/large/there-are-two-types-of-programming-languages-green.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/there-are-two-types-of-programming-languages-green/]]></guid>
@@ -40,11 +32,11 @@
     </item>
     
     <item>
-        <title><![CDATA[PHP Programmer - White Periodic Table Elements Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/periodic-table-php-white/]]></link>
-        <description><![CDATA[<p>PHP is one of those programming languages people love to hate, yet it is widely used in backend web development and powers countless web sites. Do you write PHP code, enjoy doing so and stand by it? Then this is for you. / A design for computer...</p><img src="https://geeksta.net/img/large/periodic-table-php-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/periodic-table-php-white/]]></guid>
-        <pubDate>Tue, 05 Sep 2017 00:00:00 </pubDate>
+        <title><![CDATA[There Are Two Types of Programming Languages - Green Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/there-are-two-types-of-programming-languages-white/]]></link>
+        <description><![CDATA[<p>People love to argue about things they are passionate about and for many computer programmers, programming languages are a topic of contention. Languages like C++, Java, JavaScript and PHP get a lot of hate, but they are the ones being used a lot. / You...</p><img src="https://geeksta.net/img/large/there-are-two-types-of-programming-languages-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/there-are-two-types-of-programming-languages-white/]]></guid>
+        <pubDate>Mon, 16 Oct 2017 00:00:00 </pubDate>
     </item>
     
     <item>
@@ -56,11 +48,11 @@
     </item>
     
     <item>
-        <title><![CDATA[C Programming Superhero - Cool Computer Programmer Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/c-superhero/]]></link>
-        <description><![CDATA[<p>A cool design for computer programmers who write code that works in the C programming language. It shows the letter C on a yellow and red shield and is available on different blue products. For some apparel options different garment colors can be chosen. •...</p><img src="https://geeksta.net/img/large/c-superhero.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/c-superhero/]]></guid>
-        <pubDate>Tue, 25 Apr 2017 00:00:00 </pubDate>
+        <title><![CDATA[PHP Programmer - White Periodic Table Elements Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/periodic-table-php-white/]]></link>
+        <description><![CDATA[<p>PHP is one of those programming languages people love to hate, yet it is widely used in backend web development and powers countless web sites. Do you write PHP code, enjoy doing so and stand by it? Then this is for you. / A design for computer...</p><img src="https://geeksta.net/img/large/periodic-table-php-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/periodic-table-php-white/]]></guid>
+        <pubDate>Tue, 05 Sep 2017 00:00:00 </pubDate>
     </item>
     
     <item>
@@ -68,6 +60,14 @@
         <link><![CDATA[https://geeksta.net/design/r-superhero/]]></link>
         <description><![CDATA[<p>A cool design for computer programmers who write code that works in the R programming language. It shows the letter R on a yellow and red shield and is available on different blue products. For some apparel options different garment colors can be chosen. •...</p><img src="https://geeksta.net/img/large/r-superhero.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/r-superhero/]]></guid>
+        <pubDate>Tue, 25 Apr 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[C Programming Superhero - Cool Computer Programmer Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/c-superhero/]]></link>
+        <description><![CDATA[<p>A cool design for computer programmers who write code that works in the C programming language. It shows the letter C on a yellow and red shield and is available on different blue products. For some apparel options different garment colors can be chosen. •...</p><img src="https://geeksta.net/img/large/c-superhero.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/c-superhero/]]></guid>
         <pubDate>Tue, 25 Apr 2017 00:00:00 </pubDate>
     </item>
     
@@ -136,18 +136,18 @@
     </item>
     
     <item>
-        <title><![CDATA[What part of "Hello World in Brainfuck" don't you understand - Black on White]]></title>
-        <link><![CDATA[https://geeksta.net/design/what-part-of-dont-you-understand-hello-world-brainfuck-black/]]></link>
-        <description><![CDATA[<p>This design consists of the text pieces &#8220;What part of&#8221; and &#8220;don&#8217;t you understand?&#8221; in an all-caps font centered horizontally and the code to print  &#8220;Hello World!&#8221; and a newline to the screen in the esoteric...</p><img src="https://geeksta.net/img/large/what-part-of-dont-you-understand-hello-world-brainfuck-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/what-part-of-dont-you-understand-hello-world-brainfuck-black/]]></guid>
-        <pubDate>Sat, 05 Dec 2015 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[What part of "Hello World in Brainfuck" don't you understand - White on Black]]></title>
         <link><![CDATA[https://geeksta.net/design/what-part-of-dont-you-understand-hello-world-brainfuck-white/]]></link>
         <description><![CDATA[<p>This design consists of the text pieces &#8220;What part of&#8221; and &#8220;don&#8217;t you understand?&#8221; in an all-caps font centered horizontally and the code to print  &#8220;Hello World!&#8221; and a newline to the screen in the esoteric...</p><img src="https://geeksta.net/img/large/what-part-of-dont-you-understand-hello-world-brainfuck-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/what-part-of-dont-you-understand-hello-world-brainfuck-white/]]></guid>
+        <pubDate>Sat, 05 Dec 2015 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[What part of "Hello World in Brainfuck" don't you understand - Black on White]]></title>
+        <link><![CDATA[https://geeksta.net/design/what-part-of-dont-you-understand-hello-world-brainfuck-black/]]></link>
+        <description><![CDATA[<p>This design consists of the text pieces &#8220;What part of&#8221; and &#8220;don&#8217;t you understand?&#8221; in an all-caps font centered horizontally and the code to print  &#8220;Hello World!&#8221; and a newline to the screen in the esoteric...</p><img src="https://geeksta.net/img/large/what-part-of-dont-you-understand-hello-world-brainfuck-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/what-part-of-dont-you-understand-hello-world-brainfuck-black/]]></guid>
         <pubDate>Sat, 05 Dec 2015 00:00:00 </pubDate>
     </item>
     

@@ -3,23 +3,23 @@
 <channel><title>Shirts » Sysadmin</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Sysadmin</description>
-    <lastBuildDate>Wed, 16 Dec 2020 21:38:04 </lastBuildDate>
+    <lastBuildDate>Sat, 10 Apr 2021 23:19:22 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
-    
-    <item>
-        <title><![CDATA[Core Dumps Happen White Pun Design For Computer Sysadmins]]></title>
-        <link><![CDATA[https://geeksta.net/design/core-dumps-happen-white/]]></link>
-        <description><![CDATA[<p>A core dump in computing consists of the recorded state of the working memory of a computer program that has crashed. As a sysadmin you are hopefully able to analyze the dump and maybe even fix the problem that caused the crash. A funny pun design for...</p><img src="https://geeksta.net/img/large/core-dumps-happen-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/core-dumps-happen-white/]]></guid>
-        <pubDate>Tue, 31 Dec 2019 00:00:00 </pubDate>
-    </item>
     
     <item>
         <title><![CDATA[Core Dumps Happen Black Pun Design For Computer Sysadmins]]></title>
         <link><![CDATA[https://geeksta.net/design/core-dumps-happen-black/]]></link>
         <description><![CDATA[<p>A core dump in computing consists of the recorded state of the working memory of a computer program that has crashed. As a sysadmin you are hopefully able to analyze the dump and maybe even fix the problem that caused the crash. A funny pun design for...</p><img src="https://geeksta.net/img/large/core-dumps-happen-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/core-dumps-happen-black/]]></guid>
+        <pubDate>Tue, 31 Dec 2019 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Core Dumps Happen White Pun Design For Computer Sysadmins]]></title>
+        <link><![CDATA[https://geeksta.net/design/core-dumps-happen-white/]]></link>
+        <description><![CDATA[<p>A core dump in computing consists of the recorded state of the working memory of a computer program that has crashed. As a sysadmin you are hopefully able to analyze the dump and maybe even fix the problem that caused the crash. A funny pun design for...</p><img src="https://geeksta.net/img/large/core-dumps-happen-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/core-dumps-happen-white/]]></guid>
         <pubDate>Tue, 31 Dec 2019 00:00:00 </pubDate>
     </item>
     
@@ -48,18 +48,18 @@
     </item>
     
     <item>
-        <title><![CDATA[bin bash Design for Command Line Hackers Cooling Blue Text]]></title>
-        <link><![CDATA[https://geeksta.net/design/bin-bash-condensed-cooling-blue/]]></link>
-        <description><![CDATA[<p>A design for computer geeks who like to work on the command line and use the Bourne-again shell, a.k.a. bash. It shows the text &#8220;#!/bin/bash&#8221; in a condensed monospace font. Show that bash is your favorite operating system shell with a simple...</p><img src="https://geeksta.net/img/large/bin-bash-condensed-cooling-blue.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/bin-bash-condensed-cooling-blue/]]></guid>
-        <pubDate>Wed, 25 Oct 2017 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[bin bash Design for Command Line Hackers White Text]]></title>
         <link><![CDATA[https://geeksta.net/design/bin-bash-condensed-white/]]></link>
         <description><![CDATA[<p>A design for computer geeks who like to work on the command line and use the Bourne-again shell, a.k.a. bash. It shows the text &#8220;#!/bin/bash&#8221; in a condensed monospace font. Show that bash is your favorite operating system shell with a simple...</p><img src="https://geeksta.net/img/large/bin-bash-condensed-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/bin-bash-condensed-white/]]></guid>
+        <pubDate>Wed, 25 Oct 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[bin bash Design for Command Line Hackers Cooling Blue Text]]></title>
+        <link><![CDATA[https://geeksta.net/design/bin-bash-condensed-cooling-blue/]]></link>
+        <description><![CDATA[<p>A design for computer geeks who like to work on the command line and use the Bourne-again shell, a.k.a. bash. It shows the text &#8220;#!/bin/bash&#8221; in a condensed monospace font. Show that bash is your favorite operating system shell with a simple...</p><img src="https://geeksta.net/img/large/bin-bash-condensed-cooling-blue.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/bin-bash-condensed-cooling-blue/]]></guid>
         <pubDate>Wed, 25 Oct 2017 00:00:00 </pubDate>
     </item>
     
@@ -144,18 +144,18 @@
     </item>
     
     <item>
-        <title><![CDATA[:wq How to exit the Vim editor White Text Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/colon-wq-medium-white/]]></link>
-        <description><![CDATA[<p>A funny design for computer geeks and nerds who use Vi or Vim to write code and text. It shows one way to exit Vim by typing &#8220;:wq&#8221; in command mode to save (write) the file and exit the editor (quit). This is essential hacker knowledge, unless...</p><img src="https://geeksta.net/img/large/colon-wq-medium-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/colon-wq-medium-white/]]></guid>
-        <pubDate>Tue, 23 May 2017 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[:wq How to exit the Vim editor Black Text Design]]></title>
         <link><![CDATA[https://geeksta.net/design/colon-wq-medium-black/]]></link>
         <description><![CDATA[<p>A funny design for computer geeks and nerds who use Vi or Vim to write code and text. It shows one way to exit Vim by typing &#8220;:wq&#8221; in command mode to save (write) the file and exit the editor (quit). This is essential hacker knowledge, unless...</p><img src="https://geeksta.net/img/large/colon-wq-medium-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/colon-wq-medium-black/]]></guid>
+        <pubDate>Tue, 23 May 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[:wq How to exit the Vim editor White Text Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/colon-wq-medium-white/]]></link>
+        <description><![CDATA[<p>A funny design for computer geeks and nerds who use Vi or Vim to write code and text. It shows one way to exit Vim by typing &#8220;:wq&#8221; in command mode to save (write) the file and exit the editor (quit). This is essential hacker knowledge, unless...</p><img src="https://geeksta.net/img/large/colon-wq-medium-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/colon-wq-medium-white/]]></guid>
         <pubDate>Tue, 23 May 2017 00:00:00 </pubDate>
     </item>
     
@@ -176,14 +176,6 @@
     </item>
     
     <item>
-        <title><![CDATA[/dev/null - Funny Design for Linux/Unix Geeks - White Text]]></title>
-        <link><![CDATA[https://geeksta.net/design/dev-null-white/]]></link>
-        <description><![CDATA[<p>In some computer operating systems the null device discards all data written to it. This device is called /dev/null on Linux and Unix based systems and is also referred to as bit bucket or black hole in hacker jargon. / This design for well-informed...</p><img src="https://geeksta.net/img/large/dev-null-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/dev-null-white/]]></guid>
-        <pubDate>Sun, 23 Apr 2017 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[/dev/null - Funny Design for Linux/Unix Geeks - Black Text]]></title>
         <link><![CDATA[https://geeksta.net/design/dev-null-black/]]></link>
         <description><![CDATA[<p>In some computer operating systems the null device discards all data written to it. This device is called /dev/null on Linux and Unix based systems and is also referred to as bit bucket or black hole in hacker jargon. / This design for well-informed...</p><img src="https://geeksta.net/img/large/dev-null-black.jpg" alt="Preview Image">]]></description>
@@ -192,11 +184,11 @@
     </item>
     
     <item>
-        <title><![CDATA[I think therefore I am root - Computer Admin Parody Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/i-think-therefore-i-am-root-black/]]></link>
-        <description><![CDATA[<p>This design for computer system administrators shows the text &#8220;I think therefore I am root&#8221; in narrow white typefaces for good contrast with dark colors. It is a parody on the famous proposition &#8220;Cogito ergo sum&#8221; (I think, therefore...</p><img src="https://geeksta.net/img/large/i-think-therefore-i-am-root-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/i-think-therefore-i-am-root-black/]]></guid>
-        <pubDate>Tue, 04 Apr 2017 00:00:00 </pubDate>
+        <title><![CDATA[/dev/null - Funny Design for Linux/Unix Geeks - White Text]]></title>
+        <link><![CDATA[https://geeksta.net/design/dev-null-white/]]></link>
+        <description><![CDATA[<p>In some computer operating systems the null device discards all data written to it. This device is called /dev/null on Linux and Unix based systems and is also referred to as bit bucket or black hole in hacker jargon. / This design for well-informed...</p><img src="https://geeksta.net/img/large/dev-null-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/dev-null-white/]]></guid>
+        <pubDate>Sun, 23 Apr 2017 00:00:00 </pubDate>
     </item>
     
     <item>
@@ -204,6 +196,14 @@
         <link><![CDATA[https://geeksta.net/design/i-think-therefore-i-am-root-white/]]></link>
         <description><![CDATA[<p>This design for computer system administrators shows the text &#8220;I think therefore I am root&#8221; in narrow white typefaces for good contrast with dark colors. It is a parody on the famous proposition &#8220;Cogito ergo sum&#8221; (I think, therefore...</p><img src="https://geeksta.net/img/large/i-think-therefore-i-am-root-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/i-think-therefore-i-am-root-white/]]></guid>
+        <pubDate>Tue, 04 Apr 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[I think therefore I am root - Computer Admin Parody Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/i-think-therefore-i-am-root-black/]]></link>
+        <description><![CDATA[<p>This design for computer system administrators shows the text &#8220;I think therefore I am root&#8221; in narrow white typefaces for good contrast with dark colors. It is a parody on the famous proposition &#8220;Cogito ergo sum&#8221; (I think, therefore...</p><img src="https://geeksta.net/img/large/i-think-therefore-i-am-root-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/i-think-therefore-i-am-root-black/]]></guid>
         <pubDate>Tue, 04 Apr 2017 00:00:00 </pubDate>
     </item>
     

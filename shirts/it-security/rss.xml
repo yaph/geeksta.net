@@ -3,17 +3,9 @@
 <channel><title>Shirts » It Security</title>
     <link>https://geeksta.net</link>
     <description>Shirts » It Security</description>
-    <lastBuildDate>Wed, 16 Dec 2020 21:38:04 </lastBuildDate>
+    <lastBuildDate>Sat, 10 Apr 2021 23:19:22 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
-    
-    <item>
-        <title><![CDATA[Bash Fork Bomb - Unix/Linux Hacker Shell Command - Black Text Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/bash-fork-bomb-medium-roboto-black/]]></link>
-        <description><![CDATA[<p>How to create a fork bomb to crash a computer system running Linux or Unix? You could enter this cryptic Bash command &#8220;:(){ :|:&amp; };:&#8221; in your terminal and run it, but actually don&#8217;t do it. / System administrators, hackers, coders, and...</p><img src="https://geeksta.net/img/large/bash-fork-bomb-medium-roboto-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/bash-fork-bomb-medium-roboto-black/]]></guid>
-        <pubDate>Fri, 21 Apr 2017 00:00:00 </pubDate>
-    </item>
     
     <item>
         <title><![CDATA[Bash Fork Bomb - Unix/Linux Hacker Shell Command - White Text Design]]></title>
@@ -24,10 +16,18 @@
     </item>
     
     <item>
+        <title><![CDATA[Bash Fork Bomb - Unix/Linux Hacker Shell Command - Black Text Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/bash-fork-bomb-medium-roboto-black/]]></link>
+        <description><![CDATA[<p>How to create a fork bomb to crash a computer system running Linux or Unix? You could enter this cryptic Bash command &#8220;:(){ :|:&amp; };:&#8221; in your terminal and run it, but actually don&#8217;t do it. / System administrators, hackers, coders, and...</p><img src="https://geeksta.net/img/large/bash-fork-bomb-medium-roboto-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/bash-fork-bomb-medium-roboto-black/]]></guid>
+        <pubDate>Fri, 21 Apr 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
         <title><![CDATA[Change your password - Computer Security Awareness Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/change-your-password-white/]]></link>
-        <description><![CDATA[<p>If you&#8217;re a computer security specialist or system administrator you should know that using secure passwords is vital, but unfortunately not a common practice. Analyses of security leaks show that strings like &#8220;password&#8221; or...</p><img src="https://geeksta.net/img/large/change-your-password-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/change-your-password-white/]]></guid>
+        <link><![CDATA[https://geeksta.net/design/change-your-password-black/]]></link>
+        <description><![CDATA[<p>If you&#8217;re a computer security specialist or system administrator you should know that using secure passwords is vital, but unfortunately not a common practice. Analyses of security leaks show that strings like &#8220;password&#8221; or...</p><img src="https://geeksta.net/img/large/change-your-password-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/change-your-password-black/]]></guid>
         <pubDate>Tue, 04 Apr 2017 00:00:00 </pubDate>
     </item>
     
@@ -49,9 +49,9 @@
     
     <item>
         <title><![CDATA[Change your password - Computer Security Awareness Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/change-your-password-black/]]></link>
-        <description><![CDATA[<p>If you&#8217;re a computer security specialist or system administrator you should know that using secure passwords is vital, but unfortunately not a common practice. Analyses of security leaks show that strings like &#8220;password&#8221; or...</p><img src="https://geeksta.net/img/large/change-your-password-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/change-your-password-black/]]></guid>
+        <link><![CDATA[https://geeksta.net/design/change-your-password-white/]]></link>
+        <description><![CDATA[<p>If you&#8217;re a computer security specialist or system administrator you should know that using secure passwords is vital, but unfortunately not a common practice. Analyses of security leaks show that strings like &#8220;password&#8221; or...</p><img src="https://geeksta.net/img/large/change-your-password-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/change-your-password-white/]]></guid>
         <pubDate>Tue, 04 Apr 2017 00:00:00 </pubDate>
     </item>
     

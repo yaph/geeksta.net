@@ -3,7 +3,7 @@
 <channel><title>Shirts » Programming</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Programming</description>
-    <lastBuildDate>Wed, 16 Dec 2020 21:38:04 </lastBuildDate>
+    <lastBuildDate>Sat, 10 Apr 2021 23:19:22 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
@@ -24,18 +24,18 @@
     </item>
     
     <item>
-        <title><![CDATA[ASI Automatic Semicolon Insertion - Light Text Webdev Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/asi-automatic-semicolon-insertion-white-gray/]]></link>
-        <description><![CDATA[<p>The programming language JavaScript is known for its many warts, a.k.a. WATs among JS developers. Automatic Semicolon Insertion (ASI) may be the single worst of them as it may introduce subtle and hard to find bugs. Code linters for the win. / A design...</p><img src="https://geeksta.net/img/large/asi-automatic-semicolon-insertion-white-gray.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/asi-automatic-semicolon-insertion-white-gray/]]></guid>
-        <pubDate>Thu, 22 Jun 2017 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[ASI Automatic Semicolon Insertion - Dark Text Webdev Design]]></title>
         <link><![CDATA[https://geeksta.net/design/asi-automatic-semicolon-insertion-black-gray/]]></link>
         <description><![CDATA[<p>The programming language JavaScript is known for its many warts, a.k.a. WATs among JS developers. Automatic Semicolon Insertion (ASI) may be the single worst of them as it may introduce subtle and hard to find bugs. Code linters for the win. / A design...</p><img src="https://geeksta.net/img/large/asi-automatic-semicolon-insertion-black-gray.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/asi-automatic-semicolon-insertion-black-gray/]]></guid>
+        <pubDate>Thu, 22 Jun 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[ASI Automatic Semicolon Insertion - Light Text Webdev Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/asi-automatic-semicolon-insertion-white-gray/]]></link>
+        <description><![CDATA[<p>The programming language JavaScript is known for its many warts, a.k.a. WATs among JS developers. Automatic Semicolon Insertion (ASI) may be the single worst of them as it may introduce subtle and hard to find bugs. Code linters for the win. / A design...</p><img src="https://geeksta.net/img/large/asi-automatic-semicolon-insertion-white-gray.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/asi-automatic-semicolon-insertion-white-gray/]]></guid>
         <pubDate>Thu, 22 Jun 2017 00:00:00 </pubDate>
     </item>
     
@@ -72,18 +72,10 @@
     </item>
     
     <item>
-        <title><![CDATA[Tabs Greater Than Spaces - Programmer Flame War Design White]]></title>
-        <link><![CDATA[https://geeksta.net/design/tabs-gt-spaces-white/]]></link>
-        <description><![CDATA[<p>Computer programmers/software developers are very passionate when it comes to the topic of whitespace in computer code. Either you prefer spaces or tabs and you typically don&#8217;t accept the other. / If you are a coder in the tabs camp, this simple...</p><img src="https://geeksta.net/img/large/tabs-gt-spaces-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/tabs-gt-spaces-white/]]></guid>
-        <pubDate>Mon, 15 May 2017 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Spaces Greater Than Tabs - Programmer Flame War Design Black]]></title>
-        <link><![CDATA[https://geeksta.net/design/spaces-gt-tabs-black/]]></link>
-        <description><![CDATA[<p>Computer programmers/software developers are very passionate when it comes to the topic of whitespace in computer code. Either you prefer spaces or tabs and you typically don&#8217;t accept the other. / If you are a coder in the spaces camp, this simple...</p><img src="https://geeksta.net/img/large/spaces-gt-tabs-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/spaces-gt-tabs-black/]]></guid>
+        <title><![CDATA[Tabs Greater Than Spaces - Programmer Flame War Design Black]]></title>
+        <link><![CDATA[https://geeksta.net/design/tabs-gt-spaces-black/]]></link>
+        <description><![CDATA[<p>Computer programmers/software developers are very passionate when it comes to the topic of whitespace in computer code. Either you prefer spaces or tabs and you typically don&#8217;t accept the other. / If you are a coder in the tabs camp, this simple...</p><img src="https://geeksta.net/img/large/tabs-gt-spaces-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/tabs-gt-spaces-black/]]></guid>
         <pubDate>Mon, 15 May 2017 00:00:00 </pubDate>
     </item>
     
@@ -96,10 +88,18 @@
     </item>
     
     <item>
-        <title><![CDATA[Tabs Greater Than Spaces - Programmer Flame War Design Black]]></title>
-        <link><![CDATA[https://geeksta.net/design/tabs-gt-spaces-black/]]></link>
-        <description><![CDATA[<p>Computer programmers/software developers are very passionate when it comes to the topic of whitespace in computer code. Either you prefer spaces or tabs and you typically don&#8217;t accept the other. / If you are a coder in the tabs camp, this simple...</p><img src="https://geeksta.net/img/large/tabs-gt-spaces-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/tabs-gt-spaces-black/]]></guid>
+        <title><![CDATA[Spaces Greater Than Tabs - Programmer Flame War Design Black]]></title>
+        <link><![CDATA[https://geeksta.net/design/spaces-gt-tabs-black/]]></link>
+        <description><![CDATA[<p>Computer programmers/software developers are very passionate when it comes to the topic of whitespace in computer code. Either you prefer spaces or tabs and you typically don&#8217;t accept the other. / If you are a coder in the spaces camp, this simple...</p><img src="https://geeksta.net/img/large/spaces-gt-tabs-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/spaces-gt-tabs-black/]]></guid>
+        <pubDate>Mon, 15 May 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Tabs Greater Than Spaces - Programmer Flame War Design White]]></title>
+        <link><![CDATA[https://geeksta.net/design/tabs-gt-spaces-white/]]></link>
+        <description><![CDATA[<p>Computer programmers/software developers are very passionate when it comes to the topic of whitespace in computer code. Either you prefer spaces or tabs and you typically don&#8217;t accept the other. / If you are a coder in the tabs camp, this simple...</p><img src="https://geeksta.net/img/large/tabs-gt-spaces-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/tabs-gt-spaces-white/]]></guid>
         <pubDate>Mon, 15 May 2017 00:00:00 </pubDate>
     </item>
     
@@ -136,18 +136,18 @@
     </item>
     
     <item>
-        <title><![CDATA[I put the PRO in Programming - Professional Programmer Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/i-put-the-pro-in-programming-white/]]></link>
-        <description><![CDATA[<p>Do you write readable and comprehensible computer code? Do you comment and document your code? Do you understand the code you write yourself? If your answer to these questions is yes, you are a professional programmer and can take pride in acting like a...</p><img src="https://geeksta.net/img/large/i-put-the-pro-in-programming-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/i-put-the-pro-in-programming-white/]]></guid>
-        <pubDate>Tue, 13 Dec 2016 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[I put the PRO in Programming - Professional Programmer Distressed Design]]></title>
         <link><![CDATA[https://geeksta.net/design/i-put-the-pro-in-programming-distressed-white/]]></link>
         <description><![CDATA[<p>Do you write readable and comprehensible computer code? Do you comment and document your code? Do you understand the code you write yourself? If your answer to these questions is yes, you are a professional programmer and can take pride in acting like a...</p><img src="https://geeksta.net/img/large/i-put-the-pro-in-programming-distressed-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/i-put-the-pro-in-programming-distressed-white/]]></guid>
+        <pubDate>Tue, 13 Dec 2016 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[I put the PRO in Programming - Professional Programmer Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/i-put-the-pro-in-programming-white/]]></link>
+        <description><![CDATA[<p>Do you write readable and comprehensible computer code? Do you comment and document your code? Do you understand the code you write yourself? If your answer to these questions is yes, you are a professional programmer and can take pride in acting like a...</p><img src="https://geeksta.net/img/large/i-put-the-pro-in-programming-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/i-put-the-pro-in-programming-white/]]></guid>
         <pubDate>Tue, 13 Dec 2016 00:00:00 </pubDate>
     </item>
     
@@ -160,18 +160,18 @@
     </item>
     
     <item>
-        <title><![CDATA[Lots of Irritating Superfluous Parentheses: Funny LISP Programmer Design Black/Gray]]></title>
-        <link><![CDATA[https://geeksta.net/design/lisp-lots-of-irritating-superfluous-parenthesis-white/]]></link>
-        <description><![CDATA[<p>Lisp (historically, LISP) is a computer programming language with a lot of parentheses sprinkled all over the code. There are programmers who love Lisp, which originally stands for &#8220;LISt Processor&#8221;, but many find it hard to read due to its...</p><img src="https://geeksta.net/img/large/lisp-lots-of-irritating-superfluous-parenthesis-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/lisp-lots-of-irritating-superfluous-parenthesis-white/]]></guid>
-        <pubDate>Sun, 13 Nov 2016 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[Lots of Irritating Superfluous Parentheses: Funny LISP Programmer Design White/Gray]]></title>
         <link><![CDATA[https://geeksta.net/design/lisp-lots-of-irritating-superfluous-parenthesis-black/]]></link>
         <description><![CDATA[<p>Lisp (historically, LISP) is a computer programming language with a lot of parentheses sprinkled all over the code. There are programmers who love Lisp, which originally stands for &#8220;LISt Processor&#8221;, but many find it hard to read due to its...</p><img src="https://geeksta.net/img/large/lisp-lots-of-irritating-superfluous-parenthesis-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/lisp-lots-of-irritating-superfluous-parenthesis-black/]]></guid>
+        <pubDate>Sun, 13 Nov 2016 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Lots of Irritating Superfluous Parentheses: Funny LISP Programmer Design Black/Gray]]></title>
+        <link><![CDATA[https://geeksta.net/design/lisp-lots-of-irritating-superfluous-parenthesis-white/]]></link>
+        <description><![CDATA[<p>Lisp (historically, LISP) is a computer programming language with a lot of parentheses sprinkled all over the code. There are programmers who love Lisp, which originally stands for &#8220;LISt Processor&#8221;, but many find it hard to read due to its...</p><img src="https://geeksta.net/img/large/lisp-lots-of-irritating-superfluous-parenthesis-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/lisp-lots-of-irritating-superfluous-parenthesis-white/]]></guid>
         <pubDate>Sun, 13 Nov 2016 00:00:00 </pubDate>
     </item>
     
@@ -192,18 +192,18 @@
     </item>
     
     <item>
-        <title><![CDATA[LAZY IMPATIENT HUBRISTIC - 3 Virtues of a Programmer White Font]]></title>
-        <link><![CDATA[https://geeksta.net/design/lazy-impatient-hubristic-white/]]></link>
-        <description><![CDATA[<p>According to Larry Wall, creator of the Perl programming language and author of Programming Perl (the Camel Book) the three great virtues of a programmer are: laziness, impatience, and hubris. / Be lazy and write labor-saving, well documented programs. Be...</p><img src="https://geeksta.net/img/large/lazy-impatient-hubristic-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/lazy-impatient-hubristic-white/]]></guid>
-        <pubDate>Mon, 05 Oct 2015 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[LAZY IMPATIENT HUBRISTIC - 3 Virtues of a Programmer Blue Font]]></title>
         <link><![CDATA[https://geeksta.net/design/lazy-impatient-hubristic-blue/]]></link>
         <description><![CDATA[<p>According to Larry Wall, creator of the Perl programming language and author of Programming Perl (the Camel Book) the three great virtues of a programmer are: laziness, impatience, and hubris. / Be lazy and write labor-saving, well documented programs. Be...</p><img src="https://geeksta.net/img/large/lazy-impatient-hubristic-blue.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/lazy-impatient-hubristic-blue/]]></guid>
+        <pubDate>Mon, 05 Oct 2015 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[LAZY IMPATIENT HUBRISTIC - 3 Virtues of a Programmer White Font]]></title>
+        <link><![CDATA[https://geeksta.net/design/lazy-impatient-hubristic-white/]]></link>
+        <description><![CDATA[<p>According to Larry Wall, creator of the Perl programming language and author of Programming Perl (the Camel Book) the three great virtues of a programmer are: laziness, impatience, and hubris. / Be lazy and write labor-saving, well documented programs. Be...</p><img src="https://geeksta.net/img/large/lazy-impatient-hubristic-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/lazy-impatient-hubristic-white/]]></guid>
         <pubDate>Mon, 05 Oct 2015 00:00:00 </pubDate>
     </item>
     

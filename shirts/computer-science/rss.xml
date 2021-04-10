@@ -3,7 +3,7 @@
 <channel><title>Shirts » Computer Science</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Computer Science</description>
-    <lastBuildDate>Wed, 16 Dec 2020 21:38:04 </lastBuildDate>
+    <lastBuildDate>Sat, 10 Apr 2021 23:19:22 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
@@ -24,6 +24,14 @@
     </item>
     
     <item>
+        <title><![CDATA[No Class No State Functional Programmer White Text Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/lambda-anarchy-no-class-white/]]></link>
+        <description><![CDATA[<p>A design for computer programmers &amp; software developers who love functional programming. It shows the lambda symbol similar to the Anarchy &#8220;A&#8221; and below the texts NO CLASS, NO STATE in capital letters in a narrow font. / Functional code is...</p><img src="https://geeksta.net/img/large/lambda-anarchy-no-class-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/lambda-anarchy-no-class-white/]]></guid>
+        <pubDate>Mon, 22 May 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
         <title><![CDATA[No Class No State Functional Programmer Red Text Design]]></title>
         <link><![CDATA[https://geeksta.net/design/lambda-anarchy-no-class-red/]]></link>
         <description><![CDATA[<p>A design for computer programmers &amp; software developers who love functional programming. It shows the lambda symbol similar to the Anarchy &#8220;A&#8221; and below the texts NO CLASS, NO STATE in capital letters in a narrow font. / Functional code is...</p><img src="https://geeksta.net/img/large/lambda-anarchy-no-class-red.jpg" alt="Preview Image">]]></description>
@@ -40,11 +48,11 @@
     </item>
     
     <item>
-        <title><![CDATA[No Class No State Functional Programmer White Text Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/lambda-anarchy-no-class-white/]]></link>
-        <description><![CDATA[<p>A design for computer programmers &amp; software developers who love functional programming. It shows the lambda symbol similar to the Anarchy &#8220;A&#8221; and below the texts NO CLASS, NO STATE in capital letters in a narrow font. / Functional code is...</p><img src="https://geeksta.net/img/large/lambda-anarchy-no-class-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/lambda-anarchy-no-class-white/]]></guid>
-        <pubDate>Mon, 22 May 2017 00:00:00 </pubDate>
+        <title><![CDATA[I Love Functional Programming - White & Red Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/i-love-functional-programming-white/]]></link>
+        <description><![CDATA[<p>A design for computer programmers/software developers who embrace functional programming. It consists of the texts &#8220;I&#8221; and &#8220;Functional Programming&#8221; in white and the lambda symbol in parenthesis in a red monospace font. / The lambda...</p><img src="https://geeksta.net/img/large/i-love-functional-programming-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/i-love-functional-programming-white/]]></guid>
+        <pubDate>Fri, 12 May 2017 00:00:00 </pubDate>
     </item>
     
     <item>
@@ -52,14 +60,6 @@
         <link><![CDATA[https://geeksta.net/design/i-love-functional-programming-black/]]></link>
         <description><![CDATA[<p>A design for computer programmers/software developers who embrace functional programming. It consists of the texts &#8220;I&#8221; and &#8220;Functional Programming&#8221; in white and the lambda symbol in parenthesis in a red monospace font. / The lambda...</p><img src="https://geeksta.net/img/large/i-love-functional-programming-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/i-love-functional-programming-black/]]></guid>
-        <pubDate>Fri, 12 May 2017 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[I Love Functional Programming - White & Red Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/i-love-functional-programming-white/]]></link>
-        <description><![CDATA[<p>A design for computer programmers/software developers who embrace functional programming. It consists of the texts &#8220;I&#8221; and &#8220;Functional Programming&#8221; in white and the lambda symbol in parenthesis in a red monospace font. / The lambda...</p><img src="https://geeksta.net/img/large/i-love-functional-programming-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/i-love-functional-programming-white/]]></guid>
         <pubDate>Fri, 12 May 2017 00:00:00 </pubDate>
     </item>
     

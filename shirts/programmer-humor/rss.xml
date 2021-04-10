@@ -3,7 +3,7 @@
 <channel><title>Shirts » Programmer Humor</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Programmer Humor</description>
-    <lastBuildDate>Wed, 16 Dec 2020 21:38:04 </lastBuildDate>
+    <lastBuildDate>Sat, 10 Apr 2021 23:19:22 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
@@ -24,6 +24,14 @@
     </item>
     
     <item>
+        <title><![CDATA[It Works In My Container Funny Developer Design White]]></title>
+        <link><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-white/]]></link>
+        <description><![CDATA[<p>Containers are a popular choice in modern software development. In such an environment &#8220;It works in my container&#8221; is a programmer excuse you may here more often than its popular predecessor &#8220;It works on my machine&#8221;. A design for...</p><img src="https://geeksta.net/img/large/shrug-it-works-in-my-container-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-white/]]></guid>
+        <pubDate>Thu, 27 Sep 2018 00:00:00 </pubDate>
+    </item>
+    
+    <item>
         <title><![CDATA[It Works In My Container Funny Developer Design Black]]></title>
         <link><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-black/]]></link>
         <description><![CDATA[<p>Containers are a popular choice in modern software development. In such an environment &#8220;It works in my container&#8221; is a programmer excuse you may here more often than its popular predecessor &#8220;It works on my machine&#8221;. A design for...</p><img src="https://geeksta.net/img/large/shrug-it-works-in-my-container-black.jpg" alt="Preview Image">]]></description>
@@ -36,14 +44,6 @@
         <link><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-white-green/]]></link>
         <description><![CDATA[<p>Containers are a popular choice in modern software development. In such an environment &#8220;It works in my container&#8221; is a programmer excuse you may here more often than its popular predecessor &#8220;It works on my machine&#8221;. A design for...</p><img src="https://geeksta.net/img/large/shrug-it-works-in-my-container-white-green.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-white-green/]]></guid>
-        <pubDate>Thu, 27 Sep 2018 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[It Works In My Container Funny Developer Design White]]></title>
-        <link><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-white/]]></link>
-        <description><![CDATA[<p>Containers are a popular choice in modern software development. In such an environment &#8220;It works in my container&#8221; is a programmer excuse you may here more often than its popular predecessor &#8220;It works on my machine&#8221;. A design for...</p><img src="https://geeksta.net/img/large/shrug-it-works-in-my-container-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-white/]]></guid>
         <pubDate>Thu, 27 Sep 2018 00:00:00 </pubDate>
     </item>
     
@@ -80,14 +80,6 @@
     </item>
     
     <item>
-        <title><![CDATA[got generics? Black Text Design to Tease Golang Programmers]]></title>
-        <link><![CDATA[https://geeksta.net/design/got-generics-black/]]></link>
-        <description><![CDATA[<p>Go is a programming language that is praised by some software developers and bashed by others. One point of contention is its lack of generics, which this design makes fun of by asking the simple question got generics? / This design is for Go programmers...</p><img src="https://geeksta.net/img/large/got-generics-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/got-generics-black/]]></guid>
-        <pubDate>Thu, 13 Apr 2017 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[got generics? White Text Design to Tease Golang Programmers]]></title>
         <link><![CDATA[https://geeksta.net/design/got-generics-white/]]></link>
         <description><![CDATA[<p>Go is a programming language that is praised by some software developers and bashed by others. One point of contention is its lack of generics, which this design makes fun of by asking the simple question got generics? / This design is for Go programmers...</p><img src="https://geeksta.net/img/large/got-generics-white.jpg" alt="Preview Image">]]></description>
@@ -96,11 +88,11 @@
     </item>
     
     <item>
-        <title><![CDATA[lol PHP - Black/White/Purple Design to Tease PHP Programmers]]></title>
-        <link><![CDATA[https://geeksta.net/design/lol-php/]]></link>
-        <description><![CDATA[<p>PHP is one of those programming languages people love to hate. The language has many design flaws, inconsistencies and attracts newbie programmers due to its alleged simplicity. There is a lot of bad PHP code out there making the language an easy target to...</p><img src="https://geeksta.net/img/large/lol-php.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/lol-php/]]></guid>
-        <pubDate>Tue, 11 Apr 2017 00:00:00 </pubDate>
+        <title><![CDATA[got generics? Black Text Design to Tease Golang Programmers]]></title>
+        <link><![CDATA[https://geeksta.net/design/got-generics-black/]]></link>
+        <description><![CDATA[<p>Go is a programming language that is praised by some software developers and bashed by others. One point of contention is its lack of generics, which this design makes fun of by asking the simple question got generics? / This design is for Go programmers...</p><img src="https://geeksta.net/img/large/got-generics-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/got-generics-black/]]></guid>
+        <pubDate>Thu, 13 Apr 2017 00:00:00 </pubDate>
     </item>
     
     <item>
@@ -108,6 +100,14 @@
         <link><![CDATA[https://geeksta.net/design/wtf-php/]]></link>
         <description><![CDATA[<p>PHP is one of those programming languages people love to hate. The language has many design flaws, inconsistencies and attracts newbie programmers due to its alleged simplicity. There is a lot of bad PHP code out there making the language an easy target to...</p><img src="https://geeksta.net/img/large/wtf-php.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/wtf-php/]]></guid>
+        <pubDate>Tue, 11 Apr 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[lol PHP - Black/White/Purple Design to Tease PHP Programmers]]></title>
+        <link><![CDATA[https://geeksta.net/design/lol-php/]]></link>
+        <description><![CDATA[<p>PHP is one of those programming languages people love to hate. The language has many design flaws, inconsistencies and attracts newbie programmers due to its alleged simplicity. There is a lot of bad PHP code out there making the language an easy target to...</p><img src="https://geeksta.net/img/large/lol-php.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/lol-php/]]></guid>
         <pubDate>Tue, 11 Apr 2017 00:00:00 </pubDate>
     </item>
     
@@ -184,18 +184,18 @@
     </item>
     
     <item>
-        <title><![CDATA[Hide & Seek Champion since 1960 Semicolon - Black on Grey Programmer Humor]]></title>
-        <link><![CDATA[https://geeksta.net/design/semicolon-hide-and-seek-champion-black/]]></link>
-        <description><![CDATA[<p>The semicolon was introduced as a statement terminator in the ALGOL 60¹ programming language, which first appeared in 1960². Since then the semicolon has caused programmers headaches and countless working hours, trying to fix bugs caused by missing...</p><img src="https://geeksta.net/img/large/semicolon-hide-and-seek-champion-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/semicolon-hide-and-seek-champion-black/]]></guid>
-        <pubDate>Wed, 02 Dec 2015 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[Hide & Seek Champion since 1960 Semicolon - White on Black Programmer Humor]]></title>
         <link><![CDATA[https://geeksta.net/design/semicolon-hide-and-seek-champion-white/]]></link>
         <description><![CDATA[<p>The semicolon was introduced as a statement terminator in the ALGOL 60¹ programming language, which first appeared in 1960². Since then the semicolon has caused programmers headaches and countless working hours, trying to fix bugs caused by missing...</p><img src="https://geeksta.net/img/large/semicolon-hide-and-seek-champion-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/semicolon-hide-and-seek-champion-white/]]></guid>
+        <pubDate>Wed, 02 Dec 2015 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Hide & Seek Champion since 1960 Semicolon - Black on Grey Programmer Humor]]></title>
+        <link><![CDATA[https://geeksta.net/design/semicolon-hide-and-seek-champion-black/]]></link>
+        <description><![CDATA[<p>The semicolon was introduced as a statement terminator in the ALGOL 60¹ programming language, which first appeared in 1960². Since then the semicolon has caused programmers headaches and countless working hours, trying to fix bugs caused by missing...</p><img src="https://geeksta.net/img/large/semicolon-hide-and-seek-champion-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/semicolon-hide-and-seek-champion-black/]]></guid>
         <pubDate>Wed, 02 Dec 2015 00:00:00 </pubDate>
     </item>
     

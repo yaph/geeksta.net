@@ -3,23 +3,23 @@
 <channel><title>Shirts » Command Line</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Command Line</description>
-    <lastBuildDate>Wed, 16 Dec 2020 21:38:04 </lastBuildDate>
+    <lastBuildDate>Sat, 10 Apr 2021 23:19:22 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
-    
-    <item>
-        <title><![CDATA[Shell/Perl Default Variable $_ White Design for Coders & Sysadmins]]></title>
-        <link><![CDATA[https://geeksta.net/design/dollar_-white/]]></link>
-        <description><![CDATA[<p>Many system administrators, computer programmers and hackers love to use the command line interface of their operating system, preferably one based on Unix or Linux. Show with pride that you are one of this special kind of people. / This design shows...</p><img src="https://geeksta.net/img/large/dollar_-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/dollar_-white/]]></guid>
-        <pubDate>Wed, 06 Nov 2019 00:00:00 </pubDate>
-    </item>
     
     <item>
         <title><![CDATA[Shell/Perl Default Variable $_ Black Design for Coders & Sysadmins]]></title>
         <link><![CDATA[https://geeksta.net/design/dollar_-black/]]></link>
         <description><![CDATA[<p>Many system administrators, computer programmers and hackers love to use the command line interface of their operating system, preferably one based on Unix or Linux. Show with pride that you are one of this special kind of people. / This design shows...</p><img src="https://geeksta.net/img/large/dollar_-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/dollar_-black/]]></guid>
+        <pubDate>Wed, 06 Nov 2019 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Shell/Perl Default Variable $_ White Design for Coders & Sysadmins]]></title>
+        <link><![CDATA[https://geeksta.net/design/dollar_-white/]]></link>
+        <description><![CDATA[<p>Many system administrators, computer programmers and hackers love to use the command line interface of their operating system, preferably one based on Unix or Linux. Show with pride that you are one of this special kind of people. / This design shows...</p><img src="https://geeksta.net/img/large/dollar_-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/dollar_-white/]]></guid>
         <pubDate>Wed, 06 Nov 2019 00:00:00 </pubDate>
     </item>
     
@@ -89,14 +89,6 @@
     
     <item>
         <title><![CDATA[sudo !! - Run the last command as superuser]]></title>
-        <link><![CDATA[https://geeksta.net/design/sudo-last-white/]]></link>
-        <description><![CDATA[<p>People who regularly work with the command line inevitably forget to run commands with root privileges or those of another user, when necessary. The command &#8220;sudo !!&#8221; comes to the rescue in bash. The double exclamation mark repeats the last...</p><img src="https://geeksta.net/img/large/sudo-last-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/sudo-last-white/]]></guid>
-        <pubDate>Sat, 13 Aug 2016 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[sudo !! - Run the last command as superuser]]></title>
         <link><![CDATA[https://geeksta.net/design/sudo-last-black/]]></link>
         <description><![CDATA[<p>People who regularly work with the command line inevitably forget to run commands with root privileges or those of another user, when necessary. The command &#8220;sudo !!&#8221; comes to the rescue in bash. The double exclamation mark repeats the last...</p><img src="https://geeksta.net/img/large/sudo-last-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/sudo-last-black/]]></guid>
@@ -104,11 +96,11 @@
     </item>
     
     <item>
-        <title><![CDATA[Shell Prompt >_ Indicated with greater than and underscore signs]]></title>
-        <link><![CDATA[https://geeksta.net/design/shell-prompt-black/]]></link>
-        <description><![CDATA[<p>This design shows an operating system shell prompt indicated with greater than and underscore signs, which is frequently used in Unix and Linux based systems. • Millions of unique designs by independent artists. Find your thing.</p><img src="https://geeksta.net/img/large/shell-prompt-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/shell-prompt-black/]]></guid>
-        <pubDate>Mon, 21 Dec 2015 00:00:00 </pubDate>
+        <title><![CDATA[sudo !! - Run the last command as superuser]]></title>
+        <link><![CDATA[https://geeksta.net/design/sudo-last-white/]]></link>
+        <description><![CDATA[<p>People who regularly work with the command line inevitably forget to run commands with root privileges or those of another user, when necessary. The command &#8220;sudo !!&#8221; comes to the rescue in bash. The double exclamation mark repeats the last...</p><img src="https://geeksta.net/img/large/sudo-last-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/sudo-last-white/]]></guid>
+        <pubDate>Sat, 13 Aug 2016 00:00:00 </pubDate>
     </item>
     
     <item>
@@ -116,6 +108,14 @@
         <link><![CDATA[https://geeksta.net/design/shell-prompt-white/]]></link>
         <description><![CDATA[<p>A shell prompt indicated with greater than and underscore signs in white on black available on different products. For apparel such as shirts, long-sleeves or hoodies various fabric colors can be chosen. • Millions of unique designs by independent artists....</p><img src="https://geeksta.net/img/large/shell-prompt-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/shell-prompt-white/]]></guid>
+        <pubDate>Mon, 21 Dec 2015 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Shell Prompt >_ Indicated with greater than and underscore signs]]></title>
+        <link><![CDATA[https://geeksta.net/design/shell-prompt-black/]]></link>
+        <description><![CDATA[<p>This design shows an operating system shell prompt indicated with greater than and underscore signs, which is frequently used in Unix and Linux based systems. • Millions of unique designs by independent artists. Find your thing.</p><img src="https://geeksta.net/img/large/shell-prompt-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/shell-prompt-black/]]></guid>
         <pubDate>Mon, 21 Dec 2015 00:00:00 </pubDate>
     </item>
     
@@ -128,10 +128,10 @@
     </item>
     
     <item>
-        <title><![CDATA[cd /pub more beer - Punny Black on White Design for Command Line Hackers]]></title>
-        <link><![CDATA[https://geeksta.net/design/cd-pub-more-beer-black/]]></link>
-        <description><![CDATA[<p>A design featuring the commands &#8220;cd /pub&#8221; &amp; &#8220;more beer&#8221; printed in a black monospace font. If you&#8217;re a command line hacker, who like to drink a beer now and then, this makes a nice shirt or one of the other available...</p><img src="https://geeksta.net/img/large/cd-pub-more-beer-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/cd-pub-more-beer-black/]]></guid>
+        <title><![CDATA[cd /pub more beer - Punny Green on Black Design for Command Line Hackers]]></title>
+        <link><![CDATA[https://geeksta.net/design/cd-pub-more-beer-green/]]></link>
+        <description><![CDATA[<p>A design featuring the commands &#8220;cd /pub&#8221; &amp; &#8220;more beer&#8221; printed in a green monospace font. If you&#8217;re a command line hacker, who like to drink a beer now and then, this makes a nice shirt or one of the other available...</p><img src="https://geeksta.net/img/large/cd-pub-more-beer-green.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/cd-pub-more-beer-green/]]></guid>
         <pubDate>Tue, 06 Oct 2015 00:00:00 </pubDate>
     </item>
     
@@ -144,19 +144,11 @@
     </item>
     
     <item>
-        <title><![CDATA[cd /pub more beer - Punny Green on Black Design for Command Line Hackers]]></title>
-        <link><![CDATA[https://geeksta.net/design/cd-pub-more-beer-green/]]></link>
-        <description><![CDATA[<p>A design featuring the commands &#8220;cd /pub&#8221; &amp; &#8220;more beer&#8221; printed in a green monospace font. If you&#8217;re a command line hacker, who like to drink a beer now and then, this makes a nice shirt or one of the other available...</p><img src="https://geeksta.net/img/large/cd-pub-more-beer-green.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/cd-pub-more-beer-green/]]></guid>
+        <title><![CDATA[cd /pub more beer - Punny Black on White Design for Command Line Hackers]]></title>
+        <link><![CDATA[https://geeksta.net/design/cd-pub-more-beer-black/]]></link>
+        <description><![CDATA[<p>A design featuring the commands &#8220;cd /pub&#8221; &amp; &#8220;more beer&#8221; printed in a black monospace font. If you&#8217;re a command line hacker, who like to drink a beer now and then, this makes a nice shirt or one of the other available...</p><img src="https://geeksta.net/img/large/cd-pub-more-beer-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/cd-pub-more-beer-black/]]></guid>
         <pubDate>Tue, 06 Oct 2015 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[#! Hashbang - Design for Command Line Hackers White Font]]></title>
-        <link><![CDATA[https://geeksta.net/design/hashbang-white/]]></link>
-        <description><![CDATA[<p>If you write shell scripts for unix like systems, the hashbang line is your constant companion. It starts with these two characters a number sign (hash, pound) and exclamation mark. / A design with the start of a hashbang line &#8220;#!&#8221; printed in a...</p><img src="https://geeksta.net/img/large/hashbang-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/hashbang-white/]]></guid>
-        <pubDate>Mon, 05 Oct 2015 00:00:00 </pubDate>
     </item>
     
     <item>
@@ -168,11 +160,11 @@
     </item>
     
     <item>
-        <title><![CDATA[#!/bin/bash - Black Font for Command Line Hackers]]></title>
-        <link><![CDATA[https://geeksta.net/design/bin-bash-black/]]></link>
-        <description><![CDATA[<p>A design for command line hackers who use the Bourne-again shell, a.k.a. bash. It features the text &#8220;#!/bin/bash&#8221; in a black monospace font as is available on light colored products. • Millions of unique designs by independent artists. Find your thing.</p><img src="https://geeksta.net/img/large/bin-bash-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/bin-bash-black/]]></guid>
-        <pubDate>Sat, 03 Oct 2015 00:00:00 </pubDate>
+        <title><![CDATA[#! Hashbang - Design for Command Line Hackers White Font]]></title>
+        <link><![CDATA[https://geeksta.net/design/hashbang-white/]]></link>
+        <description><![CDATA[<p>If you write shell scripts for unix like systems, the hashbang line is your constant companion. It starts with these two characters a number sign (hash, pound) and exclamation mark. / A design with the start of a hashbang line &#8220;#!&#8221; printed in a...</p><img src="https://geeksta.net/img/large/hashbang-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/hashbang-white/]]></guid>
+        <pubDate>Mon, 05 Oct 2015 00:00:00 </pubDate>
     </item>
     
     <item>
@@ -180,6 +172,14 @@
         <link><![CDATA[https://geeksta.net/design/bin-bash-white/]]></link>
         <description><![CDATA[<p>A design for command line hackers who use the Bourne-again shell, a.k.a. bash. It features the text &#8220;#!/bin/bash&#8221; in a white monospace font as is available on light colored products. • Millions of unique designs by independent artists. Find your thing.</p><img src="https://geeksta.net/img/large/bin-bash-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/bin-bash-white/]]></guid>
+        <pubDate>Sat, 03 Oct 2015 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[#!/bin/bash - Black Font for Command Line Hackers]]></title>
+        <link><![CDATA[https://geeksta.net/design/bin-bash-black/]]></link>
+        <description><![CDATA[<p>A design for command line hackers who use the Bourne-again shell, a.k.a. bash. It features the text &#8220;#!/bin/bash&#8221; in a black monospace font as is available on light colored products. • Millions of unique designs by independent artists. Find your thing.</p><img src="https://geeksta.net/img/large/bin-bash-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/bin-bash-black/]]></guid>
         <pubDate>Sat, 03 Oct 2015 00:00:00 </pubDate>
     </item>
     
@@ -192,18 +192,18 @@
     </item>
     
     <item>
-        <title><![CDATA[alias yolo='git push --force' - funny dark programmer shirt]]></title>
-        <link><![CDATA[https://geeksta.net/design/alias-yolo-git-push-force-white/]]></link>
-        <description><![CDATA[<p>Alias yolo (you only live once) to &#8216;git push &#8212;force&#8217; for moments when you live dangerously as a programmer and enforce to push your code changes to the master git repository. / A funny programmer shirt with the text &#8220;alias...</p><img src="https://geeksta.net/img/large/alias-yolo-git-push-force-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/alias-yolo-git-push-force-white/]]></guid>
-        <pubDate>Mon, 09 Feb 2015 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[alias yolo='git push --force' - funny light programmer shirt]]></title>
         <link><![CDATA[https://geeksta.net/design/alias-yolo-git-push-force-black/]]></link>
         <description><![CDATA[<p>Alias yolo (you only live once) to &#8216;git push &#8212;force&#8217; for moments when you live dangerously as a programmer and enforce to push your code changes to the master git repository. / A funny programmer shirt with the text &#8220;alias...</p><img src="https://geeksta.net/img/large/alias-yolo-git-push-force-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/alias-yolo-git-push-force-black/]]></guid>
+        <pubDate>Mon, 09 Feb 2015 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[alias yolo='git push --force' - funny dark programmer shirt]]></title>
+        <link><![CDATA[https://geeksta.net/design/alias-yolo-git-push-force-white/]]></link>
+        <description><![CDATA[<p>Alias yolo (you only live once) to &#8216;git push &#8212;force&#8217; for moments when you live dangerously as a programmer and enforce to push your code changes to the master git repository. / A funny programmer shirt with the text &#8220;alias...</p><img src="https://geeksta.net/img/large/alias-yolo-git-push-force-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/alias-yolo-git-push-force-white/]]></guid>
         <pubDate>Mon, 09 Feb 2015 00:00:00 </pubDate>
     </item>
     

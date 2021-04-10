@@ -3,9 +3,17 @@
 <channel><title>RSS Feed</title>
     <link>https://geeksta.net</link>
     <description>RSS Feed</description>
-    <lastBuildDate>Wed, 16 Dec 2020 21:38:04 </lastBuildDate>
+    <lastBuildDate>Sat, 10 Apr 2021 23:19:22 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Dom XSS Scanner is History]]></title>
+        <link><![CDATA[https://geeksta.net/domxssscanner/]]></link>
+        <description><![CDATA[<p></p>]]></description>
+        <guid><![CDATA[https://geeksta.net/domxssscanner/]]></guid>
+        <pubDate>Sat, 10 Apr 2021 22:22:37 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Automating Browser Screenshots for Social Media using wcap and Pillow]]></title>
@@ -32,14 +40,6 @@
     </item>
     
     <item>
-        <title><![CDATA[Ranking Bad? Funny White Design for SEO Experts/Online Marketers]]></title>
-        <link><![CDATA[https://geeksta.net/design/ranking-bad-white/]]></link>
-        <description><![CDATA[<p>People who do search engine optimization (SEO) help website owners to achieve better rankings on search result pages so potential customers can find their offerings. It's a very competitive field so make sure you are recognized as en expert. This funny...</p><img src="https://geeksta.net/img/large/ranking-bad-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/ranking-bad-white/]]></guid>
-        <pubDate>Sun, 08 Mar 2020 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[Ranking Bad? Funny Black Design for SEO Experts/Online Marketers]]></title>
         <link><![CDATA[https://geeksta.net/design/ranking-bad-black/]]></link>
         <description><![CDATA[<p>People who do search engine optimization (SEO) help website owners to achieve better rankings on search result pages so potential customers can find their offerings. It's a very competitive field so make sure you are recognized as en expert. This funny...</p><img src="https://geeksta.net/img/large/ranking-bad-black.jpg" alt="Preview Image">]]></description>
@@ -48,11 +48,11 @@
     </item>
     
     <item>
-        <title><![CDATA[Core Dumps Happen White Pun Design For Computer Sysadmins]]></title>
-        <link><![CDATA[https://geeksta.net/design/core-dumps-happen-white/]]></link>
-        <description><![CDATA[<p>A core dump in computing consists of the recorded state of the working memory of a computer program that has crashed. As a sysadmin you are hopefully able to analyze the dump and maybe even fix the problem that caused the crash. A funny pun design for...</p><img src="https://geeksta.net/img/large/core-dumps-happen-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/core-dumps-happen-white/]]></guid>
-        <pubDate>Tue, 31 Dec 2019 00:00:00 </pubDate>
+        <title><![CDATA[Ranking Bad? Funny White Design for SEO Experts/Online Marketers]]></title>
+        <link><![CDATA[https://geeksta.net/design/ranking-bad-white/]]></link>
+        <description><![CDATA[<p>People who do search engine optimization (SEO) help website owners to achieve better rankings on search result pages so potential customers can find their offerings. It's a very competitive field so make sure you are recognized as en expert. This funny...</p><img src="https://geeksta.net/img/large/ranking-bad-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/ranking-bad-white/]]></guid>
+        <pubDate>Sun, 08 Mar 2020 00:00:00 </pubDate>
     </item>
     
     <item>
@@ -60,6 +60,14 @@
         <link><![CDATA[https://geeksta.net/design/core-dumps-happen-black/]]></link>
         <description><![CDATA[<p>A core dump in computing consists of the recorded state of the working memory of a computer program that has crashed. As a sysadmin you are hopefully able to analyze the dump and maybe even fix the problem that caused the crash. A funny pun design for...</p><img src="https://geeksta.net/img/large/core-dumps-happen-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/core-dumps-happen-black/]]></guid>
+        <pubDate>Tue, 31 Dec 2019 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Core Dumps Happen White Pun Design For Computer Sysadmins]]></title>
+        <link><![CDATA[https://geeksta.net/design/core-dumps-happen-white/]]></link>
+        <description><![CDATA[<p>A core dump in computing consists of the recorded state of the working memory of a computer program that has crashed. As a sysadmin you are hopefully able to analyze the dump and maybe even fix the problem that caused the crash. A funny pun design for...</p><img src="https://geeksta.net/img/large/core-dumps-happen-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/core-dumps-happen-white/]]></guid>
         <pubDate>Tue, 31 Dec 2019 00:00:00 </pubDate>
     </item>
     
@@ -80,14 +88,6 @@
     </item>
     
     <item>
-        <title><![CDATA[Shell/Perl Default Variable $_ White Design for Coders & Sysadmins]]></title>
-        <link><![CDATA[https://geeksta.net/design/dollar_-white/]]></link>
-        <description><![CDATA[<p>Many system administrators, computer programmers and hackers love to use the command line interface of their operating system, preferably one based on Unix or Linux. Show with pride that you are one of this special kind of people. / This design shows...</p><img src="https://geeksta.net/img/large/dollar_-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/dollar_-white/]]></guid>
-        <pubDate>Wed, 06 Nov 2019 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[Shell/Perl Default Variable $_ Black Design for Coders & Sysadmins]]></title>
         <link><![CDATA[https://geeksta.net/design/dollar_-black/]]></link>
         <description><![CDATA[<p>Many system administrators, computer programmers and hackers love to use the command line interface of their operating system, preferably one based on Unix or Linux. Show with pride that you are one of this special kind of people. / This design shows...</p><img src="https://geeksta.net/img/large/dollar_-black.jpg" alt="Preview Image">]]></description>
@@ -97,10 +97,10 @@
     
     <item>
         <title><![CDATA[Shell/Perl Default Variable $_ White Design for Coders & Sysadmins]]></title>
-        <link><![CDATA[https://geeksta.net/design/dollar_-zip-hoodie-white/]]></link>
-        <description><![CDATA[<p>Many system administrators, computer programmers and hackers love to use the command line interface of their operating system, preferably one based on Unix or Linux. Show with pride that you are one of this special kind of people. / This design shows...</p><img src="https://geeksta.net/img/large/dollar_-zip-hoodie-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/dollar_-zip-hoodie-white/]]></guid>
-        <pubDate>Tue, 05 Nov 2019 00:00:00 </pubDate>
+        <link><![CDATA[https://geeksta.net/design/dollar_-white/]]></link>
+        <description><![CDATA[<p>Many system administrators, computer programmers and hackers love to use the command line interface of their operating system, preferably one based on Unix or Linux. Show with pride that you are one of this special kind of people. / This design shows...</p><img src="https://geeksta.net/img/large/dollar_-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/dollar_-white/]]></guid>
+        <pubDate>Wed, 06 Nov 2019 00:00:00 </pubDate>
     </item>
     
     <item>
@@ -112,18 +112,26 @@
     </item>
     
     <item>
-        <title><![CDATA[Shell/Perl Default Variable $_ Black Design for Coders & Sysadmins]]></title>
-        <link><![CDATA[https://geeksta.net/design/dollar_-zip-hoodie-black/]]></link>
-        <description><![CDATA[<p>Many system administrators, computer programmers and hackers love to use the command line interface of their operating system, preferably one based on Unix or Linux. Show with pride that you are one of this special kind of people. / This design shows...</p><img src="https://geeksta.net/img/large/dollar_-zip-hoodie-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/dollar_-zip-hoodie-black/]]></guid>
-        <pubDate>Tue, 05 Nov 2019 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[Shell Prompt >_ Command Line Interpreter Geek/Nerd Black Design]]></title>
         <link><![CDATA[https://geeksta.net/design/shell-prompt-zip-hoodie-black/]]></link>
         <description><![CDATA[<p>Many system administrators, computer programmers and hackers love to use the command line interface of their operating system, preferably one based on Unix or Linux. Show with pride that you are one of this special kind of people. / This design shows a...</p><img src="https://geeksta.net/img/large/shell-prompt-zip-hoodie-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/shell-prompt-zip-hoodie-black/]]></guid>
+        <pubDate>Tue, 05 Nov 2019 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Shell/Perl Default Variable $_ White Design for Coders & Sysadmins]]></title>
+        <link><![CDATA[https://geeksta.net/design/dollar_-zip-hoodie-white/]]></link>
+        <description><![CDATA[<p>Many system administrators, computer programmers and hackers love to use the command line interface of their operating system, preferably one based on Unix or Linux. Show with pride that you are one of this special kind of people. / This design shows...</p><img src="https://geeksta.net/img/large/dollar_-zip-hoodie-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/dollar_-zip-hoodie-white/]]></guid>
+        <pubDate>Tue, 05 Nov 2019 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Shell/Perl Default Variable $_ Black Design for Coders & Sysadmins]]></title>
+        <link><![CDATA[https://geeksta.net/design/dollar_-zip-hoodie-black/]]></link>
+        <description><![CDATA[<p>Many system administrators, computer programmers and hackers love to use the command line interface of their operating system, preferably one based on Unix or Linux. Show with pride that you are one of this special kind of people. / This design shows...</p><img src="https://geeksta.net/img/large/dollar_-zip-hoodie-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/dollar_-zip-hoodie-black/]]></guid>
         <pubDate>Tue, 05 Nov 2019 00:00:00 </pubDate>
     </item>
     
@@ -197,14 +205,6 @@
         <description><![CDATA[<p>A review of the Python Data Science Handbook, which covers IPython, NumPy, pandas, Matplotlib and machine learning with Scikit-Learn, and was written by Jake VanderPlas.</p><img src="https://geeksta.net/img/books/python-data-science-handbook.png" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/reviews/python-data-science-handbook/]]></guid>
         <pubDate>Fri, 14 Jun 2019 23:58:37 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Evolution of the Smartphone Zombie / Smombie - White Graphic]]></title>
-        <link><![CDATA[https://geeksta.net/design/smombie-evolution-white/]]></link>
-        <description><![CDATA[<p>Many people are completely absorbed by their cell phone, walking around and staring at it without taking notice of their environment. This behavior is ignorant, reckless and dumb. It is also extremely bad for your posture. It seems a bit like humanity is...</p><img src="https://geeksta.net/img/large/smombie-evolution-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/smombie-evolution-white/]]></guid>
-        <pubDate>Fri, 24 May 2019 00:00:00 </pubDate>
     </item>
     
 </channel></rss>
