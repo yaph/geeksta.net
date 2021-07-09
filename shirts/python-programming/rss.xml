@@ -3,7 +3,7 @@
 <channel><title>Shirts » Python Programming</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Python Programming</description>
-    <lastBuildDate>Sat, 10 Apr 2021 23:56:23 </lastBuildDate>
+    <lastBuildDate>Sat, 10 Jul 2021 00:44:33 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
@@ -72,18 +72,18 @@
     </item>
     
     <item>
-        <title><![CDATA[Python 1991 Year of 1st Release - White Text Programmer Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/python-1991-white/]]></link>
-        <description><![CDATA[<p>After working on the implementation for about a year GvR created the 1st public release of Python in 1991. Despite stumbling blocks such as the 2to3 transition, Python has deservedly become one of the most popular computer programming languages. / A design...</p><img src="https://geeksta.net/img/large/python-1991-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/python-1991-white/]]></guid>
-        <pubDate>Wed, 05 Jul 2017 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[Python 1991 Year of 1st Release - Black Text Programmer Design]]></title>
         <link><![CDATA[https://geeksta.net/design/python-1991-black/]]></link>
         <description><![CDATA[<p>After working on the implementation for about a year GvR created the 1st public release of Python in 1991. Despite stumbling blocks such as the 2to3 transition, Python has deservedly become one of the most popular computer programming languages. / A design...</p><img src="https://geeksta.net/img/large/python-1991-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/python-1991-black/]]></guid>
+        <pubDate>Wed, 05 Jul 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Python 1991 Year of 1st Release - White Text Programmer Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/python-1991-white/]]></link>
+        <description><![CDATA[<p>After working on the implementation for about a year GvR created the 1st public release of Python in 1991. Despite stumbling blocks such as the 2to3 transition, Python has deservedly become one of the most popular computer programming languages. / A design...</p><img src="https://geeksta.net/img/large/python-1991-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/python-1991-white/]]></guid>
         <pubDate>Wed, 05 Jul 2017 00:00:00 </pubDate>
     </item>
     
@@ -104,18 +104,18 @@
     </item>
     
     <item>
-        <title><![CDATA[Every time you import star a kitten dies Python Developer Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/every-time-you-write-from-module-import-star/]]></link>
-        <description><![CDATA[<p>Python programmers know the pain when having to deal with code that uses module star imports, especially when starting to work on an existing code base that&#8217;s new to them. / A design to raise awareness that star imports are a bad practice when...</p><img src="https://geeksta.net/img/large/every-time-you-write-from-module-import-star.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/every-time-you-write-from-module-import-star/]]></guid>
-        <pubDate>Thu, 02 Mar 2017 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[Python - Blue/Yellow Computer Programmer Design]]></title>
         <link><![CDATA[https://geeksta.net/design/python-blue-yellow/]]></link>
         <description><![CDATA[<p>Python is one of those programming languages that you learn voluntarily if neither school or job require it. Writing Python code can be a real joy, the whole ecosystem and community around it are awesome, it is really easy to like Python a lot. / This...</p><img src="https://geeksta.net/img/large/python-blue-yellow.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/python-blue-yellow/]]></guid>
+        <pubDate>Thu, 02 Mar 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Every time you import star a kitten dies Python Developer Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/every-time-you-write-from-module-import-star/]]></link>
+        <description><![CDATA[<p>Python programmers know the pain when having to deal with code that uses module star imports, especially when starting to work on an existing code base that&#8217;s new to them. / A design to raise awareness that star imports are a bad practice when...</p><img src="https://geeksta.net/img/large/every-time-you-write-from-module-import-star.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/every-time-you-write-from-module-import-star/]]></guid>
         <pubDate>Thu, 02 Mar 2017 00:00:00 </pubDate>
     </item>
     
@@ -144,6 +144,14 @@
     </item>
     
     <item>
+        <title><![CDATA[def procrastinate pass - Programmer Humor for Pythonistas White Font]]></title>
+        <link><![CDATA[https://geeksta.net/design/def-procrastinate-pass-white/]]></link>
+        <description><![CDATA[<p>The verb procrastinate is defined as &#8220;To put off doing something, especially out of habitual carelessness or laziness.&#8221; / One way of saying this with Python code is to define a procrastinate() function that does nothing like so: / def...</p><img src="https://geeksta.net/img/large/def-procrastinate-pass-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/def-procrastinate-pass-white/]]></guid>
+        <pubDate>Mon, 05 Oct 2015 00:00:00 </pubDate>
+    </item>
+    
+    <item>
         <title><![CDATA[Braces not a chance - Humorous Design for Python Programmers White Font]]></title>
         <link><![CDATA[https://geeksta.net/design/braces-not-a-chance-white/]]></link>
         <description><![CDATA[<p>When you type &#8220;from future import braces&#8221; in a Python shell, the interpreter raises a SyntaxError exception with the message &#8220;not a chance&#8221;. / This design is for Python programmers who appreciate significant whitespace and give...</p><img src="https://geeksta.net/img/large/braces-not-a-chance-white.jpg" alt="Preview Image">]]></description>
@@ -160,14 +168,6 @@
     </item>
     
     <item>
-        <title><![CDATA[def procrastinate pass - Programmer Humor for Pythonistas White Font]]></title>
-        <link><![CDATA[https://geeksta.net/design/def-procrastinate-pass-white/]]></link>
-        <description><![CDATA[<p>The verb procrastinate is defined as &#8220;To put off doing something, especially out of habitual carelessness or laziness.&#8221; / One way of saying this with Python code is to define a procrastinate() function that does nothing like so: / def...</p><img src="https://geeksta.net/img/large/def-procrastinate-pass-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/def-procrastinate-pass-white/]]></guid>
-        <pubDate>Mon, 05 Oct 2015 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[Braces not a chance - Humorous Design for Python Programmers Black Font]]></title>
         <link><![CDATA[https://geeksta.net/design/braces-not-a-chance-black/]]></link>
         <description><![CDATA[<p>When you type &#8220;from future import braces&#8221; in a Python shell, the interpreter raises a SyntaxError exception with the message &#8220;not a chance&#8221;. / This design is for Python programmers who appreciate significant whitespace and give...</p><img src="https://geeksta.net/img/large/braces-not-a-chance-black.jpg" alt="Preview Image">]]></description>
@@ -176,18 +176,18 @@
     </item>
     
     <item>
-        <title><![CDATA[Fluent in Python - Black on Blue for Python Programmers]]></title>
-        <link><![CDATA[https://geeksta.net/design/fluent-in-python-black/]]></link>
-        <description><![CDATA[<p>Are you fluent in Python? Show off your skills in the Python programming language with this design featuring the text &#8220;Fluent in Python&#8221; printed in a black font. The standard shirt color is light blue. You can choose other shirt colors and...</p><img src="https://geeksta.net/img/large/fluent-in-python-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/fluent-in-python-black/]]></guid>
-        <pubDate>Fri, 20 Feb 2015 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[Fluent in Python - White on Blue for Python Programmers]]></title>
         <link><![CDATA[https://geeksta.net/design/fluent-in-python-white/]]></link>
         <description><![CDATA[<p>Are you fluent in Python? Show off your skills in the Python programming language with this design featuring the text &#8220;Fluent in Python&#8221; printed in a white font. The standard shirt color is blue. You can choose other shirt colors and products....</p><img src="https://geeksta.net/img/large/fluent-in-python-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/fluent-in-python-white/]]></guid>
+        <pubDate>Fri, 20 Feb 2015 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Fluent in Python - Black on Blue for Python Programmers]]></title>
+        <link><![CDATA[https://geeksta.net/design/fluent-in-python-black/]]></link>
+        <description><![CDATA[<p>Are you fluent in Python? Show off your skills in the Python programming language with this design featuring the text &#8220;Fluent in Python&#8221; printed in a black font. The standard shirt color is light blue. You can choose other shirt colors and...</p><img src="https://geeksta.net/img/large/fluent-in-python-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/fluent-in-python-black/]]></guid>
         <pubDate>Fri, 20 Feb 2015 00:00:00 </pubDate>
     </item>
     

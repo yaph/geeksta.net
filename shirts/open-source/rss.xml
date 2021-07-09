@@ -3,7 +3,7 @@
 <channel><title>Shirts » Open Source</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Open Source</description>
-    <lastBuildDate>Sat, 10 Apr 2021 23:56:23 </lastBuildDate>
+    <lastBuildDate>Sat, 10 Jul 2021 00:44:33 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
@@ -32,14 +32,6 @@
     </item>
     
     <item>
-        <title><![CDATA[Replace War with Peace - Pacifist vi/Vim Geek - Green Text]]></title>
-        <link><![CDATA[https://geeksta.net/design/replace-war-peace-green/]]></link>
-        <description><![CDATA[<p>Humans have a knack for fighting wars. Yet we have also shown that peace is not an utopia. Show that you prefer peace over war in a geeky way with the vi/Vim command :%s/war/peace/g for global replacement of war with peace. / If you are a programmer,...</p><img src="https://geeksta.net/img/large/replace-war-peace-green.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/replace-war-peace-green/]]></guid>
-        <pubDate>Sun, 23 Apr 2017 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[Replace War with Peace - Pacifist vi/Vim Geek - Black Text]]></title>
         <link><![CDATA[https://geeksta.net/design/replace-war-peace-black/]]></link>
         <description><![CDATA[<p>Humans have a knack for fighting wars. Yet we have also shown that peace is not an utopia. Show that you prefer peace over war in a geeky way with the vi/Vim command :%s/war/peace/g for global replacement of war with peace. / If you are a programmer,...</p><img src="https://geeksta.net/img/large/replace-war-peace-black.jpg" alt="Preview Image">]]></description>
@@ -56,18 +48,26 @@
     </item>
     
     <item>
-        <title><![CDATA[:w saves in vi & Vim - Open Source Geek - White Text]]></title>
-        <link><![CDATA[https://geeksta.net/design/w-saves-medium-white/]]></link>
-        <description><![CDATA[<p>Many programmers and system administrators use Vi/Vim to edit text and know all the important commands by heart. New users, especially those accustomed to GUIs, are often baffled by the text-only user interface. / This design simply consists of the text...</p><img src="https://geeksta.net/img/large/w-saves-medium-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/w-saves-medium-white/]]></guid>
+        <title><![CDATA[Replace War with Peace - Pacifist vi/Vim Geek - Green Text]]></title>
+        <link><![CDATA[https://geeksta.net/design/replace-war-peace-green/]]></link>
+        <description><![CDATA[<p>Humans have a knack for fighting wars. Yet we have also shown that peace is not an utopia. Show that you prefer peace over war in a geeky way with the vi/Vim command :%s/war/peace/g for global replacement of war with peace. / If you are a programmer,...</p><img src="https://geeksta.net/img/large/replace-war-peace-green.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/replace-war-peace-green/]]></guid>
+        <pubDate>Sun, 23 Apr 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[never :q! Motivational Design for vi/Vim Geeks - Black Text]]></title>
+        <link><![CDATA[https://geeksta.net/design/never-q-black/]]></link>
+        <description><![CDATA[<p>This motivational design tells you to never give up and to never quit your vi or Vim session without writing changes, unless you are absolutely sure it is the right thing to do. / A design for computer programmers, system administrators and whoever uses vi...</p><img src="https://geeksta.net/img/large/never-q-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/never-q-black/]]></guid>
         <pubDate>Tue, 18 Apr 2017 00:00:00 </pubDate>
     </item>
     
     <item>
-        <title><![CDATA[never :q! Motivational Design for vi/Vim Geeks - White Text]]></title>
-        <link><![CDATA[https://geeksta.net/design/never-q-white/]]></link>
-        <description><![CDATA[<p>This motivational design tells you to never give up and to never quit your vi or Vim session without writing changes, unless you are absolutely sure it is the right thing to do. / A design for computer programmers, system administrators and whoever uses vi...</p><img src="https://geeksta.net/img/large/never-q-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/never-q-white/]]></guid>
+        <title><![CDATA[:w saves in vi & Vim - Open Source Geek - White Text]]></title>
+        <link><![CDATA[https://geeksta.net/design/w-saves-medium-white/]]></link>
+        <description><![CDATA[<p>Many programmers and system administrators use Vi/Vim to edit text and know all the important commands by heart. New users, especially those accustomed to GUIs, are often baffled by the text-only user interface. / This design simply consists of the text...</p><img src="https://geeksta.net/img/large/w-saves-medium-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/w-saves-medium-white/]]></guid>
         <pubDate>Tue, 18 Apr 2017 00:00:00 </pubDate>
     </item>
     
@@ -80,27 +80,11 @@
     </item>
     
     <item>
-        <title><![CDATA[never :q! Motivational Design for vi/Vim Geeks - Black Text]]></title>
-        <link><![CDATA[https://geeksta.net/design/never-q-black/]]></link>
-        <description><![CDATA[<p>This motivational design tells you to never give up and to never quit your vi or Vim session without writing changes, unless you are absolutely sure it is the right thing to do. / A design for computer programmers, system administrators and whoever uses vi...</p><img src="https://geeksta.net/img/large/never-q-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/never-q-black/]]></guid>
+        <title><![CDATA[never :q! Motivational Design for vi/Vim Geeks - White Text]]></title>
+        <link><![CDATA[https://geeksta.net/design/never-q-white/]]></link>
+        <description><![CDATA[<p>This motivational design tells you to never give up and to never quit your vi or Vim session without writing changes, unless you are absolutely sure it is the right thing to do. / A design for computer programmers, system administrators and whoever uses vi...</p><img src="https://geeksta.net/img/large/never-q-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/never-q-white/]]></guid>
         <pubDate>Tue, 18 Apr 2017 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[vi greater than emacs - Code Editor Flame War - White Text Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/vi-gt-emacs-white/]]></link>
-        <description><![CDATA[<p>Computer programmers are typically very passionate when it comes to the topic of text editors. Especially, people who write code in either Emacs or vi are easily offended when you proclaim your preference for the other editor. / If you enjoy programming in...</p><img src="https://geeksta.net/img/large/vi-gt-emacs-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/vi-gt-emacs-white/]]></guid>
-        <pubDate>Sat, 08 Apr 2017 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[vi greater than emacs - Code Editor Flame War - Black Text Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/vi-gt-emacs-black/]]></link>
-        <description><![CDATA[<p>Computer programmers are typically very passionate when it comes to the topic of text editors. Especially, people who write code in either Emacs or vi are easily offended when you proclaim your preference for the other editor. / If you enjoy programming in...</p><img src="https://geeksta.net/img/large/vi-gt-emacs-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/vi-gt-emacs-black/]]></guid>
-        <pubDate>Sat, 08 Apr 2017 00:00:00 </pubDate>
     </item>
     
     <item>
@@ -120,11 +104,19 @@
     </item>
     
     <item>
-        <title><![CDATA[Linux 1991 - Initial Release Year White Text Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/linux-1991-white/]]></link>
-        <description><![CDATA[<p>The free and open source operating system kernel Linux saw its first public release back in 1991, 25 years ago at the time of writing. Celebrate the anniversary one of the most important software projects ever. This design consists of the text &#8220;LINUX...</p><img src="https://geeksta.net/img/large/linux-1991-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/linux-1991-white/]]></guid>
-        <pubDate>Mon, 03 Apr 2017 00:00:00 </pubDate>
+        <title><![CDATA[vi greater than emacs - Code Editor Flame War - Black Text Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/vi-gt-emacs-black/]]></link>
+        <description><![CDATA[<p>Computer programmers are typically very passionate when it comes to the topic of text editors. Especially, people who write code in either Emacs or vi are easily offended when you proclaim your preference for the other editor. / If you enjoy programming in...</p><img src="https://geeksta.net/img/large/vi-gt-emacs-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/vi-gt-emacs-black/]]></guid>
+        <pubDate>Sat, 08 Apr 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[vi greater than emacs - Code Editor Flame War - White Text Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/vi-gt-emacs-white/]]></link>
+        <description><![CDATA[<p>Computer programmers are typically very passionate when it comes to the topic of text editors. Especially, people who write code in either Emacs or vi are easily offended when you proclaim your preference for the other editor. / If you enjoy programming in...</p><img src="https://geeksta.net/img/large/vi-gt-emacs-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/vi-gt-emacs-white/]]></guid>
+        <pubDate>Sat, 08 Apr 2017 00:00:00 </pubDate>
     </item>
     
     <item>
@@ -132,6 +124,14 @@
         <link><![CDATA[https://geeksta.net/design/linux-1991-black/]]></link>
         <description><![CDATA[<p>The free and open source operating system kernel Linux saw its first public release back in 1991, 25 years ago at the time of writing. Celebrate the anniversary one of the most important software projects ever. This design consists of the text &#8220;LINUX...</p><img src="https://geeksta.net/img/large/linux-1991-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/linux-1991-black/]]></guid>
+        <pubDate>Mon, 03 Apr 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Linux 1991 - Initial Release Year White Text Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/linux-1991-white/]]></link>
+        <description><![CDATA[<p>The free and open source operating system kernel Linux saw its first public release back in 1991, 25 years ago at the time of writing. Celebrate the anniversary one of the most important software projects ever. This design consists of the text &#8220;LINUX...</p><img src="https://geeksta.net/img/large/linux-1991-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/linux-1991-white/]]></guid>
         <pubDate>Mon, 03 Apr 2017 00:00:00 </pubDate>
     </item>
     

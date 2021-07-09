@@ -3,23 +3,23 @@
 <channel><title>Shirts » Sysadmin</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Sysadmin</description>
-    <lastBuildDate>Sat, 10 Apr 2021 23:56:23 </lastBuildDate>
+    <lastBuildDate>Sat, 10 Jul 2021 00:44:33 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
-    
-    <item>
-        <title><![CDATA[Core Dumps Happen Black Pun Design For Computer Sysadmins]]></title>
-        <link><![CDATA[https://geeksta.net/design/core-dumps-happen-black/]]></link>
-        <description><![CDATA[<p>A core dump in computing consists of the recorded state of the working memory of a computer program that has crashed. As a sysadmin you are hopefully able to analyze the dump and maybe even fix the problem that caused the crash. A funny pun design for...</p><img src="https://geeksta.net/img/large/core-dumps-happen-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/core-dumps-happen-black/]]></guid>
-        <pubDate>Tue, 31 Dec 2019 00:00:00 </pubDate>
-    </item>
     
     <item>
         <title><![CDATA[Core Dumps Happen White Pun Design For Computer Sysadmins]]></title>
         <link><![CDATA[https://geeksta.net/design/core-dumps-happen-white/]]></link>
         <description><![CDATA[<p>A core dump in computing consists of the recorded state of the working memory of a computer program that has crashed. As a sysadmin you are hopefully able to analyze the dump and maybe even fix the problem that caused the crash. A funny pun design for...</p><img src="https://geeksta.net/img/large/core-dumps-happen-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/core-dumps-happen-white/]]></guid>
+        <pubDate>Tue, 31 Dec 2019 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Core Dumps Happen Black Pun Design For Computer Sysadmins]]></title>
+        <link><![CDATA[https://geeksta.net/design/core-dumps-happen-black/]]></link>
+        <description><![CDATA[<p>A core dump in computing consists of the recorded state of the working memory of a computer program that has crashed. As a sysadmin you are hopefully able to analyze the dump and maybe even fix the problem that caused the crash. A funny pun design for...</p><img src="https://geeksta.net/img/large/core-dumps-happen-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/core-dumps-happen-black/]]></guid>
         <pubDate>Tue, 31 Dec 2019 00:00:00 </pubDate>
     </item>
     
@@ -48,18 +48,18 @@
     </item>
     
     <item>
-        <title><![CDATA[bin bash Design for Command Line Hackers White Text]]></title>
-        <link><![CDATA[https://geeksta.net/design/bin-bash-condensed-white/]]></link>
-        <description><![CDATA[<p>A design for computer geeks who like to work on the command line and use the Bourne-again shell, a.k.a. bash. It shows the text &#8220;#!/bin/bash&#8221; in a condensed monospace font. Show that bash is your favorite operating system shell with a simple...</p><img src="https://geeksta.net/img/large/bin-bash-condensed-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/bin-bash-condensed-white/]]></guid>
-        <pubDate>Wed, 25 Oct 2017 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[bin bash Design for Command Line Hackers Cooling Blue Text]]></title>
         <link><![CDATA[https://geeksta.net/design/bin-bash-condensed-cooling-blue/]]></link>
         <description><![CDATA[<p>A design for computer geeks who like to work on the command line and use the Bourne-again shell, a.k.a. bash. It shows the text &#8220;#!/bin/bash&#8221; in a condensed monospace font. Show that bash is your favorite operating system shell with a simple...</p><img src="https://geeksta.net/img/large/bin-bash-condensed-cooling-blue.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/bin-bash-condensed-cooling-blue/]]></guid>
+        <pubDate>Wed, 25 Oct 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[bin bash Design for Command Line Hackers White Text]]></title>
+        <link><![CDATA[https://geeksta.net/design/bin-bash-condensed-white/]]></link>
+        <description><![CDATA[<p>A design for computer geeks who like to work on the command line and use the Bourne-again shell, a.k.a. bash. It shows the text &#8220;#!/bin/bash&#8221; in a condensed monospace font. Show that bash is your favorite operating system shell with a simple...</p><img src="https://geeksta.net/img/large/bin-bash-condensed-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/bin-bash-condensed-white/]]></guid>
         <pubDate>Wed, 25 Oct 2017 00:00:00 </pubDate>
     </item>
     
@@ -72,10 +72,10 @@
     </item>
     
     <item>
-        <title><![CDATA[There Are Two Types of People Regarding Backups - Green Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/there-are-two-types-of-people-backups-green/]]></link>
-        <description><![CDATA[<p>If you store any kind of valuable data on a computer, doing backups is essential. Every system administrator knows this and many people learn it the hard way. Either you do backups or you will after you experienced data loss. / Be the Friendly SysAdmin and...</p><img src="https://geeksta.net/img/large/there-are-two-types-of-people-backups-green.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/there-are-two-types-of-people-backups-green/]]></guid>
+        <title><![CDATA[There Are Two Types of People Regarding Backups - White Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/there-are-two-types-of-people-backups-white/]]></link>
+        <description><![CDATA[<p>If you store any kind of valuable data on a computer, doing backups is essential. Every system administrator knows this and many people learn it the hard way. Either you do backups or you will after you experienced data loss. / Be the Friendly SysAdmin and...</p><img src="https://geeksta.net/img/large/there-are-two-types-of-people-backups-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/there-are-two-types-of-people-backups-white/]]></guid>
         <pubDate>Mon, 21 Aug 2017 00:00:00 </pubDate>
     </item>
     
@@ -88,19 +88,11 @@
     </item>
     
     <item>
-        <title><![CDATA[There Are Two Types of People Regarding Backups - White Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/there-are-two-types-of-people-backups-white/]]></link>
-        <description><![CDATA[<p>If you store any kind of valuable data on a computer, doing backups is essential. Every system administrator knows this and many people learn it the hard way. Either you do backups or you will after you experienced data loss. / Be the Friendly SysAdmin and...</p><img src="https://geeksta.net/img/large/there-are-two-types-of-people-backups-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/there-are-two-types-of-people-backups-white/]]></guid>
+        <title><![CDATA[There Are Two Types of People Regarding Backups - Green Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/there-are-two-types-of-people-backups-green/]]></link>
+        <description><![CDATA[<p>If you store any kind of valuable data on a computer, doing backups is essential. Every system administrator knows this and many people learn it the hard way. Either you do backups or you will after you experienced data loss. / Be the Friendly SysAdmin and...</p><img src="https://geeksta.net/img/large/there-are-two-types-of-people-backups-green.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/there-are-two-types-of-people-backups-green/]]></guid>
         <pubDate>Mon, 21 Aug 2017 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Fork Bomb - Sysadmin Bash Command White Text]]></title>
-        <link><![CDATA[https://geeksta.net/design/bash-fork-bomb-condensed-white/]]></link>
-        <description><![CDATA[<p>Every computer system administrator should know what a fork bomb is and recognize the Bourne-again shell of this type of denial-of-service (DoS) attack. It should even be in their toolbelt for example to test user process limits. Do you agree? / A simple...</p><img src="https://geeksta.net/img/large/bash-fork-bomb-condensed-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/bash-fork-bomb-condensed-white/]]></guid>
-        <pubDate>Thu, 03 Aug 2017 00:00:00 </pubDate>
     </item>
     
     <item>
@@ -112,11 +104,11 @@
     </item>
     
     <item>
-        <title><![CDATA[got backups? Funny System Administrator Design - White Text]]></title>
-        <link><![CDATA[https://geeksta.net/design/got-backups-white/]]></link>
-        <description><![CDATA[<p>Backing up your important documents and data is an essential thing to do if you want to avoid tears because of data loss. Casual computer users are often unaware of that, so be a responsible computer expert and remind people of creating backups. / A simple...</p><img src="https://geeksta.net/img/large/got-backups-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/got-backups-white/]]></guid>
-        <pubDate>Fri, 16 Jun 2017 00:00:00 </pubDate>
+        <title><![CDATA[Fork Bomb - Sysadmin Bash Command White Text]]></title>
+        <link><![CDATA[https://geeksta.net/design/bash-fork-bomb-condensed-white/]]></link>
+        <description><![CDATA[<p>Every computer system administrator should know what a fork bomb is and recognize the Bourne-again shell of this type of denial-of-service (DoS) attack. It should even be in their toolbelt for example to test user process limits. Do you agree? / A simple...</p><img src="https://geeksta.net/img/large/bash-fork-bomb-condensed-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/bash-fork-bomb-condensed-white/]]></guid>
+        <pubDate>Thu, 03 Aug 2017 00:00:00 </pubDate>
     </item>
     
     <item>
@@ -128,11 +120,11 @@
     </item>
     
     <item>
-        <title><![CDATA[:x How to exit the Vim editor - Black Text Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/colon-x-black/]]></link>
-        <description><![CDATA[<p>A funny design for computer geeks and nerds who use vi or Vim to write code and text. It shows one way to exit Vim by typing &#8220;:x&#8221; to save changes and close the editor. Arguably the most efficient if you want to keep changes. This is essential...</p><img src="https://geeksta.net/img/large/colon-x-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/colon-x-black/]]></guid>
-        <pubDate>Wed, 24 May 2017 00:00:00 </pubDate>
+        <title><![CDATA[got backups? Funny System Administrator Design - White Text]]></title>
+        <link><![CDATA[https://geeksta.net/design/got-backups-white/]]></link>
+        <description><![CDATA[<p>Backing up your important documents and data is an essential thing to do if you want to avoid tears because of data loss. Casual computer users are often unaware of that, so be a responsible computer expert and remind people of creating backups. / A simple...</p><img src="https://geeksta.net/img/large/got-backups-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/got-backups-white/]]></guid>
+        <pubDate>Fri, 16 Jun 2017 00:00:00 </pubDate>
     </item>
     
     <item>
@@ -140,6 +132,14 @@
         <link><![CDATA[https://geeksta.net/design/colon-x-white/]]></link>
         <description><![CDATA[<p>A funny design for computer geeks and nerds who use vi or Vim to write code and text. It shows one way to exit Vim by typing &#8220;:x&#8221; to save changes and close the editor. Arguably the most efficient if you want to keep changes. This is essential...</p><img src="https://geeksta.net/img/large/colon-x-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/colon-x-white/]]></guid>
+        <pubDate>Wed, 24 May 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[:x How to exit the Vim editor - Black Text Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/colon-x-black/]]></link>
+        <description><![CDATA[<p>A funny design for computer geeks and nerds who use vi or Vim to write code and text. It shows one way to exit Vim by typing &#8220;:x&#8221; to save changes and close the editor. Arguably the most efficient if you want to keep changes. This is essential...</p><img src="https://geeksta.net/img/large/colon-x-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/colon-x-black/]]></guid>
         <pubDate>Wed, 24 May 2017 00:00:00 </pubDate>
     </item>
     
@@ -160,18 +160,18 @@
     </item>
     
     <item>
-        <title><![CDATA[chmod 666 - Linux/Unix Sysadmin Black Parody Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/chmod-666-black/]]></link>
-        <description><![CDATA[<p>A design for Linux/Unix geeks &amp; nerds who are into Rock&#8217;n&#8217;Roll, Heavy Metal, getting on the road and working in the terminal of their computer operating system. It shows the text &#8220;chmod 666&#8221; in a road sign style shield. The...</p><img src="https://geeksta.net/img/large/chmod-666-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/chmod-666-black/]]></guid>
-        <pubDate>Mon, 22 May 2017 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[chmod 666 - Linux/Unix Sysadmin White Parody Design]]></title>
         <link><![CDATA[https://geeksta.net/design/chmod-666-white/]]></link>
         <description><![CDATA[<p>A design for Linux/Unix geeks &amp; nerds who are into Rock&#8217;n&#8217;Roll, Heavy Metal, getting on the road and working in the terminal of their computer operating system. It shows the text &#8220;chmod 666&#8221; in a road sign style shield. The...</p><img src="https://geeksta.net/img/large/chmod-666-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/chmod-666-white/]]></guid>
+        <pubDate>Mon, 22 May 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[chmod 666 - Linux/Unix Sysadmin Black Parody Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/chmod-666-black/]]></link>
+        <description><![CDATA[<p>A design for Linux/Unix geeks &amp; nerds who are into Rock&#8217;n&#8217;Roll, Heavy Metal, getting on the road and working in the terminal of their computer operating system. It shows the text &#8220;chmod 666&#8221; in a road sign style shield. The...</p><img src="https://geeksta.net/img/large/chmod-666-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/chmod-666-black/]]></guid>
         <pubDate>Mon, 22 May 2017 00:00:00 </pubDate>
     </item>
     
@@ -193,17 +193,17 @@
     
     <item>
         <title><![CDATA[I think therefore I am root - Computer Admin Parody Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/i-think-therefore-i-am-root-white/]]></link>
-        <description><![CDATA[<p>This design for computer system administrators shows the text &#8220;I think therefore I am root&#8221; in narrow white typefaces for good contrast with dark colors. It is a parody on the famous proposition &#8220;Cogito ergo sum&#8221; (I think, therefore...</p><img src="https://geeksta.net/img/large/i-think-therefore-i-am-root-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/i-think-therefore-i-am-root-white/]]></guid>
+        <link><![CDATA[https://geeksta.net/design/i-think-therefore-i-am-root-black/]]></link>
+        <description><![CDATA[<p>This design for computer system administrators shows the text &#8220;I think therefore I am root&#8221; in narrow white typefaces for good contrast with dark colors. It is a parody on the famous proposition &#8220;Cogito ergo sum&#8221; (I think, therefore...</p><img src="https://geeksta.net/img/large/i-think-therefore-i-am-root-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/i-think-therefore-i-am-root-black/]]></guid>
         <pubDate>Tue, 04 Apr 2017 00:00:00 </pubDate>
     </item>
     
     <item>
         <title><![CDATA[I think therefore I am root - Computer Admin Parody Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/i-think-therefore-i-am-root-black/]]></link>
-        <description><![CDATA[<p>This design for computer system administrators shows the text &#8220;I think therefore I am root&#8221; in narrow white typefaces for good contrast with dark colors. It is a parody on the famous proposition &#8220;Cogito ergo sum&#8221; (I think, therefore...</p><img src="https://geeksta.net/img/large/i-think-therefore-i-am-root-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/i-think-therefore-i-am-root-black/]]></guid>
+        <link><![CDATA[https://geeksta.net/design/i-think-therefore-i-am-root-white/]]></link>
+        <description><![CDATA[<p>This design for computer system administrators shows the text &#8220;I think therefore I am root&#8221; in narrow white typefaces for good contrast with dark colors. It is a parody on the famous proposition &#8220;Cogito ergo sum&#8221; (I think, therefore...</p><img src="https://geeksta.net/img/large/i-think-therefore-i-am-root-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/i-think-therefore-i-am-root-white/]]></guid>
         <pubDate>Tue, 04 Apr 2017 00:00:00 </pubDate>
     </item>
     

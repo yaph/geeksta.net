@@ -3,7 +3,7 @@
 <channel><title>Shirts » Web Development</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Web Development</description>
-    <lastBuildDate>Sat, 10 Apr 2021 23:56:23 </lastBuildDate>
+    <lastBuildDate>Sat, 10 Jul 2021 00:44:33 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
@@ -72,18 +72,18 @@
     </item>
     
     <item>
-        <title><![CDATA[BROWSER WAR VETERAN - Black Text Design for Web Developers]]></title>
-        <link><![CDATA[https://geeksta.net/design/browser-war-veteran-black/]]></link>
-        <description><![CDATA[<p>The first browser war happened during the late 1990s and the main opponents were Microsoft Internet Explorer and Netscape Navigator. If you developed for the World Wide Web in those dark ages you&#8217;re a true Browser War Veteran. / The fight for browser...</p><img src="https://geeksta.net/img/large/browser-war-veteran-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/browser-war-veteran-black/]]></guid>
-        <pubDate>Mon, 05 Oct 2015 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[BROWSER WAR VETERAN - White Text Design for Web Developers]]></title>
         <link><![CDATA[https://geeksta.net/design/browser-war-veteran-white/]]></link>
         <description><![CDATA[<p>The first browser war happened during the late 1990s and the main opponents were Microsoft Internet Explorer and Netscape Navigator. If you developed for the World Wide Web in those dark ages you&#8217;re a true Browser War Veteran. / The fight for browser...</p><img src="https://geeksta.net/img/large/browser-war-veteran-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/browser-war-veteran-white/]]></guid>
+        <pubDate>Mon, 05 Oct 2015 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[BROWSER WAR VETERAN - Black Text Design for Web Developers]]></title>
+        <link><![CDATA[https://geeksta.net/design/browser-war-veteran-black/]]></link>
+        <description><![CDATA[<p>The first browser war happened during the late 1990s and the main opponents were Microsoft Internet Explorer and Netscape Navigator. If you developed for the World Wide Web in those dark ages you&#8217;re a true Browser War Veteran. / The fight for browser...</p><img src="https://geeksta.net/img/large/browser-war-veteran-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/browser-war-veteran-black/]]></guid>
         <pubDate>Mon, 05 Oct 2015 00:00:00 </pubDate>
     </item>
     

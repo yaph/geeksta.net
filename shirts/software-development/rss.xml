@@ -3,7 +3,7 @@
 <channel><title>Shirts » Software Development</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Software Development</description>
-    <lastBuildDate>Sat, 10 Apr 2021 23:56:23 </lastBuildDate>
+    <lastBuildDate>Sat, 10 Jul 2021 00:44:33 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
@@ -24,14 +24,6 @@
     </item>
     
     <item>
-        <title><![CDATA[It Works In My Container Funny Developer Design White/Green]]></title>
-        <link><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-v-white-green/]]></link>
-        <description><![CDATA[<p>IT teams who practice DevOps often use containers in their workflow. In such an environment &#8220;It works in my container&#8221; is a programmer excuse you may here more often than its popular predecessor &#8220;It works on my machine&#8221;. / A design...</p><img src="https://geeksta.net/img/large/shrug-it-works-in-my-container-v-white-green.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-v-white-green/]]></guid>
-        <pubDate>Sun, 12 Nov 2017 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[It Works In My Container Funny Developer Design White]]></title>
         <link><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-v-white/]]></link>
         <description><![CDATA[<p>IT teams who practice DevOps often use containers in their workflow. In such an environment &#8220;It works in my container&#8221; is a programmer excuse you may here more often than its popular predecessor &#8220;It works on my machine&#8221;. / A design...</p><img src="https://geeksta.net/img/large/shrug-it-works-in-my-container-v-white.jpg" alt="Preview Image">]]></description>
@@ -44,6 +36,14 @@
         <link><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-v-black/]]></link>
         <description><![CDATA[<p>IT teams who practice DevOps often use containers in their workflow. In such an environment &#8220;It works in my container&#8221; is a programmer excuse you may here more often than its popular predecessor &#8220;It works on my machine&#8221;. / A design...</p><img src="https://geeksta.net/img/large/shrug-it-works-in-my-container-v-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-v-black/]]></guid>
+        <pubDate>Sun, 12 Nov 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[It Works In My Container Funny Developer Design White/Green]]></title>
+        <link><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-v-white-green/]]></link>
+        <description><![CDATA[<p>IT teams who practice DevOps often use containers in their workflow. In such an environment &#8220;It works in my container&#8221; is a programmer excuse you may here more often than its popular predecessor &#8220;It works on my machine&#8221;. / A design...</p><img src="https://geeksta.net/img/large/shrug-it-works-in-my-container-v-white-green.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-v-white-green/]]></guid>
         <pubDate>Sun, 12 Nov 2017 00:00:00 </pubDate>
     </item>
     
@@ -72,14 +72,6 @@
     </item>
     
     <item>
-        <title><![CDATA[Weeks of programming can save you hours of planning - Black Text]]></title>
-        <link><![CDATA[https://geeksta.net/design/weeks-of-programming-black/]]></link>
-        <description><![CDATA[<p>Trying to save time in the wrong place typically results in more work, in case of software projects you also get additional bugs for free. Be bold and let your co-workers know that planing is an important part of writing code. / A funny design for computer...</p><img src="https://geeksta.net/img/large/weeks-of-programming-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/weeks-of-programming-black/]]></guid>
-        <pubDate>Sat, 13 May 2017 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[Weeks of programming can save you hours of planning - White Text]]></title>
         <link><![CDATA[https://geeksta.net/design/weeks-of-programming-white/]]></link>
         <description><![CDATA[<p>Trying to save time in the wrong place typically results in more work, in case of software projects you also get additional bugs for free. Be bold and let your co-workers know that planing is an important part of writing code. / A funny design for computer...</p><img src="https://geeksta.net/img/large/weeks-of-programming-white.jpg" alt="Preview Image">]]></description>
@@ -88,11 +80,11 @@
     </item>
     
     <item>
-        <title><![CDATA[Code Rebel - git push --force - Software Developer Design - White]]></title>
-        <link><![CDATA[https://geeksta.net/design/git-rebel-white/]]></link>
-        <description><![CDATA[<p>Using the force option of the git push command is usually frowned upon in software development projects. But being a rebel coder means to oppose rules and push with force when necessary. / This design is for computer programmers who like to live...</p><img src="https://geeksta.net/img/large/git-rebel-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/git-rebel-white/]]></guid>
-        <pubDate>Mon, 17 Apr 2017 00:00:00 </pubDate>
+        <title><![CDATA[Weeks of programming can save you hours of planning - Black Text]]></title>
+        <link><![CDATA[https://geeksta.net/design/weeks-of-programming-black/]]></link>
+        <description><![CDATA[<p>Trying to save time in the wrong place typically results in more work, in case of software projects you also get additional bugs for free. Be bold and let your co-workers know that planing is an important part of writing code. / A funny design for computer...</p><img src="https://geeksta.net/img/large/weeks-of-programming-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/weeks-of-programming-black/]]></guid>
+        <pubDate>Sat, 13 May 2017 00:00:00 </pubDate>
     </item>
     
     <item>
@@ -100,6 +92,14 @@
         <link><![CDATA[https://geeksta.net/design/git-rebel-black/]]></link>
         <description><![CDATA[<p>Using the force option of the git push command is usually frowned upon in software development projects. But being a rebel coder means to oppose rules and push with force when necessary. / This design is for computer programmers who like to live...</p><img src="https://geeksta.net/img/large/git-rebel-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/git-rebel-black/]]></guid>
+        <pubDate>Mon, 17 Apr 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Code Rebel - git push --force - Software Developer Design - White]]></title>
+        <link><![CDATA[https://geeksta.net/design/git-rebel-white/]]></link>
+        <description><![CDATA[<p>Using the force option of the git push command is usually frowned upon in software development projects. But being a rebel coder means to oppose rules and push with force when necessary. / This design is for computer programmers who like to live...</p><img src="https://geeksta.net/img/large/git-rebel-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/git-rebel-white/]]></guid>
         <pubDate>Mon, 17 Apr 2017 00:00:00 </pubDate>
     </item>
     
@@ -120,6 +120,14 @@
     </item>
     
     <item>
+        <title><![CDATA[BUG HUNTER with Keyboard - Design for Test Engineers Black Font]]></title>
+        <link><![CDATA[https://geeksta.net/design/bug-hunter-keyboard-black/]]></link>
+        <description><![CDATA[<p>Whether you are a dedicated test engineer working on quality assurance in software projects or a regular programmer, bug hunting is part of your job. Show that you are a notorious bug hunter with this design that features the text &#8220;BUG HUNTER&#8221;...</p><img src="https://geeksta.net/img/large/bug-hunter-keyboard-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/bug-hunter-keyboard-black/]]></guid>
+        <pubDate>Fri, 18 Mar 2016 00:00:00 </pubDate>
+    </item>
+    
+    <item>
         <title><![CDATA[BUG HUNTER with Keyboard - Design for Test Engineers White Font]]></title>
         <link><![CDATA[https://geeksta.net/design/bug-hunter-keyboard-white/]]></link>
         <description><![CDATA[<p>Whether you are a dedicated test engineer working on quality assurance in software projects or a regular programmer, bug hunting is part of your job. Show that you are a notorious bug hunter with this design that features the text &#8220;BUG HUNTER&#8221;...</p><img src="https://geeksta.net/img/large/bug-hunter-keyboard-white.jpg" alt="Preview Image">]]></description>
@@ -136,11 +144,11 @@
     </item>
     
     <item>
-        <title><![CDATA[BUG HUNTER with Keyboard - Design for Test Engineers Black Font]]></title>
-        <link><![CDATA[https://geeksta.net/design/bug-hunter-keyboard-black/]]></link>
-        <description><![CDATA[<p>Whether you are a dedicated test engineer working on quality assurance in software projects or a regular programmer, bug hunting is part of your job. Show that you are a notorious bug hunter with this design that features the text &#8220;BUG HUNTER&#8221;...</p><img src="https://geeksta.net/img/large/bug-hunter-keyboard-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/bug-hunter-keyboard-black/]]></guid>
-        <pubDate>Fri, 18 Mar 2016 00:00:00 </pubDate>
+        <title><![CDATA[Shrug it works on my machine - Programmer Excuse Design - Grey Text]]></title>
+        <link><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-medium-black/]]></link>
+        <description><![CDATA[<p>This design consists of the unicode emoticon for shrugging your shoulders and smiling and the text &#8220;it works on my machine&#8221;, one of the most frequent excuses you hear when confronting a programmer with a bug. / The design elements are dark grey...</p><img src="https://geeksta.net/img/large/shrug-it-works-on-my-machine-medium-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-medium-black/]]></guid>
+        <pubDate>Tue, 10 Nov 2015 00:00:00 </pubDate>
     </item>
     
     <item>
@@ -148,14 +156,6 @@
         <link><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-medium-white/]]></link>
         <description><![CDATA[<p>This design consists of the unicode emoticon for shrugging your shoulders and smiling and the text &#8220;it works on my machine&#8221;, one of the most frequent excuses you hear when confronting a programmer with a bug. / The design elements are white and...</p><img src="https://geeksta.net/img/large/shrug-it-works-on-my-machine-medium-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-medium-white/]]></guid>
-        <pubDate>Tue, 10 Nov 2015 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Shrug it works on my machine - Programmer Excuse Design - Grey Text]]></title>
-        <link><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-medium-black/]]></link>
-        <description><![CDATA[<p>This design consists of the unicode emoticon for shrugging your shoulders and smiling and the text &#8220;it works on my machine&#8221;, one of the most frequent excuses you hear when confronting a programmer with a bug. / The design elements are dark grey...</p><img src="https://geeksta.net/img/large/shrug-it-works-on-my-machine-medium-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-medium-black/]]></guid>
         <pubDate>Tue, 10 Nov 2015 00:00:00 </pubDate>
     </item>
     
@@ -176,14 +176,6 @@
     </item>
     
     <item>
-        <title><![CDATA[Full Stack Developer - Design for Web Developers White Font]]></title>
-        <link><![CDATA[https://geeksta.net/design/full-stack-developer-white/]]></link>
-        <description><![CDATA[<p>Full stack developer is a relatively young term mostly used in a Web development context. It refers to developers who have working experience and knowledge about databases, the whole application stack on servers (back end), network communication, and the...</p><img src="https://geeksta.net/img/large/full-stack-developer-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/full-stack-developer-white/]]></guid>
-        <pubDate>Mon, 02 Nov 2015 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[Full Stack Developer - Design for Web Developers Black Font]]></title>
         <link><![CDATA[https://geeksta.net/design/full-stack-developer-black/]]></link>
         <description><![CDATA[<p>Full stack developer is a relatively young term mostly used in a Web development context. It refers to developers who have working experience and knowledge about databases, the whole application stack on servers (back end), network communication, and the...</p><img src="https://geeksta.net/img/large/full-stack-developer-black.jpg" alt="Preview Image">]]></description>
@@ -196,6 +188,14 @@
         <link><![CDATA[https://geeksta.net/design/full-stack-developer-green/]]></link>
         <description><![CDATA[<p>Full stack developer is a relatively young term mostly used in a Web development context. It refers to developers who have working experience and knowledge about databases, the whole application stack on servers (back end), network communication, and the...</p><img src="https://geeksta.net/img/large/full-stack-developer-green.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/full-stack-developer-green/]]></guid>
+        <pubDate>Mon, 02 Nov 2015 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Full Stack Developer - Design for Web Developers White Font]]></title>
+        <link><![CDATA[https://geeksta.net/design/full-stack-developer-white/]]></link>
+        <description><![CDATA[<p>Full stack developer is a relatively young term mostly used in a Web development context. It refers to developers who have working experience and knowledge about databases, the whole application stack on servers (back end), network communication, and the...</p><img src="https://geeksta.net/img/large/full-stack-developer-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/full-stack-developer-white/]]></guid>
         <pubDate>Mon, 02 Nov 2015 00:00:00 </pubDate>
     </item>
     

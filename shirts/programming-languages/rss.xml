@@ -3,7 +3,7 @@
 <channel><title>Shirts » Programming Languages</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Programming Languages</description>
-    <lastBuildDate>Sat, 10 Apr 2021 23:56:23 </lastBuildDate>
+    <lastBuildDate>Sat, 10 Jul 2021 00:44:33 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
@@ -25,17 +25,17 @@
     
     <item>
         <title><![CDATA[There Are Two Types of Programming Languages - Green Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/there-are-two-types-of-programming-languages-green/]]></link>
-        <description><![CDATA[<p>People love to argue about things they are passionate about and for many computer programmers, programming languages are a topic of contention. Languages like C++, Java, JavaScript and PHP get a lot of hate, but they are the ones being used a lot. / You...</p><img src="https://geeksta.net/img/large/there-are-two-types-of-programming-languages-green.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/there-are-two-types-of-programming-languages-green/]]></guid>
+        <link><![CDATA[https://geeksta.net/design/there-are-two-types-of-programming-languages-white/]]></link>
+        <description><![CDATA[<p>People love to argue about things they are passionate about and for many computer programmers, programming languages are a topic of contention. Languages like C++, Java, JavaScript and PHP get a lot of hate, but they are the ones being used a lot. / You...</p><img src="https://geeksta.net/img/large/there-are-two-types-of-programming-languages-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/there-are-two-types-of-programming-languages-white/]]></guid>
         <pubDate>Mon, 16 Oct 2017 00:00:00 </pubDate>
     </item>
     
     <item>
         <title><![CDATA[There Are Two Types of Programming Languages - Green Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/there-are-two-types-of-programming-languages-white/]]></link>
-        <description><![CDATA[<p>People love to argue about things they are passionate about and for many computer programmers, programming languages are a topic of contention. Languages like C++, Java, JavaScript and PHP get a lot of hate, but they are the ones being used a lot. / You...</p><img src="https://geeksta.net/img/large/there-are-two-types-of-programming-languages-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/there-are-two-types-of-programming-languages-white/]]></guid>
+        <link><![CDATA[https://geeksta.net/design/there-are-two-types-of-programming-languages-green/]]></link>
+        <description><![CDATA[<p>People love to argue about things they are passionate about and for many computer programmers, programming languages are a topic of contention. Languages like C++, Java, JavaScript and PHP get a lot of hate, but they are the ones being used a lot. / You...</p><img src="https://geeksta.net/img/large/there-are-two-types-of-programming-languages-green.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/there-are-two-types-of-programming-languages-green/]]></guid>
         <pubDate>Mon, 16 Oct 2017 00:00:00 </pubDate>
     </item>
     
@@ -72,18 +72,18 @@
     </item>
     
     <item>
-        <title><![CDATA[Java not equals JavaScript Bugged Programmer Design - Black Text]]></title>
-        <link><![CDATA[https://geeksta.net/design/java-not-equals-javascript-black/]]></link>
-        <description><![CDATA[<p>Does it bug you when people say Java when they actually mean JavaScript? It is a fairly common misconception that these 2 names refer to the same programming language, even among programmers, web developers or whatever their work contracts say. / A design...</p><img src="https://geeksta.net/img/large/java-not-equals-javascript-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/java-not-equals-javascript-black/]]></guid>
-        <pubDate>Sat, 08 Apr 2017 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[Java not equals JavaScript Bugged Programmer Design - White Text]]></title>
         <link><![CDATA[https://geeksta.net/design/java-not-equals-javascript-white/]]></link>
         <description><![CDATA[<p>Does it bug you when people say Java when they actually mean JavaScript? It is a fairly common misconception that these 2 names refer to the same programming language, even among programmers, web developers or whatever their work contracts say. / A design...</p><img src="https://geeksta.net/img/large/java-not-equals-javascript-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/java-not-equals-javascript-white/]]></guid>
+        <pubDate>Sat, 08 Apr 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Java not equals JavaScript Bugged Programmer Design - Black Text]]></title>
+        <link><![CDATA[https://geeksta.net/design/java-not-equals-javascript-black/]]></link>
+        <description><![CDATA[<p>Does it bug you when people say Java when they actually mean JavaScript? It is a fairly common misconception that these 2 names refer to the same programming language, even among programmers, web developers or whatever their work contracts say. / A design...</p><img src="https://geeksta.net/img/large/java-not-equals-javascript-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/java-not-equals-javascript-black/]]></guid>
         <pubDate>Sat, 08 Apr 2017 00:00:00 </pubDate>
     </item>
     
@@ -160,14 +160,6 @@
     </item>
     
     <item>
-        <title><![CDATA[Fluent in Ruby - Black on Red for Ruby Programmers]]></title>
-        <link><![CDATA[https://geeksta.net/design/fluent-in-ruby-black/]]></link>
-        <description><![CDATA[<p>Are you fluent in Ruby? Show off your skills in the Ruby programming language with this design featuring the text &#8220;Fluent in Ruby&#8221; printed in a black font. The standard shirt color is red. You can choose other shirt colors and products. / If...</p><img src="https://geeksta.net/img/large/fluent-in-ruby-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/fluent-in-ruby-black/]]></guid>
-        <pubDate>Mon, 05 Oct 2015 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[Fluent in Ruby - White on Dark Red for Ruby Programmers]]></title>
         <link><![CDATA[https://geeksta.net/design/fluent-in-ruby-white/]]></link>
         <description><![CDATA[<p>Are you fluent in Ruby? Show off your skills in the Ruby programming language with this design featuring the text &#8220;Fluent in Ruby&#8221; printed in a white font. The standard shirt color is dark red. You can choose other shirt colors and products. /...</p><img src="https://geeksta.net/img/large/fluent-in-ruby-white.jpg" alt="Preview Image">]]></description>
@@ -176,11 +168,11 @@
     </item>
     
     <item>
-        <title><![CDATA[#!/usr/bin/perl - White Text for Perl Programmers]]></title>
-        <link><![CDATA[https://geeksta.net/design/usr-bin-perl-white/]]></link>
-        <description><![CDATA[<p>A design for Perl programmers with the text &#8220;#!/usr/bin/perl&#8221; in a white monospace font. This line locates the path to the perl executable, that will interpret the script. It is among other names referred to as the hashbang line. • Millions of...</p><img src="https://geeksta.net/img/large/usr-bin-perl-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/usr-bin-perl-white/]]></guid>
-        <pubDate>Sun, 04 Oct 2015 00:00:00 </pubDate>
+        <title><![CDATA[Fluent in Ruby - Black on Red for Ruby Programmers]]></title>
+        <link><![CDATA[https://geeksta.net/design/fluent-in-ruby-black/]]></link>
+        <description><![CDATA[<p>Are you fluent in Ruby? Show off your skills in the Ruby programming language with this design featuring the text &#8220;Fluent in Ruby&#8221; printed in a black font. The standard shirt color is red. You can choose other shirt colors and products. / If...</p><img src="https://geeksta.net/img/large/fluent-in-ruby-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/fluent-in-ruby-black/]]></guid>
+        <pubDate>Mon, 05 Oct 2015 00:00:00 </pubDate>
     </item>
     
     <item>
@@ -188,6 +180,14 @@
         <link><![CDATA[https://geeksta.net/design/usr-bin-perl-black/]]></link>
         <description><![CDATA[<p>A design for Perl programmers with the text &#8220;#!/usr/bin/perl&#8221; in a black monospace font. This line locates the path to the perl executable, that will interpret the script. It is among other names referred to as the hashbang line. • Millions of...</p><img src="https://geeksta.net/img/large/usr-bin-perl-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/usr-bin-perl-black/]]></guid>
+        <pubDate>Sun, 04 Oct 2015 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[#!/usr/bin/perl - White Text for Perl Programmers]]></title>
+        <link><![CDATA[https://geeksta.net/design/usr-bin-perl-white/]]></link>
+        <description><![CDATA[<p>A design for Perl programmers with the text &#8220;#!/usr/bin/perl&#8221; in a white monospace font. This line locates the path to the perl executable, that will interpret the script. It is among other names referred to as the hashbang line. • Millions of...</p><img src="https://geeksta.net/img/large/usr-bin-perl-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/usr-bin-perl-white/]]></guid>
         <pubDate>Sun, 04 Oct 2015 00:00:00 </pubDate>
     </item>
     

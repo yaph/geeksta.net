@@ -3,23 +3,23 @@
 <channel><title>Shirts » Programmer Excuses</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Programmer Excuses</description>
-    <lastBuildDate>Sat, 10 Apr 2021 23:56:23 </lastBuildDate>
+    <lastBuildDate>Sat, 10 Jul 2021 00:44:33 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
-    
-    <item>
-        <title><![CDATA[It Works On My Machine Funny Programmer Design Black]]></title>
-        <link><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-v-black/]]></link>
-        <description><![CDATA[<p>Every programmer experiences this: software works on their computer but not in production. Who is to blame and how to react as the identified culprit? Humor always helps, even if you have to fix your code. / A shirt design for programmers to wear in the...</p><img src="https://geeksta.net/img/large/shrug-it-works-on-my-machine-v-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-v-black/]]></guid>
-        <pubDate>Wed, 08 Nov 2017 00:00:00 </pubDate>
-    </item>
     
     <item>
         <title><![CDATA[It Works On My Machine Funny Programmer Design White]]></title>
         <link><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-v-white/]]></link>
         <description><![CDATA[<p>Every programmer experiences this: software works on their computer but not in production. Who is to blame and how to react as the identified culprit? Humor always helps, even if you have to fix your code. / A shirt design for programmers to wear in the...</p><img src="https://geeksta.net/img/large/shrug-it-works-on-my-machine-v-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-v-white/]]></guid>
+        <pubDate>Wed, 08 Nov 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[It Works On My Machine Funny Programmer Design Black]]></title>
+        <link><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-v-black/]]></link>
+        <description><![CDATA[<p>Every programmer experiences this: software works on their computer but not in production. Who is to blame and how to react as the identified culprit? Humor always helps, even if you have to fix your code. / A shirt design for programmers to wear in the...</p><img src="https://geeksta.net/img/large/shrug-it-works-on-my-machine-v-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-v-black/]]></guid>
         <pubDate>Wed, 08 Nov 2017 00:00:00 </pubDate>
     </item>
     
@@ -32,18 +32,18 @@
     </item>
     
     <item>
-        <title><![CDATA[It's Not a Bug It's a Feature - Developer Design Black]]></title>
-        <link><![CDATA[https://geeksta.net/design/shrug-it-s-not-a-bug-it-s-a-feature-v-black/]]></link>
-        <description><![CDATA[<p>Writing computer code is often accompanied by creating bugs and sometimes it&#8217;s hard to distinguish them from features. Thus the statement &#8220;it&#8217;s not a bug it&#8217;s a feature&#8221; is fairly common among programmers. / A funny design...</p><img src="https://geeksta.net/img/large/shrug-it-s-not-a-bug-it-s-a-feature-v-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/shrug-it-s-not-a-bug-it-s-a-feature-v-black/]]></guid>
-        <pubDate>Sun, 08 Oct 2017 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[It's Not a Bug It's a Feature - Developer Design White]]></title>
         <link><![CDATA[https://geeksta.net/design/shrug-it-s-not-a-bug-it-s-a-feature-v-white/]]></link>
         <description><![CDATA[<p>Writing computer code is often accompanied by creating bugs and sometimes it&#8217;s hard to distinguish them from features. Thus the statement &#8220;it&#8217;s not a bug it&#8217;s a feature&#8221; is fairly common among programmers. / A funny design...</p><img src="https://geeksta.net/img/large/shrug-it-s-not-a-bug-it-s-a-feature-v-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/shrug-it-s-not-a-bug-it-s-a-feature-v-white/]]></guid>
+        <pubDate>Sun, 08 Oct 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[It's Not a Bug It's a Feature - Developer Design Black]]></title>
+        <link><![CDATA[https://geeksta.net/design/shrug-it-s-not-a-bug-it-s-a-feature-v-black/]]></link>
+        <description><![CDATA[<p>Writing computer code is often accompanied by creating bugs and sometimes it&#8217;s hard to distinguish them from features. Thus the statement &#8220;it&#8217;s not a bug it&#8217;s a feature&#8221; is fairly common among programmers. / A funny design...</p><img src="https://geeksta.net/img/large/shrug-it-s-not-a-bug-it-s-a-feature-v-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/shrug-it-s-not-a-bug-it-s-a-feature-v-black/]]></guid>
         <pubDate>Sun, 08 Oct 2017 00:00:00 </pubDate>
     </item>
     
@@ -72,14 +72,6 @@
     </item>
     
     <item>
-        <title><![CDATA[It works on my machine - Programmer Excuse - White/Green Text Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-medium-compact-green/]]></link>
-        <description><![CDATA[<p>In software development bugs are a fact of life and so are excuses such as this popular one. Often enough code works on one machine, but not the other, shrugging it of is mostly not an accepted solution though. / A funny design for programmers with a sense...</p><img src="https://geeksta.net/img/large/shrug-it-works-on-my-machine-medium-compact-green.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-medium-compact-green/]]></guid>
-        <pubDate>Wed, 31 May 2017 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[It works on my machine - Programmer Excuse - Black Text Design]]></title>
         <link><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-medium-compact-black/]]></link>
         <description><![CDATA[<p>In software development bugs are a fact of life and so are excuses such as this popular one. Often enough code works on one machine, but not the other, shrugging it of is mostly not an accepted solution though. / A funny design for programmers with a sense...</p><img src="https://geeksta.net/img/large/shrug-it-works-on-my-machine-medium-compact-black.jpg" alt="Preview Image">]]></description>
@@ -96,11 +88,11 @@
     </item>
     
     <item>
-        <title><![CDATA[It Worked Yesterday - White Text Programmer Excuse Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/shrug-it-worked-yesterday-white/]]></link>
-        <description><![CDATA[<p>Sometimes computer code breaks, and when it does, you&#8217;ll often here an excuse like &#8220;It worked yesterday&#8221; uttered by the responsible programmer/developer. / This design consists of the unicode emoticon for shrugging your shoulders and...</p><img src="https://geeksta.net/img/large/shrug-it-worked-yesterday-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/shrug-it-worked-yesterday-white/]]></guid>
-        <pubDate>Fri, 12 May 2017 00:00:00 </pubDate>
+        <title><![CDATA[It works on my machine - Programmer Excuse - White/Green Text Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-medium-compact-green/]]></link>
+        <description><![CDATA[<p>In software development bugs are a fact of life and so are excuses such as this popular one. Often enough code works on one machine, but not the other, shrugging it of is mostly not an accepted solution though. / A funny design for programmers with a sense...</p><img src="https://geeksta.net/img/large/shrug-it-works-on-my-machine-medium-compact-green.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-medium-compact-green/]]></guid>
+        <pubDate>Wed, 31 May 2017 00:00:00 </pubDate>
     </item>
     
     <item>
@@ -108,6 +100,14 @@
         <link><![CDATA[https://geeksta.net/design/shrug-it-worked-yesterday-black/]]></link>
         <description><![CDATA[<p>Sometimes computer code breaks, and when it does, you&#8217;ll often here an excuse like &#8220;It worked yesterday&#8221; uttered by the responsible programmer/developer. / This design consists of the unicode emoticon for shrugging your shoulders and...</p><img src="https://geeksta.net/img/large/shrug-it-worked-yesterday-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/shrug-it-worked-yesterday-black/]]></guid>
+        <pubDate>Fri, 12 May 2017 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[It Worked Yesterday - White Text Programmer Excuse Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/shrug-it-worked-yesterday-white/]]></link>
+        <description><![CDATA[<p>Sometimes computer code breaks, and when it does, you&#8217;ll often here an excuse like &#8220;It worked yesterday&#8221; uttered by the responsible programmer/developer. / This design consists of the unicode emoticon for shrugging your shoulders and...</p><img src="https://geeksta.net/img/large/shrug-it-worked-yesterday-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/shrug-it-worked-yesterday-white/]]></guid>
         <pubDate>Fri, 12 May 2017 00:00:00 </pubDate>
     </item>
     

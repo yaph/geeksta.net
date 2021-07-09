@@ -3,7 +3,7 @@
 <channel><title>Design</title>
     <link>https://geeksta.net</link>
     <description>Design</description>
-    <lastBuildDate>Sat, 10 Apr 2021 23:56:23 </lastBuildDate>
+    <lastBuildDate>Sat, 10 Jul 2021 00:44:33 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
@@ -40,18 +40,18 @@
     </item>
     
     <item>
-        <title><![CDATA[Core Dumps Happen Black Pun Design For Computer Sysadmins]]></title>
-        <link><![CDATA[https://geeksta.net/design/core-dumps-happen-black/]]></link>
-        <description><![CDATA[<p>A core dump in computing consists of the recorded state of the working memory of a computer program that has crashed. As a sysadmin you are hopefully able to analyze the dump and maybe even fix the problem that caused the crash. A funny pun design for...</p><img src="https://geeksta.net/img/large/core-dumps-happen-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/core-dumps-happen-black/]]></guid>
-        <pubDate>Tue, 31 Dec 2019 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[Core Dumps Happen White Pun Design For Computer Sysadmins]]></title>
         <link><![CDATA[https://geeksta.net/design/core-dumps-happen-white/]]></link>
         <description><![CDATA[<p>A core dump in computing consists of the recorded state of the working memory of a computer program that has crashed. As a sysadmin you are hopefully able to analyze the dump and maybe even fix the problem that caused the crash. A funny pun design for...</p><img src="https://geeksta.net/img/large/core-dumps-happen-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/core-dumps-happen-white/]]></guid>
+        <pubDate>Tue, 31 Dec 2019 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Core Dumps Happen Black Pun Design For Computer Sysadmins]]></title>
+        <link><![CDATA[https://geeksta.net/design/core-dumps-happen-black/]]></link>
+        <description><![CDATA[<p>A core dump in computing consists of the recorded state of the working memory of a computer program that has crashed. As a sysadmin you are hopefully able to analyze the dump and maybe even fix the problem that caused the crash. A funny pun design for...</p><img src="https://geeksta.net/img/large/core-dumps-happen-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/core-dumps-happen-black/]]></guid>
         <pubDate>Tue, 31 Dec 2019 00:00:00 </pubDate>
     </item>
     
@@ -88,22 +88,6 @@
     </item>
     
     <item>
-        <title><![CDATA[Shell Prompt >_ Command Line Interpreter Geek/Nerd White Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/shell-prompt-zip-hoodie-white/]]></link>
-        <description><![CDATA[<p>Many system administrators, computer programmers and hackers love to use the command line interface of their operating system, preferably one based on Unix or Linux. Show with pride that you are one of this special kind of people. / This design shows a...</p><img src="https://geeksta.net/img/large/shell-prompt-zip-hoodie-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/shell-prompt-zip-hoodie-white/]]></guid>
-        <pubDate>Tue, 05 Nov 2019 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Shell Prompt >_ Command Line Interpreter Geek/Nerd Black Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/shell-prompt-zip-hoodie-black/]]></link>
-        <description><![CDATA[<p>Many system administrators, computer programmers and hackers love to use the command line interface of their operating system, preferably one based on Unix or Linux. Show with pride that you are one of this special kind of people. / This design shows a...</p><img src="https://geeksta.net/img/large/shell-prompt-zip-hoodie-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/shell-prompt-zip-hoodie-black/]]></guid>
-        <pubDate>Tue, 05 Nov 2019 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[Shell/Perl Default Variable $_ White Design for Coders & Sysadmins]]></title>
         <link><![CDATA[https://geeksta.net/design/dollar_-zip-hoodie-white/]]></link>
         <description><![CDATA[<p>Many system administrators, computer programmers and hackers love to use the command line interface of their operating system, preferably one based on Unix or Linux. Show with pride that you are one of this special kind of people. / This design shows...</p><img src="https://geeksta.net/img/large/dollar_-zip-hoodie-white.jpg" alt="Preview Image">]]></description>
@@ -116,6 +100,22 @@
         <link><![CDATA[https://geeksta.net/design/dollar_-zip-hoodie-black/]]></link>
         <description><![CDATA[<p>Many system administrators, computer programmers and hackers love to use the command line interface of their operating system, preferably one based on Unix or Linux. Show with pride that you are one of this special kind of people. / This design shows...</p><img src="https://geeksta.net/img/large/dollar_-zip-hoodie-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/dollar_-zip-hoodie-black/]]></guid>
+        <pubDate>Tue, 05 Nov 2019 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Shell Prompt >_ Command Line Interpreter Geek/Nerd Black Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/shell-prompt-zip-hoodie-black/]]></link>
+        <description><![CDATA[<p>Many system administrators, computer programmers and hackers love to use the command line interface of their operating system, preferably one based on Unix or Linux. Show with pride that you are one of this special kind of people. / This design shows a...</p><img src="https://geeksta.net/img/large/shell-prompt-zip-hoodie-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/shell-prompt-zip-hoodie-black/]]></guid>
+        <pubDate>Tue, 05 Nov 2019 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Shell Prompt >_ Command Line Interpreter Geek/Nerd White Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/shell-prompt-zip-hoodie-white/]]></link>
+        <description><![CDATA[<p>Many system administrators, computer programmers and hackers love to use the command line interface of their operating system, preferably one based on Unix or Linux. Show with pride that you are one of this special kind of people. / This design shows a...</p><img src="https://geeksta.net/img/large/shell-prompt-zip-hoodie-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/shell-prompt-zip-hoodie-white/]]></guid>
         <pubDate>Tue, 05 Nov 2019 00:00:00 </pubDate>
     </item>
     
@@ -144,14 +144,6 @@
     </item>
     
     <item>
-        <title><![CDATA[WONTFIX Say Forget It at Work in a Nicer Way - Black Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/wontfix-black/]]></link>
-        <description><![CDATA[<p>Refusing a work request is not an easy thing to do. The term WONTFIX is a common way to do so in the software development business. It is arguably more polite than saying &#8220;forget it&#8221;, but the person who made the request may still be offended. /...</p><img src="https://geeksta.net/img/large/wontfix-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/wontfix-black/]]></guid>
-        <pubDate>Mon, 26 Aug 2019 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[WONTFIX Say Forget It at Work in a Nicer Way - White Design]]></title>
         <link><![CDATA[https://geeksta.net/design/wontfix-white/]]></link>
         <description><![CDATA[<p>Refusing a work request is not an easy thing to do. The term WONTFIX is a common way to do so in the software development business. It is arguably more polite than saying &#8220;forget it&#8221;, but the person who made the request may still be offended. /...</p><img src="https://geeksta.net/img/large/wontfix-white.jpg" alt="Preview Image">]]></description>
@@ -160,11 +152,11 @@
     </item>
     
     <item>
-        <title><![CDATA[JavaScript 1995 Year of 1st Release White Retro Text Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/javascript-1995-white/]]></link>
-        <description><![CDATA[<p>JavaScript was first released in 1995 and since then has become one of the most important and widely used programming languages. Its unique status as a language supported by most web browsers and the introduction of server side JS are two key factors. /...</p><img src="https://geeksta.net/img/large/javascript-1995-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/javascript-1995-white/]]></guid>
-        <pubDate>Sun, 25 Aug 2019 00:00:00 </pubDate>
+        <title><![CDATA[WONTFIX Say Forget It at Work in a Nicer Way - Black Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/wontfix-black/]]></link>
+        <description><![CDATA[<p>Refusing a work request is not an easy thing to do. The term WONTFIX is a common way to do so in the software development business. It is arguably more polite than saying &#8220;forget it&#8221;, but the person who made the request may still be offended. /...</p><img src="https://geeksta.net/img/large/wontfix-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/wontfix-black/]]></guid>
+        <pubDate>Mon, 26 Aug 2019 00:00:00 </pubDate>
     </item>
     
     <item>
@@ -172,6 +164,14 @@
         <link><![CDATA[https://geeksta.net/design/javascript-1995-black/]]></link>
         <description><![CDATA[<p>JavaScript was first released in 1995 and since then has become one of the most important and widely used programming languages. Its unique status as a language supported by most web browsers and the introduction of server side JS are two key factors. /...</p><img src="https://geeksta.net/img/large/javascript-1995-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/javascript-1995-black/]]></guid>
+        <pubDate>Sun, 25 Aug 2019 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[JavaScript 1995 Year of 1st Release White Retro Text Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/javascript-1995-white/]]></link>
+        <description><![CDATA[<p>JavaScript was first released in 1995 and since then has become one of the most important and widely used programming languages. Its unique status as a language supported by most web browsers and the introduction of server side JS are two key factors. /...</p><img src="https://geeksta.net/img/large/javascript-1995-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/javascript-1995-white/]]></guid>
         <pubDate>Sun, 25 Aug 2019 00:00:00 </pubDate>
     </item>
     
@@ -192,18 +192,18 @@
     </item>
     
     <item>
-        <title><![CDATA[Evolution of the Smartphone Zombie / Smombie - Black Graphic]]></title>
-        <link><![CDATA[https://geeksta.net/design/smombie-evolution-black/]]></link>
-        <description><![CDATA[<p>Many people are completely absorbed by their cell phone, walking around and staring at it without taking notice of their environment. This behavior is ignorant, reckless and dumb. It is also extremely bad for your posture. It seems a bit like humanity is...</p><img src="https://geeksta.net/img/large/smombie-evolution-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/smombie-evolution-black/]]></guid>
-        <pubDate>Fri, 24 May 2019 00:00:00 </pubDate>
-    </item>
-    
-    <item>
         <title><![CDATA[Evolution of the Smartphone Zombie / Smombie - White Graphic]]></title>
         <link><![CDATA[https://geeksta.net/design/smombie-evolution-white/]]></link>
         <description><![CDATA[<p>Many people are completely absorbed by their cell phone, walking around and staring at it without taking notice of their environment. This behavior is ignorant, reckless and dumb. It is also extremely bad for your posture. It seems a bit like humanity is...</p><img src="https://geeksta.net/img/large/smombie-evolution-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/smombie-evolution-white/]]></guid>
+        <pubDate>Fri, 24 May 2019 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Evolution of the Smartphone Zombie / Smombie - Black Graphic]]></title>
+        <link><![CDATA[https://geeksta.net/design/smombi-evolution-black/]]></link>
+        <description><![CDATA[<p>Many people are completely absorbed by their cell phone, walking around and staring at it without taking notice of their environment. This behavior is ignorant, reckless and dumb. It is also extremely bad for your posture. It seems a bit like humanity is...</p><img src="https://geeksta.net/img/large/smombi-evolution-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/smombi-evolution-black/]]></guid>
         <pubDate>Fri, 24 May 2019 00:00:00 </pubDate>
     </item>
     

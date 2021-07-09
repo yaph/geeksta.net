@@ -3,9 +3,17 @@
 <channel><title>Shirts » Word Cloud</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Word Cloud</description>
-    <lastBuildDate>Sat, 10 Apr 2021 23:56:23 </lastBuildDate>
+    <lastBuildDate>Sat, 10 Jul 2021 00:44:33 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Data Science Design - Word Cloud of Key Terms Colored]]></title>
+        <link><![CDATA[https://geeksta.net/design/data-science-word-cloud-color/]]></link>
+        <description><![CDATA[<p>Data science comprises data mining, analysis, visualization, statistics, computer software and more and hopefully provides meaningful insights. 50 key terms of this scientific branch are shown as a word cloud on this design for data science students and...</p><img src="https://geeksta.net/img/large/data-science-word-cloud-color.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/data-science-word-cloud-color/]]></guid>
+        <pubDate>Wed, 06 Sep 2017 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Computer Science Design - Word Cloud of Key Terms Grayscale]]></title>
@@ -28,14 +36,6 @@
         <link><![CDATA[https://geeksta.net/design/data-science-word-cloud-grayscale/]]></link>
         <description><![CDATA[<p>Data science comprises data mining, analysis, visualization, statistics, computer software and more and hopefully provides meaningful insights. 50 key terms of this scientific branch are shown as a word cloud on this design for data science students and...</p><img src="https://geeksta.net/img/large/data-science-word-cloud-grayscale.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/data-science-word-cloud-grayscale/]]></guid>
-        <pubDate>Wed, 06 Sep 2017 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Data Science Design - Word Cloud of Key Terms Colored]]></title>
-        <link><![CDATA[https://geeksta.net/design/data-science-word-cloud-color/]]></link>
-        <description><![CDATA[<p>Data science comprises data mining, analysis, visualization, statistics, computer software and more and hopefully provides meaningful insights. 50 key terms of this scientific branch are shown as a word cloud on this design for data science students and...</p><img src="https://geeksta.net/img/large/data-science-word-cloud-color.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/data-science-word-cloud-color/]]></guid>
         <pubDate>Wed, 06 Sep 2017 00:00:00 </pubDate>
     </item>
     
