@@ -1,6 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+<url><loc><![CDATA[https://geeksta.net/design/i-use-vim-black/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/i-use-vim-white/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-lisp-light-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-sass-light-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-kotlin-light-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-kotlin-dark-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-webassembly-light-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-sass-dark-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-lisp-dark-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-webassembly-dark-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-d-light-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-rust-light-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-julia-dark-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-haskell-dark-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-vala-light-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-java-light-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-haxe-dark-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-fsharp-dark-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-php-dark-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-elixir-dark-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-go-light-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-elm-light-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-elixir-light-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-vala-dark-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-elm-dark-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-javascript-dark-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-c-light-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-javascript-light-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-rust-dark-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-java-dark-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-haxe-light-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-d-dark-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-julia-light-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-go-dark-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-haskell-light-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-fsharp-light-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-php-light-scheme/]]></loc><lastmod>2021-08-17</lastmod></url>
+
 <url><loc><![CDATA[https://geeksta.net/domxssscanner/]]></loc><lastmod>2021-04-10</lastmod></url>
 
 <url><loc><![CDATA[https://geeksta.net/geeklog/automating-browser-screenshots-social-media/]]></loc><lastmod>2021-04-10</lastmod></url>
@@ -220,6 +294,8 @@
 <url><loc><![CDATA[https://geeksta.net/design/bin-bash-condensed-cooling-blue/]]></loc><lastmod>2019-05-11</lastmod></url>
 
 <url><loc><![CDATA[https://geeksta.net/design/bin-bash-condensed-white/]]></loc><lastmod>2019-05-11</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/hello-world-c-dark-scheme-1/]]></loc><lastmod>2021-08-17</lastmod></url>
 
 <url><loc><![CDATA[https://geeksta.net/design/hello-world-c-dark-scheme/]]></loc><lastmod>2019-05-11</lastmod></url>
 

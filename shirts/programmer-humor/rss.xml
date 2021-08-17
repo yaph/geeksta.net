@@ -3,9 +3,25 @@
 <channel><title>Shirts » Programmer Humor</title>
     <link>https://geeksta.net</link>
     <description>Shirts » Programmer Humor</description>
-    <lastBuildDate>Sat, 14 Aug 2021 13:05:25 </lastBuildDate>
+    <lastBuildDate>Tue, 17 Aug 2021 22:23:15 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[I use Vim Because I don't know how to quit Black Text Design Sticker by geeksta]]></title>
+        <link><![CDATA[https://geeksta.net/design/i-use-vim-black/]]></link>
+        <description><![CDATA[<p>Computer programmers tend to be very passionate when it comes to the topic of text editors and people who use Vim to write code love to let everyone know about it. Is Vim really so good or do they simple not know how to exit the program? A simple text d</p><img src="https://geeksta.net/img/large/i-use-vim-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/i-use-vim-black/]]></guid>
+        <pubDate>Tue, 17 Aug 2021 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[I use Vim Because I don't know how to quit White Text Design Cap by geeksta]]></title>
+        <link><![CDATA[https://geeksta.net/design/i-use-vim-white/]]></link>
+        <description><![CDATA[<p>Computer programmers tend to be very passionate when it comes to the topic of text editors and people who use Vim to write code love to let everyone know about it. Is Vim really so good or do they simple not know how to exit the program? A simple text d</p><img src="https://geeksta.net/img/large/i-use-vim-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/i-use-vim-white/]]></guid>
+        <pubDate>Tue, 17 Aug 2021 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Daredevil Programmer Design: Biohazard Symbol & git push --force]]></title>
@@ -189,22 +205,6 @@
         <description><![CDATA[<p>The semicolon was introduced as a statement terminator in the ALGOL 60¹ programming language, which first appeared in 1960². Since then the semicolon has caused programmers headaches and countless working hours, trying to fix bugs caused by missing...</p><img src="https://geeksta.net/img/large/semicolon-hide-and-seek-champion-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/semicolon-hide-and-seek-champion-black/]]></guid>
         <pubDate>Wed, 02 Dec 2015 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Hide & Seek Champion since 1960 Semicolon - White on Black Programmer Humor]]></title>
-        <link><![CDATA[https://geeksta.net/design/semicolon-hide-and-seek-champion-white/]]></link>
-        <description><![CDATA[<p>The semicolon was introduced as a statement terminator in the ALGOL 60¹ programming language, which first appeared in 1960². Since then the semicolon has caused programmers headaches and countless working hours, trying to fix bugs caused by missing...</p><img src="https://geeksta.net/img/large/semicolon-hide-and-seek-champion-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/semicolon-hide-and-seek-champion-white/]]></guid>
-        <pubDate>Wed, 02 Dec 2015 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[HOT FIX - Parody Design for Programmers]]></title>
-        <link><![CDATA[https://geeksta.net/design/hot-fix/]]></link>
-        <description><![CDATA[<p>A hotfix is a quick and sometimes dirty fix of a software bug. This design consists of the words &#8220;HOT&#8221; and &#8220;FIX&#8221; in an all-caps white font between two red bars. • Millions of unique designs by independent artists. Find your thing.</p><img src="https://geeksta.net/img/large/hot-fix.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/hot-fix/]]></guid>
-        <pubDate>Tue, 10 Nov 2015 00:00:00 </pubDate>
     </item>
     
 </channel></rss>
