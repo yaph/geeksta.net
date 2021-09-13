@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+<url><loc><![CDATA[https://geeksta.net/design/i-unicode-black/]]></loc><lastmod>2021-09-13</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/design/i-unicode-white/]]></loc><lastmod>2021-09-13</lastmod></url>
+
 <url><loc><![CDATA[https://geeksta.net/design/hello-world-android-light-scheme/]]></loc><lastmod>2021-08-18</lastmod></url>
 
 <url><loc><![CDATA[https://geeksta.net/design/hello-world-cobol-dark-scheme/]]></loc><lastmod>2021-08-18</lastmod></url>

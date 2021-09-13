@@ -3,9 +3,25 @@
 <channel><title>Merch » Programmer Humor</title>
     <link>https://geeksta.net</link>
     <description>Merch » Programmer Humor</description>
-    <lastBuildDate>Fri, 10 Sep 2021 23:44:06 </lastBuildDate>
+    <lastBuildDate>Mon, 13 Sep 2021 21:46:38 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[I ? Unicode Funny Software Engineer Design Black Text Sticker by geeksta]]></title>
+        <link><![CDATA[https://geeksta.net/design/i-unicode-black/]]></link>
+        <description><![CDATA[<p>Computer programmers and software engineers know that encoding is hard. There's ASCII, Unicode and a plethora of other standards. If the encoding is unknown and wrongly detected you may end up with weird characters or question marks as on this fun design.</p><img src="https://geeksta.net/img/large/i-unicode-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/i-unicode-black/]]></guid>
+        <pubDate>Mon, 13 Sep 2021 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[I ? Unicode Funny Software Engineer Design White Text Essential T-Shirt by geeksta]]></title>
+        <link><![CDATA[https://geeksta.net/design/i-unicode-white/]]></link>
+        <description><![CDATA[<p>Computer programmers and software engineers know that encoding is hard. There's ASCII, Unicode and a plethora of other standards. If the encoding is unknown and wrongly detected you may end up with weird characters or question marks as on this fun design.</p><img src="https://geeksta.net/img/large/i-unicode-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/i-unicode-white/]]></guid>
+        <pubDate>Mon, 13 Sep 2021 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[I use Vim Because I don't know how to quit Black Text Design Sticker by geeksta]]></title>
@@ -189,22 +205,6 @@
         <description><![CDATA[<p>This design features the text &#8220;I&#8217;m a violent psychopath who knows where you live&#8221; in an all uppercase distressed black font on a red background. / This statement is derived from the famous quote by John F. Woods: &quot;Always code as if...</p><img src="https://geeksta.net/img/large/i-m-a-violent-psychopath-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/i-m-a-violent-psychopath-black/]]></guid>
         <pubDate>Sat, 19 Mar 2016 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Six Stages of Debugging: White on Dark Design for Programmers]]></title>
-        <link><![CDATA[https://geeksta.net/design/6-stages-of-debugging-white/]]></link>
-        <description><![CDATA[<p>How to debug computer program code? This funny design for programmers gives the answer by listing the 6 stages of debugging: / 1. That can’t happen. / 2. That doesn’t happen on my machine. / 3. That shouldn’t happen. / 4. Why does that happen? / 5. Oh, I...</p><img src="https://geeksta.net/img/large/6-stages-of-debugging-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/6-stages-of-debugging-white/]]></guid>
-        <pubDate>Tue, 05 Jan 2016 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Hide & Seek Champion since 1960 Semicolon - Black on Grey Programmer Humor]]></title>
-        <link><![CDATA[https://geeksta.net/design/semicolon-hide-and-seek-champion-black/]]></link>
-        <description><![CDATA[<p>The semicolon was introduced as a statement terminator in the ALGOL 60¹ programming language, which first appeared in 1960². Since then the semicolon has caused programmers headaches and countless working hours, trying to fix bugs caused by missing...</p><img src="https://geeksta.net/img/large/semicolon-hide-and-seek-champion-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/semicolon-hide-and-seek-champion-black/]]></guid>
-        <pubDate>Wed, 02 Dec 2015 00:00:00 </pubDate>
     </item>
     
 </channel></rss>

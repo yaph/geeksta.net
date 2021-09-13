@@ -3,9 +3,25 @@
 <channel><title>Design</title>
     <link>https://geeksta.net</link>
     <description>Design</description>
-    <lastBuildDate>Fri, 10 Sep 2021 23:44:06 </lastBuildDate>
+    <lastBuildDate>Mon, 13 Sep 2021 21:46:38 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[I ? Unicode Funny Software Engineer Design Black Text Sticker by geeksta]]></title>
+        <link><![CDATA[https://geeksta.net/design/i-unicode-black/]]></link>
+        <description><![CDATA[<p>Computer programmers and software engineers know that encoding is hard. There's ASCII, Unicode and a plethora of other standards. If the encoding is unknown and wrongly detected you may end up with weird characters or question marks as on this fun design.</p><img src="https://geeksta.net/img/large/i-unicode-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/i-unicode-black/]]></guid>
+        <pubDate>Mon, 13 Sep 2021 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[I ? Unicode Funny Software Engineer Design White Text Essential T-Shirt by geeksta]]></title>
+        <link><![CDATA[https://geeksta.net/design/i-unicode-white/]]></link>
+        <description><![CDATA[<p>Computer programmers and software engineers know that encoding is hard. There's ASCII, Unicode and a plethora of other standards. If the encoding is unknown and wrongly detected you may end up with weird characters or question marks as on this fun design.</p><img src="https://geeksta.net/img/large/i-unicode-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/i-unicode-white/]]></guid>
+        <pubDate>Mon, 13 Sep 2021 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Hello World Android Code - Light Syntax Scheme Coder Design Sticker by geeksta]]></title>
@@ -188,22 +204,6 @@
         <link><![CDATA[https://geeksta.net/design/hello-world-haxe-dark-scheme/]]></link>
         <description><![CDATA[<p>The Hello World program is frequently used in programming books and is often the first program coders try when learning a new programming language. Ever happened to you? This design for coders, developers, programmers, hackers or how you might call it,</p><img src="https://geeksta.net/img/large/hello-world-haxe-dark-scheme.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/hello-world-haxe-dark-scheme/]]></guid>
-        <pubDate>Wed, 11 Aug 2021 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Hello World FSharp Code - Dark Syntax Scheme Coder Design Sticker by geeksta]]></title>
-        <link><![CDATA[https://geeksta.net/design/hello-world-fsharp-dark-scheme/]]></link>
-        <description><![CDATA[<p>The Hello World program is frequently used in programming books and is often the first program coders try when learning a new programming language. Ever happened to you? This design for coders, developers, programmers, hackers or how you might call it,</p><img src="https://geeksta.net/img/large/hello-world-fsharp-dark-scheme.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/hello-world-fsharp-dark-scheme/]]></guid>
-        <pubDate>Wed, 11 Aug 2021 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Hello World PHP Code - Dark Syntax Scheme Coder Design Essential T-Shirt by geeksta]]></title>
-        <link><![CDATA[https://geeksta.net/design/hello-world-php-dark-scheme/]]></link>
-        <description><![CDATA[<p>The Hello World program is frequently used in programming books and is often the first program coders try when learning a new programming language. Ever happened to you? This design for coders, developers, programmers, hackers or how you might call it,</p><img src="https://geeksta.net/img/large/hello-world-php-dark-scheme.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/hello-world-php-dark-scheme/]]></guid>
         <pubDate>Wed, 11 Aug 2021 00:00:00 </pubDate>
     </item>
     
