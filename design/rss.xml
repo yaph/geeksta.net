@@ -3,9 +3,17 @@
 <channel><title>Design</title>
     <link>https://geeksta.net</link>
     <description>Design</description>
-    <lastBuildDate>Mon, 13 Sep 2021 21:48:38 </lastBuildDate>
+    <lastBuildDate>Tue, 14 Sep 2021 21:22:01 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[debugger; - JavaScript/Web Developer Black Text Design Sticker by geeksta]]></title>
+        <link><![CDATA[https://geeksta.net/design/debugger-black/]]></link>
+        <description><![CDATA[<p>Computer programmers and software developers who write JavaScript code use the "debugger;" statement to add a breakpoint to stop program execution at the point, where it occurs in the code. Show your love for web development & JS with this simple design.</p><img src="https://geeksta.net/img/large/debugger-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/debugger-black/]]></guid>
+        <pubDate>Mon, 13 Sep 2021 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[I ? Unicode Funny Software Engineer Design Black Text Sticker by geeksta]]></title>
@@ -20,6 +28,14 @@
         <link><![CDATA[https://geeksta.net/design/i-unicode-white/]]></link>
         <description><![CDATA[<p>Computer programmers and software engineers know that encoding is hard. There's ASCII, Unicode and a plethora of other standards. If the encoding is unknown and wrongly detected you may end up with weird characters or question marks as on this fun design.</p><img src="https://geeksta.net/img/large/i-unicode-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/i-unicode-white/]]></guid>
+        <pubDate>Mon, 13 Sep 2021 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[debugger; - JavaScript/Web Developer White Text Design Essential T-Shirt by geeksta]]></title>
+        <link><![CDATA[https://geeksta.net/design/debugger-white/]]></link>
+        <description><![CDATA[<p>Computer programmers and software developers who write JavaScript code use the "debugger;" statement to add a breakpoint to stop program execution at the point, where it occurs in the code. Show your love for web development & JS with this simple design.</p><img src="https://geeksta.net/img/large/debugger-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/debugger-white/]]></guid>
         <pubDate>Mon, 13 Sep 2021 00:00:00 </pubDate>
     </item>
     
@@ -188,22 +204,6 @@
         <link><![CDATA[https://geeksta.net/design/hello-world-vala-light-scheme/]]></link>
         <description><![CDATA[<p>The Hello World program is frequently used in programming books and is often the first program coders try when learning a new programming language. Ever happened to you? This design for coders, developers, programmers, hackers or how you might call it,</p><img src="https://geeksta.net/img/large/hello-world-vala-light-scheme.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/hello-world-vala-light-scheme/]]></guid>
-        <pubDate>Wed, 11 Aug 2021 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Hello World Java Code - Light Syntax Scheme Coder Design Sticker by geeksta]]></title>
-        <link><![CDATA[https://geeksta.net/design/hello-world-java-light-scheme/]]></link>
-        <description><![CDATA[<p>The Hello World program is frequently used in programming books and is often the first program coders try when learning a new programming language. Ever happened to you? This design for coders, developers, programmers, hackers or how you might call it,</p><img src="https://geeksta.net/img/large/hello-world-java-light-scheme.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/hello-world-java-light-scheme/]]></guid>
-        <pubDate>Wed, 11 Aug 2021 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Hello World Haxe Code - Dark Syntax Scheme Coder Design Essential T-Shirt by geeksta]]></title>
-        <link><![CDATA[https://geeksta.net/design/hello-world-haxe-dark-scheme/]]></link>
-        <description><![CDATA[<p>The Hello World program is frequently used in programming books and is often the first program coders try when learning a new programming language. Ever happened to you? This design for coders, developers, programmers, hackers or how you might call it,</p><img src="https://geeksta.net/img/large/hello-world-haxe-dark-scheme.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/hello-world-haxe-dark-scheme/]]></guid>
         <pubDate>Wed, 11 Aug 2021 00:00:00 </pubDate>
     </item>
     
