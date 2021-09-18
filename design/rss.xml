@@ -3,9 +3,17 @@
 <channel><title>Design</title>
     <link>https://geeksta.net</link>
     <description>Design</description>
-    <lastBuildDate>Fri, 17 Sep 2021 21:32:14 </lastBuildDate>
+    <lastBuildDate>Sat, 18 Sep 2021 23:55:25 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[It Works In My Container Funny Black Desgin for Developers Fitted T-Shirt by geeksta]]></title>
+        <link><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-v-hoodie-black/]]></link>
+        <description><![CDATA[<p>IT teams who practice DevOps often use containers in their workflow. In such an environment "It works in my container" is a programmer excuse you may here more often than its popular predecessor "It works on my machine". A design for software developers</p><img src="https://geeksta.net/img/large/shrug-it-works-in-my-container-v-hoodie-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-v-hoodie-black/]]></guid>
+        <pubDate>Sat, 18 Sep 2021 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[debugger; - JavaScript/Web Developer Black Text Design Sticker by geeksta]]></title>
@@ -196,14 +204,6 @@
         <link><![CDATA[https://geeksta.net/design/hello-world-haskell-dark-scheme/]]></link>
         <description><![CDATA[<p>The Hello World program is frequently used in programming books and is often the first program coders try when learning a new programming language. Ever happened to you? This design for coders, developers, programmers, hackers or how you might call it,</p><img src="https://geeksta.net/img/large/hello-world-haskell-dark-scheme.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/hello-world-haskell-dark-scheme/]]></guid>
-        <pubDate>Wed, 11 Aug 2021 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Hello World Vala Code - Light Syntax Scheme Coder Design Sticker by geeksta]]></title>
-        <link><![CDATA[https://geeksta.net/design/hello-world-vala-light-scheme/]]></link>
-        <description><![CDATA[<p>The Hello World program is frequently used in programming books and is often the first program coders try when learning a new programming language. Ever happened to you? This design for coders, developers, programmers, hackers or how you might call it,</p><img src="https://geeksta.net/img/large/hello-world-vala-light-scheme.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/hello-world-vala-light-scheme/]]></guid>
         <pubDate>Wed, 11 Aug 2021 00:00:00 </pubDate>
     </item>
     
