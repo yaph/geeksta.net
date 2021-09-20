@@ -3,9 +3,17 @@
 <channel><title>Merch » Programmer Humor</title>
     <link>https://geeksta.net</link>
     <description>Merch » Programmer Humor</description>
-    <lastBuildDate>Sun, 19 Sep 2021 23:43:50 </lastBuildDate>
+    <lastBuildDate>Mon, 20 Sep 2021 23:06:45 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Caution I Curse When I Write Code - Funny Programmer Design Cap by geeksta]]></title>
+        <link><![CDATA[https://geeksta.net/design/caution-i-curse-when-i-write-code/]]></link>
+        <description><![CDATA[<p>Profanity is a language all programmers speak fluently. At times when writing code, the amount of cursing and swearing can get excessive, so better warn your co-workers if you can't hold back, while coding. This funny design shows a yellow caution sign</p><img src="https://geeksta.net/img/large/caution-i-curse-when-i-write-code.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/caution-i-curse-when-i-write-code/]]></guid>
+        <pubDate>Mon, 20 Sep 2021 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[I ? Unicode Funny Software Engineer Design Black Text Sticker by geeksta]]></title>
@@ -197,14 +205,6 @@
         <description><![CDATA[<p>Telling someone &#8220;YOU&#8217;RE MY #0&#8221; is a way to show your love, at least if you are a programmer who writes code in languages with zero-based indexing. A nice gift for your programmer boy or girl or whatever friend, husband or wife. / This...</p><img src="https://geeksta.net/img/large/youre-my-hash0-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/youre-my-hash0-white/]]></guid>
         <pubDate>Mon, 23 May 2016 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[I'm a Violent Psychopath Who Knows Where You Live - Quote]]></title>
-        <link><![CDATA[https://geeksta.net/design/i-m-a-violent-psychopath-black/]]></link>
-        <description><![CDATA[<p>This design features the text &#8220;I&#8217;m a violent psychopath who knows where you live&#8221; in an all uppercase distressed black font on a red background. / This statement is derived from the famous quote by John F. Woods: &quot;Always code as if...</p><img src="https://geeksta.net/img/large/i-m-a-violent-psychopath-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/i-m-a-violent-psychopath-black/]]></guid>
-        <pubDate>Sat, 19 Mar 2016 00:00:00 </pubDate>
     </item>
     
 </channel></rss>
