@@ -3,9 +3,25 @@
 <channel><title>Merch » Programming Languages</title>
     <link>https://geeksta.net</link>
     <description>Merch » Programming Languages</description>
-    <lastBuildDate>Sat, 02 Oct 2021 23:22:57 </lastBuildDate>
+    <lastBuildDate>Thu, 30 Dec 2021 23:11:57 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Programming Languages Influence Network 2021 - Light Background Poster by ramiro]]></title>
+        <link><![CDATA[https://geeksta.net/design/programming-languages-influence-network-2021-black/]]></link>
+        <description><![CDATA[<p>A network graph showing 500 programming languages connected by 953 influence relations. Highly influential languages like Lisp, Smalltalk, C, Java, C++, Haskell and Python are shown as larger circles as compared to languages with less influence on others l</p><img src="https://geeksta.net/img/large/programming-languages-influence-network-2021-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/programming-languages-influence-network-2021-black/]]></guid>
+        <pubDate>Thu, 30 Dec 2021 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Programming Languages Influence Network 2021 - Dark Background Tapestry by ramiro]]></title>
+        <link><![CDATA[https://geeksta.net/design/programming-languages-influence-network-2021-white/]]></link>
+        <description><![CDATA[<p>A network graph showing 500 programming languages connected by 953 influence relations. Highly influential languages like Lisp, Smalltalk, C, Java, C++, Haskell and Python are shown as larger circles as compared to languages with less influence on others l</p><img src="https://geeksta.net/img/large/programming-languages-influence-network-2021-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/programming-languages-influence-network-2021-white/]]></guid>
+        <pubDate>Thu, 30 Dec 2021 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[ALGOL 68 Programming Language - Veteran Programmer Design]]></title>
@@ -189,14 +205,6 @@
         <description><![CDATA[<p>A design for Perl programmers with the text &#8220;#!/usr/bin/perl&#8221; in a white monospace font. This line locates the path to the perl executable, that will interpret the script. It is among other names referred to as the hashbang line. • Millions of...</p><img src="https://geeksta.net/img/large/usr-bin-perl-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/usr-bin-perl-white/]]></guid>
         <pubDate>Sun, 04 Oct 2015 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Speed up your computer: pkill -9 java • Programmer Humor]]></title>
-        <link><![CDATA[https://geeksta.net/design/pkill-9-java-black/]]></link>
-        <description><![CDATA[<p>If your computer has performance problems, make it faster by ending all Java processes with the command &#8220;pkill -9&#8221;, which is shown in a black bold monospace font on this design. • Millions of unique designs by independent artists. Find your thing.</p><img src="https://geeksta.net/img/large/pkill-9-java-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/pkill-9-java-black/]]></guid>
-        <pubDate>Mon, 21 Sep 2015 00:00:00 </pubDate>
     </item>
     
 </channel></rss>

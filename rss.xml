@@ -3,9 +3,25 @@
 <channel><title>RSS Feed</title>
     <link>https://geeksta.net</link>
     <description>RSS Feed</description>
-    <lastBuildDate>Sat, 02 Oct 2021 23:22:57 </lastBuildDate>
+    <lastBuildDate>Thu, 30 Dec 2021 23:11:57 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Programming Languages Influence Network 2021 - Light Background Poster by ramiro]]></title>
+        <link><![CDATA[https://geeksta.net/design/programming-languages-influence-network-2021-black/]]></link>
+        <description><![CDATA[<p>A network graph showing 500 programming languages connected by 953 influence relations. Highly influential languages like Lisp, Smalltalk, C, Java, C++, Haskell and Python are shown as larger circles as compared to languages with less influence on others l</p><img src="https://geeksta.net/img/large/programming-languages-influence-network-2021-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/programming-languages-influence-network-2021-black/]]></guid>
+        <pubDate>Thu, 30 Dec 2021 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Programming Languages Influence Network 2021 - Dark Background Tapestry by ramiro]]></title>
+        <link><![CDATA[https://geeksta.net/design/programming-languages-influence-network-2021-white/]]></link>
+        <description><![CDATA[<p>A network graph showing 500 programming languages connected by 953 influence relations. Highly influential languages like Lisp, Smalltalk, C, Java, C++, Haskell and Python are shown as larger circles as compared to languages with less influence on others l</p><img src="https://geeksta.net/img/large/programming-languages-influence-network-2021-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/programming-languages-influence-network-2021-white/]]></guid>
+        <pubDate>Thu, 30 Dec 2021 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Fork Me - Funny Programmer Design with Git Fork Symbol Essential T-Shirt by geeksta]]></title>
@@ -189,22 +205,6 @@
         <description><![CDATA[<p>The Hello World program is frequently used in programming books and is often the first program coders try when learning a new programming language. Ever happened to you? This design for coders, developers, programmers, hackers or how you might call it,</p><img src="https://geeksta.net/img/large/hello-world-lisp-dark-scheme.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/hello-world-lisp-dark-scheme/]]></guid>
         <pubDate>Thu, 12 Aug 2021 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Hello World WebAssembly Code - Dark Syntax Scheme Coder Design Mug by geeksta]]></title>
-        <link><![CDATA[https://geeksta.net/design/hello-world-webassembly-dark-scheme/]]></link>
-        <description><![CDATA[<p>The Hello World program is frequently used in programming books and is often the first program coders try when learning a new programming language. Ever happened to you? This design for coders, developers, programmers, hackers or how you might call it,</p><img src="https://geeksta.net/img/large/hello-world-webassembly-dark-scheme.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/hello-world-webassembly-dark-scheme/]]></guid>
-        <pubDate>Thu, 12 Aug 2021 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Hello World D Code - Light Syntax Scheme Coder Design Sticker by geeksta]]></title>
-        <link><![CDATA[https://geeksta.net/design/hello-world-d-light-scheme/]]></link>
-        <description><![CDATA[<p>The Hello World program is frequently used in programming books and is often the first program coders try when learning a new programming language. Ever happened to you? This design for coders, developers, programmers, hackers or how you might call it,</p><img src="https://geeksta.net/img/large/hello-world-d-light-scheme.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/hello-world-d-light-scheme/]]></guid>
-        <pubDate>Wed, 11 Aug 2021 00:00:00 </pubDate>
     </item>
     
 </channel></rss>
