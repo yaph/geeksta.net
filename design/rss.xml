@@ -3,9 +3,17 @@
 <channel><title>Design</title>
     <link>https://geeksta.net</link>
     <description>Design</description>
-    <lastBuildDate>Thu, 30 Dec 2021 23:48:30 </lastBuildDate>
+    <lastBuildDate>Fri, 04 Feb 2022 02:20:24 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[def procrastinate pass - Funny Python Code Pun Design Sticker by geeksta]]></title>
+        <link><![CDATA[https://geeksta.net/design/def-procrastinate-pass-light-scheme/]]></link>
+        <description><![CDATA[<p>Many people procrastinate, but how would a Python program do that? One way would be to define a procrastinate function that simply passes execution as shown in the piece of syntax highlighted Python code for light backgrounds. If you enjoy computer prog</p><img src="https://geeksta.net/img/large/def-procrastinate-pass-light-scheme.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/def-procrastinate-pass-light-scheme/]]></guid>
+        <pubDate>Thu, 03 Feb 2022 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Programming Languages Influence Network 2021 - Light Background Poster by ramiro]]></title>
@@ -196,14 +204,6 @@
         <link><![CDATA[https://geeksta.net/design/hello-world-sass-dark-scheme/]]></link>
         <description><![CDATA[<p>The Hello World program is frequently used in programming books and is often the first program coders try when learning a new programming language. Ever happened to you? This design for coders, developers, programmers, hackers or how you might call it,</p><img src="https://geeksta.net/img/large/hello-world-sass-dark-scheme.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/hello-world-sass-dark-scheme/]]></guid>
-        <pubDate>Thu, 12 Aug 2021 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Hello World Lisp Code - Dark Syntax Scheme Coder Design Mug by geeksta]]></title>
-        <link><![CDATA[https://geeksta.net/design/hello-world-lisp-dark-scheme/]]></link>
-        <description><![CDATA[<p>The Hello World program is frequently used in programming books and is often the first program coders try when learning a new programming language. Ever happened to you? This design for coders, developers, programmers, hackers or how you might call it,</p><img src="https://geeksta.net/img/large/hello-world-lisp-dark-scheme.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/hello-world-lisp-dark-scheme/]]></guid>
         <pubDate>Thu, 12 Aug 2021 00:00:00 </pubDate>
     </item>
     

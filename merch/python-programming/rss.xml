@@ -3,9 +3,17 @@
 <channel><title>Merch » Python Programming</title>
     <link>https://geeksta.net</link>
     <description>Merch » Python Programming</description>
-    <lastBuildDate>Thu, 30 Dec 2021 23:48:30 </lastBuildDate>
+    <lastBuildDate>Fri, 04 Feb 2022 02:20:24 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[def procrastinate pass - Funny Python Code Pun Design Sticker by geeksta]]></title>
+        <link><![CDATA[https://geeksta.net/design/def-procrastinate-pass-light-scheme/]]></link>
+        <description><![CDATA[<p>Many people procrastinate, but how would a Python program do that? One way would be to define a procrastinate function that simply passes execution as shown in the piece of syntax highlighted Python code for light backgrounds. If you enjoy computer prog</p><img src="https://geeksta.net/img/large/def-procrastinate-pass-light-scheme.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/def-procrastinate-pass-light-scheme/]]></guid>
+        <pubDate>Thu, 03 Feb 2022 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Funny Python Shell Code Design F-string >>> f'yeah']]></title>
