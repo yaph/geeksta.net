@@ -3,9 +3,17 @@
 <channel><title>RSS Feed</title>
     <link>https://geeksta.net</link>
     <description>RSS Feed</description>
-    <lastBuildDate>Wed, 04 May 2022 12:55:14 </lastBuildDate>
+    <lastBuildDate>Mon, 30 May 2022 01:27:26 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[No Class No State Functional Programmer Red/White Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/lambda-anarchy-no-class-red-white/]]></link>
+        <description><![CDATA[<p>A design for computer programmers & software developers who love functional programming. It shows the lambda symbol similar to the Anarchy "A" and below the texts NO CLASS, NO STATE in capital letters in a narrow font. Functional code is classless and s</p><img src="https://geeksta.net/img/large/lambda-anarchy-no-class-red-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/lambda-anarchy-no-class-red-white/]]></guid>
+        <pubDate>Mon, 30 May 2022 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Say It's A Feature One More Time - QA / Developer Humor]]></title>
@@ -196,14 +204,6 @@
         <link><![CDATA[https://geeksta.net/design/hello-world-kotlin-light-scheme/]]></link>
         <description><![CDATA[<p>The Hello World program is frequently used in programming books and is often the first program coders try when learning a new programming language. Ever happened to you? This design for coders, developers, programmers, hackers or how you might call it,</p><img src="https://geeksta.net/img/large/hello-world-kotlin-light-scheme.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/hello-world-kotlin-light-scheme/]]></guid>
-        <pubDate>Thu, 12 Aug 2021 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Hello World Kotlin Code - Dark Syntax Scheme Coder Design Mug by geeksta]]></title>
-        <link><![CDATA[https://geeksta.net/design/hello-world-kotlin-dark-scheme/]]></link>
-        <description><![CDATA[<p>The Hello World program is frequently used in programming books and is often the first program coders try when learning a new programming language. Ever happened to you? This design for coders, developers, programmers, hackers or how you might call it,</p><img src="https://geeksta.net/img/large/hello-world-kotlin-dark-scheme.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/hello-world-kotlin-dark-scheme/]]></guid>
         <pubDate>Thu, 12 Aug 2021 00:00:00 </pubDate>
     </item>
     
