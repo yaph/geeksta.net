@@ -3,9 +3,17 @@
 <channel><title>Design</title>
     <link>https://geeksta.net</link>
     <description>Design</description>
-    <lastBuildDate>Mon, 30 May 2022 21:24:38 </lastBuildDate>
+    <lastBuildDate>Wed, 17 Aug 2022 11:02:59 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Choose Happiness - Self Improvement Psychedelic Retro Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/choose-happiness/]]></link>
+        <description><![CDATA[<p>Everyone is capable of being happy and your approach to life and how you view things that happen around you and in your mind play an important role. Be grateful and appreciate the good things to lead a happy life. Spread the word to the people around you.</p><img src="https://geeksta.net/img/large/choose-happiness.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/choose-happiness/]]></guid>
+        <pubDate>Tue, 16 Aug 2022 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[No Class No State Functional Programmer Red/White Design]]></title>
@@ -196,14 +204,6 @@
         <link><![CDATA[https://geeksta.net/design/hello-world-sass-light-scheme/]]></link>
         <description><![CDATA[<p>The Hello World program is frequently used in programming books and is often the first program coders try when learning a new programming language. Ever happened to you? This design for coders, developers, programmers, hackers or how you might call it,</p><img src="https://geeksta.net/img/large/hello-world-sass-light-scheme.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/hello-world-sass-light-scheme/]]></guid>
-        <pubDate>Thu, 12 Aug 2021 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Hello World Kotlin Code - Light Syntax Scheme Coder Design Sticker by geeksta]]></title>
-        <link><![CDATA[https://geeksta.net/design/hello-world-kotlin-light-scheme/]]></link>
-        <description><![CDATA[<p>The Hello World program is frequently used in programming books and is often the first program coders try when learning a new programming language. Ever happened to you? This design for coders, developers, programmers, hackers or how you might call it,</p><img src="https://geeksta.net/img/large/hello-world-kotlin-light-scheme.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/hello-world-kotlin-light-scheme/]]></guid>
         <pubDate>Thu, 12 Aug 2021 00:00:00 </pubDate>
     </item>
     
