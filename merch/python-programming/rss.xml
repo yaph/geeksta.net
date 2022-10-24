@@ -3,9 +3,25 @@
 <channel><title>Merch » Python Programming</title>
     <link>https://geeksta.net</link>
     <description>Merch » Python Programming</description>
-    <lastBuildDate>Mon, 24 Oct 2022 13:50:44 </lastBuildDate>
+    <lastBuildDate>Mon, 24 Oct 2022 13:50:58 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[++ungood; A Joke Python Programmers Will Understand - White Text]]></title>
+        <link><![CDATA[https://geeksta.net/design/plusplusungood-white/]]></link>
+        <description><![CDATA[<p>The ++ operator for incrementing a value is found in several programming languages. Python is not one of them. Also you rarely see semicolons in Python code although you can use them to end a statement and there are situations where this makes sense. If</p><img src="https://geeksta.net/img/large/plusplusungood-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/plusplusungood-white/]]></guid>
+        <pubDate>Sun, 23 Oct 2022 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[++ungood; A Joke Python Programmers Will Understand - Black Text]]></title>
+        <link><![CDATA[https://geeksta.net/design/plusplusungood-black/]]></link>
+        <description><![CDATA[<p>The ++ operator for incrementing a value is found in several programming languages. Python is not one of them. Also you rarely see semicolons in Python code although you can use them to end a statement and there are situations where this makes sense. If</p><img src="https://geeksta.net/img/large/plusplusungood-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/plusplusungood-black/]]></guid>
+        <pubDate>Sun, 23 Oct 2022 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[def procrastinate pass - Funny Python Code Pun Design Sticker by geeksta]]></title>
@@ -188,14 +204,6 @@
         <link><![CDATA[https://geeksta.net/design/fluent-in-python-white/]]></link>
         <description><![CDATA[<p>Are you fluent in Python? Show off your skills in the Python programming language with this design featuring the text &#8220;Fluent in Python&#8221; printed in a white font. The standard shirt color is blue. You can choose other shirt colors and products....</p><img src="https://geeksta.net/img/large/fluent-in-python-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/fluent-in-python-white/]]></guid>
-        <pubDate>Fri, 20 Feb 2015 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Fluent in Python - Black on Blue for Python Programmers]]></title>
-        <link><![CDATA[https://geeksta.net/design/fluent-in-python-black/]]></link>
-        <description><![CDATA[<p>Are you fluent in Python? Show off your skills in the Python programming language with this design featuring the text &#8220;Fluent in Python&#8221; printed in a black font. The standard shirt color is light blue. You can choose other shirt colors and...</p><img src="https://geeksta.net/img/large/fluent-in-python-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/fluent-in-python-black/]]></guid>
         <pubDate>Fri, 20 Feb 2015 00:00:00 </pubDate>
     </item>
     

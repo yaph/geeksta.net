@@ -3,9 +3,25 @@
 <channel><title>Design</title>
     <link>https://geeksta.net</link>
     <description>Design</description>
-    <lastBuildDate>Mon, 24 Oct 2022 13:50:44 </lastBuildDate>
+    <lastBuildDate>Mon, 24 Oct 2022 13:50:58 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[++ungood; A Joke Python Programmers Will Understand - White Text]]></title>
+        <link><![CDATA[https://geeksta.net/design/plusplusungood-white/]]></link>
+        <description><![CDATA[<p>The ++ operator for incrementing a value is found in several programming languages. Python is not one of them. Also you rarely see semicolons in Python code although you can use them to end a statement and there are situations where this makes sense. If</p><img src="https://geeksta.net/img/large/plusplusungood-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/plusplusungood-white/]]></guid>
+        <pubDate>Sun, 23 Oct 2022 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[++ungood; A Joke Python Programmers Will Understand - Black Text]]></title>
+        <link><![CDATA[https://geeksta.net/design/plusplusungood-black/]]></link>
+        <description><![CDATA[<p>The ++ operator for incrementing a value is found in several programming languages. Python is not one of them. Also you rarely see semicolons in Python code although you can use them to end a statement and there are situations where this makes sense. If</p><img src="https://geeksta.net/img/large/plusplusungood-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/plusplusungood-black/]]></guid>
+        <pubDate>Sun, 23 Oct 2022 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[HAcK Periodic Table Elements - Black Design for Hackers]]></title>
@@ -189,22 +205,6 @@
         <description><![CDATA[<p>The Hello World program is frequently used in programming books and is often the first program coders try when learning a new programming language. Ever happened to you? This design for coders, developers, programmers, hackers or how you might call it,</p><img src="https://geeksta.net/img/large/hello-world-actionscript-dark-scheme.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/hello-world-actionscript-dark-scheme/]]></guid>
         <pubDate>Wed, 18 Aug 2021 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[I use Vim Because I don't know how to quit Black Text Design Sticker by geeksta]]></title>
-        <link><![CDATA[https://geeksta.net/design/i-use-vim-black/]]></link>
-        <description><![CDATA[<p>Computer programmers tend to be very passionate when it comes to the topic of text editors and people who use Vim to write code love to let everyone know about it. Is Vim really so good or do they simple not know how to exit the program? A simple text d</p><img src="https://geeksta.net/img/large/i-use-vim-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/i-use-vim-black/]]></guid>
-        <pubDate>Tue, 17 Aug 2021 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[I use Vim Because I don't know how to quit White Text Design Cap by geeksta]]></title>
-        <link><![CDATA[https://geeksta.net/design/i-use-vim-white/]]></link>
-        <description><![CDATA[<p>Computer programmers tend to be very passionate when it comes to the topic of text editors and people who use Vim to write code love to let everyone know about it. Is Vim really so good or do they simple not know how to exit the program? A simple text d</p><img src="https://geeksta.net/img/large/i-use-vim-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/i-use-vim-white/]]></guid>
-        <pubDate>Tue, 17 Aug 2021 00:00:00 </pubDate>
     </item>
     
 </channel></rss>
