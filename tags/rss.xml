@@ -3,9 +3,17 @@
 <channel><title>Tags</title>
     <link>https://geeksta.net</link>
     <description>Tags</description>
-    <lastBuildDate>Wed, 19 Oct 2022 14:59:45 </lastBuildDate>
+    <lastBuildDate>Mon, 24 Oct 2022 13:50:44 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Quickly Access the ASCII Table from a Terminal]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/man-ascii/]]></link>
+        <description><![CDATA[<p>A short screencast showing the output of the command `man ascii` in a terminal on a Linux based operating system.</p><img src="https://i.ytimg.com/vi/AtmPW8HxL9k/maxresdefault.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/man-ascii/]]></guid>
+        <pubDate>Mon, 24 Oct 2022 12:12:21 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Automating Browser Screenshots for Social Media using wcap and Pillow]]></title>
@@ -197,14 +205,6 @@
         <description><![CDATA[<p>An interesting 20-min talk introducing some of the tools available to analyze and report on your Python code base.</p><img src="https://i.ytimg.com/vi/ILBsJXRQ008/maxresdefault.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/videos/automatic-code-reviews-carl-crowder/]]></guid>
         <pubDate>Mon, 14 Jul 2014 13:13:24 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[What Area can you Buy for $1M in different US Cities]]></title>
-        <link><![CDATA[https://geeksta.net/visualizations/us-housing-prices/]]></link>
-        <description><![CDATA[<p>A set of data visualizations that display what area of land you could buy for 1 million US dollar in different US cities.</p><img src="https://i.imgur.com/OkS5jW1.png" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/visualizations/us-housing-prices/]]></guid>
-        <pubDate>Sat, 10 May 2014 14:20:06 </pubDate>
     </item>
     
 </channel></rss>
