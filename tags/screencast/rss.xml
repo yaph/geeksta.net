@@ -3,14 +3,14 @@
 <channel><title>Tags » Screencast</title>
     <link>https://geeksta.net</link>
     <description>Tags » Screencast</description>
-    <lastBuildDate>Thu, 27 Oct 2022 01:35:18 </lastBuildDate>
+    <lastBuildDate>Thu, 27 Oct 2022 01:36:56 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
     <item>
         <title><![CDATA[Use Objexplore for Inspecting and Debugging Python Code]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/objexplore/]]></link>
-        <description><![CDATA[<p>A short screencast demonstrating the Python package objexplore with the builtins Python module.</p>]]></description>
+        <description><![CDATA[<p>A short screencast demonstrating the Python package objexplore with the builtins Python module.</p><img src="https://i.ytimg.com/vi/7bTGrP8vLz4/maxresdefault.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/objexplore/]]></guid>
         <pubDate>Wed, 26 Oct 2022 12:31:10 </pubDate>
     </item>
