@@ -3,15 +3,15 @@
 <channel><title>Tags » Pypi Package</title>
     <link>https://geeksta.net</link>
     <description>Tags » Pypi Package</description>
-    <lastBuildDate>Thu, 03 Nov 2022 12:40:03 </lastBuildDate>
+    <lastBuildDate>Mon, 07 Nov 2022 14:57:59 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
     <item>
         <title><![CDATA[Use Objexplore for Inspecting and Debugging Python Code]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/objexplore/]]></link>
+        <link><![CDATA[https://geeksta.net/screencasts/objexplore/]]></link>
         <description><![CDATA[<p>A short screencast demonstrating the Python package objexplore with the builtins Python module.</p><img src="https://i.ytimg.com/vi/7bTGrP8vLz4/maxresdefault.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/objexplore/]]></guid>
+        <guid><![CDATA[https://geeksta.net/screencasts/objexplore/]]></guid>
         <pubDate>Wed, 26 Oct 2022 12:31:10 </pubDate>
     </item>
     

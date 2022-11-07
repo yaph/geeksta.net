@@ -3,31 +3,39 @@
 <channel><title>Tags » Command Line</title>
     <link>https://geeksta.net</link>
     <description>Tags » Command Line</description>
-    <lastBuildDate>Thu, 03 Nov 2022 12:40:03 </lastBuildDate>
+    <lastBuildDate>Mon, 07 Nov 2022 14:57:59 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
     <item>
+        <title><![CDATA[Read a Description of the Linux Filesystem Hierarchy]]></title>
+        <link><![CDATA[https://geeksta.net/screencasts/man-hier/]]></link>
+        <description><![CDATA[<p>Quickly access a description of the directories you typically find in a Linux filesystem by typing `man hier` in a terminal.</p><img src="https://i.ytimg.com/vi/LcYuufw415s/maxresdefault.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/screencasts/man-hier/]]></guid>
+        <pubDate>Mon, 07 Nov 2022 14:35:44 </pubDate>
+    </item>
+    
+    <item>
         <title><![CDATA[Have You Ever Typed "git" More Often in One Command?]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/cloning-git/]]></link>
+        <link><![CDATA[https://geeksta.net/screencasts/cloning-git/]]></link>
         <description><![CDATA[<p>A short screencast showing how you can clone the git source tree from GitHub.</p><img src="https://i.ytimg.com/vi/CqR0WGo9hYU/maxresdefault.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/cloning-git/]]></guid>
+        <guid><![CDATA[https://geeksta.net/screencasts/cloning-git/]]></guid>
         <pubDate>Tue, 01 Nov 2022 13:07:55 </pubDate>
     </item>
     
     <item>
         <title><![CDATA[Use Objexplore for Inspecting and Debugging Python Code]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/objexplore/]]></link>
+        <link><![CDATA[https://geeksta.net/screencasts/objexplore/]]></link>
         <description><![CDATA[<p>A short screencast demonstrating the Python package objexplore with the builtins Python module.</p><img src="https://i.ytimg.com/vi/7bTGrP8vLz4/maxresdefault.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/objexplore/]]></guid>
+        <guid><![CDATA[https://geeksta.net/screencasts/objexplore/]]></guid>
         <pubDate>Wed, 26 Oct 2022 12:31:10 </pubDate>
     </item>
     
     <item>
         <title><![CDATA[Quickly Access the ASCII Table from a Terminal]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/man-ascii/]]></link>
+        <link><![CDATA[https://geeksta.net/screencasts/man-ascii/]]></link>
         <description><![CDATA[<p>A short screencast showing the output of the command `man ascii` in a terminal on a Linux based operating system.</p><img src="https://i.ytimg.com/vi/AtmPW8HxL9k/maxresdefault.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/man-ascii/]]></guid>
+        <guid><![CDATA[https://geeksta.net/screencasts/man-ascii/]]></guid>
         <pubDate>Mon, 24 Oct 2022 12:12:21 </pubDate>
     </item>
     

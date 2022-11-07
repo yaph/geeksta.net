@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel><title>Tags » Man Page Monday</title>
+    <link>https://geeksta.net</link>
+    <description>Tags » Man Page Monday</description>
+    <lastBuildDate>Mon, 07 Nov 2022 14:57:59 </lastBuildDate>
+    <generator>Logya</generator>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Read a Description of the Linux Filesystem Hierarchy]]></title>
+        <link><![CDATA[https://geeksta.net/screencasts/man-hier/]]></link>
+        <description><![CDATA[<p>Quickly access a description of the directories you typically find in a Linux filesystem by typing `man hier` in a terminal.</p><img src="https://i.ytimg.com/vi/LcYuufw415s/maxresdefault.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/screencasts/man-hier/]]></guid>
+        <pubDate>Mon, 07 Nov 2022 14:35:44 </pubDate>
+    </item>
+    
+</channel></rss>

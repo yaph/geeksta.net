@@ -3,15 +3,15 @@
 <channel><title>Tags » Ascii</title>
     <link>https://geeksta.net</link>
     <description>Tags » Ascii</description>
-    <lastBuildDate>Thu, 03 Nov 2022 12:40:03 </lastBuildDate>
+    <lastBuildDate>Mon, 07 Nov 2022 14:57:59 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
     <item>
         <title><![CDATA[Quickly Access the ASCII Table from a Terminal]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/man-ascii/]]></link>
+        <link><![CDATA[https://geeksta.net/screencasts/man-ascii/]]></link>
         <description><![CDATA[<p>A short screencast showing the output of the command `man ascii` in a terminal on a Linux based operating system.</p><img src="https://i.ytimg.com/vi/AtmPW8HxL9k/maxresdefault.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/man-ascii/]]></guid>
+        <guid><![CDATA[https://geeksta.net/screencasts/man-ascii/]]></guid>
         <pubDate>Mon, 24 Oct 2022 12:12:21 </pubDate>
     </item>
     

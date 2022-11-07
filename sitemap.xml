@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<url><loc><![CDATA[https://geeksta.net/geeklog/cloning-git/]]></loc><lastmod>2022-11-01</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/screencasts/man-hier/]]></loc><lastmod>2022-11-07</lastmod></url>
+
+<url><loc><![CDATA[https://geeksta.net/screencasts/cloning-git/]]></loc><lastmod>2022-11-06</lastmod></url>
 
 <url><loc><![CDATA[https://geeksta.net/design/hexdump-hacker-skull-green/]]></loc><lastmod>2022-10-28</lastmod></url>
 
-<url><loc><![CDATA[https://geeksta.net/geeklog/objexplore/]]></loc><lastmod>2022-10-27</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/screencasts/objexplore/]]></loc><lastmod>2022-11-06</lastmod></url>
 
-<url><loc><![CDATA[https://geeksta.net/geeklog/man-ascii/]]></loc><lastmod>2022-10-24</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/screencasts/man-ascii/]]></loc><lastmod>2022-11-06</lastmod></url>
 
 <url><loc><![CDATA[https://geeksta.net/design/plusplusungood-white/]]></loc><lastmod>2022-10-24</lastmod></url>
 
