@@ -3,9 +3,17 @@
 <channel><title>Tags » Command Line</title>
     <link>https://geeksta.net</link>
     <description>Tags » Command Line</description>
-    <lastBuildDate>Mon, 07 Nov 2022 14:57:59 </lastBuildDate>
+    <lastBuildDate>Tue, 08 Nov 2022 12:25:01 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Get Information from Wikipedia via DNS TXT Record Queries]]></title>
+        <link><![CDATA[https://geeksta.net/screencasts/wikipedia-dns/]]></link>
+        <description><![CDATA[<p>A short screencast showing how to issue DNS TXT record queries to retrieve information from Wikipedia in a terminal on a Linux based operating system.</p><img src="https://i.ytimg.com/vi/iB6yfr1j2J4/maxresdefault.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/screencasts/wikipedia-dns/]]></guid>
+        <pubDate>Tue, 08 Nov 2022 11:52:38 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Read a Description of the Linux Filesystem Hierarchy]]></title>

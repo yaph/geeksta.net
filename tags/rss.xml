@@ -3,9 +3,17 @@
 <channel><title>Tags</title>
     <link>https://geeksta.net</link>
     <description>Tags</description>
-    <lastBuildDate>Mon, 07 Nov 2022 14:57:59 </lastBuildDate>
+    <lastBuildDate>Tue, 08 Nov 2022 12:25:01 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Get Information from Wikipedia via DNS TXT Record Queries]]></title>
+        <link><![CDATA[https://geeksta.net/screencasts/wikipedia-dns/]]></link>
+        <description><![CDATA[<p>A short screencast showing how to issue DNS TXT record queries to retrieve information from Wikipedia in a terminal on a Linux based operating system.</p><img src="https://i.ytimg.com/vi/iB6yfr1j2J4/maxresdefault.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/screencasts/wikipedia-dns/]]></guid>
+        <pubDate>Tue, 08 Nov 2022 11:52:38 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Read a Description of the Linux Filesystem Hierarchy]]></title>
@@ -197,14 +205,6 @@
         <description><![CDATA[<p>A list of geek holidays like Pi Day, Star Wars Day, Towel Day and Programmers Day sorted by date.</p>]]></description>
         <guid><![CDATA[https://geeksta.net/events/geek-holidays/]]></guid>
         <pubDate>Sun, 22 Feb 2015 23:04:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Who Engages more in Fatal Stupidity: Men or Women?]]></title>
-        <link><![CDATA[https://geeksta.net/visualizations/fatal-stupidity/]]></link>
-        <description><![CDATA[<p>A recent study evaluated the sex differences in idiotic behavior by looking at the gender of 318 Darwin Award winners from 1995 to 2014.</p><img src="https://geeksta.net/img/vis/Number-of-Darwin-Award-Winners-by-Gender-not-equally-distributed.png" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/visualizations/fatal-stupidity/]]></guid>
-        <pubDate>Sat, 13 Dec 2014 14:27:16 </pubDate>
     </item>
     
 </channel></rss>

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+<url><loc><![CDATA[https://geeksta.net/screencasts/wikipedia-dns/]]></loc><lastmod>2022-11-08</lastmod></url>
+
 <url><loc><![CDATA[https://geeksta.net/screencasts/man-hier/]]></loc><lastmod>2022-11-07</lastmod></url>
 
 <url><loc><![CDATA[https://geeksta.net/screencasts/cloning-git/]]></loc><lastmod>2022-11-06</lastmod></url>

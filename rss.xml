@@ -3,9 +3,17 @@
 <channel><title>RSS Feed</title>
     <link>https://geeksta.net</link>
     <description>RSS Feed</description>
-    <lastBuildDate>Mon, 07 Nov 2022 14:57:59 </lastBuildDate>
+    <lastBuildDate>Tue, 08 Nov 2022 12:25:01 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Get Information from Wikipedia via DNS TXT Record Queries]]></title>
+        <link><![CDATA[https://geeksta.net/screencasts/wikipedia-dns/]]></link>
+        <description><![CDATA[<p>A short screencast showing how to issue DNS TXT record queries to retrieve information from Wikipedia in a terminal on a Linux based operating system.</p><img src="https://i.ytimg.com/vi/iB6yfr1j2J4/maxresdefault.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/screencasts/wikipedia-dns/]]></guid>
+        <pubDate>Tue, 08 Nov 2022 11:52:38 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Read a Description of the Linux Filesystem Hierarchy]]></title>
@@ -197,14 +205,6 @@
         <description><![CDATA[<p>Computer programmers and software developers who write JavaScript code use the "debugger;" statement to add a breakpoint to stop program execution at the point, where it occurs in the code. Show your love for web development & JS with this simple design.</p><img src="https://geeksta.net/img/large/debugger-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/debugger-white/]]></guid>
         <pubDate>Mon, 13 Sep 2021 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Hello World Android Code - Light Syntax Scheme Coder Design Sticker by geeksta]]></title>
-        <link><![CDATA[https://geeksta.net/design/hello-world-android-light-scheme/]]></link>
-        <description><![CDATA[<p>The Hello World program is frequently used in programming books and is often the first program coders try when learning a new programming language. Ever happened to you? This design for coders, developers, programmers, hackers or how you might call it,</p><img src="https://geeksta.net/img/large/hello-world-android-light-scheme.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/hello-world-android-light-scheme/]]></guid>
-        <pubDate>Wed, 18 Aug 2021 00:00:00 </pubDate>
     </item>
     
 </channel></rss>
