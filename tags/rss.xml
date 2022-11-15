@@ -3,9 +3,17 @@
 <channel><title>Tags</title>
     <link>https://geeksta.net</link>
     <description>Tags</description>
-    <lastBuildDate>Mon, 14 Nov 2022 21:35:32 </lastBuildDate>
+    <lastBuildDate>Tue, 15 Nov 2022 22:12:20 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[pydoc3 -b]]></title>
+        <link><![CDATA[https://geeksta.net/screencasts/pydoc3-b/]]></link>
+        <description><![CDATA[<p>A short screencast showing the output of the command `pydoc3 -b` in a terminal on a Linux based operating system.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/screencasts/pydoc3-b/]]></guid>
+        <pubDate>Tue, 15 Nov 2022 22:06:26 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Get Information from Wikipedia via DNS TXT Record Queries]]></title>
@@ -197,14 +205,6 @@
         <description><![CDATA[<p>The Shirt Color Helper is a tool to help choosing colors when you create t-shirt designs for Amazon Merch, Redbubble and Zazzle.</p><img src="https://geeksta.net/img/tools/shirt-color-helper.png" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/tools/shirt-color-helper/]]></guid>
         <pubDate>Tue, 03 Mar 2015 21:44:06 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Geek Holidays]]></title>
-        <link><![CDATA[https://geeksta.net/events/geek-holidays/]]></link>
-        <description><![CDATA[<p>A list of geek holidays like Pi Day, Star Wars Day, Towel Day and Programmers Day sorted by date.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/events/geek-holidays/]]></guid>
-        <pubDate>Sun, 22 Feb 2015 23:04:00 </pubDate>
     </item>
     
 </channel></rss>
