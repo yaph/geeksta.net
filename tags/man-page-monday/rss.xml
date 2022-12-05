@@ -3,9 +3,17 @@
 <channel><title>Tags » Man Page Monday</title>
     <link>https://geeksta.net</link>
     <description>Tags » Man Page Monday</description>
-    <lastBuildDate>Sun, 27 Nov 2022 18:43:33 </lastBuildDate>
+    <lastBuildDate>Mon, 05 Dec 2022 18:39:35 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[pydoc3 builtins]]></title>
+        <link><![CDATA[https://geeksta.net/screencasts/pydoc3-builtins/]]></link>
+        <description><![CDATA[<p>A short screencast showing how to use the command `pydoc3` to access the Python documentation in the terminal on a Linux based operating system.</p><img src="https://i.ytimg.com/vi/k6islyFWK-E/maxresdefault.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/screencasts/pydoc3-builtins/]]></guid>
+        <pubDate>Mon, 05 Dec 2022 18:13:36 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Read a Description of the Linux Filesystem Hierarchy]]></title>

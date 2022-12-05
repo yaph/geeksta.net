@@ -3,14 +3,22 @@
 <channel><title>RSS Feed</title>
     <link>https://geeksta.net</link>
     <description>RSS Feed</description>
-    <lastBuildDate>Sun, 27 Nov 2022 18:43:33 </lastBuildDate>
+    <lastBuildDate>Mon, 05 Dec 2022 18:39:35 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
     <item>
+        <title><![CDATA[pydoc3 builtins]]></title>
+        <link><![CDATA[https://geeksta.net/screencasts/pydoc3-builtins/]]></link>
+        <description><![CDATA[<p>A short screencast showing how to use the command `pydoc3` to access the Python documentation in the terminal on a Linux based operating system.</p><img src="https://i.ytimg.com/vi/k6islyFWK-E/maxresdefault.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/screencasts/pydoc3-builtins/]]></guid>
+        <pubDate>Mon, 05 Dec 2022 18:13:36 </pubDate>
+    </item>
+    
+    <item>
         <title><![CDATA[pydoc3 -b]]></title>
         <link><![CDATA[https://geeksta.net/screencasts/pydoc3-b/]]></link>
-        <description><![CDATA[<p>A short screencast showing the output of the command `pydoc3 -b` in a terminal on a Linux based operating system.</p>]]></description>
+        <description><![CDATA[<p>A short screencast showing the output of the command `pydoc3 -b` in a terminal on a Linux based operating system.</p><img src="https://i.ytimg.com/vi/k6islyFWK-E/maxresdefault.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/screencasts/pydoc3-b/]]></guid>
         <pubDate>Tue, 15 Nov 2022 22:06:26 </pubDate>
     </item>
@@ -197,14 +205,6 @@
         <description><![CDATA[<p>Computer programmers and software developers who write JavaScript code use the "debugger;" statement to add a breakpoint to stop program execution at the point, where it occurs in the code. Show your love for web development & JS with this simple design.</p><img src="https://geeksta.net/img/large/debugger-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/debugger-white/]]></guid>
         <pubDate>Mon, 13 Sep 2021 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Hello World Android Code - Light Syntax Scheme Coder Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/hello-world-android-light-scheme/]]></link>
-        <description><![CDATA[<p>The Hello World program is frequently used in programming books and is often the first program coders try when learning a new programming language. Ever happened to you? This design for coders, developers, programmers, hackers or how you might call it,</p><img src="https://geeksta.net/img/large/hello-world-android-light-scheme.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/hello-world-android-light-scheme/]]></guid>
-        <pubDate>Wed, 18 Aug 2021 00:00:00 </pubDate>
     </item>
     
 </channel></rss>

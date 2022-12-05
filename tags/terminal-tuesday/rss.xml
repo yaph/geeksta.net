@@ -3,14 +3,14 @@
 <channel><title>Tags » Terminal Tuesday</title>
     <link>https://geeksta.net</link>
     <description>Tags » Terminal Tuesday</description>
-    <lastBuildDate>Sun, 27 Nov 2022 18:43:33 </lastBuildDate>
+    <lastBuildDate>Mon, 05 Dec 2022 18:39:35 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
     <item>
         <title><![CDATA[pydoc3 -b]]></title>
         <link><![CDATA[https://geeksta.net/screencasts/pydoc3-b/]]></link>
-        <description><![CDATA[<p>A short screencast showing the output of the command `pydoc3 -b` in a terminal on a Linux based operating system.</p>]]></description>
+        <description><![CDATA[<p>A short screencast showing the output of the command `pydoc3 -b` in a terminal on a Linux based operating system.</p><img src="https://i.ytimg.com/vi/k6islyFWK-E/maxresdefault.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/screencasts/pydoc3-b/]]></guid>
         <pubDate>Tue, 15 Nov 2022 22:06:26 </pubDate>
     </item>
