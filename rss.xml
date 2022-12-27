@@ -3,9 +3,25 @@
 <channel><title>RSS Feed</title>
     <link>https://geeksta.net</link>
     <description>RSS Feed</description>
-    <lastBuildDate>Mon, 05 Dec 2022 18:39:35 </lastBuildDate>
+    <lastBuildDate>Tue, 27 Dec 2022 20:05:38 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[兔 Rabbit (Zodiac Sign) in Regular Chinese Characters]]></title>
+        <link><![CDATA[https://geeksta.net/design/rabbit-chinese-black/]]></link>
+        <description><![CDATA[<p>The rabbit is the 4th in the twelve-year cycle of animals that appear in the Chinese zodiac related to the Chinese calendar. In the Chinese calendar the Year of the Rabbit ranges from 22 January 2023 to 9 February 2024. Celebrate it with this simple des</p><img src="https://geeksta.net/img/large/rabbit-chinese-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/rabbit-chinese-black/]]></guid>
+        <pubDate>Thu, 22 Dec 2022 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Copy of 兔 Rabbit (Zodiac Sign) in Regular Chinese Characters]]></title>
+        <link><![CDATA[https://geeksta.net/design/rabbit-chinese-white/]]></link>
+        <description><![CDATA[<p>The rabbit is the 4th in the twelve-year cycle of animals that appear in the Chinese zodiac related to the Chinese calendar. In the Chinese calendar the Year of the Rabbit ranges from 22 January 2023 to 9 February 2024. Celebrate it with this simple des</p><img src="https://geeksta.net/img/large/rabbit-chinese-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/rabbit-chinese-white/]]></guid>
+        <pubDate>Thu, 22 Dec 2022 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[pydoc3 builtins]]></title>
@@ -188,22 +204,6 @@
         <link><![CDATA[https://geeksta.net/design/i-unicode-black/]]></link>
         <description><![CDATA[<p>Computer programmers and software engineers know that encoding is hard. There's ASCII, Unicode and a plethora of other standards. If the encoding is unknown and wrongly detected you may end up with weird characters or question marks as on this fun design.</p><img src="https://geeksta.net/img/large/i-unicode-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/i-unicode-black/]]></guid>
-        <pubDate>Mon, 13 Sep 2021 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[I ? Unicode Funny Software Engineer Design White Text]]></title>
-        <link><![CDATA[https://geeksta.net/design/i-unicode-white/]]></link>
-        <description><![CDATA[<p>Computer programmers and software engineers know that encoding is hard. There's ASCII, Unicode and a plethora of other standards. If the encoding is unknown and wrongly detected you may end up with weird characters or question marks as on this fun design.</p><img src="https://geeksta.net/img/large/i-unicode-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/i-unicode-white/]]></guid>
-        <pubDate>Mon, 13 Sep 2021 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[debugger; - JavaScript/Web Developer White Text Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/debugger-white/]]></link>
-        <description><![CDATA[<p>Computer programmers and software developers who write JavaScript code use the "debugger;" statement to add a breakpoint to stop program execution at the point, where it occurs in the code. Show your love for web development & JS with this simple design.</p><img src="https://geeksta.net/img/large/debugger-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/debugger-white/]]></guid>
         <pubDate>Mon, 13 Sep 2021 00:00:00 </pubDate>
     </item>
     
