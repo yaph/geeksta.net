@@ -3,7 +3,7 @@
 <channel><title>RSS Feed</title>
     <link>https://geeksta.net</link>
     <description>RSS Feed</description>
-    <lastBuildDate>Tue, 27 Dec 2022 20:05:38 </lastBuildDate>
+    <lastBuildDate>Tue, 27 Dec 2022 20:09:19 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
@@ -85,22 +85,6 @@
         <description><![CDATA[<p>A short screencast showing the output of the command `man ascii` in a terminal on a Linux based operating system.</p><img src="https://i.ytimg.com/vi/AtmPW8HxL9k/maxresdefault.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/screencasts/man-ascii/]]></guid>
         <pubDate>Mon, 24 Oct 2022 12:12:21 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[++ungood; A Joke Python Programmers Will Understand - White Text]]></title>
-        <link><![CDATA[https://geeksta.net/design/plusplusungood-white/]]></link>
-        <description><![CDATA[<p>The ++ operator for incrementing a value is found in several programming languages. Python is not one of them. Also you rarely see semicolons in Python code although you can use them to end a statement and there are situations where this makes sense. If</p><img src="https://geeksta.net/img/large/plusplusungood-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/plusplusungood-white/]]></guid>
-        <pubDate>Sun, 23 Oct 2022 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[++ungood; A Joke Python Programmers Will Understand - Black Text]]></title>
-        <link><![CDATA[https://geeksta.net/design/plusplusungood-black/]]></link>
-        <description><![CDATA[<p>The ++ operator for incrementing a value is found in several programming languages. Python is not one of them. Also you rarely see semicolons in Python code although you can use them to end a statement and there are situations where this makes sense. If</p><img src="https://geeksta.net/img/large/plusplusungood-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/plusplusungood-black/]]></guid>
-        <pubDate>Sun, 23 Oct 2022 00:00:00 </pubDate>
     </item>
     
     <item>
@@ -204,6 +188,22 @@
         <link><![CDATA[https://geeksta.net/design/i-unicode-black/]]></link>
         <description><![CDATA[<p>Computer programmers and software engineers know that encoding is hard. There's ASCII, Unicode and a plethora of other standards. If the encoding is unknown and wrongly detected you may end up with weird characters or question marks as on this fun design.</p><img src="https://geeksta.net/img/large/i-unicode-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/i-unicode-black/]]></guid>
+        <pubDate>Mon, 13 Sep 2021 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[I ? Unicode Funny Software Engineer Design White Text]]></title>
+        <link><![CDATA[https://geeksta.net/design/i-unicode-white/]]></link>
+        <description><![CDATA[<p>Computer programmers and software engineers know that encoding is hard. There's ASCII, Unicode and a plethora of other standards. If the encoding is unknown and wrongly detected you may end up with weird characters or question marks as on this fun design.</p><img src="https://geeksta.net/img/large/i-unicode-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/i-unicode-white/]]></guid>
+        <pubDate>Mon, 13 Sep 2021 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[debugger; - JavaScript/Web Developer White Text Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/debugger-white/]]></link>
+        <description><![CDATA[<p>Computer programmers and software developers who write JavaScript code use the "debugger;" statement to add a breakpoint to stop program execution at the point, where it occurs in the code. Show your love for web development & JS with this simple design.</p><img src="https://geeksta.net/img/large/debugger-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/debugger-white/]]></guid>
         <pubDate>Mon, 13 Sep 2021 00:00:00 </pubDate>
     </item>
     
