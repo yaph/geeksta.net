@@ -3,9 +3,17 @@
 <channel><title>RSS Feed</title>
     <link>https://geeksta.net</link>
     <description>RSS Feed</description>
-    <lastBuildDate>Tue, 27 Dec 2022 20:09:19 </lastBuildDate>
+    <lastBuildDate>Mon, 16 Jan 2023 23:52:34 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Cool Green Year of the Rabbit Design for Computer Hackers]]></title>
+        <link><![CDATA[https://geeksta.net/design/hexdump-hacker-rabbit-chinese/]]></link>
+        <description><![CDATA[<p>A cool design for computer hackers, coders, developers, programmers and sysadmins with the Chinese character for rabbit filled with a random array of decimal numbers. For people who love to hack computer code and want to celebrate the Year of the Rabbit</p><img src="https://geeksta.net/img/large/hexdump-hacker-rabbit-chinese.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/hexdump-hacker-rabbit-chinese/]]></guid>
+        <pubDate>Mon, 16 Jan 2023 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[兔 Rabbit (Zodiac Sign) in Regular Chinese Characters]]></title>
@@ -196,14 +204,6 @@
         <link><![CDATA[https://geeksta.net/design/i-unicode-white/]]></link>
         <description><![CDATA[<p>Computer programmers and software engineers know that encoding is hard. There's ASCII, Unicode and a plethora of other standards. If the encoding is unknown and wrongly detected you may end up with weird characters or question marks as on this fun design.</p><img src="https://geeksta.net/img/large/i-unicode-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/i-unicode-white/]]></guid>
-        <pubDate>Mon, 13 Sep 2021 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[debugger; - JavaScript/Web Developer White Text Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/debugger-white/]]></link>
-        <description><![CDATA[<p>Computer programmers and software developers who write JavaScript code use the "debugger;" statement to add a breakpoint to stop program execution at the point, where it occurs in the code. Show your love for web development & JS with this simple design.</p><img src="https://geeksta.net/img/large/debugger-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/debugger-white/]]></guid>
         <pubDate>Mon, 13 Sep 2021 00:00:00 </pubDate>
     </item>
     
