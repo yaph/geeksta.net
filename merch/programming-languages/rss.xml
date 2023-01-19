@@ -3,7 +3,7 @@
 <channel><title>Merch » Programming Languages</title>
     <link>https://geeksta.net</link>
     <description>Merch » Programming Languages</description>
-    <lastBuildDate>Mon, 16 Jan 2023 23:52:34 </lastBuildDate>
+    <lastBuildDate>Thu, 19 Jan 2023 23:45:20 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
@@ -112,9 +112,9 @@
     </item>
     
     <item>
-        <title><![CDATA[FORTRAN 77 - Red/White Design for Veteran Programmers]]></title>
+        <title><![CDATA[FORTRAN 77 Programming Language Old School Programmer Design]]></title>
         <link><![CDATA[https://geeksta.net/design/fortran-77-red-distressed/]]></link>
-        <description><![CDATA[<p>Fortran is an imperative programming language that is especially suited to numeric computation and scientific computing. Fortran exists in different versions, one of them is FORTRAN 77, which is shown on this design. If you are a programmer who writes code</p><img src="https://geeksta.net/img/large/fortran-77-red-distressed.jpg" alt="Preview Image">]]></description>
+        <description><![CDATA[<p>If you are a programmer who writes code in FORTRAN, specifically FORTRAN 77, you must be a true programming veteran. Show off your long-time computing experience with this college sport style design. Fortran is an imperative programming language that is</p><img src="https://geeksta.net/img/large/fortran-77-red-distressed.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/fortran-77-red-distressed/]]></guid>
         <pubDate>Fri, 17 Mar 2017 00:00:00 </pubDate>
     </item>
