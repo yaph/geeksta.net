@@ -3,9 +3,17 @@
 <channel><title>RSS Feed</title>
     <link>https://geeksta.net</link>
     <description>RSS Feed</description>
-    <lastBuildDate>Thu, 19 Jan 2023 23:45:20 </lastBuildDate>
+    <lastBuildDate>Fri, 20 Jan 2023 16:32:46 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Drawing the Yin and Yang Symbol with D3.js]]></title>
+        <link><![CDATA[https://geeksta.net/js-drawing/yin-yang-symbol/]]></link>
+        <description><![CDATA[<p>The JavaScript code in this post shows how you can draw the yin and yang symbol using the D3.js.</p><img src="https://geeksta.net/img/js-drawing/yin-yang-symbol.png" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/js-drawing/yin-yang-symbol/]]></guid>
+        <pubDate>Fri, 20 Jan 2023 16:31:48 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Real Numbers Teal Numbers - Funny Math Geek Nerd Pun Design]]></title>
@@ -196,14 +204,6 @@
         <link><![CDATA[https://geeksta.net/design/i-unicode-black/]]></link>
         <description><![CDATA[<p>Computer programmers and software engineers know that encoding is hard. There's ASCII, Unicode and a plethora of other standards. If the encoding is unknown and wrongly detected you may end up with weird characters or question marks as on this fun design.</p><img src="https://geeksta.net/img/large/i-unicode-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/i-unicode-black/]]></guid>
-        <pubDate>Mon, 13 Sep 2021 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[I ? Unicode Funny Software Engineer Design White Text]]></title>
-        <link><![CDATA[https://geeksta.net/design/i-unicode-white/]]></link>
-        <description><![CDATA[<p>Computer programmers and software engineers know that encoding is hard. There's ASCII, Unicode and a plethora of other standards. If the encoding is unknown and wrongly detected you may end up with weird characters or question marks as on this fun design.</p><img src="https://geeksta.net/img/large/i-unicode-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/i-unicode-white/]]></guid>
         <pubDate>Mon, 13 Sep 2021 00:00:00 </pubDate>
     </item>
     

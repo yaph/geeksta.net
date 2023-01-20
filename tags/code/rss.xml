@@ -3,9 +3,17 @@
 <channel><title>Tags » Code</title>
     <link>https://geeksta.net</link>
     <description>Tags » Code</description>
-    <lastBuildDate>Thu, 19 Jan 2023 23:45:20 </lastBuildDate>
+    <lastBuildDate>Fri, 20 Jan 2023 16:32:46 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Drawing the Yin and Yang Symbol with D3.js]]></title>
+        <link><![CDATA[https://geeksta.net/js-drawing/yin-yang-symbol/]]></link>
+        <description><![CDATA[<p>The JavaScript code in this post shows how you can draw the yin and yang symbol using the D3.js.</p><img src="https://geeksta.net/img/js-drawing/yin-yang-symbol.png" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/js-drawing/yin-yang-symbol/]]></guid>
+        <pubDate>Fri, 20 Jan 2023 16:31:48 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Automating Browser Screenshots for Social Media using wcap and Pillow]]></title>
