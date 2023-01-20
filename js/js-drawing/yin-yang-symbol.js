@@ -28,19 +28,6 @@ g.append('circle')
     .attr('fill', 'white')
     .attr('clip-path', 'url(#clip)');
 
-// inner white circle
-g.append('circle')
-    .attr('cx', radius)
-    .attr('cy', radius * 0.5)
-    .attr('r', radius * 0.5)
-    .attr('fill', 'white');
-
-// black seed
-g.append('circle')
-    .attr('cx', radius)
-    .attr('cy', radius * 0.5)
-    .attr('r', radius * 0.15);
-
 // inner black circle
 g.append('circle')
     .attr('cx', radius)
@@ -53,3 +40,16 @@ g.append('circle')
     .attr('cy', radius * 1.5)
     .attr('r', radius * 0.15)
     .attr('fill', 'white');
+
+// inner white circle
+g.append('circle')
+    .attr('cx', radius)
+    .attr('cy', radius * 0.5)
+    .attr('r', radius * 0.5)
+    .attr('fill', 'white');
+
+// black seed
+g.append('circle')
+    .attr('cx', radius)
+    .attr('cy', radius * 0.5)
+    .attr('r', radius * 0.15);

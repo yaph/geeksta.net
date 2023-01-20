@@ -122,6 +122,19 @@ g.append(&#39;circle&#39;)
     .attr(&#39;fill&#39;, &#39;white&#39;)
     .attr(&#39;clip-path&#39;, &#39;url(#clip)&#39;);
 
+// inner black circle
+g.append(&#39;circle&#39;)
+    .attr(&#39;cx&#39;, radius)
+    .attr(&#39;cy&#39;, radius * 1.5)
+    .attr(&#39;r&#39;, radius * 0.5);
+
+// white seed
+g.append(&#39;circle&#39;)
+    .attr(&#39;cx&#39;, radius)
+    .attr(&#39;cy&#39;, radius * 1.5)
+    .attr(&#39;r&#39;, radius * 0.15)
+    .attr(&#39;fill&#39;, &#39;white&#39;);
+
 // inner white circle
 g.append(&#39;circle&#39;)
     .attr(&#39;cx&#39;, radius)
@@ -135,18 +148,6 @@ g.append(&#39;circle&#39;)
     .attr(&#39;cy&#39;, radius * 0.5)
     .attr(&#39;r&#39;, radius * 0.15);
 
-// inner black circle
-g.append(&#39;circle&#39;)
-    .attr(&#39;cx&#39;, radius)
-    .attr(&#39;cy&#39;, radius * 1.5)
-    .attr(&#39;r&#39;, radius * 0.5);
-
-// white seed
-g.append(&#39;circle&#39;)
-    .attr(&#39;cx&#39;, radius)
-    .attr(&#39;cy&#39;, radius * 1.5)
-    .attr(&#39;r&#39;, radius * 0.15)
-    .attr(&#39;fill&#39;, &#39;white&#39;);
 </code></pre></div>
     </div>
     <div class="col-md-3">
