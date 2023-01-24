@@ -3,9 +3,25 @@
 <channel><title>RSS Feed</title>
     <link>https://geeksta.net</link>
     <description>RSS Feed</description>
-    <lastBuildDate>Fri, 20 Jan 2023 23:06:52 </lastBuildDate>
+    <lastBuildDate>Tue, 24 Jan 2023 14:56:18 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Valentines Day Leopard Heart for People who Love Animals]]></title>
+        <link><![CDATA[https://geeksta.net/design/leopard-heart/]]></link>
+        <description><![CDATA[<p>A heart filled with a pattern that looks like the skin of a leopard. An awesome wild cat that lives in Africa and Asia. A cute design for everyone who loves this awesome wild cat. A great present for birthday, Valentines's Day and any occasion you want</p><img src="https://geeksta.net/img/large/leopard-heart.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/leopard-heart/]]></guid>
+        <pubDate>Mon, 23 Jan 2023 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Cool Artificial Intelligence Design Devanagari Letter Ai]]></title>
+        <link><![CDATA[https://geeksta.net/design/parabola-ai-devanagari/]]></link>
+        <description><![CDATA[<p>A cool design for people who love teaching machines, model building, computer programming, developing algorithms and engineering. It shows the devanagari letter Ai, a vowel of Indic writing systems in a parabola grid in a purple to orange colors gradient.</p><img src="https://geeksta.net/img/large/parabola-ai-devanagari.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/parabola-ai-devanagari/]]></guid>
+        <pubDate>Mon, 23 Jan 2023 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Drawing the Yin and Yang Symbol with D3.js]]></title>
@@ -189,22 +205,6 @@
         <description><![CDATA[<p>IT teams who practice DevOps often use containers in their workflow. In such an environment "It works in my container" is a programmer excuse you may here more often than its popular predecessor "It works on my machine". A design for software developers</p><img src="https://geeksta.net/img/large/shrug-it-works-in-my-container-v-hoodie-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-v-hoodie-black/]]></guid>
         <pubDate>Sat, 18 Sep 2021 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[debugger; - JavaScript/Web Developer Black Text Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/debugger-black/]]></link>
-        <description><![CDATA[<p>Computer programmers and software developers who write JavaScript code use the "debugger;" statement to add a breakpoint to stop program execution at the point, where it occurs in the code. Show your love for web development & JS with this simple design.</p><img src="https://geeksta.net/img/large/debugger-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/debugger-black/]]></guid>
-        <pubDate>Mon, 13 Sep 2021 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[I ? Unicode Funny Software Engineer Design Black Text]]></title>
-        <link><![CDATA[https://geeksta.net/design/i-unicode-black/]]></link>
-        <description><![CDATA[<p>Computer programmers and software engineers know that encoding is hard. There's ASCII, Unicode and a plethora of other standards. If the encoding is unknown and wrongly detected you may end up with weird characters or question marks as on this fun design.</p><img src="https://geeksta.net/img/large/i-unicode-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/i-unicode-black/]]></guid>
-        <pubDate>Mon, 13 Sep 2021 00:00:00 </pubDate>
     </item>
     
 </channel></rss>
