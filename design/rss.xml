@@ -3,9 +3,33 @@
 <channel><title>Design</title>
     <link>https://geeksta.net</link>
     <description>Design</description>
-    <lastBuildDate>Tue, 07 Feb 2023 01:15:35 </lastBuildDate>
+    <lastBuildDate>Thu, 09 Feb 2023 11:35:41 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[None]]></title>
+        <link><![CDATA[https://geeksta.net/design/ai-making-humans-obsolete-since-1956-black/]]></link>
+        <description><![CDATA[<p>A design for people who teach machines, develop algorithms, write computer code, engineer technology and love sarcasm. Great for work, science and tech conferences and events where artificial intelligence and machine learning geeks &amp; nerds meet. /...</p><img src="https://geeksta.net/img/large/ai-making-humans-obsolete-since-1956-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/ai-making-humans-obsolete-since-1956-black/]]></guid>
+        <pubDate>Wed, 08 Feb 2023 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Sarcastic Humor Design AI Making Humans Obsolete Since 1956]]></title>
+        <link><![CDATA[https://geeksta.net/design/ai-making-humans-obsolete-since-1956-white/]]></link>
+        <description><![CDATA[<p>A design for people who teach machines, develop algorithms, write computer code, engineer technology and love sarcasm. Great for work, science and tech conferences and events where artificial intelligence and machine learning geeks & nerds meet. Artific</p><img src="https://geeksta.net/img/large/ai-making-humans-obsolete-since-1956-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/ai-making-humans-obsolete-since-1956-white/]]></guid>
+        <pubDate>Wed, 08 Feb 2023 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[It Works On My Machine Funny Programmer Excuse Reggae Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-reggae/]]></link>
+        <description><![CDATA[<p>For a coder/computer programmer/software developer bugs are a fact of life and so are excuses such as this popular one. Often enough code works on one machine, but not the other. Don't just shrug it off and say "it works on my machine" except as a joke.</p><img src="https://geeksta.net/img/large/shrug-it-works-on-my-machine-reggae.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-reggae/]]></guid>
+        <pubDate>Tue, 07 Feb 2023 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Roaring Tiger Head Tribal Tattoo Style Orange Gradient]]></title>
@@ -181,30 +205,6 @@
         <description><![CDATA[<p>In computer programming, forking means creating a new software project using the code from an existing one. Reasons range from continuing an unmaintained project, different opinions about how to do things to unwanted takeovers of the original project. A</p><img src="https://geeksta.net/img/large/fork-me-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/fork-me-black/]]></guid>
         <pubDate>Wed, 29 Sep 2021 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Fork Me - Funny Programmer Design with Git Fork Symbol]]></title>
-        <link><![CDATA[https://geeksta.net/design/fork-me-white/]]></link>
-        <description><![CDATA[<p>In computer programming, forking means creating a new software project using the code from an existing one. Reasons range from continuing an unmaintained project, different opinions about how to do things to unwanted takeovers of the original project. A</p><img src="https://geeksta.net/img/large/fork-me-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/fork-me-white/]]></guid>
-        <pubDate>Wed, 29 Sep 2021 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Caution I Curse When I Write Code - Funny Programmer Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/caution-i-curse-when-i-write-code/]]></link>
-        <description><![CDATA[<p>Profanity is a language all programmers speak fluently. At times when writing code, the amount of cursing and swearing can get excessive, so better warn your co-workers if you can't hold back, while coding. This funny design shows a yellow caution sign</p><img src="https://geeksta.net/img/large/caution-i-curse-when-i-write-code.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/caution-i-curse-when-i-write-code/]]></guid>
-        <pubDate>Mon, 20 Sep 2021 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[It Works In My Container Funny Black Desgin for Developers]]></title>
-        <link><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-v-hoodie-black/]]></link>
-        <description><![CDATA[<p>IT teams who practice DevOps often use containers in their workflow. In such an environment "It works in my container" is a programmer excuse you may here more often than its popular predecessor "It works on my machine". A design for software developers</p><img src="https://geeksta.net/img/large/shrug-it-works-in-my-container-v-hoodie-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/shrug-it-works-in-my-container-v-hoodie-black/]]></guid>
-        <pubDate>Sat, 18 Sep 2021 00:00:00 </pubDate>
     </item>
     
 </channel></rss>

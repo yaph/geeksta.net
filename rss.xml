@@ -3,9 +3,33 @@
 <channel><title>RSS Feed</title>
     <link>https://geeksta.net</link>
     <description>RSS Feed</description>
-    <lastBuildDate>Tue, 07 Feb 2023 01:15:35 </lastBuildDate>
+    <lastBuildDate>Thu, 09 Feb 2023 11:35:41 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[None]]></title>
+        <link><![CDATA[https://geeksta.net/design/ai-making-humans-obsolete-since-1956-black/]]></link>
+        <description><![CDATA[<p>A design for people who teach machines, develop algorithms, write computer code, engineer technology and love sarcasm. Great for work, science and tech conferences and events where artificial intelligence and machine learning geeks &amp; nerds meet. /...</p><img src="https://geeksta.net/img/large/ai-making-humans-obsolete-since-1956-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/ai-making-humans-obsolete-since-1956-black/]]></guid>
+        <pubDate>Wed, 08 Feb 2023 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Sarcastic Humor Design AI Making Humans Obsolete Since 1956]]></title>
+        <link><![CDATA[https://geeksta.net/design/ai-making-humans-obsolete-since-1956-white/]]></link>
+        <description><![CDATA[<p>A design for people who teach machines, develop algorithms, write computer code, engineer technology and love sarcasm. Great for work, science and tech conferences and events where artificial intelligence and machine learning geeks & nerds meet. Artific</p><img src="https://geeksta.net/img/large/ai-making-humans-obsolete-since-1956-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/ai-making-humans-obsolete-since-1956-white/]]></guid>
+        <pubDate>Wed, 08 Feb 2023 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[It Works On My Machine Funny Programmer Excuse Reggae Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-reggae/]]></link>
+        <description><![CDATA[<p>For a coder/computer programmer/software developer bugs are a fact of life and so are excuses such as this popular one. Often enough code works on one machine, but not the other. Don't just shrug it off and say "it works on my machine" except as a joke.</p><img src="https://geeksta.net/img/large/shrug-it-works-on-my-machine-reggae.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-reggae/]]></guid>
+        <pubDate>Tue, 07 Feb 2023 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Roaring Tiger Head Tribal Tattoo Style Orange Gradient]]></title>
@@ -181,30 +205,6 @@
         <description><![CDATA[<p>A short screencast showing the output of the command `man ascii` in a terminal on a Linux based operating system.</p><img src="https://i.ytimg.com/vi/AtmPW8HxL9k/maxresdefault.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/screencasts/man-ascii/]]></guid>
         <pubDate>Mon, 24 Oct 2022 12:12:21 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[HAcK Periodic Table Elements - Black Design for Hackers]]></title>
-        <link><![CDATA[https://geeksta.net/design/periodic-table-hack-black/]]></link>
-        <description><![CDATA[<p>A cool design for people who love to tinker with computers and technology, have a knack for chemistry and science and take pride in being hackers. It shows HAcK as the periodic table elements: hydrogen, actinium and potassium. Do you love to hack comput</p><img src="https://geeksta.net/img/large/periodic-table-hack-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/periodic-table-hack-black/]]></guid>
-        <pubDate>Wed, 31 Aug 2022 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[HAcK Periodic Table Elements - White Design for Hackers]]></title>
-        <link><![CDATA[https://geeksta.net/design/periodic-table-hack-white/]]></link>
-        <description><![CDATA[<p>A cool design for people who love to tinker with computers and technology, have a knack for chemistry and science and take pride in being hackers. It shows HAcK as the periodic table elements: hydrogen, actinium and potassium. Do you love to hack comput</p><img src="https://geeksta.net/img/large/periodic-table-hack-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/periodic-table-hack-white/]]></guid>
-        <pubDate>Wed, 31 Aug 2022 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Choose Happiness - Self Improvement Psychedelic Retro Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/choose-happiness/]]></link>
-        <description><![CDATA[<p>Everyone is capable of being happy and your approach to life and how you view things that happen around you and in your mind play an important role. Be grateful and appreciate the good things to lead a happy life. Spread the word to the people around you.</p><img src="https://geeksta.net/img/large/choose-happiness.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/choose-happiness/]]></guid>
-        <pubDate>Tue, 16 Aug 2022 00:00:00 </pubDate>
     </item>
     
 </channel></rss>

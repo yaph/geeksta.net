@@ -3,9 +3,17 @@
 <channel><title>Merch » Programmer Humor</title>
     <link>https://geeksta.net</link>
     <description>Merch » Programmer Humor</description>
-    <lastBuildDate>Tue, 07 Feb 2023 01:15:35 </lastBuildDate>
+    <lastBuildDate>Thu, 09 Feb 2023 11:35:41 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[It Works On My Machine Funny Programmer Excuse Reggae Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-reggae/]]></link>
+        <description><![CDATA[<p>For a coder/computer programmer/software developer bugs are a fact of life and so are excuses such as this popular one. Often enough code works on one machine, but not the other. Don't just shrug it off and say "it works on my machine" except as a joke.</p><img src="https://geeksta.net/img/large/shrug-it-works-on-my-machine-reggae.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-reggae/]]></guid>
+        <pubDate>Tue, 07 Feb 2023 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Caution I Curse When I Write Code - Funny Programmer Design]]></title>
@@ -197,14 +205,6 @@
         <description><![CDATA[<p>For a computer programmer, software developer or coder bugs are a fact of life and so are excuses such as this one. Often people regard a certain program behavior as a feature, while others consider it a bug, then this excuse comes in handy. A funny des</p><img src="https://geeksta.net/img/large/shrug-it-s-not-a-bug-it-s-a-feature-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/shrug-it-s-not-a-bug-it-s-a-feature-white/]]></guid>
         <pubDate>Thu, 06 Oct 2016 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[YOU'RE MY #0 - Declaration of Love for Programmers - Black Font]]></title>
-        <link><![CDATA[https://geeksta.net/design/youre-my-hash0-white/]]></link>
-        <description><![CDATA[<p>Telling someone "YOU'RE MY #0" is a way to show your love, at least if you are a programmer who writes code in languages with zero-based indexing. A nice gift for your programmer boy or girl or whatever friend, husband or wife. This design consists of t</p><img src="https://geeksta.net/img/large/youre-my-hash0-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/youre-my-hash0-white/]]></guid>
-        <pubDate>Mon, 23 May 2016 00:00:00 </pubDate>
     </item>
     
 </channel></rss>
