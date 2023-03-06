@@ -3,9 +3,25 @@
 <channel><title>RSS Feed</title>
     <link>https://geeksta.net</link>
     <description>RSS Feed</description>
-    <lastBuildDate>Fri, 03 Mar 2023 11:30:00 </lastBuildDate>
+    <lastBuildDate>Mon, 06 Mar 2023 21:54:52 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Prompt Engineer I Talk to Machines AI/ML Geek & Nerd Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/prompt-engineer-i-talk-to-machines-light/]]></link>
+        <description><![CDATA[<p>Prompt engineering is a hot topic and job in the rapidly growing technology fields of artificial intelligence (AI) and machine learning (ML). Show that you know how to talk to machines and are a pro at crafting effictive prompts for content generation.</p><img src="https://geeksta.net/img/large/prompt-engineer-i-talk-to-machines-light.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/prompt-engineer-i-talk-to-machines-light/]]></guid>
+        <pubDate>Mon, 06 Mar 2023 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Prompt Engineer I Talk to Machines AI/ML Geek & Nerd Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/prompt-engineer-i-talk-to-machines-dark/]]></link>
+        <description><![CDATA[<p>Prompt engineering is a hot topic and job in the rapidly growing technology fields of artificial intelligence (AI) and machine learning (ML). Show that you know how to talk to machines and are a pro at crafting effictive prompts for content generation.</p><img src="https://geeksta.net/img/large/prompt-engineer-i-talk-to-machines-dark.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/prompt-engineer-i-talk-to-machines-dark/]]></guid>
+        <pubDate>Mon, 06 Mar 2023 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Sarcastic Humor Design AI Making Humans Obsolete Since 1956]]></title>
@@ -189,22 +205,6 @@
         <description><![CDATA[<p>A cool design for computer hackers, coders, developers, programmers and sysadmins with a random array of decimal numbers and a skull outline carved out of it. A design for people who love to hack computer code and break things. Great for work, tech conf</p><img src="https://geeksta.net/img/large/hexdump-hacker-skull-green.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/hexdump-hacker-skull-green/]]></guid>
         <pubDate>Fri, 28 Oct 2022 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Use Objexplore for Inspecting and Debugging Python Code]]></title>
-        <link><![CDATA[https://geeksta.net/screencasts/objexplore/]]></link>
-        <description><![CDATA[<p>A short screencast demonstrating the Python package objexplore with the builtins Python module.</p><img src="https://i.ytimg.com/vi/7bTGrP8vLz4/maxresdefault.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/screencasts/objexplore/]]></guid>
-        <pubDate>Wed, 26 Oct 2022 12:31:10 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Quickly Access the ASCII Table from a Terminal]]></title>
-        <link><![CDATA[https://geeksta.net/screencasts/man-ascii/]]></link>
-        <description><![CDATA[<p>A short screencast showing the output of the command `man ascii` in a terminal on a Linux based operating system.</p><img src="https://i.ytimg.com/vi/AtmPW8HxL9k/maxresdefault.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/screencasts/man-ascii/]]></guid>
-        <pubDate>Mon, 24 Oct 2022 12:12:21 </pubDate>
     </item>
     
 </channel></rss>

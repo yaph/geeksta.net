@@ -3,9 +3,25 @@
 <channel><title>Design</title>
     <link>https://geeksta.net</link>
     <description>Design</description>
-    <lastBuildDate>Fri, 03 Mar 2023 11:30:00 </lastBuildDate>
+    <lastBuildDate>Mon, 06 Mar 2023 21:54:52 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Prompt Engineer I Talk to Machines AI/ML Geek & Nerd Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/prompt-engineer-i-talk-to-machines-light/]]></link>
+        <description><![CDATA[<p>Prompt engineering is a hot topic and job in the rapidly growing technology fields of artificial intelligence (AI) and machine learning (ML). Show that you know how to talk to machines and are a pro at crafting effictive prompts for content generation.</p><img src="https://geeksta.net/img/large/prompt-engineer-i-talk-to-machines-light.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/prompt-engineer-i-talk-to-machines-light/]]></guid>
+        <pubDate>Mon, 06 Mar 2023 00:00:00 </pubDate>
+    </item>
+    
+    <item>
+        <title><![CDATA[Prompt Engineer I Talk to Machines AI/ML Geek & Nerd Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/prompt-engineer-i-talk-to-machines-dark/]]></link>
+        <description><![CDATA[<p>Prompt engineering is a hot topic and job in the rapidly growing technology fields of artificial intelligence (AI) and machine learning (ML). Show that you know how to talk to machines and are a pro at crafting effictive prompts for content generation.</p><img src="https://geeksta.net/img/large/prompt-engineer-i-talk-to-machines-dark.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/prompt-engineer-i-talk-to-machines-dark/]]></guid>
+        <pubDate>Mon, 06 Mar 2023 00:00:00 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Sarcastic Humor Design AI Making Humans Obsolete Since 1956]]></title>
@@ -189,22 +205,6 @@
         <description><![CDATA[<p>A funny design for computer programmers, software developers and people who work in quality assurance who are tired of hearing the ubiquitous phrase "It's A Feature". Show off your disdain for the phrase "It's A Feature" with this design showing the tex</p><img src="https://geeksta.net/img/large/say-its-a-feature-one-more-time-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/say-its-a-feature-one-more-time-black/]]></guid>
         <pubDate>Mon, 02 May 2022 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[def procrastinate pass - Funny Python Code Pun Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/def-procrastinate-pass-light-scheme/]]></link>
-        <description><![CDATA[<p>Many people procrastinate, but how would a Python program do that? One way would be to define a procrastinate function that simply passes execution as shown in the piece of syntax highlighted Python code for light backgrounds. If you enjoy computer prog</p><img src="https://geeksta.net/img/large/def-procrastinate-pass-light-scheme.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/def-procrastinate-pass-light-scheme/]]></guid>
-        <pubDate>Thu, 03 Feb 2022 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Fork Me - Funny Programmer Design with Git Fork Symbol]]></title>
-        <link><![CDATA[https://geeksta.net/design/fork-me-black/]]></link>
-        <description><![CDATA[<p>In computer programming, forking means creating a new software project using the code from an existing one. Reasons range from continuing an unmaintained project, different opinions about how to do things to unwanted takeovers of the original project. A</p><img src="https://geeksta.net/img/large/fork-me-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/fork-me-black/]]></guid>
-        <pubDate>Wed, 29 Sep 2021 00:00:00 </pubDate>
     </item>
     
 </channel></rss>
