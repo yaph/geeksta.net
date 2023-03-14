@@ -3,9 +3,17 @@
 <channel><title>RSS Feed</title>
     <link>https://geeksta.net</link>
     <description>RSS Feed</description>
-    <lastBuildDate>Mon, 06 Mar 2023 21:54:52 </lastBuildDate>
+    <lastBuildDate>Tue, 14 Mar 2023 01:40:00 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Stable Diffusion Parameter Comparison]]></title>
+        <link><![CDATA[https://geeksta.net/ai/stable-diffusion/parameter-comparison/]]></link>
+        <description><![CDATA[<p></p>]]></description>
+        <guid><![CDATA[https://geeksta.net/ai/stable-diffusion/parameter-comparison/]]></guid>
+        <pubDate>Tue, 14 Mar 2023 01:23:47 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Prompt Engineer I Talk to Machines AI/ML Geek & Nerd Design]]></title>
@@ -197,14 +205,6 @@
         <description><![CDATA[<p>A short screencast showing how you can clone the git source tree from GitHub.</p><img src="https://i.ytimg.com/vi/CqR0WGo9hYU/maxresdefault.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/screencasts/cloning-git/]]></guid>
         <pubDate>Tue, 01 Nov 2022 13:07:55 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Cool Hacker Design Green Hexdump with Carved Out Skull]]></title>
-        <link><![CDATA[https://geeksta.net/design/hexdump-hacker-skull-green/]]></link>
-        <description><![CDATA[<p>A cool design for computer hackers, coders, developers, programmers and sysadmins with a random array of decimal numbers and a skull outline carved out of it. A design for people who love to hack computer code and break things. Great for work, tech conf</p><img src="https://geeksta.net/img/large/hexdump-hacker-skull-green.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/hexdump-hacker-skull-green/]]></guid>
-        <pubDate>Fri, 28 Oct 2022 00:00:00 </pubDate>
     </item>
     
 </channel></rss>

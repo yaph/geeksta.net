@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel><title>Ai » Stable Diffusion</title>
+    <link>https://geeksta.net</link>
+    <description>Ai » Stable Diffusion</description>
+    <lastBuildDate>Tue, 14 Mar 2023 01:40:00 </lastBuildDate>
+    <generator>Logya</generator>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Stable Diffusion Parameter Comparison]]></title>
+        <link><![CDATA[https://geeksta.net/ai/stable-diffusion/parameter-comparison/]]></link>
+        <description><![CDATA[<p></p>]]></description>
+        <guid><![CDATA[https://geeksta.net/ai/stable-diffusion/parameter-comparison/]]></guid>
+        <pubDate>Tue, 14 Mar 2023 01:23:47 </pubDate>
+    </item>
+    
+</channel></rss>
