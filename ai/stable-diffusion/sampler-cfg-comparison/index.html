@@ -5,13 +5,13 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title itemprop="name">Stable Diffusion Parameter Comparison | Geeksta</title>
+        <title itemprop="name">Stable Diffusion Sampler and CFG Scale Parameter Comparison | Geeksta</title>
         
         <meta name="author" content="Ramiro Gómez">
         
         
         <meta name="flattr:id" content="4pzdyq">
-        <link href="https://geeksta.net/ai/stable-diffusion/parameter-comparison/" rel="canonical" itemprop="url">
+        <link href="https://geeksta.net/ai/stable-diffusion/sampler-cfg-comparison/" rel="canonical" itemprop="url">
         <link href="/img/icon-small.png" rel="icon" type="image/png">
         <link href="/rss.xml" rel="alternate" type="application/rss+xml" title="Geeksta All Posts RSS feed">
         <link href="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
@@ -63,12 +63,12 @@
   <button type="button" class="dropdown-toggle btn btn-success navbar-btn" data-toggle="dropdown"><i class="fa fa-share"></i></button>
   <ul class="share dropdown-menu pull-right">
     <li><a href="/rss.xml" class="btn btn-default"><i class="fa fa-rss"></i> RSS Feed</a></li>
-    <li><a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/ai/stable-diffusion/parameter-comparison/&title=Stable%20Diffusion%20Parameter%20Comparison" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
-    <li><a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/ai/stable-diffusion/parameter-comparison/&text=Stable%20Diffusion%20Parameter%20Comparison" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
-    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/ai/stable-diffusion/parameter-comparison/&t=Stable%20Diffusion%20Parameter%20Comparison" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
-    <li><a rel="nofollow" href="https://plus.google.com/share?url=https%3A//geeksta.net/ai/stable-diffusion/parameter-comparison/" class="btn btn-default"><i class="fa fa-google-plus"></i> Google+</a></li>
-    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geeksta.net/ai/stable-diffusion/parameter-comparison/&title=Stable%20Diffusion%20Parameter%20Comparison" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
-    <li><a rel="nofollow" href="https://www.stumbleupon.com/submit?url=https%3A//geeksta.net/ai/stable-diffusion/parameter-comparison/&title=Stable%20Diffusion%20Parameter%20Comparison" class="btn btn-default"><i class="fa fa-stumbleupon"></i> Stumble</a></li>
+    <li><a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/ai/stable-diffusion/sampler-cfg-comparison/&title=Stable%20Diffusion%20Sampler%20and%20CFG%20Scale%20Parameter%20Comparison" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
+    <li><a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/ai/stable-diffusion/sampler-cfg-comparison/&text=Stable%20Diffusion%20Sampler%20and%20CFG%20Scale%20Parameter%20Comparison" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
+    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/ai/stable-diffusion/sampler-cfg-comparison/&t=Stable%20Diffusion%20Sampler%20and%20CFG%20Scale%20Parameter%20Comparison" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
+    <li><a rel="nofollow" href="https://plus.google.com/share?url=https%3A//geeksta.net/ai/stable-diffusion/sampler-cfg-comparison/" class="btn btn-default"><i class="fa fa-google-plus"></i> Google+</a></li>
+    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geeksta.net/ai/stable-diffusion/sampler-cfg-comparison/&title=Stable%20Diffusion%20Sampler%20and%20CFG%20Scale%20Parameter%20Comparison" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+    <li><a rel="nofollow" href="https://www.stumbleupon.com/submit?url=https%3A//geeksta.net/ai/stable-diffusion/sampler-cfg-comparison/&title=Stable%20Diffusion%20Sampler%20and%20CFG%20Scale%20Parameter%20Comparison" class="btn btn-default"><i class="fa fa-stumbleupon"></i> Stumble</a></li>
   </ul>
 </li>
                 </ul>
@@ -79,10 +79,13 @@
     <div id="wrapper" class="container">
         
         
-<h1>Stable Diffusion Parameter Comparison</h1>
+<h1>Stable Diffusion Sampler and CFG Scale Parameter Comparison</h1>
+<p>The images below where generated with <a href="https://invoke-ai.github.io/InvokeAI/">InvokeAI</a>, an implementation of Stable Diffusion, using the text-to-image feature with the following fixed parameter settings and varying CFG values and samplers. My goal was to be able to compare the influence of different samplers and CFG values. I intend to publish more comparisons of this kind. Subscribe to <a href="/rss.xml">the RSS feed</a>, if you want to stay in the loop.</p>
 <ul>
 <li>Prompt: beast, digital art, high quality</li>
 <li>Seed: 666</li>
+<li>width: 512</li>
+<li>height: 768</li>
 </ul>
 <table class="table" id="comparison"></table>
 
@@ -91,7 +94,7 @@
 
     <div id="footer" class="container">
         <p>Geeksta.net: programming, data mining, data visualization, tech books, and tools for tech geeks.<br>
-        © <script>document.write(new Date().getFullYear())</script> Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/sitemap/">Sitemap</a></p>
+        © <script>document.write(new Date().getFullYear())</script> Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/sitemap/">Sitemap</a> • <a href="https://www.instagram.com/g33ksta/">Instagram</a> • <a href="https://mastodon.social/@geeksta">Mastodon</a> • <a href="https://www.tiktok.com/@g33ksta">TikTok</a> • <a href="https://www.youtube.com/@geeksta">YouTube</a></p>
     </div>
 
     <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
