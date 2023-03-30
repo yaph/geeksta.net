@@ -3,9 +3,17 @@
 <channel><title>RSS Feed</title>
     <link>https://geeksta.net</link>
     <description>RSS Feed</description>
-    <lastBuildDate>Wed, 15 Mar 2023 17:11:07 </lastBuildDate>
+    <lastBuildDate>Fri, 31 Mar 2023 01:02:18 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[AI Ethics, Advancements, and Limitations: An Interview with ChatGPT]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/chatgpt-interview/]]></link>
+        <description><![CDATA[<p>An interview with ChatGPT, I conducted on March 30th 2023, asking about GPT, creating language models, artificial and human intelligence, potential benefits and risks of AI, ethical considerations, and predictions for the future.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/chatgpt-interview/]]></guid>
+        <pubDate>Thu, 30 Mar 2023 21:50:05 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Stable Diffusion Sampler and CFG Scale Parameter Comparison]]></title>
@@ -197,14 +205,6 @@
         <description><![CDATA[<p>Quickly access a description of the directories you typically find in a Linux filesystem by typing `man hier` in a terminal.</p><img src="https://i.ytimg.com/vi/LcYuufw415s/maxresdefault.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/screencasts/man-hier/]]></guid>
         <pubDate>Mon, 07 Nov 2022 14:35:44 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Have You Ever Typed "git" More Often in One Command?]]></title>
-        <link><![CDATA[https://geeksta.net/screencasts/cloning-git/]]></link>
-        <description><![CDATA[<p>A short screencast showing how you can clone the git source tree from GitHub.</p><img src="https://i.ytimg.com/vi/CqR0WGo9hYU/maxresdefault.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/screencasts/cloning-git/]]></guid>
-        <pubDate>Tue, 01 Nov 2022 13:07:55 </pubDate>
     </item>
     
 </channel></rss>

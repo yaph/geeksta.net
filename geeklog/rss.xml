@@ -3,9 +3,17 @@
 <channel><title>Geeklog</title>
     <link>https://geeksta.net</link>
     <description>Geeklog</description>
-    <lastBuildDate>Wed, 15 Mar 2023 17:11:07 </lastBuildDate>
+    <lastBuildDate>Fri, 31 Mar 2023 01:02:18 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[AI Ethics, Advancements, and Limitations: An Interview with ChatGPT]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/chatgpt-interview/]]></link>
+        <description><![CDATA[<p>An interview with ChatGPT, I conducted on March 30th 2023, asking about GPT, creating language models, artificial and human intelligence, potential benefits and risks of AI, ethical considerations, and predictions for the future.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/chatgpt-interview/]]></guid>
+        <pubDate>Thu, 30 Mar 2023 21:50:05 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Automating Browser Screenshots for Social Media using wcap and Pillow]]></title>

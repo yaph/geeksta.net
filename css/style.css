@@ -8,7 +8,7 @@ body,p,li {
 color: #333;
 }
 p,li {
-font-size:1.2em;
+font-size:1.3em;
 }
 h1, h2, h3, h4, h5, h6 {
 margin:.1em 0 .3em 0;
@@ -54,7 +54,7 @@ margin:.4em 1em 1em 0;
 float:left;
 }
 .content img {
-    max-width: 100%;
+max-width: 100%;
 }
 
 /* ul.thumbnails does not exist in bootstrap 3 */
@@ -129,18 +129,24 @@ font-size:.9em;
 font-size:2em;
 }
 
-/* gallery */
-.design-preview figure {
+/* images */
+.preview-img figure {
 position: relative;
 min-height: 180px;
 }
-.design-preview figcaption {
+.preview-img figcaption {
 background-color: rgba(255, 255, 255, .85);
 bottom: 1.1em;
 font-size: 1.1em;
 padding: .3em;
 position: absolute;
 text-align: center;
+}
+.preview-img figcaption {
+width: 100%;
+}
+.h {
+visibility: hidden;
 }
 
 .design .btn {
