@@ -3,9 +3,17 @@
 <channel><title>RSS Feed</title>
     <link>https://geeksta.net</link>
     <description>RSS Feed</description>
-    <lastBuildDate>Sun, 16 Apr 2023 23:33:03 </lastBuildDate>
+    <lastBuildDate>Mon, 17 Apr 2023 01:37:10 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Unlock the Power of ImageMagick: A Beginner's Guide to Image Processing]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/imagemagick-tutorial/]]></link>
+        <description><![CDATA[<p>ImageMagick is a powerful open-source tool for image processing. This tutorial covers the basic commands for image conversion, resizing, cropping, rotating, and adding effects. Learn how to manipulate your images with this tutorial.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/imagemagick-tutorial/]]></guid>
+        <pubDate>Mon, 17 Apr 2023 01:35:24 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Python Number Formatting Made Easy with f-Strings]]></title>
@@ -197,14 +205,6 @@
         <description><![CDATA[<p>A short screencast showing the output of the command `pydoc3 -b` in a terminal on a Linux based operating system.</p><img src="https://i.ytimg.com/vi/k6islyFWK-E/maxresdefault.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/screencasts/pydoc3-b/]]></guid>
         <pubDate>Tue, 15 Nov 2022 22:06:26 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Get Information from Wikipedia via DNS TXT Record Queries]]></title>
-        <link><![CDATA[https://geeksta.net/screencasts/wikipedia-dns/]]></link>
-        <description><![CDATA[<p>A short screencast showing how to issue DNS TXT record queries to retrieve information from Wikipedia in a terminal on a Linux based operating system.</p><img src="https://i.ytimg.com/vi/iB6yfr1j2J4/maxresdefault.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/screencasts/wikipedia-dns/]]></guid>
-        <pubDate>Tue, 08 Nov 2022 11:52:38 </pubDate>
     </item>
     
 </channel></rss>
