@@ -3,9 +3,17 @@
 <channel><title>Geeklog</title>
     <link>https://geeksta.net</link>
     <description>Geeklog</description>
-    <lastBuildDate>Fri, 31 Mar 2023 01:02:18 </lastBuildDate>
+    <lastBuildDate>Sun, 16 Apr 2023 23:33:03 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Python Number Formatting Made Easy with f-Strings]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/python-number-formatting-f-strings/]]></link>
+        <description><![CDATA[<p>Learn how to format numbers in Python with f-strings. Use format_spec to specify width, alignment, scientific notation, and more.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/python-number-formatting-f-strings/]]></guid>
+        <pubDate>Sun, 16 Apr 2023 23:32:12 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[AI Ethics, Advancements, and Limitations: An Interview with ChatGPT]]></title>

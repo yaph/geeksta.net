@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel><title>Tags » Formatting</title>
+    <link>https://geeksta.net</link>
+    <description>Tags » Formatting</description>
+    <lastBuildDate>Sun, 16 Apr 2023 23:33:03 </lastBuildDate>
+    <generator>Logya</generator>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Python Number Formatting Made Easy with f-Strings]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/python-number-formatting-f-strings/]]></link>
+        <description><![CDATA[<p>Learn how to format numbers in Python with f-strings. Use format_spec to specify width, alignment, scientific notation, and more.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/python-number-formatting-f-strings/]]></guid>
+        <pubDate>Sun, 16 Apr 2023 23:32:12 </pubDate>
+    </item>
+    
+</channel></rss>

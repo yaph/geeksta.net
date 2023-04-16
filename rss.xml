@@ -3,9 +3,17 @@
 <channel><title>RSS Feed</title>
     <link>https://geeksta.net</link>
     <description>RSS Feed</description>
-    <lastBuildDate>Fri, 31 Mar 2023 01:02:18 </lastBuildDate>
+    <lastBuildDate>Sun, 16 Apr 2023 23:33:03 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Python Number Formatting Made Easy with f-Strings]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/python-number-formatting-f-strings/]]></link>
+        <description><![CDATA[<p>Learn how to format numbers in Python with f-strings. Use format_spec to specify width, alignment, scientific notation, and more.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/python-number-formatting-f-strings/]]></guid>
+        <pubDate>Sun, 16 Apr 2023 23:32:12 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[AI Ethics, Advancements, and Limitations: An Interview with ChatGPT]]></title>
@@ -197,14 +205,6 @@
         <description><![CDATA[<p>A short screencast showing how to issue DNS TXT record queries to retrieve information from Wikipedia in a terminal on a Linux based operating system.</p><img src="https://i.ytimg.com/vi/iB6yfr1j2J4/maxresdefault.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/screencasts/wikipedia-dns/]]></guid>
         <pubDate>Tue, 08 Nov 2022 11:52:38 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Read a Description of the Linux Filesystem Hierarchy]]></title>
-        <link><![CDATA[https://geeksta.net/screencasts/man-hier/]]></link>
-        <description><![CDATA[<p>Quickly access a description of the directories you typically find in a Linux filesystem by typing `man hier` in a terminal.</p><img src="https://i.ytimg.com/vi/LcYuufw415s/maxresdefault.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/screencasts/man-hier/]]></guid>
-        <pubDate>Mon, 07 Nov 2022 14:35:44 </pubDate>
     </item>
     
 </channel></rss>

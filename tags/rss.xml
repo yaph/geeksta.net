@@ -3,9 +3,17 @@
 <channel><title>Tags</title>
     <link>https://geeksta.net</link>
     <description>Tags</description>
-    <lastBuildDate>Fri, 31 Mar 2023 01:02:18 </lastBuildDate>
+    <lastBuildDate>Sun, 16 Apr 2023 23:33:03 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Python Number Formatting Made Easy with f-Strings]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/python-number-formatting-f-strings/]]></link>
+        <description><![CDATA[<p>Learn how to format numbers in Python with f-strings. Use format_spec to specify width, alignment, scientific notation, and more.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/python-number-formatting-f-strings/]]></guid>
+        <pubDate>Sun, 16 Apr 2023 23:32:12 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Drawing the Yin and Yang Symbol with D3.js]]></title>
@@ -197,14 +205,6 @@
         <description><![CDATA[<p>This article describes a simple and effective method to write better commit messages for people who commit directly from the command line.</p><img src="https://imgs.xkcd.com/comics/git_commit.png" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/better-commit-messages/]]></guid>
         <pubDate>Wed, 20 May 2015 12:52:54 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Drawing the New York Hardcore Logo with D3.js]]></title>
-        <link><![CDATA[https://geeksta.net/js-drawing/nyhc-logo/]]></link>
-        <description><![CDATA[<p>Example JavaScript code of how you can draw the New York Hardcore (NYHC) logo with D3.js using SVG shapes and text.</p><img src="https://geeksta.net/img/js-drawing/nyhc-white-on-black.png" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/js-drawing/nyhc-logo/]]></guid>
-        <pubDate>Sat, 07 Mar 2015 00:15:49 </pubDate>
     </item>
     
 </channel></rss>
