@@ -3,9 +3,17 @@
 <channel><title>Geeklog</title>
     <link>https://geeksta.net</link>
     <description>Geeklog</description>
-    <lastBuildDate>Mon, 17 Apr 2023 01:37:10 </lastBuildDate>
+    <lastBuildDate>Wed, 19 Apr 2023 22:50:37 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    
+    <item>
+        <title><![CDATA[Convert Web Pages to Ebooks in MOBI Format using Wget and Calibre]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/convert-web-pages-to-mobi/]]></link>
+        <description><![CDATA[<p>This article will walk you through how to convert web pages to ebooks in MOBI format using two tools: Wget and Calibre.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/convert-web-pages-to-mobi/]]></guid>
+        <pubDate>Wed, 19 Apr 2023 22:49:34 </pubDate>
+    </item>
     
     <item>
         <title><![CDATA[Unlock the Power of ImageMagick: A Beginner's Guide to Image Processing]]></title>
