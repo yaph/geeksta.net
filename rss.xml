@@ -3,14 +3,14 @@
 <channel><title>RSS Feed</title>
     <link>https://geeksta.net</link>
     <description>RSS Feed</description>
-    <lastBuildDate>Wed, 19 Apr 2023 23:21:16 </lastBuildDate>
+    <lastBuildDate>Sun, 23 Apr 2023 21:56:12 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     
     <item>
         <title><![CDATA[Convert Web Pages to Ebooks in MOBI Format using Wget and Calibre]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/convert-web-pages-to-mobi/]]></link>
-        <description><![CDATA[<p>This article will walk you through how to convert web pages to ebooks in MOBI format using two tools: Wget and Calibre.</p>]]></description>
+        <description><![CDATA[<p>Learn how to convert web pages to Mobi format for easy reading on your Kindle or other e-readers. Follow this simple guide and enjoy your favorite articles on-the-go!</p>]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/convert-web-pages-to-mobi/]]></guid>
         <pubDate>Wed, 19 Apr 2023 22:49:34 </pubDate>
     </item>
