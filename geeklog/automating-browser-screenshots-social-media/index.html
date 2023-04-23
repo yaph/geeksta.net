@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head itemscope itemtype="https://schema.org/WebSite">
@@ -6,21 +5,13 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title itemprop="name">Automating Browser Screenshots for Social Media using wcap and Pillow | Geeksta</title>
-        <meta name="description" content="An article describing how I automated the creation of social media images for two websites with graphics rendered in JavaScript by using screenshots.">
-        <meta name="author" content="Ramiro Gómez">
-        
-            <meta property="og:image" content="https://geeksta.net/img/geeklog/automating-browser-screenshots-social-media.png">
-            
-
+<meta name="description" content="An article describing how I automated the creation of social media images for two websites with graphics rendered in JavaScript by using screenshots."><meta name="author" content="Ramiro Gómez">            <meta property="og:image" content="https://geeksta.net/img/geeklog/automating-browser-screenshots-social-media.png">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@yaph">
     <meta name="twitter:title" content="Automating Browser Screenshots for Social Media using wcap and Pillow">
     <meta name="twitter:description" content="An article describing how I automated the creation of social media images for two websites with graphics rendered in JavaScript by using screenshots.">
     <meta name="twitter:image:src" content="https://geeksta.net/img/geeklog/automating-browser-screenshots-social-media.png">
-
-        
-        
         <meta name="flattr:id" content="4pzdyq">
         <link href="https://geeksta.net/geeklog/automating-browser-screenshots-social-media/" rel="canonical" itemprop="url">
         <link href="/img/icon-small.png" rel="icon" type="image/png">
@@ -28,14 +19,10 @@
         <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="/css/style.css" rel="stylesheet">
-        
-            <link href="/vendor/highlight/styles/idea.css" rel="stylesheet">
-        
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<link href="/vendor/highlight/styles/idea.css" rel="stylesheet">        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-        
     </head>
     <body>
     <div class="navbar navbar-fixed-top navbar-inverse">
@@ -63,69 +50,64 @@
                     <li><a href="/geeklog/">Geeklog</a></li>
                     <li><a href="/merch/">Merchandise</a></li>
                     <li><a href="/tools/">Tools</a></li>
-                    <li id="sharemenu" class="dropdown">
+<li id="sharemenu" class="dropdown">
   <button type="button" class="dropdown-toggle btn btn-success navbar-btn" data-toggle="dropdown"><i class="fa fa-share"></i></button>
   <ul class="share dropdown-menu pull-right">
     <li><a href="/rss.xml" class="btn btn-default"><i class="fa fa-rss"></i> RSS Feed</a></li>
-    <li><a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&title=Automating%20Browser%20Screenshots%20for%20Social%20Media%20using%20wcap%20and%20Pillow" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
-    <li><a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&text=Automating%20Browser%20Screenshots%20for%20Social%20Media%20using%20wcap%20and%20Pillow" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
-    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&t=Automating%20Browser%20Screenshots%20for%20Social%20Media%20using%20wcap%20and%20Pillow" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
-    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&title=Automating%20Browser%20Screenshots%20for%20Social%20Media%20using%20wcap%20and%20Pillow" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+    <li><a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/geeklog/automating-browser-screenshots-social-media/&title=Automating%20Browser%20Screenshots%20for%20Social%20Media%20using%20wcap%20and%20Pillow" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
+    <li><a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/geeklog/automating-browser-screenshots-social-media/&text=Automating%20Browser%20Screenshots%20for%20Social%20Media%20using%20wcap%20and%20Pillow" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
+    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/geeklog/automating-browser-screenshots-social-media/&t=Automating%20Browser%20Screenshots%20for%20Social%20Media%20using%20wcap%20and%20Pillow" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
+    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/geeklog/automating-browser-screenshots-social-media/&title=Automating%20Browser%20Screenshots%20for%20Social%20Media%20using%20wcap%20and%20Pillow" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
   </ul>
-</li>
-                </ul>
+</li>                </ul>
             </div>
         </div>
     </div>
 
     <div id="wrapper" class="container">
-        
-        
 <div class="row">
     <div itemscope itemtype="http://schema.org/Article" class="col-md-9 content">
         <header><h1 itemprop="name">Automating Browser Screenshots for Social Media using wcap and Pillow</h1></header>
-        
         <p>I have two websites, <a href="https://ukealong.com/">ukealong.com</a> and <a href="https://programminglanguages.info/">programminglanguages.info</a>, with many pages showing graphics rendered with JavaScript. When I shared one of those pages on social media, I created a screenshot first, optimized the image and added the page URL as text to it. I realized that I don't want to do this manually for hundreds of pages and wrote some code to automate these tasks.</p>
 <p>I looked at existing screenshot libraries for Python first, but the packages I tried didn't capture the dynamic graphics that I wanted to include on the screenshots. So I wrote a tool called <a href="https://pypi.org/project/wcap/">wcap (web page capture)</a> that is built on top of <a href="https://www.selenium.dev/">Selenium</a> and <a href="https://github.com/mozilla/geckodriver">geckodriver</a>. It can be used as a command line tool or from within Python programs.</p>
 <p>At the time of writing <code>wcap</code> allows you to set the dimensions of the screenshot and a wait time in seconds to ensure that page rendering has finished. Any form of image manipulation like cropping or adding text has to be done separately.</p>
 <p>Below you find the code to create the social media image for the <a href="https://ukealong.com/key/c/">Key of C page on ukealong.com</a>. The first step is to import the necessary libraries and set some display variables like margins and font size that are specific for the design and layout of the captured web page and the portion to show. My goal was to show the fretboard diagram and the first two rows of video preview images.</p>
-<pre><code class="language-python">from PIL import Image, ImageDraw, ImageFont
-from wcap import get_browser, capture
-
-font_color = (0, 35, 102)  # Royal Blue
+<p>```python
+from PIL import Image, ImageDraw, ImageFont
+from wcap import get_browser, capture</p>
+<p>font_color = (0, 35, 102)  # Royal Blue
 font_margin = 10
-font_size = 18
-
-margin_vertical = 45
+font_size = 18</p>
+<p>margin_vertical = 45
 margin_horizontal = 50
 scale_factor = 0.8
-</code></pre>
+```</p>
 <p>Next we set the URL of the page and the file name for storing the image.</p>
-<pre><code class="language-python">url = 'https://ukealong.com/key/c/'
-file_name = 'img/c.png'
-</code></pre>
+<p><code>python
+url = 'https://ukealong.com/key/c/'
+file_name = 'img/c.png'</code></p>
 <p>You probably wouldn't read this, if you wanted to create a screenshot for a single page. So for creating multiple images, you can put the code that comes after creating the <code>browser</code> object in a function and pass URL and image name as parameters. The purpose of the <code>get_browser()</code> function in the <code>wcap</code> package is to make a single browser instance usable for multiple screen captures.</p>
-<pre><code class="language-python">browser = get_browser()
-capture(browser, url, file_name, dimensions='1500x1100', wait=5)
-</code></pre>
+<p><code>python
+browser = get_browser()
+capture(browser, url, file_name, dimensions='1500x1100', wait=5)</code></p>
 <p>The next steps are resizing and cropping the downloaded image. In the call of <code>resize</code> the <code>resample</code> parameter is set to <code>Image.BICUBIC</code>. The default resampling filter didn't work well, so this is something you may need to adjust if you want to make it work for a different page.</p>
-<pre><code class="language-python">im = Image.open(file_name)
+<p><code>python
+im = Image.open(file_name)
 w, h = im.size
 resized = im.resize((int(w * scale_factor), int(h * scale_factor)), resample=Image.BICUBIC)
 resized_w, resized_h = resized.size
-cropped = resized.crop((margin_horizontal, margin_vertical, resized_w - margin_horizontal, resized_h))
-</code></pre>
+cropped = resized.crop((margin_horizontal, margin_vertical, resized_w - margin_horizontal, resized_h))</code></p>
 <p>Now that the image is reduced to the desired size and portion of the page, the web page URL is added as text to the top right corner. The first parameter of the <code>ImageDraw.text</code> method is a tuple specifying the <code>x</code> and <code>y</code> coordinates of the top left corner of the text relative to the top left corner of the image. To make the text fit the <code>x</code> value is calculated from the width of the image and the text given the font family and size to use.</p>
-<pre><code class="language-python">font = ImageFont.truetype('DejaVuSansMono-Bold.ttf', font_size)
+<p><code>python
+font = ImageFont.truetype('DejaVuSansMono-Bold.ttf', font_size)
 font_w, font_h = font.getsize(url)
 text_x = cropped.size[0] - font_w - font_margin
 text_y = font_margin
-ImageDraw.Draw(cropped).text((text_x, text_y), url, fill=font_color, font=font)
-</code></pre>
+ImageDraw.Draw(cropped).text((text_x, text_y), url, fill=font_color, font=font)</code></p>
 <p>In the final statement the <code>quantize</code> method is called to reduce the file size of the image. <code>256</code> is the number of colors in the result image. It is the highest possible value, because of the video previews. If you have very few colors on your page, you can set a lower value. If you have lots of colors, calling <code>quantize</code> may not be an option at all because of the loss of information.</p>
 <p>I prefer fast load times over image quality, especially since these images are meant as previews of web pages and are not intended for print. The unedited file in this case is almost 10 times bigger than the final one.</p>
-<pre><code class="language-python">cropped.quantize(256).save(file_name)
-</code></pre>
+<p><code>python
+cropped.quantize(256).save(file_name)</code></p>
 <p>Below you can see how the original screenshot was changed:</p>
 <p><img alt="How the image changed" src="https://geeksta.net/img/geeklog/automating-browser-screenshots-social-media.png" /></p>
 <p>The final step is to set the <code>og:image</code> meta property on the corresponding web page:</p>
@@ -135,7 +117,6 @@ ImageDraw.Draw(cropped).text((text_x, text_y), url, fill=font_color, font=font)
 <p>In this article I showed how I automated the creation of social media images for the <a href="https://ukealong.com/keys/">key</a> and <a href="https://ukealong.com/chords/">chord</a> pages on ukealong.com. I could reuse this code with different parameters for the language pages on <a href="https://programminglanguages.info/">programminglanguages.info</a> and hope other people who want to accomplish something similar can make use of <code>wcap</code> and the image editing code as well.</p>
     </div>
     <div class="col-md-3">
-        
 
 <h2>Featured eBook</h2>
 <a class="preview-img" href="https://www.amazon.com/dp/B0C2S2KR72?&linkCode=ll1&tag=geeksta-20&linkId=1f37a2af7976f5cffb04fe40513a1e0f&language=en_US&ref_=as_li_ss_tl">
@@ -147,140 +128,86 @@ ImageDraw.Draw(cropped).text((text_x, text_y), url, fill=font_color, font=font)
 <hr>
 <h2>Latest Posts</h2>
 <ul class="list-unstyled">
-
     <li class="voffset"><a href="/geeklog/convert-web-pages-to-mobi/">Convert Web Pages to Ebooks in MOBI Format using Wget and Calibre</a></li>
-
     <li class="voffset"><a href="/geeklog/imagemagick-tutorial/">Unlock the Power of ImageMagick: A Beginner's Guide to Image Processing</a></li>
-
     <li class="voffset"><a href="/geeklog/python-number-formatting-f-strings/">Python Number Formatting Made Easy with f-Strings</a></li>
-
     <li class="voffset"><a href="/geeklog/chatgpt-interview/">AI Ethics, Advancements, and Limitations: An Interview with ChatGPT</a></li>
-
 </ul>
 <a href="/rss.xml" class="btn btn-warning"><i class="fa fa-rss"></i> Subscribe to new content</a></li>
 <hr>
 <h2>Featured Merch</h2>
-
-
 <a href="/design/def-procrastinate-pass-dark-scheme/" class="preview-img">
     <figure>
-        
             <img src="/img/preview/def-procrastinate-pass-dark-scheme.jpg" alt="Funny Python Code Pun Design - def procrastinate pass" class="img-responsive" />
-        
         <br>
         <figcaption class="hcaption">Funny Python Code Pun Design - def procrastinate pass</figcaption>
     </figure>
 </a>
-
     </div>
 </div>
-
-        
 <hr class="clearfix">
 <h4>Share this post on:</h4>
 <div class="share">
-    <a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&t=Automating%20Browser%20Screenshots%20for%20Social%20Media%20using%20wcap%20and%20Pillow" class="btn btn-default btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
-    <a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&title=Automating%20Browser%20Screenshots%20for%20Social%20Media%20using%20wcap%20and%20Pillow" class="btn btn-default btn-lg"><i class="fa fa-reddit-alien"></i> Reddit</a>
-    <a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/geeklog/automating-browser-screenshots-social-media/&text=Automating%20Browser%20Screenshots%20for%20Social%20Media%20using%20wcap%20and%20Pillow" class="btn btn-default btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
-</div>
-<hr class="clearfix">
+    <a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/geeklog/automating-browser-screenshots-social-media/&t=Automating%20Browser%20Screenshots%20for%20Social%20Media%20using%20wcap%20and%20Pillow" class="btn btn-default btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
+    <a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/geeklog/automating-browser-screenshots-social-media/&title=Automating%20Browser%20Screenshots%20for%20Social%20Media%20using%20wcap%20and%20Pillow" class="btn btn-default btn-lg"><i class="fa fa-reddit-alien"></i> Reddit</a>
+    <a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/geeklog/automating-browser-screenshots-social-media/&text=Automating%20Browser%20Screenshots%20for%20Social%20Media%20using%20wcap%20and%20Pillow" class="btn btn-default btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
+</div><hr class="clearfix">
 <div class="postinfo">
 <p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time itemprop="datePublished" datetime="2020-07-27T20:35">July 27, 2020</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
-
 <p>
 <strong>Tags:</strong>
-
 <span class="label label-info"><a href="/tags/selenium/">selenium</a></span>
-
 <span class="label label-info"><a href="/tags/python/">python</a></span>
-
 <span class="label label-info"><a href="/tags/automation/">automation</a></span>
-
 <span class="label label-info"><a href="/tags/firefox/">firefox</a></span>
-
 <span class="label label-info"><a href="/tags/code/">code</a></span>
-
 <span class="label label-info"><a href="/tags/tutorial/">tutorial</a></span>
-
 </p>
-
-<p class="text-muted"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p>
-</div>
-
-
+<p class="text-muted"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p></div>
 <div class="panel panel-default">
     <div class="panel-heading"><h3>Merchandise</h3></div>
-    <div class="panel-body">
-
-
-    <div class="row">
-        <div class="col-md-3">
-            
-<a href="/design/caution-i-curse-when-i-commit-code/" class="preview-img">
+    <div class="panel-body"><div class="row">        <div class="col-md-3">
+            <a href="/design/caution-i-curse-when-i-commit-code/" class="preview-img">
     <figure>
-        
             <img src="/img/preview/caution-i-curse-when-i-commit-code.jpg" alt="Caution I Curse When I Commit Code - Funny Programmer Design" class="img-responsive" />
-        
         <br>
         <figcaption class="hcaption">Caution I Curse When I Commit Code - Funny Programmer Design</figcaption>
     </figure>
 </a>
 
         </div>
-    
-
-    
         <div class="col-md-3">
-            
-<a href="/design/hack-the-planet-green/" class="preview-img">
+            <a href="/design/hack-the-planet-green/" class="preview-img">
     <figure>
-        
             <img src="/img/preview/hack-the-planet-green.jpg" alt="Hack the Planet - Green Globe Design for Computer Hackers" class="img-responsive" />
-        
         <br>
         <figcaption class="hcaption">Hack the Planet - Green Globe Design for Computer Hackers</figcaption>
     </figure>
 </a>
 
         </div>
-    
-
-    
         <div class="col-md-3">
-            
-<a href="/design/run-bsd/" class="preview-img">
+            <a href="/design/run-bsd/" class="preview-img">
     <figure>
-        
             <img src="/img/preview/run-bsd.jpg" alt="RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins" class="img-responsive" />
-        
         <br>
         <figcaption class="hcaption">RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins</figcaption>
     </figure>
 </a>
 
         </div>
-    
-
-    
         <div class="col-md-3">
-            
-<a href="/design/shrug-it-works-on-my-machine-medium-white/" class="preview-img">
+            <a href="/design/shrug-it-works-on-my-machine-medium-white/" class="preview-img">
     <figure>
-        
             <img src="/img/preview/shrug-it-works-on-my-machine-medium-white.jpg" alt="Shrug It Works On My Machine Funny Programmer Excuse White Design" class="img-responsive" />
-        
         <br>
         <figcaption class="hcaption">Shrug It Works On My Machine Funny Programmer Excuse White Design</figcaption>
     </figure>
 </a>
 
         </div>
-    </div>
-
-</div>
-</div>
-
-    </div>
+</div></div>
+</div>    </div>
 
     <div id="footer" class="container">
         <p>Geeksta.net: programming, data mining, data visualization, tech books, and tools for tech geeks.<br>
@@ -290,16 +217,12 @@ ImageDraw.Draw(cropped).text((text_x, text_y), url, fill=font_color, font=font)
     <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="/compiled/script.js"></script>
-    
-        <script src="/vendor/highlight/highlight.pack.js"></script><script src="/js/highlight.js"></script>
-    
-    <!-- Google tag (gtag.js) -->
+<script src="/vendor/highlight/highlight.pack.js"></script><script src="/js/highlight.js"></script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFQJ09STFE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-MFQJ09STFE');
-</script>
-    </body>
+</script>    </body>
 </html>

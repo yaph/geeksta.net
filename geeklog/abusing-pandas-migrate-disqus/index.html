@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head itemscope itemtype="https://schema.org/WebSite">
@@ -6,25 +5,17 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title itemprop="name">(Ab)using Pandas to Migrate Disqus Threads | Geeksta</title>
-        <meta name="description" content="A short tutorial on how to use the pandas Python toolkit to create a URL map for migrating Disqus comment threads.">
-        <meta name="author" content="Ramiro Gómez">
-        
-        
-        <meta name="flattr:id" content="4pzdyq">
+<meta name="description" content="A short tutorial on how to use the pandas Python toolkit to create a URL map for migrating Disqus comment threads."><meta name="author" content="Ramiro Gómez">        <meta name="flattr:id" content="4pzdyq">
         <link href="https://geeksta.net/geeklog/abusing-pandas-migrate-disqus/" rel="canonical" itemprop="url">
         <link href="/img/icon-small.png" rel="icon" type="image/png">
         <link href="/rss.xml" rel="alternate" type="application/rss+xml" title="Geeksta All Posts RSS feed">
         <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="/css/style.css" rel="stylesheet">
-        
-            
-        
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-        
     </head>
     <body>
     <div class="navbar navbar-fixed-top navbar-inverse">
@@ -52,28 +43,24 @@
                     <li><a href="/geeklog/">Geeklog</a></li>
                     <li><a href="/merch/">Merchandise</a></li>
                     <li><a href="/tools/">Tools</a></li>
-                    <li id="sharemenu" class="dropdown">
+<li id="sharemenu" class="dropdown">
   <button type="button" class="dropdown-toggle btn btn-success navbar-btn" data-toggle="dropdown"><i class="fa fa-share"></i></button>
   <ul class="share dropdown-menu pull-right">
     <li><a href="/rss.xml" class="btn btn-default"><i class="fa fa-rss"></i> RSS Feed</a></li>
-    <li><a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/geeklog/abusing-pandas-migrate-disqus/&title=%28Ab%29using%20Pandas%20to%20Migrate%20Disqus%20Threads" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
-    <li><a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/geeklog/abusing-pandas-migrate-disqus/&text=%28Ab%29using%20Pandas%20to%20Migrate%20Disqus%20Threads" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
-    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/geeklog/abusing-pandas-migrate-disqus/&t=%28Ab%29using%20Pandas%20to%20Migrate%20Disqus%20Threads" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
-    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geeksta.net/geeklog/abusing-pandas-migrate-disqus/&title=%28Ab%29using%20Pandas%20to%20Migrate%20Disqus%20Threads" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+    <li><a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/geeklog/abusing-pandas-migrate-disqus/&title=%28Ab%29using%20Pandas%20to%20Migrate%20Disqus%20Threads" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
+    <li><a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/geeklog/abusing-pandas-migrate-disqus/&text=%28Ab%29using%20Pandas%20to%20Migrate%20Disqus%20Threads" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
+    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/geeklog/abusing-pandas-migrate-disqus/&t=%28Ab%29using%20Pandas%20to%20Migrate%20Disqus%20Threads" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
+    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/geeklog/abusing-pandas-migrate-disqus/&title=%28Ab%29using%20Pandas%20to%20Migrate%20Disqus%20Threads" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
   </ul>
-</li>
-                </ul>
+</li>                </ul>
             </div>
         </div>
     </div>
 
     <div id="wrapper" class="container">
-        
-        
 <div class="row">
     <div itemscope itemtype="http://schema.org/Article" class="col-md-9 content">
         <header><h1 itemprop="name">(Ab)using Pandas to Migrate Disqus Threads</h1></header>
-        
         <p>I recently converted an <a href="https://ramiro.org/">old site of mine</a> from <a href="https://drupal.org/">Drupal</a> to a static Web site created with <a href="https://pythonhosted.org/logya/">Logya</a> to <a href="http://talks.php.net/show/drupal08/33">save some kittens' lives</a>. I intend to write a more detailed post about the process, but will focus on a URL issue here.</p>
 <p>Logya is flexible regarding URLs, accepting common file extensions like <code>.htm</code>, <code>.html</code> and even <code>.php</code>, but the most straightforward way is to end them with a forward slash. On the old Drupal site I had a mix of URLs ending with <code>.html</code> or no file extension but without an ending slash, e. g. <a href="http://www.ramiro.org/blog/umstellung-von-joomla-auf-drupal">www.ramiro.org/blog/umstellung-von-joomla-auf-drupal</a>.</p>
 <p>In theory I could have kept all URLs like they were, because <a href="http://httpd.apache.org/">Apache</a> takes care of redirects, if the path corresponds to a directory on the server, which it does. But reality is different, since I use <a href="http://disqus.com/">Disqus</a> for comments and the redirected URLs differed from the ones Disqus knew about.</p>
@@ -85,7 +72,6 @@
 <p>Usually, I use the Python standard library for reading and writing CSV files, but pandas came in quite handy here. I'm curious to learn about other somewhat deviant use cases, feel free to share yours in the comments.</p>
     </div>
     <div class="col-md-3">
-        
 
 <h2>Featured eBook</h2>
 <a class="preview-img" href="https://www.amazon.com/dp/B0C2S2KR72?&linkCode=ll1&tag=geeksta-20&linkId=1f37a2af7976f5cffb04fe40513a1e0f&language=en_US&ref_=as_li_ss_tl">
@@ -97,140 +83,86 @@
 <hr>
 <h2>Latest Posts</h2>
 <ul class="list-unstyled">
-
     <li class="voffset"><a href="/geeklog/convert-web-pages-to-mobi/">Convert Web Pages to Ebooks in MOBI Format using Wget and Calibre</a></li>
-
     <li class="voffset"><a href="/geeklog/imagemagick-tutorial/">Unlock the Power of ImageMagick: A Beginner's Guide to Image Processing</a></li>
-
     <li class="voffset"><a href="/geeklog/python-number-formatting-f-strings/">Python Number Formatting Made Easy with f-Strings</a></li>
-
     <li class="voffset"><a href="/geeklog/chatgpt-interview/">AI Ethics, Advancements, and Limitations: An Interview with ChatGPT</a></li>
-
     <li class="voffset"><a href="/geeklog/automating-browser-screenshots-social-media/">Automating Browser Screenshots for Social Media using wcap and Pillow</a></li>
-
 </ul>
 <a href="/rss.xml" class="btn btn-warning"><i class="fa fa-rss"></i> Subscribe to new content</a></li>
 <hr>
 <h2>Featured Merch</h2>
-
-
 <a href="/design/def-procrastinate-pass-dark-scheme/" class="preview-img">
     <figure>
-        
             <img src="/img/preview/def-procrastinate-pass-dark-scheme.jpg" alt="Funny Python Code Pun Design - def procrastinate pass" class="img-responsive" />
-        
         <br>
         <figcaption class="hcaption">Funny Python Code Pun Design - def procrastinate pass</figcaption>
     </figure>
 </a>
-
     </div>
 </div>
-
-        
 <hr class="clearfix">
 <h4>Share this post on:</h4>
 <div class="share">
-    <a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/geeklog/abusing-pandas-migrate-disqus/&t=%28Ab%29using%20Pandas%20to%20Migrate%20Disqus%20Threads" class="btn btn-default btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
-    <a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/geeklog/abusing-pandas-migrate-disqus/&title=%28Ab%29using%20Pandas%20to%20Migrate%20Disqus%20Threads" class="btn btn-default btn-lg"><i class="fa fa-reddit-alien"></i> Reddit</a>
-    <a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/geeklog/abusing-pandas-migrate-disqus/&text=%28Ab%29using%20Pandas%20to%20Migrate%20Disqus%20Threads" class="btn btn-default btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
-</div>
-<hr class="clearfix">
+    <a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/geeklog/abusing-pandas-migrate-disqus/&t=%28Ab%29using%20Pandas%20to%20Migrate%20Disqus%20Threads" class="btn btn-default btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
+    <a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/geeklog/abusing-pandas-migrate-disqus/&title=%28Ab%29using%20Pandas%20to%20Migrate%20Disqus%20Threads" class="btn btn-default btn-lg"><i class="fa fa-reddit-alien"></i> Reddit</a>
+    <a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/geeklog/abusing-pandas-migrate-disqus/&text=%28Ab%29using%20Pandas%20to%20Migrate%20Disqus%20Threads" class="btn btn-default btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
+</div><hr class="clearfix">
 <div class="postinfo">
 <p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time itemprop="datePublished" datetime="2013-02-07T01:20">February 07, 2013</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
-
 <p>
 <strong>Tags:</strong>
-
 <span class="label label-info"><a href="/tags/pandas/">pandas</a></span>
-
 <span class="label label-info"><a href="/tags/disqus/">disqus</a></span>
-
 <span class="label label-info"><a href="/tags/python/">python</a></span>
-
 <span class="label label-info"><a href="/tags/migration/">migration</a></span>
-
 <span class="label label-info"><a href="/tags/code/">code</a></span>
-
 </p>
-
-<p class="text-muted"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p>
-</div>
-
-
+<p class="text-muted"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p></div>
 <div class="panel panel-default">
     <div class="panel-heading"><h3>Merchandise</h3></div>
-    <div class="panel-body">
-
-
-    <div class="row">
-        <div class="col-md-3">
-            
-<a href="/design/caution-i-curse-when-i-commit-code/" class="preview-img">
+    <div class="panel-body"><div class="row">        <div class="col-md-3">
+            <a href="/design/caution-i-curse-when-i-commit-code/" class="preview-img">
     <figure>
-        
             <img src="/img/preview/caution-i-curse-when-i-commit-code.jpg" alt="Caution I Curse When I Commit Code - Funny Programmer Design" class="img-responsive" />
-        
         <br>
         <figcaption class="hcaption">Caution I Curse When I Commit Code - Funny Programmer Design</figcaption>
     </figure>
 </a>
 
         </div>
-    
-
-    
         <div class="col-md-3">
-            
-<a href="/design/hack-the-planet-green/" class="preview-img">
+            <a href="/design/hack-the-planet-green/" class="preview-img">
     <figure>
-        
             <img src="/img/preview/hack-the-planet-green.jpg" alt="Hack the Planet - Green Globe Design for Computer Hackers" class="img-responsive" />
-        
         <br>
         <figcaption class="hcaption">Hack the Planet - Green Globe Design for Computer Hackers</figcaption>
     </figure>
 </a>
 
         </div>
-    
-
-    
         <div class="col-md-3">
-            
-<a href="/design/run-bsd/" class="preview-img">
+            <a href="/design/run-bsd/" class="preview-img">
     <figure>
-        
             <img src="/img/preview/run-bsd.jpg" alt="RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins" class="img-responsive" />
-        
         <br>
         <figcaption class="hcaption">RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins</figcaption>
     </figure>
 </a>
 
         </div>
-    
-
-    
         <div class="col-md-3">
-            
-<a href="/design/shrug-it-works-on-my-machine-medium-white/" class="preview-img">
+            <a href="/design/shrug-it-works-on-my-machine-medium-white/" class="preview-img">
     <figure>
-        
             <img src="/img/preview/shrug-it-works-on-my-machine-medium-white.jpg" alt="Shrug It Works On My Machine Funny Programmer Excuse White Design" class="img-responsive" />
-        
         <br>
         <figcaption class="hcaption">Shrug It Works On My Machine Funny Programmer Excuse White Design</figcaption>
     </figure>
 </a>
 
         </div>
-    </div>
-
-</div>
-</div>
-
-    </div>
+</div></div>
+</div>    </div>
 
     <div id="footer" class="container">
         <p>Geeksta.net: programming, data mining, data visualization, tech books, and tools for tech geeks.<br>
@@ -240,16 +172,12 @@
     <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="/compiled/script.js"></script>
-    
-        
-    
-    <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFQJ09STFE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-MFQJ09STFE');
-</script>
-    </body>
+</script>    </body>
 </html>

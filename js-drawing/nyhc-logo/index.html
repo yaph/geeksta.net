@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head itemscope itemtype="https://schema.org/WebSite">
@@ -6,21 +5,13 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title itemprop="name">Drawing the New York Hardcore Logo with D3.js | Drawing with JavaScript | Geeksta</title>
-        <meta name="description" content="Example JavaScript code of how you can draw the New York Hardcore (NYHC) logo with D3.js using SVG shapes and text.">
-        <meta name="author" content="Ramiro Gómez">
-        
-            <meta property="og:image" content="https://geeksta.net/img/js-drawing/nyhc-white-on-black.png">
-            
-
+<meta name="description" content="Example JavaScript code of how you can draw the New York Hardcore (NYHC) logo with D3.js using SVG shapes and text."><meta name="author" content="Ramiro Gómez">            <meta property="og:image" content="https://geeksta.net/img/js-drawing/nyhc-white-on-black.png">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@yaph">
     <meta name="twitter:title" content="Drawing the New York Hardcore Logo with D3.js">
     <meta name="twitter:description" content="Example JavaScript code of how you can draw the New York Hardcore (NYHC) logo with D3.js using SVG shapes and text.">
     <meta name="twitter:image:src" content="https://geeksta.net/img/js-drawing/nyhc-white-on-black.png">
-
-        
-        
         <meta name="flattr:id" content="4pzdyq">
         <link href="https://geeksta.net/js-drawing/nyhc-logo/" rel="canonical" itemprop="url">
         <link href="/img/icon-small.png" rel="icon" type="image/png">
@@ -28,14 +19,10 @@
         <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="/css/style.css" rel="stylesheet">
-        
-            
-        
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-        
     </head>
     <body>
     <div class="navbar navbar-fixed-top navbar-inverse">
@@ -63,24 +50,21 @@
                     <li><a href="/geeklog/">Geeklog</a></li>
                     <li><a href="/merch/">Merchandise</a></li>
                     <li><a href="/tools/">Tools</a></li>
-                    <li id="sharemenu" class="dropdown">
+<li id="sharemenu" class="dropdown">
   <button type="button" class="dropdown-toggle btn btn-success navbar-btn" data-toggle="dropdown"><i class="fa fa-share"></i></button>
   <ul class="share dropdown-menu pull-right">
     <li><a href="/rss.xml" class="btn btn-default"><i class="fa fa-rss"></i> RSS Feed</a></li>
-    <li><a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/js-drawing/nyhc-logo/&title=Drawing%20the%20New%20York%20Hardcore%20Logo%20with%20D3.js" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
-    <li><a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/js-drawing/nyhc-logo/&text=Drawing%20the%20New%20York%20Hardcore%20Logo%20with%20D3.js" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
-    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/js-drawing/nyhc-logo/&t=Drawing%20the%20New%20York%20Hardcore%20Logo%20with%20D3.js" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
-    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geeksta.net/js-drawing/nyhc-logo/&title=Drawing%20the%20New%20York%20Hardcore%20Logo%20with%20D3.js" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+    <li><a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/js-drawing/nyhc-logo/&title=Drawing%20the%20New%20York%20Hardcore%20Logo%20with%20D3.js" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
+    <li><a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/js-drawing/nyhc-logo/&text=Drawing%20the%20New%20York%20Hardcore%20Logo%20with%20D3.js" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
+    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/js-drawing/nyhc-logo/&t=Drawing%20the%20New%20York%20Hardcore%20Logo%20with%20D3.js" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
+    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/js-drawing/nyhc-logo/&title=Drawing%20the%20New%20York%20Hardcore%20Logo%20with%20D3.js" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
   </ul>
-</li>
-                </ul>
+</li>                </ul>
             </div>
         </div>
     </div>
 
     <div id="wrapper" class="container">
-        
-        
 <div class="row">
     <div itemscope itemtype="http://schema.org/Article" class="col-md-9">
         <header><h1 itemprop="name">Drawing the New York Hardcore Logo with D3.js</h1></header>
@@ -89,106 +73,33 @@
         <hr>
         <div id="body"><p>The JavaScript code below shows how you can draw the <a href="https://en.wikipedia.org/wiki/New_York_hardcore">New York Hardcore</a> (NYHC) logo with <a href="http://d3js.org/">D3.js</a> using <a href="http://www.w3.org/TR/SVG/shapes.html#RectElement">SVG rect</a> and <a href="http://www.w3.org/TR/SVG/text.html#TextElement">SVG text</a> elements.</p>
 <h2>JavaScript Code</h2>
-<pre><code>var w = 600,
-    h = 600,
-    h_rect = 30,
-    l_cath = h_rect / 2,
-    offset = Math.sqrt(Math.pow(l_cath, 2) + Math.pow(l_cath, 2)),
-    fg = &#39;#ffffff&#39;,
-    bg = &#39;#000000&#39;,
-    svg = d3.select(&#39;#canvas&#39;).append(&#39;svg&#39;)
-        .attr(&#39;width&#39;, w)
-        .attr(&#39;height&#39;, h);
-
-function textStyle(text) {
-    text.attr(&#39;text-anchor&#39;, &#39;middle&#39;)
-        .attr(&#39;font-family&#39;, &#39;sans&#39;)
-        .attr(&#39;font-size&#39;, &#39;220px&#39;)
-        .attr(&#39;font-weight&#39;, 600)
-        .attr(&#39;fill&#39;, fg);
-}
-
-svg.append(&#39;rect&#39;)
-    .attr(&#39;x&#39;, 0)
-    .attr(&#39;y&#39;, 0)
-    .attr(&#39;width&#39;, w)
-    .attr(&#39;height&#39;, h)
-    .style(&#39;fill&#39;, bg)
-    .style(&#39;opacity&#39;, 1)
-
-svg.append(&#39;rect&#39;)
-    .attr(&#39;x&#39;, 0)
-    .attr(&#39;y&#39;, 0)
-    .attr(&#39;width&#39;, Math.sqrt(Math.pow(w - offset, 2) + Math.pow(h - offset, 2)))
-    .attr(&#39;height&#39;, h_rect)
-    .style(&#39;fill&#39;, fg)
-    .attr(&#39;transform&#39;, &#39;translate(&#39; + offset + &#39;,0)rotate(45)&#39;);
-
-svg.append(&#39;rect&#39;)
-    .attr(&#39;x&#39;, 0)
-    .attr(&#39;y&#39;, 0)
-    .attr(&#39;width&#39;, Math.sqrt(Math.pow(w - offset, 2) + Math.pow(h - offset, 2)))
-    .attr(&#39;height&#39;, h_rect)
-    .style(&#39;fill&#39;, fg)
-    .attr(&#39;transform&#39;, &#39;translate(0,&#39; + (h - offset) + &#39;)rotate(-45)&#39;);
-
-svg.append(&#39;text&#39;)
-    .attr(&#39;x&#39;, w / 2)
-    .attr(&#39;y&#39;, 165)
-    .text(&#39;N&#39;)
-    .call(textStyle);
-
-svg.append(&#39;text&#39;)
-    .attr(&#39;x&#39;, w / 2)
-    .attr(&#39;y&#39;, 596)
-    .text(&#39;Y&#39;)
-    .call(textStyle);
-
-svg.append(&#39;text&#39;)
-    .attr(&#39;x&#39;, 75)
-    .attr(&#39;y&#39;, 380)
-    .text(&#39;H&#39;)
-    .call(textStyle);
-
-svg.append(&#39;text&#39;)
-    .attr(&#39;x&#39;, 525)
-    .attr(&#39;y&#39;, 380)
-    .text(&#39;C&#39;)
-    .call(textStyle);
+<pre><code>{{ filesource('static/js/js-drawing/svg-nyhc.js') }}
 </code></pre></div>
     </div>
     <div class="col-md-3">
-        
             <h2>Merchandise</h2>
             <div class="row">
-            
                 <div class="col-md-6">
                     <a title="New York Harcore Logo - Black Hoodie" href="https://www.redbubble.com/people/ramiro/works/14232667-nyhc-new-york-hardcore-logo-white-font?p=t-shirt&style=mhoodie">
                     <img class="img-thumbnail img-responsive" src="https://ih0.redbubble.net/image.141934450.2667/ra,unisex_hoodie_mens,x1000,101010:01c5ca27c6,front-c,195,210,315,294-bg,ffffff.2u13.jpg" alt="New York Harcore Logo - Black Hoodie" />
                     <span class="small">NYHC Black Hoodie</span></a>
                 </div>
-            
                 <div class="col-md-6">
                     <a title="New York Harcore Logo - Black T-Shirt" href="https://www.redbubble.com/people/ramiro/works/14232667-nyhc-new-york-hardcore-logo-white-font?p=womens-relaxed-fit">
                     <img class="img-thumbnail img-responsive" src="https://ih0.redbubble.net/image.141934450.2667/ra,relaxed_fit,x1000,101010:01c5ca27c6,front-c,195,210,315,294-bg,ffffff.u6.jpg" alt="New York Harcore Logo - Black T-Shirt" />
                     <span class="small">NYHC Black Shirt</span></a>
                 </div>
-            
                 <div class="col-md-6">
                     <a title="hjkl for Hardcore Vi/Vim Hackers - Black T-Shirt" href="https://www.redbubble.com/people/ramiro/works/14930615-hjkl-for-hardcore-vi-vim-hackers-white-font?p=womens-fitted-scoop">
                     <img class="img-thumbnail img-responsive" src="https://ih0.redbubble.net/image.141926298.0615/ra,fitted_scoop,x1000,101010:01c5ca27c6,front-c,195,210,315,294-bg,ffffff.u6.jpg" alt="hjkl for Hardcore Vi/Vim Hackers - Black T-Shirt" />
                     <span class="small">hjkl Vi Hacker Shirt</span></a>
                 </div>
-            
                 <div class="col-md-6">
                     <a title="hjkl for Hardcore Vi/Vim Hackers - Black Hoodie" href="https://www.redbubble.com/people/ramiro/works/14930615-hjkl-for-hardcore-vi-vim-hackers-white-font?p=t-shirt&style=mhoodie">
                     <img class="img-thumbnail img-responsive" src="https://ih0.redbubble.net/image.141926298.0615/ra,unisex_hoodie_mens,x1000,101010:01c5ca27c6,front-c,195,210,315,294-bg,ffffff.2u13.jpg" alt="hjkl for Hardcore Vi/Vim Hackers - Black Hoodie" />
                     <span class="small">hjkl Vi Hacker Hoodie</span></a>
                 </div>
-            
             </div>
-        
-        
 
 <h2>Featured eBook</h2>
 <a class="preview-img" href="https://www.amazon.com/dp/B0C2S2KR72?&linkCode=ll1&tag=geeksta-20&linkId=1f37a2af7976f5cffb04fe40513a1e0f&language=en_US&ref_=as_li_ss_tl">
@@ -200,55 +111,34 @@ svg.append(&#39;text&#39;)
 <hr>
 <h2>Latest Posts</h2>
 <ul class="list-unstyled">
-
     <li class="voffset"><a href="/geeklog/convert-web-pages-to-mobi/">Convert Web Pages to Ebooks in MOBI Format using Wget and Calibre</a></li>
-
     <li class="voffset"><a href="/geeklog/imagemagick-tutorial/">Unlock the Power of ImageMagick: A Beginner's Guide to Image Processing</a></li>
-
     <li class="voffset"><a href="/geeklog/python-number-formatting-f-strings/">Python Number Formatting Made Easy with f-Strings</a></li>
-
     <li class="voffset"><a href="/geeklog/chatgpt-interview/">AI Ethics, Advancements, and Limitations: An Interview with ChatGPT</a></li>
-
     <li class="voffset"><a href="/geeklog/automating-browser-screenshots-social-media/">Automating Browser Screenshots for Social Media using wcap and Pillow</a></li>
-
 </ul>
 <a href="/rss.xml" class="btn btn-warning"><i class="fa fa-rss"></i> Subscribe to new content</a></li>
 <hr>
 <h2>Featured Merch</h2>
-
-
 <a href="/design/def-procrastinate-pass-dark-scheme/" class="preview-img">
     <figure>
-        
             <img src="/img/preview/def-procrastinate-pass-dark-scheme.jpg" alt="Funny Python Code Pun Design - def procrastinate pass" class="img-responsive" />
-        
         <br>
         <figcaption class="hcaption">Funny Python Code Pun Design - def procrastinate pass</figcaption>
     </figure>
 </a>
-
     </div>
 </div>
 <hr class="clearfix">
 <div class="postinfo">
 <p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time itemprop="datePublished" datetime="2015-03-07T00:15">March 07, 2015</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
-
 <p>
 <strong>Tags:</strong>
-
 <span class="label label-info"><a href="/tags/d3js/">d3js</a></span>
-
 <span class="label label-info"><a href="/tags/svg/">svg</a></span>
-
 <span class="label label-info"><a href="/tags/code/">code</a></span>
-
 </p>
-
-<p class="text-muted"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p>
-</div>
-
-        
-    </div>
+<p class="text-muted"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p></div>    </div>
 
     <div id="footer" class="container">
         <p>Geeksta.net: programming, data mining, data visualization, tech books, and tools for tech geeks.<br>
@@ -258,10 +148,7 @@ svg.append(&#39;text&#39;)
     <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="/compiled/script.js"></script>
-    
-
-        <script src="/vendor/d3/d3.min.js"></script><script src="/js/js-drawing/svg-nyhc.js"></script>
-    
+<script src="/vendor/d3/d3.min.js"></script><script src="/js/js-drawing/svg-nyhc.js"></script>
 <script>
 // based on https://github.com/NYTimes/svg-crowbar
 var doctype = '<?xml version="1.0"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">';
@@ -287,14 +174,12 @@ $('#dl-svg').click(function() {
     download($('#canvas').html());
 });
 </script>
-
-    <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFQJ09STFE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-MFQJ09STFE');
-</script>
-    </body>
+</script>    </body>
 </html>

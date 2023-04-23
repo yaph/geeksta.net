@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
-<channel><title>RSS Feed</title>
-    <link>https://geeksta.net</link>
-    <description>RSS Feed</description>
-    <lastBuildDate>Sun, 23 Apr 2023 21:56:12 </lastBuildDate>
+<channel><title>Geeksta RSS Feed</title>
+    <link>/rss.xml</link>
+    <description></description>
+    <lastBuildDate>Mon, 24 Apr 2023 01:29:06 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
-    
     <item>
         <title><![CDATA[Convert Web Pages to Ebooks in MOBI Format using Wget and Calibre]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/convert-web-pages-to-mobi/]]></link>
@@ -14,7 +13,6 @@
         <guid><![CDATA[https://geeksta.net/geeklog/convert-web-pages-to-mobi/]]></guid>
         <pubDate>Wed, 19 Apr 2023 22:49:34 </pubDate>
     </item>
-    
     <item>
         <title><![CDATA[Unlock the Power of ImageMagick: A Beginner's Guide to Image Processing]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/imagemagick-tutorial/]]></link>
@@ -22,7 +20,6 @@
         <guid><![CDATA[https://geeksta.net/geeklog/imagemagick-tutorial/]]></guid>
         <pubDate>Mon, 17 Apr 2023 01:35:24 </pubDate>
     </item>
-    
     <item>
         <title><![CDATA[Python Number Formatting Made Easy with f-Strings]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/python-number-formatting-f-strings/]]></link>
@@ -30,7 +27,6 @@
         <guid><![CDATA[https://geeksta.net/geeklog/python-number-formatting-f-strings/]]></guid>
         <pubDate>Sun, 16 Apr 2023 23:32:12 </pubDate>
     </item>
-    
     <item>
         <title><![CDATA[AI Ethics, Advancements, and Limitations: An Interview with ChatGPT]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/chatgpt-interview/]]></link>
@@ -38,7 +34,6 @@
         <guid><![CDATA[https://geeksta.net/geeklog/chatgpt-interview/]]></guid>
         <pubDate>Thu, 30 Mar 2023 21:50:05 </pubDate>
     </item>
-    
     <item>
         <title><![CDATA[Stable Diffusion Sampler and CFG Scale Parameter Comparison]]></title>
         <link><![CDATA[https://geeksta.net/ai/stable-diffusion/sampler-cfg-comparison/]]></link>
@@ -46,7 +41,6 @@
         <guid><![CDATA[https://geeksta.net/ai/stable-diffusion/sampler-cfg-comparison/]]></guid>
         <pubDate>Wed, 15 Mar 2023 11:48:28 </pubDate>
     </item>
-    
     <item>
         <title><![CDATA[Prompt Engineer I Talk to Machines AI/ML Geek & Nerd Design]]></title>
         <link><![CDATA[https://geeksta.net/design/prompt-engineer-i-talk-to-machines-light/]]></link>
@@ -54,7 +48,6 @@
         <guid><![CDATA[https://geeksta.net/design/prompt-engineer-i-talk-to-machines-light/]]></guid>
         <pubDate>Mon, 06 Mar 2023 00:00:00 </pubDate>
     </item>
-    
     <item>
         <title><![CDATA[Prompt Engineer I Talk to Machines AI/ML Geek & Nerd Design]]></title>
         <link><![CDATA[https://geeksta.net/design/prompt-engineer-i-talk-to-machines-dark/]]></link>
@@ -62,7 +55,6 @@
         <guid><![CDATA[https://geeksta.net/design/prompt-engineer-i-talk-to-machines-dark/]]></guid>
         <pubDate>Mon, 06 Mar 2023 00:00:00 </pubDate>
     </item>
-    
     <item>
         <title><![CDATA[Sarcastic Humor Design AI Making Humans Obsolete Since 1956]]></title>
         <link><![CDATA[https://geeksta.net/design/ai-making-humans-obsolete-since-1956-black/]]></link>
@@ -70,7 +62,6 @@
         <guid><![CDATA[https://geeksta.net/design/ai-making-humans-obsolete-since-1956-black/]]></guid>
         <pubDate>Wed, 08 Feb 2023 00:00:00 </pubDate>
     </item>
-    
     <item>
         <title><![CDATA[Sarcastic Humor Design AI Making Humans Obsolete Since 1956]]></title>
         <link><![CDATA[https://geeksta.net/design/ai-making-humans-obsolete-since-1956-white/]]></link>
@@ -78,7 +69,6 @@
         <guid><![CDATA[https://geeksta.net/design/ai-making-humans-obsolete-since-1956-white/]]></guid>
         <pubDate>Wed, 08 Feb 2023 00:00:00 </pubDate>
     </item>
-    
     <item>
         <title><![CDATA[It Works On My Machine Funny Programmer Excuse Reggae Design]]></title>
         <link><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-reggae/]]></link>
@@ -86,125 +76,4 @@
         <guid><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-reggae/]]></guid>
         <pubDate>Tue, 07 Feb 2023 00:00:00 </pubDate>
     </item>
-    
-    <item>
-        <title><![CDATA[Roaring Tiger Head Tribal Tattoo Style Orange Gradient]]></title>
-        <link><![CDATA[https://geeksta.net/design/roaring-tiger-tribal-gradient/]]></link>
-        <description><![CDATA[<p>A cool design for animal advocates, scientific researchers, veterinarians, zookeepers, zoologists and all people who love big cats. It shows a line drawing of a roaring tiger head in a tribal tattoo style. It's colored in a dark to light orange gradient.</p><img src="https://geeksta.net/img/large/roaring-tiger-tribal-gradient.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/roaring-tiger-tribal-gradient/]]></guid>
-        <pubDate>Mon, 06 Feb 2023 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Pi 2023 Digits Matrix Cool Design for Math and Science Fans]]></title>
-        <link><![CDATA[https://geeksta.net/design/pi-matrix-2023-digits/]]></link>
-        <description><![CDATA[<p>Pi (π) is a mathematical constant that represents the ratio of a circle's circumference to its diameter. Pi is an irrational number with an approximate value of 3.14. This design shows Pi's first 2023 digits to celebrate Pi Day 2023. A cool design for m</p><img src="https://geeksta.net/img/large/pi-matrix-2023-digits.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/pi-matrix-2023-digits/]]></guid>
-        <pubDate>Fri, 03 Feb 2023 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Funny IT Support Tech Team Joke I'm Just Here For The Cache]]></title>
-        <link><![CDATA[https://geeksta.net/design/im-just-here-for-the-cache-black/]]></link>
-        <description><![CDATA[<p>A funny design for people working in the IT team, whether in tech support at the office helpdesk, as a computer programmer, software developer, system engineer or sysadmin. You will get the joke and hopefully put a smile on your co-workers faces. This I</p><img src="https://geeksta.net/img/large/im-just-here-for-the-cache-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/im-just-here-for-the-cache-black/]]></guid>
-        <pubDate>Thu, 02 Feb 2023 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[IT Support Tech Team Joke I'm Just Here For The Cache]]></title>
-        <link><![CDATA[https://geeksta.net/design/im-just-here-for-the-cache-white/]]></link>
-        <description><![CDATA[<p>A funny design for people working in the IT team, whether in tech support at the office helpdesk, as a computer programmer, software developer, system engineer or sysadmin. You will get the joke and hopefully put a smile on your co-workers faces. This I</p><img src="https://geeksta.net/img/large/im-just-here-for-the-cache-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/im-just-here-for-the-cache-white/]]></guid>
-        <pubDate>Thu, 02 Feb 2023 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[St. Patrick's Day Saint Hat Tricks Football/Soccer Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/saint-hat-tricks/]]></link>
-        <description><![CDATA[<p>A funny design for people from Ireland or of Irish descent who love football/soccer and celebrate St. Patrick's Day honoring the patron saint of Ireland. Great for festivals, parites, football matches in the stadium, pubs and bars. The design shows a fo</p><img src="https://geeksta.net/img/large/saint-hat-tricks.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/saint-hat-tricks/]]></guid>
-        <pubDate>Tue, 31 Jan 2023 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Spaces Squad Passionate Programmer Software Developer Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/spaces-4-squad-dark/]]></link>
-        <description><![CDATA[<p>Are you passionate about using spaces to indent your program code and want to show it? The use of spaces or tabs can lead to fierce discussions among people who code. Take sides and possibly provoke some dispute at work, developer events and conferences.</p><img src="https://geeksta.net/img/large/spaces-4-squad-dark.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/spaces-4-squad-dark/]]></guid>
-        <pubDate>Mon, 30 Jan 2023 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Spaces Squad Passionate Programmer Software Developer Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/spaces-4-squad-light/]]></link>
-        <description><![CDATA[<p>Are you passionate about using spaces to indent your program code and want to show it? The use of spaces or tabs can lead to fierce discussions among people who code. Take sides and possibly provoke some dispute at work, developer events and conferences.</p><img src="https://geeksta.net/img/large/spaces-4-squad-light.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/spaces-4-squad-light/]]></guid>
-        <pubDate>Mon, 30 Jan 2023 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Fork Bomb Cool Retro Reggae Flag Colors Design for Sysadmins]]></title>
-        <link><![CDATA[https://geeksta.net/design/bash-fork-bomb-retro-reggae/]]></link>
-        <description><![CDATA[<p>Every Linux & Unix system administrator should know what a fork bomb is and recognize the Bourne-again shell (Bash) version of this type of denial-of-service (DoS) attack. It should be in their tool belt for testing user process limits. Do you agree? A</p><img src="https://geeksta.net/img/large/bash-fork-bomb-retro-reggae.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/bash-fork-bomb-retro-reggae/]]></guid>
-        <pubDate>Wed, 25 Jan 2023 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Valentines Day Leopard Heart for People who Love Animals]]></title>
-        <link><![CDATA[https://geeksta.net/design/leopard-heart/]]></link>
-        <description><![CDATA[<p>A heart filled with a pattern that looks like the skin of a leopard. An awesome wild cat that lives in Africa and Asia. A cute design for everyone who loves this awesome wild cat. A great present for birthday, Valentines's Day and any occasion you want</p><img src="https://geeksta.net/img/large/leopard-heart.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/leopard-heart/]]></guid>
-        <pubDate>Mon, 23 Jan 2023 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Cool Artificial Intelligence Design Devanagari Letter Ai]]></title>
-        <link><![CDATA[https://geeksta.net/design/parabola-ai-devanagari/]]></link>
-        <description><![CDATA[<p>A cool design for people who love teaching machines, model building, computer programming, developing algorithms and engineering. It shows the devanagari letter Ai, a vowel of Indic writing systems in a parabola grid in a purple to orange colors gradient.</p><img src="https://geeksta.net/img/large/parabola-ai-devanagari.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/parabola-ai-devanagari/]]></guid>
-        <pubDate>Mon, 23 Jan 2023 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Drawing the Yin and Yang Symbol with D3.js]]></title>
-        <link><![CDATA[https://geeksta.net/js-drawing/yin-yang-symbol/]]></link>
-        <description><![CDATA[<p>The JavaScript code in this post shows how you can draw the yin and yang symbol using the D3.js.</p><img src="https://geeksta.net/img/js-drawing/yin-yang-symbol.png" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/js-drawing/yin-yang-symbol/]]></guid>
-        <pubDate>Fri, 20 Jan 2023 16:31:48 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Real Numbers Teal Numbers - Funny Math Geek Nerd Pun Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/real-numbers-teal-numbers/]]></link>
-        <description><![CDATA[<p>A funny design for math enthusiasts, students, teachers and engineers showing the real numbers -1, 2 thirds, square root of 2, pi and the corresponding teal numbers. For people with a sense of humor who love math and enjoy a pun. Great for college, part</p><img src="https://geeksta.net/img/large/real-numbers-teal-numbers.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/real-numbers-teal-numbers/]]></guid>
-        <pubDate>Thu, 19 Jan 2023 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Computing Cloud Raining Code - Software Engineer Programmer Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/cloud-code/]]></link>
-        <description><![CDATA[<p>Cloud computing is ubiquitous in modern IT infrastructures. If you work in this field you know that at the end of the day it all boils down to binary numbers. This cute design for computer programmers, software engineers, coders and sysadmins shows a cl</p><img src="https://geeksta.net/img/large/cloud-code.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/cloud-code/]]></guid>
-        <pubDate>Tue, 17 Jan 2023 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[Cool Green Year of the Rabbit Design for Computer Hackers]]></title>
-        <link><![CDATA[https://geeksta.net/design/hexdump-hacker-rabbit-chinese/]]></link>
-        <description><![CDATA[<p>A cool design for computer hackers, coders, developers, programmers and sysadmins with the Chinese character for rabbit filled with a random array of decimal numbers. For people who love to hack computer code and want to celebrate the Year of the Rabbit</p><img src="https://geeksta.net/img/large/hexdump-hacker-rabbit-chinese.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/hexdump-hacker-rabbit-chinese/]]></guid>
-        <pubDate>Mon, 16 Jan 2023 00:00:00 </pubDate>
-    </item>
-    
-    <item>
-        <title><![CDATA[pydoc3 builtins]]></title>
-        <link><![CDATA[https://geeksta.net/screencasts/pydoc3-builtins/]]></link>
-        <description><![CDATA[<p>A short screencast showing how to use the command `pydoc3` to access the Python documentation in the terminal on a Linux based operating system.</p><img src="https://i.ytimg.com/vi/k6islyFWK-E/maxresdefault.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/screencasts/pydoc3-builtins/]]></guid>
-        <pubDate>Mon, 05 Dec 2022 18:13:36 </pubDate>
-    </item>
-    
 </channel></rss>

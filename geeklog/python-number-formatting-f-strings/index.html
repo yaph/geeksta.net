@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head itemscope itemtype="https://schema.org/WebSite">
@@ -6,25 +5,17 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title itemprop="name">Python Number Formatting Made Easy with f-Strings | Geeksta</title>
-        <meta name="description" content="Learn how to format numbers in Python with f-strings. Use format_spec to specify width, alignment, scientific notation, and more.">
-        <meta name="author" content="Ramiro Gómez">
-        
-        
-        <meta name="flattr:id" content="4pzdyq">
+<meta name="description" content="Learn how to format numbers in Python with f-strings. Use format_spec to specify width, alignment, scientific notation, and more."><meta name="author" content="Ramiro Gómez">        <meta name="flattr:id" content="4pzdyq">
         <link href="https://geeksta.net/geeklog/python-number-formatting-f-strings/" rel="canonical" itemprop="url">
         <link href="/img/icon-small.png" rel="icon" type="image/png">
         <link href="/rss.xml" rel="alternate" type="application/rss+xml" title="Geeksta All Posts RSS feed">
         <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="/css/style.css" rel="stylesheet">
-        
-            <link href="/vendor/highlight/styles/idea.css" rel="stylesheet">
-        
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<link href="/vendor/highlight/styles/idea.css" rel="stylesheet">        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-        
     </head>
     <body>
     <div class="navbar navbar-fixed-top navbar-inverse">
@@ -52,28 +43,24 @@
                     <li><a href="/geeklog/">Geeklog</a></li>
                     <li><a href="/merch/">Merchandise</a></li>
                     <li><a href="/tools/">Tools</a></li>
-                    <li id="sharemenu" class="dropdown">
+<li id="sharemenu" class="dropdown">
   <button type="button" class="dropdown-toggle btn btn-success navbar-btn" data-toggle="dropdown"><i class="fa fa-share"></i></button>
   <ul class="share dropdown-menu pull-right">
     <li><a href="/rss.xml" class="btn btn-default"><i class="fa fa-rss"></i> RSS Feed</a></li>
-    <li><a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/geeklog/python-number-formatting-f-strings/&title=Python%20Number%20Formatting%20Made%20Easy%20with%20f-Strings" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
-    <li><a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/geeklog/python-number-formatting-f-strings/&text=Python%20Number%20Formatting%20Made%20Easy%20with%20f-Strings" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
-    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/geeklog/python-number-formatting-f-strings/&t=Python%20Number%20Formatting%20Made%20Easy%20with%20f-Strings" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
-    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//geeksta.net/geeklog/python-number-formatting-f-strings/&title=Python%20Number%20Formatting%20Made%20Easy%20with%20f-Strings" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
+    <li><a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/geeklog/python-number-formatting-f-strings/&title=Python%20Number%20Formatting%20Made%20Easy%20with%20f-Strings" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
+    <li><a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/geeklog/python-number-formatting-f-strings/&text=Python%20Number%20Formatting%20Made%20Easy%20with%20f-Strings" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
+    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/geeklog/python-number-formatting-f-strings/&t=Python%20Number%20Formatting%20Made%20Easy%20with%20f-Strings" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
+    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/geeklog/python-number-formatting-f-strings/&title=Python%20Number%20Formatting%20Made%20Easy%20with%20f-Strings" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
   </ul>
-</li>
-                </ul>
+</li>                </ul>
             </div>
         </div>
     </div>
 
     <div id="wrapper" class="container">
-        
-        
 <div class="row">
     <div itemscope itemtype="http://schema.org/Article" class="col-md-9 content">
         <header><h1 itemprop="name">Python Number Formatting Made Easy with f-Strings</h1></header>
-        
         <p>Python f-strings are a way to format strings in a concise and readable manner. With f-strings, you can include expressions inside curly braces {} that will be evaluated at runtime and replaced with their values in the resulting string. Formatting numbers with f-strings is also straightforward and offers a lot of flexibility.</p>
 <p>There are several formatting options that can be used with f-strings. The most commonly used ones for numbers are:</p>
 <ul>
@@ -85,41 +72,40 @@
 </ul>
 <p>Below are some examples of how to use f-strings to format numbers.</p>
 <p><strong>Format an integer:</strong></p>
-<pre><code class="language-python">age = 25
-print(f&quot;I am {age:d} years old.&quot;)  # output: I am 25 years old.
-</code></pre>
+<p><code>python
+age = 25
+print(f"I am {age:d} years old.")  # output: I am 25 years old.</code></p>
 <p><strong>Format a floating-point number with fixed-point notation:</strong></p>
-<pre><code class="language-python">pi = 3.14159265
-print(f&quot;Pi is approximately {pi:.2f}.&quot;)  # output: Pi is approximately 3.14.
-</code></pre>
+<p><code>python
+pi = 3.14159265
+print(f"Pi is approximately {pi:.2f}.")  # output: Pi is approximately 3.14.</code></p>
 <p><strong>Format a floating-point number with scientific notation:</strong></p>
-<pre><code class="language-python">avogadro = 6.02214076e23
-print(f&quot;Avogadro's number is {avogadro:e}.&quot;)  # output: Avogadro's number is 6.022141e+23.
-</code></pre>
+<p><code>python
+avogadro = 6.02214076e23
+print(f"Avogadro's number is {avogadro:e}.")  # output: Avogadro's number is 6.022141e+23.</code></p>
 <p><strong>Format a floating-point number in either fixed-point or scientific notation:</strong></p>
-<pre><code class="language-python">g = 9.81
-print(f&quot;The acceleration due to gravity is {g:g} m/s^2.&quot;)  # output: The acceleration due to gravity is 9.81 m/s^2.
-</code></pre>
+<p><code>python
+g = 9.81
+print(f"The acceleration due to gravity is {g:g} m/s^2.")  # output: The acceleration due to gravity is 9.81 m/s^2.</code></p>
 <p>In the examples above, the expressions inside the curly braces {} are evaluated at runtime and replaced with their values formatted according to the specified <code>format_spec</code>.</p>
 <p>You can also use f-strings to format numbers in more complex ways. For example, you can specify the width and alignment of the output, or include a thousands separator. Below are some examples.</p>
 <p><strong>Format an integer with leading zeros and a minimum width of 4 characters:</strong></p>
-<pre><code class="language-python">number = 42
-print(f&quot;The answer is {number:04d}.&quot;)  # output: The answer is 0042.
-</code></pre>
+<p><code>python
+number = 42
+print(f"The answer is {number:04d}.")  # output: The answer is 0042.</code></p>
 <p><strong>Format a floating-point number with a minimum width of 10 characters and right alignment:</strong></p>
-<pre><code class="language-python">price = 9.99
-print(f&quot;The price is ${price:&gt;10.2f}.&quot;)  # output: The price is $      9.99.
-</code></pre>
+<p><code>python
+price = 9.99
+print(f"The price is ${price:&gt;10.2f}.")  # output: The price is $      9.99.</code></p>
 <p><strong>Format an integer with a thousands separator:</strong></p>
-<pre><code class="language-python">population = 8027959165
-print(f&quot;The population is {population:,} people.&quot;)  # output: The population is 8,027,959,165 people.
-</code></pre>
+<p><code>python
+population = 8027959165
+print(f"The population is {population:,} people.")  # output: The population is 8,027,959,165 people.</code></p>
 <p>In the examples above, the <code>format_spec</code> includes additional options that specify the minimum width of the output, the alignment, and the use of a thousands separator.</p>
 <h2>Conclusion</h2>
 <p>With f-strings, you can easily format numbers in a variety of ways that are both concise and readable. I hope this tutorial has been helpful in understanding how to format numbers in Python.</p>
     </div>
     <div class="col-md-3">
-        
 
 <h2>Featured eBook</h2>
 <a class="preview-img" href="https://www.amazon.com/dp/B0C2S2KR72?&linkCode=ll1&tag=geeksta-20&linkId=1f37a2af7976f5cffb04fe40513a1e0f&language=en_US&ref_=as_li_ss_tl">
@@ -131,136 +117,84 @@ print(f&quot;The population is {population:,} people.&quot;)  # output: The popu
 <hr>
 <h2>Latest Posts</h2>
 <ul class="list-unstyled">
-
     <li class="voffset"><a href="/geeklog/convert-web-pages-to-mobi/">Convert Web Pages to Ebooks in MOBI Format using Wget and Calibre</a></li>
-
     <li class="voffset"><a href="/geeklog/imagemagick-tutorial/">Unlock the Power of ImageMagick: A Beginner's Guide to Image Processing</a></li>
-
     <li class="voffset"><a href="/geeklog/chatgpt-interview/">AI Ethics, Advancements, and Limitations: An Interview with ChatGPT</a></li>
-
     <li class="voffset"><a href="/geeklog/automating-browser-screenshots-social-media/">Automating Browser Screenshots for Social Media using wcap and Pillow</a></li>
-
 </ul>
 <a href="/rss.xml" class="btn btn-warning"><i class="fa fa-rss"></i> Subscribe to new content</a></li>
 <hr>
 <h2>Featured Merch</h2>
-
-
 <a href="/design/def-procrastinate-pass-dark-scheme/" class="preview-img">
     <figure>
-        
             <img src="/img/preview/def-procrastinate-pass-dark-scheme.jpg" alt="Funny Python Code Pun Design - def procrastinate pass" class="img-responsive" />
-        
         <br>
         <figcaption class="hcaption">Funny Python Code Pun Design - def procrastinate pass</figcaption>
     </figure>
 </a>
-
     </div>
 </div>
-
-        
 <hr class="clearfix">
 <h4>Share this post on:</h4>
 <div class="share">
-    <a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https%3A//geeksta.net/geeklog/python-number-formatting-f-strings/&t=Python%20Number%20Formatting%20Made%20Easy%20with%20f-Strings" class="btn btn-default btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
-    <a rel="nofollow" href="https://reddit.com/submit?url=https%3A//geeksta.net/geeklog/python-number-formatting-f-strings/&title=Python%20Number%20Formatting%20Made%20Easy%20with%20f-Strings" class="btn btn-default btn-lg"><i class="fa fa-reddit-alien"></i> Reddit</a>
-    <a rel="nofollow" href="https://twitter.com/share?url=https%3A//geeksta.net/geeklog/python-number-formatting-f-strings/&text=Python%20Number%20Formatting%20Made%20Easy%20with%20f-Strings" class="btn btn-default btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
-</div>
-<hr class="clearfix">
+    <a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/geeklog/python-number-formatting-f-strings/&t=Python%20Number%20Formatting%20Made%20Easy%20with%20f-Strings" class="btn btn-default btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
+    <a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/geeklog/python-number-formatting-f-strings/&title=Python%20Number%20Formatting%20Made%20Easy%20with%20f-Strings" class="btn btn-default btn-lg"><i class="fa fa-reddit-alien"></i> Reddit</a>
+    <a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/geeklog/python-number-formatting-f-strings/&text=Python%20Number%20Formatting%20Made%20Easy%20with%20f-Strings" class="btn btn-default btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
+</div><hr class="clearfix">
 <div class="postinfo">
 <p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time itemprop="datePublished" datetime="2023-04-16T23:32">April 16, 2023</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
-
 <p>
 <strong>Tags:</strong>
-
 <span class="label label-info"><a href="/tags/python/">python</a></span>
-
 <span class="label label-info"><a href="/tags/formatting/">formatting</a></span>
-
 <span class="label label-info"><a href="/tags/tutorial/">tutorial</a></span>
-
 <span class="label label-info"><a href="/tags/code/">code</a></span>
-
 </p>
-
-<p class="text-muted"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p>
-</div>
-
-
+<p class="text-muted"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p></div>
 <div class="panel panel-default">
     <div class="panel-heading"><h3>Merchandise</h3></div>
-    <div class="panel-body">
-
-
-    <div class="row">
-        <div class="col-md-3">
-            
-<a href="/design/caution-i-curse-when-i-commit-code/" class="preview-img">
+    <div class="panel-body"><div class="row">        <div class="col-md-3">
+            <a href="/design/caution-i-curse-when-i-commit-code/" class="preview-img">
     <figure>
-        
             <img src="/img/preview/caution-i-curse-when-i-commit-code.jpg" alt="Caution I Curse When I Commit Code - Funny Programmer Design" class="img-responsive" />
-        
         <br>
         <figcaption class="hcaption">Caution I Curse When I Commit Code - Funny Programmer Design</figcaption>
     </figure>
 </a>
 
         </div>
-    
-
-    
         <div class="col-md-3">
-            
-<a href="/design/hack-the-planet-green/" class="preview-img">
+            <a href="/design/hack-the-planet-green/" class="preview-img">
     <figure>
-        
             <img src="/img/preview/hack-the-planet-green.jpg" alt="Hack the Planet - Green Globe Design for Computer Hackers" class="img-responsive" />
-        
         <br>
         <figcaption class="hcaption">Hack the Planet - Green Globe Design for Computer Hackers</figcaption>
     </figure>
 </a>
 
         </div>
-    
-
-    
         <div class="col-md-3">
-            
-<a href="/design/run-bsd/" class="preview-img">
+            <a href="/design/run-bsd/" class="preview-img">
     <figure>
-        
             <img src="/img/preview/run-bsd.jpg" alt="RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins" class="img-responsive" />
-        
         <br>
         <figcaption class="hcaption">RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins</figcaption>
     </figure>
 </a>
 
         </div>
-    
-
-    
         <div class="col-md-3">
-            
-<a href="/design/shrug-it-works-on-my-machine-medium-white/" class="preview-img">
+            <a href="/design/shrug-it-works-on-my-machine-medium-white/" class="preview-img">
     <figure>
-        
             <img src="/img/preview/shrug-it-works-on-my-machine-medium-white.jpg" alt="Shrug It Works On My Machine Funny Programmer Excuse White Design" class="img-responsive" />
-        
         <br>
         <figcaption class="hcaption">Shrug It Works On My Machine Funny Programmer Excuse White Design</figcaption>
     </figure>
 </a>
 
         </div>
-    </div>
-
-</div>
-</div>
-
-    </div>
+</div></div>
+</div>    </div>
 
     <div id="footer" class="container">
         <p>Geeksta.net: programming, data mining, data visualization, tech books, and tools for tech geeks.<br>
@@ -270,16 +204,12 @@ print(f&quot;The population is {population:,} people.&quot;)  # output: The popu
     <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="/compiled/script.js"></script>
-    
-        <script src="/vendor/highlight/highlight.pack.js"></script><script src="/js/highlight.js"></script>
-    
-    <!-- Google tag (gtag.js) -->
+<script src="/vendor/highlight/highlight.pack.js"></script><script src="/js/highlight.js"></script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFQJ09STFE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-MFQJ09STFE');
-</script>
-    </body>
+</script>    </body>
 </html>
