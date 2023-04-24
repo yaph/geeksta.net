@@ -72,42 +72,43 @@
 <p>I looked at existing screenshot libraries for Python first, but the packages I tried didn't capture the dynamic graphics that I wanted to include on the screenshots. So I wrote a tool called <a href="https://pypi.org/project/wcap/">wcap (web page capture)</a> that is built on top of <a href="https://www.selenium.dev/">Selenium</a> and <a href="https://github.com/mozilla/geckodriver">geckodriver</a>. It can be used as a command line tool or from within Python programs.</p>
 <p>At the time of writing <code>wcap</code> allows you to set the dimensions of the screenshot and a wait time in seconds to ensure that page rendering has finished. Any form of image manipulation like cropping or adding text has to be done separately.</p>
 <p>Below you find the code to create the social media image for the <a href="https://ukealong.com/key/c/">Key of C page on ukealong.com</a>. The first step is to import the necessary libraries and set some display variables like margins and font size that are specific for the design and layout of the captured web page and the portion to show. My goal was to show the fretboard diagram and the first two rows of video preview images.</p>
-<p>```python
-from PIL import Image, ImageDraw, ImageFont
-from wcap import get_browser, capture</p>
-<p>font_color = (0, 35, 102)  # Royal Blue
+<pre><code class="language-python">from PIL import Image, ImageDraw, ImageFont
+from wcap import get_browser, capture
+
+font_color = (0, 35, 102)  # Royal Blue
 font_margin = 10
-font_size = 18</p>
-<p>margin_vertical = 45
+font_size = 18
+
+margin_vertical = 45
 margin_horizontal = 50
 scale_factor = 0.8
-```</p>
+</code></pre>
 <p>Next we set the URL of the page and the file name for storing the image.</p>
-<p><code>python
-url = 'https://ukealong.com/key/c/'
-file_name = 'img/c.png'</code></p>
+<pre><code class="language-python">url = 'https://ukealong.com/key/c/'
+file_name = 'img/c.png'
+</code></pre>
 <p>You probably wouldn't read this, if you wanted to create a screenshot for a single page. So for creating multiple images, you can put the code that comes after creating the <code>browser</code> object in a function and pass URL and image name as parameters. The purpose of the <code>get_browser()</code> function in the <code>wcap</code> package is to make a single browser instance usable for multiple screen captures.</p>
-<p><code>python
-browser = get_browser()
-capture(browser, url, file_name, dimensions='1500x1100', wait=5)</code></p>
+<pre><code class="language-python">browser = get_browser()
+capture(browser, url, file_name, dimensions='1500x1100', wait=5)
+</code></pre>
 <p>The next steps are resizing and cropping the downloaded image. In the call of <code>resize</code> the <code>resample</code> parameter is set to <code>Image.BICUBIC</code>. The default resampling filter didn't work well, so this is something you may need to adjust if you want to make it work for a different page.</p>
-<p><code>python
-im = Image.open(file_name)
+<pre><code class="language-python">im = Image.open(file_name)
 w, h = im.size
 resized = im.resize((int(w * scale_factor), int(h * scale_factor)), resample=Image.BICUBIC)
 resized_w, resized_h = resized.size
-cropped = resized.crop((margin_horizontal, margin_vertical, resized_w - margin_horizontal, resized_h))</code></p>
+cropped = resized.crop((margin_horizontal, margin_vertical, resized_w - margin_horizontal, resized_h))
+</code></pre>
 <p>Now that the image is reduced to the desired size and portion of the page, the web page URL is added as text to the top right corner. The first parameter of the <code>ImageDraw.text</code> method is a tuple specifying the <code>x</code> and <code>y</code> coordinates of the top left corner of the text relative to the top left corner of the image. To make the text fit the <code>x</code> value is calculated from the width of the image and the text given the font family and size to use.</p>
-<p><code>python
-font = ImageFont.truetype('DejaVuSansMono-Bold.ttf', font_size)
+<pre><code class="language-python">font = ImageFont.truetype('DejaVuSansMono-Bold.ttf', font_size)
 font_w, font_h = font.getsize(url)
 text_x = cropped.size[0] - font_w - font_margin
 text_y = font_margin
-ImageDraw.Draw(cropped).text((text_x, text_y), url, fill=font_color, font=font)</code></p>
+ImageDraw.Draw(cropped).text((text_x, text_y), url, fill=font_color, font=font)
+</code></pre>
 <p>In the final statement the <code>quantize</code> method is called to reduce the file size of the image. <code>256</code> is the number of colors in the result image. It is the highest possible value, because of the video previews. If you have very few colors on your page, you can set a lower value. If you have lots of colors, calling <code>quantize</code> may not be an option at all because of the loss of information.</p>
 <p>I prefer fast load times over image quality, especially since these images are meant as previews of web pages and are not intended for print. The unedited file in this case is almost 10 times bigger than the final one.</p>
-<p><code>python
-cropped.quantize(256).save(file_name)</code></p>
+<pre><code class="language-python">cropped.quantize(256).save(file_name)
+</code></pre>
 <p>Below you can see how the original screenshot was changed:</p>
 <p><img alt="How the image changed" src="https://geeksta.net/img/geeklog/automating-browser-screenshots-social-media.png" /></p>
 <p>The final step is to set the <code>og:image</code> meta property on the corresponding web page:</p>

@@ -107,7 +107,7 @@
 <p>Presumably most participants came via Reddit, so if the results are representative of any group of people, it is the subscribers of /r/SampleSize. Keeping that in mind, we can see that females are more willing to tell their weight, but also less certain about how they'd answer.</p>
 <p>For me the most reasonable conclusion of this poll is that far more males seem to be subscribed to the SampleSize subreddit. So why bother about it at all?</p>
 <p>I found this poll while looking for an existing graphic to critique as part of a project for the <a href="https://www.udacity.com/course/ud507">Data Visualization and D3.js</a> course on Udacity, which is excellent by the way.</p>
-<h2>Critique of the Straw Poll presentation</h2>
+<h2 id="critique-of-the-straw-poll-presentation">Critique of the Straw Poll presentation</h2>
 <p>Below you can see a screenshot of how the poll results are <a href="https://strawpoll.me/4502802/r">presented on Straw Poll</a> as of June 5, 2015. I don't want to bash Straw Poll for their design choices or argue about aesthetics, but the presentation has several problems from a functional point of view.</p>
 <figure>
 <img src="https://i.imgur.com/QCmdDpA.png" alt="Straw Poll Screen Tell Weight" class="img-responsive img-thumbnail">
@@ -116,27 +116,27 @@
 
 <p>There are instances of <a href="https://en.wikipedia.org/wiki/Chartjunk">chartjunk</a> such as using a font that is not very readable or rounding the corners of bars. Also showing the corresponding answer text above each bar and having arguably too many slices in one pie chart are problematic.</p>
 <p>The most fundamental problem though is, that this presentation is not helpful for comparing gender differences, which is what the creator of the poll was apparently interested in. Straw Poll is a very simple tool which only seems to allow for single questions. It is not the right tool for the job, because Honeycone actually asked two questions: <em>Would you tell your weight?</em> and <em>Are you male or female?</em></p>
-<h2>Improving the presentation</h2>
+<h2 id="improving-the-presentation">Improving the presentation</h2>
 <p>Course participants were not only asked to critique a graphic, but also to improve it. You can see my attempt at the beginning of this article.</p>
 <p>To show gender differences I decided to create 2 pie charts next to each other, one for females and one for males. This way you can see which answer got what share within each of the 2 groups. The 3rd chart is to make it obvious that there is a gender imbalance, which also suggests that this is not a representative result.</p>
 <p>While pie charts are not the best choice for comparisons, there are particularly good at showing part of the whole relations, which is why I chose them. Alternatives I had in mind were a stacked bar or a 2-sided bar chart showing percent values for each group.</p>
-<h2>Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 <p>I don't want to interpret too much into the poll results. For whatever reason you might not want to disclose your weight to a friend, at least be aware of it yourself. If you are ashamed of your weight, there is probably something you should work on to make your life better.</p>
 <p>If you want to critique my graphic, you can do so in the comments at the end of this post. The last section is about how I created the charts.</p>
-<h2>Source code and data</h2>
+<h2 id="source-code-and-data">Source code and data</h2>
 <p>One of the tools the teachers of the D3 course suggested is <a href="http://dimplejs.org/">dimple</a>. Of all the general purpose charting libraries built on top of D3 I've seen, the creators of dimple seem to have put the most thought into creating an API that allows designers to think in terms of the basic building blocks, that make up a chart: axes, columns, data types and relationships.</p>
 <p>By providing a higher abstraction level than D3 itself, dimple allows chart designers to iterate quickly and use dimple for data exploration with chart types like bar, pie, scatter and line.</p>
-<h3>ECMAScript 6 code to draw the charts</h3>
+<h3 id="ecmascript-6-code-to-draw-the-charts">ECMAScript 6 code to draw the charts</h3>
 <p>I recently started writing browser code in ECMAScript 6, which I find a lot more pleasant than the current standard supported by browsers. Thanks to <a href="http://babeljs.io/">Babel</a> for making it very easy to use.</p>
 <p>Most of the ES6 code below should look familiar to JavaScript developers, except for the arrow (<code>=&gt;</code>) notation for creating functions and template strings as used in the <code>getTooltipText</code> function.</p>
 <p>With dimplejs you can create charts with just a few lines of code as seen in the <code>drawPie</code> function. The main "complexities" in the code result from creating custom legends and tooltip texts. I didn't want to show the legend for the 2 charts on the left twice and also make sure that the 3rd chart uses different colors to better separate it.</p>
 <pre><code class="javascript">{{ filesource('src/js/tell-weight.js') }}</code></pre>
 
-<h3>CSS code</h3>
+<h3 id="css-code">CSS code</h3>
 <p>For each data key used in the CSV file below a color is defined, which is used for pie slices and legends.</p>
 <pre><code class="css">{{ filesource('static/css/tell-weight.css') }}</code></pre>
 
-<h3>CSV dataset</h3>
+<h3 id="csv-dataset">CSV dataset</h3>
 <pre><code class="text">{{ filesource('static/data/tell-weight.csv') }}</code></pre>
 
 <p>To see how the chart layout as well as the legends are created, simply look for <code>div</code>-tags with the class <code>charts</code> in the page source.</p>

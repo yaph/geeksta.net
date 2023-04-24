@@ -63,12 +63,12 @@
         <header><h1 itemprop="name">Convert Web Pages to Ebooks in MOBI Format using Wget and Calibre</h1></header>
         <p>If you're an avid reader, you probably know that ebooks can be a great way to carry your favorite books with you wherever you go. However, what about those websites that you enjoy reading? You might not want to be online all the time just to read them. That's where converting web pages to ebooks comes in handy.</p>
 <p>This article will walk you through how to convert web pages to ebooks in MOBI format using Wget and Calibre.</p>
-<h2>Wget</h2>
+<h2 id="wget">Wget</h2>
 <p><a href="https://www.gnu.org/software/wget/">Wget</a> is a free and open-source command-line utility for downloading files from the internet. It is available for Linux, macOS, and Windows operating systems.</p>
 <p>In our case, we will use Wget to download web pages and all their linked assets, such as images, CSS files, and JavaScript files. Wget can also convert all links in the downloaded files to relative links so that they work offline.</p>
 <p>Here is an example command that downloads a web page:</p>
-<p><code>bash
-wget --level=inf --no-clobber --page-requisites --html-extension --convert-links --restrict-file-names=windows "https://www.example.com"</code></p>
+<pre><code class="language-bash">wget --level=inf --no-clobber --page-requisites --html-extension --convert-links --restrict-file-names=windows &quot;https://www.example.com&quot;
+</code></pre>
 <p>Let's break down what each option does:</p>
 <ul>
 <li><code>--level=inf</code>: Follows links to an unlimited depth (useful for downloading all linked assets).</li>
@@ -78,13 +78,13 @@ wget --level=inf --no-clobber --page-requisites --html-extension --convert-links
 <li><code>--convert-links</code>: Converts all links in the downloaded files to relative links so they work offline.</li>
 <li><code>--restrict-file-names=windows</code>: Replace any characters in filenames that are illegal on Windows (such as <code>:</code> or <code>?</code>) with underscores.</li>
 </ul>
-<h2>Calibre</h2>
+<h2 id="calibre">Calibre</h2>
 <p><a href="https://calibre-ebook.com/">Calibre</a> is a free and open-source ebook management tool that allows you to convert ebooks between different formats. It is available for Linux, macOS, and Windows operating systems.</p>
 <p>In our case, we will use Calibre to convert the downloaded HTML file to MOBI format. Here is an example command that converts an HTML file to MOBI format:</p>
-<p><code>bash
-ebook-convert input.html output.mobi --output-profile kindle_pw</code></p>
+<pre><code class="language-bash">ebook-convert input.html output.mobi --output-profile kindle_pw
+</code></pre>
 <p>In this example, <code>input.html</code> is the path to the HTML file, and <code>output.mobi</code> is the desired output file. The <code>--output-profile kindle_pw</code> option specifies the output profile, which is optimized for the <a href="https://www.amazon.com/s?k=Kindle+Paperwhite&amp;rh=n%3A6669702011&amp;linkCode=ll2&amp;tag=geeksta-20&amp;linkId=b4ce33e7f161c0ab60cee05289784391&amp;language=en_US&amp;ref_=as_li_ss_tl">Kindle Paperwhite</a> device.</p>
-<h2>Putting it all together</h2>
+<h2 id="putting-it-all-together">Putting it all together</h2>
 <p>Now that we know how to use Wget and Calibre separately, let's put it all together and create a script that automates the conversion process.</p>
 <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fyaph%2Fconverters%2Fblob%2Fmain%2Fwebpage2mobi.sh&style=default&type=code&showBorder=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
 

@@ -69,7 +69,7 @@ I figured that this process could be better automated.</p>
 <p>So I started working on <a href="https://github.com/yaph/b2tob3">b2tob3</a> a command
 line Python script, that replaces class names that changed form Bootstrap
 version 2 to Bootstrap 3 in HTML files.</p>
-<h2>Quickstart</h2>
+<h2 id="quickstart">Quickstart</h2>
 <p>Before you use b2tob3 make sure to have your project files under version
 control so you can review and if necessary revert the changes made by b2tob3.</p>
 <pre><code># install b2tob3 from PyPI
@@ -81,14 +81,14 @@ cd /my/web/project
 # run b2tob3
 b2tob3
 </code></pre>
-<h2>What is Changed?</h2>
+<h2 id="what-is-changed">What is Changed?</h2>
 <p>b2tob3 searches all files ending in .html, .htm, .css or .js in the current
 directory and its subdirectories and replaces most of the changed class names
 listed in the <a href="http://getbootstrap.com/getting-started/#migration">Bootstrap documentation</a>.</p>
 <p>Some of the Bootstrap 2 class names like <code>inline</code> or <code>add-on</code> may be replaced
 in places where they shouldn't, especially when your html files are not
 templates, but contain the content too.</p>
-<h2>Review and Edit</h2>
+<h2 id="review-and-edit">Review and Edit</h2>
 <p>b2tob3 takes away part of the tedious work of migrating a Web project, but most
 likely not all of it. So you need to review and test the changes and fix things
 manually that are not working in Bootstrap 3.</p>

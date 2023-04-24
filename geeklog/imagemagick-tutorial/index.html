@@ -62,76 +62,76 @@
     <div itemscope itemtype="http://schema.org/Article" class="col-md-9 content">
         <header><h1 itemprop="name">Unlock the Power of ImageMagick: A Beginner's Guide to Image Processing</h1></header>
         <p>ImageMagick is a free and open-source command-line tool that allows users to perform various image processing tasks, such as image conversion, resizing, cropping, rotating, adding effects, and more. It supports a wide range of image formats and can be used on Linux, Windows, and macOS. In this tutorial, we'll cover some of the most common commands and options in ImageMagick.</p>
-<h2>Installation</h2>
+<h2 id="installation">Installation</h2>
 <p>Before we get started, you'll need to have ImageMagick installed on your system. You can download it from the <a href="https://imagemagick.org/">official website</a>, or use your package manager if you're on Linux. To check if it's installed, open your terminal and run:</p>
-<p><code>shell
-$ convert --version</code></p>
+<pre><code class="language-shell">$ convert --version
+</code></pre>
 <p>If you see a version number, then you're good to go! Otherwise, you'll need to install ImageMagick first.</p>
-<h2>Basic Commands</h2>
+<h2 id="basic-commands">Basic Commands</h2>
 <p>Let's start with some basic commands that you'll use frequently:</p>
-<h3>Convert an image format</h3>
+<h3 id="convert-an-image-format">Convert an image format</h3>
 <p>To convert an image from one format to another, use the <code>convert</code> command followed by the input and output file names. For example, to convert a JPEG image to PNG, run:</p>
-<p><code>shell
-$ convert input.jpg output.png</code></p>
+<pre><code class="language-shell">$ convert input.jpg output.png
+</code></pre>
 <p>You can also convert multiple files at once by specifying a wildcard character:</p>
-<p><code>shell
-$ convert *.jpg output/%03d.png</code></p>
+<pre><code class="language-shell">$ convert *.jpg output/%03d.png
+</code></pre>
 <p>This will convert all JPEG files in the current directory to PNG and save them in the <code>output</code> directory with a three-digit sequence number as the filename.</p>
-<h3>Resize an image</h3>
+<h3 id="resize-an-image">Resize an image</h3>
 <p>To resize an image, use the <code>convert</code> command with the <code>-resize</code> option followed by the new dimensions. For example, to resize an image to <code>800x600</code> pixels, run:</p>
-<p><code>shell
-$ convert input.jpg -resize 800x600 output.jpg</code></p>
+<pre><code class="language-shell">$ convert input.jpg -resize 800x600 output.jpg
+</code></pre>
 <p>You can also specify the new dimensions as a percentage:</p>
-<p><code>shell
-$ convert input.jpg -resize 50% output.jpg</code></p>
+<pre><code class="language-shell">$ convert input.jpg -resize 50% output.jpg
+</code></pre>
 <p>This will resize the image to 50% of its original size.</p>
-<h3>Crop an image</h3>
+<h3 id="crop-an-image">Crop an image</h3>
 <p>To crop an image, use the <code>convert</code> command with the <code>-crop</code> option followed by the new dimensions. For example, to crop an image to 400x400 pixels starting from the top left corner, run:</p>
-<p><code>shell
-$ convert input.jpg -crop 400x400+0+0 output.jpg</code></p>
+<pre><code class="language-shell">$ convert input.jpg -crop 400x400+0+0 output.jpg
+</code></pre>
 <p>The <code>400x400</code> part specifies the new dimensions, and <code>0+0</code> specifies the starting point of the crop. You can also specify the starting point as a percentage of the image size:</p>
-<p><code>shell
-$ convert input.jpg -crop 50%x50%+0+0 output.jpg</code></p>
+<pre><code class="language-shell">$ convert input.jpg -crop 50%x50%+0+0 output.jpg
+</code></pre>
 <p>This will crop the image to 50% of its original size, starting from the top left corner of the image.</p>
-<h3>Rotate an image</h3>
+<h3 id="rotate-an-image">Rotate an image</h3>
 <p>To rotate an image, use the <code>convert</code> command with the <code>-rotate</code> option followed by the angle. For example, to rotate an image 90 degrees clockwise, run:</p>
-<p><code>shell
-$ convert input.jpg -rotate 90 output.jpg</code></p>
+<pre><code class="language-shell">$ convert input.jpg -rotate 90 output.jpg
+</code></pre>
 <p>You can also specify the rotation angle as a negative value to rotate counterclockwise:</p>
-<p><code>shell
-$ convert input.jpg -rotate -45 output.jpg</code></p>
-<h3>Add a border to an image</h3>
+<pre><code class="language-shell">$ convert input.jpg -rotate -45 output.jpg
+</code></pre>
+<h3 id="add-a-border-to-an-image">Add a border to an image</h3>
 <p>To add a border to an image, use the <code>convert</code> command with the <code>-border</code> option followed by the border width and color. To add a black border with a width of 10 pixels, run:</p>
-<p><code>shell
-$ convert input.jpg -bordercolor black -border 10x10 output.jpg</code></p>
+<pre><code class="language-shell">$ convert input.jpg -bordercolor black -border 10x10 output.jpg
+</code></pre>
 <p>Note that the <code>bordercolor</code> option must precede the <code>border</code> option.</p>
-<h3>Adding a blur effect</h3>
+<h3 id="adding-a-blur-effect">Adding a blur effect</h3>
 <p>To add a blur effect to an image, use the <code>convert</code> command with the <code>-blur</code> option followed by radius and sigma values. The sigma value determines the amount of blurring. To add a Gaussian blur with radius and sigma values of 5, run:</p>
-<p><code>shell
-$ convert input.jpg -blur 5x5 output.jpg</code></p>
-<h3>Adding a sharpen effect</h3>
+<pre><code class="language-shell">$ convert input.jpg -blur 5x5 output.jpg
+</code></pre>
+<h3 id="adding-a-sharpen-effect">Adding a sharpen effect</h3>
 <p>To add a sharpen effect to an image, use the <code>convert</code> command with the <code>-sharpen</code> option followed by the radius and sigma. To add a sharpen effect with a radius of 0 and a sigma of 1, run:</p>
-<p><code>shell
-$ convert input.jpg -sharpen 0x1 output.jpg</code></p>
+<pre><code class="language-shell">$ convert input.jpg -sharpen 0x1 output.jpg
+</code></pre>
 <p>You can adjust the radius and sigma values to create different levels of sharpening.</p>
-<h3>Adding a sepia effect</h3>
+<h3 id="adding-a-sepia-effect">Adding a sepia effect</h3>
 <p>To add a sepia effect to an image, use the <code>convert</code> command with the <code>-sepia-tone</code> option followed by the threshold as a percentage of the intensity (0 - 99.9%). To add a sepia effect with a threshold of <code>80%</code>, run:</p>
-<p><code>shell
-$ convert input.jpg -sepia-tone 80% output.jpg</code></p>
-<h3>Adding a grayscale effect</h3>
+<pre><code class="language-shell">$ convert input.jpg -sepia-tone 80% output.jpg
+</code></pre>
+<h3 id="adding-a-grayscale-effect">Adding a grayscale effect</h3>
 <p>To add a grayscale effect to an image, use the <code>convert</code> command with the <code>-colorspace</code> option followed by the colorspace name. For example, to convert an image to grayscale, run:</p>
-<p><code>shell
-$ convert input.jpg -colorspace Gray output.jpg</code></p>
+<pre><code class="language-shell">$ convert input.jpg -colorspace Gray output.jpg
+</code></pre>
 <p>You can also use the <code>brightness-contrast</code> option to adjust the brightness and contrast of the image:</p>
-<p><code>shell
-$ convert input.jpg -brightness-contrast -20x10 output.jpg</code></p>
+<pre><code class="language-shell">$ convert input.jpg -brightness-contrast -20x10 output.jpg
+</code></pre>
 <p>This will decrease the brightness by 20% and increase the contrast by 10%.</p>
-<h3>Adding a watermark</h3>
+<h3 id="adding-a-watermark">Adding a watermark</h3>
 <p>To add a watermark image to an image, use the <code>composite</code> command with the <code>-dissolve</code> option followed by the opacity and the watermark image. For example, to add a watermark image with an opacity of <code>50%</code> to the bottom right corner of an image, run:</p>
-<p><code>shell
-$ composite -dissolve 50% -gravity southeast watermark.png input.jpg output.jpg</code></p>
+<pre><code class="language-shell">$ composite -dissolve 50% -gravity southeast watermark.png input.jpg output.jpg
+</code></pre>
 <p>You can adjust the opacity and gravity values to position the watermark wherever you like. There are many more effects you can add to your images. Experiment with different options and see what kind of creative effects you can come up with!</p>
-<h2>Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 <p>These are just some basic commands to get started with ImageMagick. There are many more advanced features and options available, so be sure to check out the <a href="https://imagemagick.org/Usage/">ImageMagick documentation</a> for more information.</p>
     </div>
     <div class="col-md-3">

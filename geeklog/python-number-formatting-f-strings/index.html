@@ -72,37 +72,37 @@
 </ul>
 <p>Below are some examples of how to use f-strings to format numbers.</p>
 <p><strong>Format an integer:</strong></p>
-<p><code>python
-age = 25
-print(f"I am {age:d} years old.")  # output: I am 25 years old.</code></p>
+<pre><code class="language-python">age = 25
+print(f&quot;I am {age:d} years old.&quot;)  # output: I am 25 years old.
+</code></pre>
 <p><strong>Format a floating-point number with fixed-point notation:</strong></p>
-<p><code>python
-pi = 3.14159265
-print(f"Pi is approximately {pi:.2f}.")  # output: Pi is approximately 3.14.</code></p>
+<pre><code class="language-python">pi = 3.14159265
+print(f&quot;Pi is approximately {pi:.2f}.&quot;)  # output: Pi is approximately 3.14.
+</code></pre>
 <p><strong>Format a floating-point number with scientific notation:</strong></p>
-<p><code>python
-avogadro = 6.02214076e23
-print(f"Avogadro's number is {avogadro:e}.")  # output: Avogadro's number is 6.022141e+23.</code></p>
+<pre><code class="language-python">avogadro = 6.02214076e23
+print(f&quot;Avogadro's number is {avogadro:e}.&quot;)  # output: Avogadro's number is 6.022141e+23.
+</code></pre>
 <p><strong>Format a floating-point number in either fixed-point or scientific notation:</strong></p>
-<p><code>python
-g = 9.81
-print(f"The acceleration due to gravity is {g:g} m/s^2.")  # output: The acceleration due to gravity is 9.81 m/s^2.</code></p>
+<pre><code class="language-python">g = 9.81
+print(f&quot;The acceleration due to gravity is {g:g} m/s^2.&quot;)  # output: The acceleration due to gravity is 9.81 m/s^2.
+</code></pre>
 <p>In the examples above, the expressions inside the curly braces {} are evaluated at runtime and replaced with their values formatted according to the specified <code>format_spec</code>.</p>
 <p>You can also use f-strings to format numbers in more complex ways. For example, you can specify the width and alignment of the output, or include a thousands separator. Below are some examples.</p>
 <p><strong>Format an integer with leading zeros and a minimum width of 4 characters:</strong></p>
-<p><code>python
-number = 42
-print(f"The answer is {number:04d}.")  # output: The answer is 0042.</code></p>
+<pre><code class="language-python">number = 42
+print(f&quot;The answer is {number:04d}.&quot;)  # output: The answer is 0042.
+</code></pre>
 <p><strong>Format a floating-point number with a minimum width of 10 characters and right alignment:</strong></p>
-<p><code>python
-price = 9.99
-print(f"The price is ${price:&gt;10.2f}.")  # output: The price is $      9.99.</code></p>
+<pre><code class="language-python">price = 9.99
+print(f&quot;The price is ${price:&gt;10.2f}.&quot;)  # output: The price is $      9.99.
+</code></pre>
 <p><strong>Format an integer with a thousands separator:</strong></p>
-<p><code>python
-population = 8027959165
-print(f"The population is {population:,} people.")  # output: The population is 8,027,959,165 people.</code></p>
+<pre><code class="language-python">population = 8027959165
+print(f&quot;The population is {population:,} people.&quot;)  # output: The population is 8,027,959,165 people.
+</code></pre>
 <p>In the examples above, the <code>format_spec</code> includes additional options that specify the minimum width of the output, the alignment, and the use of a thousands separator.</p>
-<h2>Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 <p>With f-strings, you can easily format numbers in a variety of ways that are both concise and readable. I hope this tutorial has been helpful in understanding how to format numbers in Python.</p>
     </div>
     <div class="col-md-3">

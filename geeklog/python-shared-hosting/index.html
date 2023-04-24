@@ -70,7 +70,7 @@
         <header><h1 itemprop="name">Installing and Setting up Python on Shared Hosting</h1></header>
         <p>Most shared hosting providers offer out of the box support for PHP, some let you use Perl via CGI or Ruby, but Python is rarely usable without additional setup. Often it is not installed at all or the Python version is hopelessly outdated.</p>
 <p>In this post I'll outline the steps to install and set up Python on a shared hosting platform that runs on Linux and offers SSH access to the server.</p>
-<h2>Python 2.7.10 Installation</h2>
+<h2 id="python-2710-installation">Python 2.7.10 Installation</h2>
 <p>I show the process using the current Python 2 version, the steps for the Python 3 core distribution are equivalent. After you logged in to your hosting platform via SSH, execute the following commands.</p>
 <pre><code class="bash">
 mkdir ~/python27
@@ -95,7 +95,7 @@ make
 make install
 </code></pre>
 
-<h2>Python 2.7.10 Setup</h2>
+<h2 id="python-2710-setup">Python 2.7.10 Setup</h2>
 <p>For the just installed version of Python to be accessible you need to edit your <code>.bashrc</code> file.</p>
 <pre><code class="bash">vim ~/.bashrc</code></pre>
 
@@ -111,7 +111,7 @@ source ~/.bashrc
 python -V
 </code></pre>
 
-<h2>Python Packages</h2>
+<h2 id="python-packages">Python Packages</h2>
 <div class="alert alert-info" role="alert">This section is specific to Python 2. If you install Python 3.4 or higher you'll already have pip and can use the <code>pyvenv</code> command for virtual environments.</div>
 
 <p>Python has a "batteries included" philosophy, which means that the standard distribution offers a lot of functionality. Nonetheless, you'll want to be able to install additional Python packages from PyPI and use them in your applications.</p>
@@ -137,7 +137,7 @@ source ~/python27/bin/virtualenvwrapper.sh
 </code></pre>
 
 <p>You can choose another <code>WORKON_HOME</code> directory. Setting <code>VIRTUALENVWRAPPER_VIRTUALENV_ARGS</code> to <code>--no-site-packages</code> makes sure that newly created virtual environments are isolated from the system <code>site-packages</code>.</p>
-<h2>Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 <p>As you saw in this tutorial installing and setting up Python on a shared hosting platform requires a bit of work and SSH access. But it certainly pays off to be able to write your applications in a sane and accessible programming language that offers many features out of the box and a large number of additional packages for creating all kinds of applications.</p>
 <p>I've used this procedure on <a href="//www.hostmonster.com/track/rg/">Hostmonster</a>, where I host several Python applications. If you have trouble reproducing it or want to point out differences on another hosting platform, leave a comment below.</p>
     </div>
