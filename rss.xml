@@ -7,6 +7,13 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[The Chernobyl Disaster Imagined by Artificial Intelligence]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/chernobyl-disaster-imagined-by-artificial-intelligence/]]></link>
+        <description><![CDATA[<p>I instructed ChatGPT how to create prompts for text to image generation using stable diffusion machine learning models, fed the prompts into InvokeAI to generate images and compiled them in this book.</p><img src="https://geeksta.net/img/geeklog/chernobyl-disaster-ai-portraits.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/chernobyl-disaster-imagined-by-artificial-intelligence/]]></guid>
+        <pubDate>Wed, 26 Apr 2023 12:21:25 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[Convert Web Pages to Ebooks in MOBI Format using Wget and Calibre]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/convert-web-pages-to-mobi/]]></link>
         <description><![CDATA[<p>Learn how to convert web pages to Mobi format for easy reading on your Kindle or other e-readers. Follow this simple guide and enjoy your favorite articles on-the-go!</p>]]></description>
@@ -68,12 +75,5 @@
         <description><![CDATA[<p>A design for people who teach machines, develop algorithms, write computer code, engineer technology and love sarcasm. Great for work, science and tech conferences and events where artificial intelligence and machine learning geeks & nerds meet. Artific</p><img src="https://geeksta.net/img/large/ai-making-humans-obsolete-since-1956-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/ai-making-humans-obsolete-since-1956-white/]]></guid>
         <pubDate>Wed, 08 Feb 2023 00:00:00 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[It Works On My Machine Funny Programmer Excuse Reggae Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-reggae/]]></link>
-        <description><![CDATA[<p>For a coder/computer programmer/software developer bugs are a fact of life and so are excuses such as this popular one. Often enough code works on one machine, but not the other. Don't just shrug it off and say "it works on my machine" except as a joke.</p><img src="https://geeksta.net/img/large/shrug-it-works-on-my-machine-reggae.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/shrug-it-works-on-my-machine-reggae/]]></guid>
-        <pubDate>Tue, 07 Feb 2023 00:00:00 </pubDate>
     </item>
 </channel></rss>
