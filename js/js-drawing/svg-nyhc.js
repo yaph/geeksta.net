@@ -1,4 +1,4 @@
-var w = 600,
+const w = 600,
     h = 600,
     h_rect = 30,
     l_cath = h_rect / 2,

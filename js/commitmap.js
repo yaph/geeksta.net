@@ -1,8 +1,9 @@
 google.load('visualization', '1', {'packages': ['geochart']});
+google.charts.load('current', {'packages': ['geochart'], 'callback': drawVis});
 
-var dataurl = 'https://docs.google.com/spreadsheet/ccc?key=0Ajfu-hBSP-VLdFlkbFpWYTBxQ3Z4Mjc4bWxtUE5zX1E';
+const dataurl = 'https://docs.google.com/spreadsheet/ccc?key=0Ajfu-hBSP-VLdFlkbFpWYTBxQ3Z4Mjc4bWxtUE5zX1E';
 
-var settings = {
+const settings = {
     colorSchemes: [
         ['#A50026', '#D73027', '#F46D43', '#FDAE61', '#FEE090', '#FFFFBF', '#E0F3F8', '#ABD9E9', '#74ADD1', '#4575B4', '#313695'], // diverging red to blue
         ['#FFFFCC', '#FFEDA0', '#FED976', '#FEB24C', '#FD8D3C', '#FC4E2A', '#E31A1C', '#BD0026', '#800026'], // sequential yellow to red
@@ -62,7 +63,7 @@ var settings = {
 
 function drawMap() {
     query = new google.visualization.Query(dataurl);
-    var queryStr = settings.queryStr.replace(/#/g, settings.queryCol[settings.dataTypes[settings.dataType]]);
+    const queryStr = settings.queryStr.replace(/#/g, settings.queryCol[settings.dataTypes[settings.dataType]]);
     query.setQuery(queryStr);
     query.send(handleQueryResponse);
 }
@@ -72,8 +73,8 @@ function handleQueryResponse(response) {
         alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
         return;
     }
-    var vis = new google.visualization.GeoChart(document.getElementById('map'));
-    var dataTable = response.getDataTable();
+    const vis = new google.visualization.GeoChart(document.getElementById('map'));
+    const dataTable = response.getDataTable();
     vis.draw(dataTable, {
         colorAxis: {
             colors: settings.colorSchemes[settings.colorScheme],
@@ -88,9 +89,8 @@ function handleQueryResponse(response) {
 }
 
 function slide(dataTable) {
-  var col = settings.queryCol[settings.dataTypes[settings.dataType]];
-  var maxDataVal = Math.ceil(dataTable.D[0].c[1].v);
-  var settingsVal = settings.maxValue[settings.dataTypes[settings.dataType]]
+  const maxDataVal = Math.ceil(dataTable.D[0].c[1].v);
+  const settingsVal = settings.maxValue[settings.dataTypes[settings.dataType]]
   if (null === settingsVal) {
     settingsVal = maxDataVal;
     settings.maxValue[settings.dataTypes[settings.dataType]] = maxDataVal;
@@ -102,7 +102,7 @@ function slide(dataTable) {
   $('#sliderRange').attr('step', Math.ceil(maxDataVal/50));
 }
 
-$(function(){
+function drawVis() {
   drawMap();
   $('.mapSettings').change(function(evt){
     if ('null' !== this.value && 'selected' !== this.selected) {
@@ -116,11 +116,10 @@ $(function(){
     drawMap();
   });
   $('#sliderText').bind('keypress', function(evt){
-    if (13 == event.which) {
-      event.preventDefault();
+    if (13 == evt.which) {
+      evt.preventDefault();
       settings.maxValue[settings.dataTypes[settings.dataType]] = parseInt(this.value);
       drawMap();
     }
   });
-});
-
+}

@@ -1,143 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head itemscope itemtype="https://schema.org/WebSite">
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title itemprop="name">GitHub Commit Map | Geeksta</title>
-<meta name="description" content="A geographic map that displays location information extracted from GitHub commit data grouped by the countries of the world."><meta name="author" content="Ramiro Gómez">        <meta name="flattr:id" content="4pzdyq">
-        <link href="https://geeksta.net/visualizations/github-commit-map/" rel="canonical" itemprop="url">
-        <link href="/img/icon-small.png" rel="icon" type="image/png">
-        <link href="/rss.xml" rel="alternate" type="application/rss+xml" title="Geeksta All Posts RSS feed">
-        <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="/css/style.css" rel="stylesheet">
-<link href="/css/commitmap.css" rel="stylesheet"><link href="/vendor/highlight/styles/github.css" rel="stylesheet">        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-    </head>
-    <body>
-    <div class="navbar navbar-fixed-top navbar-inverse">
-        <div class="container">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse" aria-label="Toggle Navbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" id="site-name" href="/">Geeksta</a>
-            <div class="collapse navbar-collapse navbar-responsive-collapse">
-                <ul class="nav navbar-nav pull-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sections <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/reviews/">Book Reviews</a></li>
-                            <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
-                            <li><a href="/visualizations/">Data Visualizations</a></li>
-                            <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
-                            <li><a href="/events/">Geek Events</a></li>
-                            <li><a href="/screencasts/">Screencasts</a></li>
-                            <li><a href="/videos/">Videos</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/geeklog/">Geeklog</a></li>
-                    <li><a href="/merch/">Merchandise</a></li>
-                    <li><a href="/tools/">Tools</a></li>
-<li id="sharemenu" class="dropdown">
-  <button type="button" class="dropdown-toggle btn btn-success navbar-btn" data-toggle="dropdown"><i class="fa fa-share"></i></button>
-  <ul class="share dropdown-menu pull-right">
-    <li><a href="/rss.xml" class="btn btn-default"><i class="fa fa-rss"></i> RSS Feed</a></li>
-    <li><a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/visualizations/github-commit-map/&title=GitHub%20Commit%20Map" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
-    <li><a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/visualizations/github-commit-map/&text=GitHub%20Commit%20Map" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
-    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/visualizations/github-commit-map/&t=GitHub%20Commit%20Map" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
-    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/visualizations/github-commit-map/&title=GitHub%20Commit%20Map" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
-  </ul>
-</li>                </ul>
-            </div>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Commit Map | Geeksta</title>
+<meta name="description" content="A geographic map that displays location information extracted from GitHub commit data grouped by the countries of the world."><meta name="author" content="Ramiro Gómez">    <link rel="canonical" itemprop="url" href="https://geeksta.net/visualizations/github-commit-map/">
+    <link rel="icon" type="image/png" href="/img/icon-small.png">
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Geeksta All Posts RSS feed">
+    <link rel="stylesheet" href="/vendor/chota.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/dropdown.css">
+<link href="/css/commitmap.css" rel="stylesheet"><link href="/vendor/highlight/styles/github.css" rel="stylesheet"></head>
+<body>
+    <header><nav class="nav dark">
+        <div class="nav-left">
+            <a class="brand" href="/"><img class="logo" src="/img/icon-small.png">Geeksta</a>
         </div>
-    </div>
+        <ul class="nav-right">
+            <li>
+                <a href="#">Sections ▾</a>
+                <ul class="dropdown">
+                    <li><a href="/reviews/">Book Reviews</a></li>
+                    <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
+                    <li><a href="/visualizations/">Data Visualizations</a></li>
+                    <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
+                    <li><a href="/events/">Geek Events</a></li>
+                    <li><a href="/screencasts/">Screencasts</a></li>
+                    <li><a href="/videos/">Videos</a></li>
+                </ul>
+            </li>
+            <li><a href="/geeklog/">Geeklog</a></li>
+            <li><a href="/merch/">Merch</a></li>
+            <li><a href="/tools/">Tools</a></li>
+        </ul>
+    </nav></header>
 
-    <div id="wrapper" class="container">
-<div itemscope itemtype="http://schema.org/Article">
-    <header><h1 itemprop="name">GitHub Commit Map</h1></header>
-    <div id="mapControls" class="row">
-<form class="form-inline">
-<div class="col-md-4">
-  <label>Region
-    <select id="mapRegion" name="mapRegion" class="mapSettings">
-      <option value="World" selected="selected">World</option>
-      <optgroup label="Americas">
-      <option value="Americas">Americas</option>
-      <option value="Northern America">Northern America</option>
-      <option value="Caribbean">Caribbean</option>
-      <option value="Central America">Central America</option>
-      <option value="South America">South America</option>
-      </optgroup>
-      <optgroup label="Europe">
-      <option value="Europe">Europe</option>
-      <option value="Northern Europe">Northern Europe</option>
-      <option value="Western Europe">Western Europe</option>
-      <option value="Eastern Europe">Eastern Europe</option>
-      <option value="Southern Europe">Southern Europe</option>
-      </optgroup>
-      <optgroup label="Asia">
-      <option value="Asia">Asia</option>
-      <option value="Central Asia">Central Asia</option>
-      <option value="Eastern Asia">Eastern Asia</option>
-      <option value="Southern Asia">Southern Asia</option>
-      <option value="South-Eastern Asia">South-Eastern Asia</option>
-      <option value="Western Asia">Western Asia</option>
-      </optgroup>
-      <optgroup label="Africa">
-      <option value="Africa">Africa</option>
-      <option value="Northern Africa">Northern Africa</option>
-      <option value="Western Africa">Western Africa</option>
-      <option value="Middle Africa">Middle Africa</option>
-      <option value="Eastern Africa">Eastern Africa</option>
-      <option value="Southern Africa">Southern Africa</option>
-      </optgroup>
-      <optgroup label="Oceania">
-      <option value="Oceania">Oceania</option>
-      <option value="Australia and New Zealand">Australia and New Zealand</option>
-      <option value="Melanesia">Melanesia</option>
-      <option value="Micronesia">Micronesia</option>
-      <option value="Polynesia">Polynesia</option>
-      </optgroup>
-    </select>
-  </label>
-</div>
-<div class="col-md-4">
-  <label>Data
-    <select id="dataType" name="dataType" class="mapSettings">
-      <option value="0" selected="selected">Commits per 100k People</option>
-      <option value="1">Total Number of Commits</option>
-      <option value="2">Population</option>
-    </select>
-  </label>
-</div>
-<div class="col-md-4">
-  <label>Colors</label>
-    <select id="colorScheme" name="colorScheme" class="mapSettings">
-      <option value="0" selected="selected">Diverging Red to Blue</option>
-      <option value="1">Sequential Yellow to Red</option>
-      <option value="2">Sequential Blue to Green</option>
-    </select>
-  </label>
-</div>
-</div>
+    <main class="container">
+<div>
+    <h1>GitHub Commit Map</h1>
+    <form><div id="mapControls" class="row">
+  <div class="col-4-md">
+    <label>Region
+      <select id="mapRegion" name="mapRegion" class="mapSettings">
+        <option value="World" selected="selected">World</option>
+        <optgroup label="Americas">
+        <option value="Americas">Americas</option>
+        <option value="Northern America">Northern America</option>
+        <option value="Caribbean">Caribbean</option>
+        <option value="Central America">Central America</option>
+        <option value="South America">South America</option>
+        </optgroup>
+        <optgroup label="Europe">
+        <option value="Europe">Europe</option>
+        <option value="Northern Europe">Northern Europe</option>
+        <option value="Western Europe">Western Europe</option>
+        <option value="Eastern Europe">Eastern Europe</option>
+        <option value="Southern Europe">Southern Europe</option>
+        </optgroup>
+        <optgroup label="Asia">
+        <option value="Asia">Asia</option>
+        <option value="Central Asia">Central Asia</option>
+        <option value="Eastern Asia">Eastern Asia</option>
+        <option value="Southern Asia">Southern Asia</option>
+        <option value="South-Eastern Asia">South-Eastern Asia</option>
+        <option value="Western Asia">Western Asia</option>
+        </optgroup>
+        <optgroup label="Africa">
+        <option value="Africa">Africa</option>
+        <option value="Northern Africa">Northern Africa</option>
+        <option value="Western Africa">Western Africa</option>
+        <option value="Middle Africa">Middle Africa</option>
+        <option value="Eastern Africa">Eastern Africa</option>
+        <option value="Southern Africa">Southern Africa</option>
+        </optgroup>
+        <optgroup label="Oceania">
+        <option value="Oceania">Oceania</option>
+        <option value="Australia and New Zealand">Australia and New Zealand</option>
+        <option value="Melanesia">Melanesia</option>
+        <option value="Micronesia">Micronesia</option>
+        <option value="Polynesia">Polynesia</option>
+        </optgroup>
+      </select>
+    </label>
+  </div>
+  <div class="col-4-md">
+    <label>Data
+      <select id="dataType" name="dataType" class="mapSettings">
+        <option value="0" selected="selected">Commits per 100k People</option>
+        <option value="1">Total Number of Commits</option>
+        <option value="2">Population</option>
+      </select>
+    </label>
+  </div>
+  <div class="col-4-md">
+    <label>Colors</label>
+      <select id="colorScheme" name="colorScheme" class="mapSettings">
+        <option value="0" selected="selected">Diverging Red to Blue</option>
+        <option value="1">Sequential Yellow to Red</option>
+        <option value="2">Sequential Blue to Green</option>
+      </select>
+    </label>
+  </div>
+</div></form>
 
-<div class="row">
-  <div id="map" class="col-md-12"></div>
-</div>
+<div id="map"></div>
 
-<div id="mapSlider" class="row">
-<div class="col-md-12">
+<div id="mapSlider">
   <label id="sliderRangeLabel" for="sliderRange">Set displayed color data range</label>
   <span id="sliderMin">0</span>
   <input id="sliderRange" name="sliderRange" type="range" min="0" max="4000" step="50" value="4000">
   <span id="sliderMax"></span>
   <input id="sliderText" type="text" value="4000">
-</div>
 </div>
 
 <h1>GitHub Commit Map</h1>
@@ -158,82 +131,78 @@
 <p>Data for the map was obtained from the <a href="http://www.githubarchive.org/">GitHub Archive</a> public dataset via Google's BigQuery service. The map visualization uses the <a href="https://developers.google.com/chart/">Google Chart Tools</a> JavaScript library and API and color schemes from the <a href="http://colorbrewer2.org/">Colorbrewer tool</a>.</p>
 <p>Last but not least hundreds of thousands of developers, who host their open source projects on <a href="https://github.com/">GitHub</a>, provided the foundation for this map.</p>
 </div>
-<hr class="clearfix">
-<h4>Share this post on:</h4>
-<div class="share">
-    <a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/visualizations/github-commit-map/&t=GitHub%20Commit%20Map" class="btn btn-default btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
-    <a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/visualizations/github-commit-map/&title=GitHub%20Commit%20Map" class="btn btn-default btn-lg"><i class="fa fa-reddit-alien"></i> Reddit</a>
-    <a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/visualizations/github-commit-map/&text=GitHub%20Commit%20Map" class="btn btn-default btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
-</div><hr class="clearfix">
-<div class="postinfo">
-<p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time itemprop="datePublished" datetime="2012-06-23T22:51">June 23, 2012</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
-<p>
-<strong>Tags:</strong>
-<span class="label label-info"><a href="/tags/github/">github</a></span>
-<span class="label label-info"><a href="/tags/visualization/">visualization</a></span>
-<span class="label label-info"><a href="/tags/data-analysis/">data analysis</a></span>
-<span class="label label-info"><a href="/tags/map/">map</a></span>
+<hr>
+<p><strong>Share post:</strong>
+<a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/visualizations/github-commit-map/&t=GitHub%20Commit%20Map" class="button success">Facebook</a>
+<a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/visualizations/github-commit-map/&title=GitHub%20Commit%20Map" class="button success">LinkedIn</a>
+<a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/visualizations/github-commit-map/&title=GitHub%20Commit%20Map" class="button success">Reddit</a>
+<a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/visualizations/github-commit-map/&text=GitHub%20Commit%20Map" class="button success">Twitter</a>
+</p><hr>
+<p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time datetime="2012-06-23T22:51">June 23, 2012</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+<p><strong>Tags:</strong>
+    <a class="button outline" href="/tags/github/">github</a>
+    <a class="button outline" href="/tags/visualization/">visualization</a>
+    <a class="button outline" href="/tags/data-analysis/">data analysis</a>
+    <a class="button outline" href="/tags/map/">map</a>
 </p>
-<p class="text-muted"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p></div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h3>Merchandise</h3></div>
-    <div class="panel-body"><div class="row">        <div class="col-md-3">
-            <a href="/design/caution-i-curse-when-i-commit-code/" class="preview-img">
-    <figure>
-            <img src="/img/preview/caution-i-curse-when-i-commit-code.jpg" alt="Caution I Curse When I Commit Code - Funny Programmer Design" class="img-responsive" />
-        <br>
-        <figcaption class="hcaption">Caution I Curse When I Commit Code - Funny Programmer Design</figcaption>
-    </figure>
-</a>
+<p class="text-grey"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p>
+<div class="card vm">
+    <h3>Merchandise</h3>
+    <div class="row">
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/caution-i-curse-when-i-commit-code/">
+            <img class="b-lazy" src="/img/large/caution-i-curse-when-i-commit-code.jpg" alt="Caution I Curse When I Commit Code - Funny Programmer Design" />
+        <figcaption>Caution I Curse When I Commit Code - Funny Programmer Design</figcaption>
+    </a>
+</figure>
 
-        </div>
-        <div class="col-md-3">
-            <a href="/design/hack-the-planet-green/" class="preview-img">
-    <figure>
-            <img src="/img/preview/hack-the-planet-green.jpg" alt="Hack the Planet - Green Globe Design for Computer Hackers" class="img-responsive" />
-        <br>
-        <figcaption class="hcaption">Hack the Planet - Green Globe Design for Computer Hackers</figcaption>
-    </figure>
-</a>
-
-        </div>
-        <div class="col-md-3">
-            <a href="/design/run-bsd/" class="preview-img">
-    <figure>
-            <img src="/img/preview/run-bsd.jpg" alt="RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins" class="img-responsive" />
-        <br>
-        <figcaption class="hcaption">RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins</figcaption>
-    </figure>
-</a>
-
-        </div>
-        <div class="col-md-3">
-            <a href="/design/shrug-it-works-on-my-machine-medium-white/" class="preview-img">
-    <figure>
-            <img src="/img/preview/shrug-it-works-on-my-machine-medium-white.jpg" alt="Shrug It Works On My Machine Funny Programmer Excuse White Design" class="img-responsive" />
-        <br>
-        <figcaption class="hcaption">Shrug It Works On My Machine Funny Programmer Excuse White Design</figcaption>
-    </figure>
-</a>
-
-        </div>
-</div></div>
-</div>    </div>
-
-    <div id="footer" class="container">
-        <p>Geeksta.net: programming, data mining, data visualization, tech books, and tools for tech geeks.<br>
-        © <script>document.write(new Date().getFullYear())</script> Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/sitemap/">Sitemap</a> • <a href="https://www.instagram.com/g33ksta/">Instagram</a> • <a href="https://mastodon.social/@geeksta">Mastodon</a> • <a href="https://www.tiktok.com/@g33ksta">TikTok</a> • <a href="https://www.youtube.com/@geeksta">YouTube</a></p>
     </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/hack-the-planet-green/">
+            <img class="b-lazy" src="/img/large/hack-the-planet-green.jpg" alt="Hack the Planet - Green Globe Design for Computer Hackers" />
+        <figcaption>Hack the Planet - Green Globe Design for Computer Hackers</figcaption>
+    </a>
+</figure>
 
-    <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/run-bsd/">
+            <img class="b-lazy" src="/img/large/run-bsd.jpg" alt="RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins" />
+        <figcaption>RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/shrug-it-works-on-my-machine-medium-white/">
+            <img class="b-lazy" src="/img/large/shrug-it-works-on-my-machine-medium-white.jpg" alt="Shrug It Works On My Machine Funny Programmer Excuse White Design" />
+        <figcaption>Shrug It Works On My Machine Funny Programmer Excuse White Design</figcaption>
+    </a>
+</figure>
+
+    </div>
+</div>
+
+</div>    </main>
+
+    <footer class="dark"><div class="container">
+        Geeksta elsewhere: <a href="https://www.instagram.com/g33ksta/">Instagram</a> • <a href="https://mastodon.social/@geeksta">Mastodon</a> • <a href="https://www.tiktok.com/@g33ksta">TikTok</a> • <a href="https://www.youtube.com/@geeksta">YouTube</a>
+        <br>
+        © <script>document.write(new Date().getFullYear())</script> Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/sitemap/">Sitemap</a></p>
+    </div></footer>
+
     <script src="/compiled/script.js"></script>
-<script src="https://www.google.com/jsapi"></script><script src="/js/commitmap.js"></script><script src="/vendor/highlight/highlight.pack.js"></script><script src="/js/highlight.js"></script><!-- Google tag (gtag.js) -->
+<script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script><script src="https://www.gstatic.com/charts/loader.js"></script><script src="/js/commitmap.js"></script><script src="/vendor/highlight/highlight.pack.js"></script><script src="/js/highlight.js"></script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFQJ09STFE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-MFQJ09STFE');
-</script>    </body>
+</script>
+</body>
 </html>

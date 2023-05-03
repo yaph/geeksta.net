@@ -1,4 +1,4 @@
-var w = 800,
+const w = 800,
     h = w,
     font_scale = w / 8.08,
     star_scale = font_scale / 2.1,
@@ -11,19 +11,19 @@ var w = 800,
     text = 'ERICH ★ RICHARD ★ RALPH ★ JOHN ★',
     translate = 'translate(' + w / 2 +',' + h / 2 + ')';
 
-var svg = d3.select('#canvas').append('svg')
+const svg = d3.select('#canvas').append('svg')
     .attr('width', w)
     .attr('height', h)
     .attr('style', 'background: #000')
 
 // Create arcs for drawing paths.
-var inner_arc = d3.svg.arc()
+const inner_arc = d3.arc()
     .innerRadius(inner_circle)
     .outerRadius(inner_circle)
     .startAngle(0)
     .endAngle(360);
 
-var outer_arc = d3.svg.arc()
+const outer_arc = d3.arc()
     .innerRadius(outer_circle - stroke_width)
     .outerRadius(outer_circle)
     .startAngle(0)
@@ -42,13 +42,13 @@ svg.append('path')
     .attr('fill', fgcolor);
 
 // Create text elements that will be put on the circular paths.
-var text_names = svg.append('text')
+const text_names = svg.append('text')
     .attr('x', 0)
     .attr('dy', 0)
     .style('font-size', font_scale + 'px')
     .style('font-family', 'Times New Roman');;
 
-var text_stars = svg.append('text')
+const text_stars = svg.append('text')
     .attr('x', 0)
     .attr('dy', stroke_width * 2)
     .style('font-size', star_scale + 'px');

@@ -1,73 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head itemscope itemtype="https://schema.org/WebSite">
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title itemprop="name">Exploring Expressions of Emotions in GitHub Commit Messages | Geeksta</title>
-<meta name="description" content="An exploration of expressions of emotions, issues and swearing in GitHub commit messages based on data from the GitHub Archive accessed via Google BigQuery."><meta name="author" content="Ramiro Gómez">            <meta property="og:image" content="https://geeksta.net/img/emotions-github-commit-messages/commit-messages-anger-percentage.png">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:creator" content="@yaph">
-    <meta name="twitter:title" content="Exploring Expressions of Emotions in GitHub Commit Messages">
-    <meta name="twitter:description" content="An exploration of expressions of emotions, issues and swearing in GitHub commit messages based on data from the GitHub Archive accessed via Google BigQuery.">
-    <meta name="twitter:image:src" content="https://geeksta.net/img/emotions-github-commit-messages/commit-messages-anger-percentage.png">
-        <meta name="flattr:id" content="4pzdyq">
-        <link href="https://geeksta.net/geeklog/exploring-expressions-emotions-github-commit-messages/" rel="canonical" itemprop="url">
-        <link href="/img/icon-small.png" rel="icon" type="image/png">
-        <link href="/rss.xml" rel="alternate" type="application/rss+xml" title="Geeksta All Posts RSS feed">
-        <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="/css/style.css" rel="stylesheet">
-<link href="/vendor/highlight/styles/github.css" rel="stylesheet">        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-    </head>
-    <body>
-    <div class="navbar navbar-fixed-top navbar-inverse">
-        <div class="container">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse" aria-label="Toggle Navbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" id="site-name" href="/">Geeksta</a>
-            <div class="collapse navbar-collapse navbar-responsive-collapse">
-                <ul class="nav navbar-nav pull-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sections <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/reviews/">Book Reviews</a></li>
-                            <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
-                            <li><a href="/visualizations/">Data Visualizations</a></li>
-                            <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
-                            <li><a href="/events/">Geek Events</a></li>
-                            <li><a href="/screencasts/">Screencasts</a></li>
-                            <li><a href="/videos/">Videos</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/geeklog/">Geeklog</a></li>
-                    <li><a href="/merch/">Merchandise</a></li>
-                    <li><a href="/tools/">Tools</a></li>
-<li id="sharemenu" class="dropdown">
-  <button type="button" class="dropdown-toggle btn btn-success navbar-btn" data-toggle="dropdown"><i class="fa fa-share"></i></button>
-  <ul class="share dropdown-menu pull-right">
-    <li><a href="/rss.xml" class="btn btn-default"><i class="fa fa-rss"></i> RSS Feed</a></li>
-    <li><a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/geeklog/exploring-expressions-emotions-github-commit-messages/&title=Exploring%20Expressions%20of%20Emotions%20in%20GitHub%20Commit%20Messages" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
-    <li><a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/geeklog/exploring-expressions-emotions-github-commit-messages/&text=Exploring%20Expressions%20of%20Emotions%20in%20GitHub%20Commit%20Messages" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
-    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/geeklog/exploring-expressions-emotions-github-commit-messages/&t=Exploring%20Expressions%20of%20Emotions%20in%20GitHub%20Commit%20Messages" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
-    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/geeklog/exploring-expressions-emotions-github-commit-messages/&title=Exploring%20Expressions%20of%20Emotions%20in%20GitHub%20Commit%20Messages" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
-  </ul>
-</li>                </ul>
-            </div>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring Expressions of Emotions in GitHub Commit Messages | Geeksta</title>
+<meta name="description" content="An exploration of expressions of emotions, issues and swearing in GitHub commit messages based on data from the GitHub Archive accessed via Google BigQuery."><meta name="author" content="Ramiro Gómez">        <meta property="og:image" content="/img/emotions-github-commit-messages/commit-messages-anger-percentage.png">
+    <link rel="canonical" itemprop="url" href="https://geeksta.net/geeklog/exploring-expressions-emotions-github-commit-messages/">
+    <link rel="icon" type="image/png" href="/img/icon-small.png">
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Geeksta All Posts RSS feed">
+    <link rel="stylesheet" href="/vendor/chota.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/dropdown.css">
+<link href="/vendor/highlight/styles/github.css" rel="stylesheet"></head>
+<body>
+    <header><nav class="nav dark">
+        <div class="nav-left">
+            <a class="brand" href="/"><img class="logo" src="/img/icon-small.png">Geeksta</a>
         </div>
-    </div>
+        <ul class="nav-right">
+            <li>
+                <a href="#">Sections ▾</a>
+                <ul class="dropdown">
+                    <li><a href="/reviews/">Book Reviews</a></li>
+                    <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
+                    <li><a href="/visualizations/">Data Visualizations</a></li>
+                    <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
+                    <li><a href="/events/">Geek Events</a></li>
+                    <li><a href="/screencasts/">Screencasts</a></li>
+                    <li><a href="/videos/">Videos</a></li>
+                </ul>
+            </li>
+            <li><a href="/geeklog/">Geeklog</a></li>
+            <li><a href="/merch/">Merch</a></li>
+            <li><a href="/tools/">Tools</a></li>
+        </ul>
+    </nav></header>
 
-    <div id="wrapper" class="container">
+    <main class="container">
 <div class="row">
-    <div itemscope itemtype="http://schema.org/Article" class="col-md-9 content">
-        <header><h1 itemprop="name">Exploring Expressions of Emotions in GitHub Commit Messages</h1></header>
+    <div class="col-9-md">
+        <h1>Exploring Expressions of Emotions in GitHub Commit Messages</h1>
         <p>Last week <a href="https://github.com/blog/1112-data-at-github">GitHub announced</a> that the data collected over at the <a href="http://www.githubarchive.org/">GitHub Archive</a> was made available as a public dataset on <a href="https://bigquery.cloud.google.com/">Google's BigQuery</a> web service. Pretty exciting news for data analysts, considering that the timeline dataset currently contains more than 7 million records and is growing quickly.</p>
 <p>To see what developers come up with analyzing the GitHub timeline and language correlation datasets, they started <a href="https://github.com/blog/1118-the-github-data-challenge">a data challenge</a> which is open for submissions until May 21st.</p>
 <p>Being interested in both natural and programming languages, I decided to expand on this <a href="http://andrewvos.com/2011/02/21/amount-of-profanity-in-git-commit-messages-per-programming-language/">analysis of profanity in git commit messages per programming language</a> with a more general exploration of expressions of emotions as well as looking at messages indicating issues and those containing swear words.</p>
@@ -77,7 +49,7 @@
 <p>Since the number of commits varies considerably across different languages only those with at least 40,000 commits in the analyzed time frame were accounted for, resulting in a total of of 2,526,650 commit messages within the set of languages displayed in the bar chart below:</p>
 <figure>
 <img src="/img/emotions-github-commit-messages/included-languages-commit-counts.png" alt="Included Programming Languages by Commit Counts">
-<figcaption class="hcaption">Figure: Programming Languages by Commit Message Counts</figcaption>
+<figcaption>Figure: Programming Languages by Commit Message Counts</figcaption>
 </figure>
 <p>Even though a minimum of 40,000 samples per languages seemed adequate to me (I wanted to include Perl), different sample sizes result in varying accuracy, which is a problem and a bit like comparing apples and oranges. Statisticians will probably deny any value of such an approach, still I think it can serve to develop some hypotheses.</p>
 <p>Actually, this is not the only problem. Assuming a particular emotion just because a message contains a certain expression does not work in many cases. The expression does not necessarily refer to the person who wrote the message, moreover, natural language is full of ambiguity, there are rhetorical devices like irony, and messages can be written in other languages than English, where the same word may have a completely different meaning.</p>
@@ -96,7 +68,7 @@
 </code></pre>
 <figure>
 <img src="/img/emotions-github-commit-messages/commit-messages-anger-percentage.png" alt="Percentage of Commit Messages with Expressions of Anger">
-<figcaption class="hcaption">Figure: Percentage of Commit Messages with Expressions of Anger</figcaption>
+<figcaption>Figure: Percentage of Commit Messages with Expressions of Anger</figcaption>
 </figure>
 <h4>Example Messages</h4>
 <ul>
@@ -117,7 +89,7 @@
 </code></pre>
 <figure>
 <img src="/img/emotions-github-commit-messages/commit-messages-joy-percentage.png" alt="Percentage of Commit Messages with Expressions of Joy">
-<figcaption class="hcaption">Figure: Percentage of Commit Messages with Expressions of Joy</figcaption>
+<figcaption>Figure: Percentage of Commit Messages with Expressions of Joy</figcaption>
 </figure>
 <h4>Example Messages</h4>
 <ul>
@@ -141,7 +113,7 @@
 </code></pre>
 <figure>
 <img src="/img/emotions-github-commit-messages/commit-messages-amusement-percentage.png" alt="Percentage of Commit Messages with Expressions of Amusement">
-<figcaption class="hcaption">Figure: Percentage of Commit Messages with Expressions of Amusement</figcaption>
+<figcaption>Figure: Percentage of Commit Messages with Expressions of Amusement</figcaption>
 </figure>
 <h4>Example Messages</h4>
 <ul>
@@ -166,7 +138,7 @@
 </code></pre>
 <figure>
 <img src="/img/emotions-github-commit-messages/commit-messages-surprise-percentage.png" alt="Percentage of Commit Messages with Expressions of Surprise">
-<figcaption class="hcaption">Figure: Percentage of Commit Messages with Expressions of Surprise</figcaption>
+<figcaption>Figure: Percentage of Commit Messages with Expressions of Surprise</figcaption>
 </figure>
 <h4>Example Messages</h4>
 <ul>
@@ -186,7 +158,7 @@
 </code></pre>
 <figure>
 <img src="/img/emotions-github-commit-messages/commit-messages-issues-percentage.png" alt="Percentage of Commit Messages with Expressions of Issues">
-<figcaption class="hcaption">Figure: Percentage of Commit Messages with Expressions Indicating Issues</figcaption>
+<figcaption>Figure: Percentage of Commit Messages with Expressions Indicating Issues</figcaption>
 </figure>
 <h4>Example messages</h4>
 <ul>
@@ -210,7 +182,7 @@
 </code></pre>
 <figure>
 <img src="/img/emotions-github-commit-messages/commit-messages-swearing-percentage.png" alt="Percentage of Commit Messages Containing Swear Words">
-<figcaption class="hcaption">Figure: Percentage of Commit Messages Containing Swear Words</figcaption>
+<figcaption>Figure: Percentage of Commit Messages Containing Swear Words</figcaption>
 </figure>
 <h4>Example messages</h4>
 <ul>
@@ -262,105 +234,103 @@
 <p class="small">Denis Roussel who made the well-deserved <a href="https://github.com/blog/1162-github-data-challenge-winners">1st place in the challenge</a> with his awesome GitHub activity dashboard Octoboard recently integrated emotions, issues and swearing in his tool.</p>
 <p>The original Octoboard has been discontinued.</p>
     </div>
-    <div class="col-md-3">
+    <div class="col">
 
-<h2>Featured eBook</h2>
-<a class="preview-img" href="https://www.amazon.com/dp/B0C2S2KR72?&linkCode=ll1&tag=geeksta-20&linkId=1f37a2af7976f5cffb04fe40513a1e0f&language=en_US&ref_=as_li_ss_tl">
-  <figure>
-    <img class="img-responsive" alt="eBook cover" src="/img/books/chatgpt-interview-2.jpg"><br>
-    <figcaption class="hcaption">Buy on Amazon</figcaption>
-  </figure>
-</a>
-<hr>
-<h2>Latest Posts</h2>
-<ul class="list-unstyled">
-    <li class="voffset"><a href="/geeklog/chernobyl-disaster-imagined-by-artificial-intelligence/">The Chernobyl Disaster Imagined by Artificial Intelligence</a></li>
-    <li class="voffset"><a href="/geeklog/convert-web-pages-to-mobi/">Convert Web Pages to Ebooks in MOBI Format using Wget and Calibre</a></li>
-    <li class="voffset"><a href="/geeklog/imagemagick-tutorial/">Unlock the Power of ImageMagick: A Beginner's Guide to Image Processing</a></li>
-    <li class="voffset"><a href="/geeklog/python-number-formatting-f-strings/">Python Number Formatting Made Easy with f-Strings</a></li>
-    <li class="voffset"><a href="/geeklog/chatgpt-interview/">AI Ethics, Advancements, and Limitations: An Interview with ChatGPT</a></li>
+
+<h3>Featured eBook</h3>
+<figure class="preview">
+    <a href="https://www.amazon.com/dp/B0C2S2KR72?&linkCode=ll1&tag=geeksta-20&linkId=1f37a2af7976f5cffb04fe40513a1e0f&language=en_US&ref_=as_li_ss_tl">
+        <img alt="eBook cover" src="/img/books/chatgpt-interview-2.jpg"><br>
+        <figcaption>Buy on Amazon</figcaption>
+    </a>
+</figure>
+
+<h3>Latest Posts</h3>
+<ul>
+        <li><a href="/geeklog/chernobyl-disaster-imagined-by-artificial-intelligence/">The Chernobyl Disaster Imagined by Artificial Intelligence</a></li>
+        <li><a href="/geeklog/convert-web-pages-to-mobi/">Convert Web Pages to Ebooks in MOBI Format using Wget and Calibre</a></li>
+        <li><a href="/geeklog/imagemagick-tutorial/">Unlock the Power of ImageMagick: A Beginner's Guide to Image Processing</a></li>
+        <li><a href="/geeklog/python-number-formatting-f-strings/">Python Number Formatting Made Easy with f-Strings</a></li>
+        <li><a href="/geeklog/chatgpt-interview/">AI Ethics, Advancements, and Limitations: An Interview with ChatGPT</a></li>
 </ul>
-<a href="/rss.xml" class="btn btn-warning"><i class="fa fa-rss"></i> Subscribe to new content</a></li>
+
+<h3>Featured Merch</h3>
+<figure class="preview">
+    <a href="/design/def-procrastinate-pass-dark-scheme/">
+            <img class="b-lazy" src="/img/large/def-procrastinate-pass-dark-scheme.jpg" alt="Funny Python Code Pun Design - def procrastinate pass" />
+        <figcaption>Funny Python Code Pun Design - def procrastinate pass</figcaption>
+    </a>
+</figure>
+
+
 <hr>
-<h2>Featured Merch</h2>
-<a href="/design/def-procrastinate-pass-dark-scheme/" class="preview-img">
-    <figure>
-            <img src="/img/preview/def-procrastinate-pass-dark-scheme.jpg" alt="Funny Python Code Pun Design - def procrastinate pass" class="img-responsive" />
-        <br>
-        <figcaption class="hcaption">Funny Python Code Pun Design - def procrastinate pass</figcaption>
-    </figure>
-</a>
+
+<a href="/rss.xml" class="button primary">Subscribe to RSS Feed</a></li>    </div>
+</div>
+<hr>
+<p><strong>Share post:</strong>
+<a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/geeklog/exploring-expressions-emotions-github-commit-messages/&t=Exploring%20Expressions%20of%20Emotions%20in%20GitHub%20Commit%20Messages" class="button success">Facebook</a>
+<a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/geeklog/exploring-expressions-emotions-github-commit-messages/&title=Exploring%20Expressions%20of%20Emotions%20in%20GitHub%20Commit%20Messages" class="button success">LinkedIn</a>
+<a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/geeklog/exploring-expressions-emotions-github-commit-messages/&title=Exploring%20Expressions%20of%20Emotions%20in%20GitHub%20Commit%20Messages" class="button success">Reddit</a>
+<a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/geeklog/exploring-expressions-emotions-github-commit-messages/&text=Exploring%20Expressions%20of%20Emotions%20in%20GitHub%20Commit%20Messages" class="button success">Twitter</a>
+</p><hr>
+<p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time datetime="2012-05-10T14:11">May 10, 2012</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+<p><strong>Tags:</strong>
+    <a class="button outline" href="/tags/data-analysis/">data analysis</a>
+    <a class="button outline" href="/tags/github/">github</a>
+    <a class="button outline" href="/tags/regular-expressions/">regular expressions</a>
+    <a class="button outline" href="/tags/git/">git</a>
+</p>
+<p class="text-grey"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p>
+<div class="card vm">
+    <h3>Merchandise</h3>
+    <div class="row">
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/caution-i-curse-when-i-commit-code/">
+            <img class="b-lazy" src="/img/large/caution-i-curse-when-i-commit-code.jpg" alt="Caution I Curse When I Commit Code - Funny Programmer Design" />
+        <figcaption>Caution I Curse When I Commit Code - Funny Programmer Design</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/hack-the-planet-green/">
+            <img class="b-lazy" src="/img/large/hack-the-planet-green.jpg" alt="Hack the Planet - Green Globe Design for Computer Hackers" />
+        <figcaption>Hack the Planet - Green Globe Design for Computer Hackers</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/run-bsd/">
+            <img class="b-lazy" src="/img/large/run-bsd.jpg" alt="RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins" />
+        <figcaption>RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/shrug-it-works-on-my-machine-medium-white/">
+            <img class="b-lazy" src="/img/large/shrug-it-works-on-my-machine-medium-white.jpg" alt="Shrug It Works On My Machine Funny Programmer Excuse White Design" />
+        <figcaption>Shrug It Works On My Machine Funny Programmer Excuse White Design</figcaption>
+    </a>
+</figure>
+
     </div>
 </div>
-<hr class="clearfix">
-<h4>Share this post on:</h4>
-<div class="share">
-    <a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/geeklog/exploring-expressions-emotions-github-commit-messages/&t=Exploring%20Expressions%20of%20Emotions%20in%20GitHub%20Commit%20Messages" class="btn btn-default btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
-    <a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/geeklog/exploring-expressions-emotions-github-commit-messages/&title=Exploring%20Expressions%20of%20Emotions%20in%20GitHub%20Commit%20Messages" class="btn btn-default btn-lg"><i class="fa fa-reddit-alien"></i> Reddit</a>
-    <a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/geeklog/exploring-expressions-emotions-github-commit-messages/&text=Exploring%20Expressions%20of%20Emotions%20in%20GitHub%20Commit%20Messages" class="btn btn-default btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
-</div><hr class="clearfix">
-<div class="postinfo">
-<p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time itemprop="datePublished" datetime="2012-05-10T14:11">May 10, 2012</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
-<p>
-<strong>Tags:</strong>
-<span class="label label-info"><a href="/tags/data-analysis/">data analysis</a></span>
-<span class="label label-info"><a href="/tags/github/">github</a></span>
-<span class="label label-info"><a href="/tags/regular-expressions/">regular expressions</a></span>
-<span class="label label-info"><a href="/tags/git/">git</a></span>
-</p>
-<p class="text-muted"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p></div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h3>Merchandise</h3></div>
-    <div class="panel-body"><div class="row">        <div class="col-md-3">
-            <a href="/design/caution-i-curse-when-i-commit-code/" class="preview-img">
-    <figure>
-            <img src="/img/preview/caution-i-curse-when-i-commit-code.jpg" alt="Caution I Curse When I Commit Code - Funny Programmer Design" class="img-responsive" />
+
+</div>    </main>
+
+    <footer class="dark"><div class="container">
+        Geeksta elsewhere: <a href="https://www.instagram.com/g33ksta/">Instagram</a> • <a href="https://mastodon.social/@geeksta">Mastodon</a> • <a href="https://www.tiktok.com/@g33ksta">TikTok</a> • <a href="https://www.youtube.com/@geeksta">YouTube</a>
         <br>
-        <figcaption class="hcaption">Caution I Curse When I Commit Code - Funny Programmer Design</figcaption>
-    </figure>
-</a>
+        © <script>document.write(new Date().getFullYear())</script> Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/sitemap/">Sitemap</a></p>
+    </div></footer>
 
-        </div>
-        <div class="col-md-3">
-            <a href="/design/hack-the-planet-green/" class="preview-img">
-    <figure>
-            <img src="/img/preview/hack-the-planet-green.jpg" alt="Hack the Planet - Green Globe Design for Computer Hackers" class="img-responsive" />
-        <br>
-        <figcaption class="hcaption">Hack the Planet - Green Globe Design for Computer Hackers</figcaption>
-    </figure>
-</a>
-
-        </div>
-        <div class="col-md-3">
-            <a href="/design/run-bsd/" class="preview-img">
-    <figure>
-            <img src="/img/preview/run-bsd.jpg" alt="RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins" class="img-responsive" />
-        <br>
-        <figcaption class="hcaption">RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins</figcaption>
-    </figure>
-</a>
-
-        </div>
-        <div class="col-md-3">
-            <a href="/design/shrug-it-works-on-my-machine-medium-white/" class="preview-img">
-    <figure>
-            <img src="/img/preview/shrug-it-works-on-my-machine-medium-white.jpg" alt="Shrug It Works On My Machine Funny Programmer Excuse White Design" class="img-responsive" />
-        <br>
-        <figcaption class="hcaption">Shrug It Works On My Machine Funny Programmer Excuse White Design</figcaption>
-    </figure>
-</a>
-
-        </div>
-</div></div>
-</div>    </div>
-
-    <div id="footer" class="container">
-        <p>Geeksta.net: programming, data mining, data visualization, tech books, and tools for tech geeks.<br>
-        © <script>document.write(new Date().getFullYear())</script> Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/sitemap/">Sitemap</a> • <a href="https://www.instagram.com/g33ksta/">Instagram</a> • <a href="https://mastodon.social/@geeksta">Mastodon</a> • <a href="https://www.tiktok.com/@g33ksta">TikTok</a> • <a href="https://www.youtube.com/@geeksta">YouTube</a></p>
-    </div>
-
-    <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="/compiled/script.js"></script>
 <script src="/vendor/highlight/highlight.pack.js"></script><script src="/js/highlight.js"></script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFQJ09STFE"></script>
@@ -369,5 +339,6 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-MFQJ09STFE');
-</script>    </body>
+</script>
+</body>
 </html>

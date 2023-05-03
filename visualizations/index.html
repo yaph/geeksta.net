@@ -1,94 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head itemscope itemtype="https://schema.org/WebSite">
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title itemprop="name">Data Visualizations | Geeksta</title>
-<meta name="description" content="A collection data visualizations."><meta name="author" content="Ramiro Gómez">        <meta name="flattr:id" content="4pzdyq">
-        <link href="https://geeksta.net/visualizations/" rel="canonical" itemprop="url">
-        <link href="/img/icon-small.png" rel="icon" type="image/png">
-        <link href="/rss.xml" rel="alternate" type="application/rss+xml" title="Geeksta All Posts RSS feed">
-        <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="/css/style.css" rel="stylesheet">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-    </head>
-    <body>
-    <div class="navbar navbar-fixed-top navbar-inverse">
-        <div class="container">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse" aria-label="Toggle Navbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" id="site-name" href="/">Geeksta</a>
-            <div class="collapse navbar-collapse navbar-responsive-collapse">
-                <ul class="nav navbar-nav pull-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sections <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/reviews/">Book Reviews</a></li>
-                            <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
-                            <li><a href="/visualizations/">Data Visualizations</a></li>
-                            <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
-                            <li><a href="/events/">Geek Events</a></li>
-                            <li><a href="/screencasts/">Screencasts</a></li>
-                            <li><a href="/videos/">Videos</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/geeklog/">Geeklog</a></li>
-                    <li><a href="/merch/">Merchandise</a></li>
-                    <li><a href="/tools/">Tools</a></li>
-<li id="sharemenu" class="dropdown">
-  <button type="button" class="dropdown-toggle btn btn-success navbar-btn" data-toggle="dropdown"><i class="fa fa-share"></i></button>
-  <ul class="share dropdown-menu pull-right">
-    <li><a href="/rss.xml" class="btn btn-default"><i class="fa fa-rss"></i> RSS Feed</a></li>
-    <li><a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/visualizations/&title=Data%20Visualizations" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
-    <li><a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/visualizations/&text=Data%20Visualizations" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
-    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/visualizations/&t=Data%20Visualizations" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
-    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/visualizations/&title=Data%20Visualizations" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
-  </ul>
-</li>                </ul>
-            </div>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualizations | Geeksta</title>
+<meta name="description" content="A collection data visualizations."><meta name="author" content="Ramiro Gómez">    <link rel="canonical" itemprop="url" href="https://geeksta.net/visualizations/">
+    <link rel="icon" type="image/png" href="/img/icon-small.png">
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Geeksta All Posts RSS feed">
+    <link rel="stylesheet" href="/vendor/chota.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/dropdown.css">
+</head>
+<body>
+    <header><nav class="nav dark">
+        <div class="nav-left">
+            <a class="brand" href="/"><img class="logo" src="/img/icon-small.png">Geeksta</a>
         </div>
-    </div>
+        <ul class="nav-right">
+            <li>
+                <a href="#">Sections ▾</a>
+                <ul class="dropdown">
+                    <li><a href="/reviews/">Book Reviews</a></li>
+                    <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
+                    <li><a href="/visualizations/">Data Visualizations</a></li>
+                    <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
+                    <li><a href="/events/">Geek Events</a></li>
+                    <li><a href="/screencasts/">Screencasts</a></li>
+                    <li><a href="/videos/">Videos</a></li>
+                </ul>
+            </li>
+            <li><a href="/geeklog/">Geeklog</a></li>
+            <li><a href="/merch/">Merch</a></li>
+            <li><a href="/tools/">Tools</a></li>
+        </ul>
+    </nav></header>
 
-    <div id="wrapper" class="container">
-<header><h1>Data Visualizations</h1></header>
-<h2><a href="/visualizations/everything-is-4-graphed/">Everything is 4 in English Network Graph</a></h2>
-<p>When you take any word in English and count its letters, then count the number of letters in that numeral and so on, you'll end up at 4.</p>
-<h2><a href="/visualizations/cities-millionaire-density/">Almost every 3rd Monacan is a Millionaire</a></h2>
-<p>According to research from WealthInsight these are the world's top 20 cities with the highest millionaire density. Monaco leads the pack followed by Zurich and Geneva.</p>
-<h2><a href="/visualizations/tell-weight/">Gender Comparison: Would you Tell your Weight?</a></h2>
-<p>A look at the results of a poll about whether people disclose their body weight and how to present results of such a pool using data visualization.</p>
-<h2><a href="/visualizations/fatal-stupidity/">Who Engages more in Fatal Stupidity: Men or Women?</a></h2>
-<p>A recent study evaluated the sex differences in idiotic behavior by looking at the gender of 318 Darwin Award winners from 1995 to 2014.</p>
-<h2><a href="/visualizations/calories-us/">Daily Calorie Intake in the US from 1970-2010</a></h2>
-<p>A stacked area graph to visualize the evolution of calorie intake by food group from 1970-2010 in the United States.</p>
-<h2><a href="/visualizations/us-housing-prices/">What Area can you Buy for $1M in different US Cities</a></h2>
-<p>A set of data visualizations that display what area of land you could buy for 1 million US dollar in different US cities.</p>
-<h2><a href="/visualizations/age-musicians-die/">What Age Do Musicians Die at</a></h2>
-<p>A look at the distributions of musicians' ages of death for different causes of death, musical genres and instruments played, visualized with Google Chart Tools.</p>
-<h2><a href="/visualizations/github-commit-map/">GitHub Commit Map</a></h2>
-<p>A geographic map that displays location information extracted from GitHub commit data grouped by the countries of the world.</p>
-<h2><a href="/visualizations/web-browser-word-clouds-github-commit-messages/">Web Browser Word Clouds from GitHub Commit Messages</a></h2>
-<p>Visualization of GitHub commit messages with web browser mentions as word clouds created with the D3.js JavaScript library.</p>
-<h2><a href="/visualizations/programming-language-influence-by-paradigm-gallery/">Programming Language Influence by Paradigm Gallery</a></h2>
-<p>Visualizing the influence of programming languages within various programming paradigms using directed network graphs.</p>
+    <main class="container">
+<h1>Data Visualizations</h1>
+    <h3><a href="/visualizations/everything-is-4-graphed/">Everything is 4 in English Network Graph</a></h3>
+<p>When you take any word in English and count its letters, then count the number of letters in that numeral and so on, you'll end up at 4.</p>    <h3><a href="/visualizations/cities-millionaire-density/">Almost every 3rd Monacan is a Millionaire</a></h3>
+<p>According to research from WealthInsight these are the world's top 20 cities with the highest millionaire density. Monaco leads the pack followed by Zurich and Geneva.</p>    <h3><a href="/visualizations/tell-weight/">Gender Comparison: Would you Tell your Weight?</a></h3>
+<p>A look at the results of a poll about whether people disclose their body weight and how to present results of such a pool using data visualization.</p>    <h3><a href="/visualizations/fatal-stupidity/">Who Engages more in Fatal Stupidity: Men or Women?</a></h3>
+<p>A recent study evaluated the sex differences in idiotic behavior by looking at the gender of 318 Darwin Award winners from 1995 to 2014.</p>    <h3><a href="/visualizations/calories-us/">Daily Calorie Intake in the US from 1970-2010</a></h3>
+<p>A stacked area graph to visualize the evolution of calorie intake by food group from 1970-2010 in the United States.</p>    <h3><a href="/visualizations/us-housing-prices/">What Area can you Buy for $1M in different US Cities</a></h3>
+<p>A set of data visualizations that display what area of land you could buy for 1 million US dollar in different US cities.</p>    <h3><a href="/visualizations/age-musicians-die/">What Age Do Musicians Die at</a></h3>
+<p>A look at the distributions of musicians' ages of death for different causes of death, musical genres and instruments played, visualized with Google Chart Tools.</p>    <h3><a href="/visualizations/github-commit-map/">GitHub Commit Map</a></h3>
+<p>A geographic map that displays location information extracted from GitHub commit data grouped by the countries of the world.</p>    <h3><a href="/visualizations/web-browser-word-clouds-github-commit-messages/">Web Browser Word Clouds from GitHub Commit Messages</a></h3>
+<p>Visualization of GitHub commit messages with web browser mentions as word clouds created with the D3.js JavaScript library.</p>    <h3><a href="/visualizations/programming-language-influence-by-paradigm-gallery/">Programming Language Influence by Paradigm Gallery</a></h3>
+<p>Visualizing the influence of programming languages within various programming paradigms using directed network graphs.</p>    </main>
 
-    </div>
+    <footer class="dark"><div class="container">
+        Geeksta elsewhere: <a href="https://www.instagram.com/g33ksta/">Instagram</a> • <a href="https://mastodon.social/@geeksta">Mastodon</a> • <a href="https://www.tiktok.com/@g33ksta">TikTok</a> • <a href="https://www.youtube.com/@geeksta">YouTube</a>
+        <br>
+        © <script>document.write(new Date().getFullYear())</script> Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/sitemap/">Sitemap</a></p>
+    </div></footer>
 
-    <div id="footer" class="container">
-        <p>Geeksta.net: programming, data mining, data visualization, tech books, and tools for tech geeks.<br>
-        © <script>document.write(new Date().getFullYear())</script> Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/sitemap/">Sitemap</a> • <a href="https://www.instagram.com/g33ksta/">Instagram</a> • <a href="https://mastodon.social/@geeksta">Mastodon</a> • <a href="https://www.tiktok.com/@g33ksta">TikTok</a> • <a href="https://www.youtube.com/@geeksta">YouTube</a></p>
-    </div>
-
-    <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="/compiled/script.js"></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFQJ09STFE"></script>
@@ -97,5 +63,6 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-MFQJ09STFE');
-</script>    </body>
+</script>
+</body>
 </html>

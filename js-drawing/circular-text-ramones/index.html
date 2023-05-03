@@ -1,173 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head itemscope itemtype="https://schema.org/WebSite">
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title itemprop="name">Drawing Ramones Style Circular Text with D3.js | Drawing with JavaScript | Geeksta</title>
-<meta name="description" content="Example JavaScript on how to draw circular text as seen in the Ramones logo with SVG paths and SVG text elements using the D3.js API."><meta name="author" content="Ramiro Gómez">            <meta property="og:image" content="https://geeksta.net/img/js-drawing/circular-text-gof.png">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing Ramones Style Circular Text with D3.js | Drawing with JavaScript | Geeksta</title>
+<meta name="description" content="Example JavaScript on how to draw circular text as seen in the Ramones logo with SVG paths and SVG text elements using the D3.js API."><meta name="author" content="Ramiro Gómez">        <meta property="og:image" content="/img/js-drawing/circular-text-gof.png">
+    <link rel="canonical" itemprop="url" href="https://geeksta.net/js-drawing/circular-text-ramones/">
+    <link rel="icon" type="image/png" href="/img/icon-small.png">
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Geeksta All Posts RSS feed">
+    <link rel="stylesheet" href="/vendor/chota.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/dropdown.css">
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:creator" content="@yaph">
-    <meta name="twitter:title" content="Drawing Ramones Style Circular Text with D3.js">
-    <meta name="twitter:description" content="Example JavaScript on how to draw circular text as seen in the Ramones logo with SVG paths and SVG text elements using the D3.js API.">
-    <meta name="twitter:image:src" content="https://geeksta.net/img/js-drawing/circular-text-gof.png">
-        <meta name="flattr:id" content="4pzdyq">
-        <link href="https://geeksta.net/js-drawing/circular-text-ramones/" rel="canonical" itemprop="url">
-        <link href="/img/icon-small.png" rel="icon" type="image/png">
-        <link href="/rss.xml" rel="alternate" type="application/rss+xml" title="Geeksta All Posts RSS feed">
-        <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="/css/style.css" rel="stylesheet">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-    </head>
-    <body>
-    <div class="navbar navbar-fixed-top navbar-inverse">
-        <div class="container">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse" aria-label="Toggle Navbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" id="site-name" href="/">Geeksta</a>
-            <div class="collapse navbar-collapse navbar-responsive-collapse">
-                <ul class="nav navbar-nav pull-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sections <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/reviews/">Book Reviews</a></li>
-                            <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
-                            <li><a href="/visualizations/">Data Visualizations</a></li>
-                            <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
-                            <li><a href="/events/">Geek Events</a></li>
-                            <li><a href="/screencasts/">Screencasts</a></li>
-                            <li><a href="/videos/">Videos</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/geeklog/">Geeklog</a></li>
-                    <li><a href="/merch/">Merchandise</a></li>
-                    <li><a href="/tools/">Tools</a></li>
-<li id="sharemenu" class="dropdown">
-  <button type="button" class="dropdown-toggle btn btn-success navbar-btn" data-toggle="dropdown"><i class="fa fa-share"></i></button>
-  <ul class="share dropdown-menu pull-right">
-    <li><a href="/rss.xml" class="btn btn-default"><i class="fa fa-rss"></i> RSS Feed</a></li>
-    <li><a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/js-drawing/circular-text-ramones/&title=Drawing%20Ramones%20Style%20Circular%20Text%20with%20D3.js" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
-    <li><a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/js-drawing/circular-text-ramones/&text=Drawing%20Ramones%20Style%20Circular%20Text%20with%20D3.js" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
-    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/js-drawing/circular-text-ramones/&t=Drawing%20Ramones%20Style%20Circular%20Text%20with%20D3.js" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
-    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/js-drawing/circular-text-ramones/&title=Drawing%20Ramones%20Style%20Circular%20Text%20with%20D3.js" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
-  </ul>
-</li>                </ul>
-            </div>
+<link href="/vendor/highlight/styles/idea.css" rel="stylesheet">
+</head>
+<body>
+    <header><nav class="nav dark">
+        <div class="nav-left">
+            <a class="brand" href="/"><img class="logo" src="/img/icon-small.png">Geeksta</a>
         </div>
-    </div>
+        <ul class="nav-right">
+            <li>
+                <a href="#">Sections ▾</a>
+                <ul class="dropdown">
+                    <li><a href="/reviews/">Book Reviews</a></li>
+                    <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
+                    <li><a href="/visualizations/">Data Visualizations</a></li>
+                    <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
+                    <li><a href="/events/">Geek Events</a></li>
+                    <li><a href="/screencasts/">Screencasts</a></li>
+                    <li><a href="/videos/">Videos</a></li>
+                </ul>
+            </li>
+            <li><a href="/geeklog/">Geeklog</a></li>
+            <li><a href="/merch/">Merch</a></li>
+            <li><a href="/tools/">Tools</a></li>
+        </ul>
+    </nav></header>
 
-    <div id="wrapper" class="container">
+    <main class="container">
 <div class="row">
-    <div itemscope itemtype="http://schema.org/Article" class="col-md-9">
-        <header><h1 itemprop="name">Drawing Ramones Style Circular Text with D3.js</h1></header>
+    <div class="col-9-md">
+        <h1>Drawing Ramones Style Circular Text with D3.js</h1>
         <div id="canvas"></div>
-        <button id="dl-svg" class="btn btn-primary btn-lg">Download SVG</button>
+        <button id="dl-svg" class="button primary text-right">Download SVG</button>
         <hr>
         <div id="body"><p>The JavaScript code below shows how you can draw circular text as seen in the <a href="https://en.wikipedia.org/wiki/File:Ramones_logo.jpg">Ramones logo</a> with <a href="http://www.w3.org/TR/SVG11/paths.html">SVG paths</a> and <a href="http://www.w3.org/TR/SVG/text.html">SVG text and textPath</a> elements using the <a href="http://d3js.org/">D3.js</a> API.</p>
 <p>After setting the dimensions of the elements to be displayed, two arcs are defined for drawing two SVG paths. The <code>inner_arc</code> is not visible but serves as an anchor for the circular texts, that will be attached to this arc's <code>path</code> element. The <code>outer_arc</code> displays the white circle enclosing the texts.</p>
 <p>The remaining code creates two <code>text</code> elements, one for the names and one for the stars. The names will be positioned right on the path and the stars will be shifted on the y-axis, so they are rendered inside the invisible inner circle. Finally, the texts are attached/linked to the path using <code>textPath</code> elements.</p>
 <p>Note that the resulting image displays differently in Firefox and Chrome, due to the way they render type. I've set the variables so the image works best in Chrome. In Firefox the circular star text, doesn't quite fit. A possible fix would be to set font sizes based on which browser is being used.</p>
-<p>You may have noticed that the names are not the first names of the four Ramones, but those of the Authors of the software engineering classic <a href="http://www.amazon.com/gp/product/0201633612/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0201633612&amp;linkCode=as2&amp;tag=geeksta-20&amp;linkId=EPGLQYWUUDKEMHGD">Design Patterns</a>. This is because the above drawing is the basis for a parody shirt design dedicated to the so called Gang of Four, which is available from <a href="http://www.redbubble.com/people/ramiro/works/16443756-gang-of-four-ramones-style-design-for-programmers">Redbubble</a> and <a href="https://www.zazzle.com/gang_of_four_ramones_style_design_for_programmer_tshirt-235432668166196050?rf=238355915198956003&amp;tc=gkstdraw">Zazzle</a>.</p>
-<h2 id="javascript-code">JavaScript Code</h2>
-<pre><code>{{ filesource('static/js/js-drawing/svg-circular-text.js') }}
-</code></pre></div>
-    </div>
-    <div class="col-md-3">
-            <h2>Merchandise</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <a title="Gang of Four: Ramones Style Design for Programmers - Unisex Shirt" href="https://www.zazzle.com/gang_of_four_ramones_style_design_for_programmer_tshirt-235432668166196050?rf=238355915198956003&tc=gkstdraw">
-                    <img class="img-thumbnail img-responsive" src="https://rlv.zcache.com/gang_of_four_ramones_style_design_for_programmers_t_shirt-re660050c70a341aa9012ec912d7d9fab_k2gm8_116.jpg" alt="Gang of Four: Ramones Style Design for Programmers - Unisex Shirt" />
-                    <span class="small">GOF Ramones Style</span></a>
-                </div>
-                <div class="col-md-6">
-                    <a title="Gang of Four • Ramones Style Design for Programmers - Women's Shirt" href="https://www.redbubble.com/people/ramiro/works/16443756-gang-of-four-ramones-style-design-for-programmers?p=t-shirt&style=womens">
-                    <img class="img-thumbnail img-responsive" src="https://ih0.redbubble.net/image.202482960.3756/ra,womens_tshirt,x1000,101010:01c5ca27c6,front-c,190,200,315,294-bg,ffffff.u6.jpg" alt="Gang of Four • Ramones Style Design for Programmers - Women's Shirt" />
-                    <span class="small">GOF Ramones Style</span></a>
-                </div>
-            </div>
+<p>The names are not the first names of the four Ramones, but those of the Authors of the software engineering classic <a href="http://www.amazon.com/gp/product/0201633612/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0201633612&amp;linkCode=as2&amp;tag=geeksta-20&amp;linkId=EPGLQYWUUDKEMHGD">Design Patterns</a>, because I wanted to create a <a href="https://www.zazzle.com/gang_of_4_parody_design_for_programmers_t_shirt-235432668166196050?rf=238355915198956003&amp;tc=gkstdraw">parody design</a> dedicated to the so called Gang of Four.</p></div>
+        <h2>JavaScript Code</h2>
+        <pre><code class="language-javascript hljs">const w = 800,
+    h = w,
+    font_scale = w / 8.08,
+    star_scale = font_scale / 2.1,
+    stroke_width = (w / 50),
+    inner_circle = (w / 2) - font_scale,
+    outer_circle = (w / 2),
+    fgcolor = &#39;#ffffff&#39;,
+    symbol = &#39;٭&#39;,
+    symbol_count = 50,
+    text = &#39;ERICH ★ RICHARD ★ RALPH ★ JOHN ★&#39;,
+    translate = &#39;translate(&#39; + w / 2 +&#39;,&#39; + h / 2 + &#39;)&#39;;
 
-<h2>Featured eBook</h2>
-<a class="preview-img" href="https://www.amazon.com/dp/B0C2S2KR72?&linkCode=ll1&tag=geeksta-20&linkId=1f37a2af7976f5cffb04fe40513a1e0f&language=en_US&ref_=as_li_ss_tl">
-  <figure>
-    <img class="img-responsive" alt="eBook cover" src="/img/books/chatgpt-interview-2.jpg"><br>
-    <figcaption class="hcaption">Buy on Amazon</figcaption>
-  </figure>
-</a>
-<hr>
-<h2>Latest Posts</h2>
-<ul class="list-unstyled">
-    <li class="voffset"><a href="/geeklog/chernobyl-disaster-imagined-by-artificial-intelligence/">The Chernobyl Disaster Imagined by Artificial Intelligence</a></li>
-    <li class="voffset"><a href="/geeklog/convert-web-pages-to-mobi/">Convert Web Pages to Ebooks in MOBI Format using Wget and Calibre</a></li>
-    <li class="voffset"><a href="/geeklog/imagemagick-tutorial/">Unlock the Power of ImageMagick: A Beginner's Guide to Image Processing</a></li>
-    <li class="voffset"><a href="/geeklog/python-number-formatting-f-strings/">Python Number Formatting Made Easy with f-Strings</a></li>
-    <li class="voffset"><a href="/geeklog/chatgpt-interview/">AI Ethics, Advancements, and Limitations: An Interview with ChatGPT</a></li>
+const svg = d3.select(&#39;#canvas&#39;).append(&#39;svg&#39;)
+    .attr(&#39;width&#39;, w)
+    .attr(&#39;height&#39;, h)
+    .attr(&#39;style&#39;, &#39;background: #000&#39;)
+
+// Create arcs for drawing paths.
+const inner_arc = d3.arc()
+    .innerRadius(inner_circle)
+    .outerRadius(inner_circle)
+    .startAngle(0)
+    .endAngle(360);
+
+const outer_arc = d3.arc()
+    .innerRadius(outer_circle - stroke_width)
+    .outerRadius(outer_circle)
+    .startAngle(0)
+    .endAngle(360);
+
+// Create paths for aligning texts, and showing the outer circle.
+svg.append(&#39;path&#39;)
+    .attr(&#39;d&#39;, inner_arc)
+    .attr(&#39;id&#39;, &#39;inner-circle&#39;)
+    .attr(&#39;transform&#39;, translate);
+
+svg.append(&#39;path&#39;)
+    .attr(&#39;d&#39;, outer_arc)
+    .attr(&#39;id&#39;, &#39;outer-circle&#39;)
+    .attr(&#39;transform&#39;, translate)
+    .attr(&#39;fill&#39;, fgcolor);
+
+// Create text elements that will be put on the circular paths.
+const text_names = svg.append(&#39;text&#39;)
+    .attr(&#39;x&#39;, 0)
+    .attr(&#39;dy&#39;, 0)
+    .style(&#39;font-size&#39;, font_scale + &#39;px&#39;)
+    .style(&#39;font-family&#39;, &#39;Times New Roman&#39;);;
+
+const text_stars = svg.append(&#39;text&#39;)
+    .attr(&#39;x&#39;, 0)
+    .attr(&#39;dy&#39;, stroke_width * 2)
+    .style(&#39;font-size&#39;, star_scale + &#39;px&#39;);
+
+// Add the first names of the GOF authors.
+text_names.append(&#39;textPath&#39;)
+    .attr(&#39;fill&#39;, fgcolor)
+    .attr(&#39;xlink:href&#39;,&#39;#inner-circle&#39;)
+    .text(text)
+
+// Add the stars below the names.
+text_stars.append(&#39;textPath&#39;)
+    .attr(&#39;fill&#39;, fgcolor)
+    .attr(&#39;xlink:href&#39;,&#39;#inner-circle&#39;)
+    .text(Array(symbol_count).join(symbol + &#39; &#39;));</code></pre>
+    </div>
+    <div class="col">
+
+<h3>Related Merch</h3>
+<figure class="preview">
+    <a href="https://www.zazzle.com/gang_of_4_parody_design_for_programmers_t_shirt-235432668166196050?rf=238355915198956003&tc=gkstdraw">
+            <img class="b-lazy" src="https://rlv.zcache.com/gang_of_4_parody_design_for_programmers_t_shirt-re660050c70a341aa9012ec912d7d9fab_k2gm8_400.jpg" alt="GOF Ramones Style" />
+        <figcaption>GOF Ramones Style</figcaption>
+    </a>
+</figure>
+
+
+<h3>Featured eBook</h3>
+<figure class="preview">
+    <a href="https://www.amazon.com/dp/B0C2S2KR72?&linkCode=ll1&tag=geeksta-20&linkId=1f37a2af7976f5cffb04fe40513a1e0f&language=en_US&ref_=as_li_ss_tl">
+        <img alt="eBook cover" src="/img/books/chatgpt-interview-2.jpg"><br>
+        <figcaption>Buy on Amazon</figcaption>
+    </a>
+</figure>
+
+<h3>Latest Posts</h3>
+<ul>
+        <li><a href="/geeklog/chernobyl-disaster-imagined-by-artificial-intelligence/">The Chernobyl Disaster Imagined by Artificial Intelligence</a></li>
+        <li><a href="/geeklog/convert-web-pages-to-mobi/">Convert Web Pages to Ebooks in MOBI Format using Wget and Calibre</a></li>
+        <li><a href="/geeklog/imagemagick-tutorial/">Unlock the Power of ImageMagick: A Beginner's Guide to Image Processing</a></li>
+        <li><a href="/geeklog/python-number-formatting-f-strings/">Python Number Formatting Made Easy with f-Strings</a></li>
+        <li><a href="/geeklog/chatgpt-interview/">AI Ethics, Advancements, and Limitations: An Interview with ChatGPT</a></li>
 </ul>
-<a href="/rss.xml" class="btn btn-warning"><i class="fa fa-rss"></i> Subscribe to new content</a></li>
+
+<h3>Featured Merch</h3>
+<figure class="preview">
+    <a href="/design/def-procrastinate-pass-dark-scheme/">
+            <img class="b-lazy" src="/img/large/def-procrastinate-pass-dark-scheme.jpg" alt="Funny Python Code Pun Design - def procrastinate pass" />
+        <figcaption>Funny Python Code Pun Design - def procrastinate pass</figcaption>
+    </a>
+</figure>
+
+
 <hr>
-<h2>Featured Merch</h2>
-<a href="/design/def-procrastinate-pass-dark-scheme/" class="preview-img">
-    <figure>
-            <img src="/img/preview/def-procrastinate-pass-dark-scheme.jpg" alt="Funny Python Code Pun Design - def procrastinate pass" class="img-responsive" />
-        <br>
-        <figcaption class="hcaption">Funny Python Code Pun Design - def procrastinate pass</figcaption>
-    </figure>
-</a>
-    </div>
+
+<a href="/rss.xml" class="button primary">Subscribe to RSS Feed</a></li>    </div>
 </div>
-<hr class="clearfix">
-<div class="postinfo">
-<p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time itemprop="datePublished" datetime="2015-09-22T14:25">September 22, 2015</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
-<p>
-<strong>Tags:</strong>
-<span class="label label-info"><a href="/tags/d3js/">d3js</a></span>
-<span class="label label-info"><a href="/tags/svg/">svg</a></span>
-<span class="label label-info"><a href="/tags/code/">code</a></span>
+<hr>
+<p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time datetime="2015-09-22T14:25">September 22, 2015</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+<p><strong>Tags:</strong>
+    <a class="button outline" href="/tags/d3js/">d3js</a>
+    <a class="button outline" href="/tags/svg/">svg</a>
+    <a class="button outline" href="/tags/code/">code</a>
 </p>
-<p class="text-muted"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p></div>    </div>
+<p class="text-grey"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p>    </main>
 
-    <div id="footer" class="container">
-        <p>Geeksta.net: programming, data mining, data visualization, tech books, and tools for tech geeks.<br>
-        © <script>document.write(new Date().getFullYear())</script> Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/sitemap/">Sitemap</a> • <a href="https://www.instagram.com/g33ksta/">Instagram</a> • <a href="https://mastodon.social/@geeksta">Mastodon</a> • <a href="https://www.tiktok.com/@g33ksta">TikTok</a> • <a href="https://www.youtube.com/@geeksta">YouTube</a></p>
-    </div>
+    <footer class="dark"><div class="container">
+        Geeksta elsewhere: <a href="https://www.instagram.com/g33ksta/">Instagram</a> • <a href="https://mastodon.social/@geeksta">Mastodon</a> • <a href="https://www.tiktok.com/@g33ksta">TikTok</a> • <a href="https://www.youtube.com/@geeksta">YouTube</a>
+        <br>
+        © <script>document.write(new Date().getFullYear())</script> Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/sitemap/">Sitemap</a></p>
+    </div></footer>
 
-    <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="/compiled/script.js"></script>
-<script src="/vendor/d3/d3.min.js"></script><script src="/js/js-drawing/svg-circular-text.js"></script>
-<script>
-// based on https://github.com/NYTimes/svg-crowbar
-var doctype = '<?xml version="1.0"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">';
 
-function download(source) {
-    var filename = window.document.title.replace(/[^a-z0-9]+/gi, '-').toLowerCase();
-
-    var url = window.URL.createObjectURL(new Blob([doctype + source], { 'type' : 'application\/svg+xml' }));
-
-    var a = document.createElement('a');
-    body.appendChild(a);
-    a.setAttribute('href', url);
-    a.setAttribute('download', filename + '.svg');
-    a.style['display'] = 'none';
-    a.click();
-
-    setTimeout(function() {
-        window.URL.revokeObjectURL(url);
-    }, 10);
-}
-
-$('#dl-svg').click(function() {
-    download($('#canvas').html());
-});
-</script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="/js/js-drawing/svg-circular-text.js"></script>
+<script src="/compiled/svgdl.js"></script>
+<script src="/vendor/highlight/highlight.pack.js"></script>
+<script src="/js/highlight.js"></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFQJ09STFE"></script>
 <script>
@@ -175,5 +188,6 @@ $('#dl-svg').click(function() {
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-MFQJ09STFE');
-</script>    </body>
+</script>
+</body>
 </html>

@@ -9,7 +9,7 @@
     <item>
         <title><![CDATA[The Chernobyl Disaster Imagined by Artificial Intelligence]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/chernobyl-disaster-imagined-by-artificial-intelligence/]]></link>
-        <description><![CDATA[<p>I instructed ChatGPT how to create prompts for text to image generation using stable diffusion machine learning models, fed the prompts into InvokeAI to generate images and compiled them in this book.</p><img src="https://geeksta.net/img/geeklog/chernobyl-disaster-ai-portraits.jpg" alt="Preview Image">]]></description>
+        <description><![CDATA[<p>I instructed ChatGPT how to create prompts for text to image generation using stable diffusion machine learning models, fed the prompts into InvokeAI to generate images and compiled them in this book.</p><img src="/img/geeklog/chernobyl-disaster-ai-portraits.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/chernobyl-disaster-imagined-by-artificial-intelligence/]]></guid>
         <pubDate>Wed, 26 Apr 2023 12:21:25 </pubDate>
     </item>
@@ -44,7 +44,7 @@
     <item>
         <title><![CDATA[Stable Diffusion Sampler and CFG Scale Parameter Comparison]]></title>
         <link><![CDATA[https://geeksta.net/ai/stable-diffusion/sampler-cfg-comparison/]]></link>
-        <description><![CDATA[<p></p>]]></description>
+        <description><![CDATA[<p>Compare the influence of different samplers and CFG values when generating images with Stable Diffusion machine learning models.</p>]]></description>
         <guid><![CDATA[https://geeksta.net/ai/stable-diffusion/sampler-cfg-comparison/]]></guid>
         <pubDate>Wed, 15 Mar 2023 11:48:28 </pubDate>
     </item>

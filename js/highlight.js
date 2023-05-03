@@ -1,1 +1,1 @@
-$(function(){$('pre code').each(function(i, e){hljs.highlightBlock(e)});});
+Array.from(document.querySelectorAll('pre > code'), e => hljs.highlightBlock(e));

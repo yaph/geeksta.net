@@ -1,170 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head itemscope itemtype="https://schema.org/WebSite">
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title itemprop="name">Drawing the Yin and Yang Symbol with D3.js | Drawing with JavaScript | Geeksta</title>
-<meta name="description" content="The JavaScript code in this post shows how you can draw the yin and yang symbol using the D3.js."><meta name="author" content="Ramiro Gómez">            <meta property="og:image" content="https://geeksta.net/img/js-drawing/yin-yang-symbol.png">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing the Yin and Yang Symbol with D3.js | Drawing with JavaScript | Geeksta</title>
+<meta name="description" content="The JavaScript code in this post shows how you can draw the yin and yang symbol using the D3.js."><meta name="author" content="Ramiro Gómez">        <meta property="og:image" content="/img/js-drawing/yin-yang-symbol.png">
+    <link rel="canonical" itemprop="url" href="https://geeksta.net/js-drawing/yin-yang-symbol/">
+    <link rel="icon" type="image/png" href="/img/icon-small.png">
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Geeksta All Posts RSS feed">
+    <link rel="stylesheet" href="/vendor/chota.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/dropdown.css">
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:creator" content="@yaph">
-    <meta name="twitter:title" content="Drawing the Yin and Yang Symbol with D3.js">
-    <meta name="twitter:description" content="The JavaScript code in this post shows how you can draw the yin and yang symbol using the D3.js.">
-    <meta name="twitter:image:src" content="https://geeksta.net/img/js-drawing/yin-yang-symbol.png">
-        <meta name="flattr:id" content="4pzdyq">
-        <link href="https://geeksta.net/js-drawing/yin-yang-symbol/" rel="canonical" itemprop="url">
-        <link href="/img/icon-small.png" rel="icon" type="image/png">
-        <link href="/rss.xml" rel="alternate" type="application/rss+xml" title="Geeksta All Posts RSS feed">
-        <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="/css/style.css" rel="stylesheet">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-    </head>
-    <body>
-    <div class="navbar navbar-fixed-top navbar-inverse">
-        <div class="container">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse" aria-label="Toggle Navbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" id="site-name" href="/">Geeksta</a>
-            <div class="collapse navbar-collapse navbar-responsive-collapse">
-                <ul class="nav navbar-nav pull-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sections <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/reviews/">Book Reviews</a></li>
-                            <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
-                            <li><a href="/visualizations/">Data Visualizations</a></li>
-                            <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
-                            <li><a href="/events/">Geek Events</a></li>
-                            <li><a href="/screencasts/">Screencasts</a></li>
-                            <li><a href="/videos/">Videos</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/geeklog/">Geeklog</a></li>
-                    <li><a href="/merch/">Merchandise</a></li>
-                    <li><a href="/tools/">Tools</a></li>
-<li id="sharemenu" class="dropdown">
-  <button type="button" class="dropdown-toggle btn btn-success navbar-btn" data-toggle="dropdown"><i class="fa fa-share"></i></button>
-  <ul class="share dropdown-menu pull-right">
-    <li><a href="/rss.xml" class="btn btn-default"><i class="fa fa-rss"></i> RSS Feed</a></li>
-    <li><a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/js-drawing/yin-yang-symbol/&title=Drawing%20the%20Yin%20and%20Yang%20Symbol%20with%20D3.js" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
-    <li><a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/js-drawing/yin-yang-symbol/&text=Drawing%20the%20Yin%20and%20Yang%20Symbol%20with%20D3.js" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
-    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/js-drawing/yin-yang-symbol/&t=Drawing%20the%20Yin%20and%20Yang%20Symbol%20with%20D3.js" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
-    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/js-drawing/yin-yang-symbol/&title=Drawing%20the%20Yin%20and%20Yang%20Symbol%20with%20D3.js" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
-  </ul>
-</li>                </ul>
-            </div>
+<link href="/vendor/highlight/styles/idea.css" rel="stylesheet">
+</head>
+<body>
+    <header><nav class="nav dark">
+        <div class="nav-left">
+            <a class="brand" href="/"><img class="logo" src="/img/icon-small.png">Geeksta</a>
         </div>
-    </div>
+        <ul class="nav-right">
+            <li>
+                <a href="#">Sections ▾</a>
+                <ul class="dropdown">
+                    <li><a href="/reviews/">Book Reviews</a></li>
+                    <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
+                    <li><a href="/visualizations/">Data Visualizations</a></li>
+                    <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
+                    <li><a href="/events/">Geek Events</a></li>
+                    <li><a href="/screencasts/">Screencasts</a></li>
+                    <li><a href="/videos/">Videos</a></li>
+                </ul>
+            </li>
+            <li><a href="/geeklog/">Geeklog</a></li>
+            <li><a href="/merch/">Merch</a></li>
+            <li><a href="/tools/">Tools</a></li>
+        </ul>
+    </nav></header>
 
-    <div id="wrapper" class="container">
+    <main class="container">
 <div class="row">
-    <div itemscope itemtype="http://schema.org/Article" class="col-md-9">
-        <header><h1 itemprop="name">Drawing the Yin and Yang Symbol with D3.js</h1></header>
+    <div class="col-9-md">
+        <h1>Drawing the Yin and Yang Symbol with D3.js</h1>
         <div id="canvas"></div>
-        <button id="dl-svg" class="btn btn-primary btn-lg">Download SVG</button>
+        <button id="dl-svg" class="button primary text-right">Download SVG</button>
         <hr>
         <div id="body"><p>The JavaScript code below shows how you can draw the yin and yang symbol using <a href="http://d3js.org/">D3.js</a>. After setting the dimensions of the displayed elements and creating the SVG container, we create a clip path to define the visible and hidden portions of the large white circle. This clip path is referenced further below when drawing the large white circle. The rest of the code is drawing the smaller inner circles on top of each other, hence their order is important, to finish the picture.</p>
-<p>If you're into Chinese philosophy and like the yin and yang symbol check out the available merchandise products with a <a href="https://www.redbubble.com/people/ramiro/works/23227527-yin-and-yang-negative-space-design-white-on-black?asc=u">negative space yin yang design</a>.</p>
-<h2 id="javascript-code">JavaScript Code</h2>
-<pre><code>{{ filesource('static/js/js-drawing/yin-yang-symbol.js') }}
-</code></pre></div>
-    </div>
-    <div class="col-md-3">
-            <h2>Merchandise</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <a title="Yin and Yang - Negative Space Design - Essential Shirt" href="https://www.redbubble.com/i/t-shirt/Yin-and-Yang-Negative-Space-Design-White-on-Black-by-ramiro/23227527.FB110">
-                    <img class="img-thumbnail img-responsive" src="https://ih1.redbubble.net/image.1905423213.7527/ssrco,slim_fit_t_shirt,two_model,101010:01c5ca27c6,front,square_three_quarter,1000x1000.u7.jpg" alt="Yin and Yang - Negative Space Design - Essential Shirt" />
-                    <span class="small">Yin Yang T-Shirt</span></a>
-                </div>
-                <div class="col-md-6">
-                    <a title="Yin and Yang - Negative Space Design - Clock" href="https://www.redbubble.com/i/clock/Yin-and-Yang-Negative-Space-Design-White-on-Black-by-ramiro/23227527.1X49C">
-                    <img class="img-thumbnail img-responsive" src="https://ih1.redbubble.net/image.1905423190.7527/clkf,bamboo,black,1000x1000-bg,f8f8f8.u1.jpg" alt="Yin and Yang - Negative Space Design - Clock" />
-                    <span class="small">Yin Yang Clock</span></a>
-                </div>
-            </div>
+<p>If you're into Chinese philosophy and like the yin and yang symbol check out the available merchandise products with a <a href="/design/yin-yang-white/">negative space yin yang design</a>.</p></div>
+        <h2>JavaScript Code</h2>
+        <pre><code class="language-javascript hljs">const radius = 300,
+    stroke = 5,
+    width = (radius + stroke) * 2,
+    svg = d3.select(&#39;#canvas&#39;).append(&#39;svg&#39;)
+        .attr(&#39;width&#39;, width)
+        .attr(&#39;height&#39;, width);
 
-<h2>Featured eBook</h2>
-<a class="preview-img" href="https://www.amazon.com/dp/B0C2S2KR72?&linkCode=ll1&tag=geeksta-20&linkId=1f37a2af7976f5cffb04fe40513a1e0f&language=en_US&ref_=as_li_ss_tl">
-  <figure>
-    <img class="img-responsive" alt="eBook cover" src="/img/books/chatgpt-interview-2.jpg"><br>
-    <figcaption class="hcaption">Buy on Amazon</figcaption>
-  </figure>
-</a>
-<hr>
-<h2>Latest Posts</h2>
-<ul class="list-unstyled">
-    <li class="voffset"><a href="/geeklog/chernobyl-disaster-imagined-by-artificial-intelligence/">The Chernobyl Disaster Imagined by Artificial Intelligence</a></li>
-    <li class="voffset"><a href="/geeklog/convert-web-pages-to-mobi/">Convert Web Pages to Ebooks in MOBI Format using Wget and Calibre</a></li>
-    <li class="voffset"><a href="/geeklog/imagemagick-tutorial/">Unlock the Power of ImageMagick: A Beginner's Guide to Image Processing</a></li>
-    <li class="voffset"><a href="/geeklog/python-number-formatting-f-strings/">Python Number Formatting Made Easy with f-Strings</a></li>
-    <li class="voffset"><a href="/geeklog/chatgpt-interview/">AI Ethics, Advancements, and Limitations: An Interview with ChatGPT</a></li>
+const g = svg.append(&#39;g&#39;)
+    .attr(&#39;transform&#39;, `translate(${stroke}, ${stroke})`);
+
+g.append(&#39;clipPath&#39;).attr(&#39;id&#39;, &#39;clip&#39;).append(&#39;rect&#39;)
+    .attr(&#39;width&#39;, radius)
+    .attr(&#39;height&#39;, radius * 2);
+
+// outline
+g.append(&#39;circle&#39;)
+    .attr(&#39;cx&#39;, radius)
+    .attr(&#39;cy&#39;, radius)
+    .attr(&#39;r&#39;, radius)
+    .attr(&#39;stroke&#39;, &#39;black&#39;)
+    .attr(&#39;stroke-width&#39;, stroke);
+
+// large white circle
+g.append(&#39;circle&#39;)
+    .attr(&#39;cx&#39;, radius)
+    .attr(&#39;cy&#39;, radius)
+    .attr(&#39;r&#39;, radius)
+    .attr(&#39;fill&#39;, &#39;white&#39;)
+    .attr(&#39;clip-path&#39;, &#39;url(#clip)&#39;);
+
+// inner black circle
+g.append(&#39;circle&#39;)
+    .attr(&#39;cx&#39;, radius)
+    .attr(&#39;cy&#39;, radius * 1.5)
+    .attr(&#39;r&#39;, radius * 0.5);
+
+// white seed
+g.append(&#39;circle&#39;)
+    .attr(&#39;cx&#39;, radius)
+    .attr(&#39;cy&#39;, radius * 1.5)
+    .attr(&#39;r&#39;, radius * 0.15)
+    .attr(&#39;fill&#39;, &#39;white&#39;);
+
+// inner white circle
+g.append(&#39;circle&#39;)
+    .attr(&#39;cx&#39;, radius)
+    .attr(&#39;cy&#39;, radius * 0.5)
+    .attr(&#39;r&#39;, radius * 0.5)
+    .attr(&#39;fill&#39;, &#39;white&#39;);
+
+// black seed
+g.append(&#39;circle&#39;)
+    .attr(&#39;cx&#39;, radius)
+    .attr(&#39;cy&#39;, radius * 0.5)
+    .attr(&#39;r&#39;, radius * 0.15);
+</code></pre>
+    </div>
+    <div class="col">
+
+<h3>Related Merch</h3>
+<figure class="preview">
+    <a href="/design/yin-yang-white/">
+            <img class="b-lazy" src="/img/large/yin-yang-white.jpg" alt="Yin and Yang - Negative Space Design" />
+        <figcaption>Yin and Yang - Negative Space Design</figcaption>
+    </a>
+</figure>
+
+
+<h3>Featured eBook</h3>
+<figure class="preview">
+    <a href="https://www.amazon.com/dp/B0C2S2KR72?&linkCode=ll1&tag=geeksta-20&linkId=1f37a2af7976f5cffb04fe40513a1e0f&language=en_US&ref_=as_li_ss_tl">
+        <img alt="eBook cover" src="/img/books/chatgpt-interview-2.jpg"><br>
+        <figcaption>Buy on Amazon</figcaption>
+    </a>
+</figure>
+
+<h3>Latest Posts</h3>
+<ul>
+        <li><a href="/geeklog/chernobyl-disaster-imagined-by-artificial-intelligence/">The Chernobyl Disaster Imagined by Artificial Intelligence</a></li>
+        <li><a href="/geeklog/convert-web-pages-to-mobi/">Convert Web Pages to Ebooks in MOBI Format using Wget and Calibre</a></li>
+        <li><a href="/geeklog/imagemagick-tutorial/">Unlock the Power of ImageMagick: A Beginner's Guide to Image Processing</a></li>
+        <li><a href="/geeklog/python-number-formatting-f-strings/">Python Number Formatting Made Easy with f-Strings</a></li>
+        <li><a href="/geeklog/chatgpt-interview/">AI Ethics, Advancements, and Limitations: An Interview with ChatGPT</a></li>
 </ul>
-<a href="/rss.xml" class="btn btn-warning"><i class="fa fa-rss"></i> Subscribe to new content</a></li>
+
+<h3>Featured Merch</h3>
+<figure class="preview">
+    <a href="/design/def-procrastinate-pass-dark-scheme/">
+            <img class="b-lazy" src="/img/large/def-procrastinate-pass-dark-scheme.jpg" alt="Funny Python Code Pun Design - def procrastinate pass" />
+        <figcaption>Funny Python Code Pun Design - def procrastinate pass</figcaption>
+    </a>
+</figure>
+
+
 <hr>
-<h2>Featured Merch</h2>
-<a href="/design/def-procrastinate-pass-dark-scheme/" class="preview-img">
-    <figure>
-            <img src="/img/preview/def-procrastinate-pass-dark-scheme.jpg" alt="Funny Python Code Pun Design - def procrastinate pass" class="img-responsive" />
-        <br>
-        <figcaption class="hcaption">Funny Python Code Pun Design - def procrastinate pass</figcaption>
-    </figure>
-</a>
-    </div>
+
+<a href="/rss.xml" class="button primary">Subscribe to RSS Feed</a></li>    </div>
 </div>
-<hr class="clearfix">
-<div class="postinfo">
-<p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time itemprop="datePublished" datetime="2023-01-20T16:31">January 20, 2023</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
-<p>
-<strong>Tags:</strong>
-<span class="label label-info"><a href="/tags/d3js/">d3js</a></span>
-<span class="label label-info"><a href="/tags/svg/">svg</a></span>
-<span class="label label-info"><a href="/tags/code/">code</a></span>
+<hr>
+<p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time datetime="2023-01-20T16:31">January 20, 2023</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+<p><strong>Tags:</strong>
+    <a class="button outline" href="/tags/d3js/">d3js</a>
+    <a class="button outline" href="/tags/svg/">svg</a>
+    <a class="button outline" href="/tags/code/">code</a>
 </p>
-<p class="text-muted"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p></div>    </div>
+<p class="text-grey"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p>    </main>
 
-    <div id="footer" class="container">
-        <p>Geeksta.net: programming, data mining, data visualization, tech books, and tools for tech geeks.<br>
-        © <script>document.write(new Date().getFullYear())</script> Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/sitemap/">Sitemap</a> • <a href="https://www.instagram.com/g33ksta/">Instagram</a> • <a href="https://mastodon.social/@geeksta">Mastodon</a> • <a href="https://www.tiktok.com/@g33ksta">TikTok</a> • <a href="https://www.youtube.com/@geeksta">YouTube</a></p>
-    </div>
+    <footer class="dark"><div class="container">
+        Geeksta elsewhere: <a href="https://www.instagram.com/g33ksta/">Instagram</a> • <a href="https://mastodon.social/@geeksta">Mastodon</a> • <a href="https://www.tiktok.com/@g33ksta">TikTok</a> • <a href="https://www.youtube.com/@geeksta">YouTube</a>
+        <br>
+        © <script>document.write(new Date().getFullYear())</script> Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/sitemap/">Sitemap</a></p>
+    </div></footer>
 
-    <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="/compiled/script.js"></script>
-<script src="/vendor/d3/d3.min.js"></script><script src="/js/js-drawing/yin-yang-symbol.js"></script>
-<script>
-// based on https://github.com/NYTimes/svg-crowbar
-var doctype = '<?xml version="1.0"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">';
 
-function download(source) {
-    var filename = window.document.title.replace(/[^a-z0-9]+/gi, '-').toLowerCase();
-
-    var url = window.URL.createObjectURL(new Blob([doctype + source], { 'type' : 'application\/svg+xml' }));
-
-    var a = document.createElement('a');
-    body.appendChild(a);
-    a.setAttribute('href', url);
-    a.setAttribute('download', filename + '.svg');
-    a.style['display'] = 'none';
-    a.click();
-
-    setTimeout(function() {
-        window.URL.revokeObjectURL(url);
-    }, 10);
-}
-
-$('#dl-svg').click(function() {
-    download($('#canvas').html());
-});
-</script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="/js/js-drawing/yin-yang-symbol.js"></script>
+<script src="/compiled/svgdl.js"></script>
+<script src="/vendor/highlight/highlight.pack.js"></script>
+<script src="/js/highlight.js"></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFQJ09STFE"></script>
 <script>
@@ -172,5 +175,6 @@ $('#dl-svg').click(function() {
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-MFQJ09STFE');
-</script>    </body>
+</script>
+</body>
 </html>

@@ -1,184 +1,96 @@
-body {
-font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif;
-position: relative;
-padding-top: 70px;
-font-size:130%;
-}
-body,p,li {
-color: #333;
-}
-p,li {
-font-size:1.3em;
-}
-h1, h2, h3, h4, h5, h6 {
-margin:.1em 0 .3em 0;
-}
-h1 {
-font-size:2.4em;
-}
-figure {
-margin:0 0 .5em 0;
-font-size:.9em;
-}
-figcaption {
-font-weight:bold;
-margin-top:.5em;
-}
-cite {
-font-style:italic;
-}
-pre {
-background-color: inherit;
-}
-pre code {
-font-size:1.1em;
-line-height:1.4em;
-}
-pre code.hljs {
-background-color: #fff;
-padding: 0;
-}
-blockquote {
-font-family: Rockwell, Georgia, Times, 'Times New Roman', serif;
-font-size: .9em;
-line-height: 1.8em;
-}
-.hcaption {
-font-size:1.2em;
-line-height:1.2em;
+/* chota overrides */
+:root {
+    --color-primary: #3C91E6;
+    --color-error: #CC3333;
+    --color-success: #138808;
+    --font-color: #333333;
+    --grid-maxWidth: 148rem; /* max container width */
+    --font-family-sans: Helvetica, sans-serif;
+    --font-size: 2rem;
 }
 
-/* images */
-.post_image {
-margin:.4em 1em 1em 0;
-float:left;
-}
-.content img {
-max-width: 100%;
+code {
+    color: var(--color-success);
 }
 
-/* ul.thumbnails does not exist in bootstrap 3 */
-.thumbnails {
-list-style:none;
-padding:0;
+/* elements */
+footer {
+    padding: 2rem 0 0.1rem;
 }
 
-.big {font-size:1.45em;}
-.clearfix {clear:both;}
-.label a {color: #fff;}
-.lidx a {color:inherit;}
-.roffset {margin-right:.5em;}
-.spacer5 {clear:both;height:5px;}
-.small {font-size:.85em;}
-.voffset {margin:10px 0;}
-
-/* nav */
-#site-name {
-background: url('/img/icon-small.png') no-repeat 0 1px;
-font-size: 2.2em;
-font-weight: 500;
-padding-left:50px;
-margin: 0 0 0 -4px;
-}
-#site-name, .navbar {
-font-family: Roboto, Arial, Sans;
-}
-.navbar .nav > li > a {
-color:#0d0;
-font-size: 1.5em;
-font-weight: 700;
-}
-.caret {
-opacity:.8;
-}
-.navbar ul.share .btn {
-width:150px;
-margin:.4em 1em;
-font-size:1em;
+ul.list-ns {
+    list-style: none;
+    padding: 0;
 }
 
-/* footer */
-#footer {
-text-align:center;
-border-top:1px solid #ddd;
-margin-top:1em;
-padding-top:1em;
-font-size:.9em;
+/* common classes */
+.big {
+    font-size: 2.8rem;
 }
 
-/* indexes */
-.index_title {text-transform:capitalize;}
-
-/* posts */
-.postinfo {font-size:.9em;}
-
-/* book review */
-#book_meta {font-size:.85em;}
-#book_meta li {margin:.35em 0;}
-#book_meta img {display:block;margin:1em auto;}
-#book_meta .btn {display:block;color:#333;margin-top:1em;}
-
-/* lists */
-.flatlist {list-style:none;margin:0;padding:0;}
-.programmerlist td:nth-child(1) {width:6em;}
-.programmerlist td:nth-child(2) {width:9em;}
-.attribution {font-size:.9em;margin:.2em;}
-
-/* design */
-.design h1 {
-font-size:2em;
+.dark {
+    background-color: #222;
+    color:#eee;
 }
 
-/* images */
-.preview-img figure {
-position: relative;
-min-height: 180px;
+.full {
+    width: 100%;
 }
-.preview-img figcaption {
-background-color: rgba(255, 255, 255, .95);
-bottom: 1.1em;
-font-size: 1.1em;
-padding: .3em;
-position: absolute;
-text-align: center;
-}
-.preview-img figcaption {
-width: 100%;
-}
+
 .h {
-visibility: hidden;
+    visibility: hidden;
 }
 
-.design .btn {
-font-size: 1.4em;
-margin-bottom: .5em;
-margin-right: .2em;
+.small {
+    font-size: 1.6rem;
 }
 
-/* products */
-.z3lproduct {
-text-align:center;
-line-height:150%;
+/* spacers */
+.bm {
+    margin-bottom: 1rem;
 }
 
-/* jumbotron */
-.jumbotron {
-margin-top: 20px;
-}
-.jumbotron h1 {
-font-size: 2em;
-margin-bottom:.5em;
-}
-.jumbotron .preview {
-float:left;
-margin-right:2em;
-width: 25%;
+.vm {
+    margin: 1rem 0;
 }
 
-.mr1 {margin-right:.5em;}
+/* nav menu */
+img.logo {
+    margin: 0 .4rem;
+    max-height: 48px;
+}
 
-/* fix github gists affected by font-size settings */
-.gist code, .gist pre {
-font-size:100%;
-line-height:130%;
+.nav a.brand {
+    color:#eee;
+    font-size: 2.8rem;
+    font-weight: 700;
+    font-family: "DejaVu Sans", sans-serif;
+}
+
+.nav-right a {
+    color:#0d0;
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+/* images */
+.preview {
+    position: relative;
+    margin: 0 auto;
+    min-height: 180px;
+}
+
+.preview figcaption {
+    background-color: rgba(255, 255, 255, .95);
+    bottom: 0;
+    font-size: 1.6rem;
+    padding: .3rem;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.preview img {
+    vertical-align: middle; /* to make sure images behave like blocks */
+    width: 100%;
 }

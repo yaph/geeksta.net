@@ -1,151 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head itemscope itemtype="https://schema.org/WebSite">
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title itemprop="name">Read a Description of the Linux Filesystem Hierarchy | Geeksta</title>
-<meta name="description" content="Quickly access a description of the directories you typically find in a Linux filesystem by typing `man hier` in a terminal."><meta name="author" content="Ramiro Gómez">            <meta property="og:image" content="https://i.ytimg.com/vi/LcYuufw415s/maxresdefault.jpg">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read a Description of the Linux Filesystem Hierarchy | Geeksta</title>
+<meta name="description" content="Quickly access a description of the directories you typically find in a Linux filesystem by typing `man hier` in a terminal."><meta name="author" content="Ramiro Gómez">        <meta property="og:image" content="https://i.ytimg.com/vi/LcYuufw415s/maxresdefault.jpg">
+    <link rel="canonical" itemprop="url" href="https://geeksta.net/screencasts/man-hier/">
+    <link rel="icon" type="image/png" href="/img/icon-small.png">
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Geeksta All Posts RSS feed">
+    <link rel="stylesheet" href="/vendor/chota.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/dropdown.css">
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:creator" content="@yaph">
-    <meta name="twitter:title" content="Read a Description of the Linux Filesystem Hierarchy">
-    <meta name="twitter:description" content="Quickly access a description of the directories you typically find in a Linux filesystem by typing `man hier` in a terminal.">
-    <meta name="twitter:image:src" content="https://i.ytimg.com/vi/LcYuufw415s/maxresdefault.jpg">
-        <meta name="flattr:id" content="4pzdyq">
-        <link href="https://geeksta.net/screencasts/man-hier/" rel="canonical" itemprop="url">
-        <link href="/img/icon-small.png" rel="icon" type="image/png">
-        <link href="/rss.xml" rel="alternate" type="application/rss+xml" title="Geeksta All Posts RSS feed">
-        <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="/css/style.css" rel="stylesheet">
-
-<style>
-.flex-video {
-  position: relative;
-  padding-top: 25px;
-  padding-bottom: 67.5%;
-  height: 0;
-  margin-bottom: 16px;
-  overflow: hidden;
-}
-.flex-video.widescreen { padding-bottom: 57.25%; }
-.flex-video.vimeo { padding-top: 0; }
-.flex-video iframe,
-.flex-video object,
-.flex-video embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-@media only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px) {
-  .flex-video { padding-top: 0; }
-}
-</style>
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-    </head>
-    <body>
-    <div class="navbar navbar-fixed-top navbar-inverse">
-        <div class="container">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse" aria-label="Toggle Navbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" id="site-name" href="/">Geeksta</a>
-            <div class="collapse navbar-collapse navbar-responsive-collapse">
-                <ul class="nav navbar-nav pull-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sections <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/reviews/">Book Reviews</a></li>
-                            <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
-                            <li><a href="/visualizations/">Data Visualizations</a></li>
-                            <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
-                            <li><a href="/events/">Geek Events</a></li>
-                            <li><a href="/screencasts/">Screencasts</a></li>
-                            <li><a href="/videos/">Videos</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/geeklog/">Geeklog</a></li>
-                    <li><a href="/merch/">Merchandise</a></li>
-                    <li><a href="/tools/">Tools</a></li>
-<li id="sharemenu" class="dropdown">
-  <button type="button" class="dropdown-toggle btn btn-success navbar-btn" data-toggle="dropdown"><i class="fa fa-share"></i></button>
-  <ul class="share dropdown-menu pull-right">
-    <li><a href="/rss.xml" class="btn btn-default"><i class="fa fa-rss"></i> RSS Feed</a></li>
-    <li><a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/screencasts/man-hier/&title=Read%20a%20Description%20of%20the%20Linux%20Filesystem%20Hierarchy" class="btn btn-default"><i class="fa fa-reddit-alien"></i> Reddit</a></li>
-    <li><a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/screencasts/man-hier/&text=Read%20a%20Description%20of%20the%20Linux%20Filesystem%20Hierarchy" class="btn btn-default"><i class="fa fa-twitter"></i> Twitter</a></li>
-    <li><a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/screencasts/man-hier/&t=Read%20a%20Description%20of%20the%20Linux%20Filesystem%20Hierarchy" class="btn btn-default"><i class="fa fa-facebook"></i> Facebook</a></li>
-    <li><a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/screencasts/man-hier/&title=Read%20a%20Description%20of%20the%20Linux%20Filesystem%20Hierarchy" class="btn btn-default"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
-  </ul>
-</li>                </ul>
-            </div>
+<link rel="stylesheet" href="/css/video.css">
+</head>
+<body>
+    <header><nav class="nav dark">
+        <div class="nav-left">
+            <a class="brand" href="/"><img class="logo" src="/img/icon-small.png">Geeksta</a>
         </div>
-    </div>
+        <ul class="nav-right">
+            <li>
+                <a href="#">Sections ▾</a>
+                <ul class="dropdown">
+                    <li><a href="/reviews/">Book Reviews</a></li>
+                    <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
+                    <li><a href="/visualizations/">Data Visualizations</a></li>
+                    <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
+                    <li><a href="/events/">Geek Events</a></li>
+                    <li><a href="/screencasts/">Screencasts</a></li>
+                    <li><a href="/videos/">Videos</a></li>
+                </ul>
+            </li>
+            <li><a href="/geeklog/">Geeklog</a></li>
+            <li><a href="/merch/">Merch</a></li>
+            <li><a href="/tools/">Tools</a></li>
+        </ul>
+    </nav></header>
 
-    <div id="wrapper" class="container">
+    <main class="container">
 <div class="row">
-  <div class="col-md-9">
-    <header><h1>Read a Description of the Linux Filesystem Hierarchy</h1></header>
-    <div class="flex-video widescreen">
-      <iframe width="640" height="360" src="//www.youtube.com/embed/LcYuufw415s" frameborder="0" allowfullscreen></iframe>
+    <div class="col-9-md">
+        <h1>Read a Description of the Linux Filesystem Hierarchy</h1>
+        <div class="flex-video widescreen">
+            <iframe width="640" height="360" src="//www.youtube.com/embed/LcYuufw415s" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <p>A short screencast showing how to quickly access a description of the directories you typically find in a Linux filesystem using the command <code>man hier</code> in a terminal.</p>
     </div>
-    <p>A short screencast showing how to quickly access a description of the directories you typically find in a Linux filesystem using the command <code>man hier</code> in a terminal.</p>
-  </div>
-  <div class="col-md-3">
+    <div class="col-3-md">
 
-<h2>Featured eBook</h2>
-<a class="preview-img" href="https://www.amazon.com/dp/B0C2S2KR72?&linkCode=ll1&tag=geeksta-20&linkId=1f37a2af7976f5cffb04fe40513a1e0f&language=en_US&ref_=as_li_ss_tl">
-  <figure>
-    <img class="img-responsive" alt="eBook cover" src="/img/books/chatgpt-interview-2.jpg"><br>
-    <figcaption class="hcaption">Buy on Amazon</figcaption>
-  </figure>
-</a>
-<hr>
-<h2>Latest Posts</h2>
-<ul class="list-unstyled">
-    <li class="voffset"><a href="/geeklog/chernobyl-disaster-imagined-by-artificial-intelligence/">The Chernobyl Disaster Imagined by Artificial Intelligence</a></li>
-    <li class="voffset"><a href="/geeklog/convert-web-pages-to-mobi/">Convert Web Pages to Ebooks in MOBI Format using Wget and Calibre</a></li>
-    <li class="voffset"><a href="/geeklog/imagemagick-tutorial/">Unlock the Power of ImageMagick: A Beginner's Guide to Image Processing</a></li>
-    <li class="voffset"><a href="/geeklog/python-number-formatting-f-strings/">Python Number Formatting Made Easy with f-Strings</a></li>
-    <li class="voffset"><a href="/geeklog/chatgpt-interview/">AI Ethics, Advancements, and Limitations: An Interview with ChatGPT</a></li>
+
+<h3>Featured eBook</h3>
+<figure class="preview">
+    <a href="https://www.amazon.com/dp/B0C2S2KR72?&linkCode=ll1&tag=geeksta-20&linkId=1f37a2af7976f5cffb04fe40513a1e0f&language=en_US&ref_=as_li_ss_tl">
+        <img alt="eBook cover" src="/img/books/chatgpt-interview-2.jpg"><br>
+        <figcaption>Buy on Amazon</figcaption>
+    </a>
+</figure>
+
+<h3>Latest Posts</h3>
+<ul>
+        <li><a href="/geeklog/chernobyl-disaster-imagined-by-artificial-intelligence/">The Chernobyl Disaster Imagined by Artificial Intelligence</a></li>
+        <li><a href="/geeklog/convert-web-pages-to-mobi/">Convert Web Pages to Ebooks in MOBI Format using Wget and Calibre</a></li>
+        <li><a href="/geeklog/imagemagick-tutorial/">Unlock the Power of ImageMagick: A Beginner's Guide to Image Processing</a></li>
+        <li><a href="/geeklog/python-number-formatting-f-strings/">Python Number Formatting Made Easy with f-Strings</a></li>
+        <li><a href="/geeklog/chatgpt-interview/">AI Ethics, Advancements, and Limitations: An Interview with ChatGPT</a></li>
 </ul>
-<a href="/rss.xml" class="btn btn-warning"><i class="fa fa-rss"></i> Subscribe to new content</a></li>
+
+<h3>Featured Merch</h3>
+<figure class="preview">
+    <a href="/design/def-procrastinate-pass-dark-scheme/">
+            <img class="b-lazy" src="/img/large/def-procrastinate-pass-dark-scheme.jpg" alt="Funny Python Code Pun Design - def procrastinate pass" />
+        <figcaption>Funny Python Code Pun Design - def procrastinate pass</figcaption>
+    </a>
+</figure>
+
+
 <hr>
-<h2>Featured Merch</h2>
-<a href="/design/def-procrastinate-pass-dark-scheme/" class="preview-img">
-    <figure>
-            <img src="/img/preview/def-procrastinate-pass-dark-scheme.jpg" alt="Funny Python Code Pun Design - def procrastinate pass" class="img-responsive" />
-        <br>
-        <figcaption class="hcaption">Funny Python Code Pun Design - def procrastinate pass</figcaption>
-    </figure>
-</a>
-  </div>
+
+<a href="/rss.xml" class="button primary">Subscribe to RSS Feed</a></li>    </div>
 </div>
-<hr class="clearfix">
-<div class="postinfo">
-<p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time itemprop="datePublished" datetime="2022-11-07T14:35">November 07, 2022</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
-<p>
-<strong>Tags:</strong>
-<span class="label label-info"><a href="/tags/command-line/">command line</a></span>
-<span class="label label-info"><a href="/tags/man-page-monday/">man page monday</a></span>
-<span class="label label-info"><a href="/tags/screencast/">screencast</a></span>
+<hr>
+<p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time datetime="2022-11-07T14:35">November 07, 2022</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+<p><strong>Tags:</strong>
+    <a class="button outline" href="/tags/command-line/">command line</a>
+    <a class="button outline" href="/tags/man-page-monday/">man page monday</a>
+    <a class="button outline" href="/tags/screencast/">screencast</a>
 </p>
-<p class="text-muted"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p></div>    </div>
+<p class="text-grey"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p>    </main>
 
-    <div id="footer" class="container">
-        <p>Geeksta.net: programming, data mining, data visualization, tech books, and tools for tech geeks.<br>
-        © <script>document.write(new Date().getFullYear())</script> Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/sitemap/">Sitemap</a> • <a href="https://www.instagram.com/g33ksta/">Instagram</a> • <a href="https://mastodon.social/@geeksta">Mastodon</a> • <a href="https://www.tiktok.com/@g33ksta">TikTok</a> • <a href="https://www.youtube.com/@geeksta">YouTube</a></p>
-    </div>
+    <footer class="dark"><div class="container">
+        Geeksta elsewhere: <a href="https://www.instagram.com/g33ksta/">Instagram</a> • <a href="https://mastodon.social/@geeksta">Mastodon</a> • <a href="https://www.tiktok.com/@g33ksta">TikTok</a> • <a href="https://www.youtube.com/@geeksta">YouTube</a>
+        <br>
+        © <script>document.write(new Date().getFullYear())</script> Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/sitemap/">Sitemap</a></p>
+    </div></footer>
 
-    <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="//stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="/compiled/script.js"></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFQJ09STFE"></script>
@@ -154,5 +103,6 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-MFQJ09STFE');
-</script>    </body>
+</script>
+</body>
 </html>
