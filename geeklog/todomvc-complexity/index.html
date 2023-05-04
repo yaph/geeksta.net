@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Complex are TodoMVC Implementations | Geeksta</title>
+<meta name="description" content="An article comparing 17 different JavaScript based implementations of a simple Todo list app using the code complexity metrics: lines of code, cyclomatic..."><meta name="author" content="Ramiro Gómez">        <meta property="og:image" content="/img/geeklog/todomvc-complexity/Mean-Cyclomatic-Complexity.png">
+    <link rel="canonical" itemprop="url" href="https://geeksta.net/geeklog/todomvc-complexity/">
+    <link rel="icon" type="image/png" href="/img/icon-small.png">
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Geeksta All Posts RSS feed">
+    <link rel="stylesheet" href="/vendor/chota.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/dropdown.css">
+</head>
+<body>
+    <header><nav class="nav dark">
+        <div class="nav-left">
+            <a class="brand" href="/"><img class="logo" src="/img/icon-small.png">Geeksta</a>
+        </div>
+        <ul class="nav-right">
+            <li>
+                <a href="#">Sections ▾</a>
+                <ul class="dropdown">
+                    <li><a href="/reviews/">Book Reviews</a></li>
+                    <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
+                    <li><a href="/visualizations/">Data Visualizations</a></li>
+                    <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
+                    <li><a href="/events/">Geek Events</a></li>
+                    <li><a href="/screencasts/">Screencasts</a></li>
+                    <li><a href="/videos/">Videos</a></li>
+                </ul>
+            </li>
+            <li><a href="/geeklog/">Geeklog</a></li>
+            <li><a href="/merch/">Merch</a></li>
+            <li><a href="/tools/">Tools</a></li>
+        </ul>
+    </nav></header>
+
+    <main class="container">
+<div class="row">
+    <div class="col-9-md">
+        <h1>How Complex are TodoMVC Implementations</h1>
+        <blockquote>
+<p>Controlling complexity is the essence of computer programming.
+- Brian Kernighan</p>
+</blockquote>
+<p>One promise application frameworks have in common is to reduce the amount of work necessary to get things done. Not having to re-invent the wheel for every new project and being able to rely on a library of functions that perform common tasks certainly has its benefits.</p>
+<p>When doing Web or mobile development it is almost impossible these days not to consider working with a JavaScript framework or library. But there are plenty of them and a new one seems to pop up every day.</p>
+<p>A good place to start looking for a framework/library is the <a href="http://todomvc.com/">TodoMVC project</a>, which is a collection of implementations of a simple Todo app. Each implementation either uses one of the more popular MVC frameworks (AngularJS, Ember.js, Backbone.js etc.), or a library (Closure, Dojo, jQuery) or no external dependencies like the Vanilla JS example.</p>
+<p>I skimmed the source code of some of the Todo app implementations and thought about ways to measure them and make them comparable. One thing that immediately came to my mind was using <a href="http://cloc.sourceforge.net/">cloc</a> to count the lines of code, in the end I expect to write less code when using a framework. But this metric alone doesn't tell how complex the code is.</p>
+<p>Fortunately, there is <a href="https://github.com/philbooth/complexityReport.js">complexityReport.js</a>, a tool for reporting code complexity metrics in JavaScript projects, which currently reports on: lines of code, number of parameters, cyclomatic complexity, Halstead metrics, and Maintainability Index. I used this tool to create complexity reports for the TodoMVC implementations, aggregated the numbers on a per project bases and created bar graphs for easier comparison of the example apps.</p>
+<h2 id="complexity-of-todo-app-implementations">Complexity of Todo App Implementations</h2>
+<p>Below you find information on the different metrics that were calculated and the graphs comparing the different projects. Only JavaScript source files are considered in these numbers and external libraries were excluded. The gwt and dart examples were completely omitted as they are not written in JavaScript.</p>
+<h3 id="source-lines-of-code-sloc">Source Lines of Code (SLOC)</h3>
+<p>This metric is divided into physical (actual lines) and logical (imperative statements) counts. Both are not very informative regarding complexity, but I still think the logical lines of code is an interesting metric to look at.</p>
+<h4 id="sloc-logical">SLOC Logical</h4>
+<p><img src="/img/geeklog/todomvc-complexity/Sum-Logical-SLOC.png" alt="Sum Logical SLOC" class="full"></p>
+<h4 id="sloc-physical">SLOC Physical</h4>
+<p><img src="/img/geeklog/todomvc-complexity/Sum-Physical-SLOC.png" alt="Sum Physical SLOC" class="full"></p>
+<p>The logical lines of code range from 75 for AngularJS to 366 for Dojo. Quite a difference and quite impressive how few lines of code you need with some of the frameworks. Interestingly, the Vanilla JS implementation was written in less lines of code than the Dojo, Flight, and Closure examples. Considering that laziness is a virtue for programmers AngularJS certainly looks more attractive than Dojo here.</p>
+<h3 id="cyclomatic-complexity">Cyclomatic complexity</h3>
+<p>The Cyclomatic complexity is a metric developed by Thomas J. McCabe in 1976. It measures the complexity of a program by counting the number of linearly independent paths through a program's source code. The lower the cyclomatic complexity the better. McCabe suggested that programmers should split a software module into smaller parts whenever the cyclomatic complexity of the module exceeded 10. You can read the <a href="http://www.literateprogramming.com/mccabe.pdf">original paper here</a>.</p>
+<p><img src="/img/geeklog/todomvc-complexity/Mean-Cyclomatic-Complexity.png" alt="Mean Cyclomatic Complexity" class="full"></p>
+<p>The mean cyclomatic complexity was calculated by dividing the sum of the aggregate complexity values for all files (modules) by the number of files.</p>
+<p>jQuery stands out here. One factor being that the whole app is written in a <a href="https://github.com/tastejs/todomvc/blob/gh-pages/architecture-examples/jquery/js/app.js">single file</a> with the outer anonymous function having a cyclomatic complexity of 183. KnockoutJS, however, is also a single-file implementation and has a much lower value.</p>
+<p>Besides jQuery, Agility.js exceeds the threshold of 10, all others fall below it with Ember.js scoring best with just 2.</p>
+<h3 id="halstead-complexity-measures">Halstead complexity measures</h3>
+<p>These measures introduced by Maurice Howard Halstead in 1977 are based on the number of distinct operators (<code>n1</code>), the number of distinct operands (<code>n2</code>), the total number of operators (<code>N1</code>) and the total number of operands (<code>N2</code>) in each function of a program module.</p>
+<p>What you see in the graphs below are the totals aggregated from all JavaScript files per example application. For all of these Halstead measures lower values are better.</p>
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#volume">Volume</a></li>
+  <li><a href="#difficulty">Difficulty</a></li>
+  <li><a href="#effort">Effort</a></li>
+  <li><a href="#time">Time</a></li>
+  <li><a href="#bugs">Bugs</a></li>
+</ul>
+<div class="tab-content">
+  <div class="tab-pane fade in active" id="volume">
+    <img src="/img/geeklog/todomvc-complexity/Sum-Halstead-Volume.png" alt="Sum Halstead Volume" class="full">
+    <p>The program volume (V) measures the information contents of the program in mathematical bits.<br>
+    Formula: <code>V = (N1 + N2) * log2(n1 + n2)</code></p>
+  </div>
+  <div class="tab-pane fade" id="difficulty">
+    <img src="/img/geeklog/todomvc-complexity/Sum-Halstead-Difficulty.png" alt="Sum Halstead Difficulty" class="full">
+    <p>The difficulty or error proneness (D) is proportional to the number of unique operators and to the ratio of total number of operands and the number of unique operands. So using the same operands frequently throughout a program makes it more prone to errors.<br>
+    Formula: <code>D = (n1 / 2) * (N2 / n2)</code></p>
+  </div>
+   <div class="tab-pane fade" id="effort">
+    <img src="/img/geeklog/todomvc-complexity/Sum-Halstead-Effort.png" alt="Sum Halstead Effort" class="full">
+    <p>The effort (E) to implement or understand a program is the product of its volume and difficulty.<br>
+    Formula: <code>E = V * D</code></p>
+  </div>
+   <div class="tab-pane fade" id="time">
+    <img src="/img/geeklog/todomvc-complexity/Sum-Halstead-Time.png" alt="Sum Halstead Time" class="full">
+    <p>The time to implement or understand a program (T) is proportional to the effort. Halstead found by experimentation that dividing the effort by 18 gives an approximation for the time in seconds.<br>
+    Formula: <code>T = E / 18</code></p>
+  </div>
+   <div class="tab-pane fade" id="bugs">
+    <img src="/img/geeklog/todomvc-complexity/Sum-Halstead-Bugs.png" alt="Sum Halstead Bugs" class="full">
+    <p>This measure is an estimate of the number of delivered bugs (B). It correlates with the overall complexity of the program.<br>
+    Formula: <code>B = (E**(2 / 3)) / 3000</code></p>
+  </div>
+  <hr>
+</div>
+
+<p>The differences between lower and higher values are quite dramatic for all of these Halstead measures. Picking the time for example the Ember.js implementation would take roughly 40 minutes and the Vanilla JS implementation about 8 hours, provided you have a similar level of experience. These values don't seem too far off when looking at the actual code.</p>
+<h3 id="maintainability-index">Maintainability Index</h3>
+<p>The Maintainability Index takes into account 3 of the metrics we saw before and combines them into one formula:
+<code>MI = 171 - (3.42 * ln(mean effort)) - (0.23 * ln(mean cyclomatic complexity)) - (16.2 * ln(mean logical SLOC))</code></p>
+<p>This metric was designed in 1991 by Paul Oman and Jack Hagemeister. Its values range from negative infinity up to 171 on a logarithmic scale. Higher values indicate better maintainability. Oman and Hagemeister identified 65 as the threshold value below which a program is considered difficult to maintain.</p>
+<p>The mean Maintainability Index was calculated by dividing the sum of Maintainability Index values across all files of a project by the number of files.</p>
+<p><img src="/img/geeklog/todomvc-complexity/Mean-Maintainability-Index.png" alt="Mean Maintainability Index" class="full"></p>
+<p>The Todo app is conceptually fairly simple and all of its implementations are rather small code projects so none of them falls below the threshold proposed by Oman and Hagemeister. Unsurprisingly, those Todo app implementations that scored well before (mostly on the lower end) are also more maintainable according to this metric.</p>
+<h2 id="domination-ranking">Domination Ranking</h2>
+<p>This section was added 3 days after the 1st publication.</p>
+<p>There was some discussion on Reddit about this post and <a href="http://www.reddit.com/user/jpfed">Redditor jpfed</a>
+calculated a <a href="http://www.reddit.com/r/javascript/comments/1mldhu/how_complex_are_todomvc_implementations/ccc0vmh">domination ranking</a>
+based on the scores across all metrics.</p>
+<p>In his formula he compared each pair of implementations (X, Y) saying that
+implementation X is dominated by implementation Y, if Y scores better than X
+on all metrics.</p>
+<p>In other words the less often an implementation is dominated the better, which
+makes AngularJS, AngularJS-perf, Ember.js and KnockoutJS look pretty good.</p>
+<p><img src="/img/geeklog/todomvc-complexity/Times-Dominated.png" alt="Times Dominated" class="full"></p>
+<h2 id="summary">Summary</h2>
+<p>In this article I compared 17 different JavaScript based implementations of a simple Todo list app using the metrics: lines of code, cyclomatic complexity, Halstead measures and Maintainability Index. Overall AngularJS and Ember.js scored pretty well. Dojo, Closure and Vanilla JS on the other end require more programming and maintainance effort.</p>
+<p>As mentioned earlier the Todo list app is rather simple and all of the projects are fairly small in size. It would be interesting to compare a more complex type of application using these measures to see whether the different approaches would score similarly to the results presented here.</p>
+<p>So without generalizing what these numbers say, they help me narrow down the potential choices in the ever-growing jungle of JavaScript MVC frameworks and libraries.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Cyclomatic_complexity">Cyclomatic complexity</a></li>
+<li><a href="http://www.verifysoft.com/en_halstead_metrics.html">Halstead Metrics</a></li>
+<li><a href="http://jscomplexity.org/">JScomplexity.org</a></li>
+<li><a href="http://todomvc.com/">TodoMVC</a></li>
+<li><a href="https://github.com/coderstats/todomvc-metrics">Source code and data for this post</a></li>
+</ul>
+    </div>
+    <div class="col">
+
+
+<h3>Featured eBook</h3>
+<figure class="preview">
+    <a href="https://www.amazon.com/dp/B0C2S2KR72?&linkCode=ll1&tag=geeksta-20&linkId=1f37a2af7976f5cffb04fe40513a1e0f&language=en_US&ref_=as_li_ss_tl">
+        <img alt="eBook cover" src="/img/books/chatgpt-interview-2.jpg"><br>
+        <figcaption>Buy on Amazon</figcaption>
+    </a>
+</figure>
+
+<h3>Latest Posts</h3>
+<ul>
+        <li><a href="/geeklog/chernobyl-disaster-imagined-by-artificial-intelligence/">The Chernobyl Disaster Imagined by Artificial Intelligence</a></li>
+        <li><a href="/geeklog/convert-web-pages-to-mobi/">Convert Web Pages to Ebooks in MOBI Format using Wget and Calibre</a></li>
+        <li><a href="/geeklog/imagemagick-tutorial/">Unlock the Power of ImageMagick: A Beginner's Guide to Image Processing</a></li>
+        <li><a href="/geeklog/python-number-formatting-f-strings/">Python Number Formatting Made Easy with f-Strings</a></li>
+        <li><a href="/geeklog/chatgpt-interview/">AI Ethics, Advancements, and Limitations: An Interview with ChatGPT</a></li>
+</ul>
+
+<h3>Featured Merch</h3>
+<figure class="preview">
+    <a href="/design/def-procrastinate-pass-dark-scheme/">
+            <img class="b-lazy" src="/img/large/def-procrastinate-pass-dark-scheme.jpg" alt="Funny Python Code Pun Design - def procrastinate pass" />
+        <figcaption>Funny Python Code Pun Design - def procrastinate pass</figcaption>
+    </a>
+</figure>
+
+
+<hr>
+
+<a href="/rss.xml" class="button primary">Subscribe to RSS Feed</a></li>    </div>
+</div>
+<hr>
+<p><strong>Share post:</strong>
+<a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/geeklog/todomvc-complexity/&t=How%20Complex%20are%20TodoMVC%20Implementations" class="button success">Facebook</a>
+<a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/geeklog/todomvc-complexity/&title=How%20Complex%20are%20TodoMVC%20Implementations" class="button success">LinkedIn</a>
+<a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/geeklog/todomvc-complexity/&title=How%20Complex%20are%20TodoMVC%20Implementations" class="button success">Reddit</a>
+<a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/geeklog/todomvc-complexity/&text=How%20Complex%20are%20TodoMVC%20Implementations" class="button success">Twitter</a>
+</p><hr>
+<p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time datetime="2013-09-17T19:28">September 17, 2013</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+<p><strong>Tags:</strong>
+    <a class="button outline" href="/tags/analysis/">analysis</a>
+    <a class="button outline" href="/tags/coderstats/">coderstats</a>
+    <a class="button outline" href="/tags/code-complexity/">code complexity</a>
+    <a class="button outline" href="/tags/todomvc/">todomvc</a>
+    <a class="button outline" href="/tags/visualization/">visualization</a>
+</p>
+<p class="text-grey"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p>
+<div class="card vm">
+    <h3>Merchandise</h3>
+    <div class="row">
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/caution-i-curse-when-i-commit-code/">
+            <img class="b-lazy" src="/img/large/caution-i-curse-when-i-commit-code.jpg" alt="Caution I Curse When I Commit Code - Funny Programmer Design" />
+        <figcaption>Caution I Curse When I Commit Code - Funny Programmer Design</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/hack-the-planet-green/">
+            <img class="b-lazy" src="/img/large/hack-the-planet-green.jpg" alt="Hack the Planet - Green Globe Design for Computer Hackers" />
+        <figcaption>Hack the Planet - Green Globe Design for Computer Hackers</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/run-bsd/">
+            <img class="b-lazy" src="/img/large/run-bsd.jpg" alt="RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins" />
+        <figcaption>RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/shrug-it-works-on-my-machine-medium-white/">
+            <img class="b-lazy" src="/img/large/shrug-it-works-on-my-machine-medium-white.jpg" alt="Shrug It Works On My Machine Funny Programmer Excuse White Design" />
+        <figcaption>Shrug It Works On My Machine Funny Programmer Excuse White Design</figcaption>
+    </a>
+</figure>
+
+    </div>
+</div>
+
+</div>    </main>
+
+    <footer class="dark"><div class="container">
+        Geeksta elsewhere: <a href="https://www.instagram.com/g33ksta/">Instagram</a> • <a href="https://mastodon.social/@geeksta">Mastodon</a> • <a href="https://www.tiktok.com/@g33ksta">TikTok</a> • <a href="https://www.youtube.com/@geeksta">YouTube</a>
+        <br>
+        © <script>document.write(new Date().getFullYear())</script> Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/sitemap/">Sitemap</a></p>
+    </div></footer>
+
+    <script src="/compiled/script.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MFQJ09STFE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MFQJ09STFE');
+</script>
+</body>
+</html>
