@@ -7,6 +7,13 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Prompting AI Language Models Cheat Sheet]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/prompting-cheat-sheet/]]></link>
+        <description><![CDATA[<p>Learn the art of effective prompting for AI language models with this cheat sheet, including key elements, examples, and tips to unlock their full potential.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/prompting-cheat-sheet/]]></guid>
+        <pubDate>Tue, 16 May 2023 23:51:39 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[ChatGPT Explains Recursion in 5 Levels of Difficulty]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/chatgpt-explains-recursion-in-5-levels-of-difficulty/]]></link>
         <description><![CDATA[<p>Discover the concept of recursion explained at various levels of difficulty, from elementary school to college and beyond, as ChatGPT breaks it down in five progressively detailed explanations.</p>]]></description>
@@ -68,12 +75,5 @@
         <description><![CDATA[<p>Prompt engineering is a hot topic and job in the rapidly growing technology fields of artificial intelligence (AI) and machine learning (ML). Show that you know how to talk to machines and are a pro at crafting effictive prompts for content generation.</p><img src="https://geeksta.net/img/large/prompt-engineer-i-talk-to-machines-dark.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/prompt-engineer-i-talk-to-machines-dark/]]></guid>
         <pubDate>Mon, 06 Mar 2023 00:00:00 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Sarcastic Humor Design AI Making Humans Obsolete Since 1956]]></title>
-        <link><![CDATA[https://geeksta.net/design/ai-making-humans-obsolete-since-1956-black/]]></link>
-        <description><![CDATA[<p>A design for people who teach machines, develop algorithms, write computer code, engineer technology and love sarcasm. Great for work, science and tech conferences and events where artificial intelligence and machine learning geeks &amp; nerds meet. /...</p><img src="https://geeksta.net/img/large/ai-making-humans-obsolete-since-1956-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/ai-making-humans-obsolete-since-1956-black/]]></guid>
-        <pubDate>Wed, 08 Feb 2023 00:00:00 </pubDate>
     </item>
 </channel></rss>
