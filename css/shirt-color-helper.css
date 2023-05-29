@@ -34,3 +34,7 @@
 .tab-content:not(.active) {
     display: none;
 }
+
+.tabs a.active {
+    background-color: #eeeeee;
+}
