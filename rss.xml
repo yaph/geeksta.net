@@ -7,6 +7,13 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[A Practical Guide to Sustainable Living: Embrace an Eco-Friendly Lifestyle]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/practical-guide-to-sustainable-living/]]></link>
+        <description><![CDATA[<p>Discover practical tips and strategies for sustainable living, reducing your carbon footprint, conserving energy, and embracing eco-friendly practices. Start your journey towards a greener future today!</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/practical-guide-to-sustainable-living/]]></guid>
+        <pubDate>Thu, 08 Jun 2023 18:15:45 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[Inside ChatGPT: A Self-Interview on Natural Language Processing]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/chatgpt-interview-2/]]></link>
         <description><![CDATA[<p>Read the first 2 out of 10 questions, along with their answers, from the book 'Inside ChatGPT,' which delves into the fascinating world of natural language processing.</p>]]></description>
@@ -68,12 +75,5 @@
         <description><![CDATA[<p>An interview with ChatGPT, I conducted on March 30th 2023, asking about GPT, creating language models, artificial and human intelligence, potential benefits and risks of AI, ethical considerations, and predictions for the future.</p>]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/chatgpt-interview/]]></guid>
         <pubDate>Thu, 30 Mar 2023 21:50:05 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Stable Diffusion Sampler and CFG Scale Parameter Comparison]]></title>
-        <link><![CDATA[https://geeksta.net/ai/stable-diffusion/sampler-cfg-comparison/]]></link>
-        <description><![CDATA[<p>Compare the influence of different samplers and CFG values when generating images with Stable Diffusion machine learning models.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/ai/stable-diffusion/sampler-cfg-comparison/]]></guid>
-        <pubDate>Wed, 15 Mar 2023 11:48:28 </pubDate>
     </item>
 </channel></rss>
