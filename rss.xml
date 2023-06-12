@@ -7,6 +7,13 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Effective Strategies for Prompting AI Language Models]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/prompting-ai-effectively/]]></link>
+        <description><![CDATA[<p>Learn effective strategies for prompting AI language models, maximizing output, and achieving desired results. Discover best practices and ethical considerations.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/prompting-ai-effectively/]]></guid>
+        <pubDate>Mon, 12 Jun 2023 22:09:04 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[A Practical Guide to Sustainable Living: Embrace an Eco-Friendly Lifestyle]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/practical-guide-to-sustainable-living/]]></link>
         <description><![CDATA[<p>Discover practical tips and strategies for sustainable living, reducing your carbon footprint, conserving energy, and embracing eco-friendly practices. Start your journey towards a greener future today!</p>]]></description>
@@ -68,12 +75,5 @@
         <description><![CDATA[<p>Learn how to format numbers in Python with f-strings. Use format_spec to specify width, alignment, scientific notation, and more.</p>]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/python-number-formatting-f-strings/]]></guid>
         <pubDate>Sun, 16 Apr 2023 23:32:12 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[AI Ethics, Advancements, and Limitations: An Interview with ChatGPT]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/chatgpt-interview/]]></link>
-        <description><![CDATA[<p>An interview with ChatGPT, I conducted on March 30th 2023, asking about GPT, creating language models, artificial and human intelligence, potential benefits and risks of AI, ethical considerations, and predictions for the future.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/chatgpt-interview/]]></guid>
-        <pubDate>Thu, 30 Mar 2023 21:50:05 </pubDate>
     </item>
 </channel></rss>
