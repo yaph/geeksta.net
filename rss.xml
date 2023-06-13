@@ -14,6 +14,27 @@
         <pubDate>Mon, 12 Jun 2023 22:09:04 </pubDate>
     </item>
     <item>
+        <title><![CDATA[Safeguarding Your Personal Data in the Digital Age: A Practical Guide]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/protecting-personal-data/]]></link>
+        <description><![CDATA[<p>Learn practical steps to protect personal data in the digital age. Strong passwords, 2FA, encryption, recognizing threats, software updates, and digital hygiene tips.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/protecting-personal-data/]]></guid>
+        <pubDate>Mon, 12 Jun 2023 00:50:15 </pubDate>
+    </item>
+    <item>
+        <title><![CDATA[Embracing Mindful Eating: Nurturing Health and Well-being Through Conscious Food Choices]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/mindful-eating/]]></link>
+        <description><![CDATA[<p>Discover the transformative power of mindful eating. Learn how slowing down, savoring each bite, and developing a healthy relationship with food can improve your well-being.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/mindful-eating/]]></guid>
+        <pubDate>Sun, 11 Jun 2023 14:25:32 </pubDate>
+    </item>
+    <item>
+        <title><![CDATA[Blockchain Technology: Revolutionizing Industries with Immutable Trust]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/blockchain-technology/]]></link>
+        <description><![CDATA[<p>Discover the potential of blockchain technology in finance, supply chain, healthcare, and cybersecurity. Explore its impact on industries in this informative article.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/blockchain-technology/]]></guid>
+        <pubDate>Thu, 08 Jun 2023 18:35:50 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[A Practical Guide to Sustainable Living: Embrace an Eco-Friendly Lifestyle]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/practical-guide-to-sustainable-living/]]></link>
         <description><![CDATA[<p>Discover practical tips and strategies for sustainable living, reducing your carbon footprint, conserving energy, and embracing eco-friendly practices. Start your journey towards a greener future today!</p>]]></description>
@@ -54,26 +75,5 @@
         <description><![CDATA[<p>I instructed ChatGPT how to create prompts for text to image generation using stable diffusion machine learning models, fed the prompts into InvokeAI to generate images and compiled them in this book.</p><img src="/img/geeklog/chernobyl-disaster-ai-portraits.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/chernobyl-disaster-imagined-by-artificial-intelligence/]]></guid>
         <pubDate>Wed, 26 Apr 2023 12:21:25 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Convert Web Pages to Ebooks in MOBI Format using Wget and Calibre]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/convert-web-pages-to-mobi/]]></link>
-        <description><![CDATA[<p>Learn how to convert web pages to Mobi format for easy reading on your Kindle or other e-readers. Follow this simple guide and enjoy your favorite articles on-the-go!</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/convert-web-pages-to-mobi/]]></guid>
-        <pubDate>Wed, 19 Apr 2023 22:49:34 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Unlock the Power of ImageMagick: A Beginner's Guide to Image Processing]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/imagemagick-tutorial/]]></link>
-        <description><![CDATA[<p>ImageMagick is a powerful open-source tool for image processing. This tutorial covers the basic commands for image conversion, resizing, cropping, rotating, and adding effects. Learn how to manipulate your images with this tutorial.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/imagemagick-tutorial/]]></guid>
-        <pubDate>Mon, 17 Apr 2023 01:35:24 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Python Number Formatting Made Easy with f-Strings]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/python-number-formatting-f-strings/]]></link>
-        <description><![CDATA[<p>Learn how to format numbers in Python with f-strings. Use format_spec to specify width, alignment, scientific notation, and more.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/python-number-formatting-f-strings/]]></guid>
-        <pubDate>Sun, 16 Apr 2023 23:32:12 </pubDate>
     </item>
 </channel></rss>
