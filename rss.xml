@@ -7,6 +7,13 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Unlocking the Potential of Podcasting as a Profitable Online Venture]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/podcasting-profitability-guide/]]></link>
+        <description><![CDATA[<p>Discover how podcasting can be a profitable online venture. Explore niche selection, content creation, monetization, and promotional strategies for success.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/podcasting-profitability-guide/]]></guid>
+        <pubDate>Wed, 14 Jun 2023 01:23:21 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[Effective Strategies for Prompting AI Language Models]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/prompting-ai-effectively/]]></link>
         <description><![CDATA[<p>Learn effective strategies for prompting AI language models, maximizing output, and achieving desired results. Discover best practices and ethical considerations.</p>]]></description>
@@ -68,12 +75,5 @@
         <description><![CDATA[<p>Discover the concept of recursion explained at various levels of difficulty, from elementary school to college and beyond, as ChatGPT breaks it down in five progressively detailed explanations.</p>]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/chatgpt-explains-recursion-in-5-levels-of-difficulty/]]></guid>
         <pubDate>Thu, 11 May 2023 01:24:32 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[The Chernobyl Disaster Imagined by Artificial Intelligence]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/chernobyl-disaster-imagined-by-artificial-intelligence/]]></link>
-        <description><![CDATA[<p>I instructed ChatGPT how to create prompts for text to image generation using stable diffusion machine learning models, fed the prompts into InvokeAI to generate images and compiled them in this book.</p><img src="/img/geeklog/chernobyl-disaster-ai-portraits.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/chernobyl-disaster-imagined-by-artificial-intelligence/]]></guid>
-        <pubDate>Wed, 26 Apr 2023 12:21:25 </pubDate>
     </item>
 </channel></rss>
