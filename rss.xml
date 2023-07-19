@@ -7,9 +7,41 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[GIL Deal With It - Funny Sarcastic Python Programmer Design Essential T-Shirt]]></title>
+        <link><![CDATA[https://geeksta.net/design/gil-deal-with-it/]]></link>
+        <description><![CDATA[<p>A global interpreter lock (GIL) is a mechanism used in computer-language interpreters to synchronize the execution of threads so that only one native thread (per process) can execute at a time. Popular interpreters that have a GIL are CPython and Ruby MRI.</p><img src="https://geeksta.net/img/large/gil-deal-with-it.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/gil-deal-with-it/]]></guid>
+        <pubDate>Tue, 18 Jul 2023 00:00:00 </pubDate>
+    </item>
+    <item>
+        <title><![CDATA[Elvis Operator "?:" Kotlin Programming Language Design Black]]></title>
+        <link><![CDATA[https://geeksta.net/design/elvis-operator-black/]]></link>
+        <description><![CDATA[<p>The Elvis operator in the Kotlin programming language, represented as "?:" is a shorthand for null safety. It returns the expression on the left if it's not null, otherwise, it returns the expression on the right.
+
+A cool, simple design for coders, devel</p><img src="https://geeksta.net/img/large/elvis-operator-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/elvis-operator-black/]]></guid>
+        <pubDate>Wed, 12 Jul 2023 00:00:00 </pubDate>
+    </item>
+    <item>
+        <title><![CDATA[Elvis Operator "?:" Kotlin Programming Language Design White]]></title>
+        <link><![CDATA[https://geeksta.net/design/elvis-operator-white/]]></link>
+        <description><![CDATA[<p>The Elvis operator in the Kotlin programming language, represented as "?:" is a shorthand for null safety. It returns the expression on the left if it's not null, otherwise, it returns the expression on the right.
+
+A cool, simple design for coders, devel</p><img src="https://geeksta.net/img/large/elvis-operator-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/elvis-operator-white/]]></guid>
+        <pubDate>Wed, 12 Jul 2023 00:00:00 </pubDate>
+    </item>
+    <item>
+        <title><![CDATA[Hack the Planet - Blue Globe Design for Computer Hackers Essential T-Shirt]]></title>
+        <link><![CDATA[https://geeksta.net/design/hack-the-planet-globe/]]></link>
+        <description><![CDATA[<p>This cool design for computer hackers, developers, programmers, security engineers, sysadmins shows an earth globe with partial outlines of the landmasses of the Americas, Europe and Africa enclosed by the text "HACK THE PLANET" in bold capital letters.</p><img src="https://geeksta.net/img/large/hack-the-planet-globe.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/hack-the-planet-globe/]]></guid>
+        <pubDate>Tue, 27 Jun 2023 00:00:00 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[Profitable Freelance Writing: Top Niches & Success Advice]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/profitable-freelance-writing/]]></link>
-        <description><![CDATA[<p>Discover the profitable world of freelance writing. Explore top niches & gain valuable success advice to build a sustainable income as a freelance writer.</p>]]></description>
+        <description><![CDATA[<p>Explore the profitable world of freelance writing. Learn about the top niches & gain valuable success advice to build a sustainable income as a freelance writer.</p>]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/profitable-freelance-writing/]]></guid>
         <pubDate>Wed, 14 Jun 2023 22:28:40 </pubDate>
     </item>
@@ -47,33 +79,5 @@
         <description><![CDATA[<p>Discover the potential of blockchain technology in finance, supply chain, healthcare, and cybersecurity. Explore its impact on industries in this informative article.</p>]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/blockchain-technology/]]></guid>
         <pubDate>Thu, 08 Jun 2023 18:35:50 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[A Practical Guide to Sustainable Living: Embrace an Eco-Friendly Lifestyle]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/practical-guide-to-sustainable-living/]]></link>
-        <description><![CDATA[<p>Discover practical tips and strategies for sustainable living, reducing your carbon footprint, conserving energy, and embracing eco-friendly practices. Start your journey towards a greener future today!</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/practical-guide-to-sustainable-living/]]></guid>
-        <pubDate>Thu, 08 Jun 2023 18:15:45 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Inside ChatGPT: A Self-Interview on Natural Language Processing]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/chatgpt-interview-2/]]></link>
-        <description><![CDATA[<p>Read the first 2 out of 10 questions, along with their answers, from the book 'Inside ChatGPT,' which delves into the fascinating world of natural language processing.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/chatgpt-interview-2/]]></guid>
-        <pubDate>Tue, 06 Jun 2023 23:29:50 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[ChatGPT to Markdown - A Bookmarklet to Export Chats]]></title>
-        <link><![CDATA[https://geeksta.net/tools/chatgpt-to-markdown/]]></link>
-        <description><![CDATA[<p>Export your ChatGPT conversations as markdown files with ease using the ChatGPT to Markdown bookmarklet. Preserve and share your valuable interactions conveniently.</p><img src="/img/tools/chatgpt-to-markdown.webp" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/tools/chatgpt-to-markdown/]]></guid>
-        <pubDate>Mon, 29 May 2023 23:01:15 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Prompting AI Language Models Cheat Sheet]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/prompting-cheat-sheet/]]></link>
-        <description><![CDATA[<p>Learn the art of effective prompting for AI language models with this cheat sheet, including key elements, examples, and tips to unlock their full potential.</p><img src="/img/geeklog/prompting-cheat-sheet.webp" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/prompting-cheat-sheet/]]></guid>
-        <pubDate>Tue, 16 May 2023 23:51:39 </pubDate>
     </item>
 </channel></rss>
