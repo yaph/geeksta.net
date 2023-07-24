@@ -7,6 +7,13 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Python's Global Interpreter Lock (GIL): Understanding the Pros and Cons]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/python-gil-pros-and-cons/]]></link>
+        <description><![CDATA[<p>Discover the pros and cons of Python's Global Interpreter Lock (GIL). Understand how to optimize performance and concurrency for your Python applications.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/python-gil-pros-and-cons/]]></guid>
+        <pubDate>Mon, 24 Jul 2023 22:21:46 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[GIL Deal With It - Funny Sarcastic Python Programmer Design Essential T-Shirt]]></title>
         <link><![CDATA[https://geeksta.net/design/gil-deal-with-it/]]></link>
         <description><![CDATA[<p>A global interpreter lock (GIL) is a mechanism used in computer-language interpreters to synchronize the execution of threads so that only one native thread (per process) can execute at a time. Popular interpreters that have a GIL are CPython and Ruby MRI.</p><img src="https://geeksta.net/img/large/gil-deal-with-it.jpg" alt="Preview Image">]]></description>
@@ -72,12 +79,5 @@ A cool, simple design for coders, devel</p><img src="https://geeksta.net/img/lar
         <description><![CDATA[<p>Discover the transformative power of mindful eating. Learn how slowing down, savoring each bite, and developing a healthy relationship with food can improve your well-being.</p>]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/mindful-eating/]]></guid>
         <pubDate>Sun, 11 Jun 2023 14:25:32 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Blockchain Technology: Revolutionizing Industries with Immutable Trust]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/blockchain-technology/]]></link>
-        <description><![CDATA[<p>Discover the potential of blockchain technology in finance, supply chain, healthcare, and cybersecurity. Explore its impact on industries in this informative article.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/blockchain-technology/]]></guid>
-        <pubDate>Thu, 08 Jun 2023 18:35:50 </pubDate>
     </item>
 </channel></rss>
