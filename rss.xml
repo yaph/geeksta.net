@@ -7,6 +7,13 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[How to Escape Colons in CSS Classes in JavaScript]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/how-to-escape-colons-in-css-classes-in-java-script/]]></link>
+        <description><![CDATA[<p>Learn how to select HTML elements with special CSS classes like 'empty:hidden' using JavaScript's document.querySelectorAll method.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/how-to-escape-colons-in-css-classes-in-java-script/]]></guid>
+        <pubDate>Thu, 07 Sep 2023 20:22:24 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[Python's Global Interpreter Lock (GIL): Understanding the Pros and Cons]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/python-gil-pros-and-cons/]]></link>
         <description><![CDATA[<p>Discover the pros and cons of Python's Global Interpreter Lock (GIL). Understand how to optimize performance and concurrency for your Python applications.</p>]]></description>
@@ -72,12 +79,5 @@ A cool, simple design for coders, devel</p><img src="https://geeksta.net/img/lar
         <description><![CDATA[<p>Learn practical steps to protect personal data in the digital age. Strong passwords, 2FA, encryption, recognizing threats, software updates, and digital hygiene tips.</p>]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/protecting-personal-data/]]></guid>
         <pubDate>Mon, 12 Jun 2023 00:50:15 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Embracing Mindful Eating: Nurturing Health and Well-being Through Conscious Food Choices]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/mindful-eating/]]></link>
-        <description><![CDATA[<p>Discover the transformative power of mindful eating. Learn how slowing down, savoring each bite, and developing a healthy relationship with food can improve your well-being.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/mindful-eating/]]></guid>
-        <pubDate>Sun, 11 Jun 2023 14:25:32 </pubDate>
     </item>
 </channel></rss>
