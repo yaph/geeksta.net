@@ -7,11 +7,29 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Morning Sunlight - Mountain Landscape Rising Sun Graphic]]></title>
+        <link><![CDATA[https://geeksta.net/design/morning-sunlight/]]></link>
+        <description><![CDATA[<p>According to science viewing sunlight early in the morning is one of the most important actions you can take to live a healthy life and perform well throughout your waking hours. Express your love for nature and well-being.
+
+Embrace the beauty of dawn wi</p><img src="https://geeksta.net/img/large/morning-sunlight.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/morning-sunlight/]]></guid>
+        <pubDate>Wed, 13 Sep 2023 00:00:00 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[How to Escape Colons in CSS Classes in JavaScript]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/how-to-escape-colons-in-css-classes-in-java-script/]]></link>
         <description><![CDATA[<p>Learn how to select HTML elements with special CSS classes like 'empty:hidden' using JavaScript's document.querySelectorAll method.</p>]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/how-to-escape-colons-in-css-classes-in-java-script/]]></guid>
         <pubDate>Thu, 07 Sep 2023 20:22:24 </pubDate>
+    </item>
+    <item>
+        <title><![CDATA[No Class No State Functional Programmer Propaganda Parody]]></title>
+        <link><![CDATA[https://geeksta.net/design/no-class-no-state-lambda-propaganda/]]></link>
+        <description><![CDATA[<p>A design for computer programmers, software developers and engineers who love functional programming. It shows the lambda symbol and the text NO CLASS NO STATE in a 20th century Japanese propaganda poster style.
+
+Functional code is classless and stateles</p><img src="https://geeksta.net/img/large/no-class-no-state-lambda-propaganda.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/no-class-no-state-lambda-propaganda/]]></guid>
+        <pubDate>Tue, 05 Sep 2023 00:00:00 </pubDate>
     </item>
     <item>
         <title><![CDATA[Python's Global Interpreter Lock (GIL): Understanding the Pros and Cons]]></title>
@@ -65,19 +83,5 @@ A cool, simple design for coders, devel</p><img src="https://geeksta.net/img/lar
         <description><![CDATA[<p>Discover how podcasting can be a profitable online venture. Explore niche selection, content creation, monetization, and promotional strategies for success.</p>]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/podcasting-profitability-guide/]]></guid>
         <pubDate>Wed, 14 Jun 2023 01:23:21 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Effective Strategies for Prompting AI Language Models]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/prompting-ai-effectively/]]></link>
-        <description><![CDATA[<p>Learn effective strategies for prompting AI language models, maximizing output, and achieving desired results. Discover best practices and ethical considerations.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/prompting-ai-effectively/]]></guid>
-        <pubDate>Mon, 12 Jun 2023 22:09:04 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Safeguarding Your Personal Data in the Digital Age: A Practical Guide]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/protecting-personal-data/]]></link>
-        <description><![CDATA[<p>Learn practical steps to protect personal data in the digital age. Strong passwords, 2FA, encryption, recognizing threats, software updates, and digital hygiene tips.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/protecting-personal-data/]]></guid>
-        <pubDate>Mon, 12 Jun 2023 00:50:15 </pubDate>
     </item>
 </channel></rss>
