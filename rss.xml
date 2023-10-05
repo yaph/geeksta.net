@@ -7,6 +7,51 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[There's No Test Like Production - Developer QA Tester Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/there-is-no-test-like-production-white-red/]]></link>
+        <description><![CDATA[<p>A funny design for developers, programmers, QA testers and software engineers showing the text THERE'S NO TEST LIKE PRODUCTION with bug and danger symbols. Testing in production is not a good practice but a reality in software development.
+
+Do you test y</p><img src="https://geeksta.net/img/large/there-is-no-test-like-production-white-red.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/there-is-no-test-like-production-white-red/]]></guid>
+        <pubDate>Wed, 04 Oct 2023 00:00:00 </pubDate>
+    </item>
+    <item>
+        <title><![CDATA[There's No Test Like Production - Developer QA Tester Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/there-is-no-test-like-production-black-red/]]></link>
+        <description><![CDATA[<p>A funny design for developers, programmers, QA testers and software engineers showing the text THERE'S NO TEST LIKE PRODUCTION with bug and danger symbols. Testing in production is not a good practice but a reality in software development.
+
+Do you test y</p><img src="https://geeksta.net/img/large/there-is-no-test-like-production-black-red.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/there-is-no-test-like-production-black-red/]]></guid>
+        <pubDate>Wed, 04 Oct 2023 00:00:00 </pubDate>
+    </item>
+    <item>
+        <title><![CDATA[I'll be Bach - Funny Music Humor Parody Design for Musicians]]></title>
+        <link><![CDATA[https://geeksta.net/design/i-ll-be-bach/]]></link>
+        <description><![CDATA[<p>A funny design for people who love the music of classical composer Johann Sebastian Bach and have a sense of humor. The design shows the text "I'll be Bach" and a stylized drawing of a pipe organ and a pianist dressed in Baroque style.
+
+Show your love fo</p><img src="https://geeksta.net/img/large/i-ll-be-bach.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/i-ll-be-bach/]]></guid>
+        <pubDate>Wed, 04 Oct 2023 00:00:00 </pubDate>
+    </item>
+    <item>
+        <title><![CDATA[YOUR PLASTIC BAG IS SO YESTERDAY - Environmental Activism]]></title>
+        <link><![CDATA[https://geeksta.net/design/your-plastic-bag-is-so-yesterday-orange-white/]]></link>
+        <description><![CDATA[<p>Plastic bags are one of the main causes of marine pollution. Plastic doesn't biodegrade and stays in the ocean forever. Plastic waste is everywhere. Make a statement and say no to plastic bags.
+
+A simple design for people who care about their environment</p><img src="https://geeksta.net/img/large/your-plastic-bag-is-so-yesterday-orange-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/your-plastic-bag-is-so-yesterday-orange-white/]]></guid>
+        <pubDate>Thu, 21 Sep 2023 00:00:00 </pubDate>
+    </item>
+    <item>
+        <title><![CDATA[YOUR PLASTIC BAG IS SO YESTERDAY - Environmental Activism]]></title>
+        <link><![CDATA[https://geeksta.net/design/your-plastic-bag-is-so-yesterday-blue-black/]]></link>
+        <description><![CDATA[<p>Plastic bags are one of the main causes of marine pollution. Plastic doesn't biodegrade and stays in the ocean forever. Plastic waste is everywhere. Make a statement and say no to plastic bags.
+
+A simple design for people who care about their environment</p><img src="https://geeksta.net/img/large/your-plastic-bag-is-so-yesterday-blue-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/your-plastic-bag-is-so-yesterday-blue-black/]]></guid>
+        <pubDate>Thu, 21 Sep 2023 00:00:00 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[PLANT POWERED Gorilla Cool Design for Vegans & Vegetarians]]></title>
         <link><![CDATA[https://geeksta.net/design/plant-powered-gorilla/]]></link>
         <description><![CDATA[<p>A cool negative space design showing the drawing of a gorilla head and the words PLANT POWERED. Great for people who live a vegan or vegetarian lifestyle.
@@ -46,44 +91,5 @@ Functional code is classless and stateles</p><img src="https://geeksta.net/img/l
         <description><![CDATA[<p>Discover the pros and cons of Python's Global Interpreter Lock (GIL). Understand how to optimize performance and concurrency for your Python applications.</p>]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/python-gil-pros-and-cons/]]></guid>
         <pubDate>Mon, 24 Jul 2023 22:21:46 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[GIL Deal With It - Funny Sarcastic Python Programmer Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/gil-deal-with-it/]]></link>
-        <description><![CDATA[<p>A global interpreter lock (GIL) is a mechanism used in computer-language interpreters to synchronize the execution of threads so that only one native thread (per process) can execute at a time. Popular interpreters that have a GIL are CPython and Ruby MRI.</p><img src="https://geeksta.net/img/large/gil-deal-with-it.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/gil-deal-with-it/]]></guid>
-        <pubDate>Tue, 18 Jul 2023 00:00:00 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Elvis Operator "?:" Kotlin Programming Language Design Black]]></title>
-        <link><![CDATA[https://geeksta.net/design/elvis-operator-black/]]></link>
-        <description><![CDATA[<p>The Elvis operator in the Kotlin programming language, represented as "?:" is a shorthand for null safety. It returns the expression on the left if it's not null, otherwise, it returns the expression on the right.
-
-A cool, simple design for coders, devel</p><img src="https://geeksta.net/img/large/elvis-operator-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/elvis-operator-black/]]></guid>
-        <pubDate>Wed, 12 Jul 2023 00:00:00 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Elvis Operator "?:" Kotlin Programming Language Design White]]></title>
-        <link><![CDATA[https://geeksta.net/design/elvis-operator-white/]]></link>
-        <description><![CDATA[<p>The Elvis operator in the Kotlin programming language, represented as "?:" is a shorthand for null safety. It returns the expression on the left if it's not null, otherwise, it returns the expression on the right.
-
-A cool, simple design for coders, devel</p><img src="https://geeksta.net/img/large/elvis-operator-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/elvis-operator-white/]]></guid>
-        <pubDate>Wed, 12 Jul 2023 00:00:00 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Hack the Planet - Blue Globe Design for Computer Hackers]]></title>
-        <link><![CDATA[https://geeksta.net/design/hack-the-planet-globe/]]></link>
-        <description><![CDATA[<p>This cool design for computer hackers, developers, programmers, security engineers, sysadmins shows an earth globe with partial outlines of the landmasses of the Americas, Europe and Africa enclosed by the text "HACK THE PLANET" in bold capital letters.</p><img src="https://geeksta.net/img/large/hack-the-planet-globe.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/hack-the-planet-globe/]]></guid>
-        <pubDate>Tue, 27 Jun 2023 00:00:00 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Profitable Freelance Writing: Top Niches & Success Advice]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/profitable-freelance-writing/]]></link>
-        <description><![CDATA[<p>Explore the profitable world of freelance writing. Learn about the top niches & gain valuable success advice to build a sustainable income as a freelance writer.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/profitable-freelance-writing/]]></guid>
-        <pubDate>Wed, 14 Jun 2023 22:28:40 </pubDate>
     </item>
 </channel></rss>
