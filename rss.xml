@@ -7,6 +7,24 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Data Scientist Math Egineering Coding Analysis Visualisation]]></title>
+        <link><![CDATA[https://geeksta.net/design/data-scientist-logo-white/]]></link>
+        <description><![CDATA[<p>A cool design for people working in data science with the text "DATA SCIENTIST" and a graphic highlighting different skills that are needed to work in this field. Great for job, conferences and events where data geeks & nerds meet.
+
+Data Science requires</p><img src="https://geeksta.net/img/large/data-scientist-logo-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/data-scientist-logo-white/]]></guid>
+        <pubDate>Thu, 05 Oct 2023 00:00:00 </pubDate>
+    </item>
+    <item>
+        <title><![CDATA[Data Scientist Math Egineering Coding Analysis Visualisation]]></title>
+        <link><![CDATA[https://geeksta.net/design/data-scientist-logo-black/]]></link>
+        <description><![CDATA[<p>A cool design for people working in data science with the text "DATA SCIENTIST" and a graphic highlighting different skills that are needed to work in this field. Great for job, conferences and events where data geeks & nerds meet.
+
+Data Science requires</p><img src="https://geeksta.net/img/large/data-scientist-logo-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/data-scientist-logo-black/]]></guid>
+        <pubDate>Thu, 05 Oct 2023 00:00:00 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[There's No Test Like Production - Developer QA Tester Design]]></title>
         <link><![CDATA[https://geeksta.net/design/there-is-no-test-like-production-white-red/]]></link>
         <description><![CDATA[<p>A funny design for developers, programmers, QA testers and software engineers showing the text THERE'S NO TEST LIKE PRODUCTION with bug and danger symbols. Testing in production is not a good practice but a reality in software development.
@@ -75,21 +93,5 @@ Embrace the beauty of dawn wi</p><img src="https://geeksta.net/img/large/morning
         <description><![CDATA[<p>Learn how to select HTML elements with special CSS classes like 'empty:hidden' using JavaScript's document.querySelectorAll method.</p>]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/how-to-escape-colons-in-css-classes-in-java-script/]]></guid>
         <pubDate>Thu, 07 Sep 2023 20:22:24 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[No Class No State Functional Programmer Propaganda Parody]]></title>
-        <link><![CDATA[https://geeksta.net/design/no-class-no-state-lambda-propaganda/]]></link>
-        <description><![CDATA[<p>A design for computer programmers, software developers and engineers who love functional programming. It shows the lambda symbol and the text NO CLASS NO STATE in a 20th century Japanese propaganda poster style.
-
-Functional code is classless and stateles</p><img src="https://geeksta.net/img/large/no-class-no-state-lambda-propaganda.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/no-class-no-state-lambda-propaganda/]]></guid>
-        <pubDate>Tue, 05 Sep 2023 00:00:00 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Python's Global Interpreter Lock (GIL): Understanding the Pros and Cons]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/python-gil-pros-and-cons/]]></link>
-        <description><![CDATA[<p>Discover the pros and cons of Python's Global Interpreter Lock (GIL). Understand how to optimize performance and concurrency for your Python applications.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/python-gil-pros-and-cons/]]></guid>
-        <pubDate>Mon, 24 Jul 2023 22:21:46 </pubDate>
     </item>
 </channel></rss>
