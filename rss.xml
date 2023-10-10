@@ -7,6 +7,15 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Binary Ghost Reboot Halloween Programmer/Developer Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/binary-ghost-reboot/]]></link>
+        <description><![CDATA[<p>This cool Halloween design for coders, computer programmers, software developers, engineers and IT geeks and nerds shows a booing ghost made of binary numbers and below the word "reboot" with the "boo" part highlighted.
+
+Show your spooky and terrifying s</p><img src="https://geeksta.net/img/large/binary-ghost-reboot.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/binary-ghost-reboot/]]></guid>
+        <pubDate>Mon, 09 Oct 2023 00:00:00 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[Data Scientist Math Egineering Coding Analysis Visualisation]]></title>
         <link><![CDATA[https://geeksta.net/design/data-scientist-logo-white/]]></link>
         <description><![CDATA[<p>A cool design for people working in data science with the text "DATA SCIENTIST" and a graphic highlighting different skills that are needed to work in this field. Great for job, conferences and events where data geeks & nerds meet.
@@ -86,12 +95,5 @@ Make a statement and show that you are powered by plants, love animals and repse
 Embrace the beauty of dawn wi</p><img src="https://geeksta.net/img/large/morning-sunlight.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/morning-sunlight/]]></guid>
         <pubDate>Wed, 13 Sep 2023 00:00:00 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[How to Escape Colons in CSS Classes in JavaScript]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/how-to-escape-colons-in-css-classes-in-java-script/]]></link>
-        <description><![CDATA[<p>Learn how to select HTML elements with special CSS classes like 'empty:hidden' using JavaScript's document.querySelectorAll method.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/how-to-escape-colons-in-css-classes-in-java-script/]]></guid>
-        <pubDate>Thu, 07 Sep 2023 20:22:24 </pubDate>
     </item>
 </channel></rss>
