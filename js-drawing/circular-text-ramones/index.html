@@ -54,15 +54,13 @@
         <pre><code class="language-javascript hljs">const w = 800,
     h = w,
     font_scale = w / 8.08,
-    star_scale = font_scale / 2.1,
     stroke_width = (w / 50),
     inner_circle = (w / 2) - font_scale,
     outer_circle = (w / 2),
     fgcolor = &#39;#ffffff&#39;,
-    symbol = &#39;٭&#39;,
-    symbol_count = 50,
-    text = &#39;ERICH ★ RICHARD ★ RALPH ★ JOHN ★&#39;,
     translate = &#39;translate(&#39; + w / 2 +&#39;,&#39; + h / 2 + &#39;)&#39;;
+
+let text = d3.select(&#39;#text&#39;).property(&#39;value&#39;);
 
 const svg = d3.select(&#39;#canvas&#39;).append(&#39;svg&#39;)
     .attr(&#39;width&#39;, w)
@@ -101,22 +99,12 @@ const text_names = svg.append(&#39;text&#39;)
     .style(&#39;font-size&#39;, font_scale + &#39;px&#39;)
     .style(&#39;font-family&#39;, &#39;Times New Roman&#39;);;
 
-const text_stars = svg.append(&#39;text&#39;)
-    .attr(&#39;x&#39;, 0)
-    .attr(&#39;dy&#39;, stroke_width * 2)
-    .style(&#39;font-size&#39;, star_scale + &#39;px&#39;);
-
 // Add the first names of the GOF authors.
 text_names.append(&#39;textPath&#39;)
     .attr(&#39;fill&#39;, fgcolor)
     .attr(&#39;xlink:href&#39;,&#39;#inner-circle&#39;)
     .text(text)
-
-// Add the stars below the names.
-text_stars.append(&#39;textPath&#39;)
-    .attr(&#39;fill&#39;, fgcolor)
-    .attr(&#39;xlink:href&#39;,&#39;#inner-circle&#39;)
-    .text(Array(symbol_count).join(symbol + &#39; &#39;));</code></pre>
+</code></pre>
     </div>
     <div class="col">
 
