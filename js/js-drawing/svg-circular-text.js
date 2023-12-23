@@ -1,13 +1,15 @@
 const w = 800,
     h = w,
     font_scale = w / 8.08,
+    star_scale = font_scale / 2.1,
     stroke_width = (w / 50),
     inner_circle = (w / 2) - font_scale,
     outer_circle = (w / 2),
     fgcolor = '#ffffff',
+    symbol = '٭',
+    symbol_count = 50,
+    text = 'ERICH ★ RICHARD ★ RALPH ★ JOHN ★',
     translate = 'translate(' + w / 2 +',' + h / 2 + ')';
-
-let text = d3.select('#text').property('value');
 
 const svg = d3.select('#canvas').append('svg')
     .attr('width', w)
@@ -46,8 +48,19 @@ const text_names = svg.append('text')
     .style('font-size', font_scale + 'px')
     .style('font-family', 'Times New Roman');;
 
+const text_stars = svg.append('text')
+    .attr('x', 0)
+    .attr('dy', stroke_width * 2)
+    .style('font-size', star_scale + 'px');
+
 // Add the first names of the GOF authors.
 text_names.append('textPath')
     .attr('fill', fgcolor)
     .attr('xlink:href','#inner-circle')
     .text(text)
+
+// Add the stars below the names.
+text_stars.append('textPath')
+    .attr('fill', fgcolor)
+    .attr('xlink:href','#inner-circle')
+    .text(Array(symbol_count).join(symbol + ' '));
