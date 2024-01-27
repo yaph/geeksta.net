@@ -7,6 +7,13 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[How to Examine a Remote Linux Server via SSH: A Sysadmin's Guide.]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/how-to-examine-a-remote-linux-server-via-ssh/]]></link>
+        <description><![CDATA[<p>A brief guide for system administrators to examine and troubleshoot a remote Linux server via SSH.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/how-to-examine-a-remote-linux-server-via-ssh/]]></guid>
+        <pubDate>Sat, 27 Jan 2024 16:34:50 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[SCHÖNEBERG 30 - Berlin Germany Neighborhood Nostalgia White Design]]></title>
         <link><![CDATA[https://geeksta.net/design/schöneberg-30-white/]]></link>
         <description><![CDATA[<p>Schöneberg is a district of the borough of Tempelhof-Schöneberg in the German capital Berlin. Until 1993, Schöneberg had the postal code 30. The area around Nollendorfplatz (Nollendorfkiez) has been the heart of gay life in Berlin since the 1920s.
@@ -86,14 +93,5 @@ A simple design showing the letters IT</p><img src="https://geeksta.net/img/larg
 A simple design showing the letters IT</p><img src="https://geeksta.net/img/large/it-spaced-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/it-spaced-black/]]></guid>
         <pubDate>Thu, 04 Jan 2024 00:00:00 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Paco Spanish Nickname Francisco Striped Yellow Orange Red]]></title>
-        <link><![CDATA[https://geeksta.net/design/paco-guitar-strings/]]></link>
-        <description><![CDATA[<p>This colorful design features the name PACO in bold, striped letters with six gradually thinning gaps that resemble the strings of a guitar. A fantastic gift for people named Paco who have a passion for playing and listening to guitar music.
-
-According t</p><img src="https://geeksta.net/img/large/paco-guitar-strings.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/paco-guitar-strings/]]></guid>
-        <pubDate>Wed, 03 Jan 2024 00:00:00 </pubDate>
     </item>
 </channel></rss>
