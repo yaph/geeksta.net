@@ -7,6 +7,15 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Hello World C Code - Dark Syntax Scheme Programmer Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/helloworld.c-rrt/]]></link>
+        <description><![CDATA[<p>The Hello World program is frequently used in programming books and is often the first program computer programmers try when learning a new programming language. Ever happened to you?
+
+This design for coders, developers, programmers, hackers or how you m</p><img src="https://geeksta.net/img/large/helloworld.c-rrt.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/helloworld.c-rrt/]]></guid>
+        <pubDate>Thu, 16 May 2024 00:00:00 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[50 Must-Know Bash Commands for Linux & Unix Sysadmins]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/must-know-bash-commands-for-linux-unix-sysadmins/]]></link>
         <description><![CDATA[<p>Boost your Linux system administration skills with this guide to 50 essential Bash commands. Organized by topic, learn file management, system monitoring, user permissions, and network tasks.</p>]]></description>
@@ -84,14 +93,5 @@ A funny design showing an angry looking cartoon style be</p><img src="https://ge
 D</p><img src="https://geeksta.net/img/large/i-test-in-production-safety-sign.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/i-test-in-production-safety-sign/]]></guid>
         <pubDate>Wed, 17 Apr 2024 00:00:00 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Artificial Intelligence Chinese Characters AI Geek/Nerd]]></title>
-        <link><![CDATA[https://geeksta.net/design/artificial-intelligence-chinese/]]></link>
-        <description><![CDATA[<p>Artificial intelligence (AI) was founded as an academic discipline in 1956 and with the advance of computers and technology has become omnipresent. This design shows "Artificial Intelligence" in Chinese characters on red space background.
-
-A design for p</p><img src="https://geeksta.net/img/large/artificial-intelligence-chinese.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/artificial-intelligence-chinese/]]></guid>
-        <pubDate>Mon, 15 Apr 2024 00:00:00 </pubDate>
     </item>
 </channel></rss>
