@@ -7,6 +7,24 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Los Alamos Old School Gothic Font Design Black Letters]]></title>
+        <link><![CDATA[https://geeksta.net/design/los-alamos-gothic-black/]]></link>
+        <description><![CDATA[<p>Los Alamos (Spanish for The Cottonwoods) is a census-designated place in Los Alamos County, New Mexico, United States. This retro vintage design shows "Los Alamos" in a curved blackletter font.
+
+Show off your unique style and combine classic with modern</p><img src="https://geeksta.net/img/large/los-alamos-gothic-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/los-alamos-gothic-black/]]></guid>
+        <pubDate>Mon, 20 May 2024 00:00:00 </pubDate>
+    </item>
+    <item>
+        <title><![CDATA[Los Alamos Old School Gothic Font Design White Letters]]></title>
+        <link><![CDATA[https://geeksta.net/design/los-alamos-gothic-white/]]></link>
+        <description><![CDATA[<p>Los Alamos (Spanish for The Cottonwoods) is a census-designated place in Los Alamos County, New Mexico, United States. This retro vintage design shows "Los Alamos" in a curved blackletter font.
+
+Show off your unique style and combine classic with modern</p><img src="https://geeksta.net/img/large/los-alamos-gothic-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/los-alamos-gothic-white/]]></guid>
+        <pubDate>Mon, 20 May 2024 00:00:00 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[Understanding the Bash Fork Bomb: A Breakdown of :(){ :|:& };:]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/understanding-bash-fork-bomb/]]></link>
         <description><![CDATA[<p>Explore the mechanics of the infamous Bash fork bomb, a destructive code snippet that can potentially crash Unix-like systems by rapidly consuming resources through exponential process replication.</p>]]></description>
@@ -73,23 +91,5 @@ A cool retro vintage design showing the sarcastic phrase "PUNK ROCK RUINED MY LI
 A funn</p><img src="https://geeksta.net/img/large/what-part-of-regex-dont-you-understand-dark.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/what-part-of-regex-dont-you-understand-dark/]]></guid>
         <pubDate>Thu, 25 Apr 2024 00:00:00 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[What Part Of Don't You Understand - Email Regex Coder Humor]]></title>
-        <link><![CDATA[https://geeksta.net/design/what-part-of-regex-dont-you-understand-light/]]></link>
-        <description><![CDATA[<p>A regular expression (regex, regexp) is a sequence of characters that specifies a match pattern for text. Regular expressions are powerful, versatile and can quickly become very hard to read and reason about, so many programmers avoid using them.
-
-A funn</p><img src="https://geeksta.net/img/large/what-part-of-regex-dont-you-understand-light.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/what-part-of-regex-dont-you-understand-light/]]></guid>
-        <pubDate>Thu, 25 Apr 2024 00:00:00 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[BYTE BITER Cute Vampire Robot Retro Sunray Sci-fi Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/byte-biter/]]></link>
-        <description><![CDATA[<p>A great design for science fiction enthusiasts, pop culture fans, tech geeks, and nerds who love robotics, engineering, vampires, and retro art.
-
-This design shows a cute vampire robot and the text BYTE BITER. In the background, a retro sunray pattern ad</p><img src="https://geeksta.net/img/large/byte-biter.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/byte-biter/]]></guid>
-        <pubDate>Mon, 22 Apr 2024 00:00:00 </pubDate>
     </item>
 </channel></rss>
