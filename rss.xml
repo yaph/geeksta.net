@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
 <channel><title>Geeksta RSS Feed</title>
     <link>/rss.xml</link>
     <description></description>
-    <lastBuildDate>Mon, 24 Apr 2023 01:29:06 </lastBuildDate>
+    <lastBuildDate>Wed, 29 May 2024 23:11:40 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
