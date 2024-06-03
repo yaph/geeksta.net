@@ -7,6 +7,35 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[How to Prevent SSH Timeout on Linux Systems]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/how-to-prevent-ssh-timeout-on-linux-systems/]]></link>
+        <description><![CDATA[<p>Prevent SSH timeouts on your Linux machine with a simple configuration change. Follow our quick guide to keep your SSH connection active during periods of inactivity.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/how-to-prevent-ssh-timeout-on-linux-systems/]]></guid>
+        <pubDate>Mon, 03 Jun 2024 13:08:49 </pubDate>
+        <content:encoded><![CDATA[
+        <p>If you've ever experienced your SSH connection freezing due to inactivity, you're not alone. This common issue can be particularly frustrating, but fortunately, there's a simple solution. By adjusting your SSH client configuration, you can keep the connection alive. Follow these steps to prevent SSH timeout on your Linux machine.</p>
+<h2 id="edit-the-ssh-configuration">Edit the SSH Configuration</h2>
+<p>First, you'll need to edit the SSH configuration file. If it doesn't already exist, create it. Start a terminal and open the file with your preferred editor, for example:</p>
+<pre><code class="language-bash">vim ~/.ssh/config
+</code></pre>
+<p>Next, add the following lines to ensure your SSH connection remains active:</p>
+<pre><code class="language-text">Host *
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+</code></pre>
+<p>Save the file and exit the text editor. For the changes to take effect, you need to restart your SSH connection.</p>
+<h2 id="explanation">Explanation</h2>
+<p>Here's what these settings do:</p>
+<ul>
+<li><code>ServerAliveInterval 60</code>: This sends a keep-alive packet to the server every 60 seconds.</li>
+<li><code>ServerAliveCountMax 3</code>: If the server does not respond after three keep-alive packets, the connection will be terminated.</li>
+</ul>
+<p>That's it! Your SSH connection should now remain active even during periods of inactivity. Adjust the <code>ServerAliveInterval</code> value as needed to fit your specific requirements.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>By following this short and simple guide, you can prevent your SSH connections from freezing due to inactivity. This small configuration change can save you from the hassle of repeatedly reconnecting to your remote servers.</p>
+        ]]></content:encoded>
+    </item>
+    <item>
         <title><![CDATA[Getting Started with Print-on-Demand Merchandise]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/getting-started-with-print-on-demand-merchandise/]]></link>
         <description><![CDATA[<p>Learn how to start a successful print-on-demand merchandise business with popular design themes and tips on navigating copyright laws. Boost your sales and creativity today!</p>]]></description>
@@ -506,60 +535,6 @@ elements.forEach(element =&gt; {
 <p>AI language models can inadvertently generate biased or inappropriate content. Be aware of the biases present in the model's training data and make conscious efforts to mitigate them. Avoid prompts that may lead to harmful or discriminatory outputs. Consider the ethical implications of the generated content and use the technology responsibly.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>Effectively prompting AI language models involves understanding the model's capabilities, providing clear instructions, utilizing system-level prompts, experimenting with sampling techniques, and iteratively refining prompts based on feedback. By following these strategies and best practices, you can maximize the output of AI language models and achieve desired results while being mindful of ethical considerations. Remember to experiment, iterate, and refine your prompts to get the most out of this powerful technology.</p>
-        ]]></content:encoded>
-    </item>
-    <item>
-        <title><![CDATA[Safeguarding Your Personal Data in the Digital Age: A Practical Guide]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/protecting-personal-data/]]></link>
-        <description><![CDATA[<p>Learn practical steps to protect personal data in the digital age. Strong passwords, 2FA, encryption, recognizing threats, software updates, and digital hygiene tips.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/protecting-personal-data/]]></guid>
-        <pubDate>Mon, 12 Jun 2023 00:50:15 </pubDate>
-        <content:encoded><![CDATA[
-        <p>In today's interconnected world, where personal data is constantly being shared and stored digitally, protecting your privacy has become more important than ever. Cybersecurity threats are on the rise, and individuals must take proactive measures to safeguard their personal data. This article aims to provide practical steps for protecting personal data and privacy, focusing on strong passwords, two-factor authentication, encryption techniques, recognizing and avoiding common cyber threats, regular software updates, and maintaining good digital hygiene.</p>
-<h2 id="strong-passwords">Strong Passwords</h2>
-<p>One of the fundamental steps in protecting personal data is using strong passwords. Here are some tips for creating strong passwords:</p>
-<ol>
-<li><strong>Length and Complexity</strong>: Ensure your password is at least 12 characters long and includes a combination of uppercase and lowercase letters, numbers, and special characters.</li>
-<li><strong>Avoid Common Choices</strong>: Do not use obvious passwords like "123456" or "password." These are easily guessable.</li>
-<li><strong>Unique for Each Account</strong>: Use a unique password for each online account you have. This prevents a single data breach from compromising multiple accounts.</li>
-<li><strong>Password Manager</strong>: Consider using a password manager to securely store and generate complex passwords.</li>
-</ol>
-<h2 id="two-factor-authentication-2fa">Two-Factor Authentication (2FA)</h2>
-<p>Two-factor authentication adds an extra layer of security to your accounts. It requires two forms of verification to access an account. Here's why you should enable 2FA:</p>
-<ol>
-<li><strong>Increased Security</strong>: Even if someone manages to obtain your password, they still need the second factor (such as a unique code sent to your phone) to access your account.</li>
-<li><strong>Widely Available</strong>: Most online services now offer 2FA. Enable it whenever possible for your accounts, especially for email, banking, and social media.</li>
-</ol>
-<h2 id="encryption-techniques">Encryption Techniques</h2>
-<p>Encryption helps protect your data from unauthorized access. It converts information into an unreadable format that can only be deciphered with a decryption key. Consider the following encryption practices:</p>
-<ol>
-<li><strong>Full Disk Encryption</strong>: Encrypt your device's storage to protect your data if your device is lost or stolen.</li>
-<li><strong>Secure Messaging Apps</strong>: Use end-to-end encrypted messaging apps to ensure that only you and the intended recipient can access the contents of your messages.</li>
-<li><strong>File and Folder Encryption</strong>: If you store sensitive files on your computer or in the cloud, encrypt them using tools or features provided by your operating system or cloud storage provider.</li>
-</ol>
-<h2 id="recognizing-and-avoiding-cyber-threats">Recognizing and Avoiding Cyber Threats</h2>
-<p>Understanding common cyber threats is crucial in protecting your personal data. Here are some tips to recognize and avoid them:</p>
-<ol>
-<li><strong>Phishing Attacks</strong>: Be cautious of suspicious emails, messages, or phone calls asking for personal information or financial details. Avoid clicking on unfamiliar links and verify the legitimacy of the source before providing any information.</li>
-<li><strong>Malware</strong>: Install reputable antivirus software and keep it up to date. Be cautious when downloading files or clicking on ads from untrusted sources.</li>
-<li><strong>Social Engineering</strong>: Be wary of individuals or messages attempting to manipulate you into divulging personal information or performing actions that may compromise your security.</li>
-</ol>
-<h2 id="regular-software-updates">Regular Software Updates</h2>
-<p>Keeping your software up to date is essential for protecting your personal data. Regular updates often include security patches that address vulnerabilities. Follow these guidelines:</p>
-<ol>
-<li><strong>Operating Systems</strong>: Enable automatic updates for your computer's operating system.</li>
-<li><strong>Applications</strong>: Regularly update your applications, including web browsers, email clients, and productivity software.</li>
-<li><strong>Firmware</strong>: Update firmware for devices like routers, smart home devices, and Internet of Things (IoT) devices to address potential security flaws.</li>
-</ol>
-<h2 id="digital-hygiene">Digital Hygiene</h2>
-<p>Maintaining good digital hygiene is essential in mitigating cybersecurity risks. Consider the following practices:</p>
-<ol>
-<li><strong>Regular Backups</strong>: Back up your important data regularly to protect against data loss caused by cyberattacks or hardware failures.</li>
-<li><strong>Privacy Settings</strong>: Review and adjust privacy settings on social media platforms and other online services to limit the amount of personal information you share.</li>
-<li><strong>Public Wi-Fi</strong>: Be cautious when using public Wi-Fi networks, as they can be vulnerable to eavesdropping. Avoid accessing sensitive information when connected to public Wi-Fi unless using a trusted Virtual Private Network (VPN).</li>
-</ol>
-<h2 id="conclusion">Conclusion</h2>
-<p>Protecting personal data and privacy requires a proactive approach in today's digital age. By implementing strong passwords, enabling two-factor authentication, utilizing encryption techniques, recognizing and avoiding common cyber threats, maintaining regular software updates, and practicing good digital hygiene, individuals can significantly reduce their risk of falling victim to cybercrime. Stay vigilant and follow these guidelines to ensure the security and privacy of your personal data.</p>
         ]]></content:encoded>
     </item>
 </channel></rss>

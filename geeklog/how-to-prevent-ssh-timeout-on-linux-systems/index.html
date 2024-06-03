@@ -3,9 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Everything is 4 in English Network Graph | Geeksta</title>
-<meta name="description" content="When you take any word in English and count its letters, then count the number of letters in that numeral and so on, you&#39;ll end up at 4."><meta name="author" content="Ramiro Gómez">        <meta property="og:image" content="https://i.imgur.com/gNgnNV2.jpg">
-    <link rel="canonical" itemprop="url" href="https://geeksta.net/visualizations/everything-is-4-graphed/">
+    <title>How to Prevent SSH Timeout on Linux Systems | Geeksta</title>
+<meta name="description" content="Prevent SSH timeouts on your Linux machine with a simple configuration change. Follow our quick guide to keep your SSH connection active during periods of inactivity."><meta name="author" content="Ramiro Gómez">    <link rel="canonical" itemprop="url" href="https://geeksta.net/geeklog/how-to-prevent-ssh-timeout-on-linux-systems/">
     <link rel="icon" type="image/png" href="/img/icon-small.png">
     <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Geeksta All Posts RSS feed">
     <link rel="stylesheet" href="/vendor/chota.min.css">
@@ -39,31 +38,41 @@
     <main class="container">
 <div class="row">
     <div class="col-9-md">
-        <h1>Everything is 4 in English Network Graph</h1>
-        <p><img src="https://i.imgur.com/gNgnNV2.jpg" alt="Everything is 4 in English Graph"></p>
-<p>When you take any word in English and count its letters, then count the
-number of letters in that numeral and so on, you'll end up at 4. Why is that? In English the word <em>four</em> is the only numeral that has the same number of letters as its number value and there are no endless loops between numerals.</p>
-<p>It turns out that this works in several other languages as well, including  Dutch, Estonian, German and Hebrew. In some languages like Italian or Croation 3 is the magic number and in some languages it doesn't work at all. In Spanish for example you may end in an endless loop between 4 (quatro) and 6 (seis).</p>
-<p>Head over to <a href="http://www.marijn.org/everything-is-4/">Everything is 4 on marijn.org</a> for more details on several languages and a form where you can enter a word and see how it eventually leads to 4 in English, 3 in Italian and so on.</p>
-<p>I learned about this yesterday <a href="https://www.reddit.com/r/todayilearned/comments/3cyltp/til_if_you_write_any_number_in_words_english/">via Today I Learned</a>, a place where knowledge that is fascinating and of questionable value at the same time is shared by the community.</p>
-<p>The <a href="http://blog.matthen.com/post/8554780863/pick-a-number-between-1-and-99-write-it-as-a">linked post by Matthew Henderson</a> features a graph showing the paths that lead to 4 for the numbers between 1 and 99. Having a soft spot for <a href="http://exploringdata.github.io/tags/sigmajs/">graph visualizations</a> I was intrigued by this and created the graph you see above. It shows the relationship between numerals and their letter counts for the numbers 0 to 100.</p>
-<p>I created the graph with <a href="https://gephi.github.io/">Gephi</a> using a <a href="https://en.wikipedia.org/wiki/Force-directed_graph_drawing">ForceAtlas</a> layout to position the nodes and the <a href="https://en.wikipedia.org/wiki/PageRank">PageRank</a> algorithm to scale them. That's why 4 is the biggest circle. The colors show the communities in the graph determined by their <a href="https://github.com/gephi/gephi/wiki/Modularity">Modularity</a>. No matter where you start, every path leads to the number 4.</p>
-<p>The graphic is available as prints in several sizes from <a href="http://www.redbubble.com/people/ramiro/works/15542892-everything-is-4-in-english-graph">Redbubble</a> and <a href="https://www.zazzle.com/everything_is_4_in_english_graph-228166472478305217?design.areas=%5Bdynamic%5D&amp;rf=238355915198956003&amp;tc=gkst">Zazzle</a>.</p>
+        <h1>How to Prevent SSH Timeout on Linux Systems</h1>
+        <p>If you've ever experienced your SSH connection freezing due to inactivity, you're not alone. This common issue can be particularly frustrating, but fortunately, there's a simple solution. By adjusting your SSH client configuration, you can keep the connection alive. Follow these steps to prevent SSH timeout on your Linux machine.</p>
+<h2 id="edit-the-ssh-configuration">Edit the SSH Configuration</h2>
+<p>First, you'll need to edit the SSH configuration file. If it doesn't already exist, create it. Start a terminal and open the file with your preferred editor, for example:</p>
+<pre><code class="language-bash">vim ~/.ssh/config
+</code></pre>
+<p>Next, add the following lines to ensure your SSH connection remains active:</p>
+<pre><code class="language-text">Host *
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+</code></pre>
+<p>Save the file and exit the text editor. For the changes to take effect, you need to restart your SSH connection.</p>
+<h2 id="explanation">Explanation</h2>
+<p>Here's what these settings do:</p>
+<ul>
+<li><code>ServerAliveInterval 60</code>: This sends a keep-alive packet to the server every 60 seconds.</li>
+<li><code>ServerAliveCountMax 3</code>: If the server does not respond after three keep-alive packets, the connection will be terminated.</li>
+</ul>
+<p>That's it! Your SSH connection should now remain active even during periods of inactivity. Adjust the <code>ServerAliveInterval</code> value as needed to fit your specific requirements.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>By following this short and simple guide, you can prevent your SSH connections from freezing due to inactivity. This small configuration change can save you from the hassle of repeatedly reconnecting to your remote servers.</p>
     </div>
     <div class="col">
 
 <h3>Featured Merch</h3>
 <figure class="preview">
-    <a href="/design/no-class-no-state-lambda-propaganda/">
-            <img class="b-lazy" src="/img/large/no-class-no-state-lambda-propaganda.jpg" alt="No Class No State Functional Programmer Propaganda Parody" />
-        <figcaption>No Class No State Functional Programmer Propaganda Parody</figcaption>
+    <a href="/design/bash-fork-bomb-white/">
+            <img class="b-lazy" src="/img/large/bash-fork-bomb-white.jpg" alt="Bash Fork Bomb - White Text for Unix/Linux Hackers" />
+        <figcaption>Bash Fork Bomb - White Text for Unix/Linux Hackers</figcaption>
     </a>
 </figure>
 
 
 <h3>Latest Posts</h3>
 <ul>
-        <li><a href="/geeklog/how-to-prevent-ssh-timeout-on-linux-systems/">How to Prevent SSH Timeout on Linux Systems</a></li>
         <li><a href="/geeklog/getting-started-with-print-on-demand-merchandise/">Getting Started with Print-on-Demand Merchandise</a></li>
         <li><a href="/geeklog/understanding-bash-fork-bomb/">Understanding the Bash Fork Bomb: A Breakdown of :(){ :|:& };:</a></li>
         <li><a href="/geeklog/must-know-bash-commands-for-linux-unix-sysadmins/">50 Must-Know Bash Commands for Linux & Unix Sysadmins</a></li>
@@ -83,18 +92,18 @@ number of letters in that numeral and so on, you'll end up at 4. Why is that? In
 <a href="/rss.xml" class="button primary">Subscribe to RSS Feed</a></li>    </div>
 </div>
 <hr>
-<p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time datetime="2015-07-13T13:06">July 13, 2015</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+<p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time datetime="2024-06-03T13:08">June 03, 2024</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
 <p><strong>Tags:</strong>
-    <a class="button outline" href="/tags/language/">language</a>
-    <a class="button outline" href="/tags/network-graph/">network graph</a>
-    <a class="button outline" href="/tags/visualization/">visualization</a>
+    <a class="button outline" href="/tags/howto/">howto</a>
+    <a class="button outline" href="/tags/linux/">linux</a>
+    <a class="button outline" href="/tags/sysadmin/">sysadmin</a>
 </p>
 <p class="text-grey"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p><hr>
 <p><strong>Share post:</strong>
-<a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/visualizations/everything-is-4-graphed/&t=Everything%20is%204%20in%20English%20Network%20Graph" class="button success">Facebook</a>
-<a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/visualizations/everything-is-4-graphed/&title=Everything%20is%204%20in%20English%20Network%20Graph" class="button success">LinkedIn</a>
-<a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/visualizations/everything-is-4-graphed/&title=Everything%20is%204%20in%20English%20Network%20Graph" class="button success">Reddit</a>
-<a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/visualizations/everything-is-4-graphed/&text=Everything%20is%204%20in%20English%20Network%20Graph" class="button success">Twitter</a>
+<a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/geeklog/how-to-prevent-ssh-timeout-on-linux-systems/&t=How%20to%20Prevent%20SSH%20Timeout%20on%20Linux%20Systems" class="button success">Facebook</a>
+<a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/geeklog/how-to-prevent-ssh-timeout-on-linux-systems/&title=How%20to%20Prevent%20SSH%20Timeout%20on%20Linux%20Systems" class="button success">LinkedIn</a>
+<a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/geeklog/how-to-prevent-ssh-timeout-on-linux-systems/&title=How%20to%20Prevent%20SSH%20Timeout%20on%20Linux%20Systems" class="button success">Reddit</a>
+<a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/geeklog/how-to-prevent-ssh-timeout-on-linux-systems/&text=How%20to%20Prevent%20SSH%20Timeout%20on%20Linux%20Systems" class="button success">Twitter</a>
 </p>
 <div class="card vm">
     <h3>Merchandise</h3>
