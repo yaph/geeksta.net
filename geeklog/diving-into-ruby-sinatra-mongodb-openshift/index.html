@@ -42,13 +42,13 @@
 <div class="row">
     <div class="col-9-md">
         <h1>Diving into Ruby, Sinatra and MongoDB on OpenShift</h1>
-        <p>My first encounter with the <a href="http://www.ruby-lang.org/">Ruby language</a> was at the <a href="http://www.ccc.de/de/updates/2002/datengarten9">9th Datengarten</a> hosted by <a href="http://www.ccc.de/">Chaos Computer Club</a> in Berlin back in 2002. I liked what was presented about Ruby, but I didn't take it serious enough to start coding in it and sticked with <a href="http://www.perl.org/">Perl</a> at that time.</p>
-<p>Though my interest in Ruby was refreshed several years ago with <a href="http://rubyonrails.org/">Ruby on Rails</a> really taking off as a Web development framework, I only started my first Ruby project <a href="https://coderstats.github.io/">Coderstats</a> a few weeks ago, almost 10 later.</p>
+        <p>My first encounter with the Ruby programming language was at the <a href="https://www.ccc.de/de/updates/2002/datengarten9">9th Datengarten</a> hosted by Chaos Computer Club in Berlin back in 2002. I liked what was presented about Ruby, but I didn't take it serious enough to start coding in it and sticked with Perl at that time.</p>
+<p>Though my interest in Ruby was refreshed several years ago with Ruby on Rails really taking off as a Web development framework, I only started my first Ruby project <a href="https://coderstats.github.io/">Coderstats</a> a few weeks ago, almost 10 later.</p>
 <p>One of the driving forces was discovering <a href="https://openshift.redhat.com/">RedHat's OpenShift PaaS</a> which offers free hosting of Java, Ruby, PHP, Perl, Python and node.js applications in the RedHat cloud. Another one was <a href="http://www.sinatrarb.com/">Sinatra</a>, because it is referred as the source of inspiration in most, if not all, interesting micro web frameworks I've seen and worked with.</p>
 <p>Being new to most of the technology stack I worked with, I decided to write this article about my experiences and what needs to be done to have a reference for future projects. Moreover, it may help other coders who want to get started with these technologies as well.</p>
 
 <h2>Getting Started with OpenShift</h2>
-<p>To use OpenShift Express you need to <a href="https://openshift.redhat.com/app/account/new">sign up for the service</a> and then install the client tools. The steps for installation outlined below were performed on an Ubuntu system, non Debian based Linux distributions may differ, on a Mac the procedure should be similar.</p>
+<p>To use OpenShift Express you need to sign up for the service and then install the client tools. The steps for installation outlined below were performed on an Ubuntu system, non Debian based Linux distributions may differ, on a Mac the procedure should be similar.</p>
 <p>I use <code>ALL CAPS</code> for placeholders, that need to be replaced appropriately, and the <code>$</code> sign to indicate the command prompt. When commands require login the <code>-l</code> option is followed by the OpenShift login name and you will be prompted for your OpenShift password.</p>
 <p>Install the required packages and the rhc gem:</p>
 <pre>
@@ -70,14 +70,14 @@ $ rhc app create -h
 </pre>
 
 <h2>Using Sinatra for the Application</h2>
-<p>The application is not yet using Sinatra. Fortunately, the OpenShift team has created a <a href="https://github.com/openshift/sinatra-example">Sinatra example app</a> that can be used right away as a starting point. To do so execute the following commands.</p>
+<p>The application is not yet using Sinatra. Fortunately, the OpenShift team has created a Sinatra example app that can be used right away as a starting point. To do so execute the following commands.</p>
 <pre>
 $ cd MYAPP
 $ git remote add upstream -m master git://github.com/openshift/sinatra-example.git
 $ git pull -s recursive -X theirs upstream master
 $ git push
 </pre>
-<p>Now the Sinatra application can be viewed at http://MYAPP-MYDOMAIN.rhcloud.com.</p>
+<p>Now the Sinatra application can be viewed at https://MYAPP-MYDOMAIN.rhcloud.com.</p>
 
 <h2>Testing on the Development Machine</h2>
 <p>Of course, you want to test your application on your development machine before deployment, don't you? To do so you need some additional Ruby gems:</p>
@@ -133,7 +133,7 @@ $ shotgun config.ru
 </pre>
 
 <h2>Using Templates</h2>
-<p>Sinatra can be used with <a href="http://www.sinatrarb.com/intro.html#Views%20/%20Templates">several template engines</a>. Having never used any Ruby template system before, I opted for <a href="http://liquidmarkup.org/">Liquid</a>, as its syntax resembles <a href="https://docs.djangoproject.com/en/dev/ref/templates/">Django templates</a> and <a href="http://jinja.pocoo.org/docs/">Jinja2</a>, which I am familiar with.</p>
+<p>Sinatra can be used with several template engines. Having never used any Ruby template system before, I opted for Liquid, as its syntax resembles Django templates and Jinja2, which I am familiar with.</p>
 <p>That said, I'm not sure whether Liquid was the best choice, as I miss features like template inheritance and blocks that are available in the two Python template systems mentioned. If you can recommend a template gem for Ruby that offers template inheritance, please leave a comment pointing to it.</p>
 <p>Anyway, to use Liquid add the line <code>gem 'liquid'</code> to the <code>Gemfile</code> and update the bundle.</p>
 
@@ -141,7 +141,7 @@ $ shotgun config.ru
 <p>Now it's time for some Ruby code, that shows how to use the components covered, to create a very simple Sinatra app.</p>
 <p>The <code>Gemfile</code> content:</p>
 <pre><code class="ruby">
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 gem 'rack', '1.1'
 gem 'sinatra'
 gem 'mongo', '1.5.2'
@@ -221,31 +221,22 @@ run MYMODULE::App
 
 <h2>What's Next?</h2>
 <p>If you came this far, you probably want to create a more useful application than the one above and the technology stack described in this article offers a lot more than is covered here.</p>
-<p>As mentioned earlier I created a Ruby application called <a href="https://coderstats.github.io/">Coderstats</a> to delve into the <a href="http://developer.github.com/">GitHub API</a>. For me <a href="https://github.com/">GitHub</a> is a fascinating <a href="/reviews/mining-social-web/">social network to explore</a> and a great platform to share code.</p>
+<p>As mentioned earlier I created a Ruby application called <a href="https://coderstats.github.io/">Coderstats</a> to delve into the GitHub API. For me <a href="https://github.com/">GitHub</a> is a fascinating <a href="/reviews/mining-social-web/">social network to explore</a> and a great platform to share code.</p>
 <p>So I did this with the <a href="https://github.com/yaph/coderstats">Coderstats source code</a>. Take a look at it for a more sophisticated example of using Sinatra and MongoDB on OpenShift.</p>
 <p>Needless to say that I'd love to get feedback, especially from more experienced Ruby programmers. I'm sure there is room for improvement.</p>
 <h2>The Bottom Line</h2>
-<div class="pull-left rm"><a href="http://www.flickr.com/photos/bionicteaching/6184118904/" title="charge by bionicteaching, on Flickr"><img src="http://farm7.staticflickr.com/6157/6184118904_a6721bef2f.jpg" width="333" height="500" alt="charge"><br>Source: charge</a></div>
+<div class="pull-left rm"><a href="https://www.flickr.com/photos/bionicteaching/6184118904/" title="charge by bionicteaching, on Flickr"><img src="https://farm7.staticflickr.com/6157/6184118904_a6721bef2f.jpg" width="333" height="500" alt="charge"><br>Source: charge</a></div>
 <p>As you see by the picture I chose, I'm very happy with my experience of diving into several technologies that were new to me. I started to learn a new language that has impressed me in many ways and that I certainly will consider for other projects in the future.</p>
 <p>This also applies to Sinatra, which provides a lot of what you need for writing Web applications while remaining straightforward to use. It's no surprise that it influenced so many other micro Web frameworks.</p>
 <p>I worked with MongoDB before, but not in production systems. While the basics, i.&nbsp;e. storing and retrieving data worked flawlessly, I had some trouble with its map/reduce implementation. I did not get the expected results when doing aggregations on the live system, even though the map/reduce script I wrote worked correctly on my development machine.</p>
 <p>It wasn't hard to come up with workaround, though, and the fact that MongoDB's API feels so much more natural to me than writing SQL queries is reason enough to work with it again.</p>
 <p>As stated above I'd rather work with a different template system, provided it offers the features I missed in Liquid. Nonetheless, I wouldn't rule out using it again, because of its familiar syntax and writing an extension for it was a straightforward experience as well.</p>
 <p>Last but not least I'm pretty excited about the OpenShift platform for several reasons. The service is based on open source stacks, so in contrast to Google's App Engine for example, vendor lock-in shouldn't be a concern.</p>
-<p>Moreover, <a href="http://www.redhat.com/about/news/press-archive/2012/3/Red-Hat-to-Sponsor-Open-Cloud-Conference-and-Host-Developer-Workshop-on-April-30">RedHat recently announced</a> that the automation components that power OpenShift will be open sourced during the upcoming <a href="http://www.opencloudconf.com/">Open Cloud Conference</a>, another proof of their commitment to open source.</p>
-<p>The only trouble I recently had was when the evironment variable <code>OPENSHIFT_APP_DIR</code>, I used in cron jobs, was temporarily missing and caused two scripts to stop working for some days. That being said, you probably want to wait with deploying business critical applications until OpenShift leaves developer preview.</p>
-<p>Anyway, what is currently offered for free is quite impressive, you can easily deploy applications written in Ruby, Python, Perl, node.js and if you really wish to in PHP and Java as well. If you miss something, you can suggest and <a href="https://www.redhat.com/openshift/community/ideas">vote on features</a> that you wish to see. Recent releases have shown that the team listens to the voice of the community.</p>
+<p>Moreover, <a href="https://www.redhat.com/about/news/press-archive/2012/3/Red-Hat-to-Sponsor-Open-Cloud-Conference-and-Host-Developer-Workshop-on-April-30">RedHat recently announced</a> that the automation components that power OpenShift will be open sourced during the upcoming Open Cloud Conference, another proof of their commitment to open source.</p>
+<p>The only trouble I recently had was when the environment variable <code>OPENSHIFT_APP_DIR</code>, I used in cron jobs, was temporarily missing and caused two scripts to stop working for some days. That being said, you probably want to wait with deploying business critical applications until OpenShift leaves developer preview.</p>
+<p>Anyway, what is currently offered for free is quite impressive, you can easily deploy applications written in Ruby, Python, Perl, node.js and if you really wish to in PHP and Java as well. If you miss something, you can suggest and vote on features that you wish to see. Recent releases have shown that the team listens to the voice of the community.</p>
 <p>I will certainly go on using OpenShift and hope that the upcoming paid subscription services on top of the free tier will be reasonably priced and offer a true alternative to existing PaaS providers.</p>
 <p>If you have any additions, corrections or general feedback, feel free to leave a comment below.</p>
-<h2>References</h2>
-<ul>
-<li><a href="https://openshift.redhat.com/app/getting_started">Getting started with Express</a></li>
-<li><a href="https://www.redhat.com/openshift/community/kb/kb-e1009-deploying-a-sinatra-application-on-openshift-express">Deploying a Sinatra application on OpenShift Express</a></li>
-<li><a href="https://github.com/openshift/sinatra-example">Sinatra on OpenShift Express Example</a></li>
-<li><a href="http://www.sinatrarb.com/documentation">Sinatra Documentation</a></li>
-<li><a href="http://docs.mongodb.org/ecosystem/platforms/red-hat-openshift/">MongoDB RedHat OpenShift</a></li>
-<li><a href="http://api.mongodb.org/ruby/current/file.TUTORIAL.html">MongoDB Ruby Driver Tutorial</a></li>
-</ul>
     </div>
     <div class="col">
 
