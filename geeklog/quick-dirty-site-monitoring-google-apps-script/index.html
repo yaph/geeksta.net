@@ -48,7 +48,7 @@
 <del><p> Unfortunately, <code>UrlFetchApp.fetch</code> throws an exception, instead of returning an object, that allows to retrieve the HTTP status code, therefore the gross exception message parsing.</p>
 <p>This has been a <a href="http://productforums.google.com/forum/#!topic/apps-script/m_HOPHx64X8">known issue</a> since 2010, and the <cite>ugly design</cite> design was supposed to be fixed according to a reply from a Google employee. Meanwhile, the Google Apps Script group was closed and support moved to <a href="http://stackoverflow.com/questions/tagged/google-apps-script">Stack Overflow</a>. So be it.</p>
 </del>
-<p class="label-info"><small>Updated the code to include the <code>muteHttpExceptions</code> parameter to <code>UrlFetchApp.fetch()</code> as pointed out by Eric Koleda in the comments below.</small></p>
+<p class="label-info"><small>Updated the code to include the <code>muteHttpExceptions</code> parameter to <code>UrlFetchApp.fetch()</code> as pointed out by Eric Koleda.</small></p>
 <p>At the end of the code, an email will be sent to the owner of the document, if errors were encountered during script execution.</p>
 <h2>How to use it</h2>
 <ol>
