@@ -60,10 +60,7 @@
 </code></pre>
 <p>Look for error messages like <code>device descriptor read error</code> or <code>unable to enumerate USB device</code>, which indicate problems with the USB connection.</p>
 <h2 id="step-4-list-usb-devices">Step 4: List USB Devices</h2>
-<p>Use <code>lsusb</code> to list all USB devices connected to your system:</p>
-<pre><code class="language-bash">lsusb
-</code></pre>
-<p>Check if your external hard drive appears in the list. If it does, it means the drive is recognized at some level but may still have issues.</p>
+<p>Use <code>lsusb</code> to list all USB devices connected to your system and check if your external hard drive appears in the list. If it does, it means the drive is recognized at some level but may still have issues.</p>
 <h2 id="step-5-disable-usb-autosuspend">Step 5: Disable USB Autosuspend</h2>
 <p>Sometimes, USB autosuspend can cause issues. Disable it by editing the GRUB configuration:</p>
 <p>Open and edit the GRUB configuration file:</p>
