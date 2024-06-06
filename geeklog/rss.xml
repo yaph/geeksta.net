@@ -88,7 +88,9 @@ sudo reboot
 <h2 id="conclusion">Conclusion</h2>
 <p>By following these steps, you should be able to diagnose and potentially resolve issues with your external hard drive on Linux. If the drive continues to malfunction, especially if it makes unusual noises, consider consulting professional data recovery services to avoid permanent data loss. Regular backups and careful handling of external drives can prevent many common issues.</p>
 <p>Keep your data safe and ensure your drives are functioning correctly to avoid any unnecessary headaches in the future.</p>
-        ]]></content:encoded>
+<hr>
+<p>Thank you for reading!</p>
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
     </item>
     <item>
         <title><![CDATA[How to Prevent SSH Timeout on Linux Systems]]></title>
@@ -117,7 +119,9 @@ sudo reboot
 <p>That's it! Your SSH connection should now remain active even during periods of inactivity. Adjust the <code>ServerAliveInterval</code> value as needed to fit your specific requirements.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>By following this short and simple guide, you can prevent your SSH connections from freezing due to inactivity. This small configuration change can save you from the hassle of repeatedly reconnecting to your remote servers.</p>
-        ]]></content:encoded>
+<hr>
+<p>Thank you for reading!</p>
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
     </item>
     <item>
         <title><![CDATA[Getting Started with Print-on-Demand Merchandise]]></title>
@@ -168,7 +172,9 @@ sudo reboot
 <p>Some content is free to use if it’s in the public domain or under a Creative Commons license. Make sure to check the specific usage rights. Websites like <a href="https://creativecommons.org/">Creative Commons</a> and <a href="https://commons.wikimedia.org/">Wikimedia Commons</a> can be excellent resources for finding such content.</p>
 <h2 id="summary">Summary</h2>
 <p>Starting a merchandise business with print-on-demand services offers a unique blend of creative freedom and low financial risk. By tapping into popular themes such as pop culture, humor, sports, and social causes, you can design products that resonate with a broad audience. Always remember to navigate copyright laws carefully, ensuring you have the necessary permissions or creating original content to avoid legal issues. With thoughtful planning and a keen eye on trends, you can build a distinctive brand that attracts and retains a loyal customer base. Happy designing!</p>
-        ]]></content:encoded>
+<hr>
+<p>Thank you for reading!</p>
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
     </item>
     <item>
         <title><![CDATA[Understanding the Bash Fork Bomb: A Breakdown of :(){ :|:& };:]]></title>
@@ -228,7 +234,9 @@ sudo reboot
 <p>Apply general security hardening techniques to reduce the system's attack surface. This includes keeping the system and software up to date, using firewalls, and employing security modules like SELinux or AppArmor. Restrict the use of privileged accounts and enforce the principle of least privilege.</p>
 <h2 id="summary">Summary</h2>
 <p>The Bash fork bomb <code>:(){ :|:&amp; };:</code> is a powerful example of how a simple script can exploit process creation to cause a denial-of-service attack. By defining a recursive function that calls itself multiple times in the background, it rapidly consumes system resources, leading to system instability or crashes. Understanding how this fork bomb works helps system administrators implement effective measures to mitigate such attacks, ensuring the stability and security of their systems. Always be cautious when running or allowing the execution of scripts, especially those that can manipulate system processes and resources.</p>
-        ]]></content:encoded>
+<hr>
+<p>Thank you for reading!</p>
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
     </item>
     <item>
         <title><![CDATA[50 Must-Know Bash Commands for Linux & Unix Sysadmins]]></title>
@@ -311,7 +319,9 @@ sudo reboot
 <h2 id="summary">Summary</h2>
 <p>Mastering Bash commands is crucial for system administrators to efficiently manage Linux and Unix systems. These 50 must-know commands, each with a variety of options to tailor their behavior, equip sysadmins with a powerful arsenal. From navigating file systems and manipulating data to monitoring system resources and managing user access, these commands offer unparalleled control and flexibility.</p>
 <p>Their versatility lies in the ability to modify their functionality through command-line options, enabling administrators to perform complex tasks with precision. Whether you're a seasoned veteran or a budding sysadmin, proficiency in leveraging these commands and their extensive options will empower you to streamline administrative workflows, optimize system performance, and maintain a secure and efficient computing environment.</p>
-        ]]></content:encoded>
+<hr>
+<p>Thank you for reading!</p>
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
     </item>
     <item>
         <title><![CDATA[How to Examine a Remote Linux Server via SSH: A Sysadmin's Guide.]]></title>
@@ -386,7 +396,9 @@ sudo apt install &lt;package&gt;
 <li><a href="https://www.reddit.com/r/sysadmin/wiki/index/">reddit Sysadmin Wiki</a></li>
 <li><a href="https://linuxcommand.org/tlcl.php">The Linux Command Line by William Shotts</a></li>
 </ul>
-        ]]></content:encoded>
+<hr>
+<p>Thank you for reading!</p>
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
     </item>
     <item>
         <title><![CDATA[How to Escape Colons in CSS Classes in JavaScript]]></title>
@@ -424,7 +436,9 @@ elements.forEach(element =&gt; {
 &lt;/html&gt;
 </code></pre>
 <p>In this example, the JavaScript code selects all elements with the <code>empty:hidden</code> class and changes their content. The backslash before the colon is used to correctly escape the colon character in the CSS class name.</p>
-        ]]></content:encoded>
+<hr>
+<p>Thank you for reading!</p>
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
     </item>
     <item>
         <title><![CDATA[Python's Global Interpreter Lock (GIL): Understanding the Pros and Cons]]></title>
@@ -497,7 +511,9 @@ elements.forEach(element =&gt; {
 <li><a href="https://realpython.com/python-gil/">What Is the Python Global Interpreter Lock (GIL)? - Real Python</a></li>
 <li><a href="https://realpython.com/python-concurrency/">Speed Up Your Python Program With Concurrency - Real Python</a></li>
 </ul>
-        ]]></content:encoded>
+<hr>
+<p>Thank you for reading!</p>
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
     </item>
     <item>
         <title><![CDATA[Profitable Freelance Writing: Top Niches & Success Advice]]></title>
@@ -551,7 +567,9 @@ elements.forEach(element =&gt; {
 <p><strong>Example</strong>: Set a goal to write and submit a certain number of articles or pitches each week. Track your progress and adjust your approach as needed.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>The world of freelance writing offers abundant opportunities for those seeking a creative and flexible career. By focusing on the top niches outlined in this article and following the tips for success, you can embark on a fulfilling journey as a freelance writer, building a sustainable income while doing what you love. Remember, consistency, perseverance, and continuous improvement are key to thriving in this competitive field.</p>
-        ]]></content:encoded>
+<hr>
+<p>Thank you for reading!</p>
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
     </item>
     <item>
         <title><![CDATA[Unlocking the Potential of Podcasting as a Profitable Online Venture]]></title>
@@ -587,6 +605,8 @@ elements.forEach(element =&gt; {
 </ol>
 <h2 id="conclusion">Conclusion</h2>
 <p>Podcasting presents a wealth of opportunities for aspiring content creators to turn their passion into a profitable online venture. By selecting the right niche, creating compelling content, strategically growing your audience, exploring various monetization methods, and employing effective promotional strategies, you can thrive in this competitive space. Remember, consistency, authenticity, and building strong connections with your audience are key ingredients for success in the podcasting world. So, grab your microphone, unleash your creativity, and embark on an exciting journey as a podcaster.</p>
-        ]]></content:encoded>
+<hr>
+<p>Thank you for reading!</p>
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
     </item>
 </channel></rss>
