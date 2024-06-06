@@ -7,6 +7,13 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Troubleshooting External Hard Drives on Linux]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/troubleshooting-external-hard-drives-on-linux/]]></link>
+        <description><![CDATA[<p>Learn how to troubleshoot and resolve issues with your external hard drive on Linux. Follow these steps to diagnose problems, check connections, and recover data.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/troubleshooting-external-hard-drives-on-linux/]]></guid>
+        <pubDate>Thu, 06 Jun 2024 13:18:59 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[Hello World Slightly Obfuscated C Code - Dark Syntax Scheme]]></title>
         <link><![CDATA[https://geeksta.net/design/helloworld-obfuscated.c-rrt/]]></link>
         <description><![CDATA[<p>The Hello World program is frequently used in programming books and is often the first program computer programmers try when learning a new programming language. Ever happened to you?
@@ -81,15 +88,6 @@ Show your sense of programmer humor with this funny moti</p><img src="https://ge
 
 Show off your unique style and combine classic with modern</p><img src="https://geeksta.net/img/large/los-alamos-gothic-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/los-alamos-gothic-black/]]></guid>
-        <pubDate>Mon, 20 May 2024 00:00:00 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Los Alamos Old School Gothic Font Design White Letters]]></title>
-        <link><![CDATA[https://geeksta.net/design/los-alamos-gothic-white/]]></link>
-        <description><![CDATA[<p>Los Alamos (Spanish for The Cottonwoods) is a census-designated place in Los Alamos County, New Mexico, United States. This retro vintage design shows "Los Alamos" in a curved blackletter font.
-
-Show off your unique style and combine classic with modern</p><img src="https://geeksta.net/img/large/los-alamos-gothic-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/los-alamos-gothic-white/]]></guid>
         <pubDate>Mon, 20 May 2024 00:00:00 </pubDate>
     </item>
 </channel></rss>

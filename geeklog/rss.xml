@@ -7,6 +7,93 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Troubleshooting External Hard Drives on Linux]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/troubleshooting-external-hard-drives-on-linux/]]></link>
+        <description><![CDATA[<p>Learn how to troubleshoot and resolve issues with your external hard drive on Linux. Follow these steps to diagnose problems, check connections, and recover data.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/troubleshooting-external-hard-drives-on-linux/]]></guid>
+        <pubDate>Thu, 06 Jun 2024 13:18:59 </pubDate>
+        <content:encoded><![CDATA[
+        <p>External hard drives are essential for many users, providing extra storage, backup capabilities, and portability. However, encountering issues where the drive is no longer recognized by your Linux-based operating system can be frustrating. I just had this unfortunate experience a few days ago. I gathered the information I researched in this guide and hope it will help you troubleshoot and resolve common problems to regain access to your data.</p>
+<h2 id="step-1-check-physical-connections">Step 1: Check Physical Connections</h2>
+<p>Before diving into software troubleshooting, ensure that all physical connections are secure:</p>
+<ol>
+<li>Unplug the hard drive and plug it back in securely.</li>
+<li>Use a different USB port on your computer.</li>
+<li>If possible, use a different USB cable.</li>
+<li>Connect the hard drive to another computer to see if it is recognized.</li>
+</ol>
+<h2 id="step-2-check-power-supply">Step 2: Check Power Supply</h2>
+<ol>
+<li>If the hard drive has an external power supply, ensure it is properly connected and working.</li>
+<li>Make sure the USB port provides enough power, especially for larger drives. Using a powered USB hub might help.</li>
+</ol>
+<h2 id="step-3-check-system-messages">Step 3: Check System Messages</h2>
+<p>After reconnecting the drive, open a terminal and check the <code>dmesg</code> output for any relevant messages:</p>
+<pre><code class="language-bash">sudo dmesg | grep -i usb
+</code></pre>
+<p>Look for error messages like <code>device descriptor read error</code> or <code>unable to enumerate USB device</code>, which indicate problems with the USB connection.</p>
+<h2 id="step-4-list-usb-devices">Step 4: List USB Devices</h2>
+<p>Use <code>lsusb</code> to list all USB devices connected to your system:</p>
+<pre><code class="language-bash">lsusb
+</code></pre>
+<p>Check if your external hard drive appears in the list. If it does, it means the drive is recognized at some level but may still have issues.</p>
+<h2 id="step-5-disable-usb-autosuspend">Step 5: Disable USB Autosuspend</h2>
+<p>Sometimes, USB autosuspend can cause issues. Disable it by editing the GRUB configuration:</p>
+<p>Open and edit the GRUB configuration file:</p>
+<pre><code class="language-bash">sudo vim /etc/default/grub
+</code></pre>
+<p>Add <code>usbcore.autosuspend=-1</code> to the <code>GRUB_CMDLINE_LINUX_DEFAULT</code> line. It should look like this:</p>
+<pre><code class="language-ini">GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet splash usbcore.autosuspend=-1&quot;
+</code></pre>
+<p>Update GRUB and reboot:</p>
+<pre><code class="language-bash">sudo update-grub
+sudo reboot
+</code></pre>
+<p>Then check the <code>autosuspend</code> value, it should be <code>-1</code>:</p>
+<pre><code class="language-bash">cat /sys/module/usbcore/parameters/autosuspend
+</code></pre>
+<p>If this doesn't help, I suggest undoing the changes.</p>
+<h2 id="step-6-use-a-live-usb">Step 6: Use a Live USB</h2>
+<p>Create a live USB stick with a different Linux distribution and boot from it:</p>
+<ol>
+<li>Use a tool like <a href="https://rufus.ie/">Rufus</a> or <a href="https://unetbootin.github.io/">UNetbootin</a> to create a live USB stick.</li>
+<li>Boot your computer from the live USB stick.</li>
+<li>After booting, connect your external hard drive and see if it is recognized.</li>
+</ol>
+<h2 id="step-7-check-disk-health">Step 7: Check Disk Health</h2>
+<p>If the drive is making unusual noises, it might indicate hardware failure. In this case, stop using the drive immediately to prevent further damage. If the data is critical, consider professional data recovery services.</p>
+<h2 id="step-8-attempt-data-recovery">Step 8: Attempt Data Recovery</h2>
+<p>If the drive is recognized but you can't access the data, use tools like TestDisk and PhotoRec:</p>
+<p>Install TestDisk and PhotoRec:</p>
+<pre><code class="language-bash">sudo apt-get install testdisk
+</code></pre>
+<p>Run TestDisk:</p>
+<pre><code class="language-bash">sudo testdisk
+</code></pre>
+<p>Follow the prompts to analyze and recover partitions or files.</p>
+<h2 id="opening-the-case">Opening the Case</h2>
+<p>If none of the above steps helped and the warranty on your hard drive is still valid, contact the seller or manufacturer for assistance. If the warranty has expired and you decide to open the hard drive case, here are some tips:</p>
+<h3 id="what-to-look-out-for">What to Look Out For:</h3>
+<ol>
+<li><strong>Tamper-Evident Seal</strong>: You may notice a tamper-evident seal on the screws. These seals are typically made of materials like paper, plastic, vinyl, or foil. They are designed to show if the drive has been opened.</li>
+<li><strong>Physical Damage</strong>: Look for visible signs of physical damage such as burned components, disconnected parts, or corrosion.</li>
+<li><strong>Connections and Cables</strong>: Ensure that all internal connections and cables are intact and securely connected.</li>
+<li><strong>PCB Inspection</strong>: Examine the printed circuit board (PCB) for any signs of damage or burnt areas.</li>
+<li><strong>Heads and Platters</strong>: Avoid touching the platters or the read/write heads, as they are extremely sensitive and can be damaged easily.</li>
+</ol>
+<h3 id="handling-and-safety-tips">Handling and Safety Tips:</h3>
+<ol>
+<li>Handle these materials minimally and wash your hands afterward.</li>
+<li>Avoid ingesting any part of the seal. Seek medical advice if accidentally ingested.</li>
+<li>Avoid inhaling any dust or particles if the seal is damaged.</li>
+<li>If you have sensitive skin, wear gloves when handling to avoid potential irritation.</li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>By following these steps, you should be able to diagnose and potentially resolve issues with your external hard drive on Linux. If the drive continues to malfunction, especially if it makes unusual noises, consider consulting professional data recovery services to avoid permanent data loss. Regular backups and careful handling of external drives can prevent many common issues.</p>
+<p>Keep your data safe and ensure your drives are functioning correctly to avoid any unnecessary headaches in the future.</p>
+        ]]></content:encoded>
+    </item>
+    <item>
         <title><![CDATA[How to Prevent SSH Timeout on Linux Systems]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/how-to-prevent-ssh-timeout-on-linux-systems/]]></link>
         <description><![CDATA[<p>Prevent SSH timeouts on your Linux machine with a simple configuration change. Follow our quick guide to keep your SSH connection active during periods of inactivity.</p>]]></description>
@@ -503,38 +590,6 @@ elements.forEach(element =&gt; {
 </ol>
 <h2 id="conclusion">Conclusion</h2>
 <p>Podcasting presents a wealth of opportunities for aspiring content creators to turn their passion into a profitable online venture. By selecting the right niche, creating compelling content, strategically growing your audience, exploring various monetization methods, and employing effective promotional strategies, you can thrive in this competitive space. Remember, consistency, authenticity, and building strong connections with your audience are key ingredients for success in the podcasting world. So, grab your microphone, unleash your creativity, and embark on an exciting journey as a podcaster.</p>
-        ]]></content:encoded>
-    </item>
-    <item>
-        <title><![CDATA[Effective Strategies for Prompting AI Language Models]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/prompting-ai-effectively/]]></link>
-        <description><![CDATA[<p>Learn effective strategies for prompting AI language models, maximizing output, and achieving desired results. Discover best practices and ethical considerations.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/prompting-ai-effectively/]]></guid>
-        <pubDate>Mon, 12 Jun 2023 22:09:04 </pubDate>
-        <content:encoded><![CDATA[
-        <p>AI language models, such as OpenAI's GPT-3.5, are powerful tools that can generate human-like text given a prompt. However, effectively prompting these models requires careful consideration and strategy. In this tutorial, we will explore various strategies and best practices to maximize the output and achieve desired results when interacting with AI language models.</p>
-<h2 id="understand-the-models-capabilities-and-limitations">Understand the Model's Capabilities and Limitations</h2>
-<p>Before using an AI language model, it is essential to understand its capabilities and limitations. Familiarize yourself with the model's training data, knowledge cutoff, and any specific guidelines or constraints provided by the model's documentation. Knowing the model's strengths and weaknesses will help you craft better prompts.</p>
-<h2 id="provide-clear-instructions">Provide Clear Instructions</h2>
-<p>Clear and specific instructions in your prompt are vital to guide the AI language model effectively. Clearly state the desired outcome or objective you want the model to achieve. If necessary, break down complex instructions into smaller steps to avoid ambiguity.</p>
-<h2 id="start-with-a-well-defined-context">Start with a Well-Defined Context</h2>
-<p>Providing a well-defined context at the beginning of your prompt can help set the tone and direction for the model's response. You can introduce a persona, establish a fictional scenario, or provide relevant background information. This context helps the model generate more coherent and relevant responses.</p>
-<h2 id="specify-the-format-and-length-of-the-response">Specify the Format and Length of the Response</h2>
-<p>To obtain the desired output, explicitly specify the format and length you expect from the AI model. For example, you can ask for a bullet-point list, a paragraph, or even a code snippet. Specifying the length helps prevent overly verbose or excessively brief responses.</p>
-<h2 id="utilize-system-level-prompts">Utilize System-Level Prompts</h2>
-<p>AI language models often provide system-level instructions that guide the behavior of the model. These instructions can help control attributes like tone, politeness, or level of creativity. Experiment with system-level prompts to influence the model's output to align with your requirements.</p>
-<h2 id="experiment-with-temperature-and-top-k-sampling">Experiment with Temperature and Top-K Sampling</h2>
-<p>Temperature and Top-K sampling are techniques used to control the randomness of the model's responses. Temperature determines the degree of randomness, with higher values (e.g., 0.8) resulting in more diverse outputs. Top-K sampling limits the model's choice to the top K most likely tokens, providing more control over the generated text. Adjust these parameters based on the desired level of creativity and coherence.</p>
-<h2 id="iterative-refinement">Iterative Refinement</h2>
-<p>When interacting with AI models, consider an iterative approach. If the initial output is not satisfactory, you can refine and clarify your instructions based on the model's previous response. This allows you to guide the model towards generating more accurate and relevant content.</p>
-<h2 id="use-prompts-as-suggestions">Use Prompts as Suggestions</h2>
-<p>Rather than expecting the model to generate an entire piece of content from scratch, use prompts as suggestions or starting points. Provide partial sentences or key points to direct the model's response. This approach helps the AI model understand your intent better and generates more coherent and relevant text.</p>
-<h2 id="incorporate-human-feedback">Incorporate Human Feedback</h2>
-<p>Iteratively refining the prompt based on human feedback can significantly improve the model's output. By providing explicit feedback on what worked and what didn't, you can guide the model towards generating more accurate and contextually appropriate responses.</p>
-<h2 id="be-mindful-of-biases-and-ethical-considerations">Be Mindful of Biases and Ethical Considerations</h2>
-<p>AI language models can inadvertently generate biased or inappropriate content. Be aware of the biases present in the model's training data and make conscious efforts to mitigate them. Avoid prompts that may lead to harmful or discriminatory outputs. Consider the ethical implications of the generated content and use the technology responsibly.</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>Effectively prompting AI language models involves understanding the model's capabilities, providing clear instructions, utilizing system-level prompts, experimenting with sampling techniques, and iteratively refining prompts based on feedback. By following these strategies and best practices, you can maximize the output of AI language models and achieve desired results while being mindful of ethical considerations. Remember to experiment, iterate, and refine your prompts to get the most out of this powerful technology.</p>
         ]]></content:encoded>
     </item>
 </channel></rss>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troubleshooting External Hard Drives on Linux | Geeksta</title>
+<meta name="description" content="Learn how to troubleshoot and resolve issues with your external hard drive on Linux. Follow these steps to diagnose problems, check connections, and recover data."><meta name="author" content="Ramiro Gómez">    <link rel="canonical" itemprop="url" href="https://geeksta.net/geeklog/troubleshooting-external-hard-drives-on-linux/">
+    <link rel="icon" type="image/png" href="/img/icon-small.png">
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Geeksta All Posts RSS feed">
+    <link rel="stylesheet" href="/vendor/chota.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/dropdown.css">
+</head>
+<body>
+    <header><nav class="nav dark">
+        <div class="nav-left">
+            <a class="brand" href="/"><img class="logo" src="/img/icon-small.png" alt="logo">Geeksta</a>
+        </div>
+        <ul class="nav-right">
+            <li>
+                <a href="#">Sections ▾</a>
+                <ul class="dropdown">
+                    <li><a href="/reviews/">Book Reviews</a></li>
+                    <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
+                    <li><a href="/visualizations/">Data Visualizations</a></li>
+                    <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
+                    <li><a href="/events/">Geek Events</a></li>
+                    <li><a href="/screencasts/">Screencasts</a></li>
+                    <li><a href="/videos/">Videos</a></li>
+                </ul>
+            </li>
+            <li><a href="/geeklog/">Geeklog</a></li>
+            <li><a href="/merch/">Merch</a></li>
+            <li><a href="/tools/">Tools</a></li>
+        </ul>
+    </nav></header>
+
+    <main class="container">
+<div class="row">
+    <div class="col-9-md">
+        <h1>Troubleshooting External Hard Drives on Linux</h1>
+        <p>External hard drives are essential for many users, providing extra storage, backup capabilities, and portability. However, encountering issues where the drive is no longer recognized by your Linux-based operating system can be frustrating. I just had this unfortunate experience a few days ago. I gathered the information I researched in this guide and hope it will help you troubleshoot and resolve common problems to regain access to your data.</p>
+<h2 id="step-1-check-physical-connections">Step 1: Check Physical Connections</h2>
+<p>Before diving into software troubleshooting, ensure that all physical connections are secure:</p>
+<ol>
+<li>Unplug the hard drive and plug it back in securely.</li>
+<li>Use a different USB port on your computer.</li>
+<li>If possible, use a different USB cable.</li>
+<li>Connect the hard drive to another computer to see if it is recognized.</li>
+</ol>
+<h2 id="step-2-check-power-supply">Step 2: Check Power Supply</h2>
+<ol>
+<li>If the hard drive has an external power supply, ensure it is properly connected and working.</li>
+<li>Make sure the USB port provides enough power, especially for larger drives. Using a powered USB hub might help.</li>
+</ol>
+<h2 id="step-3-check-system-messages">Step 3: Check System Messages</h2>
+<p>After reconnecting the drive, open a terminal and check the <code>dmesg</code> output for any relevant messages:</p>
+<pre><code class="language-bash">sudo dmesg | grep -i usb
+</code></pre>
+<p>Look for error messages like <code>device descriptor read error</code> or <code>unable to enumerate USB device</code>, which indicate problems with the USB connection.</p>
+<h2 id="step-4-list-usb-devices">Step 4: List USB Devices</h2>
+<p>Use <code>lsusb</code> to list all USB devices connected to your system:</p>
+<pre><code class="language-bash">lsusb
+</code></pre>
+<p>Check if your external hard drive appears in the list. If it does, it means the drive is recognized at some level but may still have issues.</p>
+<h2 id="step-5-disable-usb-autosuspend">Step 5: Disable USB Autosuspend</h2>
+<p>Sometimes, USB autosuspend can cause issues. Disable it by editing the GRUB configuration:</p>
+<p>Open and edit the GRUB configuration file:</p>
+<pre><code class="language-bash">sudo vim /etc/default/grub
+</code></pre>
+<p>Add <code>usbcore.autosuspend=-1</code> to the <code>GRUB_CMDLINE_LINUX_DEFAULT</code> line. It should look like this:</p>
+<pre><code class="language-ini">GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet splash usbcore.autosuspend=-1&quot;
+</code></pre>
+<p>Update GRUB and reboot:</p>
+<pre><code class="language-bash">sudo update-grub
+sudo reboot
+</code></pre>
+<p>Then check the <code>autosuspend</code> value, it should be <code>-1</code>:</p>
+<pre><code class="language-bash">cat /sys/module/usbcore/parameters/autosuspend
+</code></pre>
+<p>If this doesn't help, I suggest undoing the changes.</p>
+<h2 id="step-6-use-a-live-usb">Step 6: Use a Live USB</h2>
+<p>Create a live USB stick with a different Linux distribution and boot from it:</p>
+<ol>
+<li>Use a tool like <a href="https://rufus.ie/">Rufus</a> or <a href="https://unetbootin.github.io/">UNetbootin</a> to create a live USB stick.</li>
+<li>Boot your computer from the live USB stick.</li>
+<li>After booting, connect your external hard drive and see if it is recognized.</li>
+</ol>
+<h2 id="step-7-check-disk-health">Step 7: Check Disk Health</h2>
+<p>If the drive is making unusual noises, it might indicate hardware failure. In this case, stop using the drive immediately to prevent further damage. If the data is critical, consider professional data recovery services.</p>
+<h2 id="step-8-attempt-data-recovery">Step 8: Attempt Data Recovery</h2>
+<p>If the drive is recognized but you can't access the data, use tools like TestDisk and PhotoRec:</p>
+<p>Install TestDisk and PhotoRec:</p>
+<pre><code class="language-bash">sudo apt-get install testdisk
+</code></pre>
+<p>Run TestDisk:</p>
+<pre><code class="language-bash">sudo testdisk
+</code></pre>
+<p>Follow the prompts to analyze and recover partitions or files.</p>
+<h2 id="opening-the-case">Opening the Case</h2>
+<p>If none of the above steps helped and the warranty on your hard drive is still valid, contact the seller or manufacturer for assistance. If the warranty has expired and you decide to open the hard drive case, here are some tips:</p>
+<h3 id="what-to-look-out-for">What to Look Out For:</h3>
+<ol>
+<li><strong>Tamper-Evident Seal</strong>: You may notice a tamper-evident seal on the screws. These seals are typically made of materials like paper, plastic, vinyl, or foil. They are designed to show if the drive has been opened.</li>
+<li><strong>Physical Damage</strong>: Look for visible signs of physical damage such as burned components, disconnected parts, or corrosion.</li>
+<li><strong>Connections and Cables</strong>: Ensure that all internal connections and cables are intact and securely connected.</li>
+<li><strong>PCB Inspection</strong>: Examine the printed circuit board (PCB) for any signs of damage or burnt areas.</li>
+<li><strong>Heads and Platters</strong>: Avoid touching the platters or the read/write heads, as they are extremely sensitive and can be damaged easily.</li>
+</ol>
+<h3 id="handling-and-safety-tips">Handling and Safety Tips:</h3>
+<ol>
+<li>Handle these materials minimally and wash your hands afterward.</li>
+<li>Avoid ingesting any part of the seal. Seek medical advice if accidentally ingested.</li>
+<li>Avoid inhaling any dust or particles if the seal is damaged.</li>
+<li>If you have sensitive skin, wear gloves when handling to avoid potential irritation.</li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>By following these steps, you should be able to diagnose and potentially resolve issues with your external hard drive on Linux. If the drive continues to malfunction, especially if it makes unusual noises, consider consulting professional data recovery services to avoid permanent data loss. Regular backups and careful handling of external drives can prevent many common issues.</p>
+<p>Keep your data safe and ensure your drives are functioning correctly to avoid any unnecessary headaches in the future.</p>
+    </div>
+    <div class="col">
+
+<h3>Featured Merch</h3>
+<figure class="preview">
+    <a href="/design/got-backups-white/">
+            <img class="b-lazy" src="/img/large/got-backups-white.jpg" alt="got backups? Funny System Administrator Design - White Text" />
+        <figcaption>got backups? Funny System Administrator Design - White Text</figcaption>
+    </a>
+</figure>
+
+
+<h3>Latest Posts</h3>
+<ul>
+        <li><a href="/geeklog/how-to-prevent-ssh-timeout-on-linux-systems/">How to Prevent SSH Timeout on Linux Systems</a></li>
+        <li><a href="/geeklog/getting-started-with-print-on-demand-merchandise/">Getting Started with Print-on-Demand Merchandise</a></li>
+        <li><a href="/geeklog/understanding-bash-fork-bomb/">Understanding the Bash Fork Bomb: A Breakdown of :(){ :|:& };:</a></li>
+        <li><a href="/geeklog/must-know-bash-commands-for-linux-unix-sysadmins/">50 Must-Know Bash Commands for Linux & Unix Sysadmins</a></li>
+</ul>
+
+<h3>Featured Book</h3>
+<figure class="preview">
+    <a href="https://www.amazon.com/dp/B0C5B9JG57?tag=geeksta-20">
+        <img alt="eBook cover" src="/img/books/chatgpt-interview-prompting.jpg"><br>
+        <figcaption>Buy on Amazon</figcaption>
+    </a>
+</figure>
+
+<hr>
+
+<a href="/rss.xml" class="button primary">Subscribe to RSS Feed</a></li>    </div>
+</div>
+<hr>
+<p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time datetime="2024-06-06T13:18">June 06, 2024</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+<p><strong>Tags:</strong>
+    <a class="button outline" href="/tags/guide/">guide</a>
+    <a class="button outline" href="/tags/linux/">linux</a>
+    <a class="button outline" href="/tags/hardware/">hardware</a>
+</p>
+<p class="text-grey"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p><hr>
+<p><strong>Share post:</strong>
+<a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/geeklog/troubleshooting-external-hard-drives-on-linux/&t=Troubleshooting%20External%20Hard%20Drives%20on%20Linux" class="button success">Facebook</a>
+<a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/geeklog/troubleshooting-external-hard-drives-on-linux/&title=Troubleshooting%20External%20Hard%20Drives%20on%20Linux" class="button success">LinkedIn</a>
+<a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/geeklog/troubleshooting-external-hard-drives-on-linux/&title=Troubleshooting%20External%20Hard%20Drives%20on%20Linux" class="button success">Reddit</a>
+<a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/geeklog/troubleshooting-external-hard-drives-on-linux/&text=Troubleshooting%20External%20Hard%20Drives%20on%20Linux" class="button success">Twitter</a>
+</p>
+<div class="card vm">
+    <h3>Merchandise</h3>
+    <div class="row">
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/caution-i-test-in-production/">
+            <img class="b-lazy" src="/img/large/caution-i-test-in-production.jpg" alt="I Test in Production - Funny Developer Caution Sign Design" />
+        <figcaption>I Test in Production - Funny Developer Caution Sign Design</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/hack-the-planet-green/">
+            <img class="b-lazy" src="/img/large/hack-the-planet-green.jpg" alt="Hack the Planet - Green Globe Design for Computer Hackers" />
+        <figcaption>Hack the Planet - Green Globe Design for Computer Hackers</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/run-bsd/">
+            <img class="b-lazy" src="/img/large/run-bsd.jpg" alt="RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins" />
+        <figcaption>RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/shrug-it-works-on-my-machine-medium-white/">
+            <img class="b-lazy" src="/img/large/shrug-it-works-on-my-machine-medium-white.jpg" alt="Shrug It Works On My Machine Funny Programmer Excuse White Design" />
+        <figcaption>Shrug It Works On My Machine Funny Programmer Excuse White Design</figcaption>
+    </a>
+</figure>
+
+    </div>
+</div>
+
+</div>    </main>
+
+    <footer class="dark"><div class="container">
+        Geeksta elsewhere: <a href="https://www.instagram.com/g33ksta/">Instagram</a> • <a href="https://mastodon.social/@geeksta">Mastodon</a> • <a href="https://www.tiktok.com/@g33ksta">TikTok</a> • <a href="https://www.youtube.com/@geeksta">YouTube</a>
+        <br>
+        © 2010 - 2024 Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/rss.xml">RSS Feed</a></p>
+    </div></footer>
+
+    <script src="/compiled/script.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MFQJ09STFE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MFQJ09STFE');
+</script>
+</body>
+</html>
