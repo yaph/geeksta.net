@@ -42,10 +42,10 @@
 <div class="row">
     <div class="col-9-md">
         <h1>Exploring Expressions of Emotions in GitHub Commit Messages</h1>
-        <p>Last week <a href="https://github.com/blog/1112-data-at-github">GitHub announced</a> that the data collected over at the <a href="http://www.githubarchive.org/">GitHub Archive</a> was made available as a public dataset on <a href="https://bigquery.cloud.google.com/">Google's BigQuery</a> web service. Pretty exciting news for data analysts, considering that the timeline dataset currently contains more than 7 million records and is growing quickly.</p>
-<p>To see what developers come up with analyzing the GitHub timeline and language correlation datasets, they started <a href="https://github.com/blog/1118-the-github-data-challenge">a data challenge</a> which is open for submissions until May 21st.</p>
-<p>Being interested in both natural and programming languages, I decided to expand on this <a href="http://andrewvos.com/2011/02/21/amount-of-profanity-in-git-commit-messages-per-programming-language/">analysis of profanity in git commit messages per programming language</a> with a more general exploration of expressions of emotions as well as looking at messages indicating issues and those containing swear words.</p>
-<h2 class="clearfix">Method of Collecting and Analyzing Data</h2>
+        <p>Last week <a href="https://github.com/blog/1112-data-at-github">GitHub announced</a> that the data collected over at the <a href="https://www.githubarchive.org/">GitHub Archive</a> was made available as a public dataset on <a href="https://bigquery.cloud.google.com/">Google's BigQuery</a> web service. Pretty exciting news for data analysts, considering that the timeline dataset currently contains more than 7 million records and is growing quickly.</p>
+<p>To see what developers come up with analyzing the GitHub timeline and language correlation datasets, they started <a href="https://github.blog/2012-05-01-the-github-data-challenge/">a data challenge</a> which is open for submissions until May 21st.</p>
+<p>Being interested in both natural and programming languages, I decided to expand on an analysis of profanity in git commit messages per programming language by <a href="https://andrewvos.com/">Andrew Vos</a> with a more general exploration of expressions of emotions as well as looking at messages indicating issues and those containing swear words.</p>
+<h2>Method of Collecting and Analyzing Data</h2>
 <p>Reading millions of commit messages and categorizing them is certainly not a task I'd be able to accomplish in less than 3 weeks and honestly wouldn't want to. Instead, I assembled lists of words expressing emotions using the resources listed at the <a href="#resources">bottom of this article</a> and wrote corresponding database queries to count occurrences of these words grouped by programming languages.</p>
 <p>Then for each language I calculated the percentage of messages that meet the criteria, i. e. contain certain expressions, in relation to the total number of commits for that language. Only non-empty commit messages of projects with an assigned language were included.</p>
 <p>Since the number of commits varies considerably across different languages only those with at least 40,000 commits in the analyzed time frame were accounted for, resulting in a total of of 2,526,650 commit messages within the set of languages displayed in the bar chart below:</p>
@@ -59,11 +59,11 @@
 <h2>Emotions, Issues, Swearing</h2>
 <p>The rest of this article is divided into sections for the analyzed emotions: anger, joy, amusement and surprise. Additionally there are two separate sections for messages indicating issues and messages containing swear words, which likely indicate emotions, but you can't say which without further analysis.</p>
 <p>Each of the following sections contains a regular expression used in the database query, a chart for the corresponding emotion, showing the percentages of commit messages per programming language, that match the expression, and a few example messages.</p>
-<p>I do not link to the individual commits, as the URLs appear truncated in the githubarchive dataset. I presume you know how to use search engines, if you really want to track down a particular message.</p>
+<p>I do not link to the individual commits, as the URLs appear truncated in the GitHub Archive dataset. I presume you know how to use search engines, if you really want to track down a particular message.</p>
 <p>One last warning before you go on reading at your workplace: this article, most notably the part about swearing, contains more than <a href="https://en.wikipedia.org/wiki/Seven_dirty_words">seven dirty words</a>.</p>
 <h3>Anger</h3>
 <p>Let's start with anger, an emotion one would expect to be expressed rather frequently in commit messages, as things often go wrong and the process of tracking down bugs and fixing them can be pretty annoying.</p>
-<p>What stands out in the anger chart compared to the rest is the prominent gap between the "most angry language" VimL and the other languages. No wonder that Vi is also referred to as <a href="https://www.zazzle.com/vi_vi_vi_editor_of_the_beast_funny_black_shirt-235295704058936493?rf=238355915198956003&tc=gkst">the editor of the beast</a>.</p>
+<p>What stands out in the anger chart compared to the rest is the prominent gap between the "most angry language" VimL and the other languages. No wonder that Vi is also referred to as <a href="/design/vi-vi-vi-editor-of-the-beast-white/">the editor of the beast</a>.</p>
 <h4>Regular Expression</h4>
 <pre><code class="regexp">
 (?i)\b(a+rgh|angry|annoyed|annoying|appalled|bitter|cranky|hate|hating|mad)\b'
@@ -120,7 +120,7 @@
 <h4>Example Messages</h4>
 <ul>
 <li><cite>rotfl :D</cite> (PHP)</li>
-<li><cite>Hilarious new quote from America's favorite bigot.</cite> (Perl) - Editor's note: Yes, this refers to <a href="http://spreadingsantorum.com/">Santorum</a>.</li>
+<li><cite>Hilarious new quote from America's favorite bigot.</cite> (Perl) - Editor's note: Yes, this refers to Santorum.</li>
 <li><cite>Whoops. didn't patch it correctly. Hehe, I need to test things better...</cite> (Shell)</li>
 <li><cite>haha! Rewrote basically the entire app.</cite> (Ruby)</li>
 <li><cite>I have a direction now! haha!</cite> (JavaScript)</li>
@@ -177,7 +177,7 @@
 <h3>Swearing (NSFW)</h3>
 <p>Now to the final and most hilarious part of this analysis: exploring occurrences of swear words, which likely indicate some kind of issue with the code, language, framework or whatever. The chart looks pretty balanced compared to the previous ones and VimL wins again.</p>
 <p>Assembling a list of swear words is pretty hard. You easily end up with hundreds or even thousands of words and variations, so you somehow need to limit them. One group of words I left out are those referring to genitals, because there is such a wealth of expressions and running some queries indicated that they are used rarely in commit messages.</p>
-<p>To only include frequently used words, I searched for references and found this article about the <a href="http://www.11points.com/TV/11_Most_Popular_Swear_Words_On_Network_TV_in_2010">most popular swear words on network TV in 2010</a>. I created the following regular expression based on it with a few words and acronyms added.</p>
+<p>To only include frequently used words, I searched for references and found this article about the <a href="https://11points.com/11-popular-swear-words-network-tv-2010/">most popular swear words on network TV in 2010</a>. I created the following regular expression based on it with a few words and acronyms added.</p>
 <h4>Regular Expression</h4>
 <pre><code class="regexp">
 (?i)\b(wtf|wth|omfg|hell|ass|bitch|bullshit|bloody|fucking?|shit+y?|crap+y?)\b|\b(fuck|damn|piss|screw|suck)e?d?\b
@@ -221,19 +221,16 @@
 <li>review of all found candidates</li>
 <li>categorization of all sample messages by humans</li>
 </ul>
-<p>What other improvements come to your mind and why do you think they'd work better? You can leave feedback by creating an issue in the <a href="https://github.com/yaph/gh-emotional-commits">project's GitHub repo</a>.</p>
+<p>What other improvements come to your mind and why do you think they'd work better? You can leave feedback by creating an issue in the <a href="https://github.com/yaph/gh-emotional-commits">project's GitHub repo</a>, which contains the database queries and scripts for calculating percentages and generating charts used in this article.</p>
 <p>Instead of ending with a statement like "X is the most friendly language because of Y", which wasn't my intention anyway, I conclude that exploring GitHub data can be a lot of fun and I'm curious to see what other developers get out of the GitHub Archive.</p>
-<h3>PS</h3>
-<p>The database queries and the scripts for calculating percentages and generating charts are available from <a href="https://github.com/yaph/gh-emotional-commits">this GitHub repo</a>.</p>
 <h2 id="resources">Language Resources</h2>
 <ul>
-<li><a href="http://grammar.yourdictionary.com/parts-of-speech/interjections/list-of-interjections.html">List of Common English Interjections</a></li>
-<li><a href="http://www.derose.net/steve/resources/emotionwords/ewords.html">The Compass DeRose Guide to Emotion Words</a></li>
-<li><a href="http://www.sba.pdx.edu/faculty/mblake/448/FeelingsList.pdf">Vocabulary of Emotions</a></li>
+<li><a href="https://www.yourdictionary.com/articles/examples-interjections">Common English Interjections</a></li>
+<li><a href="http://www.derose.net/derose/steve/resources/emotionwords/ewords.html">The Compass DeRose Guide to Emotion Words</a></li>
 <li><a href="http://www.urbandictionary.com/">Urban Dictionary</a></li>
 </ul>
 <h2>Update</h2>
-<p class="small">Denis Roussel who made the well-deserved <a href="https://github.com/blog/1162-github-data-challenge-winners">1st place in the challenge</a> with his awesome GitHub activity dashboard Octoboard recently integrated emotions, issues and swearing in his tool.</p>
+<p class="small">Denis Roussel who made the well-deserved <a href="https://github.blog/2012-06-12-github-data-challenge-winners/">1st place in the challenge</a> with his awesome GitHub activity dashboard Octoboard recently integrated emotions, issues and swearing in his tool.</p>
 <p>The original Octoboard has been discontinued.</p>
     </div>
     <div class="col">

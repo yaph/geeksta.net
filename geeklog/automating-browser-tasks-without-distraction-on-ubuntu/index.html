@@ -42,7 +42,7 @@
 <div class="row">
     <div class="col-9-md">
         <h1>Automating Browser Tasks without Distraction on Ubuntu</h1>
-        <p>I use <a href="http://www.seleniumhq.org/">Selenium</a> from Python for automating browser tasks that require rendering and execution of JavaScript code. Usually, I don't want to get distracted by browser windows popping up and therefore use the <a href="http://phantomjs.org/">PhantomJS</a> Webdriver with Selenium.</p>
+        <p>I use <a href="https://www.selenium.dev/">Selenium</a> from Python for automating browser tasks that require rendering and execution of JavaScript code. Usually, I don't want to get distracted by browser windows popping up and therefore use the <a href="https://phantomjs.org/">PhantomJS</a> Webdriver with Selenium.</p>
 <p>Unfortunately, PhantomJS stopped working for me today on Ubuntu crashing with a segmentation fault. Fortunately though, it is fairly easy to run the Firefox Webdriver without displaying a browser window on Ubuntu with the help of some additional packages.</p>
 <p>First, I had to install <a href="https://en.wikipedia.org/wiki/Xvfb">Xvfb</a>: <em>a display server implementing the X11 display server protocol, that performs all graphical operations in memory without showing any screen output.</em>:</p>
 <pre><code class="bash">sudo apt-get install xvfb</code></pre>
@@ -62,7 +62,7 @@ except:
     browser = webdriver.Firefox()
 </code></pre>
 
-<p>Thanks to <a href="http://phihag.de/">Philipp Hagemeister</a> for suggestion PyVirtualDisplay on <a href="http://stackoverflow.com/a/6925133/291931">Stack Overflow</a>!</p>
+<p>Thanks to <a href="https://phihag.de/">Philipp Hagemeister</a> for suggestion PyVirtualDisplay on <a href="https://stackoverflow.com/a/6925133/291931">Stack Overflow</a>!</p>
     </div>
     <div class="col">
 
