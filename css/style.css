@@ -50,6 +50,10 @@ ul.list-ns {
     margin-bottom: 1rem;
 }
 
+.rm {
+    margin-right: 1rem;
+}
+
 .vm {
     margin: 1rem 0;
 }

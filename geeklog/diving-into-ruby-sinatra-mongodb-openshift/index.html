@@ -4,14 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diving into Ruby, Sinatra and MongoDB on OpenShift | Geeksta</title>
-<meta name="description" content="A howto on creating and running an application using Ruby, Sinatra and MongoDB on Redhat&#39;s OpenShift platform for hosting apps in the cloud."><meta name="author" content="Ramiro Gómez">        <meta property="og:image" content="/img/geeklog/ruby-sinatra-mongodb-openshift.jpg">
+<meta name="description" content="A tutorial on creating and running an application using Ruby, Sinatra and MongoDB on Redhat&#39;s OpenShift platform for hosting apps in the cloud."><meta name="author" content="Ramiro Gómez">        <meta property="og:image" content="/img/geeklog/ruby-sinatra-mongodb-openshift.jpg">
     <link rel="canonical" itemprop="url" href="https://geeksta.net/geeklog/diving-into-ruby-sinatra-mongodb-openshift/">
     <link rel="icon" type="image/png" href="/img/icon-small.png">
     <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Geeksta All Posts RSS feed">
     <link rel="stylesheet" href="/vendor/chota.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/dropdown.css">
-<link href="/vendor/highlight/styles/github.css" rel="stylesheet"></head>
+
+<link rel="stylesheet" href="/vendor/highlight/styles/idea.css">
+</head>
 <body>
     <header><nav class="nav dark">
         <div class="nav-left">
@@ -223,7 +225,7 @@ run MYMODULE::App
 <p>So I did this with the <a href="https://github.com/yaph/coderstats">Coderstats source code</a>. Take a look at it for a more sophisticated example of using Sinatra and MongoDB on OpenShift.</p>
 <p>Needless to say that I'd love to get feedback, especially from more experienced Ruby programmers. I'm sure there is room for improvement.</p>
 <h2>The Bottom Line</h2>
-<div class="well post_image"><a href="http://www.flickr.com/photos/bionicteaching/6184118904/" title="charge by bionicteaching, on Flickr"><img src="http://farm7.staticflickr.com/6157/6184118904_a6721bef2f.jpg" width="333" height="500" alt="charge"><br>Source: charge</a></div>
+<div class="pull-left rm"><a href="http://www.flickr.com/photos/bionicteaching/6184118904/" title="charge by bionicteaching, on Flickr"><img src="http://farm7.staticflickr.com/6157/6184118904_a6721bef2f.jpg" width="333" height="500" alt="charge"><br>Source: charge</a></div>
 <p>As you see by the picture I chose, I'm very happy with my experience of diving into several technologies that were new to me. I started to learn a new language that has impressed me in many ways and that I certainly will consider for other projects in the future.</p>
 <p>This also applies to Sinatra, which provides a lot of what you need for writing Web applications while remaining straightforward to use. It's no surprise that it influenced so many other micro Web frameworks.</p>
 <p>I worked with MongoDB before, but not in production systems. While the basics, i.&nbsp;e. storing and retrieving data worked flawlessly, I had some trouble with its map/reduce implementation. I did not get the expected results when doing aggregations on the live system, even though the map/reduce script I wrote worked correctly on my development machine.</p>
@@ -342,7 +344,10 @@ run MYMODULE::App
     </div></footer>
 
     <script src="/compiled/script.js"></script>
-<script src="/vendor/highlight/highlight.pack.js"></script><script src="/js/highlight.js"></script><!-- Google tag (gtag.js) -->
+
+<script src="/vendor/highlight/highlight.pack.js"></script>
+<script src="/js/highlight.js"></script>
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFQJ09STFE"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
