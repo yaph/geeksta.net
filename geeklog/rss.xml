@@ -7,6 +7,62 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Manage Long-Running Tasks with Screen on a Remote Linux Server]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/manage-tasks-with-screen-remotely/]]></link>
+        <description><![CDATA[<p>A brief step-by-step guide on using screen to manage long-running tasks on remote servers efficiently.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/manage-tasks-with-screen-remotely/]]></guid>
+        <pubDate>Mon, 02 Dec 2024 23:26:38 </pubDate>
+        <content:encoded><![CDATA[
+        <p>When managing remote Linux servers, you might need to run scripts that take hours, even after you've disconnected, for example a system backup or scan. This is where the <code>screen</code> utility shines, allowing processes to continue running independently of your SSH session. Below is a brief step-by-step guide on using <code>screen</code> to manage long-running tasks efficiently.</p>
+<h2 id="getting-started-with-screen">Getting Started with <code>screen</code></h2>
+<h3 id="step-1-connect-to-the-remote-server">Step 1: Connect to the Remote Server</h3>
+<p>Use SSH to log into your server:</p>
+<pre><code class="language-bash">ssh user@remote-server
+</code></pre>
+<h3 id="step-2-start-a-screen-session">Step 2: Start a Screen Session</h3>
+<p>Initiate a new screen session and give it a name for easy identification later:</p>
+<pre><code class="language-bash">screen -S my_backup_session
+</code></pre>
+<h3 id="step-3-execute-your-script">Step 3: Execute Your Script</h3>
+<p>Run your backup or long-term script within the screen session:</p>
+<pre><code class="language-bash">./backup_script.sh
+</code></pre>
+<h3 id="step-4-detach-the-screen-session">Step 4: Detach the Screen Session</h3>
+<p>Once your script is running, detach the session without interrupting the process:</p>
+<p>Press <code>Ctrl + a</code>, then <code>d</code>.</p>
+<p>This keystroke leaves the session intact, running in the background.</p>
+<h3 id="step-5-disconnect-from-the-server">Step 5: Disconnect from the Server</h3>
+<p>You can now safely log out:</p>
+<pre><code class="language-bash">exit
+</code></pre>
+<h3 id="step-6-reattach-to-check-progress">Step 6: Reattach to Check Progress</h3>
+<p>When you wish to check on the script:</p>
+<ol>
+<li>SSH back into the server:</li>
+</ol>
+<p><code>bash
+   ssh user@remote-server</code></p>
+<ol>
+<li>List active screen sessions:</li>
+</ol>
+<p><code>bash
+   screen -ls</code></p>
+<ol>
+<li>Reattach to your specific session:</li>
+</ol>
+<p><code>bash
+   screen -r my_backup_session</code></p>
+<h3 id="step-7-end-the-session">Step 7: End the Session</h3>
+<p>When your task completes, exit the screen session by closing the shell:</p>
+<p>Press <code>Ctrl + d</code>.</p>
+<p>This will terminate the session once your script has concluded.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Utilizing <code>screen</code> not only secures your long-running scripts from unexpected SSH disconnections but also offers the flexibility to monitor progress and manage multiple tasks simultaneously. It's an essential tool for any Linux server administrator seeking reliability and efficiency.</p>
+<hr>
+<p>Thank you for reading!</p>
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
+    </item>
+    <item>
         <title><![CDATA[Troubleshooting External Hard Drives on Linux]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/troubleshooting-external-hard-drives-on-linux/]]></link>
         <description><![CDATA[<p>Learn how to troubleshoot and resolve issues with your external hard drive on Linux. Follow these steps to diagnose problems, check connections, and recover data.</p><img src="/img/geeklog/external-hard-drive.webp" alt="Preview Image">]]></description>
@@ -567,44 +623,6 @@ elements.forEach(element =&gt; {
 <p><strong>Example</strong>: Set a goal to write and submit a certain number of articles or pitches each week. Track your progress and adjust your approach as needed.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>The world of freelance writing offers abundant opportunities for those seeking a creative and flexible career. By focusing on the top niches outlined in this article and following the tips for success, you can embark on a fulfilling journey as a freelance writer, building a sustainable income while doing what you love. Remember, consistency, perseverance, and continuous improvement are key to thriving in this competitive field.</p>
-<hr>
-<p>Thank you for reading!</p>
-<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
-    </item>
-    <item>
-        <title><![CDATA[Unlocking the Potential of Podcasting as a Profitable Online Venture]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/podcasting-profitability-guide/]]></link>
-        <description><![CDATA[<p>Discover how podcasting can be a profitable online venture. Explore niche selection, content creation, monetization, and promotional strategies for success.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/podcasting-profitability-guide/]]></guid>
-        <pubDate>Wed, 14 Jun 2023 01:23:21 </pubDate>
-        <content:encoded><![CDATA[
-        <p>Podcasting has emerged as a powerful and engaging medium for content creators to share their expertise, stories, and ideas with a global audience. Over the years, podcasting has evolved from a niche hobby to a booming industry, offering substantial opportunities for aspiring podcasters to turn their passion into a profitable online venture. In this article, we will explore various aspects of podcasting as a lucrative endeavor, including niche selection, content creation, audience growth, monetization methods, and effective promotional strategies.</p>
-<h2 id="niche-selection">Niche Selection</h2>
-<p>Choosing the right niche is crucial for the success of a podcast. Rather than targeting a broad audience, focusing on a specific niche allows you to establish yourself as an authority and cater to a dedicated audience. Consider your interests, expertise, and the market demand while selecting a niche. Conduct thorough research to identify underserved areas within your chosen niche, ensuring that there is a sizable audience interested in the topic.</p>
-<h2 id="content-creation">Content Creation</h2>
-<p>Compelling content is the foundation of any successful podcast. Plan your episodes carefully, ensuring they provide value, engage your audience, and keep them coming back for more. Develop a unique format or style that sets your podcast apart. Incorporate interviews, storytelling, expert insights, or a combination of formats to keep your content diverse and engaging. Consistency in releasing episodes is key to retaining and growing your audience.</p>
-<h2 id="audience-growth">Audience Growth</h2>
-<p>Growing your podcast's audience requires strategic efforts. Optimize your podcast for search engines by choosing relevant keywords and optimizing episode titles, descriptions, and tags. Leverage social media platforms to create a strong online presence and engage with your listeners. Collaborate with influencers or other podcasters in your niche to tap into their audience. Encourage your listeners to leave reviews, share episodes with friends, and subscribe to your podcast. Engaging with your audience through Q&amp;A sessions, live events, or feedback segments fosters loyalty and attracts new listeners.</p>
-<h2 id="monetization-methods">Monetization Methods</h2>
-<p>Once you have established a loyal audience, monetizing your podcast becomes a viable option. Consider the following monetization methods:</p>
-<ol>
-<li><strong>Sponsorships and Advertising</strong>: Partnering with relevant brands or advertisers to include sponsored segments or ads in your episodes can generate revenue. Focus on aligning with sponsors that resonate with your audience to maintain authenticity.</li>
-<li><strong>Affiliate Marketing</strong>: Recommend products or services relevant to your niche and include affiliate links in your show notes or episode descriptions. Earn a commission for every purchase made through those links.</li>
-<li><strong>Crowdfunding</strong>: Platforms like Patreon allow your audience to support your podcast financially. Offer exclusive content or perks to incentivize your listeners to become patrons.</li>
-<li><strong>Merchandise Sales</strong>: Create branded merchandise such as t-shirts, mugs, or stickers, and promote them to your audience. E-commerce platforms make it easy to set up and manage online stores.</li>
-<li><strong>Paid Subscriptions</strong>: Consider offering premium content or bonus episodes to subscribers who pay a monthly or yearly fee.</li>
-</ol>
-<h2 id="effective-promotional-strategies">Effective Promotional Strategies</h2>
-<p>Promoting your podcast is essential to attract new listeners and increase your reach. Utilize the following strategies:</p>
-<ol>
-<li><strong>Cross-Promotion</strong>: Collaborate with other podcasters in your niche to exchange guest appearances or create joint episodes. This exposes your podcast to new audiences.</li>
-<li><strong>Guest Appearances</strong>: Seek opportunities to be a guest on other podcasts to expand your reach and establish credibility.</li>
-<li><strong>Social Media Marketing</strong>: Leverage platforms like Twitter, Instagram, Facebook, and LinkedIn to share episode highlights, behind-the-scenes content, and engage with your audience.</li>
-<li><strong>Email Marketing</strong>: Build an email list of your loyal listeners and regularly update them about new episodes, upcoming guests, or exclusive content.</li>
-<li><strong>Search Engine Optimization (SEO)</strong>: Optimize your podcast's website and episode descriptions with relevant keywords to improve visibility in search engine results.</li>
-</ol>
-<h2 id="conclusion">Conclusion</h2>
-<p>Podcasting presents a wealth of opportunities for aspiring content creators to turn their passion into a profitable online venture. By selecting the right niche, creating compelling content, strategically growing your audience, exploring various monetization methods, and employing effective promotional strategies, you can thrive in this competitive space. Remember, consistency, authenticity, and building strong connections with your audience are key ingredients for success in the podcasting world. So, grab your microphone, unleash your creativity, and embark on an exciting journey as a podcaster.</p>
 <hr>
 <p>Thank you for reading!</p>
 <p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
