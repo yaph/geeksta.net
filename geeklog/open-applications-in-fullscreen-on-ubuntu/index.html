@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Prevent SSH Timeout on Linux Systems | Geeksta</title>
-<meta name="description" content="Prevent SSH timeouts on your Linux machine with a simple configuration change. Follow our quick guide to keep your SSH connection active during periods of inactivity."><meta name="author" content="Ramiro Gómez">
+    <title>Open Applications in Fullscreen on Ubuntu | Geeksta</title>
+<meta name="description" content="Learn how to make Ubuntu applications launch in fullscreen by modifying desktop files and application settings with this short step-by-step guide."><meta name="author" content="Ramiro Gómez">
             <meta property="og:image" content="/img/geeklog/geeklog-tux.png">
-    <link rel="canonical" itemprop="url" href="https://geeksta.net/geeklog/how-to-prevent-ssh-timeout-on-linux-systems/">
+    <link rel="canonical" itemprop="url" href="https://geeksta.net/geeklog/open-applications-in-fullscreen-on-ubuntu/">
     <link rel="icon" type="image/png" href="/img/icon-small.png">
     <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Geeksta All Posts RSS feed">
     <link rel="stylesheet" href="/vendor/chota.min.css">
@@ -41,27 +41,56 @@
     <main class="container">
 <div class="row">
     <div class="col-9-md">
-        <h1>How to Prevent SSH Timeout on Linux Systems</h1>
-        <p>If you've ever experienced your SSH connection freezing due to inactivity, you're not alone. This common issue can be particularly frustrating, but fortunately, there's a simple solution. By adjusting your SSH client configuration, you can keep the connection alive. Follow these steps to prevent SSH timeout on your Linux machine.</p>
-<h2 id="edit-the-ssh-configuration">Edit the SSH Configuration</h2>
-<p>First, you'll need to edit the SSH configuration file. If it doesn't already exist, create it. Start a terminal and open the file with your preferred editor, for example:</p>
-<pre><code class="language-bash">vim ~/.ssh/config
+        <h1>Open Applications in Fullscreen on Ubuntu</h1>
+        <p>One of my pet peeves with Ubuntu Linux is that several of the applications I'm using are not opened in fullscreen, even if I maximized them in the previous session. Not sure if that's a bug or a feature, but it is not the behavior I want.</p>
+<p>There are different approaches to ensure applications open in fullscreen mode. Some have a corresponding setting, others have a command-line flag, and some applications offer neither of these options.</p>
+<p>For applications that have a command-line flag, you can modify the corresponding <code>.desktop</code> file to open them in fullscreen.</p>
+<h2 id="using-desktop-files">Using Desktop Files</h2>
+<p>Desktop files (<code>.desktop</code> files) are configuration files that define how applications appear in your system's menu and how they behave when launched. Located typically in <code>/usr/share/applications/</code>, these files can be customized on a per-user basis by creating copies in <code>~/.local/share/applications/</code>.</p>
+<p>Let's walk through the process using Evince as an example:</p>
+<p><strong>1. Check the online help to see whether there is an option:</strong></p>
+<pre><code class="language-bash">evince --help
+...
+-f, --fullscreen            Run evince in fullscreen mode
+...
 </code></pre>
-<p>Next, add the following lines to ensure your SSH connection remains active:</p>
-<pre><code class="language-text">Host *
-    ServerAliveInterval 60
-    ServerAliveCountMax 3
+<p><strong>2. Create a local copy of the Evince desktop file:</strong></p>
+<pre><code class="language-bash">mkdir -p ~/.local/share/applications
+cp /usr/share/applications/org.gnome.Evince.desktop ~/.local/share/applications/
 </code></pre>
-<p>Save the file and exit the text editor. For the changes to take effect, you need to restart your SSH connection.</p>
-<h2 id="explanation">Explanation</h2>
-<p>Here's what these settings do:</p>
+<p><strong>3. Edit the local copy and modify the <code>Exec=</code> line to include the <code>--fullscreen</code> option:</strong></p>
+<pre><code class="language-bash">vim ~/.local/share/applications/org.gnome.Evince.desktop
+...
+Exec=evince --fullscreen %U
+...
+</code></pre>
+<p><strong>4. Update the desktop database:</strong></p>
+<pre><code class="language-bash">update-desktop-database ~/.local/share/applications
+</code></pre>
+<p>Now, Evince will launch in fullscreen mode by default when you open a PDF or other supported documents.</p>
+<h2 id="limitations">Limitations</h2>
+<p>While this method works fine for Evince, it's not a universal solution. Some applications require different approaches:</p>
+<h3 id="visual-studio-code">Visual Studio Code</h3>
+<p>For VS Code, the desktop file modification approach doesn't work. Instead, you'll need to adjust the application's settings:</p>
+<ol>
+<li>Open VS Code</li>
+<li>Go to Settings (Ctrl+,)</li>
+<li>Search for <code>window.titleBarStyle</code></li>
+<li>Set the value to <code>custom</code></li>
+</ol>
+<p>This setting ensures that VS Code windows open maximized across all new windows.</p>
+<h3 id="keepassx">KeePassX</h3>
+<p>Similarly, KeePassX lacks a command-line option to start in fullscreen and has no corresponding setting that I'm aware of either. For these cases, I use the keyboard shortcut <code>Super (Windows or Command key) + Up Arrow</code> or double-click the title bar to manually maximize the window.</p>
+<h2 id="best-practices">Best Practices</h2>
 <ul>
-<li><code>ServerAliveInterval 60</code>: This sends a keep-alive packet to the server every 60 seconds.</li>
-<li><code>ServerAliveCountMax 3</code>: If the server does not respond after three keep-alive packets, the connection will be terminated.</li>
+<li>Always create a local copy of the desktop file before modifying</li>
+<li>Preserve the original file's structure</li>
+<li>Use <code>update-desktop-database</code> to ensure changes take effect</li>
+<li>Remember that not all applications support fullscreen launch via desktop files</li>
 </ul>
-<p>That's it! Your SSH connection should now remain active even during periods of inactivity. Adjust the <code>ServerAliveInterval</code> value as needed to fit your specific requirements.</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>By following this short and simple guide, you can prevent your SSH connections from freezing due to inactivity. This small configuration change can save you from the hassle of repeatedly reconnecting to your remote servers.</p>
+<p>Modifying desktop files offers a flexible way to customize application launch behaviors. While not a one-size-fits-all solution, it provides a powerful technique for personalizing your Linux desktop experience.</p>
+<p>Next time you find an application launching in a less-than-ideal window size, remember: a simple desktop file modification might be the solution you're looking for!</p>
     </div>
     <div class="col">
 
@@ -76,9 +105,9 @@
 
 <h3>Latest Posts</h3>
 <ul>
-        <li><a href="/geeklog/open-applications-in-fullscreen-on-ubuntu/">Open Applications in Fullscreen on Ubuntu</a></li>
         <li><a href="/geeklog/manage-tasks-with-screen-remotely/">Manage Long-Running Tasks with Screen on a Remote Linux Server</a></li>
         <li><a href="/geeklog/troubleshooting-external-hard-drives-on-linux/">Troubleshooting External Hard Drives on Linux</a></li>
+        <li><a href="/geeklog/how-to-prevent-ssh-timeout-on-linux-systems/">How to Prevent SSH Timeout on Linux Systems</a></li>
         <li><a href="/geeklog/getting-started-with-print-on-demand-merchandise/">Getting Started with Print-on-Demand Merchandise</a></li>
 </ul>
 
@@ -95,18 +124,19 @@
 <a href="/rss.xml" class="button primary">Subscribe to RSS Feed</a></li>    </div>
 </div>
 <hr>
-<p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time datetime="2024-06-03T13:08">June 03, 2024</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+<p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time datetime="2024-12-17T21:36">December 17, 2024</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
 <p><strong>Tags:</strong>
     <a class="button outline" href="/tags/howto/">howto</a>
     <a class="button outline" href="/tags/linux/">linux</a>
     <a class="button outline" href="/tags/sysadmin/">sysadmin</a>
+    <a class="button outline" href="/tags/ubuntu/">ubuntu</a>
 </p>
 <p class="text-grey"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p><hr>
 <p><strong>Share post:</strong>
-<a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/geeklog/how-to-prevent-ssh-timeout-on-linux-systems/&t=How%20to%20Prevent%20SSH%20Timeout%20on%20Linux%20Systems" class="button success">Facebook</a>
-<a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/geeklog/how-to-prevent-ssh-timeout-on-linux-systems/&title=How%20to%20Prevent%20SSH%20Timeout%20on%20Linux%20Systems" class="button success">LinkedIn</a>
-<a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/geeklog/how-to-prevent-ssh-timeout-on-linux-systems/&title=How%20to%20Prevent%20SSH%20Timeout%20on%20Linux%20Systems" class="button success">Reddit</a>
-<a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/geeklog/how-to-prevent-ssh-timeout-on-linux-systems/&text=How%20to%20Prevent%20SSH%20Timeout%20on%20Linux%20Systems" class="button success">Twitter</a>
+<a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/geeklog/open-applications-in-fullscreen-on-ubuntu/&t=Open%20Applications%20in%20Fullscreen%20on%20Ubuntu" class="button success">Facebook</a>
+<a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/geeklog/open-applications-in-fullscreen-on-ubuntu/&title=Open%20Applications%20in%20Fullscreen%20on%20Ubuntu" class="button success">LinkedIn</a>
+<a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/geeklog/open-applications-in-fullscreen-on-ubuntu/&title=Open%20Applications%20in%20Fullscreen%20on%20Ubuntu" class="button success">Reddit</a>
+<a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/geeklog/open-applications-in-fullscreen-on-ubuntu/&text=Open%20Applications%20in%20Fullscreen%20on%20Ubuntu" class="button success">Twitter</a>
 </p>
 <div class="card vm">
     <h3>Merchandise</h3>
