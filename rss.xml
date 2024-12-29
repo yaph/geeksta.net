@@ -7,6 +7,13 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Find Lines in One File Not Present in Another Using `grep`]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/find-lines-in-one-file-not-present-in-another-using-grep/]]></link>
+        <description><![CDATA[<p>Learn how to use the powerful `grep` command in Unix/Linux to compare text files and identify lines unique to one file. Simplify file comparison with this quick and flexible technique.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/find-lines-in-one-file-not-present-in-another-using-grep/]]></guid>
+        <pubDate>Sun, 29 Dec 2024 21:24:12 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[Open Applications in Fullscreen on Ubuntu]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/open-applications-in-fullscreen-on-ubuntu/]]></link>
         <description><![CDATA[<p>Learn how to make Ubuntu applications launch in fullscreen by modifying desktop files and application settings with this short step-by-step guide.</p>]]></description>
@@ -80,14 +87,5 @@ Make a statement with this...</p><img src="https://geeksta.net/img/large/always-
 This design for coders, developers, programmers, hackers or how you...</p><img src="https://geeksta.net/img/large/helloworld-obfuscated.c-rrt.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/helloworld-obfuscated.c-rrt/]]></guid>
         <pubDate>Wed, 05 Jun 2024 00:00:00 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Italia AL Family Friends Group Matching Italy Flag]]></title>
-        <link><![CDATA[https://geeksta.net/design/italia-human-flag-al/]]></link>
-        <description><![CDATA[<p>A cool design for Italians and everyone who loves Italy, is a fan of Italian culture, food and sports teams, and wants to show Italian pride.
-
-Group matching apparel for family and friends. A great way to support Italy at sports events like football,...</p><img src="https://geeksta.net/img/large/italia-human-flag-al.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/italia-human-flag-al/]]></guid>
-        <pubDate>Tue, 04 Jun 2024 00:00:00 </pubDate>
     </item>
 </channel></rss>
