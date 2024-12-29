@@ -7,6 +7,13 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[ChatGPT Prompts for Limitless Creativity and Productivity]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/chat-gpt-prompts-for-limitless-creativity-and-productivity/]]></link>
+        <description><![CDATA[<p>Discover expert-crafted prompts to unleash the full potential of ChatGPT! Boost creativity, productivity, and problem-solving across storytelling, programming, marketing, and more.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/chat-gpt-prompts-for-limitless-creativity-and-productivity/]]></guid>
+        <pubDate>Sun, 29 Dec 2024 23:43:34 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[Preventing User Registration Spam in WordPress with Fail2ban]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/preventing-user-registration-spam-in-word-press-with-fail2ban/]]></link>
         <description><![CDATA[<p>Learn how to prevent user registration spam on your WordPress site with Fail2ban. This step-by-step guide shows you how to configure Fail2ban using Apache logs to block suspicious IPs and secure your website.</p>]]></description>
@@ -78,12 +85,5 @@ A...</p><img src="https://geeksta.net/img/large/shrug-it-works-on-127.0.0.1-whit
 Make a statement with this...</p><img src="https://geeksta.net/img/large/always-speak-the-truth-but-dont-always-speak-orange-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/always-speak-the-truth-but-dont-always-speak-orange-white/]]></guid>
         <pubDate>Wed, 14 Aug 2024 00:00:00 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Troubleshooting External Hard Drives on Linux]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/troubleshooting-external-hard-drives-on-linux/]]></link>
-        <description><![CDATA[<p>Learn how to troubleshoot and resolve issues with your external hard drive on Linux. Follow these steps to diagnose problems, check connections, and recover data.</p><img src="/img/geeklog/external-hard-drive.webp" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/troubleshooting-external-hard-drives-on-linux/]]></guid>
-        <pubDate>Thu, 06 Jun 2024 13:18:59 </pubDate>
     </item>
 </channel></rss>
