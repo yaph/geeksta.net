@@ -7,6 +7,13 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Preventing User Registration Spam in WordPress with Fail2ban]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/preventing-user-registration-spam-in-word-press-with-fail2ban/]]></link>
+        <description><![CDATA[<p>Learn how to prevent user registration spam on your WordPress site with Fail2ban. This step-by-step guide shows you how to configure Fail2ban using Apache logs to block suspicious IPs and secure your website.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/preventing-user-registration-spam-in-word-press-with-fail2ban/]]></guid>
+        <pubDate>Sun, 29 Dec 2024 23:07:30 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[Find Lines in One File Not Present in Another Using `grep`]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/find-lines-in-one-file-not-present-in-another-using-grep/]]></link>
         <description><![CDATA[<p>Learn how to use the powerful `grep` command in Unix/Linux to compare text files and identify lines unique to one file. Simplify file comparison with this quick and flexible technique.</p>]]></description>
@@ -78,14 +85,5 @@ Make a statement with this...</p><img src="https://geeksta.net/img/large/always-
         <description><![CDATA[<p>Learn how to troubleshoot and resolve issues with your external hard drive on Linux. Follow these steps to diagnose problems, check connections, and recover data.</p><img src="/img/geeklog/external-hard-drive.webp" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/troubleshooting-external-hard-drives-on-linux/]]></guid>
         <pubDate>Thu, 06 Jun 2024 13:18:59 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Hello World Slightly Obfuscated C Code - Dark Syntax Scheme]]></title>
-        <link><![CDATA[https://geeksta.net/design/helloworld-obfuscated.c-rrt/]]></link>
-        <description><![CDATA[<p>The Hello World program is frequently used in programming books and is often the first program computer programmers try when learning a new programming language. Ever happened to you?
-
-This design for coders, developers, programmers, hackers or how you...</p><img src="https://geeksta.net/img/large/helloworld-obfuscated.c-rrt.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/helloworld-obfuscated.c-rrt/]]></guid>
-        <pubDate>Wed, 05 Jun 2024 00:00:00 </pubDate>
     </item>
 </channel></rss>

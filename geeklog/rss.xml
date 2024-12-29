@@ -7,6 +7,67 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Preventing User Registration Spam in WordPress with Fail2ban]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/preventing-user-registration-spam-in-word-press-with-fail2ban/]]></link>
+        <description><![CDATA[<p>Learn how to prevent user registration spam on your WordPress site with Fail2ban. This step-by-step guide shows you how to configure Fail2ban using Apache logs to block suspicious IPs and secure your website.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/preventing-user-registration-spam-in-word-press-with-fail2ban/]]></guid>
+        <pubDate>Sun, 29 Dec 2024 23:07:30 </pubDate>
+        <content:encoded><![CDATA[
+        <p>User registration spam can be a significant nuisance for WordPress site administrators, leading to bloated databases, potential security risks, and unnecessary clutter. Fortunately, Fail2ban, a powerful intrusion prevention software, can help mitigate this issue by monitoring log files and banning IP addresses exhibiting suspicious behavior. In this guide, we'll walk you through configuring Fail2ban to prevent user registration spam on your WordPress site using Apache logs.</p>
+<h2 id="step-by-step-guide-to-configure-fail2ban">Step-by-Step Guide to Configure Fail2ban</h2>
+<h3 id="step-1-ensure-fail2ban-is-installed">Step 1: Ensure Fail2ban is Installed</h3>
+<p>First, you need to have Fail2ban installed on your server. If it's not already installed, you can install it using your package manager. For Debian-based systems, the following commands will do the trick:</p>
+<pre><code class="language-bash">sudo apt-get update
+sudo apt-get install fail2ban
+</code></pre>
+<h3 id="step-2-create-a-custom-filter-for-detecting-registration-attempts">Step 2: Create a Custom Filter for Detecting Registration Attempts</h3>
+<p>Next, create a custom filter file for Fail2ban to detect user registration attempts. This filter will parse the Apache logs to find registration attempts and take action based on your configuration.</p>
+<p>Create a new filter file named <code>wordpress-registration.conf</code> in the <code>/etc/fail2ban/filter.d/</code> directory:</p>
+<pre><code class="language-bash">sudo vim /etc/fail2ban/filter.d/wordpress-registration.conf
+</code></pre>
+<p>Add the following content to this file:</p>
+<pre><code class="language-txt">[Definition]
+failregex = ^&lt;HOST&gt; - - \[.*\] &quot;POST /wp-login\.php\?action=register HTTP/.*&quot; 302
+ignoreregex =
+</code></pre>
+<p>This <code>failregex</code> is designed to match log entries corresponding to user registration attempts in your Apache logs. <code>ignoreregex</code> is left empty because we don't want to ignore any relevant behavior.</p>
+<h3 id="step-3-configure-a-fail2ban-jail-for-wordpress-registrations">Step 3: Configure a Fail2ban Jail for WordPress Registrations</h3>
+<p>Now, create a new jail configuration file named <code>wordpress-registration.conf</code> in the <code>/etc/fail2ban/jail.d/</code> directory:</p>
+<pre><code class="language-bash">sudo vim /etc/fail2ban/jail.d/wordpress-registration.conf
+</code></pre>
+<p>Add the following content to this file:</p>
+<pre><code class="language-txt">[wordpress-registration]
+enabled = true
+filter = wordpress-registration
+logpath = /var/log/apache2/access.log
+maxretry = 1
+findtime = 600
+bantime = 86400
+</code></pre>
+<p>In this configuration:</p>
+<ul>
+<li><code>logpath</code> points to your Apache access log file. Adjust this path if your log file is located elsewhere.</li>
+<li><code>maxretry = 1</code> means that after one registration attempt from the same IP, the IP will be banned.</li>
+<li><code>findtime = 600</code> (in seconds) is the window during which the attempts are counted.</li>
+<li><code>bantime = 86400</code> (in seconds) is the duration for which the IP will be banned (24 hours).</li>
+</ul>
+<h3 id="step-4-restart-fail2ban">Step 4: Restart Fail2ban</h3>
+<p>To apply your new configuration, restart the Fail2ban service:</p>
+<pre><code class="language-bash">sudo systemctl restart fail2ban
+</code></pre>
+<h3 id="step-5-verify-the-setup">Step 5: Verify the Setup</h3>
+<p>Finally, ensure that your new filter is working correctly by tailing the Fail2ban log:</p>
+<pre><code class="language-bash">sudo tail -f /var/log/fail2ban.log
+</code></pre>
+<p>Monitor the log for any entries related to the <code>wordpress-registration</code> jail. You should see Fail2ban detecting and banning IPs as expected when they attempt to register users on your WordPress site.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>By configuring Fail2ban to monitor your Apache logs, you can effectively prevent user registration spam on your WordPress site. This setup helps maintain the integrity and performance of your website by blocking spammers and ensuring only legitimate users can register. Regularly check your logs and adjust the configuration as necessary to fine-tune the protection based on your site's needs.</p>
+<p>With Fail2ban in place, you can focus more on building and managing your WordPress site without worrying about the constant influx of spam registrations.</p>
+<hr>
+<p>Thank you for reading!</p>
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
+    </item>
+    <item>
         <title><![CDATA[Find Lines in One File Not Present in Another Using `grep`]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/find-lines-in-one-file-not-present-in-another-using-grep/]]></link>
         <description><![CDATA[<p>Learn how to use the powerful `grep` command in Unix/Linux to compare text files and identify lines unique to one file. Simplify file comparison with this quick and flexible technique.</p>]]></description>
@@ -551,46 +612,6 @@ sudo apt install &lt;package&gt;
 <li><a href="https://www.reddit.com/r/sysadmin/wiki/index/">reddit Sysadmin Wiki</a></li>
 <li><a href="https://linuxcommand.org/tlcl.php">The Linux Command Line by William Shotts</a></li>
 </ul>
-<hr>
-<p>Thank you for reading!</p>
-<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
-    </item>
-    <item>
-        <title><![CDATA[How to Escape Colons in CSS Classes in JavaScript]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/how-to-escape-colons-in-css-classes-in-java-script/]]></link>
-        <description><![CDATA[<p>Learn how to select HTML elements with special CSS classes like 'empty:hidden' using JavaScript's document.querySelectorAll method.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/how-to-escape-colons-in-css-classes-in-java-script/]]></guid>
-        <pubDate>Thu, 07 Sep 2023 20:22:24 </pubDate>
-        <content:encoded><![CDATA[
-        <p>When selecting an HTML element with a CSS class containing special characters such as colons (:) using <code>document.querySelector</code> or <code>document.querySelectorAll</code>, you need to escape those characters to ensure proper selection. For example, if the CSS class is <code>empty:hidden</code>, which contains a colon, write the selector as follows:</p>
-<pre><code class="language-javascript">const elements = document.querySelectorAll('.empty\\:hidden');
-</code></pre>
-<p>In this code, the backslash (<code>\</code>) is used to escape the colon in the CSS class name. This allows you to correctly target elements with the <code>empty:hidden</code> class. Here's a complete example of how you can use this code to select and manipulate elements with colons in class names:</p>
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;style&gt;
-  .empty\:hidden {
-    display: none;
-  }
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-&lt;div class=`empty:hidden`&gt;This is a hidden element with the class `empty:hidden`.&lt;/div&gt;
-&lt;div&gt;This is a visible element.&lt;/div&gt;
-
-&lt;script&gt;
-const elements = document.querySelectorAll('.empty\\:hidden');
-elements.forEach(element =&gt; {
-  element.textContent = &quot;This element was selected and manipulated.&quot;;
-});
-&lt;/script&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<p>In this example, the JavaScript code selects all elements with the <code>empty:hidden</code> class and changes their content. The backslash before the colon is used to correctly escape the colon character in the CSS class name.</p>
 <hr>
 <p>Thank you for reading!</p>
 <p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
