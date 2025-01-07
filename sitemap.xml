@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc><![CDATA[https://geeksta.net/geeklog/how-to-exit-a-python-program-gracefully/]]></loc><lastmod>2025-01-07</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/how-to-import-modules-in-a-standalone-python-program/]]></loc><lastmod>2025-01-07</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/chat-gpt-prompts-for-limitless-creativity-and-productivity/]]></loc><lastmod>2024-12-29</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/preventing-user-registration-spam-in-word-press-with-fail2ban/]]></loc><lastmod>2024-12-29</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/find-lines-in-one-file-not-present-in-another-using-grep/]]></loc><lastmod>2024-12-29</lastmod></url>
@@ -18,10 +20,10 @@
 <url><loc><![CDATA[https://geeksta.net/geeklog/how-to-prevent-ssh-timeout-on-linux-systems/]]></loc><lastmod>2024-09-12</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/q-whining-white/]]></loc><lastmod>2024-12-02</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/q-whining-black/]]></loc><lastmod>2024-12-02</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/geeklog/getting-started-with-print-on-demand-merchandise/]]></loc><lastmod>2024-09-12</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/getting-started-with-print-on-demand-merchandise/]]></loc><lastmod>2025-01-07</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/los-alamos-gothic-black/]]></loc><lastmod>2024-12-02</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/los-alamos-gothic-white/]]></loc><lastmod>2024-12-02</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/geeklog/understanding-bash-fork-bomb/]]></loc><lastmod>2024-09-12</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/understanding-bash-fork-bomb/]]></loc><lastmod>2025-01-07</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/helloworld.c-perldoc/]]></loc><lastmod>2024-12-02</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/helloworld.c-rrt/]]></loc><lastmod>2024-12-02</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/must-know-bash-commands-for-linux-unix-sysadmins/]]></loc><lastmod>2024-09-12</lastmod></url>
@@ -91,7 +93,7 @@
 <url><loc><![CDATA[https://geeksta.net/design/no-class-no-state-lambda-propaganda/]]></loc><lastmod>2024-12-02</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/born-to-choose-punk-thinker-vintage/]]></loc><lastmod>2024-12-02</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/cityscape-sunset-berlin/]]></loc><lastmod>2024-12-02</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/geeklog/python-gil-pros-and-cons/]]></loc><lastmod>2024-09-12</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/python-gil-pros-and-cons/]]></loc><lastmod>2025-01-07</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/brnx-1973-where-my-story-begins-grunge/]]></loc><lastmod>2024-12-02</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/kreuzberg-36-grunge-white/]]></loc><lastmod>2024-12-02</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/kreuzberg-36-grunge-black/]]></loc><lastmod>2024-12-02</lastmod></url>
