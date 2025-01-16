@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducing Charla: A Terminal-Based Chat Client for Language Models | Geeksta</title>
+<meta name="description" content="Discover Charla, a powerful terminal-based chat client for AI language models, designed for developers, researchers, and AI enthusiasts."><meta name="author" content="Ramiro Gómez">
+            <meta property="og:image" content="/img/geeklog/geeklog-ai.png">
+    <link rel="canonical" itemprop="url" href="https://geeksta.net/geeklog/charla-introduction/">
+    <link rel="icon" type="image/png" href="/img/icon-small.png">
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Geeksta All Posts RSS feed">
+    <link rel="stylesheet" href="/vendor/chota.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/dropdown.css">
+
+</head>
+<body>
+    <header><nav class="nav dark">
+        <div class="nav-left">
+            <a class="brand" href="/"><img class="logo" src="/img/icon-small.png" alt="logo">Geeksta</a>
+        </div>
+        <ul class="nav-right">
+            <li>
+                <a href="#">Sections ▾</a>
+                <ul class="dropdown">
+                    <li><a href="/reviews/">Book Reviews</a></li>
+                    <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
+                    <li><a href="/visualizations/">Data Visualizations</a></li>
+                    <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
+                    <li><a href="/events/">Geek Events</a></li>
+                    <li><a href="/screencasts/">Screencasts</a></li>
+                    <li><a href="/videos/">Videos</a></li>
+                </ul>
+            </li>
+            <li><a href="/geeklog/">Geeklog</a></li>
+            <li><a href="/merch/">Merch</a></li>
+            <li><a href="/tools/">Tools</a></li>
+        </ul>
+    </nav></header>
+
+    <main class="container">
+<div class="row">
+    <div class="col-9-md">
+        <h1>Introducing Charla: A Terminal-Based Chat Client for Language Models</h1>
+        <p>In the rapidly growing world of AI-powered communication, <strong>Charla</strong> stands out as a tool designed for tech enthusiasts who love working in the terminal. Whether you're a developer, researcher, or AI hobbyist, Charla provides a streamlined way to interact with advanced language models locally or remotely, all within your command-line interface (CLI).</p>
+<p>This guide will give you an overview of Charla, its features, how to get started, and tips for maximizing its potential.</p>
+<h2 id="what-is-charla">What Is Charla?</h2>
+<p>At its core, <strong>Charla</strong> is a terminal-based chat client that allows you to converse with <strong>language models</strong> — AI models capable of understanding and generating human-like text. Using Charla, you can:</p>
+<ul>
+<li>Interact with <strong>local AI models</strong> through the <a href="https://ollama.com/download">Ollama server</a>.</li>
+<li>Connect with <strong>remote models</strong> via GitHub Models using your GitHub token.</li>
+</ul>
+<p>Designed with productivity and technical users in mind, Charla provides a chat interface that's simple, flexible, and efficient.</p>
+<h2 id="key-features">Key Features</h2>
+<p>Here are some of the standout features that make Charla a powerful tool for chatting with language models:</p>
+<ul>
+<li><strong>Context-Aware Conversations</strong>: Carry on seamless, ongoing conversations with models while retaining context from previous prompts.</li>
+<li><strong>Support for Local and Remote Models</strong>: Use models installed on your computer through Ollama or tap into GitHub Models for remote access.</li>
+<li><strong>Session Persistence</strong>:</li>
+<li><strong>Chat Logs</strong>: Automatically save conversations as Markdown files in your documents directory.</li>
+<li><strong>Prompt History</strong>: Access and reuse previously entered prompts, thanks to auto-suggestions.</li>
+<li><strong>Custom Input Modes</strong>: Switch between single-line and multi-line input modes without interrupting your workflow.</li>
+<li><strong>Flexibility in Settings</strong>:</li>
+<li>Store preferences in global configuration files or in local project-specific <code>.charla.json</code> files for maximum flexibility.</li>
+<li><strong>System Prompts</strong>: Preload system instructions that shape the language model's behavior during a chat.</li>
+<li><strong>Prompt Extensions</strong>:</li>
+<li>Append content from local text files or web pages to your prompts for more sophisticated interactions.</li>
+</ul>
+<p>With these features, Charla is ideal for both quick experiments and long-term projects involving large language models.</p>
+<h2 id="installation">Installation</h2>
+<p>Installing Charla is straightforward. Before beginning, ensure you have the necessary dependencies:</p>
+<ol>
+<li><strong>Ollama Server (Optional)</strong>: To use local models, install and set up the <a href="https://ollama.com/download">Ollama server</a> along with at least one supported model.</li>
+<li><strong>GitHub Token (Optional)</strong>: To use remote GitHub Models, ensure you have a valid GitHub token.</li>
+</ol>
+<p>Once you've prepared the above, install Charla via <code>pipx</code>:</p>
+<pre><code class="language-bash">pipx install charla
+</code></pre>
+<h3 id="setting-up-github-models">Setting Up GitHub Models</h3>
+<p>For GitHub-based models, you'll need to export your GitHub token as an environment variable:</p>
+<pre><code class="language-bash">export GITHUB_TOKEN=YOUR_GITHUB_TOKEN
+</code></pre>
+<p>This step allows Charla to authenticate with the GitHub Models service for remote chat sessions.</p>
+<h2 id="getting-started-with-charla">Getting Started with Charla</h2>
+<p>After successful installation, launch Charla by entering the following command in your terminal:</p>
+<pre><code class="language-bash">charla
+</code></pre>
+<p>From here, you can specify the model and provider you'd like to use. Below are a couple of examples to get you started:</p>
+<ul>
+<li><strong>Local (via Ollama, default provider)</strong>:</li>
+</ul>
+<p><code>bash
+  charla -m phi3</code></p>
+<ul>
+<li><strong>Remote (via GitHub Models)</strong>:</li>
+</ul>
+<p><code>bash
+  charla -m gpt-4o --provider github</code></p>
+<p>You can also customize default configurations (e.g., preferred model, provider settings) by modifying your user settings file.</p>
+<h2 id="customizing-charla-settings">Customizing Charla: Settings</h2>
+<p>Charla offers a high degree of customization through both <strong>global settings files</strong> and <strong>local configuration options</strong>. Here's how to manage these configurations:</p>
+<h3 id="finding-your-settings-file-location">Finding Your Settings File Location</h3>
+<p>Run the following command to locate your global settings file:</p>
+<pre><code class="language-bash">charla settings --location
+</code></pre>
+<h3 id="example-configuration-file">Example Configuration File</h3>
+<p>Here's a sample <code>.charla.json</code> file that sets the following defaults:</p>
+<ul>
+<li>The <code>gpt-4o</code> model via the <code>github</code> provider.</li>
+<li>A local folder called <code>chats</code> for storing conversation logs.</li>
+<li>A maximum of <code>20</code> messages in chat history.</li>
+</ul>
+<pre><code class="language-json">{
+    &quot;model&quot;: &quot;gpt-4o&quot;,
+    &quot;chats_path&quot;: &quot;./chats&quot;,
+    &quot;provider&quot;: &quot;github&quot;,
+    &quot;message_limit&quot;: 20
+}
+</code></pre>
+<p>To save your current settings to a <code>.charla.json</code> file in your working directory, use:</p>
+<pre><code class="language-bash">charla settings --save
+</code></pre>
+<h3 id="command-line-overrides">Command-Line Overrides</h3>
+<p>You can override settings temporarily by passing arguments in the command line. For example, to enable multiline input and set a custom system prompt file:</p>
+<pre><code class="language-bash">charla --multiline --system-prompt custom-prompt.txt
+</code></pre>
+<p>Command-line arguments take precedence over both local and global configuration files.</p>
+<h2 id="try-charla-today">Try Charla Today!</h2>
+<p>Charla combines the simplicity of a terminal-based interface with the sophistication of cutting-edge AI models. Whether you're exploring language models for fun or integrating them into your workflow, Charla makes it easy to chat, experiment, and save your progress.</p>
+<p>Ready to dive in? <a href="https://pypi.org/project/charla">Install Charla now</a>, and start chatting with AI in your terminal!</p>
+    </div>
+    <div class="col">
+
+<h3>Featured Merch</h3>
+<figure class="preview">
+    <a href="/design/prompt-engineer-i-talk-to-machines-light/">
+            <img class="b-lazy" src="/img/large/prompt-engineer-i-talk-to-machines-light.jpg" alt="Prompt Engineer I Talk to Machines AI/ML Geek & Nerd Design" />
+        <figcaption>Prompt Engineer I Talk to Machines AI/ML Geek & Nerd Design</figcaption>
+    </a>
+</figure>
+
+
+<h3>Latest Posts</h3>
+<ul>
+        <li><a href="/geeklog/hashtagify-introduction/">Introducing Hashtagify: Easy Hashtag Creation for VS Code</a></li>
+        <li><a href="/geeklog/synchronize-files-preserving-remote-ownership-and-permissions-with-rsync/">Synchronize Files Preserving Remote Ownership and Permissions with rsync</a></li>
+        <li><a href="/geeklog/how-to-exit-a-python-program-gracefully/">How to Exit a Python Program Gracefully</a></li>
+        <li><a href="/geeklog/how-to-import-modules-in-a-standalone-python-program/">How to Import Modules in a Standalone Python Program</a></li>
+</ul>
+
+<h3>Featured Book</h3>
+<figure class="preview">
+    <a href="https://www.amazon.com/dp/B0C5B9JG57?tag=geeksta-20">
+        <img alt="eBook cover" src="/img/books/chatgpt-interview-prompting.jpg"><br>
+        <figcaption>Buy on Amazon</figcaption>
+    </a>
+</figure>
+
+<hr>
+
+<a href="/rss.xml" class="button primary">Subscribe to RSS Feed</a></li>    </div>
+</div>
+<hr>
+<p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time datetime="2025-01-16T22:34">January 16, 2025</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+<p><strong>Tags:</strong>
+    <a class="button outline" href="/tags/artificial-intelligence/">artificial intelligence</a>
+    <a class="button outline" href="/tags/chat-client/">chat client</a>
+    <a class="button outline" href="/tags/open-source/">open source</a>
+    <a class="button outline" href="/tags/productivity/">productivity</a>
+</p>
+<p class="text-grey"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p><hr>
+<p><strong>Share post:</strong>
+<a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/geeklog/charla-introduction/&t=Introducing%20Charla%3A%20A%20Terminal-Based%20Chat%20Client%20for%20Language%20Models" class="button success">Facebook</a>
+<a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/geeklog/charla-introduction/&title=Introducing%20Charla%3A%20A%20Terminal-Based%20Chat%20Client%20for%20Language%20Models" class="button success">LinkedIn</a>
+<a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/geeklog/charla-introduction/&title=Introducing%20Charla%3A%20A%20Terminal-Based%20Chat%20Client%20for%20Language%20Models" class="button success">Reddit</a>
+<a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/geeklog/charla-introduction/&text=Introducing%20Charla%3A%20A%20Terminal-Based%20Chat%20Client%20for%20Language%20Models" class="button success">Twitter</a>
+</p>
+<div class="card vm">
+    <h3>Merchandise</h3>
+    <div class="row">
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/caution-i-test-in-production/">
+            <img class="b-lazy" src="/img/large/caution-i-test-in-production.jpg" alt="I Test in Production - Funny Developer Caution Sign Design" />
+        <figcaption>I Test in Production - Funny Developer Caution Sign Design</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/hack-the-planet-green/">
+            <img class="b-lazy" src="/img/large/hack-the-planet-green.jpg" alt="Hack the Planet - Green Globe Design for Computer Hackers" />
+        <figcaption>Hack the Planet - Green Globe Design for Computer Hackers</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/run-bsd/">
+            <img class="b-lazy" src="/img/large/run-bsd.jpg" alt="RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins" />
+        <figcaption>RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/shrug-it-works-on-my-machine-medium-white/">
+            <img class="b-lazy" src="/img/large/shrug-it-works-on-my-machine-medium-white.jpg" alt="Shrug It Works On My Machine Funny Programmer Excuse White Design" />
+        <figcaption>Shrug It Works On My Machine Funny Programmer Excuse White Design</figcaption>
+    </a>
+</figure>
+
+    </div>
+</div>
+
+</div>    </main>
+
+    <footer class="dark"><div class="container">
+        Geeksta elsewhere: <a href="https://www.instagram.com/g33ksta/">Instagram</a> • <a href="https://mastodon.social/@geeksta">Mastodon</a> • <a href="https://www.tiktok.com/@g33ksta">TikTok</a> • <a href="https://www.youtube.com/@geeksta">YouTube</a>
+        <br>
+        © 2010 - 2025 Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/rss.xml">RSS Feed</a></p>
+    </div></footer>
+
+    <script src="/compiled/script.js"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MFQJ09STFE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MFQJ09STFE');
+</script>
+</body>
+</html>

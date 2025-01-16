@@ -7,6 +7,13 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Introducing Charla: A Terminal-Based Chat Client for Language Models]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/charla-introduction/]]></link>
+        <description><![CDATA[<p>Discover Charla, a powerful terminal-based chat client for AI language models, designed for developers, researchers, and AI enthusiasts.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/charla-introduction/]]></guid>
+        <pubDate>Thu, 16 Jan 2025 22:34:12 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[Introducing Hashtagify: Easy Hashtag Creation for VS Code]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/hashtagify-introduction/]]></link>
         <description><![CDATA[<p>Simplify your social media content creation with Hashtagify, a VS Code extension that converts text into hashtags effortlessly.</p>]]></description>
@@ -70,12 +77,5 @@ Perfect for urban...</p><img src="https://geeksta.net/img/large/wedding-humboldt
         <description><![CDATA[<p>Learn how to use the powerful `grep` command in Unix/Linux to compare text files and identify lines unique to one file. Simplify file comparison with this quick and flexible technique.</p>]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/find-lines-in-one-file-not-present-in-another-using-grep/]]></guid>
         <pubDate>Sun, 29 Dec 2024 21:24:12 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Open Applications in Fullscreen on Ubuntu]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/open-applications-in-fullscreen-on-ubuntu/]]></link>
-        <description><![CDATA[<p>Learn how to make Ubuntu applications launch in fullscreen by modifying desktop files and application settings with this short step-by-step guide.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/open-applications-in-fullscreen-on-ubuntu/]]></guid>
-        <pubDate>Tue, 17 Dec 2024 21:36:52 </pubDate>
     </item>
 </channel></rss>
