@@ -7,6 +7,13 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Introducing Hashtagify: Easy Hashtag Creation for VS Code]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/hashtagify-introduction/]]></link>
+        <description><![CDATA[<p>Simplify your social media content creation with Hashtagify, a VS Code extension that converts text into hashtags effortlessly.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/hashtagify-introduction/]]></guid>
+        <pubDate>Thu, 16 Jan 2025 20:18:08 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[Synchronize Files Preserving Remote Ownership and Permissions with rsync]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/synchronize-files-preserving-remote-ownership-and-permissions-with-rsync/]]></link>
         <description><![CDATA[<p>Learn how to use rsync to synchronize local and remote files without altering ownership and permissions on the remote server, ensuring consistent file management across systems.</p>]]></description>
@@ -70,12 +77,5 @@ Perfect for urban...</p><img src="https://geeksta.net/img/large/wedding-humboldt
         <description><![CDATA[<p>Learn how to make Ubuntu applications launch in fullscreen by modifying desktop files and application settings with this short step-by-step guide.</p>]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/open-applications-in-fullscreen-on-ubuntu/]]></guid>
         <pubDate>Tue, 17 Dec 2024 21:36:52 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Manage Long-Running Tasks with Screen on a Remote Linux Server]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/manage-tasks-with-screen-remotely/]]></link>
-        <description><![CDATA[<p>A brief step-by-step guide on using screen to manage long-running tasks on remote servers efficiently.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/manage-tasks-with-screen-remotely/]]></guid>
-        <pubDate>Mon, 02 Dec 2024 23:26:38 </pubDate>
     </item>
 </channel></rss>
