@@ -7,6 +7,13 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[The Power of Habit: Why We Do What We Do, and How to Change]]></title>
+        <link><![CDATA[https://geeksta.net/reviews/charles-duhigg-the-power-of-habit/]]></link>
+        <description><![CDATA[<p>The Power of Habit by Charles Duhigg offers an engaging mix of science and storytelling, exploring how habits form, their impact on individuals and organizations, and how they can be reshaped for positive change.</p><img src="/img/books/charles-duhigg-the-power-of-habit.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/reviews/charles-duhigg-the-power-of-habit/]]></guid>
+        <pubDate>Sun, 19 Jan 2025 18:31:21 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[Introducing Charla: A Terminal-Based Chat Client for Language Models]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/charla-introduction/]]></link>
         <description><![CDATA[<p>Discover Charla, a powerful terminal-based chat client for AI language models, designed for developers, researchers, and AI enthusiasts.</p>]]></description>
@@ -70,12 +77,5 @@ Perfect for urban...</p><img src="https://geeksta.net/img/large/wedding-humboldt
         <description><![CDATA[<p>Learn how to prevent user registration spam on your WordPress site with Fail2ban. This step-by-step guide shows you how to configure Fail2ban using Apache logs to block suspicious IPs and secure your website.</p>]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/preventing-user-registration-spam-in-word-press-with-fail2ban/]]></guid>
         <pubDate>Sun, 29 Dec 2024 23:07:30 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Find Lines in One File Not Present in Another Using `grep`]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/find-lines-in-one-file-not-present-in-another-using-grep/]]></link>
-        <description><![CDATA[<p>Learn how to use the powerful `grep` command in Unix/Linux to compare text files and identify lines unique to one file. Simplify file comparison with this quick and flexible technique.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/find-lines-in-one-file-not-present-in-another-using-grep/]]></guid>
-        <pubDate>Sun, 29 Dec 2024 21:24:12 </pubDate>
     </item>
 </channel></rss>
