@@ -42,8 +42,8 @@
 <div class="row">
     <div class="col-9-md">
         <h1>How to Exit a Python Program Gracefully</h1>
-        <p>When developing Python programs, it’s crucial to exit gracefully — whether your program ends by design or due to unexpected interruptions. Graceful exits ensure that resources are released, cleanup tasks are completed, and users receive clear feedback.</p>
-<p>In this guide, we’ll explore the most common ways to exit a Python program cleanly with practical examples and best practices.</p>
+        <p>When developing Python programs, it's crucial to exit gracefully — whether your program ends by design or due to unexpected interruptions. Graceful exits ensure that resources are released, cleanup tasks are completed, and users receive clear feedback.</p>
+<p>In this guide, we'll explore the most common ways to exit a Python program cleanly with practical examples and best practices.</p>
 <h2 id="1-using-sysexit">1. Using <code>sys.exit()</code></h2>
 <p>The most reliable, built-in way to terminate a Python program in scripts or production environments is <code>sys.exit()</code> from the <code>sys</code> module. It allows you to stop program execution immediately and optionally send a message or return an exit code for external tools or systems.</p>
 <h3 id="example">Example:</h3>
@@ -67,7 +67,7 @@ if __name__ == &quot;__main__&quot;:
 </ul>
 <p><strong>Pro Tip:</strong> Use an integer (0 for success, non-zero for errors) if your program is part of a pipeline or being managed/testing by external tools, such as shell scripts or CI/CD systems.</p>
 <h2 id="2-handling-keyboard-interrupts-ctrlc">2. Handling Keyboard Interrupts (<code>Ctrl+C</code>)</h2>
-<p>When users terminate your program by pressing <code>Ctrl+C</code>, Python raises a <code>KeyboardInterrupt</code> exception. It’s a good practice to handle this exception explicitly, ensuring the program exits cleanly and provides feedback.</p>
+<p>When users terminate your program by pressing <code>Ctrl+C</code>, Python raises a <code>KeyboardInterrupt</code> exception. It's a good practice to handle this exception explicitly, ensuring the program exits cleanly and provides feedback.</p>
 <h3 id="example_1">Example:</h3>
 <pre><code class="language-python">import sys
 
@@ -122,7 +122,7 @@ sys.exit()  # Same as sys.exit(0)</code></p>
 </code></pre>
 <p><strong>Why Not Use Them in Programs?</strong></p>
 <ul>
-<li><strong>Designed for REPL:</strong> <code>quit()</code> and <code>exit()</code> are part of the <code>site</code> module, not the Python core. They don’t work well in all environments, especially when running scripts or within larger systems.</li>
+<li><strong>Designed for REPL:</strong> <code>quit()</code> and <code>exit()</code> are part of the <code>site</code> module, not the Python core. They don't work well in all environments, especially when running scripts or within larger systems.</li>
 <li><strong>Inconsistencies:</strong> In non-interactive environments (e.g., automation scripts or server applications), they often fail to terminate programs reliably.</li>
 </ul>
 <p><strong>Best Practice:</strong> Always use <code>sys.exit()</code> in scripts and production code. Reserve <code>quit()</code> and <code>exit()</code> for ad-hoc testing or experimenting in the REPL.</p>
@@ -153,7 +153,7 @@ os._exit(1)  # Use only in rare circumstances
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <p>Graceful program termination is a small but essential aspect of Python programming. By using <code>sys.exit()</code> where appropriate, handling <code>KeyboardInterrupt</code> exceptions, and avoiding improper approaches like <code>quit()</code> or <code>os._exit()</code> in production code, you can ensure clean and predictable program exits.</p>
-<p>With these best practices, you’ll not only improve your code’s reliability but also enhance the user experience for anyone running your Python programs.</p>
+<p>With these best practices, you'll not only improve your code's reliability but also enhance the user experience for anyone running your Python programs.</p>
     </div>
     <div class="col">
 
@@ -168,10 +168,10 @@ os._exit(1)  # Use only in rare circumstances
 
 <h3>Latest Posts</h3>
 <ul>
+        <li><a href="/geeklog/how-to-set-max-input-vars-in-php/">How to Set max_input_vars in PHP: A Quick Guide for Developers</a></li>
         <li><a href="/geeklog/charla-introduction/">Introducing Charla: A Terminal-Based Chat Client for Language Models</a></li>
         <li><a href="/geeklog/hashtagify-introduction/">Introducing Hashtagify: Easy Hashtag Creation for VS Code</a></li>
         <li><a href="/geeklog/synchronize-files-preserving-remote-ownership-and-permissions-with-rsync/">Synchronize Files Preserving Remote Ownership and Permissions with rsync</a></li>
-        <li><a href="/geeklog/how-to-import-modules-in-a-standalone-python-program/">How to Import Modules in a Standalone Python Program</a></li>
 </ul>
 
 <h3>Featured Book</h3>

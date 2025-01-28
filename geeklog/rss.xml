@@ -7,6 +7,87 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[How to Set max_input_vars in PHP: A Quick Guide for Developers]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/how-to-set-max-input-vars-in-php/]]></link>
+        <description><![CDATA[<p>Learn how to set PHP's max_input_vars using php.ini, .htaccess, or .user.ini. Fix `Too many input variables` errors and optimize form handling with this quick guide.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/how-to-set-max-input-vars-in-php/]]></guid>
+        <pubDate>Tue, 28 Jan 2025 14:40:07 </pubDate>
+        <content:encoded><![CDATA[
+        <p>If you've ever encountered the dreaded "Too many input variables" error in PHP, you know how frustrating it can be. This error occurs when your script exceeds the default limit for the number of input variables it can process. Fortunately, PHP provides a way to adjust this limit using the <code>max_input_vars</code> directive. In this post, we'll explore the different ways to set <code>max_input_vars</code> and what you need to keep in mind when doing so.</p>
+<h2 id="what-is-max_input_vars">What is <code>max_input_vars</code>?</h2>
+<p>The <code>max_input_vars</code> directive in PHP controls the maximum number of input variables (such as <code>$_GET</code>, <code>$_POST</code>, and <code>$_COOKIE</code>) that a script can accept. By default, this is set to <strong>1000</strong>, which may not be enough for complex forms or applications. Increasing this limit can help resolve issues with large forms or arrays.</p>
+<h2 id="how-to-set-max_input_vars">How to Set <code>max_input_vars</code></h2>
+<p>There are several ways to set <code>max_input_vars</code>, depending on your server setup and access level:</p>
+<h3 id="1-in-phpini-server-wide-configuration">1. <strong>In <code>php.ini</code> (Server-Wide Configuration)</strong></h3>
+<ul>
+<li>Locate your <code>php.ini</code> file (e.g., <code>/etc/php/8.x/apache2/php.ini</code> on Linux or <code>C:\xampp\php\php.ini</code> on Windows).</li>
+<li>
+<p>Add or update the following line:</p>
+<p><code>ini
+max_input_vars = 5000</code></p>
+</li>
+<li>
+<p>Save the file and restart your web server (Apache, Nginx, etc.).</p>
+</li>
+</ul>
+<p><strong>When to Use</strong>: This method is ideal for server-wide changes or when you have full control over the server.</p>
+<h3 id="2-in-htaccess-apache-only">2. <strong>In <code>.htaccess</code> (Apache Only)</strong></h3>
+<ul>
+<li>
+<p>If you're using Apache and PHP is running as a module, you can set <code>max_input_vars</code> in your <code>.htaccess</code> file:</p>
+<p><code>apache
+php_value max_input_vars 5000</code></p>
+</li>
+<li>
+<p>Save the file and ensure your server has the necessary permissions to read it.</p>
+</li>
+</ul>
+<p><strong>When to Use</strong>: This is a good option for shared hosting environments where you don't have access to <code>php.ini</code>.</p>
+<h3 id="3-in-userini-php-fpm-or-cgi">3. <strong>In <code>.user.ini</code> (PHP-FPM or CGI)</strong></h3>
+<ul>
+<li>
+<p>Create or edit a <code>.user.ini</code> file in your web directory and add:</p>
+<p><code>ini
+max_input_vars = 5000</code></p>
+</li>
+<li>
+<p>Save the file and ensure it has the correct permissions (<code>644</code>).</p>
+</li>
+</ul>
+<p><strong>When to Use</strong>: This method works well for PHP-FPM or CGI setups and is perfect for per-directory configuration.</p>
+<h3 id="4-in-your-php-script-temporary-solution">4. <strong>In Your PHP Script (Temporary Solution)</strong></h3>
+<ul>
+<li>
+<p>You can set <code>max_input_vars</code> at runtime using <code>ini_set()</code>:</p>
+<p><code>php
+ini_set('max_input_vars', '5000');</code></p>
+</li>
+<li>
+<p>Note that this only affects the current script and may not work if the directive is restricted by the server.</p>
+</li>
+</ul>
+<p><strong>When to Use</strong>: Use this for quick fixes or debugging, but avoid it for production environments.</p>
+<h2 id="what-to-pay-attention-to">What to Pay Attention To</h2>
+<ol>
+<li><strong>Server Restart</strong>: Changes to <code>php.ini</code> or Apache configuration files require a server restart to take effect.</li>
+<li><strong>Allowed Directives</strong>: Not all PHP directives can be set in <code>.htaccess</code> or <code>.user.ini</code>. Check the PHP documentation for compatibility.</li>
+<li><strong>Performance Impact</strong>: Increasing <code>max_input_vars</code> can affect memory usage and performance, especially for large applications. Test thoroughly after making changes.</li>
+<li><strong>Security</strong>: Be cautious when increasing limits, as it may expose your application to potential attacks (e.g., resource exhaustion).</li>
+</ol>
+<h2 id="verifying-your-changes">Verifying Your Changes</h2>
+<p>To confirm that your changes have taken effect, create a PHP file with the following code and run it:</p>
+<pre><code class="language-php">&lt;?php
+phpinfo();
+?&gt;
+</code></pre>
+<p>Look for <code>max_input_vars</code> in the output to verify its value.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Setting <code>max_input_vars</code> is a straightforward process, but the method you choose depends on your server setup and access level. Whether you're editing <code>php.ini</code>, using <code>.htaccess</code>, or creating a <code>.user.ini</code> file, make sure to test your changes and monitor performance. By understanding these options, you can ensure your PHP applications handle large inputs smoothly and efficiently.</p>
+<hr>
+<p>Thank you for reading!</p>
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
+    </item>
+    <item>
         <title><![CDATA[Introducing Charla: A Terminal-Based Chat Client for Language Models]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/charla-introduction/]]></link>
         <description><![CDATA[<p>Discover Charla, a powerful terminal-based chat client for AI language models, designed for developers, researchers, and AI enthusiasts.</p>]]></description>
@@ -217,8 +298,8 @@
         <guid><![CDATA[https://geeksta.net/geeklog/how-to-exit-a-python-program-gracefully/]]></guid>
         <pubDate>Tue, 07 Jan 2025 15:31:08 </pubDate>
         <content:encoded><![CDATA[
-        <p>When developing Python programs, it’s crucial to exit gracefully — whether your program ends by design or due to unexpected interruptions. Graceful exits ensure that resources are released, cleanup tasks are completed, and users receive clear feedback.</p>
-<p>In this guide, we’ll explore the most common ways to exit a Python program cleanly with practical examples and best practices.</p>
+        <p>When developing Python programs, it's crucial to exit gracefully — whether your program ends by design or due to unexpected interruptions. Graceful exits ensure that resources are released, cleanup tasks are completed, and users receive clear feedback.</p>
+<p>In this guide, we'll explore the most common ways to exit a Python program cleanly with practical examples and best practices.</p>
 <h2 id="1-using-sysexit">1. Using <code>sys.exit()</code></h2>
 <p>The most reliable, built-in way to terminate a Python program in scripts or production environments is <code>sys.exit()</code> from the <code>sys</code> module. It allows you to stop program execution immediately and optionally send a message or return an exit code for external tools or systems.</p>
 <h3 id="example">Example:</h3>
@@ -242,7 +323,7 @@ if __name__ == &quot;__main__&quot;:
 </ul>
 <p><strong>Pro Tip:</strong> Use an integer (0 for success, non-zero for errors) if your program is part of a pipeline or being managed/testing by external tools, such as shell scripts or CI/CD systems.</p>
 <h2 id="2-handling-keyboard-interrupts-ctrlc">2. Handling Keyboard Interrupts (<code>Ctrl+C</code>)</h2>
-<p>When users terminate your program by pressing <code>Ctrl+C</code>, Python raises a <code>KeyboardInterrupt</code> exception. It’s a good practice to handle this exception explicitly, ensuring the program exits cleanly and provides feedback.</p>
+<p>When users terminate your program by pressing <code>Ctrl+C</code>, Python raises a <code>KeyboardInterrupt</code> exception. It's a good practice to handle this exception explicitly, ensuring the program exits cleanly and provides feedback.</p>
 <h3 id="example_1">Example:</h3>
 <pre><code class="language-python">import sys
 
@@ -297,7 +378,7 @@ sys.exit()  # Same as sys.exit(0)</code></p>
 </code></pre>
 <p><strong>Why Not Use Them in Programs?</strong></p>
 <ul>
-<li><strong>Designed for REPL:</strong> <code>quit()</code> and <code>exit()</code> are part of the <code>site</code> module, not the Python core. They don’t work well in all environments, especially when running scripts or within larger systems.</li>
+<li><strong>Designed for REPL:</strong> <code>quit()</code> and <code>exit()</code> are part of the <code>site</code> module, not the Python core. They don't work well in all environments, especially when running scripts or within larger systems.</li>
 <li><strong>Inconsistencies:</strong> In non-interactive environments (e.g., automation scripts or server applications), they often fail to terminate programs reliably.</li>
 </ul>
 <p><strong>Best Practice:</strong> Always use <code>sys.exit()</code> in scripts and production code. Reserve <code>quit()</code> and <code>exit()</code> for ad-hoc testing or experimenting in the REPL.</p>
@@ -328,7 +409,7 @@ os._exit(1)  # Use only in rare circumstances
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <p>Graceful program termination is a small but essential aspect of Python programming. By using <code>sys.exit()</code> where appropriate, handling <code>KeyboardInterrupt</code> exceptions, and avoiding improper approaches like <code>quit()</code> or <code>os._exit()</code> in production code, you can ensure clean and predictable program exits.</p>
-<p>With these best practices, you’ll not only improve your code’s reliability but also enhance the user experience for anyone running your Python programs.</p>
+<p>With these best practices, you'll not only improve your code's reliability but also enhance the user experience for anyone running your Python programs.</p>
 <hr>
 <p>Thank you for reading!</p>
 <p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
@@ -1113,62 +1194,6 @@ Exec=evince --fullscreen %U
 <h2 id="conclusion">Conclusion</h2>
 <p>Modifying desktop files offers a flexible way to customize application launch behaviors. While not a one-size-fits-all solution, it provides a powerful technique for personalizing your Linux desktop experience.</p>
 <p>Next time you find an application launching in a less-than-ideal window size, remember: a simple desktop file modification might be the solution you're looking for!</p>
-<hr>
-<p>Thank you for reading!</p>
-<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
-    </item>
-    <item>
-        <title><![CDATA[Manage Long-Running Tasks with Screen on a Remote Linux Server]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/manage-tasks-with-screen-remotely/]]></link>
-        <description><![CDATA[<p>A brief step-by-step guide on using screen to manage long-running tasks on remote servers efficiently.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/manage-tasks-with-screen-remotely/]]></guid>
-        <pubDate>Mon, 02 Dec 2024 23:26:38 </pubDate>
-        <content:encoded><![CDATA[
-        <p>When managing remote Linux servers, you might need to run scripts that take hours, even after you've disconnected, for example a system backup or scan. This is where the <code>screen</code> utility shines, allowing processes to continue running independently of your SSH session. Below is a brief step-by-step guide on using <code>screen</code> to manage long-running tasks efficiently.</p>
-<h2 id="getting-started-with-screen">Getting Started with <code>screen</code></h2>
-<h3 id="step-1-connect-to-the-remote-server">Step 1: Connect to the Remote Server</h3>
-<p>Use SSH to log into your server:</p>
-<pre><code class="language-bash">ssh user@remote-server
-</code></pre>
-<h3 id="step-2-start-a-screen-session">Step 2: Start a Screen Session</h3>
-<p>Initiate a new screen session and give it a name for easy identification later:</p>
-<pre><code class="language-bash">screen -S my_backup_session
-</code></pre>
-<h3 id="step-3-execute-your-script">Step 3: Execute Your Script</h3>
-<p>Run your backup or long-term script within the screen session:</p>
-<pre><code class="language-bash">./backup_script.sh
-</code></pre>
-<h3 id="step-4-detach-the-screen-session">Step 4: Detach the Screen Session</h3>
-<p>Once your script is running, detach the session without interrupting the process:</p>
-<p>Press <code>Ctrl + a</code>, then <code>d</code>.</p>
-<p>This keystroke leaves the session intact, running in the background.</p>
-<h3 id="step-5-disconnect-from-the-server">Step 5: Disconnect from the Server</h3>
-<p>You can now safely log out:</p>
-<pre><code class="language-bash">exit
-</code></pre>
-<h3 id="step-6-reattach-to-check-progress">Step 6: Reattach to Check Progress</h3>
-<p>When you wish to check on the script:</p>
-<ol>
-<li>SSH back into the server:</li>
-</ol>
-<p><code>bash
-   ssh user@remote-server</code></p>
-<ol>
-<li>List active screen sessions:</li>
-</ol>
-<p><code>bash
-   screen -ls</code></p>
-<ol>
-<li>Reattach to your specific session:</li>
-</ol>
-<p><code>bash
-   screen -r my_backup_session</code></p>
-<h3 id="step-7-end-the-session">Step 7: End the Session</h3>
-<p>When your task completes, exit the screen session by closing the shell:</p>
-<p>Press <code>Ctrl + d</code>.</p>
-<p>This will terminate the session once your script has concluded.</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>Utilizing <code>screen</code> not only secures your long-running scripts from unexpected SSH disconnections but also offers the flexibility to monitor progress and manage multiple tasks simultaneously. It's an essential tool for any Linux server administrator seeking reliability and efficiency.</p>
 <hr>
 <p>Thank you for reading!</p>
 <p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
