@@ -57,6 +57,10 @@ window.onload = function() {
         new gridjs.Grid({
             columns: columns,
             data: data,
+            pagination: {
+                limit: 20,
+                summary: false
+            },
             search: true,
             sort: true
         }).render(document.getElementById('tts-samples'));
