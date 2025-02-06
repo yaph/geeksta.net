@@ -7,6 +7,125 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[How to Determine the Email Server (MX Records) for a Domain]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/how-to-determine-the-email-server-for-a-domain/]]></link>
+        <description><![CDATA[<p>Learn how to find the Mail Exchange (MX) records for any domain using tools like nslookup, dig, and online services for troubleshooting email delivery or understanding email server setups.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/how-to-determine-the-email-server-for-a-domain/]]></guid>
+        <pubDate>Thu, 06 Feb 2025 12:44:07 </pubDate>
+        <content:encoded><![CDATA[
+        <p>When sending emails, your email client communicates with a specific email server to deliver messages to recipients. To find the correct email server for a particular domain (e.g., <code>example.com</code>), you'll need to identify its <strong>Mail Exchange (MX) records</strong>. MX records are part of the Domain Name System (DNS) and designate the servers responsible for handling email for a domain.</p>
+<p>This guide will walk you through the process step-by-step.</p>
+<h2 id="step-1-understand-the-basics">Step 1: Understand the Basics</h2>
+<ul>
+<li>
+<p><strong>What are MX records?</strong>
+  Mail Exchange (MX) records are DNS entries that specify the mail server(s) responsible for receiving emails on behalf of a domain. If there are multiple MX records, they also include a "priority" value to determine the order in which servers should be used.</p>
+</li>
+<li>
+<p><strong>Why do you need to find MX records?</strong>
+  Knowing the MX records helps you identify the email service provider for a domain or diagnose email delivery issues.</p>
+</li>
+</ul>
+<h2 id="step-2-tools-to-retrieve-mx-records">Step 2: Tools to Retrieve MX Records</h2>
+<p>To find MX records, you can use DNS query tools. Common options include:</p>
+<ol>
+<li><strong>Command-line utilities</strong> (e.g., <code>nslookup</code>, <code>dig</code>)</li>
+<li><strong>Online DNS lookup tools</strong></li>
+<li><strong>Custom scripts or software applications</strong></li>
+</ol>
+<h2 id="step-3-use-the-method-of-your-choice">Step 3: Use the Method of Your Choice</h2>
+<h3 id="method-1-using-command-line-tools">Method 1: Using Command-line Tools</h3>
+<p>Here are instructions for different operating systems:</p>
+<p><strong>On Windows (using <code>nslookup</code>):</strong></p>
+<ol>
+<li>Open the Command Prompt by typing <code>cmd</code> in the Start menu search bar.</li>
+<li>
+<p>Enter the following command:</p>
+<p><code>shell
+nslookup -query=mx example.com</code></p>
+</li>
+</ol>
+<p>Replace <code>example.com</code> with the domain you want to check.
+3. Review the output for a list of MX records, which typically include:
+   - Server names or IP addresses
+   - Priority values</p>
+<p><strong>On Linux/macOS (using <code>dig</code>):</strong></p>
+<ol>
+<li>Open your terminal.</li>
+<li>
+<p>Run the command:</p>
+<p><code>shell
+dig example.com MX</code></p>
+</li>
+<li>
+<p>Similar to <code>nslookup</code>, the result will display the domain's MX records.</p>
+</li>
+</ol>
+<h3 id="example-output">Example Output:</h3>
+<p>For the domain <code>example.com</code>, you may see output like this:</p>
+<pre><code class="language-shell">example.com.       3600    IN    MX    10 mail1.example.com.
+example.com.       3600    IN    MX    20 mail2.example.com.
+</code></pre>
+<p>Here:</p>
+<ul>
+<li><code>10</code> and <code>20</code> are priority values. A lower value indicates higher priority.</li>
+<li><code>mail1.example.com</code> and <code>mail2.example.com</code> are the mail servers.</li>
+</ul>
+<hr />
+<h3 id="method-2-using-online-mx-lookup-tools">Method 2: Using Online MX Lookup Tools</h3>
+<p>If you're not comfortable using the command line, there are plenty of free online tools to perform an MX lookup. Popular options include:</p>
+<ul>
+<li><a href="https://mxtoolbox.com/">MXToolbox</a></li>
+<li><a href="https://dnschecker.org/">DNSChecker.org</a></li>
+<li><a href="https://toolbox.googleapps.com/apps/dig/">Google Admin Toolbox</a></li>
+</ul>
+<p>Here's how to do it with MXToolbox:</p>
+<ol>
+<li>Open MXToolbox in your browser.</li>
+<li>Enter the domain name into the search bar and select "MX Lookup."</li>
+<li>Click the search button to see the domain's MX records.</li>
+</ol>
+<h2 id="step-4-understand-the-results">Step 4: Understand the Results</h2>
+<p>After retrieving the MX records, evaluate the information:</p>
+<ul>
+<li><strong>Priority:</strong> MX records with a lower priority value should be used first when delivering emails.</li>
+<li><strong>Server names:</strong> These often indicate the email service provider. For example:</li>
+<li><code>aspmx.l.google.com</code> suggests the domain uses Google Workspace (formerly G Suite).</li>
+<li><code>mail.protection.outlook.com</code> suggests the domain uses Microsoft 365.</li>
+</ul>
+<h2 id="step-5-optional-diagnostics">Step 5: Optional Diagnostics</h2>
+<p>If you're troubleshooting an email issue, you might also want to:</p>
+<ul>
+<li><strong>Ping the mail server:</strong> Verify the server is reachable.</li>
+<li><strong>Perform an SMTP test:</strong> Use an SMTP (Simple Mail Transfer Protocol) testing tool to ensure email delivery works as expected.</li>
+</ul>
+<p>Here's how to perform a basic SMTP test using the command line:</p>
+<ol>
+<li>Open a terminal.</li>
+<li>Type the following command:</li>
+</ol>
+<p><code>shell
+   telnet mail1.example.com 25</code></p>
+<p>Replace <code>mail1.example.com</code> with the mail server name. If the connection is successful, you'll see a welcome message from the mail server.</p>
+<p><em>Note:</em> Port 25 is commonly used for SMTP, but some servers might prefer others, such as port 587 or 465 for secure communication.</p>
+<h2 id="step-6-document-and-verify">Step 6: Document and Verify</h2>
+<ul>
+<li>Record the retrieved MX records for future reference or troubleshooting.</li>
+<li>Cross-check results from different tools (command line, online tools) to ensure accuracy.</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>To determine the correct email server for a domain:</p>
+<ol>
+<li>Use DNS lookup utilities (e.g., <code>nslookup</code>, <code>dig</code>) or online tools (e.g., MXToolbox).</li>
+<li>Review and interpret the retrieved MX records.</li>
+<li>Confirm server functionality if needed by performing additional tests.</li>
+</ol>
+<p>By following these steps, you can easily find and understand the email infrastructure for any given domain, aiding both end-users and IT professionals alike.</p>
+<hr>
+<p>Thank you for reading!</p>
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
+    </item>
+    <item>
         <title><![CDATA[How to Set max_input_vars in PHP: A Quick Guide for Developers]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/how-to-set-max-input-vars-in-php/]]></link>
         <description><![CDATA[<p>Learn how to set PHP's max_input_vars using php.ini, .htaccess, or .user.ini. Fix `Too many input variables` errors and optimize form handling with this quick guide.</p>]]></description>
@@ -1134,66 +1253,6 @@ bantime = 86400
 </code></pre>
 <h2 id="conclusion">Conclusion</h2>
 <p>Using <code>grep</code> for file comparison like this can save you time and effort, especially when you're working with large files. It's just another demonstration of how versatile <code>grep</code> is beyond its primary use case of searching text. Whether you're cleaning data, analyzing logs, or just tidying up files, <code>grep</code> remains a go-to tool in the Unix/Linux arsenal.</p>
-<hr>
-<p>Thank you for reading!</p>
-<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
-    </item>
-    <item>
-        <title><![CDATA[Open Applications in Fullscreen on Ubuntu]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/open-applications-in-fullscreen-on-ubuntu/]]></link>
-        <description><![CDATA[<p>Learn how to make Ubuntu applications launch in fullscreen by modifying desktop files and application settings with this short step-by-step guide.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/open-applications-in-fullscreen-on-ubuntu/]]></guid>
-        <pubDate>Tue, 17 Dec 2024 21:36:52 </pubDate>
-        <content:encoded><![CDATA[
-        <p>One of my pet peeves with Ubuntu Linux is that several of the applications I'm using are not opened in fullscreen, even if I maximized them in the previous session. Not sure if that's a bug or a feature, but it is not the behavior I want.</p>
-<p>There are different approaches to ensure applications open in fullscreen mode. Some have a corresponding setting, others have a command-line flag, and some applications offer neither of these options.</p>
-<p>For applications that have a command-line flag, you can modify the corresponding <code>.desktop</code> file to open them in fullscreen.</p>
-<h2 id="using-desktop-files">Using Desktop Files</h2>
-<p>Desktop files (<code>.desktop</code> files) are configuration files that define how applications appear in your system's menu and how they behave when launched. Located typically in <code>/usr/share/applications/</code>, these files can be customized on a per-user basis by creating copies in <code>~/.local/share/applications/</code>.</p>
-<p>Let's walk through the process using Evince as an example:</p>
-<p><strong>1. Check the online help to see whether there is an option:</strong></p>
-<pre><code class="language-bash">evince --help
-...
--f, --fullscreen            Run evince in fullscreen mode
-...
-</code></pre>
-<p><strong>2. Create a local copy of the Evince desktop file:</strong></p>
-<pre><code class="language-bash">mkdir -p ~/.local/share/applications
-cp /usr/share/applications/org.gnome.Evince.desktop ~/.local/share/applications/
-</code></pre>
-<p><strong>3. Edit the local copy and modify the <code>Exec=</code> line to include the <code>--fullscreen</code> option:</strong></p>
-<pre><code class="language-bash">vim ~/.local/share/applications/org.gnome.Evince.desktop
-...
-Exec=evince --fullscreen %U
-...
-</code></pre>
-<p><strong>4. Update the desktop database:</strong></p>
-<pre><code class="language-bash">update-desktop-database ~/.local/share/applications
-</code></pre>
-<p>Now, Evince will launch in fullscreen mode by default when you open a PDF or other supported documents.</p>
-<h2 id="limitations">Limitations</h2>
-<p>While this method works fine for Evince, it's not a universal solution. Some applications require different approaches:</p>
-<h3 id="visual-studio-code">Visual Studio Code</h3>
-<p>For VS Code, the desktop file modification approach doesn't work. Instead, you'll need to adjust the application's settings:</p>
-<ol>
-<li>Open VS Code</li>
-<li>Go to Settings (Ctrl+,)</li>
-<li>Search for <code>window.titleBarStyle</code></li>
-<li>Set the value to <code>custom</code></li>
-</ol>
-<p>This setting ensures that VS Code windows open maximized across all new windows.</p>
-<h3 id="keepassx">KeePassX</h3>
-<p>Similarly, KeePassX lacks a command-line option to start in fullscreen and has no corresponding setting that I'm aware of either. For these cases, I use the keyboard shortcut <code>Super (Windows or Command key) + Up Arrow</code> or double-click the title bar to manually maximize the window.</p>
-<h2 id="best-practices">Best Practices</h2>
-<ul>
-<li>Always create a local copy of the desktop file before modifying.</li>
-<li>Preserve the original file's structure, the local file must be a complete, standalone desktop file.</li>
-<li>Run the <code>update-desktop-database</code> command to ensure changes take effect.</li>
-<li>Remember that not all applications support fullscreen launch via desktop files.</li>
-</ul>
-<h2 id="conclusion">Conclusion</h2>
-<p>Modifying desktop files offers a flexible way to customize application launch behaviors. While not a one-size-fits-all solution, it provides a powerful technique for personalizing your Linux desktop experience.</p>
-<p>Next time you find an application launching in a less-than-ideal window size, remember: a simple desktop file modification might be the solution you're looking for!</p>
 <hr>
 <p>Thank you for reading!</p>
 <p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
