@@ -46,13 +46,13 @@
 <h2 id="step-by-step-guide-to-configure-fail2ban">Step-by-Step Guide to Configure Fail2ban</h2>
 <h3 id="step-1-ensure-fail2ban-is-installed">Step 1: Ensure Fail2ban is Installed</h3>
 <p>First, you need to have Fail2ban installed on your server. If it's not already installed, you can install it using your package manager. For Debian-based systems, the following commands will do the trick:</p>
-<pre><code class="language-bash">sudo apt-get update
+<pre><code class="language-shell">sudo apt-get update
 sudo apt-get install fail2ban
 </code></pre>
 <h3 id="step-2-create-a-custom-filter-for-detecting-registration-attempts">Step 2: Create a Custom Filter for Detecting Registration Attempts</h3>
 <p>Next, create a custom filter file for Fail2ban to detect user registration attempts. This filter will parse the Apache logs to find registration attempts and take action based on your configuration.</p>
 <p>Create a new filter file named <code>wordpress-registration.conf</code> in the <code>/etc/fail2ban/filter.d/</code> directory:</p>
-<pre><code class="language-bash">sudo vim /etc/fail2ban/filter.d/wordpress-registration.conf
+<pre><code class="language-shell">sudo vim /etc/fail2ban/filter.d/wordpress-registration.conf
 </code></pre>
 <p>Add the following content to this file:</p>
 <pre><code class="language-txt">[Definition]
@@ -62,7 +62,7 @@ ignoreregex =
 <p>This <code>failregex</code> is designed to match log entries corresponding to user registration attempts in your Apache logs. <code>ignoreregex</code> is left empty because we don't want to ignore any relevant behavior.</p>
 <h3 id="step-3-configure-a-fail2ban-jail-for-wordpress-registrations">Step 3: Configure a Fail2ban Jail for WordPress Registrations</h3>
 <p>Now, create a new jail configuration file named <code>wordpress-registration.conf</code> in the <code>/etc/fail2ban/jail.d/</code> directory:</p>
-<pre><code class="language-bash">sudo vim /etc/fail2ban/jail.d/wordpress-registration.conf
+<pre><code class="language-shell">sudo vim /etc/fail2ban/jail.d/wordpress-registration.conf
 </code></pre>
 <p>Add the following content to this file:</p>
 <pre><code class="language-txt">[wordpress-registration]
@@ -82,11 +82,11 @@ bantime = 86400
 </ul>
 <h3 id="step-4-restart-fail2ban">Step 4: Restart Fail2ban</h3>
 <p>To apply your new configuration, restart the Fail2ban service:</p>
-<pre><code class="language-bash">sudo systemctl restart fail2ban
+<pre><code class="language-shell">sudo systemctl restart fail2ban
 </code></pre>
 <h3 id="step-5-verify-the-setup">Step 5: Verify the Setup</h3>
 <p>Finally, ensure that your new filter is working correctly by tailing the Fail2ban log:</p>
-<pre><code class="language-bash">sudo tail -f /var/log/fail2ban.log
+<pre><code class="language-shell">sudo tail -f /var/log/fail2ban.log
 </code></pre>
 <p>Monitor the log for any entries related to the <code>wordpress-registration</code> jail. You should see Fail2ban detecting and banning IPs as expected when they attempt to register users on your WordPress site.</p>
 <h2 id="conclusion">Conclusion</h2>

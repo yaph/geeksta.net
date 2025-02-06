@@ -58,7 +58,7 @@
 </ol>
 <h2 id="step-3-check-system-messages">Step 3: Check System Messages</h2>
 <p>After reconnecting the drive, open a terminal and check the <code>dmesg</code> output for any relevant messages:</p>
-<pre><code class="language-bash">sudo dmesg | grep -i usb
+<pre><code class="language-shell">sudo dmesg | grep -i usb
 </code></pre>
 <p>Look for error messages like <code>device descriptor read error</code> or <code>unable to enumerate USB device</code>, which indicate problems with the USB connection.</p>
 <h2 id="step-4-list-usb-devices">Step 4: List USB Devices</h2>
@@ -66,17 +66,17 @@
 <h2 id="step-5-disable-usb-autosuspend">Step 5: Disable USB Autosuspend</h2>
 <p>Sometimes, USB autosuspend can cause issues. Disable it by editing the GRUB configuration:</p>
 <p>Open and edit the GRUB configuration file:</p>
-<pre><code class="language-bash">sudo vim /etc/default/grub
+<pre><code class="language-shell">sudo vim /etc/default/grub
 </code></pre>
 <p>Add <code>usbcore.autosuspend=-1</code> to the <code>GRUB_CMDLINE_LINUX_DEFAULT</code> line. It should look like this:</p>
 <pre><code class="language-ini">GRUB_CMDLINE_LINUX_DEFAULT=&quot;quiet splash usbcore.autosuspend=-1&quot;
 </code></pre>
 <p>Update GRUB and reboot:</p>
-<pre><code class="language-bash">sudo update-grub
+<pre><code class="language-shell">sudo update-grub
 sudo reboot
 </code></pre>
 <p>Then check the <code>autosuspend</code> value, it should be <code>-1</code>:</p>
-<pre><code class="language-bash">cat /sys/module/usbcore/parameters/autosuspend
+<pre><code class="language-shell">cat /sys/module/usbcore/parameters/autosuspend
 </code></pre>
 <p>If this doesn't help, I suggest undoing the changes.</p>
 <h2 id="step-6-use-a-live-usb">Step 6: Use a Live USB</h2>
@@ -91,10 +91,10 @@ sudo reboot
 <h2 id="step-8-attempt-data-recovery">Step 8: Attempt Data Recovery</h2>
 <p>If the drive is recognized but you can't access the data, use tools like TestDisk and PhotoRec:</p>
 <p>Install TestDisk and PhotoRec:</p>
-<pre><code class="language-bash">sudo apt-get install testdisk
+<pre><code class="language-shell">sudo apt-get install testdisk
 </code></pre>
 <p>Run TestDisk:</p>
-<pre><code class="language-bash">sudo testdisk
+<pre><code class="language-shell">sudo testdisk
 </code></pre>
 <p>Follow the prompts to analyze and recover partitions or files.</p>
 <h2 id="opening-the-case">Opening the Case</h2>

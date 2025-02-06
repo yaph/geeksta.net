@@ -74,34 +74,30 @@
 <li><strong>GitHub Token (Optional)</strong>: To use remote GitHub Models, ensure you have a valid GitHub token.</li>
 </ol>
 <p>Once you've prepared the above, install Charla via <code>pipx</code>:</p>
-<pre><code class="language-bash">pipx install charla
+<pre><code class="language-shell">pipx install charla
 </code></pre>
 <h3 id="setting-up-github-models">Setting Up GitHub Models</h3>
 <p>For GitHub-based models, you'll need to export your GitHub token as an environment variable:</p>
-<pre><code class="language-bash">export GITHUB_TOKEN=YOUR_GITHUB_TOKEN
+<pre><code class="language-shell">export GITHUB_TOKEN=YOUR_GITHUB_TOKEN
 </code></pre>
 <p>This step allows Charla to authenticate with the GitHub Models service for remote chat sessions.</p>
 <h2 id="getting-started-with-charla">Getting Started with Charla</h2>
 <p>After successful installation, launch Charla by entering the following command in your terminal:</p>
-<pre><code class="language-bash">charla
+<pre><code class="language-shell">charla
 </code></pre>
 <p>From here, you can specify the model and provider you'd like to use. Below are a couple of examples to get you started:</p>
-<ul>
-<li><strong>Local (via Ollama, default provider)</strong>:</li>
-</ul>
-<p><code>bash
-  charla -m phi3</code></p>
-<ul>
-<li><strong>Remote (via GitHub Models)</strong>:</li>
-</ul>
-<p><code>bash
-  charla -m gpt-4o --provider github</code></p>
+<p><strong>Local (via Ollama, default provider)</strong>:</p>
+<pre><code class="language-shell">charla -m phi3
+</code></pre>
+<p><strong>Remote (via GitHub Models)</strong>:</p>
+<pre><code class="language-shell">charla -m gpt-4o --provider github
+</code></pre>
 <p>You can also customize default configurations (e.g., preferred model, provider settings) by modifying your user settings file.</p>
 <h2 id="customizing-charla-settings">Customizing Charla: Settings</h2>
 <p>Charla offers a high degree of customization through both <strong>global settings files</strong> and <strong>local configuration options</strong>. Here's how to manage these configurations:</p>
 <h3 id="finding-your-settings-file-location">Finding Your Settings File Location</h3>
 <p>Run the following command to locate your global settings file:</p>
-<pre><code class="language-bash">charla settings --location
+<pre><code class="language-shell">charla settings --location
 </code></pre>
 <h3 id="example-configuration-file">Example Configuration File</h3>
 <p>Here's a sample <code>.charla.json</code> file that sets the following defaults:</p>
@@ -118,11 +114,11 @@
 }
 </code></pre>
 <p>To save your current settings to a <code>.charla.json</code> file in your working directory, use:</p>
-<pre><code class="language-bash">charla settings --save
+<pre><code class="language-shell">charla settings --save
 </code></pre>
 <h3 id="command-line-overrides">Command-Line Overrides</h3>
 <p>You can override settings temporarily by passing arguments in the command line. For example, to enable multiline input and set a custom system prompt file:</p>
-<pre><code class="language-bash">charla --multiline --system-prompt custom-prompt.txt
+<pre><code class="language-shell">charla --multiline --system-prompt custom-prompt.txt
 </code></pre>
 <p>Command-line arguments take precedence over both local and global configuration files.</p>
 <h2 id="try-charla-today">Try Charla Today!</h2>

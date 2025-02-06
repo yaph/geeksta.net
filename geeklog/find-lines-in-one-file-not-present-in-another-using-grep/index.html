@@ -47,7 +47,7 @@
 <p>While there are several ways to compare files (like using <code>diff</code> or <code>comm</code>), <code>grep</code> offers a flexible and straightforward approach, especially if you're already familiar with using it for text searching. With a few options, <code>grep</code> can serve as an effective tool for file comparison.</p>
 <h2 id="the-command">The Command</h2>
 <p>To locate lines in file A that are not present in file B, you can use the following <code>grep</code> command:</p>
-<pre><code class="language-bash">grep -Fxv -f B A
+<pre><code class="language-shell">grep -Fxv -f B A
 </code></pre>
 <h3 id="breaking-down-the-command">Breaking Down the Command</h3>
 <ul>
@@ -66,7 +66,7 @@
 </ul>
 <h2 id="practical-example">Practical Example</h2>
 <p>Imagine you have two lists: <code>employees.txt</code> with the names of all employees in a company, and <code>attended_workshop.txt</code> with the names of those who attended a particular workshop. To find out who didn't attend, you can apply the above <code>grep</code> command and get the desired list in seconds.</p>
-<pre><code class="language-bash">grep -Fxv -f attended_workshop.txt employees.txt
+<pre><code class="language-shell">grep -Fxv -f attended_workshop.txt employees.txt
 </code></pre>
 <h2 id="conclusion">Conclusion</h2>
 <p>Using <code>grep</code> for file comparison like this can save you time and effort, especially when you're working with large files. It's just another demonstration of how versatile <code>grep</code> is beyond its primary use case of searching text. Whether you're cleaning data, analyzing logs, or just tidying up files, <code>grep</code> remains a go-to tool in the Unix/Linux arsenal.</p>

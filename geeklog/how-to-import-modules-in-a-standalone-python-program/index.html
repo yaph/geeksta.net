@@ -74,7 +74,7 @@ def main():
 <p>This approach directly specifies where <code>util</code> resides within the overall package structure, reducing ambiguity.</p>
 <h2 id="running-your-script-locally">Running Your Script Locally</h2>
 <p>To ensure your script runs correctly during development, always execute it with the <code>-m</code> flag from the root directory of your project. For example:</p>
-<pre><code class="language-bash">cd myapp
+<pre><code class="language-shell">cd myapp
 python -m mymodule.cli
 </code></pre>
 <p>The <code>-m</code> flag tells Python to treat <code>mymodule.cli</code> as a module in the package context, making imports like <code>from mymodule import util</code> work seamlessly.</p>
@@ -120,17 +120,17 @@ if __name__ == &quot;__main__&quot;:
 <ol>
 <li>Navigate to the root of your project directory:</li>
 </ol>
-<pre><code class="language-bash">cd myapp
+<pre><code class="language-shell">cd myapp
 </code></pre>
 <ol>
 <li>Install the application with pipx:</li>
 </ol>
-<pre><code class="language-bash">pipx install .
+<pre><code class="language-shell">pipx install .
 </code></pre>
 <ol>
 <li>Run your application from anywhere using the executable name defined in your <code>setup.py</code> (<code>myapp</code> in this case):</li>
 </ol>
-<pre><code class="language-bash">myapp
+<pre><code class="language-shell">myapp
 </code></pre>
 <p>By relying on pipx, your app will work in an isolated environment, reducing the need to manage Python dependencies globally.</p>
 <h2 id="conclusion">Conclusion</h2>

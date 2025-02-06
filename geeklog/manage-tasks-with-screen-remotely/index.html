@@ -46,15 +46,15 @@
 <h2 id="getting-started-with-screen">Getting Started with <code>screen</code></h2>
 <h3 id="step-1-connect-to-the-remote-server">Step 1: Connect to the Remote Server</h3>
 <p>Use SSH to log into your server:</p>
-<pre><code class="language-bash">ssh user@remote-server
+<pre><code class="language-shell">ssh user@remote-server
 </code></pre>
 <h3 id="step-2-start-a-screen-session">Step 2: Start a Screen Session</h3>
 <p>Initiate a new screen session and give it a name for easy identification later:</p>
-<pre><code class="language-bash">screen -S my_backup_session
+<pre><code class="language-shell">screen -S my_backup_session
 </code></pre>
 <h3 id="step-3-execute-your-script">Step 3: Execute Your Script</h3>
 <p>Run your backup or long-term script within the screen session:</p>
-<pre><code class="language-bash">./backup_script.sh
+<pre><code class="language-shell">./backup_script.sh
 </code></pre>
 <h3 id="step-4-detach-the-screen-session">Step 4: Detach the Screen Session</h3>
 <p>Once your script is running, detach the session without interrupting the process:</p>
@@ -62,24 +62,24 @@
 <p>This keystroke leaves the session intact, running in the background.</p>
 <h3 id="step-5-disconnect-from-the-server">Step 5: Disconnect from the Server</h3>
 <p>You can now safely log out:</p>
-<pre><code class="language-bash">exit
+<pre><code class="language-shell">exit
 </code></pre>
 <h3 id="step-6-reattach-to-check-progress">Step 6: Reattach to Check Progress</h3>
 <p>When you wish to check on the script:</p>
 <ol>
 <li>SSH back into the server:</li>
 </ol>
-<p><code>bash
+<p><code>shell
    ssh user@remote-server</code></p>
 <ol>
 <li>List active screen sessions:</li>
 </ol>
-<p><code>bash
+<p><code>shell
    screen -ls</code></p>
 <ol>
 <li>Reattach to your specific session:</li>
 </ol>
-<p><code>bash
+<p><code>shell
    screen -r my_backup_session</code></p>
 <h3 id="step-7-end-the-session">Step 7: End the Session</h3>
 <p>When your task completes, exit the screen session by closing the shell:</p>

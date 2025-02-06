@@ -48,53 +48,28 @@
 <h2 id="how-to-set-max_input_vars">How to Set <code>max_input_vars</code></h2>
 <p>There are several ways to set <code>max_input_vars</code>, depending on your server setup and access level:</p>
 <h3 id="1-in-phpini-server-wide-configuration">1. <strong>In <code>php.ini</code> (Server-Wide Configuration)</strong></h3>
-<ul>
-<li>Locate your <code>php.ini</code> file (e.g., <code>/etc/php/8.x/apache2/php.ini</code> on Linux or <code>C:\xampp\php\php.ini</code> on Windows).</li>
-<li>
-<p>Add or update the following line:</p>
-<p><code>ini
-max_input_vars = 5000</code></p>
-</li>
-<li>
+<p>Locate your <code>php.ini</code> file (e.g., <code>/etc/php/8.x/apache2/php.ini</code> on Linux or <code>C:\xampp\php\php.ini</code> on Windows). Then add or update the following line:</p>
+<pre><code class="language-ini">max_input_vars = 5000
+</code></pre>
 <p>Save the file and restart your web server (Apache, Nginx, etc.).</p>
-</li>
-</ul>
 <p><strong>When to Use</strong>: This method is ideal for server-wide changes or when you have full control over the server.</p>
 <h3 id="2-in-htaccess-apache-only">2. <strong>In <code>.htaccess</code> (Apache Only)</strong></h3>
-<ul>
-<li>
 <p>If you're using Apache and PHP is running as a module, you can set <code>max_input_vars</code> in your <code>.htaccess</code> file:</p>
-<p><code>apache
-php_value max_input_vars 5000</code></p>
-</li>
-<li>
+<pre><code class="language-apache">php_value max_input_vars 5000
+</code></pre>
 <p>Save the file and ensure your server has the necessary permissions to read it.</p>
-</li>
-</ul>
 <p><strong>When to Use</strong>: This is a good option for shared hosting environments where you don't have access to <code>php.ini</code>.</p>
 <h3 id="3-in-userini-php-fpm-or-cgi">3. <strong>In <code>.user.ini</code> (PHP-FPM or CGI)</strong></h3>
-<ul>
-<li>
 <p>Create or edit a <code>.user.ini</code> file in your web directory and add:</p>
-<p><code>ini
-max_input_vars = 5000</code></p>
-</li>
-<li>
+<pre><code class="language-ini">max_input_vars = 5000
+</code></pre>
 <p>Save the file and ensure it has the correct permissions (<code>644</code>).</p>
-</li>
-</ul>
 <p><strong>When to Use</strong>: This method works well for PHP-FPM or CGI setups and is perfect for per-directory configuration.</p>
 <h3 id="4-in-your-php-script-temporary-solution">4. <strong>In Your PHP Script (Temporary Solution)</strong></h3>
-<ul>
-<li>
 <p>You can set <code>max_input_vars</code> at runtime using <code>ini_set()</code>:</p>
-<p><code>php
-ini_set('max_input_vars', '5000');</code></p>
-</li>
-<li>
+<pre><code class="language-php">ini_set('max_input_vars', '5000');
+</code></pre>
 <p>Note that this only affects the current script and may not work if the directive is restricted by the server.</p>
-</li>
-</ul>
 <p><strong>When to Use</strong>: Use this for quick fixes or debugging, but avoid it for production environments.</p>
 <h2 id="what-to-pay-attention-to">What to Pay Attention To</h2>
 <ol>

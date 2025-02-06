@@ -49,23 +49,23 @@
 <p>Desktop files (<code>.desktop</code> files) are configuration files that define how applications appear in your system's menu and how they behave when launched. Located typically in <code>/usr/share/applications/</code>, these files can be customized on a per-user basis by creating copies in <code>~/.local/share/applications/</code>.</p>
 <p>Let's walk through the process using Evince as an example:</p>
 <p><strong>1. Check the online help to see whether there is an option:</strong></p>
-<pre><code class="language-bash">evince --help
+<pre><code class="language-shell">evince --help
 ...
 -f, --fullscreen            Run evince in fullscreen mode
 ...
 </code></pre>
 <p><strong>2. Create a local copy of the Evince desktop file:</strong></p>
-<pre><code class="language-bash">mkdir -p ~/.local/share/applications
+<pre><code class="language-shell">mkdir -p ~/.local/share/applications
 cp /usr/share/applications/org.gnome.Evince.desktop ~/.local/share/applications/
 </code></pre>
 <p><strong>3. Edit the local copy and modify the <code>Exec=</code> line to include the <code>--fullscreen</code> option:</strong></p>
-<pre><code class="language-bash">vim ~/.local/share/applications/org.gnome.Evince.desktop
+<pre><code class="language-shell">vim ~/.local/share/applications/org.gnome.Evince.desktop
 ...
 Exec=evince --fullscreen %U
 ...
 </code></pre>
 <p><strong>4. Update the desktop database:</strong></p>
-<pre><code class="language-bash">update-desktop-database ~/.local/share/applications
+<pre><code class="language-shell">update-desktop-database ~/.local/share/applications
 </code></pre>
 <p>Now, Evince will launch in fullscreen mode by default when you open a PDF or other supported documents.</p>
 <h2 id="limitations">Limitations</h2>

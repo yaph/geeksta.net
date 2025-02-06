@@ -65,7 +65,7 @@ if __name__ == &quot;__main__&quot;:
 <li>The <code>sys.exit()</code> function stops the entire program.</li>
 <li>If provided, the argument (e.g., <code>"Goodbye!"</code>) is displayed to the console, or passed to the parent process when used in automation pipelines.</li>
 </ul>
-<p><strong>Pro Tip:</strong> Use an integer (0 for success, non-zero for errors) if your program is part of a pipeline or being managed/testing by external tools, such as shell scripts or CI/CD systems.</p>
+<p><strong>Tip:</strong> Use an integer (0 for success, non-zero for errors) if your program is part of a pipeline or being managed/testing by external tools, such as shell scripts or CI/CD systems.</p>
 <h2 id="2-handling-keyboard-interrupts-ctrlc">2. Handling Keyboard Interrupts (<code>Ctrl+C</code>)</h2>
 <p>When users terminate your program by pressing <code>Ctrl+C</code>, Python raises a <code>KeyboardInterrupt</code> exception. It's a good practice to handle this exception explicitly, ensuring the program exits cleanly and provides feedback.</p>
 <h3 id="example_1">Example:</h3>
@@ -89,31 +89,18 @@ if __name__ == &quot;__main__&quot;:
 <li>Failing to catch <code>KeyboardInterrupt</code> might leave critical cleanup tasks incomplete (e.g., closing files, shutting down threads, or releasing database locks).</li>
 <li>Adding a friendly exit message improves the user experience for interactive programs.</li>
 </ul>
-<p><strong>Pro Tip:</strong> Replace infinite loops with specific long-running tasks in production for better program reliability.</p>
+<p><strong>Tip:</strong> Replace infinite loops with specific long-running tasks in production for better program reliability.</p>
 <h2 id="3-understanding-the-sysexit-function-signature">3. Understanding the <code>sys.exit()</code> Function Signature</h2>
 <p>The signature for <code>sys.exit()</code> provides flexibility in how you terminate your program:</p>
 <pre><code class="language-python">sys.exit([arg])
 </code></pre>
-<h3 id="key-points">Key Points:</h3>
+<p>The optional <code>arg</code> parameter controls the exit behavior:</p>
 <ul>
-<li><strong><code>arg</code></strong>: This optional parameter controls the exit behavior:</li>
-<li>
-<p><strong>Integer (recommended):</strong> <code>0</code> indicates successful termination, while non-zero integers (e.g., <code>1</code>) indicate an error or abnormal termination.</p>
-<p><code>python
-sys.exit(1)  # Signals an error occurred</code></p>
-</li>
-<li>
-<p><strong>String:</strong> If a string or other object is passed, it will be printed to <code>stderr</code>, and an exit status of <code>1</code> is returned.</p>
-<p><code>python
-sys.exit("An error occurred.")</code></p>
-</li>
-<li>
-<p><strong>None:</strong> Defaults to <code>0</code> (successful termination).</p>
-<p><code>python
-sys.exit()  # Same as sys.exit(0)</code></p>
-</li>
+<li><strong>Integer (recommended):</strong> <code>0</code> indicates successful termination, while non-zero integers (e.g., <code>1</code>) indicate an error or abnormal termination. <code>sys.exit(1)</code> signals an error occurred.</li>
+<li><strong>String:</strong> If a string or other object is passed, it will be printed to <code>stderr</code>, and an exit status of <code>1</code> is returned: <code>sys.exit("An error occurred.")</code></li>
+<li><strong>None:</strong> Defaults to <code>0</code> (successful termination): <code>sys.exit()</code></li>
 </ul>
-<p><strong>Pro Tip:</strong> Use numeric exit codes with external-facing applications, especially if they interact with other services or scripts. Reserve strings for user-facing messages.</p>
+<p><strong>Tip:</strong> Use numeric exit codes with external-facing applications, especially if they interact with other services or scripts. Reserve strings for user-facing messages.</p>
 <h2 id="4-why-avoid-using-quit-and-exit-in-scripts">4. Why Avoid Using <code>quit()</code> and <code>exit()</code> in Scripts?</h2>
 <p>Python provides two additional commands, <code>quit()</code> and <code>exit()</code>, for exiting programs, but these are intended for use in interactive environments like the Python REPL.</p>
 <h3 id="example-interactive-mode-only">Example (Interactive Mode Only):</h3>
@@ -138,15 +125,15 @@ os._exit(1)  # Use only in rare circumstances
 <li>Reserved for advanced scenarios such as terminating worker processes in multithreaded systems.</li>
 <li>Avoid in most cases, as it skips important teardown steps, potentially leaving resources in an unstable state.</li>
 </ul>
-<p><strong>Pro Tip:</strong> Stick to <code>sys.exit()</code> unless you absolutely need the low-level control provided by <code>os._exit()</code>.</p>
+<p><strong>Tip:</strong> Stick to <code>sys.exit()</code> unless you absolutely need the low-level control provided by <code>os._exit()</code>.</p>
 <h2 id="6-final-tips-for-exiting-gracefully">6. Final Tips for Exiting Gracefully</h2>
 <ul>
 <li><strong>Release Resources:</strong> Always ensure files, sockets, or database connections are properly closed before exiting. Use context managers wherever possible.</li>
 </ul>
-<p><code>python
-  with open("example.txt", "r") as file:
-      data = file.read()
-  # File automatically closed on exit</code></p>
+<pre><code class="language-python">with open(&quot;example.txt&quot;, &quot;r&quot;) as file:
+    data = file.read()
+# File automatically closed on exit
+</code></pre>
 <ul>
 <li><strong>Provide Feedback:</strong> Show meaningful messages when exiting due to errors or user actions.</li>
 <li><strong>Avoid Silent Failures:</strong> Use logging or clear <code>sys.exit()</code> exit codes when terminating during errors.</li>

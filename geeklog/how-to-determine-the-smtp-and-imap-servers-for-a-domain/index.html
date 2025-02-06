@@ -74,11 +74,40 @@
 <li>Port numbers for secure communication</li>
 </ul>
 <p>For example:</p>
-<p>| <strong>Provider</strong>       | <strong>SMTP Server</strong>       | <strong>IMAP Server</strong>       | <strong>SMTP Port</strong> | <strong>IMAP Port</strong> |
-|--------------------|-----------------------|-----------------------|---------------|---------------|
-| Gmail              | <code>smtp.gmail.com</code>      | <code>imap.gmail.com</code>      | 587 (TLS)     | 993 (SSL)     |
-| Yahoo Mail         | <code>smtp.mail.yahoo.com</code> | <code>imap.mail.yahoo.com</code> | 465 (SSL)     | 993 (SSL)     |
-| Microsoft Outlook  | <code>smtp-mail.outlook.com</code>| <code>outlook.office365.com</code> | 587 (TLS)   | 993 (SSL)     |</p>
+<table>
+<thead>
+<tr>
+<th><strong>Provider</strong></th>
+<th><strong>SMTP Server</strong></th>
+<th><strong>IMAP Server</strong></th>
+<th><strong>SMTP Port</strong></th>
+<th><strong>IMAP Port</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gmail</td>
+<td><code>smtp.gmail.com</code></td>
+<td><code>imap.gmail.com</code></td>
+<td>587 (TLS)</td>
+<td>993 (SSL)</td>
+</tr>
+<tr>
+<td>Yahoo Mail</td>
+<td><code>smtp.mail.yahoo.com</code></td>
+<td><code>imap.mail.yahoo.com</code></td>
+<td>465 (SSL)</td>
+<td>993 (SSL)</td>
+</tr>
+<tr>
+<td>Microsoft Outlook</td>
+<td><code>smtp-mail.outlook.com</code></td>
+<td><code>outlook.office365.com</code></td>
+<td>587 (TLS)</td>
+<td>993 (SSL)</td>
+</tr>
+</tbody>
+</table>
 <h3 id="step-2-let-your-email-client-auto-detect-settings">Step 2. Let Your Email Client Auto-Detect Settings</h3>
 <p>Most modern email clients, such as Apple Mail or Thunderbird, have built-in tools to automatically detect server settings. To use this:</p>
 <ol>
@@ -132,11 +161,36 @@
 <p>If you've identified potential SMTP or IMAP server addresses but want to confirm their functionality, testing their connectivity on common ports can be a helpful diagnostic step. Ports act as communication gateways that allow email clients to exchange data with servers. Here’s how you can test server connectivity and ensure you're using the correct settings.</p>
 <h4 id="common-ports-for-smtp-sending-emails">Common Ports for SMTP (Sending Emails)</h4>
 <p>SMTP (Simple Mail Transfer Protocol) is responsible for sending outgoing emails. The table below lists the most commonly used ports for SMTP:</p>
-<p>| <strong>Port</strong>  | <strong>Purpose</strong>                         | <strong>Encryption</strong>  | <strong>Notes</strong>                                                                 |
-|-----------|-------------------------------------|-----------------|---------------------------------------------------------------------------|
-| <strong>587</strong>   | Sending emails (modern standard)   | STARTTLS        | Recommended for secure email sending from email clients.                  |
-| <strong>465</strong>   | Sending emails (legacy setups)     | SSL             | Deprecated but still supported by some providers like Yahoo.              |
-| <strong>25</strong>    | Server-to-server email relay       | None            | Avoid for email client use; often blocked by ISPs to prevent spam abuse.  |</p>
+<table>
+<thead>
+<tr>
+<th><strong>Port</strong></th>
+<th><strong>Purpose</strong></th>
+<th><strong>Encryption</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>587</strong></td>
+<td>Sending emails (modern standard)</td>
+<td>STARTTLS</td>
+<td>Recommended for secure email sending from email clients.</td>
+</tr>
+<tr>
+<td><strong>465</strong></td>
+<td>Sending emails (legacy setups)</td>
+<td>SSL</td>
+<td>Deprecated but still supported by some providers like Yahoo.</td>
+</tr>
+<tr>
+<td><strong>25</strong></td>
+<td>Server-to-server email relay</td>
+<td>None</td>
+<td>Avoid for email client use; often blocked by ISPs to prevent spam abuse.</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li><strong>Port 587</strong> is the default and recommended port for most email clients because it supports STARTTLS, enabling secure communication.</li>
 <li><strong>Port 465</strong> was previously assigned for secure email transmission using SSL encryption. While deprecated as an official standard, some email providers continue to support it for legacy setups.</li>
@@ -144,29 +198,45 @@
 </ul>
 <h4 id="common-ports-for-imap-receiving-emails">Common Ports for IMAP (Receiving Emails)</h4>
 <p>IMAP (Internet Message Access Protocol) is used to retrieve emails and sync them across devices. The following table outlines the two main ports used for IMAP:</p>
-<p>| <strong>Port</strong>  | <strong>Purpose</strong>                            | <strong>Encryption</strong>  | <strong>Notes</strong>                                           |
-|-----------|----------------------------------------|-----------------|---------------------------------------------------|
-| <strong>993</strong>   | Receiving emails (secure)             | SSL/TLS         | Recommended for secure email retrieval in most environments. |
-| <strong>143</strong>   | Receiving emails (legacy, less secure)| None            | Use only if encryption isn’t required, which is very rare.   |</p>
+<table>
+<thead>
+<tr>
+<th><strong>Port</strong></th>
+<th><strong>Purpose</strong></th>
+<th><strong>Encryption</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>993</strong></td>
+<td>Receiving emails (secure)</td>
+<td>SSL/TLS</td>
+<td>Recommended for secure email retrieval in most environments.</td>
+</tr>
+<tr>
+<td><strong>143</strong></td>
+<td>Receiving emails (legacy, less secure)</td>
+<td>None</td>
+<td>Use only if encryption isn’t required, which is very rare.</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li><strong>Port 993</strong> is widely used and considered the standard for encrypted IMAP connections.</li>
 <li><strong>Port 143</strong> supports unencrypted communication and is usually used in legacy or special configurations where encryption isn’t mandatory. Given today’s privacy and security standards, this port is generally not recommended.</li>
 </ul>
 <h4 id="how-to-test-server-connectivity">How to Test Server Connectivity</h4>
 <p>Once you have the server address and port number, you can test their functionality using tools like <strong>Telnet</strong> or <strong>OpenSSL</strong>. These tools attempt to establish a connection to the server on the specified port.</p>
-<ol>
-<li><strong>Using Telnet</strong>:
-   Open your command line and use the following format:</li>
-</ol>
-<p><code>shell
-   telnet smtp.example.com 587</code></p>
+<p><strong>Using Telnet</strong>:</p>
+<p>Open your command line and use the following format:</p>
+<pre><code class="language-shell">telnet smtp.example.com 587
+</code></pre>
 <p>Replace <code>smtp.example.com</code> with the SMTP server's address and <code>587</code> with the port you wish to test. Successful responses indicate the server is reachable.</p>
-<ol>
-<li><strong>Using OpenSSL</strong>:
-   To test IMAP or older protocols that require SSL, use this command:</li>
-</ol>
-<p><code>shell
-   openssl s_client -connect imap.example.com:993</code></p>
+<p><strong>Using OpenSSL</strong>:</p>
+<p>To test IMAP or older protocols that require SSL, use this command:</p>
+<pre><code class="language-shell">openssl s_client -connect imap.example.com:993
+</code></pre>
 <p>Replace <code>imap.example.com</code> with the IMAP server's address and <code>993</code> with the port. If the connection is successful, you will see the server's SSL certificate information.</p>
 <p>If these tools fail to connect, the server address or port configuration may be incorrect, or the ports may be blocked by firewalls or ISPs.</p>
 <h2 id="summary">Summary</h2>

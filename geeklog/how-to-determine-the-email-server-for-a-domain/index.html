@@ -46,14 +46,10 @@
 <p>This guide will walk you through the process step-by-step.</p>
 <h2 id="step-1-understand-the-basics">Step 1: Understand the Basics</h2>
 <ul>
-<li>
-<p><strong>What are MX records?</strong>
-  Mail Exchange (MX) records are DNS entries that specify the mail server(s) responsible for receiving emails on behalf of a domain. If there are multiple MX records, they also include a "priority" value to determine the order in which servers should be used.</p>
-</li>
-<li>
-<p><strong>Why do you need to find MX records?</strong>
-  Knowing the MX records helps you identify the email service provider for a domain or diagnose email delivery issues.</p>
-</li>
+<li><strong>What are MX records?</strong>
+  Mail Exchange (MX) records are DNS entries that specify the mail server(s) responsible for receiving emails on behalf of a domain. If there are multiple MX records, they also include a "priority" value to determine the order in which servers should be used.</li>
+<li><strong>Why do you need to find MX records?</strong>
+  Knowing the MX records helps you identify the email service provider for a domain or diagnose email delivery issues.</li>
 </ul>
 <h2 id="step-2-tools-to-retrieve-mx-records">Step 2: Tools to Retrieve MX Records</h2>
 <p>To find MX records, you can use DNS query tools. Common options include:</p>
@@ -66,30 +62,20 @@
 <h3 id="method-1-using-command-line-tools">Method 1: Using Command-line Tools</h3>
 <p>Here are instructions for different operating systems:</p>
 <p><strong>On Windows (using <code>nslookup</code>):</strong></p>
-<ol>
-<li>Open the Command Prompt by typing <code>cmd</code> in the Start menu search bar.</li>
-<li>
-<p>Enter the following command:</p>
-<p><code>shell
-nslookup -query=mx example.com</code></p>
-</li>
-</ol>
-<p>Replace <code>example.com</code> with the domain you want to check.
-3. Review the output for a list of MX records, which typically include:
-   - Server names or IP addresses
-   - Priority values</p>
+<p>Open the Command Prompt by typing <code>cmd</code> in the Start menu search bar. And enter the following command:</p>
+<pre><code class="language-shell">nslookup -query=mx example.com
+</code></pre>
+<p>Replace <code>example.com</code> with the domain you want to check.</p>
+<p>Review the output for a list of MX records, which typically include:</p>
+<ul>
+<li>Server names or IP addresses</li>
+<li>Priority values</li>
+</ul>
 <p><strong>On Linux/macOS (using <code>dig</code>):</strong></p>
-<ol>
-<li>Open your terminal.</li>
-<li>
-<p>Run the command:</p>
-<p><code>shell
-dig example.com MX</code></p>
-</li>
-<li>
+<p>Open your terminal and run the command:</p>
+<pre><code class="language-shell">dig example.com MX
+</code></pre>
 <p>Similar to <code>nslookup</code>, the result will display the domain's MX records.</p>
-</li>
-</ol>
 <h3 id="example-output">Example Output:</h3>
 <p>For the domain <code>example.com</code>, you may see output like this:</p>
 <pre><code class="language-shell">example.com.       3600    IN    MX    10 mail1.example.com.
@@ -100,7 +86,6 @@ example.com.       3600    IN    MX    20 mail2.example.com.
 <li><code>10</code> and <code>20</code> are priority values. A lower value indicates higher priority.</li>
 <li><code>mail1.example.com</code> and <code>mail2.example.com</code> are the mail servers.</li>
 </ul>
-<hr />
 <h3 id="method-2-using-online-mx-lookup-tools">Method 2: Using Online MX Lookup Tools</h3>
 <p>If you're not comfortable using the command line, there are plenty of free online tools to perform an MX lookup. Popular options include:</p>
 <ul>
@@ -128,13 +113,9 @@ example.com.       3600    IN    MX    20 mail2.example.com.
 <li><strong>Ping the mail server:</strong> Verify the server is reachable.</li>
 <li><strong>Perform an SMTP test:</strong> Use an SMTP (Simple Mail Transfer Protocol) testing tool to ensure email delivery works as expected.</li>
 </ul>
-<p>Here's how to perform a basic SMTP test using the command line:</p>
-<ol>
-<li>Open a terminal.</li>
-<li>Type the following command:</li>
-</ol>
-<p><code>shell
-   telnet mail1.example.com 25</code></p>
+<p>To perform a basic SMTP test using the command line open a terminal and run the following command:</p>
+<pre><code class="language-shell">telnet mail1.example.com 25
+</code></pre>
 <p>Replace <code>mail1.example.com</code> with the mail server name. If the connection is successful, you'll see a welcome message from the mail server.</p>
 <p><em>Note:</em> Port 25 is commonly used for SMTP, but some servers might prefer others, such as port 587 or 465 for secure communication.</p>
 <h2 id="step-6-document-and-verify">Step 6: Document and Verify</h2>

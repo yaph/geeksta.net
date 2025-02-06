@@ -45,11 +45,40 @@
 <li>Port numbers for secure communication</li>
 </ul>
 <p>For example:</p>
-<p>| <strong>Provider</strong>       | <strong>SMTP Server</strong>       | <strong>IMAP Server</strong>       | <strong>SMTP Port</strong> | <strong>IMAP Port</strong> |
-|--------------------|-----------------------|-----------------------|---------------|---------------|
-| Gmail              | <code>smtp.gmail.com</code>      | <code>imap.gmail.com</code>      | 587 (TLS)     | 993 (SSL)     |
-| Yahoo Mail         | <code>smtp.mail.yahoo.com</code> | <code>imap.mail.yahoo.com</code> | 465 (SSL)     | 993 (SSL)     |
-| Microsoft Outlook  | <code>smtp-mail.outlook.com</code>| <code>outlook.office365.com</code> | 587 (TLS)   | 993 (SSL)     |</p>
+<table>
+<thead>
+<tr>
+<th><strong>Provider</strong></th>
+<th><strong>SMTP Server</strong></th>
+<th><strong>IMAP Server</strong></th>
+<th><strong>SMTP Port</strong></th>
+<th><strong>IMAP Port</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gmail</td>
+<td><code>smtp.gmail.com</code></td>
+<td><code>imap.gmail.com</code></td>
+<td>587 (TLS)</td>
+<td>993 (SSL)</td>
+</tr>
+<tr>
+<td>Yahoo Mail</td>
+<td><code>smtp.mail.yahoo.com</code></td>
+<td><code>imap.mail.yahoo.com</code></td>
+<td>465 (SSL)</td>
+<td>993 (SSL)</td>
+</tr>
+<tr>
+<td>Microsoft Outlook</td>
+<td><code>smtp-mail.outlook.com</code></td>
+<td><code>outlook.office365.com</code></td>
+<td>587 (TLS)</td>
+<td>993 (SSL)</td>
+</tr>
+</tbody>
+</table>
 <h3 id="step-2-let-your-email-client-auto-detect-settings">Step 2. Let Your Email Client Auto-Detect Settings</h3>
 <p>Most modern email clients, such as Apple Mail or Thunderbird, have built-in tools to automatically detect server settings. To use this:</p>
 <ol>
@@ -103,11 +132,36 @@
 <p>If you've identified potential SMTP or IMAP server addresses but want to confirm their functionality, testing their connectivity on common ports can be a helpful diagnostic step. Ports act as communication gateways that allow email clients to exchange data with servers. Here’s how you can test server connectivity and ensure you're using the correct settings.</p>
 <h4 id="common-ports-for-smtp-sending-emails">Common Ports for SMTP (Sending Emails)</h4>
 <p>SMTP (Simple Mail Transfer Protocol) is responsible for sending outgoing emails. The table below lists the most commonly used ports for SMTP:</p>
-<p>| <strong>Port</strong>  | <strong>Purpose</strong>                         | <strong>Encryption</strong>  | <strong>Notes</strong>                                                                 |
-|-----------|-------------------------------------|-----------------|---------------------------------------------------------------------------|
-| <strong>587</strong>   | Sending emails (modern standard)   | STARTTLS        | Recommended for secure email sending from email clients.                  |
-| <strong>465</strong>   | Sending emails (legacy setups)     | SSL             | Deprecated but still supported by some providers like Yahoo.              |
-| <strong>25</strong>    | Server-to-server email relay       | None            | Avoid for email client use; often blocked by ISPs to prevent spam abuse.  |</p>
+<table>
+<thead>
+<tr>
+<th><strong>Port</strong></th>
+<th><strong>Purpose</strong></th>
+<th><strong>Encryption</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>587</strong></td>
+<td>Sending emails (modern standard)</td>
+<td>STARTTLS</td>
+<td>Recommended for secure email sending from email clients.</td>
+</tr>
+<tr>
+<td><strong>465</strong></td>
+<td>Sending emails (legacy setups)</td>
+<td>SSL</td>
+<td>Deprecated but still supported by some providers like Yahoo.</td>
+</tr>
+<tr>
+<td><strong>25</strong></td>
+<td>Server-to-server email relay</td>
+<td>None</td>
+<td>Avoid for email client use; often blocked by ISPs to prevent spam abuse.</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li><strong>Port 587</strong> is the default and recommended port for most email clients because it supports STARTTLS, enabling secure communication.</li>
 <li><strong>Port 465</strong> was previously assigned for secure email transmission using SSL encryption. While deprecated as an official standard, some email providers continue to support it for legacy setups.</li>
@@ -115,29 +169,45 @@
 </ul>
 <h4 id="common-ports-for-imap-receiving-emails">Common Ports for IMAP (Receiving Emails)</h4>
 <p>IMAP (Internet Message Access Protocol) is used to retrieve emails and sync them across devices. The following table outlines the two main ports used for IMAP:</p>
-<p>| <strong>Port</strong>  | <strong>Purpose</strong>                            | <strong>Encryption</strong>  | <strong>Notes</strong>                                           |
-|-----------|----------------------------------------|-----------------|---------------------------------------------------|
-| <strong>993</strong>   | Receiving emails (secure)             | SSL/TLS         | Recommended for secure email retrieval in most environments. |
-| <strong>143</strong>   | Receiving emails (legacy, less secure)| None            | Use only if encryption isn’t required, which is very rare.   |</p>
+<table>
+<thead>
+<tr>
+<th><strong>Port</strong></th>
+<th><strong>Purpose</strong></th>
+<th><strong>Encryption</strong></th>
+<th><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>993</strong></td>
+<td>Receiving emails (secure)</td>
+<td>SSL/TLS</td>
+<td>Recommended for secure email retrieval in most environments.</td>
+</tr>
+<tr>
+<td><strong>143</strong></td>
+<td>Receiving emails (legacy, less secure)</td>
+<td>None</td>
+<td>Use only if encryption isn’t required, which is very rare.</td>
+</tr>
+</tbody>
+</table>
 <ul>
 <li><strong>Port 993</strong> is widely used and considered the standard for encrypted IMAP connections.</li>
 <li><strong>Port 143</strong> supports unencrypted communication and is usually used in legacy or special configurations where encryption isn’t mandatory. Given today’s privacy and security standards, this port is generally not recommended.</li>
 </ul>
 <h4 id="how-to-test-server-connectivity">How to Test Server Connectivity</h4>
 <p>Once you have the server address and port number, you can test their functionality using tools like <strong>Telnet</strong> or <strong>OpenSSL</strong>. These tools attempt to establish a connection to the server on the specified port.</p>
-<ol>
-<li><strong>Using Telnet</strong>:
-   Open your command line and use the following format:</li>
-</ol>
-<p><code>shell
-   telnet smtp.example.com 587</code></p>
+<p><strong>Using Telnet</strong>:</p>
+<p>Open your command line and use the following format:</p>
+<pre><code class="language-shell">telnet smtp.example.com 587
+</code></pre>
 <p>Replace <code>smtp.example.com</code> with the SMTP server's address and <code>587</code> with the port you wish to test. Successful responses indicate the server is reachable.</p>
-<ol>
-<li><strong>Using OpenSSL</strong>:
-   To test IMAP or older protocols that require SSL, use this command:</li>
-</ol>
-<p><code>shell
-   openssl s_client -connect imap.example.com:993</code></p>
+<p><strong>Using OpenSSL</strong>:</p>
+<p>To test IMAP or older protocols that require SSL, use this command:</p>
+<pre><code class="language-shell">openssl s_client -connect imap.example.com:993
+</code></pre>
 <p>Replace <code>imap.example.com</code> with the IMAP server's address and <code>993</code> with the port. If the connection is successful, you will see the server's SSL certificate information.</p>
 <p>If these tools fail to connect, the server address or port configuration may be incorrect, or the ports may be blocked by firewalls or ISPs.</p>
 <h2 id="summary">Summary</h2>
@@ -158,14 +228,10 @@
 <p>This guide will walk you through the process step-by-step.</p>
 <h2 id="step-1-understand-the-basics">Step 1: Understand the Basics</h2>
 <ul>
-<li>
-<p><strong>What are MX records?</strong>
-  Mail Exchange (MX) records are DNS entries that specify the mail server(s) responsible for receiving emails on behalf of a domain. If there are multiple MX records, they also include a "priority" value to determine the order in which servers should be used.</p>
-</li>
-<li>
-<p><strong>Why do you need to find MX records?</strong>
-  Knowing the MX records helps you identify the email service provider for a domain or diagnose email delivery issues.</p>
-</li>
+<li><strong>What are MX records?</strong>
+  Mail Exchange (MX) records are DNS entries that specify the mail server(s) responsible for receiving emails on behalf of a domain. If there are multiple MX records, they also include a "priority" value to determine the order in which servers should be used.</li>
+<li><strong>Why do you need to find MX records?</strong>
+  Knowing the MX records helps you identify the email service provider for a domain or diagnose email delivery issues.</li>
 </ul>
 <h2 id="step-2-tools-to-retrieve-mx-records">Step 2: Tools to Retrieve MX Records</h2>
 <p>To find MX records, you can use DNS query tools. Common options include:</p>
@@ -178,30 +244,20 @@
 <h3 id="method-1-using-command-line-tools">Method 1: Using Command-line Tools</h3>
 <p>Here are instructions for different operating systems:</p>
 <p><strong>On Windows (using <code>nslookup</code>):</strong></p>
-<ol>
-<li>Open the Command Prompt by typing <code>cmd</code> in the Start menu search bar.</li>
-<li>
-<p>Enter the following command:</p>
-<p><code>shell
-nslookup -query=mx example.com</code></p>
-</li>
-</ol>
-<p>Replace <code>example.com</code> with the domain you want to check.
-3. Review the output for a list of MX records, which typically include:
-   - Server names or IP addresses
-   - Priority values</p>
+<p>Open the Command Prompt by typing <code>cmd</code> in the Start menu search bar. And enter the following command:</p>
+<pre><code class="language-shell">nslookup -query=mx example.com
+</code></pre>
+<p>Replace <code>example.com</code> with the domain you want to check.</p>
+<p>Review the output for a list of MX records, which typically include:</p>
+<ul>
+<li>Server names or IP addresses</li>
+<li>Priority values</li>
+</ul>
 <p><strong>On Linux/macOS (using <code>dig</code>):</strong></p>
-<ol>
-<li>Open your terminal.</li>
-<li>
-<p>Run the command:</p>
-<p><code>shell
-dig example.com MX</code></p>
-</li>
-<li>
+<p>Open your terminal and run the command:</p>
+<pre><code class="language-shell">dig example.com MX
+</code></pre>
 <p>Similar to <code>nslookup</code>, the result will display the domain's MX records.</p>
-</li>
-</ol>
 <h3 id="example-output">Example Output:</h3>
 <p>For the domain <code>example.com</code>, you may see output like this:</p>
 <pre><code class="language-shell">example.com.       3600    IN    MX    10 mail1.example.com.
@@ -212,7 +268,6 @@ example.com.       3600    IN    MX    20 mail2.example.com.
 <li><code>10</code> and <code>20</code> are priority values. A lower value indicates higher priority.</li>
 <li><code>mail1.example.com</code> and <code>mail2.example.com</code> are the mail servers.</li>
 </ul>
-<hr />
 <h3 id="method-2-using-online-mx-lookup-tools">Method 2: Using Online MX Lookup Tools</h3>
 <p>If you're not comfortable using the command line, there are plenty of free online tools to perform an MX lookup. Popular options include:</p>
 <ul>
@@ -240,13 +295,9 @@ example.com.       3600    IN    MX    20 mail2.example.com.
 <li><strong>Ping the mail server:</strong> Verify the server is reachable.</li>
 <li><strong>Perform an SMTP test:</strong> Use an SMTP (Simple Mail Transfer Protocol) testing tool to ensure email delivery works as expected.</li>
 </ul>
-<p>Here's how to perform a basic SMTP test using the command line:</p>
-<ol>
-<li>Open a terminal.</li>
-<li>Type the following command:</li>
-</ol>
-<p><code>shell
-   telnet mail1.example.com 25</code></p>
+<p>To perform a basic SMTP test using the command line open a terminal and run the following command:</p>
+<pre><code class="language-shell">telnet mail1.example.com 25
+</code></pre>
 <p>Replace <code>mail1.example.com</code> with the mail server name. If the connection is successful, you'll see a welcome message from the mail server.</p>
 <p><em>Note:</em> Port 25 is commonly used for SMTP, but some servers might prefer others, such as port 587 or 465 for secure communication.</p>
 <h2 id="step-6-document-and-verify">Step 6: Document and Verify</h2>
@@ -279,53 +330,28 @@ example.com.       3600    IN    MX    20 mail2.example.com.
 <h2 id="how-to-set-max_input_vars">How to Set <code>max_input_vars</code></h2>
 <p>There are several ways to set <code>max_input_vars</code>, depending on your server setup and access level:</p>
 <h3 id="1-in-phpini-server-wide-configuration">1. <strong>In <code>php.ini</code> (Server-Wide Configuration)</strong></h3>
-<ul>
-<li>Locate your <code>php.ini</code> file (e.g., <code>/etc/php/8.x/apache2/php.ini</code> on Linux or <code>C:\xampp\php\php.ini</code> on Windows).</li>
-<li>
-<p>Add or update the following line:</p>
-<p><code>ini
-max_input_vars = 5000</code></p>
-</li>
-<li>
+<p>Locate your <code>php.ini</code> file (e.g., <code>/etc/php/8.x/apache2/php.ini</code> on Linux or <code>C:\xampp\php\php.ini</code> on Windows). Then add or update the following line:</p>
+<pre><code class="language-ini">max_input_vars = 5000
+</code></pre>
 <p>Save the file and restart your web server (Apache, Nginx, etc.).</p>
-</li>
-</ul>
 <p><strong>When to Use</strong>: This method is ideal for server-wide changes or when you have full control over the server.</p>
 <h3 id="2-in-htaccess-apache-only">2. <strong>In <code>.htaccess</code> (Apache Only)</strong></h3>
-<ul>
-<li>
 <p>If you're using Apache and PHP is running as a module, you can set <code>max_input_vars</code> in your <code>.htaccess</code> file:</p>
-<p><code>apache
-php_value max_input_vars 5000</code></p>
-</li>
-<li>
+<pre><code class="language-apache">php_value max_input_vars 5000
+</code></pre>
 <p>Save the file and ensure your server has the necessary permissions to read it.</p>
-</li>
-</ul>
 <p><strong>When to Use</strong>: This is a good option for shared hosting environments where you don't have access to <code>php.ini</code>.</p>
 <h3 id="3-in-userini-php-fpm-or-cgi">3. <strong>In <code>.user.ini</code> (PHP-FPM or CGI)</strong></h3>
-<ul>
-<li>
 <p>Create or edit a <code>.user.ini</code> file in your web directory and add:</p>
-<p><code>ini
-max_input_vars = 5000</code></p>
-</li>
-<li>
+<pre><code class="language-ini">max_input_vars = 5000
+</code></pre>
 <p>Save the file and ensure it has the correct permissions (<code>644</code>).</p>
-</li>
-</ul>
 <p><strong>When to Use</strong>: This method works well for PHP-FPM or CGI setups and is perfect for per-directory configuration.</p>
 <h3 id="4-in-your-php-script-temporary-solution">4. <strong>In Your PHP Script (Temporary Solution)</strong></h3>
-<ul>
-<li>
 <p>You can set <code>max_input_vars</code> at runtime using <code>ini_set()</code>:</p>
-<p><code>php
-ini_set('max_input_vars', '5000');</code></p>
-</li>
-<li>
+<pre><code class="language-php">ini_set('max_input_vars', '5000');
+</code></pre>
 <p>Note that this only affects the current script and may not work if the directive is restricted by the server.</p>
-</li>
-</ul>
 <p><strong>When to Use</strong>: Use this for quick fixes or debugging, but avoid it for production environments.</p>
 <h2 id="what-to-pay-attention-to">What to Pay Attention To</h2>
 <ol>
@@ -386,34 +412,30 @@ phpinfo();
 <li><strong>GitHub Token (Optional)</strong>: To use remote GitHub Models, ensure you have a valid GitHub token.</li>
 </ol>
 <p>Once you've prepared the above, install Charla via <code>pipx</code>:</p>
-<pre><code class="language-bash">pipx install charla
+<pre><code class="language-shell">pipx install charla
 </code></pre>
 <h3 id="setting-up-github-models">Setting Up GitHub Models</h3>
 <p>For GitHub-based models, you'll need to export your GitHub token as an environment variable:</p>
-<pre><code class="language-bash">export GITHUB_TOKEN=YOUR_GITHUB_TOKEN
+<pre><code class="language-shell">export GITHUB_TOKEN=YOUR_GITHUB_TOKEN
 </code></pre>
 <p>This step allows Charla to authenticate with the GitHub Models service for remote chat sessions.</p>
 <h2 id="getting-started-with-charla">Getting Started with Charla</h2>
 <p>After successful installation, launch Charla by entering the following command in your terminal:</p>
-<pre><code class="language-bash">charla
+<pre><code class="language-shell">charla
 </code></pre>
 <p>From here, you can specify the model and provider you'd like to use. Below are a couple of examples to get you started:</p>
-<ul>
-<li><strong>Local (via Ollama, default provider)</strong>:</li>
-</ul>
-<p><code>bash
-  charla -m phi3</code></p>
-<ul>
-<li><strong>Remote (via GitHub Models)</strong>:</li>
-</ul>
-<p><code>bash
-  charla -m gpt-4o --provider github</code></p>
+<p><strong>Local (via Ollama, default provider)</strong>:</p>
+<pre><code class="language-shell">charla -m phi3
+</code></pre>
+<p><strong>Remote (via GitHub Models)</strong>:</p>
+<pre><code class="language-shell">charla -m gpt-4o --provider github
+</code></pre>
 <p>You can also customize default configurations (e.g., preferred model, provider settings) by modifying your user settings file.</p>
 <h2 id="customizing-charla-settings">Customizing Charla: Settings</h2>
 <p>Charla offers a high degree of customization through both <strong>global settings files</strong> and <strong>local configuration options</strong>. Here's how to manage these configurations:</p>
 <h3 id="finding-your-settings-file-location">Finding Your Settings File Location</h3>
 <p>Run the following command to locate your global settings file:</p>
-<pre><code class="language-bash">charla settings --location
+<pre><code class="language-shell">charla settings --location
 </code></pre>
 <h3 id="example-configuration-file">Example Configuration File</h3>
 <p>Here's a sample <code>.charla.json</code> file that sets the following defaults:</p>
@@ -430,11 +452,11 @@ phpinfo();
 }
 </code></pre>
 <p>To save your current settings to a <code>.charla.json</code> file in your working directory, use:</p>
-<pre><code class="language-bash">charla settings --save
+<pre><code class="language-shell">charla settings --save
 </code></pre>
 <h3 id="command-line-overrides">Command-Line Overrides</h3>
 <p>You can override settings temporarily by passing arguments in the command line. For example, to enable multiline input and set a custom system prompt file:</p>
-<pre><code class="language-bash">charla --multiline --system-prompt custom-prompt.txt
+<pre><code class="language-shell">charla --multiline --system-prompt custom-prompt.txt
 </code></pre>
 <p>Command-line arguments take precedence over both local and global configuration files.</p>
 <h2 id="try-charla-today">Try Charla Today!</h2>
@@ -510,7 +532,7 @@ phpinfo();
 <p><code>rsync</code> is a fast and reliable utility for file transfer and synchronization, built to handle large datasets efficiently. Unlike traditional copy methods, it transfers only the differences between the source and destination files, significantly reducing the time and resources required for updates. This efficiency makes it ideal for tasks ranging from everyday file backups to sophisticated system administration.</p>
 <h2 id="basic-rsync-usage">Basic <code>rsync</code> Usage</h2>
 <p>Before diving into the specifics of preserving remote file attributes, let's look at a basic <code>rsync</code> command:</p>
-<pre><code class="language-bash">rsync -avz /path/to/local/dir/ user@remote_host:/path/to/remote/dir/
+<pre><code class="language-shell">rsync -avz /path/to/local/dir/ user@remote_host:/path/to/remote/dir/
 </code></pre>
 <p>Here:</p>
 <ul>
@@ -520,7 +542,7 @@ phpinfo();
 </ul>
 <h2 id="preserving-remote-ownership-and-permissions">Preserving Remote Ownership and Permissions</h2>
 <p>In some cases, you might want <code>rsync</code> to sync files without altering the existing ownership and permissions on the remote host. This can be crucial for maintaining the integrity of file systems where permissions and ownership are carefully managed. To achieve this, you can use the <code>--no-perms</code>, <code>--no-owner</code>, and <code>--no-group</code> options:</p>
-<pre><code class="language-bash">rsync -avz --no-perms --no-owner --no-group /path/to/local/dir/ user@remote_host:/path/to/remote/dir/
+<pre><code class="language-shell">rsync -avz --no-perms --no-owner --no-group /path/to/local/dir/ user@remote_host:/path/to/remote/dir/
 </code></pre>
 <p>Let's break down these additional options:</p>
 <ul>
@@ -531,12 +553,12 @@ phpinfo();
 <p>By combining these options, <code>rsync</code> will transfer the files while preserving the existing permissions, ownership, and group settings on the remote server.</p>
 <h2 id="advanced-deleting-remote-files-not-present-locally">Advanced: Deleting Remote Files Not Present Locally</h2>
 <p>In some synchronization scenarios, you may also want to ensure that files deleted locally are also removed from the remote host. This can be achieved with the <code>--delete</code> option:</p>
-<pre><code class="language-bash">rsync -avz --no-perms --no-owner --no-group --delete /path/to/local/dir/ user@remote_host:/path/to/remote/dir/
+<pre><code class="language-shell">rsync -avz --no-perms --no-owner --no-group --delete /path/to/local/dir/ user@remote_host:/path/to/remote/dir/
 </code></pre>
 <p>The <code>--delete</code> option tells <code>rsync</code> to remove files from the destination directory (remote host) that do not exist in the source directory (local host), thus ensuring an exact mirror of the local directory.</p>
 <h2 id="practical-example">Practical Example</h2>
 <p>Let's put it all together with a practical example. Suppose you have a directory <code>/home/user/documents/</code> on your local machine that you want to sync with <code>/var/www/documents/</code> on a remote server <code>example.com</code>, while preserving the remote file attributes:</p>
-<pre><code class="language-bash">rsync -avz --no-perms --no-owner --no-group --delete /home/user/documents/ user@example.com:/var/www/documents/
+<pre><code class="language-shell">rsync -avz --no-perms --no-owner --no-group --delete /home/user/documents/ user@example.com:/var/www/documents/
 </code></pre>
 <p>This command will:</p>
 <ol>
@@ -581,7 +603,7 @@ if __name__ == &quot;__main__&quot;:
 <li>The <code>sys.exit()</code> function stops the entire program.</li>
 <li>If provided, the argument (e.g., <code>"Goodbye!"</code>) is displayed to the console, or passed to the parent process when used in automation pipelines.</li>
 </ul>
-<p><strong>Pro Tip:</strong> Use an integer (0 for success, non-zero for errors) if your program is part of a pipeline or being managed/testing by external tools, such as shell scripts or CI/CD systems.</p>
+<p><strong>Tip:</strong> Use an integer (0 for success, non-zero for errors) if your program is part of a pipeline or being managed/testing by external tools, such as shell scripts or CI/CD systems.</p>
 <h2 id="2-handling-keyboard-interrupts-ctrlc">2. Handling Keyboard Interrupts (<code>Ctrl+C</code>)</h2>
 <p>When users terminate your program by pressing <code>Ctrl+C</code>, Python raises a <code>KeyboardInterrupt</code> exception. It's a good practice to handle this exception explicitly, ensuring the program exits cleanly and provides feedback.</p>
 <h3 id="example_1">Example:</h3>
@@ -605,31 +627,18 @@ if __name__ == &quot;__main__&quot;:
 <li>Failing to catch <code>KeyboardInterrupt</code> might leave critical cleanup tasks incomplete (e.g., closing files, shutting down threads, or releasing database locks).</li>
 <li>Adding a friendly exit message improves the user experience for interactive programs.</li>
 </ul>
-<p><strong>Pro Tip:</strong> Replace infinite loops with specific long-running tasks in production for better program reliability.</p>
+<p><strong>Tip:</strong> Replace infinite loops with specific long-running tasks in production for better program reliability.</p>
 <h2 id="3-understanding-the-sysexit-function-signature">3. Understanding the <code>sys.exit()</code> Function Signature</h2>
 <p>The signature for <code>sys.exit()</code> provides flexibility in how you terminate your program:</p>
 <pre><code class="language-python">sys.exit([arg])
 </code></pre>
-<h3 id="key-points">Key Points:</h3>
+<p>The optional <code>arg</code> parameter controls the exit behavior:</p>
 <ul>
-<li><strong><code>arg</code></strong>: This optional parameter controls the exit behavior:</li>
-<li>
-<p><strong>Integer (recommended):</strong> <code>0</code> indicates successful termination, while non-zero integers (e.g., <code>1</code>) indicate an error or abnormal termination.</p>
-<p><code>python
-sys.exit(1)  # Signals an error occurred</code></p>
-</li>
-<li>
-<p><strong>String:</strong> If a string or other object is passed, it will be printed to <code>stderr</code>, and an exit status of <code>1</code> is returned.</p>
-<p><code>python
-sys.exit("An error occurred.")</code></p>
-</li>
-<li>
-<p><strong>None:</strong> Defaults to <code>0</code> (successful termination).</p>
-<p><code>python
-sys.exit()  # Same as sys.exit(0)</code></p>
-</li>
+<li><strong>Integer (recommended):</strong> <code>0</code> indicates successful termination, while non-zero integers (e.g., <code>1</code>) indicate an error or abnormal termination. <code>sys.exit(1)</code> signals an error occurred.</li>
+<li><strong>String:</strong> If a string or other object is passed, it will be printed to <code>stderr</code>, and an exit status of <code>1</code> is returned: <code>sys.exit("An error occurred.")</code></li>
+<li><strong>None:</strong> Defaults to <code>0</code> (successful termination): <code>sys.exit()</code></li>
 </ul>
-<p><strong>Pro Tip:</strong> Use numeric exit codes with external-facing applications, especially if they interact with other services or scripts. Reserve strings for user-facing messages.</p>
+<p><strong>Tip:</strong> Use numeric exit codes with external-facing applications, especially if they interact with other services or scripts. Reserve strings for user-facing messages.</p>
 <h2 id="4-why-avoid-using-quit-and-exit-in-scripts">4. Why Avoid Using <code>quit()</code> and <code>exit()</code> in Scripts?</h2>
 <p>Python provides two additional commands, <code>quit()</code> and <code>exit()</code>, for exiting programs, but these are intended for use in interactive environments like the Python REPL.</p>
 <h3 id="example-interactive-mode-only">Example (Interactive Mode Only):</h3>
@@ -654,15 +663,15 @@ os._exit(1)  # Use only in rare circumstances
 <li>Reserved for advanced scenarios such as terminating worker processes in multithreaded systems.</li>
 <li>Avoid in most cases, as it skips important teardown steps, potentially leaving resources in an unstable state.</li>
 </ul>
-<p><strong>Pro Tip:</strong> Stick to <code>sys.exit()</code> unless you absolutely need the low-level control provided by <code>os._exit()</code>.</p>
+<p><strong>Tip:</strong> Stick to <code>sys.exit()</code> unless you absolutely need the low-level control provided by <code>os._exit()</code>.</p>
 <h2 id="6-final-tips-for-exiting-gracefully">6. Final Tips for Exiting Gracefully</h2>
 <ul>
 <li><strong>Release Resources:</strong> Always ensure files, sockets, or database connections are properly closed before exiting. Use context managers wherever possible.</li>
 </ul>
-<p><code>python
-  with open("example.txt", "r") as file:
-      data = file.read()
-  # File automatically closed on exit</code></p>
+<pre><code class="language-python">with open(&quot;example.txt&quot;, &quot;r&quot;) as file:
+    data = file.read()
+# File automatically closed on exit
+</code></pre>
 <ul>
 <li><strong>Provide Feedback:</strong> Show meaningful messages when exiting due to errors or user actions.</li>
 <li><strong>Avoid Silent Failures:</strong> Use logging or clear <code>sys.exit()</code> exit codes when terminating during errors.</li>
@@ -713,7 +722,7 @@ def main():
 <p>This approach directly specifies where <code>util</code> resides within the overall package structure, reducing ambiguity.</p>
 <h2 id="running-your-script-locally">Running Your Script Locally</h2>
 <p>To ensure your script runs correctly during development, always execute it with the <code>-m</code> flag from the root directory of your project. For example:</p>
-<pre><code class="language-bash">cd myapp
+<pre><code class="language-shell">cd myapp
 python -m mymodule.cli
 </code></pre>
 <p>The <code>-m</code> flag tells Python to treat <code>mymodule.cli</code> as a module in the package context, making imports like <code>from mymodule import util</code> work seamlessly.</p>
@@ -759,17 +768,17 @@ if __name__ == &quot;__main__&quot;:
 <ol>
 <li>Navigate to the root of your project directory:</li>
 </ol>
-<pre><code class="language-bash">cd myapp
+<pre><code class="language-shell">cd myapp
 </code></pre>
 <ol>
 <li>Install the application with pipx:</li>
 </ol>
-<pre><code class="language-bash">pipx install .
+<pre><code class="language-shell">pipx install .
 </code></pre>
 <ol>
 <li>Run your application from anywhere using the executable name defined in your <code>setup.py</code> (<code>myapp</code> in this case):</li>
 </ol>
-<pre><code class="language-bash">myapp
+<pre><code class="language-shell">myapp
 </code></pre>
 <p>By relying on pipx, your app will work in an isolated environment, reducing the need to manage Python dependencies globally.</p>
 <h2 id="conclusion">Conclusion</h2>
@@ -1309,13 +1318,13 @@ print("The average is: " + result)
 <h2 id="step-by-step-guide-to-configure-fail2ban">Step-by-Step Guide to Configure Fail2ban</h2>
 <h3 id="step-1-ensure-fail2ban-is-installed">Step 1: Ensure Fail2ban is Installed</h3>
 <p>First, you need to have Fail2ban installed on your server. If it's not already installed, you can install it using your package manager. For Debian-based systems, the following commands will do the trick:</p>
-<pre><code class="language-bash">sudo apt-get update
+<pre><code class="language-shell">sudo apt-get update
 sudo apt-get install fail2ban
 </code></pre>
 <h3 id="step-2-create-a-custom-filter-for-detecting-registration-attempts">Step 2: Create a Custom Filter for Detecting Registration Attempts</h3>
 <p>Next, create a custom filter file for Fail2ban to detect user registration attempts. This filter will parse the Apache logs to find registration attempts and take action based on your configuration.</p>
 <p>Create a new filter file named <code>wordpress-registration.conf</code> in the <code>/etc/fail2ban/filter.d/</code> directory:</p>
-<pre><code class="language-bash">sudo vim /etc/fail2ban/filter.d/wordpress-registration.conf
+<pre><code class="language-shell">sudo vim /etc/fail2ban/filter.d/wordpress-registration.conf
 </code></pre>
 <p>Add the following content to this file:</p>
 <pre><code class="language-txt">[Definition]
@@ -1325,7 +1334,7 @@ ignoreregex =
 <p>This <code>failregex</code> is designed to match log entries corresponding to user registration attempts in your Apache logs. <code>ignoreregex</code> is left empty because we don't want to ignore any relevant behavior.</p>
 <h3 id="step-3-configure-a-fail2ban-jail-for-wordpress-registrations">Step 3: Configure a Fail2ban Jail for WordPress Registrations</h3>
 <p>Now, create a new jail configuration file named <code>wordpress-registration.conf</code> in the <code>/etc/fail2ban/jail.d/</code> directory:</p>
-<pre><code class="language-bash">sudo vim /etc/fail2ban/jail.d/wordpress-registration.conf
+<pre><code class="language-shell">sudo vim /etc/fail2ban/jail.d/wordpress-registration.conf
 </code></pre>
 <p>Add the following content to this file:</p>
 <pre><code class="language-txt">[wordpress-registration]
@@ -1345,11 +1354,11 @@ bantime = 86400
 </ul>
 <h3 id="step-4-restart-fail2ban">Step 4: Restart Fail2ban</h3>
 <p>To apply your new configuration, restart the Fail2ban service:</p>
-<pre><code class="language-bash">sudo systemctl restart fail2ban
+<pre><code class="language-shell">sudo systemctl restart fail2ban
 </code></pre>
 <h3 id="step-5-verify-the-setup">Step 5: Verify the Setup</h3>
 <p>Finally, ensure that your new filter is working correctly by tailing the Fail2ban log:</p>
-<pre><code class="language-bash">sudo tail -f /var/log/fail2ban.log
+<pre><code class="language-shell">sudo tail -f /var/log/fail2ban.log
 </code></pre>
 <p>Monitor the log for any entries related to the <code>wordpress-registration</code> jail. You should see Fail2ban detecting and banning IPs as expected when they attempt to register users on your WordPress site.</p>
 <h2 id="conclusion">Conclusion</h2>

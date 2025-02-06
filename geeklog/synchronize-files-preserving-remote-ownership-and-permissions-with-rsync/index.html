@@ -47,7 +47,7 @@
 <p><code>rsync</code> is a fast and reliable utility for file transfer and synchronization, built to handle large datasets efficiently. Unlike traditional copy methods, it transfers only the differences between the source and destination files, significantly reducing the time and resources required for updates. This efficiency makes it ideal for tasks ranging from everyday file backups to sophisticated system administration.</p>
 <h2 id="basic-rsync-usage">Basic <code>rsync</code> Usage</h2>
 <p>Before diving into the specifics of preserving remote file attributes, let's look at a basic <code>rsync</code> command:</p>
-<pre><code class="language-bash">rsync -avz /path/to/local/dir/ user@remote_host:/path/to/remote/dir/
+<pre><code class="language-shell">rsync -avz /path/to/local/dir/ user@remote_host:/path/to/remote/dir/
 </code></pre>
 <p>Here:</p>
 <ul>
@@ -57,7 +57,7 @@
 </ul>
 <h2 id="preserving-remote-ownership-and-permissions">Preserving Remote Ownership and Permissions</h2>
 <p>In some cases, you might want <code>rsync</code> to sync files without altering the existing ownership and permissions on the remote host. This can be crucial for maintaining the integrity of file systems where permissions and ownership are carefully managed. To achieve this, you can use the <code>--no-perms</code>, <code>--no-owner</code>, and <code>--no-group</code> options:</p>
-<pre><code class="language-bash">rsync -avz --no-perms --no-owner --no-group /path/to/local/dir/ user@remote_host:/path/to/remote/dir/
+<pre><code class="language-shell">rsync -avz --no-perms --no-owner --no-group /path/to/local/dir/ user@remote_host:/path/to/remote/dir/
 </code></pre>
 <p>Let's break down these additional options:</p>
 <ul>
@@ -68,12 +68,12 @@
 <p>By combining these options, <code>rsync</code> will transfer the files while preserving the existing permissions, ownership, and group settings on the remote server.</p>
 <h2 id="advanced-deleting-remote-files-not-present-locally">Advanced: Deleting Remote Files Not Present Locally</h2>
 <p>In some synchronization scenarios, you may also want to ensure that files deleted locally are also removed from the remote host. This can be achieved with the <code>--delete</code> option:</p>
-<pre><code class="language-bash">rsync -avz --no-perms --no-owner --no-group --delete /path/to/local/dir/ user@remote_host:/path/to/remote/dir/
+<pre><code class="language-shell">rsync -avz --no-perms --no-owner --no-group --delete /path/to/local/dir/ user@remote_host:/path/to/remote/dir/
 </code></pre>
 <p>The <code>--delete</code> option tells <code>rsync</code> to remove files from the destination directory (remote host) that do not exist in the source directory (local host), thus ensuring an exact mirror of the local directory.</p>
 <h2 id="practical-example">Practical Example</h2>
 <p>Let's put it all together with a practical example. Suppose you have a directory <code>/home/user/documents/</code> on your local machine that you want to sync with <code>/var/www/documents/</code> on a remote server <code>example.com</code>, while preserving the remote file attributes:</p>
-<pre><code class="language-bash">rsync -avz --no-perms --no-owner --no-group --delete /home/user/documents/ user@example.com:/var/www/documents/
+<pre><code class="language-shell">rsync -avz --no-perms --no-owner --no-group --delete /home/user/documents/ user@example.com:/var/www/documents/
 </code></pre>
 <p>This command will:</p>
 <ol>
