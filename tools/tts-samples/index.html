@@ -49,12 +49,13 @@ window.onload = function() {
     d3.csv('/data/tts-samples.csv').then(data => {
         const columns = data.columns.map(item => {
             col = {id: item, name: item}
-            if (item == 'Speech Sample') {
+            if (item == 'Sample') {
                 col['formatter'] = (cell) => gridjs.html(`<audio controls src="https://github.com/yaph/tts-samples/raw/refs/heads/main/${cell}"></audio>`)
             }
             return col;
         });
         new gridjs.Grid({
+            autoWidth: false,
             columns: columns,
             data: data,
             pagination: {
@@ -67,6 +68,10 @@ window.onload = function() {
     });
 };
 </script>
+
+<style>
+audio {width: 50%;}
+</style>
 </div>
 <hr>
 <p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time datetime="2025-02-03T12:08">February 03, 2025</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
