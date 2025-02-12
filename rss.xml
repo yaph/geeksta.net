@@ -7,6 +7,13 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Wiki Story: Turn Wikipedia Articles into Captivating Narratives]]></title>
+        <link><![CDATA[https://geeksta.net/tools/wiki-story/]]></link>
+        <description><![CDATA[<p>Transform Wikipedia articles into captivating short stories with Wiki Story. Adjust storytelling styles, from factual to imaginative, and make learning enjoyable!</p><img src="/img/tools/wiki-story.png" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/tools/wiki-story/]]></guid>
+        <pubDate>Wed, 12 Feb 2025 13:25:04 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[How to Determine the SMTP and IMAP Servers for a Domain]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/how-to-determine-the-smtp-and-imap-servers-for-a-domain/]]></link>
         <description><![CDATA[<p>Learn how to identify your domain's SMTP and IMAP server settings using MX records, naming patterns, and auto-configuration tools.</p>]]></description>
@@ -70,12 +77,5 @@
 Perfect for urban...</p><img src="https://geeksta.net/img/large/wedding-humboldthain-routes.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/wedding-humboldthain-routes/]]></guid>
         <pubDate>Sun, 12 Jan 2025 00:00:00 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Groundhog Workout Repeat Fitness & Humor Gym Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/groundhog-workout-repeat/]]></link>
-        <description><![CDATA[<p>An empowering groundhog lifting a barbell, set against a retro-style sunset background and framed by the phrase WORKOUT REPEAT. A clever nod to Groundhog Day, this design symbolizes the daily grind and repetitive determination of fitness...</p><img src="https://geeksta.net/img/large/groundhog-workout-repeat.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/groundhog-workout-repeat/]]></guid>
-        <pubDate>Fri, 10 Jan 2025 00:00:00 </pubDate>
     </item>
 </channel></rss>
