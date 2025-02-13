@@ -7,6 +7,35 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Wiki Story: Turn Wikipedia Articles into Captivating Narratives]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/wiki-story-introduction/]]></link>
+        <description><![CDATA[<p>Transform Wikipedia articles into captivating short stories with Wiki Story. Adjust storytelling styles, from factual to imaginative, and make learning enjoyable!</p><img src="/img/tools/wiki-story.png" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/wiki-story-introduction/]]></guid>
+        <pubDate>Wed, 12 Feb 2025 13:25:04 </pubDate>
+        <content:encoded><![CDATA[
+        <p>Have you ever wished history, science, or art could be told like a gripping tale? Meet <a href="https://agent.ai/agent/wiki-story?referrer=yaph">Wiki Story</a>, the AI agent that transforms Wikipedia articles into engaging short stories. Whether you're craving a concise, factual narrative or a imaginative twist, Wiki Story delivers, blending knowledge with creativity.</p>
+<h2 id="how-it-works">How It Works:</h2>
+<p><img alt="Wiki Story" src="/img/tools/wiki-story.png" /></p>
+<ol>
+<li><strong>Pick a Wikipedia Article</strong> – Enter the title of any English Wikipedia article that sparks your curiosity.</li>
+<li><strong>Adjust the Creativity Level</strong> – Set the tone of your story on a scale from 1 to 10. A level of 1 delivers a clear and factual narrative, while a level of 10 adds a playful and imaginative touch.</li>
+<li><strong>Read Your Story</strong> – Let Wiki Story craft a unique narrative that blends accurate information with your preferred level of creativity.</li>
+</ol>
+<h2 id="why-choose-wiki-story">Why Choose Wiki Story?</h2>
+<ul>
+<li><strong>Learn Differently:</strong> Complex topics become accessible, fun, and easy to remember.</li>
+<li><strong>Inspire Curiosity:</strong> Transform dull facts into exciting adventures.</li>
+<li><strong>Personalized for You:</strong> Control how creative or factual the story gets.</li>
+</ul>
+<h2 id="from-classroom-to-campfire">From Classroom to Campfire</h2>
+<p>Whether you're a student looking to turn history into an easy-to-digest tale, a teacher seeking to captivate your classroom, or just a curious mind wanting to explore the world in a new way—Wiki Story makes learning an adventure.</p>
+<h2 id="try-wiki-story-today">Try Wiki Story Today</h2>
+<p>Begin your storytelling adventure today! Transform knowledge into engaging, inspiring, and whimsical stories. Visit the <a href="https://agent.ai/agent/wiki-story?referrer=yaph">Wiki Story agent page</a> to get started.</p>
+<hr>
+<p>Thank you for reading!</p>
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
+    </item>
+    <item>
         <title><![CDATA[How to Determine the SMTP and IMAP Servers for a Domain]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/how-to-determine-the-smtp-and-imap-servers-for-a-domain/]]></link>
         <description><![CDATA[<p>Learn how to identify your domain's SMTP and IMAP server settings using MX records, naming patterns, and auto-configuration tools.</p>]]></description>
@@ -1303,67 +1332,6 @@ print("The average is: " + result)
 <p>ChatGPT offers an incredible opportunity to enhance creativity, streamline productivity, and assist with problem-solving across a wide range of fields and interests. By employing thoughtfully crafted prompts like the ones outlined in this article, you can engage with the model more effectively, unlocking its potential to deliver meaningful insights, innovative ideas, and practical solutions.</p>
 <p>The key to maximizing your experience with ChatGPT lies in providing clear context, setting specific goals, and approaching its responses with a critical and curious mindset. Whether you're crafting compelling stories, tackling challenging data problems, drafting code, or exploring new marketing strategies, the prompts presented here are a starting point to inspire and guide your interactions.</p>
 <p>As you embark on your journey with ChatGPT, remember that its true power lies in how you choose to leverage it. With the right tools and an open mind, you can transform ChatGPT into a versatile partner for creativity, learning, and productivity. So why wait? Dive into these prompts, experiment freely, and watch as ChatGPT becomes an indispensable asset in your personal and professional endeavors.</p>
-<hr>
-<p>Thank you for reading!</p>
-<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
-    </item>
-    <item>
-        <title><![CDATA[Preventing User Registration Spam in WordPress with Fail2ban]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/preventing-user-registration-spam-in-word-press-with-fail2ban/]]></link>
-        <description><![CDATA[<p>Learn how to prevent user registration spam on your WordPress site with Fail2ban. This step-by-step guide shows you how to configure Fail2ban using Apache logs to block suspicious IPs and secure your website.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/preventing-user-registration-spam-in-word-press-with-fail2ban/]]></guid>
-        <pubDate>Sun, 29 Dec 2024 23:07:30 </pubDate>
-        <content:encoded><![CDATA[
-        <p>User registration spam can be a significant nuisance for WordPress site administrators, leading to bloated databases, potential security risks, and unnecessary clutter. Fortunately, Fail2ban, a powerful intrusion prevention software, can help mitigate this issue by monitoring log files and banning IP addresses exhibiting suspicious behavior. In this guide, we'll walk you through configuring Fail2ban to prevent user registration spam on your WordPress site using Apache logs.</p>
-<h2 id="step-by-step-guide-to-configure-fail2ban">Step-by-Step Guide to Configure Fail2ban</h2>
-<h3 id="step-1-ensure-fail2ban-is-installed">Step 1: Ensure Fail2ban is Installed</h3>
-<p>First, you need to have Fail2ban installed on your server. If it's not already installed, you can install it using your package manager. For Debian-based systems, the following commands will do the trick:</p>
-<pre><code class="language-shell">sudo apt-get update
-sudo apt-get install fail2ban
-</code></pre>
-<h3 id="step-2-create-a-custom-filter-for-detecting-registration-attempts">Step 2: Create a Custom Filter for Detecting Registration Attempts</h3>
-<p>Next, create a custom filter file for Fail2ban to detect user registration attempts. This filter will parse the Apache logs to find registration attempts and take action based on your configuration.</p>
-<p>Create a new filter file named <code>wordpress-registration.conf</code> in the <code>/etc/fail2ban/filter.d/</code> directory:</p>
-<pre><code class="language-shell">sudo vim /etc/fail2ban/filter.d/wordpress-registration.conf
-</code></pre>
-<p>Add the following content to this file:</p>
-<pre><code class="language-txt">[Definition]
-failregex = ^&lt;HOST&gt; - - \[.*\] &quot;POST /wp-login\.php\?action=register HTTP/.*&quot; 302
-ignoreregex =
-</code></pre>
-<p>This <code>failregex</code> is designed to match log entries corresponding to user registration attempts in your Apache logs. <code>ignoreregex</code> is left empty because we don't want to ignore any relevant behavior.</p>
-<h3 id="step-3-configure-a-fail2ban-jail-for-wordpress-registrations">Step 3: Configure a Fail2ban Jail for WordPress Registrations</h3>
-<p>Now, create a new jail configuration file named <code>wordpress-registration.conf</code> in the <code>/etc/fail2ban/jail.d/</code> directory:</p>
-<pre><code class="language-shell">sudo vim /etc/fail2ban/jail.d/wordpress-registration.conf
-</code></pre>
-<p>Add the following content to this file:</p>
-<pre><code class="language-txt">[wordpress-registration]
-enabled = true
-filter = wordpress-registration
-logpath = /var/log/apache2/access.log
-maxretry = 1
-findtime = 600
-bantime = 86400
-</code></pre>
-<p>In this configuration:</p>
-<ul>
-<li><code>logpath</code> points to your Apache access log file. Adjust this path if your log file is located elsewhere.</li>
-<li><code>maxretry = 1</code> means that after one registration attempt from the same IP, the IP will be banned.</li>
-<li><code>findtime = 600</code> (in seconds) is the window during which the attempts are counted.</li>
-<li><code>bantime = 86400</code> (in seconds) is the duration for which the IP will be banned (24 hours).</li>
-</ul>
-<h3 id="step-4-restart-fail2ban">Step 4: Restart Fail2ban</h3>
-<p>To apply your new configuration, restart the Fail2ban service:</p>
-<pre><code class="language-shell">sudo systemctl restart fail2ban
-</code></pre>
-<h3 id="step-5-verify-the-setup">Step 5: Verify the Setup</h3>
-<p>Finally, ensure that your new filter is working correctly by tailing the Fail2ban log:</p>
-<pre><code class="language-shell">sudo tail -f /var/log/fail2ban.log
-</code></pre>
-<p>Monitor the log for any entries related to the <code>wordpress-registration</code> jail. You should see Fail2ban detecting and banning IPs as expected when they attempt to register users on your WordPress site.</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>By configuring Fail2ban to monitor your Apache logs, you can effectively prevent user registration spam on your WordPress site. This setup helps maintain the integrity and performance of your website by blocking spammers and ensuring only legitimate users can register. Regularly check your logs and adjust the configuration as necessary to fine-tune the protection based on your site's needs.</p>
-<p>With Fail2ban in place, you can focus more on building and managing your WordPress site without worrying about the constant influx of spam registrations.</p>
 <hr>
 <p>Thank you for reading!</p>
 <p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
