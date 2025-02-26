@@ -7,6 +7,13 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Punk Rock Forever Anarchy Symbol Vintage Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/punk-rock-forever-anarchy/]]></link>
+        <description><![CDATA[<p>Embrace the spirit of punk rock with this striking design that boldly declares "Punk Rock Forever." The grunge typography captures the essence of the genre, while the monochrome palette enhances its edgy appeal. The integration of a stylized anarchy symbol...</p><img src="https://geeksta.net/img/large/punk-rock-forever-anarchy.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/punk-rock-forever-anarchy/]]></guid>
+        <pubDate>Sun, 23 Feb 2025 00:00:00 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[Wiki Story: Turn Wikipedia Articles into Captivating Narratives]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/wiki-story-introduction/]]></link>
         <description><![CDATA[<p>Transform Wikipedia articles into captivating short stories with Wiki Story. Adjust storytelling styles, from factual to imaginative, and make learning enjoyable!</p><img src="/img/tools/wiki-story.png" alt="Preview Image">]]></description>
@@ -68,14 +75,5 @@
         <description><![CDATA[<p>Learn how to use rsync to synchronize local and remote files without altering ownership and permissions on the remote server, ensuring consistent file management across systems.</p>]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/synchronize-files-preserving-remote-ownership-and-permissions-with-rsync/]]></guid>
         <pubDate>Tue, 14 Jan 2025 14:05:34 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Humboldthain Routes - Berlin Wedding Art Map Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/wedding-humboldthain-routes/]]></link>
-        <description><![CDATA[<p>A red-and-white minimalist map of Berlin Wedding's Humboldthain Park, highlighting its pathways and landmarks in a clean, contemporary style. The geometric lines and stark contrasts make it a stunning piece of modern graphic art.
-
-Perfect for urban...</p><img src="https://geeksta.net/img/large/wedding-humboldthain-routes.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/wedding-humboldthain-routes/]]></guid>
-        <pubDate>Sun, 12 Jan 2025 00:00:00 </pubDate>
     </item>
 </channel></rss>
