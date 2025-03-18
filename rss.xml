@@ -7,6 +7,13 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[How to Use SD Cards for Backups on Linux]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/how-to-use-sd-cards-for-backups-on-linux/]]></link>
+        <description><![CDATA[<p>A detailed guide on using SD cards for data backup on Linux. Learn formatting, mounting, and automating backups to ensure your files are safe and accessible.</p><img src="/img/geeklog/geeklog-sd-cards.webp" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/how-to-use-sd-cards-for-backups-on-linux/]]></guid>
+        <pubDate>Tue, 18 Mar 2025 13:46:51 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[Punk Rock Forever Anarchy Symbol Vintage Design]]></title>
         <link><![CDATA[https://geeksta.net/design/punk-rock-forever-anarchy/]]></link>
         <description><![CDATA[<p>Embrace the spirit of punk rock with this striking design that boldly declares "Punk Rock Forever." The grunge typography captures the essence of the genre, while the monochrome palette enhances its edgy appeal. The integration of a stylized anarchy symbol...</p><img src="https://geeksta.net/img/large/punk-rock-forever-anarchy.jpg" alt="Preview Image">]]></description>
@@ -68,12 +75,5 @@
         <description><![CDATA[<p>Simplify your social media content creation with Hashtagify, a VS Code extension that converts text into hashtags effortlessly.</p>]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/hashtagify-introduction/]]></guid>
         <pubDate>Thu, 16 Jan 2025 20:18:08 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Synchronize Files Preserving Remote Ownership and Permissions with rsync]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/synchronize-files-preserving-remote-ownership-and-permissions-with-rsync/]]></link>
-        <description><![CDATA[<p>Learn how to use rsync to synchronize local and remote files without altering ownership and permissions on the remote server, ensuring consistent file management across systems.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/synchronize-files-preserving-remote-ownership-and-permissions-with-rsync/]]></guid>
-        <pubDate>Tue, 14 Jan 2025 14:05:34 </pubDate>
     </item>
 </channel></rss>

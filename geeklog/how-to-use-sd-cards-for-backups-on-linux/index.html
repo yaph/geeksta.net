@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use SD Cards for Backups on Linux | Geeksta</title>
+<meta name="description" content="A detailed guide on using SD cards for data backup on Linux. Learn formatting, mounting, and automating backups to ensure your files are safe and accessible."><meta name="author" content="Ramiro Gómez">            <meta property="og:image" content="/img/geeklog/geeklog-sd-cards.webp">
+
+    <link rel="canonical" itemprop="url" href="https://geeksta.net/geeklog/how-to-use-sd-cards-for-backups-on-linux/">
+    <link rel="icon" type="image/png" href="/img/icon-small.png">
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Geeksta All Posts RSS feed">
+    <link rel="stylesheet" href="/vendor/chota.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/dropdown.css">
+
+</head>
+<body>
+    <header><nav class="nav dark">
+        <div class="nav-left">
+            <a class="brand" href="/"><img class="logo" src="/img/icon-small.png" alt="logo">Geeksta</a>
+        </div>
+        <ul class="nav-right">
+            <li>
+                <a href="#">Sections ▾</a>
+                <ul class="dropdown">
+                    <li><a href="/reviews/">Book Reviews</a></li>
+                    <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
+                    <li><a href="/visualizations/">Data Visualizations</a></li>
+                    <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
+                    <li><a href="/events/">Geek Events</a></li>
+                    <li><a href="/screencasts/">Screencasts</a></li>
+                    <li><a href="/videos/">Videos</a></li>
+                </ul>
+            </li>
+            <li><a href="/geeklog/">Geeklog</a></li>
+            <li><a href="/merch/">Merch</a></li>
+            <li><a href="/tools/">Tools</a></li>
+        </ul>
+    </nav></header>
+
+    <main class="container">
+<div class="row">
+    <div class="col-9-md">
+        <h1>How to Use SD Cards for Backups on Linux</h1>
+        <p>SD cards have come a long way from being simple storage for digital cameras. With capacities now reaching multiple terabytes, they present an attractive, portable backup solution. However, Linux users often encounter frustrating issues when attempting to leverage these pocket-sized storage powerhouses for serious backup purposes.</p>
+<p>In this guide, we'll explore how to properly configure, verify, and utilize SD cards for reliable backups on Linux systems, avoiding common pitfalls that can lead to data loss and corruption.</p>
+<h2 id="choosing-the-right-hardware">Choosing the Right Hardware</h2>
+<h3 id="sd-card-selection">SD Card Selection</h3>
+<p>Not all SD cards are created equal. When selecting a card for backup purposes, consider:</p>
+<ul>
+<li><strong>Capacity vs. Authenticity</strong>: That suspiciously cheap 1TB card might actually be a 32GB card hacked to report a larger size. When the card's real capacity is exceeded, data corruption occurs.</li>
+<li><strong>Speed Classification</strong>: Look for UHS-I or UHS-II cards with higher speed ratings (V30, V60, V90) for backup operations.</li>
+<li><strong>Endurance Rating</strong>: Cards designed for surveillance cameras or dashcams often have better write endurance, making them suitable for frequent backups.</li>
+<li><strong>Brand Reliability</strong>: Stick with reputable brands like SanDisk, Samsung, Kingston, or Lexar from authorized retailers.</li>
+</ul>
+<h3 id="card-readers-matter">Card Readers Matter</h3>
+<p>A quality card reader can make the difference between successful backups and corrupted data:</p>
+<ul>
+<li>USB 3.0 or higher connectivity offers faster transfer speeds</li>
+<li>Standalone powered readers provide more stable power than built-in laptop readers</li>
+<li>Multi-card readers with dedicated SD slots often perform better than all-in-one solutions</li>
+</ul>
+<h2 id="verifying-your-sd-cards-authenticity">Verifying Your SD Card's Authenticity</h2>
+<p>Before trusting your precious data to an SD card, verify its authenticity. The excellent open-source tool F3 (Fight Flash Fraud) makes this process straightforward:</p>
+<pre><code class="language-bash"># Install F3
+sudo apt install f3    # Debian/Ubuntu
+sudo dnf install f3    # Fedora/RHEL
+sudo pacman -S f3      # Arch Linux
+
+# Write test files to fill the card
+f3write /path/to/mounted/sdcard
+
+# Verify the written data
+f3read /path/to/mounted/sdcard
+</code></pre>
+<p>A genuine card will show consistent read/write speeds and verified capacity matching the advertised size. Counterfeit cards will report errors once the actual capacity is exceeded.</p>
+<h2 id="choosing-the-optimal-filesystem">Choosing the Optimal Filesystem</h2>
+<p>Your filesystem choice dramatically impacts backup reliability, especially with large-capacity cards:</p>
+<h3 id="ext4-the-linux-native-option">ext4: The Linux Native Option</h3>
+<pre><code class="language-bash">sudo mkfs.ext4 /dev/sdX
+</code></pre>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Journaling prevents corruption during unexpected disconnects</li>
+<li>Excellent handling of many small files</li>
+<li>Best performance on Linux systems</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>Limited compatibility with other operating systems</li>
+<li>Requires additional software for Windows/macOS access</li>
+</ul>
+<h3 id="ntfs-the-windows-friendly-option">NTFS: The Windows-Friendly Option</h3>
+<pre><code class="language-bash">sudo mkfs.ntfs -f /dev/sdX  # -f performs a quick format
+</code></pre>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Good cross-platform compatibility</li>
+<li>Handles large files and large volumes well</li>
+<li>No practical file size limitations</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>Write performance can be slower on Linux systems</li>
+<li>Requires NTFS-3G drivers on Linux</li>
+</ul>
+<h3 id="exfat-the-modern-cross-platform-solution">exFAT: The Modern Cross-Platform Solution</h3>
+<pre><code class="language-bash"># Install exFAT tools
+sudo apt install exfatprogs    # Ubuntu/Debian
+sudo dnf install exfatprogs    # Fedora/RHEL
+
+# Format the card
+sudo mkfs.exfat /dev/sdX
+</code></pre>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Designed specifically for flash media</li>
+<li>Excellent cross-platform compatibility</li>
+<li>Handles large files and volumes efficiently</li>
+<li>Better than FAT32 for many small files</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>Less robust than ext4 (no journaling)</li>
+<li>Requires additional packages on some Linux distributions</li>
+</ul>
+<h3 id="fat32-the-legacy-option-not-recommended-for-backups">FAT32: The Legacy Option (Not Recommended for Backups)</h3>
+<pre><code class="language-bash">sudo mkfs.vfat -F 32 -s 8 -S 4096 /dev/sdX
+</code></pre>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Universal compatibility</li>
+<li>Simple structure</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>4GB file size limitation</li>
+<li>Poor handling of many small files</li>
+<li>Prone to corruption with large volumes</li>
+<li>Not recommended for backup purposes on cards larger than 32GB</li>
+</ul>
+<h2 id="creating-backups-with-rsync">Creating Backups with rsync</h2>
+<p>The <code>rsync</code> utility is the Swiss Army knife of Linux backups. Here's how to leverage it effectively for SD card backups:</p>
+<h3 id="basic-backup-command">Basic Backup Command</h3>
+<pre><code class="language-bash">rsync -av --progress /source/directory/ /path/to/sdcard/
+</code></pre>
+<p>The trailing slashes are important! They tell rsync to copy the contents of the source directory rather than the directory itself.</p>
+<h3 id="enhanced-integrity-checking">Enhanced Integrity Checking</h3>
+<pre><code class="language-bash">rsync -av --progress --checksum /source/directory/ /path/to/sdcard/
+</code></pre>
+<p>The <code>--checksum</code> option verifies file integrity by comparing file contents rather than just timestamps and sizes. This is slower but catches corruption issues that might otherwise go unnoticed.</p>
+<h3 id="dealing-with-problematic-transfers">Dealing with Problematic Transfers</h3>
+<pre><code class="language-bash">rsync -av --progress --inplace --no-whole-file --modify-window=1 /source/directory/ /path/to/sdcard/
+</code></pre>
+<p>This command is particularly useful for troublesome SD cards:</p>
+<ul>
+<li><code>--inplace</code> updates files directly rather than creating temporary copies</li>
+<li><code>--no-whole-file</code> transfers changed parts of files only</li>
+<li><code>--modify-window=1</code> allows for slight timestamp differences</li>
+</ul>
+<h2 id="automating-your-backups">Automating Your Backups</h2>
+<p>Create a simple backup script:</p>
+<pre><code class="language-bash">#!/bin/bash
+# SD card backup script with verification and notification
+
+SOURCE=&quot;/path/to/data&quot;
+DEST=&quot;/path/to/mounted/sdcard/backup&quot;
+LOG=&quot;/home/user/backup_logs/backup_$(date +%Y%m%d_%H%M%S).log&quot;
+mkdir -p &quot;$(dirname &quot;$LOG&quot;)&quot;
+
+# Ensure SD card is accessible
+if ! [ -d &quot;$DEST&quot; ]; then
+    echo &quot;Error: Backup destination not accessible!&quot; | tee &quot;$LOG&quot;
+    exit 1
+fi
+
+# Check available space
+SOURCE_SIZE=$(du -sb &quot;$SOURCE&quot; | cut -f1)
+DEST_AVAIL=$(df -P &quot;$DEST&quot; | awk 'NR==2 {print $4 * 1024}')
+
+if [ &quot;$SOURCE_SIZE&quot; -gt &quot;$DEST_AVAIL&quot; ]; then
+    echo &quot;Error: Insufficient space on backup device!&quot; | tee -a &quot;$LOG&quot;
+    exit 2
+fi
+
+# Perform backup with detailed logging
+echo &quot;Backup started at $(date)&quot; | tee -a &quot;$LOG&quot;
+rsync -avh --progress --checksum --stats &quot;$SOURCE/&quot; &quot;$DEST/&quot; 2&gt;&amp;1 | tee -a &quot;$LOG&quot;
+
+# Verify successful completion
+if [ ${PIPESTATUS[0]} -eq 0 ]; then
+    echo &quot;Backup completed successfully at $(date)&quot; | tee -a &quot;$LOG&quot;
+
+    # Optional: Send notification
+    # notify-send &quot;Backup Successful&quot; &quot;Data has been backed up to SD card&quot;
+else
+    echo &quot;Backup failed with error at $(date)&quot; | tee -a &quot;$LOG&quot;
+
+    # Optional: Send notification
+    # notify-send -u critical &quot;Backup Failed&quot; &quot;SD card backup encountered errors&quot;
+fi
+</code></pre>
+<p>Make it executable with <code>chmod +x backup_script.sh</code> and schedule with cron if needed.</p>
+<h2 id="troubleshooting-common-issues">Troubleshooting Common Issues</h2>
+<h3 id="filesystem-errors-during-backup">Filesystem Errors During Backup</h3>
+<p><strong>Symptoms:</strong> rsync crashes, input/output errors, sudden disconnections
+<strong>Common Causes:</strong></p>
+<ul>
+<li>FAT32 limitations with many files or large volumes</li>
+<li>Counterfeit card exceeding actual capacity</li>
+<li>Card controller issues</li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Use ext4 or exFAT filesystem instead of FAT32</li>
+<li>Verify card authenticity with F3</li>
+<li>Try a different card reader</li>
+<li>Break backups into smaller batches</li>
+</ul>
+<h3 id="slow-transfer-speeds">Slow Transfer Speeds</h3>
+<p><strong>Symptoms:</strong> Backup takes excessively long time
+<strong>Common Causes:</strong></p>
+<ul>
+<li>Low-quality card with poor write performance</li>
+<li>Suboptimal card reader</li>
+<li>USB bus limitations</li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Use a card with higher speed rating (V30+)</li>
+<li>Use a dedicated USB 3.0+ card reader</li>
+<li>Ensure card reader is connected directly to computer, not through a hub</li>
+</ul>
+<h3 id="data-corruption-after-backup">Data Corruption After Backup</h3>
+<p><strong>Symptoms:</strong> Files unreadable or truncated after backup completes
+<strong>Common Causes:</strong></p>
+<ul>
+<li>Improper ejection/unmounting</li>
+<li>Power fluctuations during write operations</li>
+<li>Filesystem not suitable for the card</li>
+</ul>
+<p><strong>Solutions:</strong></p>
+<ul>
+<li>Always properly unmount before removing: <code>sudo umount /path/to/sdcard</code></li>
+<li>Use a powered card reader</li>
+<li>Consider using a journaling filesystem like ext4</li>
+<li>Use the <code>--checksum</code> option with rsync to verify integrity</li>
+</ul>
+<h2 id="best-practices-for-sd-card-backups">Best Practices for SD Card Backups</h2>
+<ol>
+<li><strong>Always verify your backups.</strong> Don't assume the data was written correctly.</li>
+<li><strong>Label your cards.</strong> Physical labels with date and content information prevent confusion.</li>
+<li><strong>Store cards properly.</strong> Use protective cases and keep away from magnetic fields.</li>
+<li><strong>Rotate multiple cards.</strong> Don't rely on a single backup medium.</li>
+<li><strong>Periodically refresh data.</strong> SD cards can lose data over very long storage periods (years).</li>
+<li><strong>Check filesystem integrity regularly:</strong> <code>fsck /dev/sdX</code></li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>SD cards can be excellent backup solutions for Linux users when properly configured and managed. By choosing the right card, verifying its authenticity, selecting an appropriate filesystem, and using robust backup commands, you can create a reliable, portable backup solution.</p>
+<p>Remember that while SD cards offer convenience, they should be part of a broader backup strategy. Consider the 3-2-1 backup rule: three copies of your data, on two different media types, with one copy stored off-site.</p>
+<hr />
+<p><strong>Credits:</strong> Meta image <a href="https://pixabay.com/photos/memory-memory-card-electronics-3879753/">Memory Card Electronics</a> by <a href="https://kieutruong.com/">kieutruongphoto</a></p>
+    </div>
+    <div class="col">
+
+<h3>Featured Merch</h3>
+<figure class="preview">
+    <a href="/design/got-backups-white/">
+            <img class="b-lazy" src="/img/large/got-backups-white.jpg" alt="got backups? Funny System Administrator Design - White Text" />
+        <figcaption>got backups? Funny System Administrator Design - White Text</figcaption>
+    </a>
+</figure>
+
+
+<h3>Latest Posts</h3>
+<ul>
+        <li><a href="/geeklog/wiki-story-introduction/">Wiki Story: Turn Wikipedia Articles into Captivating Narratives</a></li>
+        <li><a href="/geeklog/how-to-determine-the-smtp-and-imap-servers-for-a-domain/">How to Determine the SMTP and IMAP Servers for a Domain</a></li>
+        <li><a href="/geeklog/how-to-determine-the-email-server-for-a-domain/">How to Determine the Email Server (MX Records) for a Domain</a></li>
+        <li><a href="/geeklog/how-to-set-max-input-vars-in-php/">How to Set max_input_vars in PHP: A Quick Guide for Developers</a></li>
+</ul>
+
+<h3>Featured Book</h3>
+<figure class="preview">
+    <a href="https://www.amazon.com/dp/B0C5B9JG57?tag=geeksta-20">
+        <img alt="eBook cover" src="/img/books/chatgpt-interview-prompting.jpg"><br>
+        <figcaption>Buy on Amazon</figcaption>
+    </a>
+</figure>
+
+<hr>
+
+<a href="/rss.xml" class="button primary">Subscribe to RSS Feed</a></li>    </div>
+</div>
+<hr>
+<p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time datetime="2025-03-18T13:46">March 18, 2025</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+<p><strong>Tags:</strong>
+    <a class="button outline" href="/tags/backup/">backup</a>
+    <a class="button outline" href="/tags/guide/">guide</a>
+    <a class="button outline" href="/tags/linux/">linux</a>
+    <a class="button outline" href="/tags/hardware/">hardware</a>
+</p>
+<p class="text-grey"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p><hr>
+<p><strong>Share post:</strong>
+<a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/geeklog/how-to-use-sd-cards-for-backups-on-linux/&t=How%20to%20Use%20SD%20Cards%20for%20Backups%20on%20Linux" class="button success">Facebook</a>
+<a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/geeklog/how-to-use-sd-cards-for-backups-on-linux/&title=How%20to%20Use%20SD%20Cards%20for%20Backups%20on%20Linux" class="button success">LinkedIn</a>
+<a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/geeklog/how-to-use-sd-cards-for-backups-on-linux/&title=How%20to%20Use%20SD%20Cards%20for%20Backups%20on%20Linux" class="button success">Reddit</a>
+<a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/geeklog/how-to-use-sd-cards-for-backups-on-linux/&text=How%20to%20Use%20SD%20Cards%20for%20Backups%20on%20Linux" class="button success">Twitter</a>
+</p>
+<div class="card vm">
+    <h3>Merchandise</h3>
+    <div class="row">
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/caution-i-test-in-production/">
+            <img class="b-lazy" src="/img/large/caution-i-test-in-production.jpg" alt="I Test in Production - Funny Developer Caution Sign Design" />
+        <figcaption>I Test in Production - Funny Developer Caution Sign Design</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/hack-the-planet-green/">
+            <img class="b-lazy" src="/img/large/hack-the-planet-green.jpg" alt="Hack the Planet - Green Globe Design for Computer Hackers" />
+        <figcaption>Hack the Planet - Green Globe Design for Computer Hackers</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/run-bsd/">
+            <img class="b-lazy" src="/img/large/run-bsd.jpg" alt="RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins" />
+        <figcaption>RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/shrug-it-works-on-my-machine-medium-white/">
+            <img class="b-lazy" src="/img/large/shrug-it-works-on-my-machine-medium-white.jpg" alt="Shrug It Works On My Machine Funny Programmer Excuse White Design" />
+        <figcaption>Shrug It Works On My Machine Funny Programmer Excuse White Design</figcaption>
+    </a>
+</figure>
+
+    </div>
+</div>
+
+</div>    </main>
+
+    <footer class="dark"><div class="container">
+        Geeksta elsewhere: <a href="https://www.instagram.com/g33ksta/">Instagram</a> • <a href="https://www.youtube.com/@geeksta">YouTube</a> • <a href="https://www.tiktok.com/@g33ksta">TikTok</a> • <a href="https://www.facebook.com/geeksta.net/">Facebook</a>
+        <br>
+        © 2010 - 2025 Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/rss.xml">RSS Feed</a></p>
+    </div></footer>
+
+    <script src="/compiled/script.js"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MFQJ09STFE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MFQJ09STFE');
+</script>
+</body>
+</html>
