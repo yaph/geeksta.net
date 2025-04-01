@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Prevent SSH Timeout on Linux Systems | Geeksta</title>
-<meta name="description" content="Prevent SSH timeouts on your Linux machine with a simple configuration change. Follow our quick guide to keep your SSH connection active during periods of inactivity."><meta name="author" content="Ramiro Gómez">
+    <title>Checking DNS Zone Files | Geeksta</title>
+<meta name="description" content="Learn why validating DNS zone files is critical for website reliability and email delivery. Discover practical tools and best practices to prevent costly DNS configuration errors."><meta name="author" content="Ramiro Gómez">
             <meta property="og:image" content="/img/geeklog/geeklog-tux.png">
-    <link rel="canonical" itemprop="url" href="https://geeksta.net/geeklog/how-to-prevent-ssh-timeout-on-linux-systems/">
+    <link rel="canonical" itemprop="url" href="https://geeksta.net/geeklog/checking-dns-zone-files/">
     <link rel="icon" type="image/png" href="/img/icon-small.png">
     <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Geeksta All Posts RSS feed">
     <link rel="stylesheet" href="/vendor/chota.min.css">
@@ -41,42 +41,62 @@
     <main class="container">
 <div class="row">
     <div class="col-9-md">
-        <h1>How to Prevent SSH Timeout on Linux Systems</h1>
-        <p>If you've ever experienced your SSH connection freezing due to inactivity, you're not alone. This common issue can be particularly frustrating, but fortunately, there's a simple solution. By adjusting your SSH client configuration, you can keep the connection alive. Follow these steps to prevent SSH timeout on your Linux machine.</p>
-<h2 id="edit-the-ssh-configuration">Edit the SSH Configuration</h2>
-<p>First, you'll need to edit the SSH configuration file. If it doesn't already exist, create it. Start a terminal and open the file with your preferred editor, for example:</p>
-<pre><code class="language-shell">vim ~/.ssh/config
+        <h1>Checking DNS Zone Files</h1>
+        <p>DNS zone files are the backbone of domain name resolution on the internet. They contain the mappings between domain names and IP addresses, mail servers, and other critical infrastructure components. However, even a small syntax error in these files can lead to significant disruptions in service. In this post, we'll explore the importance of validating DNS zone files and some practical methods to do so.</p>
+<h2 id="why-validate-zone-files">Why Validate Zone Files?</h2>
+<p>A misconfigured zone file can cause various problems:</p>
+<ol>
+<li><strong>Website Unavailability</strong>: If A or AAAA records are incorrect, your website might become inaccessible.</li>
+<li><strong>Email Delivery Failures</strong>: Incorrect MX records can prevent email delivery.</li>
+<li><strong>Security Vulnerabilities</strong>: Improperly configured DNSSEC or SPF records might expose your domain to spoofing attacks.</li>
+<li><strong>Propagation Delays</strong>: Errors might cause DNS propagation issues, leading to inconsistent behavior across the internet.</li>
+</ol>
+<h2 id="tools-for-dns-zone-file-validation">Tools for DNS Zone File Validation</h2>
+<h3 id="bind-utilities">BIND Utilities</h3>
+<p>The BIND DNS server software provides excellent tools for checking zone files:</p>
+<pre><code class="language-bash"># Basic syntax check
+named-checkzone example.com /path/to/zonefile
+
+# More verbose output
+named-checkzone -v example.com /path/to/zonefile
 </code></pre>
-<p>Next, add the following lines to ensure your SSH connection remains active:</p>
-<pre><code class="language-text">Host *
-    ServerAliveInterval 60
-    ServerAliveCountMax 3
+<p>The <code>named-compilezone</code> utility is another helpful tool that can convert between different zone file formats while checking for errors:</p>
+<pre><code class="language-bash">named-compilezone -o /dev/null example.com /path/to/zonefile
 </code></pre>
-<p>Save the file and exit the text editor. For the changes to take effect, you need to restart your SSH connection.</p>
-<h2 id="explanation">Explanation</h2>
-<p>Here's what these settings do:</p>
-<ul>
-<li><code>ServerAliveInterval 60</code>: This sends a keep-alive packet to the server every 60 seconds.</li>
-<li><code>ServerAliveCountMax 3</code>: If the server does not respond after three keep-alive packets, the connection will be terminated.</li>
-</ul>
-<p>That's it! Your SSH connection should now remain active even during periods of inactivity. Adjust the <code>ServerAliveInterval</code> value as needed to fit your specific requirements.</p>
+<h3 id="online-validators">Online Validators</h3>
+<p>Several online tools can help validate zone files, particularly useful if you don't have access to a server with BIND utilities installed.</p>
+<h3 id="common-syntax-issues-to-watch-for">Common Syntax Issues to Watch For</h3>
+<ol>
+<li><strong>Missing Trailing Dots</strong>: Fully qualified domain names should end with a dot.</li>
+<li><strong>Incorrect TTL Values</strong>: Time-to-live values must be numeric and reasonable.</li>
+<li><strong>Record Format Errors</strong>: Each record type has specific formatting requirements.</li>
+<li><strong>Long TXT Records</strong>: TXT records (like those for DKIM) might need to be split into multiple strings.</li>
+<li><strong>SOA Record Errors</strong>: The Start of Authority record has a complex format that's easy to get wrong.</li>
+</ol>
+<h2 id="best-practices">Best Practices</h2>
+<ol>
+<li><strong>Use Version Control</strong>: Track changes to your zone files.</li>
+<li><strong>Test Before Deployment</strong>: Always validate before pushing changes to production.</li>
+<li><strong>Maintain Documentation</strong>: Keep notes about your DNS configuration.</li>
+<li><strong>Implement Automated Checks</strong>: Set up CI/CD pipelines to validate zone files automatically.</li>
+<li><strong>Monitor DNS Health</strong>: Regularly check that your DNS is resolving correctly.</li>
+</ol>
 <h2 id="conclusion">Conclusion</h2>
-<p>By following this short and simple guide, you can prevent your SSH connections from freezing due to inactivity. This small configuration change can save you from the hassle of repeatedly reconnecting to your remote servers.</p>
+<p>Taking the time to properly validate DNS zone files might seem tedious, but it's a crucial step in maintaining a reliable online presence. By catching errors before they propagate, you can avoid downtime and maintain trust with your users. Whether you're managing a personal blog or enterprise infrastructure, proper DNS hygiene is essential for a smooth-running internet presence.</p>
     </div>
     <div class="col">
 
 <h3>Featured Merch</h3>
 <figure class="preview">
-    <a href="/design/bash-fork-bomb-white/">
-            <img class="b-lazy" src="/img/large/bash-fork-bomb-white.jpg" alt="Bash Fork Bomb - White Text for Unix/Linux Hackers" />
-        <figcaption>Bash Fork Bomb - White Text for Unix/Linux Hackers</figcaption>
+    <a href="/design/linux-sysadmin-grunge/">
+            <img class="b-lazy" src="/img/large/linux-sysadmin-grunge.jpg" alt="Linux Sysadmin Penguin Cool Grunge Vintage Retro Design" />
+        <figcaption>Linux Sysadmin Penguin Cool Grunge Vintage Retro Design</figcaption>
     </a>
 </figure>
 
 
 <h3>Latest Posts</h3>
 <ul>
-        <li><a href="/geeklog/checking-dns-zone-files/">Checking DNS Zone Files</a></li>
         <li><a href="/geeklog/how-to-use-sd-cards-for-backups-on-linux/">How to Use SD Cards for Backups on Linux</a></li>
         <li><a href="/geeklog/wiki-story-introduction/">Wiki Story: Turn Wikipedia Articles into Captivating Narratives</a></li>
         <li><a href="/geeklog/how-to-determine-the-smtp-and-imap-servers-for-a-domain/">How to Determine the SMTP and IMAP Servers for a Domain</a></li>
@@ -96,18 +116,19 @@
 <a href="/rss.xml" class="button primary">Subscribe to RSS Feed</a></li>    </div>
 </div>
 <hr>
-<p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time datetime="2024-06-03T13:08">June 03, 2024</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+<p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time datetime="2025-04-01T12:14">April 01, 2025</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
 <p><strong>Tags:</strong>
+    <a class="button outline" href="/tags/dns/">dns</a>
     <a class="button outline" href="/tags/howto/">howto</a>
     <a class="button outline" href="/tags/linux/">linux</a>
-    <a class="button outline" href="/tags/sysadmin/">sysadmin</a>
+    <a class="button outline" href="/tags/networking/">networking</a>
 </p>
 <p class="text-grey"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p><hr>
 <p><strong>Share post:</strong>
-<a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/geeklog/how-to-prevent-ssh-timeout-on-linux-systems/&t=How%20to%20Prevent%20SSH%20Timeout%20on%20Linux%20Systems" class="button success">Facebook</a>
-<a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/geeklog/how-to-prevent-ssh-timeout-on-linux-systems/&title=How%20to%20Prevent%20SSH%20Timeout%20on%20Linux%20Systems" class="button success">LinkedIn</a>
-<a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/geeklog/how-to-prevent-ssh-timeout-on-linux-systems/&title=How%20to%20Prevent%20SSH%20Timeout%20on%20Linux%20Systems" class="button success">Reddit</a>
-<a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/geeklog/how-to-prevent-ssh-timeout-on-linux-systems/&text=How%20to%20Prevent%20SSH%20Timeout%20on%20Linux%20Systems" class="button success">Twitter</a>
+<a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/geeklog/checking-dns-zone-files/&t=Checking%20DNS%20Zone%20Files" class="button success">Facebook</a>
+<a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/geeklog/checking-dns-zone-files/&title=Checking%20DNS%20Zone%20Files" class="button success">LinkedIn</a>
+<a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/geeklog/checking-dns-zone-files/&title=Checking%20DNS%20Zone%20Files" class="button success">Reddit</a>
+<a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/geeklog/checking-dns-zone-files/&text=Checking%20DNS%20Zone%20Files" class="button success">Twitter</a>
 </p>
 <div class="card vm">
     <h3>Merchandise</h3>
