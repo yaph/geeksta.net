@@ -13,7 +13,7 @@
         <guid><![CDATA[https://geeksta.net/geeklog/troubleshooting-database-load-issues-on-debian-linux/]]></guid>
         <pubDate>Thu, 03 Apr 2025 19:22:07 </pubDate>
         <content:encoded><![CDATA[
-        <p>As a database administrator or system engineer, you've likely encountered the dreaded alert: "Database server load critical." In this guide, I'll walk you through a systematic approach to diagnose and resolve high database load issues on Debian Linux servers.</p>
+        <p>As a database administrator or system engineer, you've likely encountered the dreaded alert informing you about critical load on the database server. In this guide, I'll walk you through a systematic approach to diagnose and resolve high database load issues on Debian Linux servers.</p>
 <h2 id="understanding-the-problem-what-causes-high-database-load">Understanding the Problem: What Causes High Database Load?</h2>
 <p>Before diving into troubleshooting, let's understand what we're looking for. Database load issues typically stem from one or more of these factors:</p>
 <ul>
