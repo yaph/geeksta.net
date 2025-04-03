@@ -7,6 +7,13 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Troubleshooting Database Load Issues on Debian Linux: A Practical Guide]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/troubleshooting-database-load-issues-on-debian-linux/]]></link>
+        <description><![CDATA[<p>Learn practical steps to diagnose and resolve high database load issues on Debian Linux servers. This guide covers essential monitoring tools, query optimization techniques, and proactive measures to keep your databases running smoothly.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/troubleshooting-database-load-issues-on-debian-linux/]]></guid>
+        <pubDate>Thu, 03 Apr 2025 19:22:07 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[Checking DNS Zone Files]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/checking-dns-zone-files/]]></link>
         <description><![CDATA[<p>Learn why validating DNS zone files is critical for website reliability and email delivery. Discover practical tools and best practices to prevent costly DNS configuration errors.</p>]]></description>
@@ -72,12 +79,5 @@ Functional code is classless and...</p><img src="https://geeksta.net/img/large/n
         <description><![CDATA[<p>Explore a comprehensive overview of Microsoft Edge text-to-speech voices with audio samples. Discover available accents, languages, and characters to find the perfect voice for your needs.</p><img src="/img/tools/text-to-speech-artificial-intelligence.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/tools/tts-samples/]]></guid>
         <pubDate>Mon, 03 Feb 2025 12:08:34 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[How to Set max_input_vars in PHP: A Quick Guide for Developers]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/how-to-set-max-input-vars-in-php/]]></link>
-        <description><![CDATA[<p>Learn how to set PHP's max_input_vars using php.ini, .htaccess, or .user.ini. Fix `Too many input variables` errors and optimize form handling with this quick guide.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/how-to-set-max-input-vars-in-php/]]></guid>
-        <pubDate>Tue, 28 Jan 2025 14:40:07 </pubDate>
     </item>
 </channel></rss>
