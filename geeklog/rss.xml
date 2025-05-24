@@ -119,36 +119,22 @@ Content of second email...
 </code></pre>
 <p>This extracts emails with "Invoice" in the subject AND from someone named "john".</p>
 <h2 id="practical-tips-for-working-with-mbox-files">Practical Tips for Working with mbox Files</h2>
-<ol>
-<li><strong>Create a temporary .muttrc file for complex operations</strong>:</li>
-</ol>
-<p><code>text
-   echo "set sort=date-received" &gt; temp_muttrc
-   mutt -F temp_muttrc -f mbox_file</code></p>
-<ol>
-<li>
+<p><strong>Create a temporary .muttrc file for complex operations</strong>:</p>
+<pre><code class="language-text">echo &quot;set sort=date-received&quot; &gt; temp_muttrc
+mutt -F temp_muttrc -f mbox_file
+</code></pre>
 <p><strong>Backup before modifying</strong>: Always make a copy of your mbox file before performing operations that might modify it.</p>
-</li>
-<li>
 <p><strong>Extract a single email</strong>: To save a specific email as a separate file:</p>
-</li>
-</ol>
-<p><code>text
-   formail -s procmail &lt; mbox_file</code></p>
+<pre><code class="language-text">formail -s procmail &lt; mbox_file
+</code></pre>
 <p>(Use this with a .procmailrc file that defines extraction rules)</p>
-<ol>
-<li>
 <p><strong>Split large mbox files</strong>: For exceptionally large mbox files, consider:</p>
-<p><code>text
-   csplit -f email- mbox_file '/^From /' '{*}'</code></p>
-</li>
-</ol>
+<pre><code class="language-text">csplit -f email- mbox_file '/^From /' '{*}'
+</code></pre>
 <p>This creates separate files for each email.</p>
-<ol>
-<li><strong>Convert to other formats</strong>: To convert to Maildir format:</li>
-</ol>
-<p><code>text
-   mb2md -s /path/to/mbox -d /path/to/maildir</code></p>
+<p><strong>Convert to other formats</strong>: To convert to Maildir format:</p>
+<pre><code class="language-text">mb2md -s /path/to/mbox -d /path/to/maildir
+</code></pre>
 <p>Remember that mbox files are simple text files, so any text processing tool can work with them, but mail-specific tools like mutt will provide the best viewing experience by properly parsing and formatting the messages.</p>
 <hr>
 <p>Thank you for reading!</p>

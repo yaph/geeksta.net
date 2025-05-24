@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc><![CDATA[https://geeksta.net/geeklog/how-to-search-and-view-mbox-email-archives/]]></loc><lastmod>2025-05-20</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/how-to-search-and-view-mbox-email-archives/]]></loc><lastmod>2025-05-24</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/troubleshooting-database-load-issues-on-debian-linux/]]></loc><lastmod>2025-04-03</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/checking-dns-zone-files/]]></loc><lastmod>2025-04-01</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/smalltalk-1972-yellow/]]></loc><lastmod>2025-04-01</lastmod></url>
@@ -8,22 +8,22 @@
 <url><loc><![CDATA[https://geeksta.net/design/no-class-no-state-lambda-propaganda-grunge/]]></loc><lastmod>2025-04-01</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/punk-rock-forever-anarchy/]]></loc><lastmod>2025-04-01</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/wiki-story-introduction/]]></loc><lastmod>2025-02-12</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/geeklog/how-to-determine-the-smtp-and-imap-servers-for-a-domain/]]></loc><lastmod>2025-02-07</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/geeklog/how-to-determine-the-email-server-for-a-domain/]]></loc><lastmod>2025-02-07</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/how-to-determine-the-smtp-and-imap-servers-for-a-domain/]]></loc><lastmod>2025-05-22</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/how-to-determine-the-email-server-for-a-domain/]]></loc><lastmod>2025-05-22</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/tools/tts-samples/]]></loc><lastmod>2025-02-10</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/geeklog/how-to-set-max-input-vars-in-php/]]></loc><lastmod>2025-02-07</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/how-to-set-max-input-vars-in-php/]]></loc><lastmod>2025-05-22</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/reviews/charles-duhigg-the-power-of-habit/]]></loc><lastmod>2025-01-19</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/charla-introduction/]]></loc><lastmod>2025-02-13</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/hashtagify-introduction/]]></loc><lastmod>2025-01-16</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/synchronize-files-preserving-remote-ownership-and-permissions-with-rsync/]]></loc><lastmod>2025-02-07</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/wedding-humboldthain-routes/]]></loc><lastmod>2025-04-01</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/groundhog-workout-repeat/]]></loc><lastmod>2025-04-01</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/geeklog/how-to-exit-a-python-program-gracefully/]]></loc><lastmod>2025-02-07</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/geeklog/how-to-import-modules-in-a-standalone-python-program/]]></loc><lastmod>2025-02-07</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/how-to-exit-a-python-program-gracefully/]]></loc><lastmod>2025-05-22</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/how-to-import-modules-in-a-standalone-python-program/]]></loc><lastmod>2025-05-22</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/chat-gpt-prompts-for-limitless-creativity-and-productivity/]]></loc><lastmod>2024-12-29</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/preventing-user-registration-spam-in-word-press-with-fail2ban/]]></loc><lastmod>2025-02-07</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/geeklog/find-lines-in-one-file-not-present-in-another-using-grep/]]></loc><lastmod>2025-02-07</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/geeklog/open-applications-in-fullscreen-on-ubuntu/]]></loc><lastmod>2025-02-07</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/find-lines-in-one-file-not-present-in-another-using-grep/]]></loc><lastmod>2025-05-22</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/open-applications-in-fullscreen-on-ubuntu/]]></loc><lastmod>2025-05-22</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/manage-tasks-with-screen-remotely/]]></loc><lastmod>2025-02-07</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/viking-axe-man-guitars/]]></loc><lastmod>2025-04-01</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/shrug-it-works-on-127.0.0.1-black/]]></loc><lastmod>2025-04-01</lastmod></url>
@@ -35,7 +35,7 @@
 <url><loc><![CDATA[https://geeksta.net/design/italia-human-flag-al/]]></loc><lastmod>2025-04-01</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/italia-human-flag-it/]]></loc><lastmod>2025-04-01</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/italia-human-flag-ia/]]></loc><lastmod>2025-04-01</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/geeklog/how-to-prevent-ssh-timeout-on-linux-systems/]]></loc><lastmod>2025-02-07</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/how-to-prevent-ssh-timeout-on-linux-systems/]]></loc><lastmod>2025-05-22</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/q-whining-white/]]></loc><lastmod>2025-04-01</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/q-whining-black/]]></loc><lastmod>2025-04-01</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/getting-started-with-print-on-demand-merchandise/]]></loc><lastmod>2025-01-07</lastmod></url>
@@ -44,7 +44,7 @@
 <url><loc><![CDATA[https://geeksta.net/geeklog/understanding-bash-fork-bomb/]]></loc><lastmod>2025-01-07</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/helloworld.c-perldoc/]]></loc><lastmod>2025-04-01</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/helloworld.c-rrt/]]></loc><lastmod>2025-04-01</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/geeklog/must-know-bash-commands-for-linux-unix-sysadmins/]]></loc><lastmod>2024-09-12</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/must-know-bash-commands-for-linux-unix-sysadmins/]]></loc><lastmod>2025-05-22</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/punk-rock-forever-distressed-black/]]></loc><lastmod>2025-04-01</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/unix-1969-green/]]></loc><lastmod>2025-04-01</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/punk-rock-ruined-my-life-scratched/]]></loc><lastmod>2025-04-01</lastmod></url>
@@ -67,7 +67,7 @@
 <url><loc><![CDATA[https://geeksta.net/design/yin-yang-python-clock-now/]]></loc><lastmod>2025-04-01</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/linux-sysadmin-grunge/]]></loc><lastmod>2025-04-01</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/geoffroys-cat-portrait-vaporwave/]]></loc><lastmod>2025-04-01</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/geeklog/how-to-examine-a-remote-linux-server-via-ssh/]]></loc><lastmod>2024-09-12</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/how-to-examine-a-remote-linux-server-via-ssh/]]></loc><lastmod>2025-05-22</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/schöneberg-30-white/]]></loc><lastmod>2025-04-01</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/schöneberg-30-black/]]></loc><lastmod>2025-04-01</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/hermsdorf-28-white/]]></loc><lastmod>2025-04-01</lastmod></url>
