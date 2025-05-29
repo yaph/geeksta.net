@@ -3,8 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Bookmarklet to Replace Force(s) with Horse(s) based on xkcd 1418 | Geeksta</title>
-<meta name="description" content="This bookmarklet replaces the words force with horse and forces with horses to make sad news a bit more fun based on xkcd 1418."><meta name="author" content="Ramiro Gómez">    <link rel="canonical" itemprop="url" href="https://geeksta.net/tools/forces-horses-bookmarklet/">
+    <title>Fixing Dovecot Diffie-Hellman Parameter Error | Geeksta</title>
+<meta name="description" content="Learn how to fix Dovecot&#39;s Diffie-Hellman key exchange requested SSL error by generating DH parameters with OpenSSL and configuring ssl_dh properly."><meta name="author" content="Ramiro Gómez">
+            <meta property="og:image" content="/img/geeklog/geeklog-tux.png">
+    <link rel="canonical" itemprop="url" href="https://geeksta.net/geeklog/fixing-dovecot-diffie-hellman-parameter-error/">
     <link rel="icon" type="image/png" href="/img/icon-small.png">
     <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Geeksta All Posts RSS feed">
     <link rel="stylesheet" href="/vendor/chota.min.css">
@@ -39,31 +41,53 @@
     <main class="container">
 <div class="row">
     <div class="col-9-md">
-        <h1>A Bookmarklet to Replace Force(s) with Horse(s) based on xkcd 1418</h1>
-        <p>This bookmarklet replaces the words force with horse and forces with horses to make reading sad news a bit more fun. The idea comes from <a href="http://xkcd.com/1418/">xkcd 1418</a>.</p>
-<h3 id="get-the-bookmarklet">Get the bookmarklet</h3>
-<p>Drag the button below to your bookmarks bar:</p>
-<div class="bookmarklet">
-<a class="button" href="">Forces Horses Bookmarklet</a>
-<textarea cols="100" rows"5">
-javascript:(function(){var c=[{re:new RegExp("\\bforce\\b","gmi"),subst:"horse"},{re:new RegExp("\\bforces\\b","gmi"),subst:"horses"}];function a(e,g){var d,f;if("undefined"===typeof e.nodeName){return}f=e.nodeName.toLowerCase();if(-1!==["script","style"].indexOf(f)){return}if(e.nodeType===Node.ELEMENT_NODE){if(e=e.firstChild){do{d=e.nextSibling;a(e,g)}while(e=d)}}else{if(e.nodeType===Node.TEXT_NODE){e.data=g(e.data)}}}function b(d){if(typeof d==="undefined"){return}for(i in c){o=c[i];d=d.replace(o.re,o.subst)}return d}document.title=b(document.title);a(document.body,b)})();
-</textarea>
-</div>
+        <h1>Fixing Dovecot Diffie-Hellman Parameter Error</h1>
+        <p>This guide helps you resolve SSL/TLS connection issues in Dovecot IMAP server when Diffie-Hellman parameters are missing. The error prevents secure email client connections and requires generating cryptographic parameters and updating the Dovecot configuration.</p>
+<h2 id="the-error">The Error</h2>
+<p>When you see this in your Dovecot logs:</p>
+<pre><code class="language-text">dovecot: imap-login: Error: Diffie-Hellman key exchange requested, but no DH parameters provided. Set ssl_dh=&lt;/path/to/dh.pem
+</code></pre>
+<p>This means Dovecot needs DH parameters for SSL/TLS connections but can't find the required file.</p>
+<h2 id="solution">Solution</h2>
+<h3 id="1-generate-dh-parameters">1. Generate DH Parameters</h3>
+<pre><code class="language-bash"># 2048-bit (recommended - faster generation, still secure)
+openssl dhparam -out /etc/ssl/certs/dh.pem 2048
+
+# OR 4096-bit (higher security, much slower generation)
+openssl dhparam -out /etc/ssl/certs/dh.pem 4096
+</code></pre>
+<p><strong>Important:</strong> The parameter order matters! The <code>-out</code> option must come before the bit size.</p>
+<p><strong>Note:</strong> Generation takes time, much more much longer for 4096-bit than for 2048-bit. This is normal as it's generating cryptographically secure prime numbers.</p>
+<h3 id="2-configure-dovecot">2. Configure Dovecot</h3>
+<p>Add this line to your Dovecot configuration (usually <code>/etc/dovecot/dovecot.conf</code> or <code>/etc/dovecot/conf.d/10-ssl.conf</code>):</p>
+<pre><code class="language-text">ssl_dh = &lt;/etc/ssl/certs/dh.pem
+</code></pre>
+<h3 id="3-restart-dovecot">3. Restart Dovecot</h3>
+<pre><code class="language-bash">systemctl restart dovecot
+</code></pre>
+<h2 id="key-points">Key Points</h2>
+<ul>
+<li>2048-bit is sufficient for most security requirements and generates much faster</li>
+<li>4096-bit provides higher security but takes significantly longer to generate</li>
+<li>Parameter order is critical in the openssl command</li>
+<li>Long Generation time is normal - the process is doing real cryptographic work</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>The Dovecot DH parameter error is resolved by generating cryptographic parameters with OpenSSL and configuring Dovecot to use them. Choose 2048-bit for faster generation or 4096-bit for enhanced security. After configuration, restart Dovecot to enable secure IMAP connections with proper Diffie-Hellman key exchange.</p>
     </div>
     <div class="col">
 
 <h3>Featured Merch</h3>
 <figure class="preview">
-    <a href="/design/no-class-no-state-lambda-propaganda/">
-            <img class="b-lazy" src="/img/large/no-class-no-state-lambda-propaganda.jpg" alt="No Class No State Functional Programmer Propaganda Parody" />
-        <figcaption>No Class No State Functional Programmer Propaganda Parody</figcaption>
+    <a href="/design/bash-fork-bomb-white/">
+            <img class="b-lazy" src="/img/large/bash-fork-bomb-white.jpg" alt="Bash Fork Bomb - White Text for Unix/Linux Hackers" />
+        <figcaption>Bash Fork Bomb - White Text for Unix/Linux Hackers</figcaption>
     </a>
 </figure>
 
 
 <h3>Latest Posts</h3>
 <ul>
-        <li><a href="/geeklog/fixing-dovecot-diffie-hellman-parameter-error/">Fixing Dovecot Diffie-Hellman Parameter Error</a></li>
         <li><a href="/geeklog/how-to-search-and-view-mbox-email-archives/">How to Search and View mbox Email Archives</a></li>
         <li><a href="/geeklog/troubleshooting-database-load-issues-on-debian-linux/">Troubleshooting Database Load Issues on Debian Linux: A Practical Guide</a></li>
         <li><a href="/geeklog/checking-dns-zone-files/">Checking DNS Zone Files</a></li>
@@ -91,17 +115,20 @@ javascript:(function(){var c=[{re:new RegExp("\\bforce\\b","gmi"),subst:"horse"}
 <a href="/rss.xml" class="button primary">Subscribe to RSS Feed</a></li>    </div>
 </div>
 <hr>
-<p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time datetime="2014-09-08T11:49">September 08, 2014</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+<p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time datetime="2025-05-29T12:58">May 29, 2025</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
 <p><strong>Tags:</strong>
-    <a class="button outline" href="/tags/fun-stuff/">fun stuff</a>
-    <a class="button outline" href="/tags/bookmarklet/">bookmarklet</a>
+    <a class="button outline" href="/tags/howto/">howto</a>
+    <a class="button outline" href="/tags/linux/">linux</a>
+    <a class="button outline" href="/tags/sysadmin/">sysadmin</a>
+    <a class="button outline" href="/tags/tutorial/">tutorial</a>
+    <a class="button outline" href="/tags/email/">email</a>
 </p>
 <p class="text-grey"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p><hr>
 <p><strong>Share post:</strong>
-<a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/tools/forces-horses-bookmarklet/&t=A%20Bookmarklet%20to%20Replace%20Force%28s%29%20with%20Horse%28s%29%20based%20on%20xkcd%201418" class="button success">Facebook</a>
-<a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/tools/forces-horses-bookmarklet/&title=A%20Bookmarklet%20to%20Replace%20Force%28s%29%20with%20Horse%28s%29%20based%20on%20xkcd%201418" class="button success">LinkedIn</a>
-<a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/tools/forces-horses-bookmarklet/&title=A%20Bookmarklet%20to%20Replace%20Force%28s%29%20with%20Horse%28s%29%20based%20on%20xkcd%201418" class="button success">Reddit</a>
-<a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/tools/forces-horses-bookmarklet/&text=A%20Bookmarklet%20to%20Replace%20Force%28s%29%20with%20Horse%28s%29%20based%20on%20xkcd%201418" class="button success">Twitter</a>
+<a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/geeklog/fixing-dovecot-diffie-hellman-parameter-error/&t=Fixing%20Dovecot%20Diffie-Hellman%20Parameter%20Error" class="button success">Facebook</a>
+<a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/geeklog/fixing-dovecot-diffie-hellman-parameter-error/&title=Fixing%20Dovecot%20Diffie-Hellman%20Parameter%20Error" class="button success">LinkedIn</a>
+<a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/geeklog/fixing-dovecot-diffie-hellman-parameter-error/&title=Fixing%20Dovecot%20Diffie-Hellman%20Parameter%20Error" class="button success">Reddit</a>
+<a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/geeklog/fixing-dovecot-diffie-hellman-parameter-error/&text=Fixing%20Dovecot%20Diffie-Hellman%20Parameter%20Error" class="button success">Twitter</a>
 </p>
 <div class="card vm">
     <h3>Merchandise</h3>
@@ -153,7 +180,7 @@ javascript:(function(){var c=[{re:new RegExp("\\bforce\\b","gmi"),subst:"horse"}
     </div></footer>
 
     <script src="/compiled/script.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script><script src="/js/bookmarklet.js"></script>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFQJ09STFE"></script>
 <script>

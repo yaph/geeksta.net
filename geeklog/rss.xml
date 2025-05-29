@@ -7,6 +7,49 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Fixing Dovecot Diffie-Hellman Parameter Error]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/fixing-dovecot-diffie-hellman-parameter-error/]]></link>
+        <description><![CDATA[<p>Learn how to fix Dovecot's Diffie-Hellman key exchange requested SSL error by generating DH parameters with OpenSSL and configuring ssl_dh properly.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/fixing-dovecot-diffie-hellman-parameter-error/]]></guid>
+        <pubDate>Thu, 29 May 2025 12:58:59 </pubDate>
+        <content:encoded><![CDATA[
+        <p>This guide helps you resolve SSL/TLS connection issues in Dovecot IMAP server when Diffie-Hellman parameters are missing. The error prevents secure email client connections and requires generating cryptographic parameters and updating the Dovecot configuration.</p>
+<h2 id="the-error">The Error</h2>
+<p>When you see this in your Dovecot logs:</p>
+<pre><code class="language-text">dovecot: imap-login: Error: Diffie-Hellman key exchange requested, but no DH parameters provided. Set ssl_dh=&lt;/path/to/dh.pem
+</code></pre>
+<p>This means Dovecot needs DH parameters for SSL/TLS connections but can't find the required file.</p>
+<h2 id="solution">Solution</h2>
+<h3 id="1-generate-dh-parameters">1. Generate DH Parameters</h3>
+<pre><code class="language-bash"># 2048-bit (recommended - faster generation, still secure)
+openssl dhparam -out /etc/ssl/certs/dh.pem 2048
+
+# OR 4096-bit (higher security, much slower generation)
+openssl dhparam -out /etc/ssl/certs/dh.pem 4096
+</code></pre>
+<p><strong>Important:</strong> The parameter order matters! The <code>-out</code> option must come before the bit size.</p>
+<p><strong>Note:</strong> Generation takes time, much more much longer for 4096-bit than for 2048-bit. This is normal as it's generating cryptographically secure prime numbers.</p>
+<h3 id="2-configure-dovecot">2. Configure Dovecot</h3>
+<p>Add this line to your Dovecot configuration (usually <code>/etc/dovecot/dovecot.conf</code> or <code>/etc/dovecot/conf.d/10-ssl.conf</code>):</p>
+<pre><code class="language-text">ssl_dh = &lt;/etc/ssl/certs/dh.pem
+</code></pre>
+<h3 id="3-restart-dovecot">3. Restart Dovecot</h3>
+<pre><code class="language-bash">systemctl restart dovecot
+</code></pre>
+<h2 id="key-points">Key Points</h2>
+<ul>
+<li>2048-bit is sufficient for most security requirements and generates much faster</li>
+<li>4096-bit provides higher security but takes significantly longer to generate</li>
+<li>Parameter order is critical in the openssl command</li>
+<li>Long Generation time is normal - the process is doing real cryptographic work</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>The Dovecot DH parameter error is resolved by generating cryptographic parameters with OpenSSL and configuring Dovecot to use them. Choose 2048-bit for faster generation or 4096-bit for enhanced security. After configuration, restart Dovecot to enable secure IMAP connections with proper Diffie-Hellman key exchange.</p>
+<hr>
+<p>Thank you for reading!</p>
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
+    </item>
+    <item>
         <title><![CDATA[How to Search and View mbox Email Archives]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/how-to-search-and-view-mbox-email-archives/]]></link>
         <description><![CDATA[<p>Learn how to efficiently search, navigate, and extract emails from mbox files using mutt and other command-line tools in this comprehensive step-by-step tutorial.</p>]]></description>
@@ -1027,60 +1070,6 @@ phpinfo();
 <h2 id="try-charla-today">Try Charla Today!</h2>
 <p>Charla combines the simplicity of a terminal-based interface with the sophistication of cutting-edge AI models. Whether you're exploring language models for fun or integrating them into your workflow, Charla makes it easy to chat, experiment, and save your progress.</p>
 <p>Ready to dive in? <a href="https://pypi.org/project/charla">Install Charla now</a>, and start chatting with AI in your terminal!</p>
-<hr>
-<p>Thank you for reading!</p>
-<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
-    </item>
-    <item>
-        <title><![CDATA[Introducing Hashtagify: Easy Hashtag Creation for VS Code]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/hashtagify-introduction/]]></link>
-        <description><![CDATA[<p>Simplify your social media content creation with Hashtagify, a VS Code extension that converts text into hashtags effortlessly.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/hashtagify-introduction/]]></guid>
-        <pubDate>Thu, 16 Jan 2025 20:18:08 </pubDate>
-        <content:encoded><![CDATA[
-        <p>Creating engaging content on social media platforms can often feel like shouting into the void. One small, yet mighty weapon in this battle? Hashtags. Not only do they amplify your visibility, but they also help you connect with wider audiences that share the same interests. However, manually creating hashtags from your content can quickly turn into a tedious chore.</p>
-<p>Enter <a href="https://marketplace.visualstudio.com/items?itemName=Geeksta.hashtagify">Hashtagify</a>, an intuitive VS Code extension designed to transform any selected text into hashtags with just a few clicks. If you're a content creator, marketer, or developer who posts on social media frequently, this lightweight extension will save you time and effort</p>
-<h2 id="what-does-hashtagify-do">What Does Hashtagify Do?</h2>
-<p>At its core, Hashtagify provides a clean and intuitive command to automatically convert selected text into hashtags with just a few clicks. Here's how it works:</p>
-<ul>
-<li><strong>Input:</strong> You select some text, such as <code>word one, word two, word three</code>.</li>
-<li><strong>Command:</strong> Run the <code>Hashtagify Word List</code> command.</li>
-<li><strong>Output:</strong> The text is instantly transformed into hashtag-friendly phrases, like <code>#WordOne #WordTwo #WordThree</code>.</li>
-</ul>
-<p>No more capitalization headaches, no more manual typing — just hashtags, delivered cleanly and consistently.</p>
-<h2 id="demo">Demo</h2>
-<p>Check out the quick demo below:</p>
-<p><img alt="Hashtagify in Action" src="https://raw.githubusercontent.com/yaph/hashtagify/refs/heads/main/media/hashtagify-demo.gif" /></p>
-<h2 id="key-features">Key Features</h2>
-<p>Here's what makes this extension worth adding to your workflow:</p>
-<ul>
-<li><strong>Effortless Conversion:</strong> Turn words and phrases into hashtags in seconds.</li>
-<li><strong>Multi-Word Support:</strong> Handles multi-word phrases with ease, applying a clean formatting style using camel case (e.g., <code>Urban Art</code> → <code>#UrbanArt</code>).</li>
-<li><strong>Command Palette Integration:</strong> Leverages the power of the command palette for an intuitive and seamless user experience.</li>
-</ul>
-<p>It's a productivity boost for anyone who needs hashtags as part of their work.</p>
-<h2 id="how-to-use-hashtagify">How to Use Hashtagify</h2>
-<p>Getting started with Hashtagify couldn't be easier. Follow these steps:</p>
-<ol>
-<li><strong>Select your text</strong> — Highlight the string of words you'd like to convert into hashtags (e.g., <code>geo map, urban art</code>).</li>
-<li><strong>Open the Command Palette</strong> — Hit <code>Ctrl + Shift + P</code> (or <code>Cmd + Shift + P</code> on Mac) to bring up VS Code's command palette.</li>
-<li><strong>Run the Command</strong> — Search for and run the <code>Hashtagify Word List</code> command.</li>
-<li><strong>Voilà!</strong> — Your selected text will turn into hashtags (e.g., <code>#GeoMap #UrbanArt</code>) instantly.</li>
-</ol>
-<p>Whether you're preparing text for a social media post, marking up documentation, or crafting tags for your software project, Hashtagify is here to save the day.</p>
-<h2 id="for-developers-make-it-yours">For Developers: Make It Yours</h2>
-<p>Are you looking to improve or customize the extension? Hashtagify is fully open-source and easy to develop on. Here's how to get started:</p>
-<ol>
-<li><strong>Set Up Your Environment</strong>:</li>
-<li>Ensure you have Node.js and Visual Studio Code installed.</li>
-<li><strong>Clone and Install</strong>:</li>
-<li>Clone the repository, then run <code>npm install</code> to set up dependencies.</li>
-<li><strong>Test in Development Mode</strong>:</li>
-<li>Press <code>F5</code> within VS Code to launch a new development environment where you can test your changes.</li>
-</ol>
-<p>Got feature ideas or bug reports? <a href="https://github.com/yaph/hashtagify">Contributions are welcome!</a></p>
-<h2 id="summary">Summary</h2>
-<p>Hashtagify was designed with simplicity and productivity in mind. In just a few seconds, it takes the tedium out of generating hashtags, letting you focus on the work that truly matters. Try it out today and streamline your social media content creation process!</p>
 <hr>
 <p>Thank you for reading!</p>
 <p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>

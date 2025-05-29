@@ -7,6 +7,13 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Fixing Dovecot Diffie-Hellman Parameter Error]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/fixing-dovecot-diffie-hellman-parameter-error/]]></link>
+        <description><![CDATA[<p>Learn how to fix Dovecot's Diffie-Hellman key exchange requested SSL error by generating DH parameters with OpenSSL and configuring ssl_dh properly.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/fixing-dovecot-diffie-hellman-parameter-error/]]></guid>
+        <pubDate>Thu, 29 May 2025 12:58:59 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[How to Search and View mbox Email Archives]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/how-to-search-and-view-mbox-email-archives/]]></link>
         <description><![CDATA[<p>Learn how to efficiently search, navigate, and extract emails from mbox files using mutt and other command-line tools in this comprehensive step-by-step tutorial.</p>]]></description>
@@ -72,12 +79,5 @@ Functional code is classless and...</p><img src="https://geeksta.net/img/large/n
         <description><![CDATA[<p>Learn how to identify your domain's SMTP and IMAP server settings using MX records, naming patterns, and auto-configuration tools.</p>]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/how-to-determine-the-smtp-and-imap-servers-for-a-domain/]]></guid>
         <pubDate>Fri, 07 Feb 2025 00:09:53 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[How to Determine the Email Server (MX Records) for a Domain]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/how-to-determine-the-email-server-for-a-domain/]]></link>
-        <description><![CDATA[<p>Learn how to find the Mail Exchange (MX) records for any domain using tools like nslookup, dig, and online services for troubleshooting email delivery or understanding email server setups.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/how-to-determine-the-email-server-for-a-domain/]]></guid>
-        <pubDate>Thu, 06 Feb 2025 12:44:07 </pubDate>
     </item>
 </channel></rss>
