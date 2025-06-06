@@ -7,6 +7,13 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[LOVE Typography with Grumpy Owl Funny Animal Art]]></title>
+        <link><![CDATA[https://geeksta.net/design/love-grumpy-owl/]]></link>
+        <description><![CDATA[<p>This eye-catching design features the word "LOVE" arranged in a bold square format, with large, smooth red letters forming the corners of a grid. The "O" is humorously replaced by a highly detailed grumpy owl head, complete with ruffled feathers, golden...</p><img src="https://geeksta.net/img/large/love-grumpy-owl.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/love-grumpy-owl/]]></guid>
+        <pubDate>Fri, 06 Jun 2025 00:00:00 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[Server Failover: A Guide for System Administrators]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/server-failover-a-guide-for-system-administrators/]]></link>
         <description><![CDATA[<p>Learn server failover types, when to use automatic vs manual failover, and best practices for sysadmins. Essential guide to minimize downtime and ensure high availability.</p>]]></description>
@@ -72,12 +79,5 @@ Functional code is classless and...</p><img src="https://geeksta.net/img/large/n
         <description><![CDATA[<p>Embrace the spirit of punk rock with this striking design that boldly declares "Punk Rock Forever." The grunge typography captures the essence of the genre, while the monochrome palette enhances its edgy appeal. The integration of a stylized anarchy symbol...</p><img src="https://geeksta.net/img/large/punk-rock-forever-anarchy.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/punk-rock-forever-anarchy/]]></guid>
         <pubDate>Sun, 23 Feb 2025 00:00:00 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Wiki Story: Turn Wikipedia Articles into Captivating Narratives]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/wiki-story-introduction/]]></link>
-        <description><![CDATA[<p>Transform Wikipedia articles into captivating short stories with Wiki Story. Adjust storytelling styles, from factual to imaginative, and make learning enjoyable!</p><img src="/img/tools/wiki-story.png" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/wiki-story-introduction/]]></guid>
-        <pubDate>Wed, 12 Feb 2025 13:25:04 </pubDate>
     </item>
 </channel></rss>
