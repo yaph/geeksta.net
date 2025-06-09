@@ -7,6 +7,13 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Image Prompt Creator: Generate AI Prompts from Images]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/image-prompt-creator-introduction/]]></link>
+        <description><![CDATA[<p>Discover Image Prompt Creator, an AI tool that converts images into structured prompts for use with image generation models, such as Ideogram and Midjourney. Simple, fast, and efficient.</p><img src="/img/geeklog/image-prompt-creator.png" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/image-prompt-creator-introduction/]]></guid>
+        <pubDate>Mon, 09 Jun 2025 21:18:59 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[LOVE Typography with Grumpy Owl Funny Animal Art]]></title>
         <link><![CDATA[https://geeksta.net/design/love-grumpy-owl/]]></link>
         <description><![CDATA[<p>This eye-catching design features the word "LOVE" arranged in a bold square format, with large, smooth red letters forming the corners of a grid. The "O" is humorously replaced by a highly detailed grumpy owl head, complete with ruffled feathers, golden...</p><img src="https://geeksta.net/img/large/love-grumpy-owl.jpg" alt="Preview Image">]]></description>
@@ -72,12 +79,5 @@ A...</p><img src="https://geeksta.net/img/large/smalltalk-1972-yellow.jpg" alt="
 Functional code is classless and...</p><img src="https://geeksta.net/img/large/no-class-no-state-lambda-propaganda-grunge.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/no-class-no-state-lambda-propaganda-grunge/]]></guid>
         <pubDate>Sun, 16 Mar 2025 00:00:00 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Punk Rock Forever Anarchy Symbol Vintage Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/punk-rock-forever-anarchy/]]></link>
-        <description><![CDATA[<p>Embrace the spirit of punk rock with this striking design that boldly declares "Punk Rock Forever." The grunge typography captures the essence of the genre, while the monochrome palette enhances its edgy appeal. The integration of a stylized anarchy symbol...</p><img src="https://geeksta.net/img/large/punk-rock-forever-anarchy.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/punk-rock-forever-anarchy/]]></guid>
-        <pubDate>Sun, 23 Feb 2025 00:00:00 </pubDate>
     </item>
 </channel></rss>
