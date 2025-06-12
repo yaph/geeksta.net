@@ -7,6 +7,13 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Ornate Gorilla Head Tribal Silhouette Design]]></title>
+        <link><![CDATA[https://geeksta.net/design/tribal-art-gorilla/]]></link>
+        <description><![CDATA[<p>This design showcases a gorilla head silhouette filled with a fusion of Polynesian tribal motifs and baroque detailing, creating a unique blend of tradition and elegance. The intense stare and slightly tilted pose convey strength and silent...</p><img src="https://geeksta.net/img/large/tribal-art-gorilla.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/tribal-art-gorilla/]]></guid>
+        <pubDate>Thu, 12 Jun 2025 00:00:00 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[Minimalist Shark Word Art Design for Marine Life Lovers]]></title>
         <link><![CDATA[https://geeksta.net/design/word-art-shark-white/]]></link>
         <description><![CDATA[<p>This minimalist shark design features a graceful side-profile silhouette filled with the bold word SHARK shaped to flow with the animal's form. It captures attention with strong contrast and sleek typography.
@@ -76,12 +83,5 @@ Great for ocean enthusiasts, lovers of sea...</p><img src="https://geeksta.net/i
         <description><![CDATA[<p>Learn how to efficiently search, navigate, and extract emails from mbox files using mutt and other command-line tools in this comprehensive step-by-step tutorial.</p>]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/how-to-search-and-view-mbox-email-archives/]]></guid>
         <pubDate>Tue, 20 May 2025 12:28:26 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Troubleshooting Database Load Issues on Debian Linux: A Practical Guide]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/troubleshooting-database-load-issues-on-debian-linux/]]></link>
-        <description><![CDATA[<p>Learn practical steps to diagnose and resolve high database load issues on Debian Linux servers. This guide covers essential monitoring tools, query optimization techniques, and proactive measures to keep your databases running smoothly.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/troubleshooting-database-load-issues-on-debian-linux/]]></guid>
-        <pubDate>Thu, 03 Apr 2025 19:22:07 </pubDate>
     </item>
 </channel></rss>
