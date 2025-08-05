@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc><![CDATA[https://geeksta.net/geeklog/the-pros-and-cons-of-cron-jobs/]]></loc><lastmod>2025-08-05</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/word-art-fierce-tiger-black/]]></loc><lastmod>2025-07-31</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/word-art-fierce-tiger-white/]]></loc><lastmod>2025-07-31</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/word-art-tiger-black/]]></loc><lastmod>2025-07-31</lastmod></url>
@@ -23,7 +24,7 @@
 <url><loc><![CDATA[https://geeksta.net/design/no-class-no-state-lambda-propaganda-grunge/]]></loc><lastmod>2025-07-31</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/punk-rock-forever-anarchy/]]></loc><lastmod>2025-07-31</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/wiki-story-introduction/]]></loc><lastmod>2025-02-12</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/geeklog/how-to-determine-the-smtp-and-imap-servers-for-a-domain/]]></loc><lastmod>2025-05-22</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/how-to-determine-the-smtp-and-imap-servers-for-a-domain/]]></loc><lastmod>2025-08-05</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/how-to-determine-the-email-server-for-a-domain/]]></loc><lastmod>2025-05-22</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/tools/tts-samples/]]></loc><lastmod>2025-02-10</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/how-to-set-max-input-vars-in-php/]]></loc><lastmod>2025-05-22</lastmod></url>
@@ -822,7 +823,7 @@
 <url><loc><![CDATA[https://geeksta.net/design/best-coder-ever-black/]]></loc><lastmod>2025-07-31</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/visualizations/everything-is-4-graphed/]]></loc><lastmod>2023-06-13</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/python-shared-hosting/]]></loc><lastmod>2024-09-12</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/gifts/programmers-day/]]></loc><lastmod>2023-06-13</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/gifts/programmers-day/]]></loc><lastmod>2025-08-05</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/tools/magic-numbers-shirt-generator/]]></loc><lastmod>2023-05-03</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/custom-matplotlib-styles/]]></loc><lastmod>2024-09-12</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/visualizations/cities-millionaire-density/]]></loc><lastmod>2023-06-13</lastmod></url>
