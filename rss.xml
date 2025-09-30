@@ -7,6 +7,13 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Setting Up Google Drive Backups on Ubuntu with rclone]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/setting-up-google-drive-backups-on-ubuntu-with-rclone/]]></link>
+        <description><![CDATA[<p>Learn how to set up automated backups from Ubuntu Linux to Google Drive using rclone, including OAuth setup, backup scripts, and scheduling with cron.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/setting-up-google-drive-backups-on-ubuntu-with-rclone/]]></guid>
+        <pubDate>Tue, 30 Sep 2025 13:55:47 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[Protecting Your Email Server: SASL Authentication and fail2ban Defense]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/protecting-your-email-server/]]></link>
         <description><![CDATA[<p>Learn how to protect your email server from brute force attacks using SASL authentication and fail2ban. Complete guide with setup instructions and best practices.</p>]]></description>
@@ -70,12 +77,5 @@
 Ideal...</p><img src="https://geeksta.net/img/large/tattoo-art-ram.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/tattoo-art-ram/]]></guid>
         <pubDate>Fri, 13 Jun 2025 00:00:00 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Ornate Gorilla Head Tribal Silhouette Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/tribal-art-gorilla/]]></link>
-        <description><![CDATA[<p>This design showcases a gorilla head silhouette filled with a fusion of Polynesian tribal motifs and baroque detailing, creating a unique blend of tradition and elegance. The intense stare and slightly tilted pose convey strength and silent...</p><img src="https://geeksta.net/img/large/tribal-art-gorilla.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/tribal-art-gorilla/]]></guid>
-        <pubDate>Thu, 12 Jun 2025 00:00:00 </pubDate>
     </item>
 </channel></rss>

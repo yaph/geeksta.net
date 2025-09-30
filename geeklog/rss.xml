@@ -7,6 +7,200 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Setting Up Google Drive Backups on Ubuntu with rclone]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/setting-up-google-drive-backups-on-ubuntu-with-rclone/]]></link>
+        <description><![CDATA[<p>Learn how to set up automated backups from Ubuntu Linux to Google Drive using rclone, including OAuth setup, backup scripts, and scheduling with cron.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/setting-up-google-drive-backups-on-ubuntu-with-rclone/]]></guid>
+        <pubDate>Tue, 30 Sep 2025 13:55:47 </pubDate>
+        <content:encoded><![CDATA[
+        <p>This tutorial will show you how to set up automated backups from Ubuntu Linux to Google Drive using rclone. You'll need Ubuntu Linux, a Google account with Google Drive, and terminal access with sudo privileges.</p>
+<h2 id="installing-rclone">Installing rclone</h2>
+<p>If you haven't already installed rclone, open a terminal and run the following commands. The first updates your package list, and the second installs rclone from the Ubuntu repositories.</p>
+<pre><code class="language-bash">sudo apt update
+sudo apt install rclone
+</code></pre>
+<p>You can verify the installation by checking the version number with <code>rclone version</code>.</p>
+<h2 id="why-you-need-your-own-google-oauth-application">Why You Need Your Own Google OAuth Application</h2>
+<p>Google has restricted access to unverified third-party applications, which means rclone's default OAuth credentials no longer work for new users. When you try to authenticate with the default credentials, Google blocks access with an "Access blocked" error stating that rclone hasn't completed Google's verification process.</p>
+<p>The solution is to create your own OAuth application in the Google Cloud Console. This gives you a private OAuth app that Google won't block, since you're authorizing your own application to access your own Google Drive. This is a one-time setup that takes about 10 minutes.</p>
+<h2 id="creating-your-google-oauth-application">Creating Your Google OAuth Application</h2>
+<p>Start by going to the Google Cloud Console at <a href="https://console.cloud.google.com/">console.cloud.google.com</a> and signing in with your Google account. You'll need to create a new project for this application.</p>
+<h3 id="setting-up-the-project">Setting Up the Project</h3>
+<p>Click the project dropdown at the top of the page and select "New Project". Give your project a name like "rclone-backup" and click Create. Wait a moment for Google to create the project, then make sure it's selected in the project dropdown.</p>
+<h3 id="enabling-the-google-drive-api">Enabling the Google Drive API</h3>
+<p>From the left sidebar, navigate to "APIs &amp; Services" and then "Library". Use the search box to find "Google Drive API". Click on it and press the Enable button. This allows your OAuth application to access Google Drive.</p>
+<h3 id="configuring-the-oauth-consent-screen">Configuring the OAuth Consent Screen</h3>
+<p>Before you can create OAuth credentials, you need to configure the consent screen. This is what users see when they authorize the application. Go to "APIs &amp; Services" and then "OAuth consent screen".</p>
+<p>Choose "External" as the user type and click Continue. You'll need to fill in some basic information about your application. For the app name, use something like "My rclone Backup". Enter your email address for both the user support email and developer contact information.</p>
+<p>Click "Save and Continue" to move to the Scopes page. Click "Add or Remove Scopes" and search for the Google Drive scope. You need to add the scope <code>https://www.googleapis.com/auth/drive</code> which gives full access to Google Drive. Select it, click Update, and then "Save and Continue".</p>
+<p>On the Test users page, click "Add Users" and enter your Google email address. This allows you to use the application while it's in testing mode. Click Add, then "Save and Continue". You can review your settings and then click "Back to Dashboard".</p>
+<h3 id="creating-oauth-credentials">Creating OAuth Credentials</h3>
+<p>Now you can create the actual credentials. Go to "APIs &amp; Services" and then "Credentials". Click "Create Credentials" and choose "OAuth client ID".</p>
+<p>For the application type, select "Desktop application". Give it a name like "rclone desktop client" and click "Create". A popup will appear showing your Client ID and Client Secret. Copy both of these values somewhere safe, or click "Download JSON" to save them. You'll need these in the next step.</p>
+<h2 id="configuring-rclone">Configuring rclone</h2>
+<p>Open your terminal and run <code>rclone config</code>. This starts the interactive configuration process.</p>
+<p>Type <code>n</code> to create a new remote and press Enter. Give it a name like <code>gdrive</code>. For the storage type, type <code>drive</code> or find the number corresponding to Google Drive in the list and enter that number.</p>
+<p>When prompted for client_id, paste the "Client ID" you copied from the Google Cloud Console. Press Enter, then paste your "Client Secret" when prompted. These custom credentials will allow you to bypass Google's access restrictions.</p>
+<p>For the scope, choose option 1 for full access to all files. This gives rclone the ability to read and write any files in your Google Drive. Leave the <code>root_folder_id</code> blank by pressing Enter. Also leave <code>service_account_file</code> blank by pressing Enter.</p>
+<p>When asked about advanced config, type <code>n</code> for no. When asked "Use auto config?", type <code>y</code> for yes. This will open a browser window where you'll log in to your Google account and grant permission to your OAuth application. You should see your application name and a prompt asking you to allow access to your Google Drive.</p>
+<p>After granting permission, return to the terminal. When asked about configuring as a team drive, type <code>n</code> for no unless you're using Google Workspace shared drives. Confirm the configuration looks correct by typing <code>y</code>, then type <code>q</code> to quit the configuration tool.</p>
+<h3 id="testing-your-connection">Testing Your Connection</h3>
+<p>Before proceeding, verify that rclone can connect to your Google Drive by running <code>rclone lsd gdrive:</code>. This command lists the directories in your Google Drive. If you see your folders listed, the setup was successful.</p>
+<h2 id="understanding-backup-methods">Understanding Backup Methods</h2>
+<p>Rclone offers several commands for transferring files, and it's important to understand the differences before creating your backup script.</p>
+<p>The <code>sync</code> command makes the destination identical to the source. This means it will copy new and modified files to the destination, and it will also delete files from the destination that no longer exist in the source. This is ideal for maintaining an exact backup where you want the cloud to mirror your local files.</p>
+<p>The <code>copy</code> command only copies files from source to destination. It never deletes anything from the destination, even if files are removed from the source. This is useful if you want to keep historical versions of files in the cloud.</p>
+<p>The <code>bisync</code> command performs bidirectional synchronization, keeping both locations in sync. Changes made on either side are propagated to the other. This is more complex and requires careful use to avoid conflicts.</p>
+<p>For most backup scenarios, <code>sync</code> is the best choice because it maintains an exact copy of your current files in the cloud.</p>
+<h2 id="creating-a-backup-script">Creating a Backup Script</h2>
+<p>It's useful to create a script that handles your backups automatically. First, create a directory to store your scripts by running <code>mkdir -p ~/scripts</code>.</p>
+<p>Create a new file for your backup script with <code>vim ~/scripts/backup-to-gdrive.sh</code>. Here's a basic backup script that you can customize for your needs:</p>
+<pre><code class="language-bash">#!/bin/bash
+
+# Configuration
+SOURCE_DIR=&quot;/home/$USER/Documents&quot;
+BACKUP_NAME=&quot;DocumentsBackup&quot;
+REMOTE_NAME=&quot;gdrive&quot;
+REMOTE_DIR=&quot;Backups/$BACKUP_NAME&quot;
+LOG_FILE=&quot;/home/$USER/logs/rclone-backup.log&quot;
+DATE=$(date '+%Y-%m-%d %H:%M:%S')
+
+# Create log directory if it doesn't exist
+mkdir -p &quot;$(dirname &quot;$LOG_FILE&quot;)&quot;
+
+# Log start
+echo &quot;[$DATE] Starting backup of $SOURCE_DIR to $REMOTE_NAME:$REMOTE_DIR&quot; &gt;&gt; &quot;$LOG_FILE&quot;
+
+# Run rclone sync
+rclone sync &quot;$SOURCE_DIR&quot; &quot;$REMOTE_NAME:$REMOTE_DIR&quot; \
+    --progress \
+    --log-file=&quot;$LOG_FILE&quot; \
+    --log-level INFO \
+    --exclude &quot;.Trash-*/**&quot; \
+    --exclude &quot;.cache/**&quot; \
+    --exclude &quot;*.tmp&quot;
+
+# Check if backup was successful
+if [ $? -eq 0 ]; then
+    echo &quot;[$DATE] Backup completed successfully&quot; &gt;&gt; &quot;$LOG_FILE&quot;
+else
+    echo &quot;[$DATE] Backup failed with errors&quot; &gt;&gt; &quot;$LOG_FILE&quot;
+fi
+</code></pre>
+<p>This script sets up some basic configuration variables at the top, creates a log directory if needed, and runs the sync command with logging enabled. It excludes common temporary files and cache directories that don't need to be backed up. After the sync completes, it checks whether the operation succeeded and logs the result.</p>
+<p>Make the script executable by running <code>chmod +x ~/scripts/backup-to-gdrive.sh</code>. You can now run your backup anytime by executing <code>~/scripts/backup-to-gdrive.sh</code>.</p>
+<h2 id="backing-up-multiple-directories">Backing Up Multiple Directories</h2>
+<p>If you want to backup multiple directories, you can extend your script to handle them all. Here's an example that backs up Documents, Pictures, and configuration files:</p>
+<pre><code class="language-bash">#!/bin/bash
+
+REMOTE_NAME=&quot;gdrive&quot;
+LOG_FILE=&quot;/home/$USER/logs/rclone-backup.log&quot;
+DATE=$(date '+%Y-%m-%d %H:%M:%S')
+
+mkdir -p &quot;$(dirname &quot;$LOG_FILE&quot;)&quot;
+echo &quot;[$DATE] Starting backups&quot; &gt;&gt; &quot;$LOG_FILE&quot;
+
+# Backup Documents
+rclone sync /home/$USER/Documents &quot;$REMOTE_NAME:Backups/Documents&quot; \
+    --log-file=&quot;$LOG_FILE&quot; --log-level INFO
+
+# Backup Pictures
+rclone sync /home/$USER/Pictures &quot;$REMOTE_NAME:Backups/Pictures&quot; \
+    --log-file=&quot;$LOG_FILE&quot; --log-level INFO
+
+# Backup important config files
+rclone sync /home/$USER/.config &quot;$REMOTE_NAME:Backups/config&quot; \
+    --log-file=&quot;$LOG_FILE&quot; --log-level INFO \
+    --exclude &quot;*/Cache/**&quot; \
+    --exclude &quot;*/cache/**&quot;
+
+echo &quot;[$DATE] All backups completed&quot; &gt;&gt; &quot;$LOG_FILE&quot;
+</code></pre>
+<p>Each directory is synced to a separate folder in your Google Drive under the Backups directory. This keeps your backups organized and makes it easier to restore specific types of files later.</p>
+<h2 id="automating-backups-with-cron">Automating Backups with Cron</h2>
+<p>To run your backups automatically on a schedule, you can use the cron task scheduler. Edit your cron table by running <code>crontab -e</code>. If this is your first time using crontab, you'll be asked to choose an editor.</p>
+<p>Add a line to schedule your backup. The format is five time fields followed by the command to run. Here are some common schedules:</p>
+<pre><code class="language-bash"># Daily at 2 AM
+0 2 * * * /home/yourusername/scripts/backup-to-gdrive.sh
+
+# Every 6 hours
+0 */6 * * * /home/yourusername/scripts/backup-to-gdrive.sh
+
+# Every day at 3:30 PM
+30 15 * * * /home/yourusername/scripts/backup-to-gdrive.sh
+</code></pre>
+<p>Replace <code>yourusername</code> with your actual Ubuntu username. Save the file and exit the editor. Cron will now run your backup script on the schedule you specified.</p>
+<h2 id="testing-before-running-real-backups">Testing Before Running Real Backups</h2>
+<p>Before setting up automated backups, it's wise to test what rclone will do without actually transferring any files. The <code>--dry-run</code> flag shows you exactly what would be copied, modified, or deleted without making any changes.</p>
+<p>Run your script with a dry run by adding the flag to the rclone command temporarily, or run rclone directly from the command line like this:</p>
+<pre><code class="language-bash">rclone sync /home/$USER/Documents gdrive:Backups/Documents --dry-run --verbose
+</code></pre>
+<p>This will output a detailed list of actions that would be taken. Review this carefully to make sure it's doing what you expect. Pay special attention to any files that would be deleted.</p>
+<h2 id="useful-rclone-commands">Useful rclone Commands</h2>
+<p>There are several rclone commands that are helpful for managing your backups. To list files in your Google Drive, use <code>rclone ls gdrive:</code> for all files or <code>rclone lsd gdrive:</code> for just directories.</p>
+<p>To check how much storage you're using, run <code>rclone about gdrive:</code>. This shows your total storage, used space, and free space in Google Drive.</p>
+<p>If you need to restore files from Google Drive back to your local system, you can reverse the sync direction:</p>
+<pre><code class="language-bash">rclone sync gdrive:Backups/Documents /home/$USER/Documents-Restored
+</code></pre>
+<p>Be very careful with this command. Using sync in the restore direction will make your local directory match the cloud, which means it could delete local files that aren't in the cloud backup.</p>
+<p>To compare your local files with your cloud backup without transferring anything, use the check command:</p>
+<pre><code class="language-bash">rclone check /home/$USER/Documents gdrive:Backups/Documents
+</code></pre>
+<p>This reports any differences between the two locations without modifying either one.</p>
+<h2 id="filtering-files">Filtering Files</h2>
+<p>You often don't want to backup everything. Rclone provides powerful filtering options that you can add to your sync commands.</p>
+<p>To exclude specific patterns, use the <code>--exclude</code> flag. For example, <code>--exclude "*.tmp"</code> skips all files ending in .tmp. You can use <code>--exclude ".git/**"</code> to skip git repositories, or <code>--exclude "node_modules/**"</code> to skip Node.js dependencies.</p>
+<p>If you only want to backup specific file types, use <code>--include</code> instead. For example, <code>--include "*.jpg"</code> combined with <code>--include "*.png"</code> will only backup image files. Note that when using include filters, you typically need to also add <code>--exclude "*"</code> at the end to exclude everything that wasn't explicitly included.</p>
+<p>You can also filter by file size or age. The flag <code>--min-size 1M</code> only transfers files larger than 1 megabyte, while <code>--max-age 30d</code> only transfers files modified in the last 30 days.</p>
+<h2 id="optimizing-transfer-performance">Optimizing Transfer Performance</h2>
+<p>By default, rclone transfers files one at a time. For better performance with many small files, you can increase the number of parallel transfers with <code>--transfers 4</code>. This uploads four files simultaneously.</p>
+<p>The <code>--checkers 8</code> flag increases the number of files rclone checks simultaneously when determining what needs to be transferred. This can significantly speed up the initial scanning phase.</p>
+<p>If you're backing up large files, increasing the buffer size with <code>--buffer-size 16M</code> can improve transfer speeds by reducing the number of round trips to Google Drive.</p>
+<p>If backups are consuming too much bandwidth and affecting your other internet usage, you can limit the transfer rate with <code>--bwlimit 10M</code> to restrict uploads to 10 megabytes per second.</p>
+<h2 id="monitoring-your-backups">Monitoring Your Backups</h2>
+<p>It's important to verify that your backups are running successfully. You can check the log file directly with <code>tail -f /home/$USER/logs/rclone-backup.log</code> to watch backups in real-time as they run.</p>
+<p>To see the most recent backup events, use <code>tail -n 20 /home/$USER/logs/rclone-backup.log | grep "Backup"</code> which shows the last 20 lines containing the word "Backup".</p>
+<p>Create a simple monitoring script at <code>~/scripts/check-backup-status.sh</code>:</p>
+<pre><code class="language-bash">#!/bin/bash
+
+LOG_FILE=&quot;/home/$USER/logs/rclone-backup.log&quot;
+
+echo &quot;=== Recent Backup Events ===&quot;
+tail -n 20 &quot;$LOG_FILE&quot; | grep &quot;Backup&quot;
+
+echo &quot;&quot;
+echo &quot;=== Google Drive Storage Usage ===&quot;
+rclone about gdrive:
+
+echo &quot;&quot;
+echo &quot;=== Recently Backed Up Files ===&quot;
+rclone ls gdrive:Backups --max-depth 2 | tail -n 10
+</code></pre>
+<p>Make it executable with <code>chmod +x ~/scripts/check-backup-status.sh</code>. Run this script occasionally to verify your backups are working correctly.</p>
+<h2 id="troubleshooting-common-issues">Troubleshooting Common Issues</h2>
+<p>If you get an error about failing to create a file system, first check your rclone configuration with <code>rclone config show gdrive</code>. Make sure your <code>client_id</code> and <code>client_secret</code> are present. If they're missing or incorrect, run <code>rclone config</code> again to reconfigure the remote.</p>
+<p>Slow transfer speeds can have several causes. Your internet connection might be the bottleneck, especially for large files. Try adding <code>--transfers 4</code> and <code>--checkers 8</code> to speed things up. If uploads are interfering with other network activities, use <code>--bwlimit</code> to limit the bandwidth rclone uses.</p>
+<p>If files aren't syncing as expected, run the command with <code>--dry-run</code> and <code>--verbose</code> to see what rclone plans to do. Check that your exclude patterns aren't inadvertently blocking files you want to backup. Verify that you have read permission on the files you're trying to backup.</p>
+<p>If rclone seems to hang or stop responding, it might be waiting for network operations to complete. The <code>--timeout 30s</code> flag sets a timeout for individual operations. The <code>--contimeout 60s</code> flag sets a timeout for initial connections.</p>
+<h2 id="security-considerations">Security Considerations</h2>
+<p>Your OAuth credentials provide access only to your own Google Drive account. The credentials are stored in <code>~/.config/rclone/rclone.conf</code> with permissions set to 600, meaning only your user account can read the file.</p>
+<p>Keep your rclone.conf file secure. Don't share it with others or commit it to version control systems. If you ever need to revoke access, you can do so from your Google account settings under Security, then "Third-party apps with account access".</p>
+<p>The <code>client_id</code> and <code>client_secret</code> from your OAuth application are not as sensitive as the tokens in <code>rclone.conf</code>, but you should still keep them private. Anyone with these credentials could create their own rclone configuration to access their own Google Drive using your OAuth application.</p>
+<p>If you're concerned about data privacy, remember that rclone transfers your files to Google's servers where they're stored according to Google's privacy policy. The files are encrypted in transit using HTTPS, but they're stored in Google Drive in a form that Google can technically access.</p>
+<h2 id="maintaining-your-backup-system">Maintaining Your Backup System</h2>
+<p>Once your backup system is running, check it periodically to ensure it's working correctly. Look at your log files every few weeks to verify backups are completing successfully. Log in to Google Drive occasionally and spot-check that your files are actually there.</p>
+<p>Monitor your Google Drive storage space. If you're running low, you may need to clean up old files, purchase more storage, or adjust what you're backing up. You can check your storage usage with <code>rclone about gdrive:</code>.</p>
+<p>Keep rclone updated to get bug fixes and new features. Ubuntu's package manager will handle this when you run system updates, but you can also install the latest version directly from rclone.org if you need newer features.</p>
+<p>As your needs change, update your backup script. You might want to backup additional directories, change your exclude patterns, or adjust the backup schedule. Remember to test changes with <code>--dry-run</code> before running them for real.</p>
+<p>Consider testing your restore process occasionally. The best backup system in the world is useless if you can't actually restore your files when you need them. Try restoring a few files to a temporary directory to verify the process works.</p>
+<p>For more information and advanced features, consult the official rclone documentation at rclone.org.</p>
+<h2 id="summary">Summary</h2>
+<p>This guide walked you through setting up automated backups from Ubuntu to Google Drive using rclone. You created your own Google OAuth application to bypass access restrictions, configured rclone to connect to your Google Drive, and built a backup script that can run automatically on a schedule. You learned about different sync methods, how to filter files, optimize transfers, and monitor your backups. With this system in place, your important files are regularly backed up to the cloud, protecting you against data loss from hardware failure, accidents, or other disasters. Remember to check your backups periodically and test the restore process to ensure everything works when you need it.</p>
+<hr>
+<p>Thank you for reading!</p>
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
+    </item>
+    <item>
         <title><![CDATA[Protecting Your Email Server: SASL Authentication and fail2ban Defense]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/protecting-your-email-server/]]></link>
         <description><![CDATA[<p>Learn how to protect your email server from brute force attacks using SASL authentication and fail2ban. Complete guide with setup instructions and best practices.</p>]]></description>
@@ -945,235 +1139,6 @@ named-checkzone -v example.com /path/to/zonefile
 </ol>
 <h2 id="conclusion">Conclusion</h2>
 <p>Taking the time to properly validate DNS zone files might seem tedious, but it's a crucial step in maintaining a reliable online presence. By catching errors before they propagate, you can avoid downtime and maintain trust with your users. Whether you're managing a personal blog or enterprise infrastructure, proper DNS hygiene is essential for a smooth-running internet presence.</p>
-<hr>
-<p>Thank you for reading!</p>
-<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
-    </item>
-    <item>
-        <title><![CDATA[How to Use SD Cards for Backups on Linux]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/how-to-use-sd-cards-for-backups-on-linux/]]></link>
-        <description><![CDATA[<p>A detailed guide on using SD cards for data backup on Linux. Learn formatting, mounting, and automating backups to ensure your files are safe and accessible.</p><img src="/img/geeklog/geeklog-sd-cards.webp" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/how-to-use-sd-cards-for-backups-on-linux/]]></guid>
-        <pubDate>Tue, 18 Mar 2025 13:46:51 </pubDate>
-        <content:encoded><![CDATA[
-        <p>SD cards have come a long way from being simple storage for digital cameras. With capacities now reaching multiple terabytes, they present an attractive, portable backup solution. However, Linux users often encounter frustrating issues when attempting to leverage these pocket-sized storage powerhouses for serious backup purposes.</p>
-<p>In this guide, we'll explore how to properly configure, verify, and utilize SD cards for reliable backups on Linux systems, avoiding common pitfalls that can lead to data loss and corruption.</p>
-<h2 id="choosing-the-right-hardware">Choosing the Right Hardware</h2>
-<h3 id="sd-card-selection">SD Card Selection</h3>
-<p>Not all SD cards are created equal. When selecting a card for backup purposes, consider:</p>
-<ul>
-<li><strong>Capacity vs. Authenticity</strong>: That suspiciously cheap 1TB card might actually be a 32GB card hacked to report a larger size. When the card's real capacity is exceeded, data corruption occurs.</li>
-<li><strong>Speed Classification</strong>: Look for UHS-I or UHS-II cards with higher speed ratings (V30, V60, V90) for backup operations.</li>
-<li><strong>Endurance Rating</strong>: Cards designed for surveillance cameras or dashcams often have better write endurance, making them suitable for frequent backups.</li>
-<li><strong>Brand Reliability</strong>: Stick with reputable brands like SanDisk, Samsung, Kingston, or Lexar from authorized retailers.</li>
-</ul>
-<h3 id="card-readers-matter">Card Readers Matter</h3>
-<p>A quality card reader can make the difference between successful backups and corrupted data:</p>
-<ul>
-<li>USB 3.0 or higher connectivity offers faster transfer speeds</li>
-<li>Standalone powered readers provide more stable power than built-in laptop readers</li>
-<li>Multi-card readers with dedicated SD slots often perform better than all-in-one solutions</li>
-</ul>
-<h2 id="verifying-your-sd-cards-authenticity">Verifying Your SD Card's Authenticity</h2>
-<p>Before trusting your precious data to an SD card, verify its authenticity. The excellent open-source tool F3 (Fight Flash Fraud) makes this process straightforward:</p>
-<pre><code class="language-bash"># Install F3
-sudo apt install f3    # Debian/Ubuntu
-sudo dnf install f3    # Fedora/RHEL
-sudo pacman -S f3      # Arch Linux
-
-# Write test files to fill the card
-f3write /path/to/mounted/sdcard
-
-# Verify the written data
-f3read /path/to/mounted/sdcard
-</code></pre>
-<p>A genuine card will show consistent read/write speeds and verified capacity matching the advertised size. Counterfeit cards will report errors once the actual capacity is exceeded.</p>
-<h2 id="choosing-the-optimal-filesystem">Choosing the Optimal Filesystem</h2>
-<p>Your filesystem choice dramatically impacts backup reliability, especially with large-capacity cards:</p>
-<h3 id="ext4-the-linux-native-option">ext4: The Linux Native Option</h3>
-<pre><code class="language-bash">sudo mkfs.ext4 /dev/sdX
-</code></pre>
-<p><strong>Pros:</strong></p>
-<ul>
-<li>Journaling prevents corruption during unexpected disconnects</li>
-<li>Excellent handling of many small files</li>
-<li>Best performance on Linux systems</li>
-</ul>
-<p><strong>Cons:</strong></p>
-<ul>
-<li>Limited compatibility with other operating systems</li>
-<li>Requires additional software for Windows/macOS access</li>
-</ul>
-<h3 id="ntfs-the-windows-friendly-option">NTFS: The Windows-Friendly Option</h3>
-<pre><code class="language-bash">sudo mkfs.ntfs -f /dev/sdX  # -f performs a quick format
-</code></pre>
-<p><strong>Pros:</strong></p>
-<ul>
-<li>Good cross-platform compatibility</li>
-<li>Handles large files and large volumes well</li>
-<li>No practical file size limitations</li>
-</ul>
-<p><strong>Cons:</strong></p>
-<ul>
-<li>Write performance can be slower on Linux systems</li>
-<li>Requires NTFS-3G drivers on Linux</li>
-</ul>
-<h3 id="exfat-the-modern-cross-platform-solution">exFAT: The Modern Cross-Platform Solution</h3>
-<pre><code class="language-bash"># Install exFAT tools
-sudo apt install exfatprogs    # Ubuntu/Debian
-sudo dnf install exfatprogs    # Fedora/RHEL
-
-# Format the card
-sudo mkfs.exfat /dev/sdX
-</code></pre>
-<p><strong>Pros:</strong></p>
-<ul>
-<li>Designed specifically for flash media</li>
-<li>Excellent cross-platform compatibility</li>
-<li>Handles large files and volumes efficiently</li>
-<li>Better than FAT32 for many small files</li>
-</ul>
-<p><strong>Cons:</strong></p>
-<ul>
-<li>Less robust than ext4 (no journaling)</li>
-<li>Requires additional packages on some Linux distributions</li>
-</ul>
-<h3 id="fat32-the-legacy-option-not-recommended-for-backups">FAT32: The Legacy Option (Not Recommended for Backups)</h3>
-<pre><code class="language-bash">sudo mkfs.vfat -F 32 -s 8 -S 4096 /dev/sdX
-</code></pre>
-<p><strong>Pros:</strong></p>
-<ul>
-<li>Universal compatibility</li>
-<li>Simple structure</li>
-</ul>
-<p><strong>Cons:</strong></p>
-<ul>
-<li>4GB file size limitation</li>
-<li>Poor handling of many small files</li>
-<li>Prone to corruption with large volumes</li>
-<li>Not recommended for backup purposes on cards larger than 32GB</li>
-</ul>
-<h2 id="creating-backups-with-rsync">Creating Backups with rsync</h2>
-<p>The <code>rsync</code> utility is the Swiss Army knife of Linux backups. Here's how to leverage it effectively for SD card backups:</p>
-<h3 id="basic-backup-command">Basic Backup Command</h3>
-<pre><code class="language-bash">rsync -av --progress /source/directory/ /path/to/sdcard/
-</code></pre>
-<p>The trailing slashes are important! They tell rsync to copy the contents of the source directory rather than the directory itself.</p>
-<h3 id="enhanced-integrity-checking">Enhanced Integrity Checking</h3>
-<pre><code class="language-bash">rsync -av --progress --checksum /source/directory/ /path/to/sdcard/
-</code></pre>
-<p>The <code>--checksum</code> option verifies file integrity by comparing file contents rather than just timestamps and sizes. This is slower but catches corruption issues that might otherwise go unnoticed.</p>
-<h3 id="dealing-with-problematic-transfers">Dealing with Problematic Transfers</h3>
-<pre><code class="language-bash">rsync -av --progress --inplace --no-whole-file --modify-window=1 /source/directory/ /path/to/sdcard/
-</code></pre>
-<p>This command is particularly useful for troublesome SD cards:</p>
-<ul>
-<li><code>--inplace</code> updates files directly rather than creating temporary copies</li>
-<li><code>--no-whole-file</code> transfers changed parts of files only</li>
-<li><code>--modify-window=1</code> allows for slight timestamp differences</li>
-</ul>
-<h2 id="automating-your-backups">Automating Your Backups</h2>
-<p>Create a simple backup script:</p>
-<pre><code class="language-bash">#!/bin/bash
-# SD card backup script with verification and notification
-
-SOURCE=&quot;/path/to/data&quot;
-DEST=&quot;/path/to/mounted/sdcard/backup&quot;
-LOG=&quot;/home/user/backup_logs/backup_$(date +%Y%m%d_%H%M%S).log&quot;
-mkdir -p &quot;$(dirname &quot;$LOG&quot;)&quot;
-
-# Ensure SD card is accessible
-if ! [ -d &quot;$DEST&quot; ]; then
-    echo &quot;Error: Backup destination not accessible!&quot; | tee &quot;$LOG&quot;
-    exit 1
-fi
-
-# Check available space
-SOURCE_SIZE=$(du -sb &quot;$SOURCE&quot; | cut -f1)
-DEST_AVAIL=$(df -P &quot;$DEST&quot; | awk 'NR==2 {print $4 * 1024}')
-
-if [ &quot;$SOURCE_SIZE&quot; -gt &quot;$DEST_AVAIL&quot; ]; then
-    echo &quot;Error: Insufficient space on backup device!&quot; | tee -a &quot;$LOG&quot;
-    exit 2
-fi
-
-# Perform backup with detailed logging
-echo &quot;Backup started at $(date)&quot; | tee -a &quot;$LOG&quot;
-rsync -avh --progress --checksum --stats &quot;$SOURCE/&quot; &quot;$DEST/&quot; 2&gt;&amp;1 | tee -a &quot;$LOG&quot;
-
-# Verify successful completion
-if [ ${PIPESTATUS[0]} -eq 0 ]; then
-    echo &quot;Backup completed successfully at $(date)&quot; | tee -a &quot;$LOG&quot;
-
-    # Optional: Send notification
-    # notify-send &quot;Backup Successful&quot; &quot;Data has been backed up to SD card&quot;
-else
-    echo &quot;Backup failed with error at $(date)&quot; | tee -a &quot;$LOG&quot;
-
-    # Optional: Send notification
-    # notify-send -u critical &quot;Backup Failed&quot; &quot;SD card backup encountered errors&quot;
-fi
-</code></pre>
-<p>Make it executable with <code>chmod +x backup_script.sh</code> and schedule with cron if needed.</p>
-<h2 id="troubleshooting-common-issues">Troubleshooting Common Issues</h2>
-<h3 id="filesystem-errors-during-backup">Filesystem Errors During Backup</h3>
-<p><strong>Symptoms:</strong> rsync crashes, input/output errors, sudden disconnections
-<strong>Common Causes:</strong></p>
-<ul>
-<li>FAT32 limitations with many files or large volumes</li>
-<li>Counterfeit card exceeding actual capacity</li>
-<li>Card controller issues</li>
-</ul>
-<p><strong>Solutions:</strong></p>
-<ul>
-<li>Use ext4 or exFAT filesystem instead of FAT32</li>
-<li>Verify card authenticity with F3</li>
-<li>Try a different card reader</li>
-<li>Break backups into smaller batches</li>
-</ul>
-<h3 id="slow-transfer-speeds">Slow Transfer Speeds</h3>
-<p><strong>Symptoms:</strong> Backup takes excessively long time
-<strong>Common Causes:</strong></p>
-<ul>
-<li>Low-quality card with poor write performance</li>
-<li>Suboptimal card reader</li>
-<li>USB bus limitations</li>
-</ul>
-<p><strong>Solutions:</strong></p>
-<ul>
-<li>Use a card with higher speed rating (V30+)</li>
-<li>Use a dedicated USB 3.0+ card reader</li>
-<li>Ensure card reader is connected directly to computer, not through a hub</li>
-</ul>
-<h3 id="data-corruption-after-backup">Data Corruption After Backup</h3>
-<p><strong>Symptoms:</strong> Files unreadable or truncated after backup completes
-<strong>Common Causes:</strong></p>
-<ul>
-<li>Improper ejection/unmounting</li>
-<li>Power fluctuations during write operations</li>
-<li>Filesystem not suitable for the card</li>
-</ul>
-<p><strong>Solutions:</strong></p>
-<ul>
-<li>Always properly unmount before removing: <code>sudo umount /path/to/sdcard</code></li>
-<li>Use a powered card reader</li>
-<li>Consider using a journaling filesystem like ext4</li>
-<li>Use the <code>--checksum</code> option with rsync to verify integrity</li>
-</ul>
-<h2 id="best-practices-for-sd-card-backups">Best Practices for SD Card Backups</h2>
-<ol>
-<li><strong>Always verify your backups.</strong> Don't assume the data was written correctly.</li>
-<li><strong>Label your cards.</strong> Physical labels with date and content information prevent confusion.</li>
-<li><strong>Store cards properly.</strong> Use protective cases and keep away from magnetic fields.</li>
-<li><strong>Rotate multiple cards.</strong> Don't rely on a single backup medium.</li>
-<li><strong>Periodically refresh data.</strong> SD cards can lose data over very long storage periods (years).</li>
-<li><strong>Check filesystem integrity regularly:</strong> <code>fsck /dev/sdX</code></li>
-</ol>
-<h2 id="conclusion">Conclusion</h2>
-<p>SD cards can be excellent backup solutions for Linux users when properly configured and managed. By choosing the right card, verifying its authenticity, selecting an appropriate filesystem, and using robust backup commands, you can create a reliable, portable backup solution.</p>
-<p>Remember that while SD cards offer convenience, they should be part of a broader backup strategy. Consider the 3-2-1 backup rule: three copies of your data, on two different media types, with one copy stored off-site.</p>
-<hr />
-<p><strong>Credits:</strong> Meta image <a href="https://pixabay.com/photos/memory-memory-card-electronics-3879753/">Memory Card Electronics</a> by <a href="https://kieutruong.com/">kieutruongphoto</a></p>
 <hr>
 <p>Thank you for reading!</p>
 <p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting Up Google Drive Backups on Ubuntu with rclone | Geeksta</title>
+<meta name="description" content="Learn how to set up automated backups from Ubuntu Linux to Google Drive using rclone, including OAuth setup, backup scripts, and scheduling with cron."><meta name="author" content="Ramiro Gómez">
+            <meta property="og:image" content="/img/geeklog/geeklog-tux.png">
+    <link rel="canonical" itemprop="url" href="https://geeksta.net/geeklog/setting-up-google-drive-backups-on-ubuntu-with-rclone/">
+    <link rel="icon" type="image/png" href="/img/icon-small.png">
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Geeksta All Posts RSS feed">
+    <link rel="stylesheet" href="/vendor/chota.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/dropdown.css">
+
+</head>
+<body>
+    <header><nav class="nav dark">
+        <div class="nav-left">
+            <a class="brand" href="/"><img class="logo" src="/img/icon-small.png" alt="logo">Geeksta</a>
+        </div>
+        <ul class="nav-right">
+            <li>
+                <a href="#">Sections ▾</a>
+                <ul class="dropdown">
+                    <li><a href="/reviews/">Book Reviews</a></li>
+                    <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
+                    <li><a href="/visualizations/">Data Visualizations</a></li>
+                    <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
+                    <li><a href="/events/">Geek Events</a></li>
+                    <li><a href="/screencasts/">Screencasts</a></li>
+                    <li><a href="/videos/">Videos</a></li>
+                </ul>
+            </li>
+            <li><a href="/geeklog/">Geeklog</a></li>
+            <li><a href="/merch/">Merch</a></li>
+            <li><a href="/tools/">Tools</a></li>
+        </ul>
+    </nav></header>
+
+    <main class="container">
+<div class="row">
+    <div class="col-9-md">
+        <h1>Setting Up Google Drive Backups on Ubuntu with rclone</h1>
+        <p>This tutorial will show you how to set up automated backups from Ubuntu Linux to Google Drive using rclone. You'll need Ubuntu Linux, a Google account with Google Drive, and terminal access with sudo privileges.</p>
+<h2 id="installing-rclone">Installing rclone</h2>
+<p>If you haven't already installed rclone, open a terminal and run the following commands. The first updates your package list, and the second installs rclone from the Ubuntu repositories.</p>
+<pre><code class="language-bash">sudo apt update
+sudo apt install rclone
+</code></pre>
+<p>You can verify the installation by checking the version number with <code>rclone version</code>.</p>
+<h2 id="why-you-need-your-own-google-oauth-application">Why You Need Your Own Google OAuth Application</h2>
+<p>Google has restricted access to unverified third-party applications, which means rclone's default OAuth credentials no longer work for new users. When you try to authenticate with the default credentials, Google blocks access with an "Access blocked" error stating that rclone hasn't completed Google's verification process.</p>
+<p>The solution is to create your own OAuth application in the Google Cloud Console. This gives you a private OAuth app that Google won't block, since you're authorizing your own application to access your own Google Drive. This is a one-time setup that takes about 10 minutes.</p>
+<h2 id="creating-your-google-oauth-application">Creating Your Google OAuth Application</h2>
+<p>Start by going to the Google Cloud Console at <a href="https://console.cloud.google.com/">console.cloud.google.com</a> and signing in with your Google account. You'll need to create a new project for this application.</p>
+<h3 id="setting-up-the-project">Setting Up the Project</h3>
+<p>Click the project dropdown at the top of the page and select "New Project". Give your project a name like "rclone-backup" and click Create. Wait a moment for Google to create the project, then make sure it's selected in the project dropdown.</p>
+<h3 id="enabling-the-google-drive-api">Enabling the Google Drive API</h3>
+<p>From the left sidebar, navigate to "APIs &amp; Services" and then "Library". Use the search box to find "Google Drive API". Click on it and press the Enable button. This allows your OAuth application to access Google Drive.</p>
+<h3 id="configuring-the-oauth-consent-screen">Configuring the OAuth Consent Screen</h3>
+<p>Before you can create OAuth credentials, you need to configure the consent screen. This is what users see when they authorize the application. Go to "APIs &amp; Services" and then "OAuth consent screen".</p>
+<p>Choose "External" as the user type and click Continue. You'll need to fill in some basic information about your application. For the app name, use something like "My rclone Backup". Enter your email address for both the user support email and developer contact information.</p>
+<p>Click "Save and Continue" to move to the Scopes page. Click "Add or Remove Scopes" and search for the Google Drive scope. You need to add the scope <code>https://www.googleapis.com/auth/drive</code> which gives full access to Google Drive. Select it, click Update, and then "Save and Continue".</p>
+<p>On the Test users page, click "Add Users" and enter your Google email address. This allows you to use the application while it's in testing mode. Click Add, then "Save and Continue". You can review your settings and then click "Back to Dashboard".</p>
+<h3 id="creating-oauth-credentials">Creating OAuth Credentials</h3>
+<p>Now you can create the actual credentials. Go to "APIs &amp; Services" and then "Credentials". Click "Create Credentials" and choose "OAuth client ID".</p>
+<p>For the application type, select "Desktop application". Give it a name like "rclone desktop client" and click "Create". A popup will appear showing your Client ID and Client Secret. Copy both of these values somewhere safe, or click "Download JSON" to save them. You'll need these in the next step.</p>
+<h2 id="configuring-rclone">Configuring rclone</h2>
+<p>Open your terminal and run <code>rclone config</code>. This starts the interactive configuration process.</p>
+<p>Type <code>n</code> to create a new remote and press Enter. Give it a name like <code>gdrive</code>. For the storage type, type <code>drive</code> or find the number corresponding to Google Drive in the list and enter that number.</p>
+<p>When prompted for client_id, paste the "Client ID" you copied from the Google Cloud Console. Press Enter, then paste your "Client Secret" when prompted. These custom credentials will allow you to bypass Google's access restrictions.</p>
+<p>For the scope, choose option 1 for full access to all files. This gives rclone the ability to read and write any files in your Google Drive. Leave the <code>root_folder_id</code> blank by pressing Enter. Also leave <code>service_account_file</code> blank by pressing Enter.</p>
+<p>When asked about advanced config, type <code>n</code> for no. When asked "Use auto config?", type <code>y</code> for yes. This will open a browser window where you'll log in to your Google account and grant permission to your OAuth application. You should see your application name and a prompt asking you to allow access to your Google Drive.</p>
+<p>After granting permission, return to the terminal. When asked about configuring as a team drive, type <code>n</code> for no unless you're using Google Workspace shared drives. Confirm the configuration looks correct by typing <code>y</code>, then type <code>q</code> to quit the configuration tool.</p>
+<h3 id="testing-your-connection">Testing Your Connection</h3>
+<p>Before proceeding, verify that rclone can connect to your Google Drive by running <code>rclone lsd gdrive:</code>. This command lists the directories in your Google Drive. If you see your folders listed, the setup was successful.</p>
+<h2 id="understanding-backup-methods">Understanding Backup Methods</h2>
+<p>Rclone offers several commands for transferring files, and it's important to understand the differences before creating your backup script.</p>
+<p>The <code>sync</code> command makes the destination identical to the source. This means it will copy new and modified files to the destination, and it will also delete files from the destination that no longer exist in the source. This is ideal for maintaining an exact backup where you want the cloud to mirror your local files.</p>
+<p>The <code>copy</code> command only copies files from source to destination. It never deletes anything from the destination, even if files are removed from the source. This is useful if you want to keep historical versions of files in the cloud.</p>
+<p>The <code>bisync</code> command performs bidirectional synchronization, keeping both locations in sync. Changes made on either side are propagated to the other. This is more complex and requires careful use to avoid conflicts.</p>
+<p>For most backup scenarios, <code>sync</code> is the best choice because it maintains an exact copy of your current files in the cloud.</p>
+<h2 id="creating-a-backup-script">Creating a Backup Script</h2>
+<p>It's useful to create a script that handles your backups automatically. First, create a directory to store your scripts by running <code>mkdir -p ~/scripts</code>.</p>
+<p>Create a new file for your backup script with <code>vim ~/scripts/backup-to-gdrive.sh</code>. Here's a basic backup script that you can customize for your needs:</p>
+<pre><code class="language-bash">#!/bin/bash
+
+# Configuration
+SOURCE_DIR=&quot;/home/$USER/Documents&quot;
+BACKUP_NAME=&quot;DocumentsBackup&quot;
+REMOTE_NAME=&quot;gdrive&quot;
+REMOTE_DIR=&quot;Backups/$BACKUP_NAME&quot;
+LOG_FILE=&quot;/home/$USER/logs/rclone-backup.log&quot;
+DATE=$(date '+%Y-%m-%d %H:%M:%S')
+
+# Create log directory if it doesn't exist
+mkdir -p &quot;$(dirname &quot;$LOG_FILE&quot;)&quot;
+
+# Log start
+echo &quot;[$DATE] Starting backup of $SOURCE_DIR to $REMOTE_NAME:$REMOTE_DIR&quot; &gt;&gt; &quot;$LOG_FILE&quot;
+
+# Run rclone sync
+rclone sync &quot;$SOURCE_DIR&quot; &quot;$REMOTE_NAME:$REMOTE_DIR&quot; \
+    --progress \
+    --log-file=&quot;$LOG_FILE&quot; \
+    --log-level INFO \
+    --exclude &quot;.Trash-*/**&quot; \
+    --exclude &quot;.cache/**&quot; \
+    --exclude &quot;*.tmp&quot;
+
+# Check if backup was successful
+if [ $? -eq 0 ]; then
+    echo &quot;[$DATE] Backup completed successfully&quot; &gt;&gt; &quot;$LOG_FILE&quot;
+else
+    echo &quot;[$DATE] Backup failed with errors&quot; &gt;&gt; &quot;$LOG_FILE&quot;
+fi
+</code></pre>
+<p>This script sets up some basic configuration variables at the top, creates a log directory if needed, and runs the sync command with logging enabled. It excludes common temporary files and cache directories that don't need to be backed up. After the sync completes, it checks whether the operation succeeded and logs the result.</p>
+<p>Make the script executable by running <code>chmod +x ~/scripts/backup-to-gdrive.sh</code>. You can now run your backup anytime by executing <code>~/scripts/backup-to-gdrive.sh</code>.</p>
+<h2 id="backing-up-multiple-directories">Backing Up Multiple Directories</h2>
+<p>If you want to backup multiple directories, you can extend your script to handle them all. Here's an example that backs up Documents, Pictures, and configuration files:</p>
+<pre><code class="language-bash">#!/bin/bash
+
+REMOTE_NAME=&quot;gdrive&quot;
+LOG_FILE=&quot;/home/$USER/logs/rclone-backup.log&quot;
+DATE=$(date '+%Y-%m-%d %H:%M:%S')
+
+mkdir -p &quot;$(dirname &quot;$LOG_FILE&quot;)&quot;
+echo &quot;[$DATE] Starting backups&quot; &gt;&gt; &quot;$LOG_FILE&quot;
+
+# Backup Documents
+rclone sync /home/$USER/Documents &quot;$REMOTE_NAME:Backups/Documents&quot; \
+    --log-file=&quot;$LOG_FILE&quot; --log-level INFO
+
+# Backup Pictures
+rclone sync /home/$USER/Pictures &quot;$REMOTE_NAME:Backups/Pictures&quot; \
+    --log-file=&quot;$LOG_FILE&quot; --log-level INFO
+
+# Backup important config files
+rclone sync /home/$USER/.config &quot;$REMOTE_NAME:Backups/config&quot; \
+    --log-file=&quot;$LOG_FILE&quot; --log-level INFO \
+    --exclude &quot;*/Cache/**&quot; \
+    --exclude &quot;*/cache/**&quot;
+
+echo &quot;[$DATE] All backups completed&quot; &gt;&gt; &quot;$LOG_FILE&quot;
+</code></pre>
+<p>Each directory is synced to a separate folder in your Google Drive under the Backups directory. This keeps your backups organized and makes it easier to restore specific types of files later.</p>
+<h2 id="automating-backups-with-cron">Automating Backups with Cron</h2>
+<p>To run your backups automatically on a schedule, you can use the cron task scheduler. Edit your cron table by running <code>crontab -e</code>. If this is your first time using crontab, you'll be asked to choose an editor.</p>
+<p>Add a line to schedule your backup. The format is five time fields followed by the command to run. Here are some common schedules:</p>
+<pre><code class="language-bash"># Daily at 2 AM
+0 2 * * * /home/yourusername/scripts/backup-to-gdrive.sh
+
+# Every 6 hours
+0 */6 * * * /home/yourusername/scripts/backup-to-gdrive.sh
+
+# Every day at 3:30 PM
+30 15 * * * /home/yourusername/scripts/backup-to-gdrive.sh
+</code></pre>
+<p>Replace <code>yourusername</code> with your actual Ubuntu username. Save the file and exit the editor. Cron will now run your backup script on the schedule you specified.</p>
+<h2 id="testing-before-running-real-backups">Testing Before Running Real Backups</h2>
+<p>Before setting up automated backups, it's wise to test what rclone will do without actually transferring any files. The <code>--dry-run</code> flag shows you exactly what would be copied, modified, or deleted without making any changes.</p>
+<p>Run your script with a dry run by adding the flag to the rclone command temporarily, or run rclone directly from the command line like this:</p>
+<pre><code class="language-bash">rclone sync /home/$USER/Documents gdrive:Backups/Documents --dry-run --verbose
+</code></pre>
+<p>This will output a detailed list of actions that would be taken. Review this carefully to make sure it's doing what you expect. Pay special attention to any files that would be deleted.</p>
+<h2 id="useful-rclone-commands">Useful rclone Commands</h2>
+<p>There are several rclone commands that are helpful for managing your backups. To list files in your Google Drive, use <code>rclone ls gdrive:</code> for all files or <code>rclone lsd gdrive:</code> for just directories.</p>
+<p>To check how much storage you're using, run <code>rclone about gdrive:</code>. This shows your total storage, used space, and free space in Google Drive.</p>
+<p>If you need to restore files from Google Drive back to your local system, you can reverse the sync direction:</p>
+<pre><code class="language-bash">rclone sync gdrive:Backups/Documents /home/$USER/Documents-Restored
+</code></pre>
+<p>Be very careful with this command. Using sync in the restore direction will make your local directory match the cloud, which means it could delete local files that aren't in the cloud backup.</p>
+<p>To compare your local files with your cloud backup without transferring anything, use the check command:</p>
+<pre><code class="language-bash">rclone check /home/$USER/Documents gdrive:Backups/Documents
+</code></pre>
+<p>This reports any differences between the two locations without modifying either one.</p>
+<h2 id="filtering-files">Filtering Files</h2>
+<p>You often don't want to backup everything. Rclone provides powerful filtering options that you can add to your sync commands.</p>
+<p>To exclude specific patterns, use the <code>--exclude</code> flag. For example, <code>--exclude "*.tmp"</code> skips all files ending in .tmp. You can use <code>--exclude ".git/**"</code> to skip git repositories, or <code>--exclude "node_modules/**"</code> to skip Node.js dependencies.</p>
+<p>If you only want to backup specific file types, use <code>--include</code> instead. For example, <code>--include "*.jpg"</code> combined with <code>--include "*.png"</code> will only backup image files. Note that when using include filters, you typically need to also add <code>--exclude "*"</code> at the end to exclude everything that wasn't explicitly included.</p>
+<p>You can also filter by file size or age. The flag <code>--min-size 1M</code> only transfers files larger than 1 megabyte, while <code>--max-age 30d</code> only transfers files modified in the last 30 days.</p>
+<h2 id="optimizing-transfer-performance">Optimizing Transfer Performance</h2>
+<p>By default, rclone transfers files one at a time. For better performance with many small files, you can increase the number of parallel transfers with <code>--transfers 4</code>. This uploads four files simultaneously.</p>
+<p>The <code>--checkers 8</code> flag increases the number of files rclone checks simultaneously when determining what needs to be transferred. This can significantly speed up the initial scanning phase.</p>
+<p>If you're backing up large files, increasing the buffer size with <code>--buffer-size 16M</code> can improve transfer speeds by reducing the number of round trips to Google Drive.</p>
+<p>If backups are consuming too much bandwidth and affecting your other internet usage, you can limit the transfer rate with <code>--bwlimit 10M</code> to restrict uploads to 10 megabytes per second.</p>
+<h2 id="monitoring-your-backups">Monitoring Your Backups</h2>
+<p>It's important to verify that your backups are running successfully. You can check the log file directly with <code>tail -f /home/$USER/logs/rclone-backup.log</code> to watch backups in real-time as they run.</p>
+<p>To see the most recent backup events, use <code>tail -n 20 /home/$USER/logs/rclone-backup.log | grep "Backup"</code> which shows the last 20 lines containing the word "Backup".</p>
+<p>Create a simple monitoring script at <code>~/scripts/check-backup-status.sh</code>:</p>
+<pre><code class="language-bash">#!/bin/bash
+
+LOG_FILE=&quot;/home/$USER/logs/rclone-backup.log&quot;
+
+echo &quot;=== Recent Backup Events ===&quot;
+tail -n 20 &quot;$LOG_FILE&quot; | grep &quot;Backup&quot;
+
+echo &quot;&quot;
+echo &quot;=== Google Drive Storage Usage ===&quot;
+rclone about gdrive:
+
+echo &quot;&quot;
+echo &quot;=== Recently Backed Up Files ===&quot;
+rclone ls gdrive:Backups --max-depth 2 | tail -n 10
+</code></pre>
+<p>Make it executable with <code>chmod +x ~/scripts/check-backup-status.sh</code>. Run this script occasionally to verify your backups are working correctly.</p>
+<h2 id="troubleshooting-common-issues">Troubleshooting Common Issues</h2>
+<p>If you get an error about failing to create a file system, first check your rclone configuration with <code>rclone config show gdrive</code>. Make sure your <code>client_id</code> and <code>client_secret</code> are present. If they're missing or incorrect, run <code>rclone config</code> again to reconfigure the remote.</p>
+<p>Slow transfer speeds can have several causes. Your internet connection might be the bottleneck, especially for large files. Try adding <code>--transfers 4</code> and <code>--checkers 8</code> to speed things up. If uploads are interfering with other network activities, use <code>--bwlimit</code> to limit the bandwidth rclone uses.</p>
+<p>If files aren't syncing as expected, run the command with <code>--dry-run</code> and <code>--verbose</code> to see what rclone plans to do. Check that your exclude patterns aren't inadvertently blocking files you want to backup. Verify that you have read permission on the files you're trying to backup.</p>
+<p>If rclone seems to hang or stop responding, it might be waiting for network operations to complete. The <code>--timeout 30s</code> flag sets a timeout for individual operations. The <code>--contimeout 60s</code> flag sets a timeout for initial connections.</p>
+<h2 id="security-considerations">Security Considerations</h2>
+<p>Your OAuth credentials provide access only to your own Google Drive account. The credentials are stored in <code>~/.config/rclone/rclone.conf</code> with permissions set to 600, meaning only your user account can read the file.</p>
+<p>Keep your rclone.conf file secure. Don't share it with others or commit it to version control systems. If you ever need to revoke access, you can do so from your Google account settings under Security, then "Third-party apps with account access".</p>
+<p>The <code>client_id</code> and <code>client_secret</code> from your OAuth application are not as sensitive as the tokens in <code>rclone.conf</code>, but you should still keep them private. Anyone with these credentials could create their own rclone configuration to access their own Google Drive using your OAuth application.</p>
+<p>If you're concerned about data privacy, remember that rclone transfers your files to Google's servers where they're stored according to Google's privacy policy. The files are encrypted in transit using HTTPS, but they're stored in Google Drive in a form that Google can technically access.</p>
+<h2 id="maintaining-your-backup-system">Maintaining Your Backup System</h2>
+<p>Once your backup system is running, check it periodically to ensure it's working correctly. Look at your log files every few weeks to verify backups are completing successfully. Log in to Google Drive occasionally and spot-check that your files are actually there.</p>
+<p>Monitor your Google Drive storage space. If you're running low, you may need to clean up old files, purchase more storage, or adjust what you're backing up. You can check your storage usage with <code>rclone about gdrive:</code>.</p>
+<p>Keep rclone updated to get bug fixes and new features. Ubuntu's package manager will handle this when you run system updates, but you can also install the latest version directly from rclone.org if you need newer features.</p>
+<p>As your needs change, update your backup script. You might want to backup additional directories, change your exclude patterns, or adjust the backup schedule. Remember to test changes with <code>--dry-run</code> before running them for real.</p>
+<p>Consider testing your restore process occasionally. The best backup system in the world is useless if you can't actually restore your files when you need them. Try restoring a few files to a temporary directory to verify the process works.</p>
+<p>For more information and advanced features, consult the official rclone documentation at rclone.org.</p>
+<h2 id="summary">Summary</h2>
+<p>This guide walked you through setting up automated backups from Ubuntu to Google Drive using rclone. You created your own Google OAuth application to bypass access restrictions, configured rclone to connect to your Google Drive, and built a backup script that can run automatically on a schedule. You learned about different sync methods, how to filter files, optimize transfers, and monitor your backups. With this system in place, your important files are regularly backed up to the cloud, protecting you against data loss from hardware failure, accidents, or other disasters. Remember to check your backups periodically and test the restore process to ensure everything works when you need it.</p>
+    </div>
+    <div class="col">
+
+<h3>Featured Merch</h3>
+<figure class="preview">
+    <a href="/design/got-backups-white/">
+            <img class="b-lazy" src="/img/large/got-backups-white.jpg" alt="got backups? Funny System Administrator Design - White Text" />
+        <figcaption>got backups? Funny System Administrator Design - White Text</figcaption>
+    </a>
+</figure>
+
+
+<h3>Latest Posts</h3>
+<ul>
+        <li><a href="/geeklog/protecting-your-email-server/">Protecting Your Email Server: SASL Authentication and fail2ban Defense</a></li>
+        <li><a href="/geeklog/the-centenarian-decathlon/">The Centenarian Decathlon: A Practical Guide to Thriving into Your 90s and Beyond</a></li>
+        <li><a href="/geeklog/the-pros-and-cons-of-cron-jobs/">The Pros and Cons of Cron Jobs</a></li>
+        <li><a href="/geeklog/image-prompt-creator-introduction/">Image Prompt Creator: Generate AI Prompts from Images</a></li>
+</ul>
+
+<h3>Featured Book</h3>
+<figure class="preview">
+    <a href="https://www.amazon.com/dp/B0C5B9JG57?tag=geeksta-20">
+        <img alt="eBook cover" src="/img/books/chatgpt-interview-prompting.jpg"><br>
+        <figcaption>Buy on Amazon</figcaption>
+    </a>
+</figure>
+
+<hr>
+
+<a href="/rss.xml" class="button primary">Subscribe to RSS Feed</a></li>    </div>
+</div>
+<hr>
+<p>This post was written by <a href="https://ramiro.org/">Ramiro Gómez</a> (<a href="https://twitter.com/yaph">@yaph</a>) and published on <time datetime="2025-09-30T13:55">September 30, 2025</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+<p><strong>Tags:</strong>
+    <a class="button outline" href="/tags/rclone/">rclone</a>
+    <a class="button outline" href="/tags/guide/">guide</a>
+    <a class="button outline" href="/tags/backup/">backup</a>
+    <a class="button outline" href="/tags/google-drive/">google drive</a>
+    <a class="button outline" href="/tags/linux/">linux</a>
+</p>
+<p class="text-grey"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p><hr>
+<p><strong>Share post:</strong>
+<a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/geeklog/setting-up-google-drive-backups-on-ubuntu-with-rclone/&t=Setting%20Up%20Google%20Drive%20Backups%20on%20Ubuntu%20with%20rclone" class="button success">Facebook</a>
+<a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/geeklog/setting-up-google-drive-backups-on-ubuntu-with-rclone/&title=Setting%20Up%20Google%20Drive%20Backups%20on%20Ubuntu%20with%20rclone" class="button success">LinkedIn</a>
+<a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/geeklog/setting-up-google-drive-backups-on-ubuntu-with-rclone/&title=Setting%20Up%20Google%20Drive%20Backups%20on%20Ubuntu%20with%20rclone" class="button success">Reddit</a>
+<a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/geeklog/setting-up-google-drive-backups-on-ubuntu-with-rclone/&text=Setting%20Up%20Google%20Drive%20Backups%20on%20Ubuntu%20with%20rclone" class="button success">Twitter</a>
+</p>
+<div class="card vm">
+    <h3>Merchandise</h3>
+    <div class="row">
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/caution-i-test-in-production/">
+            <img class="b-lazy" src="/img/large/caution-i-test-in-production.jpg" alt="I Test in Production - Funny Developer Caution Sign Design" />
+        <figcaption>I Test in Production - Funny Developer Caution Sign Design</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/hack-the-planet-green/">
+            <img class="b-lazy" src="/img/large/hack-the-planet-green.jpg" alt="Hack the Planet - Green Globe Design for Computer Hackers" />
+        <figcaption>Hack the Planet - Green Globe Design for Computer Hackers</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/run-bsd/">
+            <img class="b-lazy" src="/img/large/run-bsd.jpg" alt="RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins" />
+        <figcaption>RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/shrug-it-works-on-my-machine-medium-white/">
+            <img class="b-lazy" src="/img/large/shrug-it-works-on-my-machine-medium-white.jpg" alt="Shrug It Works On My Machine Funny Programmer Excuse White Design" />
+        <figcaption>Shrug It Works On My Machine Funny Programmer Excuse White Design</figcaption>
+    </a>
+</figure>
+
+    </div>
+</div>
+
+</div>    </main>
+
+    <footer class="dark"><div class="container">
+        Geeksta elsewhere: <a href="https://www.instagram.com/g33ksta/">Instagram</a> • <a href="https://www.youtube.com/@geeksta">YouTube</a> • <a href="https://www.tiktok.com/@g33ksta">TikTok</a> • <a href="https://www.facebook.com/geeksta.net/">Facebook</a>
+        <br>
+        © 2010 - 2025 Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/rss.xml">RSS Feed</a></p>
+    </div></footer>
+
+    <script src="/compiled/script.js"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MFQJ09STFE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MFQJ09STFE');
+</script>
+</body>
+</html>
