@@ -9,11 +9,12 @@
     <item>
         <title><![CDATA[Build Mental Resilience: A 30-Day Challenge Inspired by Science]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/resilience-challenge-introduction/]]></link>
-        <description><![CDATA[<p>Start building resilience with a free 30-day challenge. This introduction explains the science-backed daily practices for lasting mental strength.</p>]]></description>
+        <description><![CDATA[<p>Start building resilience with a free 30-day challenge. This introduction explains the science-backed daily practices for lasting mental strength.</p><img src="/img/tools/resilience-challenge.png" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/resilience-challenge-introduction/]]></guid>
-        <pubDate>Mon, 06 Oct 2025 13:44:24 </pubDate>
+        <pubDate>Mon, 06 Oct 2025 14:17:37 </pubDate>
         <content:encoded><![CDATA[
-        <p>After listening to the insightful discussion on resilience research in the SOLVED Podcast with Mark Manson and Drew Bernie, I felt inspired to create something practical. The episode highlighted that resilience isn't a mysterious trait but a skill that can be developed. This led me to create a free, simple online tool designed to help people build resilience through daily practice.</p>
+        <p>After listening to the insightful discussion on resilience research in the SOLVED Podcast with Mark Manson and Drew Bernie, I felt inspired to create something practical. The episode highlighted that resilience isn't a mysterious trait but a skill that can be developed. This led me to create <a href="/tools/resilience/">a free, simple online tool</a> designed to help people build resilience through daily practice. Here's an example of a daily challenge from the tool.</p>
+<p><img alt="Resilience Challenge Example Screen" src="/img/tools/resilience-challenge.png" /></p>
 <h2 id="the-science-behind-this-approach">The Science Behind This Approach</h2>
 <h3 id="resilience-as-a-learnable-skill">Resilience as a Learnable Skill</h3>
 <p>Resilience functions like a muscle that grows stronger with use. According to the research discussed in the podcast:</p>
@@ -54,7 +55,7 @@
 <h2 id="join-me-in-building-resilience">Join Me in Building Resilience</h2>
 <p>If the SOLVED resilience episode resonated with you, this challenge offers a practical way to put those insights into action. You don't need specialized equipment or large blocks of free time. Setting aside a few minutes each day and committing to grow is all it takes.</p>
 <p>Research suggests that resilience is a skill that everyone has the potential to develop with practice. This challenge was inspired by <a href="https://solvedpodcast.com/resilience/">Episode 06 of the SOLVED podcast</a>, "How to Become More Resilient," and was created to make their insights accessible, practical, and grounded in science. Full credit for the research and ideas goes to the SOLVED team.</p>
-<p>Ready to get started? <a href="/challenge/resilience/">Join the challenge here</a>.</p>
+<p>Ready to get started? <a href="/tools/resilience/">Join the challenge here</a>.</p>
 <hr>
 <p>Thank you for reading!</p>
 <p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
