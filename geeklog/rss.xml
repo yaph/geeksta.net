@@ -7,6 +7,59 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Build Mental Resilience: A 30-Day Challenge Inspired by Science]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/resilience-challenge-introduction/]]></link>
+        <description><![CDATA[<p>Start building resilience with a free 30-day challenge. This introduction explains the science-backed daily practices for lasting mental strength.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/resilience-challenge-introduction/]]></guid>
+        <pubDate>Mon, 06 Oct 2025 13:44:24 </pubDate>
+        <content:encoded><![CDATA[
+        <p>After listening to the insightful discussion on resilience research in the SOLVED Podcast with Mark Manson and Drew Bernie, I felt inspired to create something practical. The episode highlighted that resilience isn't a mysterious trait but a skill that can be developed. This led me to create a free, simple online tool designed to help people build resilience through daily practice.</p>
+<h2 id="the-science-behind-this-approach">The Science Behind This Approach</h2>
+<h3 id="resilience-as-a-learnable-skill">Resilience as a Learnable Skill</h3>
+<p>Resilience functions like a muscle that grows stronger with use. According to the research discussed in the podcast:</p>
+<ul>
+<li><strong>Neuroplasticity</strong> is the brain's ability to adapt and rewire itself over time. This process allows us to create new patterns with consistent effort.</li>
+<li><strong>The HPA axis</strong> refers to the system that manages our stress responses. It can be trained to handle stress more effectively.</li>
+<li><strong>Heart rate variability</strong> is a measurable indicator of how well our body adapts to stress. With practice, it can be improved.</li>
+</ul>
+<h3 id="the-three-pillars-framework">The Three Pillars Framework</h3>
+<p>This challenge follows the framework discussed in the podcast:</p>
+<ul>
+<li><strong>Biological Resilience</strong>: Calibrating your nervous system through breath, cold exposure, and sleep</li>
+<li><strong>Psychological Flexibility</strong>: Building mental frameworks from evidence-based therapies</li>
+<li><strong>Social Connection</strong>: Strengthening the relational safety nets that catch us during hard times</li>
+</ul>
+<h2 id="what-makes-this-approach-work">What Makes This Approach Work</h2>
+<h3 id="1-small-sustainable-steps">1. Small, Sustainable Steps</h3>
+<p>Each daily practice takes 5 to 15 minutes, focusing on consistency over intensity. This steady, incremental approach promotes lasting change while preventing burnout.</p>
+<h3 id="2-the-orchid-dandelion-insight">2. The Orchid-Dandelion Insight</h3>
+<p>One of the most liberating concepts from the podcast was that sensitivity isn't weakness. Whether you're an <em>orchid</em>, thriving in ideal conditions, or a <em>dandelion</em>, capable of adapting anywhere, this challenge is designed to suit your current needs and circumstances. It provides guidance and flexibility no matter your starting point.</p>
+<h3 id="3-evidence-based-methods">3. Evidence-Based Methods</h3>
+<p>Each exercise in this challenge is based on evidence-backed practices mentioned in the podcast:</p>
+<ul>
+<li><strong>Physiological sighs</strong> are breathing techniques used to quickly calm your nervous system.</li>
+<li><strong>Cognitive reframing</strong> is a strategy from Cognitive Behavioral Therapy (CBT) that helps shift how you view difficult situations.</li>
+<li><strong>Values-based actions</strong> come from Acceptance and Commitment Therapy (ACT). They encourage aligning your actions with your personal values.</li>
+<li><strong>Voluntary discomfort</strong> is inspired by Stoicism. It builds resilience by intentionally practicing discomfort in controlled ways.</li>
+</ul>
+<h2 id="a-note-on-the-structure">A Note on the Structure</h2>
+<p>The challenge is designed to follow a natural, step-by-step progression:</p>
+<ul>
+<li><strong>Week 1</strong>: Building a strong nervous system foundation</li>
+<li><strong>Week 2</strong>: Creating mindset shifts</li>
+<li><strong>Week 3</strong>: Strengthening identity</li>
+<li><strong>Week 4</strong>: Integrating what you've learned</li>
+</ul>
+<p>This structure reflects research that shows lasting change happens gradually over time. It is not an instant process. You can start the challenge on any day, and if you miss a day, simply pick up where you left off the next day. However, try to stay consistent and avoid missing days to build momentum and reinforce progress.</p>
+<h2 id="join-me-in-building-resilience">Join Me in Building Resilience</h2>
+<p>If the SOLVED resilience episode resonated with you, this challenge offers a practical way to put those insights into action. You don't need specialized equipment or large blocks of free time. Setting aside a few minutes each day and committing to grow is all it takes.</p>
+<p>Research suggests that resilience is a skill that everyone has the potential to develop with practice. This challenge was inspired by <a href="https://solvedpodcast.com/resilience/">Episode 06 of the SOLVED podcast</a>, "How to Become More Resilient," and was created to make their insights accessible, practical, and grounded in science. Full credit for the research and ideas goes to the SOLVED team.</p>
+<p>Ready to get started? <a href="/challenge/resilience/">Join the challenge here</a>.</p>
+<hr>
+<p>Thank you for reading!</p>
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
+    </item>
+    <item>
         <title><![CDATA[Setting Up Google Drive Backups on Ubuntu with rclone]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/setting-up-google-drive-backups-on-ubuntu-with-rclone/]]></link>
         <description><![CDATA[<p>Learn how to set up automated backups from Ubuntu Linux to Google Drive using rclone, including OAuth setup, backup scripts, and scheduling with cron.</p>]]></description>
@@ -1087,58 +1140,6 @@ max_connections
 <h2 id="conclusion">Conclusion</h2>
 <p>Troubleshooting high database load issues requires a methodical approach and the right tools. By following the steps outlined in this guide, you'll be able to quickly identify and resolve performance bottlenecks in your Debian Linux database servers.</p>
 <p>Remember that the best solution to high load issues is preventing them in the first place through proper monitoring, regular maintenance, and proactive capacity planning.</p>
-<hr>
-<p>Thank you for reading!</p>
-<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
-    </item>
-    <item>
-        <title><![CDATA[Checking DNS Zone Files]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/checking-dns-zone-files/]]></link>
-        <description><![CDATA[<p>Learn why validating DNS zone files is critical for website reliability and email delivery. Discover practical tools and best practices to prevent costly DNS configuration errors.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/checking-dns-zone-files/]]></guid>
-        <pubDate>Tue, 01 Apr 2025 12:14:08 </pubDate>
-        <content:encoded><![CDATA[
-        <p>DNS zone files are the backbone of domain name resolution on the internet. They contain the mappings between domain names and IP addresses, mail servers, and other critical infrastructure components. However, even a small syntax error in these files can lead to significant disruptions in service. In this post, we'll explore the importance of validating DNS zone files and some practical methods to do so.</p>
-<h2 id="why-validate-zone-files">Why Validate Zone Files?</h2>
-<p>A misconfigured zone file can cause various problems:</p>
-<ol>
-<li><strong>Website Unavailability</strong>: If A or AAAA records are incorrect, your website might become inaccessible.</li>
-<li><strong>Email Delivery Failures</strong>: Incorrect MX records can prevent email delivery.</li>
-<li><strong>Security Vulnerabilities</strong>: Improperly configured DNSSEC or SPF records might expose your domain to spoofing attacks.</li>
-<li><strong>Propagation Delays</strong>: Errors might cause DNS propagation issues, leading to inconsistent behavior across the internet.</li>
-</ol>
-<h2 id="tools-for-dns-zone-file-validation">Tools for DNS Zone File Validation</h2>
-<h3 id="bind-utilities">BIND Utilities</h3>
-<p>The BIND DNS server software provides excellent tools for checking zone files:</p>
-<pre><code class="language-bash"># Basic syntax check
-named-checkzone example.com /path/to/zonefile
-
-# More verbose output
-named-checkzone -v example.com /path/to/zonefile
-</code></pre>
-<p>The <code>named-compilezone</code> utility is another helpful tool that can convert between different zone file formats while checking for errors:</p>
-<pre><code class="language-bash">named-compilezone -o /dev/null example.com /path/to/zonefile
-</code></pre>
-<h3 id="online-validators">Online Validators</h3>
-<p>Several online tools can help validate zone files, particularly useful if you don't have access to a server with BIND utilities installed.</p>
-<h3 id="common-syntax-issues-to-watch-for">Common Syntax Issues to Watch For</h3>
-<ol>
-<li><strong>Missing Trailing Dots</strong>: Fully qualified domain names should end with a dot.</li>
-<li><strong>Incorrect TTL Values</strong>: Time-to-live values must be numeric and reasonable.</li>
-<li><strong>Record Format Errors</strong>: Each record type has specific formatting requirements.</li>
-<li><strong>Long TXT Records</strong>: TXT records (like those for DKIM) might need to be split into multiple strings.</li>
-<li><strong>SOA Record Errors</strong>: The Start of Authority record has a complex format that's easy to get wrong.</li>
-</ol>
-<h2 id="best-practices">Best Practices</h2>
-<ol>
-<li><strong>Use Version Control</strong>: Track changes to your zone files.</li>
-<li><strong>Test Before Deployment</strong>: Always validate before pushing changes to production.</li>
-<li><strong>Maintain Documentation</strong>: Keep notes about your DNS configuration.</li>
-<li><strong>Implement Automated Checks</strong>: Set up CI/CD pipelines to validate zone files automatically.</li>
-<li><strong>Monitor DNS Health</strong>: Regularly check that your DNS is resolving correctly.</li>
-</ol>
-<h2 id="conclusion">Conclusion</h2>
-<p>Taking the time to properly validate DNS zone files might seem tedious, but it's a crucial step in maintaining a reliable online presence. By catching errors before they propagate, you can avoid downtime and maintain trust with your users. Whether you're managing a personal blog or enterprise infrastructure, proper DNS hygiene is essential for a smooth-running internet presence.</p>
 <hr>
 <p>Thank you for reading!</p>
 <p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>

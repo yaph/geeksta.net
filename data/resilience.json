@@ -1,0 +1,244 @@
+{
+  "challenges": [
+    {
+      "day": 1,
+      "title": "The Baseline Breath",
+      "description": "Perform 5 minutes of 'Physiological Sighs.' Inhale deeply through the nose, then take a sharp, short second inhale to fully expand the lungs, followed by a long, slow exhale through the mouth. Do this upon waking.",
+      "tip": "This breathing pattern quickly calms your nervous system and resets your stress response.",
+      "category": "biological",
+      "time_required": 5
+    },
+    {
+      "day": 2,
+      "title": "Morning Light",
+      "description": "Get 10 minutes of morning sunlight within 30 minutes of waking. Leave your phone inside. Just be present.",
+      "tip": "Morning light helps regulate your circadian rhythm and boosts mood-enhancing neurotransmitters.",
+      "category": "biological",
+      "time_required": 10
+    },
+    {
+      "day": 3,
+      "title": "Digital Sunset",
+      "description": "Turn off all screens 60 minutes before your intended bedtime. Read a book, listen to music, or talk with someone.",
+      "tip": "Reducing blue light exposure before bed improves sleep quality, which is foundational for resilience.",
+      "category": "biological",
+      "time_required": 60
+    },
+    {
+      "day": 4,
+      "title": "The Gratitude Scan",
+      "description": "Before bed, write down or mentally note 3 specific things you are grateful for from your day. No repeats.",
+      "tip": "Gratitude practice shifts your focus from what's lacking to what's abundant, building psychological resources.",
+      "category": "psychological",
+      "time_required": 3
+    },
+    {
+      "day": 5,
+      "title": "Hydration Check",
+      "description": "Drink a large glass of water before your first coffee or tea. Carry a water bottle and aim to finish it by 2 PM and refill it.",
+      "tip": "Proper hydration improves cognitive function and energy levels, helping you better handle daily stressors.",
+      "category": "biological",
+      "time_required": 2
+    },
+    {
+      "day": 6,
+      "title": "The 'One Thing' Control Focus",
+      "description": "When you feel stressed or overwhelmed today, ask: 'What is one small thing within my control right now?' Then do it (e.g., organize your desk, send one email, walk for 2 minutes).",
+      "tip": "This practice builds agency by shifting focus from what you can't control to what you can.",
+      "category": "psychological",
+      "time_required": 5
+    },
+    {
+      "day": 7,
+      "title": "Weekly Reflection",
+      "description": "Review your week. Which practice felt easiest? Which was hardest? What did you learn about your baseline stress levels?",
+      "tip": "Reflection consolidates learning and helps you identify which resilience practices work best for you.",
+      "category": "psychological",
+      "time_required": 10
+    },
+    {
+      "day": 8,
+      "title": "Thought Distancing",
+      "description": "Catch a negative self-critical thought and reframe it: 'I'm having the thought that...' (e.g., 'I'm having the thought that I'll fail').",
+      "tip": "This creates psychological distance from negative thoughts, reducing their emotional impact.",
+      "category": "psychological",
+      "time_required": 2
+    },
+    {
+      "day": 9,
+      "title": "The View from Above",
+      "description": "When a problem arises, pause and imagine viewing it from 10,000 feet in the air. Notice how the perceived size shifts.",
+      "tip": "Perspective-taking reduces emotional reactivity and helps you see the bigger picture.",
+      "category": "psychological",
+      "time_required": 3
+    },
+    {
+      "day": 10,
+      "title": "Voluntary Discomfort - Cold",
+      "description": "End your shower with 30 seconds of cold water. Focus on controlling your breath and accepting the discomfort.",
+      "tip": "Controlled exposure to discomfort builds tolerance and proves you can handle challenging sensations.",
+      "category": "biological",
+      "time_required": 1
+    },
+    {
+      "day": 11,
+      "title": "Stress Inoculation Practice",
+      "description": "Do one thing that makes you slightly nervous (e.g., make a phone call you've been avoiding, ask a question in a meeting).",
+      "tip": "Facing manageable fears builds evidence that you can handle discomfort and survive.",
+      "category": "psychological",
+      "time_required": 15
+    },
+    {
+      "day": 12,
+      "title": "Radical Acceptance",
+      "description": "Practice acceptance. State a difficult feeling and add, '...and that's okay.' (e.g., 'I feel anxious about this, and that's okay.').",
+      "tip": "Acceptance reduces the secondary suffering that comes from resisting our initial emotions.",
+      "category": "psychological",
+      "time_required": 2
+    },
+    {
+      "day": 13,
+      "title": "Find the 'And'",
+      "description": "Identify a current struggle. Acknowledge the pain, then find a 'both/and' statement. (e.g., 'This is challenging AND I am learning.').",
+      "tip": "Both/and thinking prevents black-and-white reasoning and builds cognitive flexibility.",
+      "category": "psychological",
+      "time_required": 5
+    },
+    {
+      "day": 14,
+      "title": "Weekly Reflection",
+      "description": "What was the most powerful mindset shift you experienced this week? Which tool felt most useful?",
+      "tip": "Regular reflection helps integrate new skills into your identity and daily life.",
+      "category": "psychological",
+      "time_required": 10
+    },
+    {
+      "day": 15,
+      "title": "Make Your Bed",
+      "description": "Start your day with this small, completed task. Acknowledge this first win.",
+      "tip": "Small acts of completion build momentum and reinforce your sense of agency.",
+      "category": "psychological",
+      "time_required": 2
+    },
+    {
+      "day": 16,
+      "title": "The 'Finished' List",
+      "description": "At day's end, write down 3-5 things you did accomplish, however small. Counter the brain's focus on what's left undone.",
+      "tip": "Focusing on completions builds self-efficacy and counters the negativity bias.",
+      "category": "psychological",
+      "time_required": 3
+    },
+    {
+      "day": 17,
+      "title": "Self-Compassion Break",
+      "description": "In a moment of difficulty, place a hand on your heart and say: 'This is a moment of suffering. Suffering is part of life. May I be kind to myself.'",
+      "tip": "Self-compassion activates the caregiving system, reducing cortisol and increasing feelings of safety.",
+      "category": "psychological",
+      "time_required": 2
+    },
+    {
+      "day": 18,
+      "title": "Identity Statement",
+      "description": "Write down and say aloud: 'I am someone who does hard things.' Recall one piece of evidence from your past.",
+      "tip": "Identity-level changes create lasting resilience by rewiring self-perception at the core.",
+      "category": "psychological",
+      "time_required": 3
+    },
+    {
+      "day": 19,
+      "title": "Act 'As If'",
+      "description": "Choose one quality of a resilient person (calm, decisive, optimistic). For today, act 'as if' you already embody it.",
+      "tip": "Behavior often precedes belief - \"faking it till you make it\" has neurological validity.",
+      "category": "psychological",
+      "time_required": 1
+    },
+    {
+      "day": 20,
+      "title": "Voluntary Discomfort - Physical",
+      "description": "Do a physical workout that is slightly harder or longer than your usual. Focus on finishing.",
+      "tip": "Physical challenges build mental fortitude and prove your capacity exceeds your comfort zone.",
+      "category": "biological",
+      "time_required": 30
+    },
+    {
+      "day": 21,
+      "title": "Weekly Reflection",
+      "description": "How did taking small, purposeful actions change your sense of control? Did the identity statement feel true?",
+      "tip": "Tracking your growth in agency and identity reinforces the new neural pathways you're building.",
+      "category": "psychological",
+      "time_required": 10
+    },
+    {
+      "day": 22,
+      "title": "The One-Message Connection",
+      "description": "Send a thoughtful, unexpected text or message to someone you care about. No agenda, just connection.",
+      "tip": "Social connection releases oxytocin, which directly counteracts stress hormones.",
+      "category": "social",
+      "time_required": 5
+    },
+    {
+      "day": 23,
+      "title": "Active Listening",
+      "description": "In a conversation, focus entirely on understanding. Don't formulate your response while they talk. Ask a follow-up question.",
+      "tip": "Deep listening strengthens relationships and gets you out of your own head.",
+      "category": "social",
+      "time_required": 10
+    },
+    {
+      "day": 24,
+      "title": "Make It Fun",
+      "description": "Intentionally inject a moment of lightheartedness or humor into your day. Tell a joke, listen to a fun song, watch a funny clip.",
+      "tip": "Hor and joy are survival tools that shift your nervous system from defense to recovery mode.",
+      "category": "psychological",
+      "time_required": 5
+    },
+    {
+      "day": 25,
+      "title": "Ask for Help",
+      "description": "Proactively ask for a small piece of help, advice, or support. Practice vulnerability.",
+      "tip": "Asking for help builds interdependence and counters the myth that resilience means going it alone.",
+      "category": "social",
+      "time_required": 5
+    },
+    {
+      "day": 26,
+      "title": "Shared Experience",
+      "description": "Do a simple activity with someone else—a walk, a meal, a coffee break—with phones put away.",
+      "tip": "Shared experiences create 'collective effervescence' that boosts mood and connection.",
+      "category": "social",
+      "time_required": 20
+    },
+    {
+      "day": 27,
+      "title": "The 'Benefit-Finding' Narrative",
+      "description": "Think of a past difficulty. Write 2-3 sentences about what you learned or how you grew from it.",
+      "tip": "Creating redemptive narratives transforms past pain into sources of strength and wisdom.",
+      "category": "psychological",
+      "time_required": 8
+    },
+    {
+      "day": 28,
+      "title": "Plan Your Future Practice",
+      "description": "Review the past 27 days. Which 3-5 practices had the biggest impact? Write them down as your 'Personal Resilience Toolkit.'",
+      "tip": "Identifying your most effective practices ensures you'll continue using them beyond this challenge.",
+      "category": "psychological",
+      "time_required": 15
+    },
+    {
+      "day": 29,
+      "title": "Full System Reset",
+      "description": "Combine your best practices from yesterday's reflection, for example: morning light, a calming breath session, a small act of connection, and a moment of self-compassion.",
+      "tip": "Integrating multiple resilience practices creates synergistic effects greater than their individual parts.",
+      "category": "integrated",
+      "time_required": 20
+    },
+    {
+      "day": 30,
+      "title": "Celebrate & Integrate",
+      "description": "Acknowledge your commitment. Do something enjoyable to mark the end of the challenge. Your goal now is integration.",
+      "tip": "Celebration reinforces positive behavior and marks the transition from challenge to lifestyle.",
+      "category": "psychological",
+      "time_required": 30
+    }
+  ]
+}

@@ -7,6 +7,20 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Build Mental Resilience: A 30-Day Challenge Inspired by Science]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/resilience-challenge-introduction/]]></link>
+        <description><![CDATA[<p>Start building resilience with a free 30-day challenge. This introduction explains the science-backed daily practices for lasting mental strength.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/resilience-challenge-introduction/]]></guid>
+        <pubDate>Mon, 06 Oct 2025 13:44:24 </pubDate>
+    </item>
+    <item>
+        <title><![CDATA[30-Day Resilience Challenge]]></title>
+        <link><![CDATA[https://geeksta.net/challenge/resilience/]]></link>
+        <description><![CDATA[<p></p>]]></description>
+        <guid><![CDATA[https://geeksta.net/challenge/resilience/]]></guid>
+        <pubDate>Sun, 05 Oct 2025 22:36:05 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[Setting Up Google Drive Backups on Ubuntu with rclone]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/setting-up-google-drive-backups-on-ubuntu-with-rclone/]]></link>
         <description><![CDATA[<p>Learn how to set up automated backups from Ubuntu Linux to Google Drive using rclone, including OAuth setup, backup scripts, and scheduling with cron.</p>]]></description>
@@ -61,21 +75,5 @@
         <description><![CDATA[<p>This design features a striking tiger illustration that fuses typography and wildlife in a dynamic, high-contrast layout. The side-profile silhouette captures the tiger mid-leap, radiating energy and strength. The body is creatively filled with the word...</p><img src="https://geeksta.net/img/large/word-art-tiger-white.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/word-art-tiger-white/]]></guid>
         <pubDate>Wed, 18 Jun 2025 00:00:00 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Argentina Flag Vertical Design - Celebrate Your Argentine Heritage]]></title>
-        <link><![CDATA[https://geeksta.net/design/flag-argentina-vertical/]]></link>
-        <description><![CDATA[<p>Show your love for Argentina with this beautiful vertical flag design! Whether you're supporting the national soccer team, honoring your heritage, or simply admiring the iconic blue and white colors, this striking design makes a perfect statement piece.</p><img src="https://geeksta.net/img/large/flag-argentina-vertical.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/flag-argentina-vertical/]]></guid>
-        <pubDate>Tue, 17 Jun 2025 00:00:00 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Ram Head Silhouette Horned Animal Tattoo Art Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/tattoo-art-ram/]]></link>
-        <description><![CDATA[<p>A bold, graphic illustration of a ram's head, rendered in a tattoo-inspired style with intricate linework and tribal patterns. The ram faces forward with large, curling horns and stylized, symmetrical decorations emphasizing strength and power.
-
-Ideal...</p><img src="https://geeksta.net/img/large/tattoo-art-ram.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/tattoo-art-ram/]]></guid>
-        <pubDate>Fri, 13 Jun 2025 00:00:00 </pubDate>
     </item>
 </channel></rss>

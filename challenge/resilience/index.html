@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30-Day Resilience Challenge | Geeksta</title>
+<meta name="author" content="Ramiro Gómez">    <link rel="canonical" itemprop="url" href="https://geeksta.net/challenge/resilience/">
+    <link rel="icon" type="image/png" href="/img/icon-small.png">
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Geeksta All Posts RSS feed">
+
+<link rel="stylesheet" href="/css/challenge.css">    </head>
+<body>
+    <main class="container">
+        <div class="app-header">
+    <h1>30-Day Resilience Challenge</h1>
+    <p>Build mental strength one day at a time</p>
+</div>
+
+<div class="content">
+    <!-- Introduction Screen -->
+    <div class="intro-screen" id="introScreen">
+        <h2>Start Building Mental Strength Today</h2>
+        <p>Build lasting mental resilience through daily micro-practices backed by neuroscience and psychology. Each 5-10 minute exercise helps rewire your brain to handle stress with more calm and bounce forward from challenges.</p>
+        <p>You'll develop practical skills for emotional regulation and mental flexibility. These are the same tools used by therapists, athletes, and high-performers to thrive under pressure.</p>
+        <p>Start with Day 1 and progress naturally. The program guides you to your next challenge automatically. What matters most is consistent practice, not perfect execution.</p>
+        <button class="btn" id="startChallenge">Start Challenge</button>
+        <div class="info-footnote">
+            <a href="/geeklog/resilience-challenge-introduction/" target="_blank">ℹ️ Learn how this tool works</a>
+        </div>
+    </div>
+
+    <!-- Challenge Screen -->
+    <div class="challenge-screen hidden" id="challengeScreen">
+        <div class="challenge-header">
+            <div class="day-indicator">Day <span id="currentDay">1</span></div>
+            <div class="progress">
+                <span id="completedDays">0</span>/30 Completed
+                <button class="btn-reset" id="resetProgress">⟲ Reset</button>
+            </div>
+        </div>
+
+        <div class="challenge-card">
+            <h2 class="challenge-title" id="challengeTitle">Day 1: The Baseline Breath</h2>
+            <div class="challenge-description" id="challengeDescription">
+                <p>Perform 5 minutes of "Physiological Sighs." Inhale deeply through the nose, then take a sharp, short second inhale to fully expand the lungs, followed by a long, slow exhale through the mouth. Do this upon waking.</p>
+                <div class="challenge-tip">
+                    <strong>Why this works:</strong> This breathing pattern quickly calms your nervous system and resets your stress response.
+                </div>
+            </div>
+
+            <div class="completion-message" id="completionMessage">
+                Great job! You've completed today's challenge. See you tomorrow!
+            </div>
+
+            <button class="btn btn-complete" id="completeChallenge">Mark as Complete</button>
+        </div>
+
+        <div class="navigation">
+            <button class="btn btn-prev" id="prevDay">Previous Day</button>
+            <button class="btn" id="nextDay">Next Day</button>
+        </div>
+    </div>
+</div>
+    </main>
+
+<script src="/js/resilience.js"></script><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MFQJ09STFE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MFQJ09STFE');
+</script></body>
+</html>

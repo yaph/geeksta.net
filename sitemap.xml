@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc><![CDATA[https://geeksta.net/geeklog/resilience-challenge-introduction/]]></loc><lastmod>2025-10-06</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/challenge/resilience/]]></loc><lastmod>2025-10-06</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/setting-up-google-drive-backups-on-ubuntu-with-rclone/]]></loc><lastmod>2025-09-30</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/geeklog/protecting-your-email-server/]]></loc><lastmod>2025-09-05</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/protecting-your-email-server/]]></loc><lastmod>2025-10-04</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/the-centenarian-decathlon/]]></loc><lastmod>2025-08-19</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/the-pros-and-cons-of-cron-jobs/]]></loc><lastmod>2025-08-05</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/word-art-fierce-tiger-black/]]></loc><lastmod>2025-08-11</lastmod></url>
@@ -19,7 +21,7 @@
 <url><loc><![CDATA[https://geeksta.net/design/love-grumpy-owl/]]></loc><lastmod>2025-08-11</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/server-failover-a-guide-for-system-administrators/]]></loc><lastmod>2025-06-02</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/fixing-dovecot-diffie-hellman-parameter-error/]]></loc><lastmod>2025-05-29</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/geeklog/how-to-search-and-view-mbox-email-archives/]]></loc><lastmod>2025-05-24</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/how-to-search-and-view-mbox-email-archives/]]></loc><lastmod>2025-10-04</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/troubleshooting-database-load-issues-on-debian-linux/]]></loc><lastmod>2025-04-03</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/checking-dns-zone-files/]]></loc><lastmod>2025-04-01</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/smalltalk-1972-yellow/]]></loc><lastmod>2025-08-11</lastmod></url>
