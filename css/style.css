@@ -98,3 +98,14 @@ img.logo {
     vertical-align: middle; /* to make sure images behave like blocks */
     width: 100%;
 }
+
+/* chats */
+.prompt {
+    font-weight: bold;
+    font-size: 1.4em;
+    color: var(--color-success);
+}
+
+.think {
+    white-space: pre-wrap;
+}

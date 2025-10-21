@@ -7,6 +7,13 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Chat with GLM 4.6 via Ollama Cloud]]></title>
+        <link><![CDATA[https://geeksta.net/ai/chatlog/glm-4.6-2025-10-17/]]></link>
+        <description><![CDATA[<p>A meta-discussion about GLM's inner workings, communication style, and development process, driven by insightful user feedback.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/ai/chatlog/glm-4.6-2025-10-17/]]></guid>
+        <pubDate>Tue, 21 Oct 2025 21:15:00 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[Build Mental Resilience: A 30-Day Challenge Inspired by Science]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/resilience-challenge-introduction/]]></link>
         <description><![CDATA[<p>Start building resilience with a free 30-day challenge. This introduction explains the science-backed daily practices for lasting mental strength.</p><img src="/img/tools/resilience-challenge.png" alt="Preview Image">]]></description>
@@ -67,13 +74,6 @@
         <link><![CDATA[https://geeksta.net/design/word-art-tiger-black/]]></link>
         <description><![CDATA[<p>This design features a striking tiger illustration that fuses typography and wildlife in a dynamic, high-contrast layout. The side-profile silhouette captures the tiger mid-leap, radiating energy and strength. The body is creatively filled with the word...</p><img src="https://geeksta.net/img/large/word-art-tiger-black.jpg" alt="Preview Image">]]></description>
         <guid><![CDATA[https://geeksta.net/design/word-art-tiger-black/]]></guid>
-        <pubDate>Wed, 18 Jun 2025 00:00:00 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Leaping Tiger Word Art Silhouette Typography Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/word-art-tiger-white/]]></link>
-        <description><![CDATA[<p>This design features a striking tiger illustration that fuses typography and wildlife in a dynamic, high-contrast layout. The side-profile silhouette captures the tiger mid-leap, radiating energy and strength. The body is creatively filled with the word...</p><img src="https://geeksta.net/img/large/word-art-tiger-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/word-art-tiger-white/]]></guid>
         <pubDate>Wed, 18 Jun 2025 00:00:00 </pubDate>
     </item>
 </channel></rss>
