@@ -103,7 +103,7 @@ img.logo {
 .prompt {
     font-weight: bold;
     font-size: 1.4em;
-    color: var(--color-success);
+    color: var(--color-primary);
 }
 
 .think {
