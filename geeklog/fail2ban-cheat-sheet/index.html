@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fail2ban Cheat Sheet for Sysadmins | Geeksta</title>
+<meta name="description" content="Fail2ban is an essential tool for protecting Linux systems from brute-force attacks by monitoring logs and banning IPs that exhibit malicious behavior. This cheat sheet provides the most important..."><meta name="author" content="Ramiro Gómez"><link rel="canonical" itemprop="url" href="http://localhost:8080/geeklog/fail2ban-cheat-sheet/">
+<link rel="icon" type="image/png" href="/img/icon-small.png">
+<link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Geeksta All Posts RSS feed">    <link rel="stylesheet" href="/vendor/chota.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/dropdown.css">
+
+</head>
+<body>
+    <header><nav class="nav dark">
+        <div class="nav-left">
+            <a class="brand" href="/"><img class="logo" src="/img/icon-small.png" alt="logo">Geeksta</a>
+        </div>
+        <ul class="nav-right">
+            <li>
+                <a href="#">Sections ▾</a>
+                <ul class="dropdown">
+                    <li><a href="/reviews/">Book Reviews</a></li>
+                    <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
+                    <li><a href="/visualizations/">Data Visualizations</a></li>
+                    <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
+                    <li><a href="/events/">Geek Events</a></li>
+                    <li><a href="/screencasts/">Screencasts</a></li>
+                    <li><a href="/videos/">Videos</a></li>
+                </ul>
+            </li>
+            <li><a href="/geeklog/">Geeklog</a></li>
+            <li><a href="/merch/">Merch</a></li>
+            <li><a href="/tools/">Tools</a></li>
+        </ul>
+    </nav></header>
+
+    <main class="container">
+<div class="row">
+    <div class="col-9-md">
+        <h1>Fail2ban Cheat Sheet for Sysadmins</h1>
+        <p>Fail2ban is a critical tool for safeguarding servers against brute-force attacks by monitoring logs and banning malicious IPs. This cheat sheet provides the most important concepts and commands for managing Fail2ban effectively.</p>
+<h2 id="1-core-concepts">1. Core Concepts</h2>
+<ul>
+<li><strong>Jail</strong>: A Fail2ban unit that defines which logs to monitor, filter rules, and actions (e.g., banning an IP). Example: SSH protection with <code>sshd</code>.</li>
+<li><strong>Filter</strong>: A regex-based rule set to identify bad behavior in logs.</li>
+<li><strong>Action</strong>: The response triggered by Fail2ban (e.g., banning an IP using <code>iptables</code>).</li>
+<li><strong>Ban Time</strong>: How long IPs stay banned (seconds).</li>
+<li><strong>Max Retry</strong>: Maximum failed login attempts before banning an IP.</li>
+</ul>
+<h2 id="2-service-management">2. Service Management</h2>
+<p>Start Fail2ban service:</p>
+<pre><code class="language-bash">sudo systemctl start fail2ban
+</code></pre>
+<p>Stop Fail2ban service:</p>
+<pre><code class="language-bash">sudo systemctl stop fail2ban
+</code></pre>
+<p>Restart Fail2ban service (for major configuration changes):</p>
+<pre><code class="language-bash">sudo systemctl restart fail2ban
+</code></pre>
+<p>Reload Fail2ban service (for minor configuration changes):</p>
+<pre><code class="language-bash">sudo fail2ban-client reload
+</code></pre>
+<p>Enable Fail2ban at startup:</p>
+<pre><code class="language-bash">sudo systemctl enable fail2ban
+</code></pre>
+<p>Check Fail2ban service status:</p>
+<pre><code class="language-bash">sudo systemctl status fail2ban
+</code></pre>
+<h2 id="3-reload-vs-restart">3. Reload vs Restart</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Action</strong></th>
+<th><strong>When to Use</strong></th>
+<th><strong>Impact</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fail2ban-client reload</code></td>
+<td>Use for minor configuration changes like adjusting <code>bantime</code>, <code>maxretry</code>, or adding new jails.</td>
+<td>Reloads the active configuration without disrupting bans. Active jails remain functional.</td>
+</tr>
+<tr>
+<td><code>systemctl restart fail2ban</code></td>
+<td>Use for major changes, like adjustments in <code>/etc/fail2ban/fail2ban.conf</code>, or when changing Fail2ban actions.</td>
+<td>Fully restarts Fail2ban, reinitializing all settings and clearing current ban lists.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Best Practice</strong>: Begin with <code>reload</code>. If changes are not applied or functional issues occur, use <code>restart</code>.</p>
+<h2 id="4-key-configuration-files">4. Key Configuration Files</h2>
+<ul>
+<li>Main Configuration: <code>/etc/fail2ban/fail2ban.conf</code></li>
+<li>Jail Configuration: <code>/etc/fail2ban/jail.conf</code> or <code>/etc/fail2ban/jail.local</code> (use <code>jail.local</code> for custom settings to avoid overwrites during updates).</li>
+<li>Log File: <code>/var/log/fail2ban.log</code></li>
+</ul>
+<h2 id="5-managing-jails">5. Managing Jails</h2>
+<p>View active jails:</p>
+<pre><code class="language-bash">sudo fail2ban-client status
+</code></pre>
+<p>Get detailed status of a specific jail:</p>
+<pre><code class="language-bash">sudo fail2ban-client status &lt;jail_name&gt;
+</code></pre>
+<p>Ban an IP manually in a jail:</p>
+<pre><code class="language-bash">sudo fail2ban-client set &lt;jail_name&gt; banip &lt;IP_address&gt;
+</code></pre>
+<p>Unban an IP from a jail:</p>
+<pre><code class="language-bash">sudo fail2ban-client set &lt;jail_name&gt; unbanip &lt;IP_address&gt;
+</code></pre>
+<p>Unban all IPs from a specific jail:</p>
+<pre><code class="language-bash">sudo fail2ban-client set &lt;jail_name&gt; unban --all
+</code></pre>
+<h2 id="6-sample-jail-configuration">6. Sample Jail Configuration</h2>
+<p>Customize <code>/etc/fail2ban/jail.local</code> to protect SSH:</p>
+<pre><code class="language-ini">[DEFAULT]
+# Defaults for all jails
+ignoreip = 127.0.0.1/8 192.168.1.0/24  # Whitelist specific IPs or ranges
+bantime = 3600                          # 1 hour ban duration
+findtime = 600                          # Time window to detect multiple failed attempts
+maxretry = 3                            # Max failed attempts before banning
+backend = auto                          # Log backend, usually auto-detected
+
+[sshd]
+enabled = true                          # Enable the SSH jail
+port = ssh                              # Override port if not default
+logpath = /var/log/auth.log             # Path to SSH authentication log
+filter = sshd                           # Use the SSH filter for matching logs
+</code></pre>
+<p>After editing:</p>
+<pre><code class="language-bash"># Reload Fail2ban to apply changes
+sudo fail2ban-client reload
+</code></pre>
+<h2 id="7-analyzing-logs">7. Analyzing Logs</h2>
+<p>Monitor Fail2ban activity:</p>
+<pre><code class="language-bash">sudo tail -f /var/log/fail2ban.log
+</code></pre>
+<p>Find banned IPs in the logs:</p>
+<pre><code class="language-bash">grep 'Ban' /var/log/fail2ban.log
+</code></pre>
+<h2 id="8-create-a-custom-jail">8. Create a Custom Jail</h2>
+<p>To protect Apache from login-related brute-force attacks:</p>
+<ol>
+<li>
+<p>Add this to <code>/etc/fail2ban/jail.local</code>:</p>
+<p><code>ini
+[apache-auth]
+enabled = true
+port = http,https
+filter = apache-auth
+logpath = /var/log/apache2/error.log
+maxretry = 3
+bantime = 3600</code></p>
+</li>
+<li>
+<p>Create the filter <code>/etc/fail2ban/filter.d/apache-auth.conf</code>:</p>
+<p><code>ini
+[Definition]
+failregex = .*client &lt;HOST&gt;.*authorization failed.*
+ignoreregex =</code></p>
+</li>
+<li>
+<p>Reload Fail2ban to apply:</p>
+<p><code>bash
+sudo fail2ban-client reload</code></p>
+</li>
+<li>
+<p>Test the custom filter:</p>
+<p><code>bash
+sudo fail2ban-regex /var/log/apache2/error.log /etc/fail2ban/filter.d/apache-auth.conf</code></p>
+</li>
+</ol>
+<h2 id="9-debugging">9. Debugging</h2>
+<p>Check configuration syntax:</p>
+<pre><code class="language-bash">sudo fail2ban-client -d
+</code></pre>
+<p>View system logs for Fail2ban:</p>
+<pre><code class="language-bash">journalctl -u fail2ban
+</code></pre>
+<h2 id="10-persistent-bans-across-restarts">10. Persistent Bans Across Restarts</h2>
+<p>If you want bans to persist after Fail2ban is restarted:</p>
+<ol>
+<li>
+<p>Enable persistent bans in <code>/etc/fail2ban/jail.local</code>:</p>
+<p><code>ini
+[DEFAULT]
+dbfile = /var/lib/fail2ban/fail2ban.sqlite3</code></p>
+</li>
+<li>
+<p>Restart Fail2ban:</p>
+<p><code>bash
+sudo systemctl restart fail2ban</code></p>
+</li>
+</ol>
+<h2 id="11-iptables-integration">11. iptables Integration</h2>
+<p>To view the <code>iptables</code> rules created by Fail2ban:</p>
+<pre><code class="language-bash">sudo iptables -L -n
+</code></pre>
+<p>To remove or flush all Fail2ban-related rules:</p>
+<pre><code class="language-bash">sudo iptables -F
+</code></pre>
+<h2 id="12-security-best-practices">12. Security Best Practices</h2>
+<ul>
+<li>Always whitelist critical IPs using <code>ignoreip</code> to prevent accidental bans.</li>
+<li>Customize <code>jail.local</code> for site-specific setups (avoid editing <code>jail.conf</code>).</li>
+<li>Regularly monitor <code>/var/log/fail2ban.log</code> for suspicious activity or misconfigurations.</li>
+<li>Periodically test your filters using: <code>sudo fail2ban-regex &lt;logfile&gt; &lt;filter_file&gt;</code>.</li>
+<li>Enable email alerts for ban events by customizing the <code>action</code> parameter in your jails.</li>
+</ul>
+<p>Fail2ban is a powerful tool to lock down your system against brute-force attacks. Regularly monitor logs, refine filters, and keep configs well-maintained for optimal performance and security.</p>
+    </div>
+    <div class="col">
+
+<h3>Featured Merch</h3>
+<figure class="preview">
+    <a href="/design/hack-the-planet-green/">
+            <img class="b-lazy" src="/img/large/hack-the-planet-green.jpg" alt="Hack the Planet - Green Globe Design for Computer Hackers" />
+        <figcaption>Hack the Planet - Green Globe Design for Computer Hackers</figcaption>
+    </a>
+</figure>
+
+
+<h3>Latest Posts</h3>
+<ul>
+        <li><a href="/geeklog/resilience-challenge-introduction/">Build Mental Resilience: A 30-Day Challenge Inspired by Science</a></li>
+        <li><a href="/geeklog/setting-up-google-drive-backups-on-ubuntu-with-rclone/">Setting Up Google Drive Backups on Ubuntu with rclone</a></li>
+        <li><a href="/geeklog/protecting-your-email-server/">Protecting Your Email Server: SASL Authentication and fail2ban Defense</a></li>
+        <li><a href="/geeklog/the-centenarian-decathlon/">The Centenarian Decathlon: A Practical Guide to Thriving into Your 90s and Beyond</a></li>
+</ul>
+
+<h3>Featured Book</h3>
+<figure class="preview">
+    <a href="https://www.amazon.com/dp/B0C5B9JG57?tag=geeksta-20">
+        <img alt="eBook cover" src="/img/books/chatgpt-interview-prompting.jpg"><br>
+        <figcaption>Buy on Amazon</figcaption>
+    </a>
+</figure>
+
+<hr>
+
+<a href="/rss.xml" class="button primary">Subscribe to RSS Feed</a></li>    </div>
+</div>
+<hr>
+<p>Published by <a href="https://ramiro.org/">Ramiro Gómez</a> on <time datetime="2025-11-20T22:08">November 20, 2025</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+<p><strong>Tags:</strong>
+    <a class="button outline" href="/tags/sysadmin/">sysadmin</a>
+    <a class="button outline" href="/tags/cheat-sheet/">cheat sheet</a>
+    <a class="button outline" href="/tags/fail2ban/">fail2ban</a>
+</p>
+<p class="text-grey"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p><hr>
+<p><strong>Share post:</strong>
+<a rel="nofollow" href="https://www.facebook.com/sharer.php?u=http://localhost:8080/geeklog/fail2ban-cheat-sheet/&t=Fail2ban%20Cheat%20Sheet%20for%20Sysadmins" class="button success">Facebook</a>
+<a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:8080/geeklog/fail2ban-cheat-sheet/&title=Fail2ban%20Cheat%20Sheet%20for%20Sysadmins" class="button success">LinkedIn</a>
+<a rel="nofollow" href="https://reddit.com/submit?url=http://localhost:8080/geeklog/fail2ban-cheat-sheet/&title=Fail2ban%20Cheat%20Sheet%20for%20Sysadmins" class="button success">Reddit</a>
+<a rel="nofollow" href="https://twitter.com/share?url=http://localhost:8080/geeklog/fail2ban-cheat-sheet/&text=Fail2ban%20Cheat%20Sheet%20for%20Sysadmins" class="button success">Twitter</a>
+</p>
+<div class="card vm">
+    <h3>Merchandise</h3>
+    <div class="row">
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/caution-i-test-in-production/">
+            <img class="b-lazy" src="/img/large/caution-i-test-in-production.jpg" alt="I Test in Production - Funny Developer Caution Sign Design" />
+        <figcaption>I Test in Production - Funny Developer Caution Sign Design</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/hack-the-planet-green/">
+            <img class="b-lazy" src="/img/large/hack-the-planet-green.jpg" alt="Hack the Planet - Green Globe Design for Computer Hackers" />
+        <figcaption>Hack the Planet - Green Globe Design for Computer Hackers</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/run-bsd/">
+            <img class="b-lazy" src="/img/large/run-bsd.jpg" alt="RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins" />
+        <figcaption>RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/shrug-it-works-on-my-machine-medium-white/">
+            <img class="b-lazy" src="/img/large/shrug-it-works-on-my-machine-medium-white.jpg" alt="Shrug It Works On My Machine Funny Programmer Excuse White Design" />
+        <figcaption>Shrug It Works On My Machine Funny Programmer Excuse White Design</figcaption>
+    </a>
+</figure>
+
+    </div>
+</div>
+
+</div>    </main>
+
+    <footer class="dark"><div class="container">
+        Geeksta elsewhere: <a href="https://www.instagram.com/g33ksta/">Instagram</a> • <a href="https://www.youtube.com/@geeksta">YouTube</a> • <a href="https://www.tiktok.com/@g33ksta">TikTok</a> • <a href="https://www.facebook.com/geeksta.net/">Facebook</a>
+        <br>
+        © 2010 - 2025 Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/rss.xml">RSS Feed</a></p>
+    </div></footer>
+
+    <script src="/compiled/script.js"></script>
+
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript><script type="application/ld+json">
+{
+    "@context": "https://schema.org/",
+    "@type": "BlogPosting",
+    "@id": "http://localhost:8080/geeklog/fail2ban-cheat-sheet/#BlogPosting",
+    "mainEntityOfPage": "http://localhost:8080/geeklog/fail2ban-cheat-sheet/",
+    "headline": "Fail2ban Cheat Sheet for Sysadmins",
+    "description": "Fail2ban is an essential tool for protecting Linux systems from brute-force attacks by monitoring logs and banning IPs that exhibit malicious behavior. This cheat sheet provides the most important concepts and commands for managing Fail2ban effectively.",
+    "datePublished": "2025-11-20 22:08:28",
+    "dateModified": "2025-11-20 22:08:55.693640",
+    "author": { "@type": "Person", "name": "Ramiro Gómez", "url": "http://localhost:8080" },
+    "url": "http://localhost:8080/geeklog/fail2ban-cheat-sheet/",
+    "keywords": ["fail2ban", "cheat sheet", "sysadmin"],
+    "inLanguage": "en"
+}
+</script>
+</body>
+</html>
