@@ -7,6 +7,252 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Practical Tips to Reduce Data Usage on Phones, Tablets, and Computers]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/reduce-data-usage-guide/]]></link>
+        <description><![CDATA[<p>Discover simple, effective tips to reduce data usage on phones, tablets, and computers. Save data, lower costs, and improve your online experience with practical steps.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/reduce-data-usage-guide/]]></guid>
+        <pubDate>Sat, 29 Nov 2025 12:30:15 </pubDate>
+        <content:encoded><![CDATA[
+        <p>With the growing reliance on the Internet, managing your data usage has become more critical than ever, especially if you're on a limited or expensive mobile data plan. Excessive consumption can lead to hefty overage fees, slower tethered speeds, or simply running out of data altogether. Whether you're using a smartphone, tablet, or computer, this guide offers practical tips to help reduce data usage while staying connected and productive.</p>
+<h2 id="general-tips-for-saving-data-across-all-devices">General Tips for Saving Data Across All Devices</h2>
+<p>Before diving into device-specific suggestions, here are some universal strategies for data savings:</p>
+<ul>
+<li><strong>Utilize Wi-Fi</strong>: Always connect to a secure Wi-Fi network when one is available, particularly at home, work, or public spaces with trusted connectivity.</li>
+<li><strong>Monitor Data Usage</strong>: Most devices include tools to track your data consumption. Use them to identify high-usage apps and adjust your habits accordingly. Alternatively, mobile carriers often provide apps or dashboards to help monitor your usage.</li>
+<li><strong>Set Data Limits</strong>: Many smartphones allow you to set limits and receive alerts when you're nearing your monthly data cap. Use these tools to stay on top of your plan.</li>
+</ul>
+<p>By incorporating these general best practices, you can effectively reduce unnecessary data consumption regardless of the device you're using.</p>
+<h2 id="saving-data-on-smartphones">Saving Data on Smartphones</h2>
+<p>Smartphones are often the biggest culprits when it comes to draining mobile data. These tips will help minimize unnecessary usage:</p>
+<ol>
+<li><strong>Enable Data Saver Mode</strong>: Most smartphones have a data saver or low data mode, which restricts background app activity and optimizes data usage.</li>
+<li><strong>Restrict Background Data</strong>: Go to your phone's settings and disable background data usage for all apps, that don't need it to function properly. This ensures that apps won't pull data in the background.</li>
+<li><strong>Disable Auto-Updates</strong>: Set app updates to download only when connected to Wi-Fi instead of using your mobile data plan.</li>
+<li><strong>Reduce Streaming Quality</strong>: On video streaming apps like YouTube and Netflix, opt for lower quality (360p or lower) rather than HD or 4K.</li>
+<li><strong>Turn Off Video Autoplay</strong>: Many social media apps like Facebook, Instagram, and Twitter autoplay videos as you scroll. Turn this feature off in the app's settings to avoid unnecessary data usage.</li>
+</ol>
+<h2 id="saving-data-on-tablets">Saving Data on Tablets</h2>
+<p>Tablets are often used for entertainment and productivity. To reduce data usage on tablets, try these strategies:</p>
+<ol>
+<li><strong>Use Offline Features for Apps</strong>: Many apps—including streaming, reading, and navigation apps—allow you to download content (like maps, shows, or articles) for offline use. Download what you need while connected to Wi-Fi for future use.</li>
+<li><strong>Manage Cloud Sync Settings</strong>: Disable or limit auto-syncing of data to cloud storage like Google Drive, iCloud, or Dropbox, unless you're connected to Wi-Fi.</li>
+<li><strong>Block Ads</strong>: Install an ad blocker, which can reduce the amount of data consumed by video and banner ads on websites.</li>
+<li><strong>Choose Data-Conscious Browsers</strong>: Browsers like Opera Mini, Brave, or Puffin compress content and block unnecessary data-hogging ads or trackers automatically.</li>
+</ol>
+<h2 id="saving-data-on-computers-when-connected-to-mobile-hotspots">Saving Data on Computers (When Connected to Mobile Hotspots)</h2>
+<p>Using your mobile phone as a hotspot to connect your computer to the Internet can rapidly deplete your data. To optimize usage:</p>
+<ol>
+<li><strong>Turn Off Automatic Updates</strong>: Disable system and software updates until you're on Wi-Fi. Large updates for your operating system or applications can consume gigabytes of data. If possible, schedule updates for nighttime when you're back at home.</li>
+<li><strong>Limit File Downloads</strong>: Avoid downloading large files, such as software, videos, or games, when tethering, unless absolutely necessary.</li>
+<li><strong>Adjust Streaming Quality</strong>: Lower video quality settings on streaming platforms like YouTube, Netflix, or Amazon Prime to save data. Switch to audio-only modes if available.</li>
+<li><strong>Disable Image Loading</strong>: Some browsers allow you to turn off or reduce the quality of images, which can help significantly when browsing content-heavy websites.</li>
+<li><strong>Close Unused Programs</strong>: Shut down data-heavy applications running in the background, such as cloud storage services (Dropbox, OneDrive, etc.), to avoid unnecessary syncing.</li>
+</ol>
+<h2 id="browser-specific-tips">Browser-Specific Tips</h2>
+<p>Many web browsers now come with features to minimize data usage. Exploring the right browser and settings can save you a lot of data:</p>
+<ol>
+<li><strong>Opera Mini</strong>: This browser compresses pages, including images and text. It also reduces the size of video streams, making it a favorite for data-saving.</li>
+<li><strong>Google Chrome (with Lite Mode)</strong>: Activating Lite Mode compresses content, reduces image quality, and blocks unnecessary parts of webpages that consume data.</li>
+<li><strong>Puffin Browser</strong>: Puffin uses cloud-based data compression to process websites, which significantly lowers data use while browsing.</li>
+<li><strong>Brave Browser</strong>: Built-in ad and tracker blocking reduces data consumption and improves page load speeds.</li>
+<li><strong>Install Ad Blockers</strong>: If your browser doesn't have built-in blocking capabilities, consider adding third-party extensions like uBlock Origin to remove data-heavy ads and pop-ups.</li>
+</ol>
+<h2 id="advanced-techniques">Advanced Techniques</h2>
+<p>If you want to go the extra mile in limiting data use, here are some advanced strategies:</p>
+<ol>
+<li><strong>Use VPNs with Compression</strong>: Some VPN services offer data compression features, which reduce the size of data packets transmitted over the Internet. Popular VPNs like Opera VPN or Cloudflare often include data-saving options.</li>
+<li><strong>Optimize Streaming Services</strong>: Platforms like Spotify and Netflix let you download content over Wi-Fi for offline viewing or listening. They also allow you to reduce streaming quality, saving significant amounts of data.</li>
+<li><strong>Disable Auto-Sync Features</strong>: On all devices, turn off background sync options for non-essential apps. Synchronizing your entire photo library, for instance, can quickly eat into your data.</li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>Reducing your data consumption doesn't have to mean entirely giving up Internet conveniences. By incorporating these tips into your daily technology habits, you can still enjoy browsing, streaming, and working online while staying within your data limits. Whether you're using a smartphone, tablet, or laptop, small adjustments like managing app updates, optimizing streaming quality, and choosing data-saving modes can make a big difference.</p>
+<p>Take control of your data plan and ensure you're making the most of your Internet experience without unnecessary stress or expense!</p>
+<hr>
+<p>Thank you for reading!</p>
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
+    </item>
+    <item>
+        <title><![CDATA[Fail2ban Cheat Sheet for Sysadmins]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/fail2ban-cheat-sheet/]]></link>
+        <description><![CDATA[<p>Fail2ban is an essential tool for protecting Linux systems from brute-force attacks by monitoring logs and banning IPs that exhibit malicious behavior. This cheat sheet provides the most important concepts and commands for managing Fail2ban effectively.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/fail2ban-cheat-sheet/]]></guid>
+        <pubDate>Thu, 20 Nov 2025 22:08:28 </pubDate>
+        <content:encoded><![CDATA[
+        <p>Fail2ban is a critical tool for safeguarding servers against brute-force attacks by monitoring logs and banning malicious IPs. This cheat sheet provides the most important concepts and commands for managing Fail2ban effectively.</p>
+<h2 id="1-core-concepts">1. Core Concepts</h2>
+<ul>
+<li><strong>Jail</strong>: A Fail2ban unit that defines which logs to monitor, filter rules, and actions (e.g., banning an IP). Example: SSH protection with <code>sshd</code>.</li>
+<li><strong>Filter</strong>: A regex-based rule set to identify bad behavior in logs.</li>
+<li><strong>Action</strong>: The response triggered by Fail2ban (e.g., banning an IP using <code>iptables</code>).</li>
+<li><strong>Ban Time</strong>: How long IPs stay banned (seconds).</li>
+<li><strong>Max Retry</strong>: Maximum failed login attempts before banning an IP.</li>
+</ul>
+<h2 id="2-service-management">2. Service Management</h2>
+<p>Start Fail2ban service:</p>
+<pre><code class="language-bash">sudo systemctl start fail2ban
+</code></pre>
+<p>Stop Fail2ban service:</p>
+<pre><code class="language-bash">sudo systemctl stop fail2ban
+</code></pre>
+<p>Restart Fail2ban service (for major configuration changes):</p>
+<pre><code class="language-bash">sudo systemctl restart fail2ban
+</code></pre>
+<p>Reload Fail2ban service (for minor configuration changes):</p>
+<pre><code class="language-bash">sudo fail2ban-client reload
+</code></pre>
+<p>Enable Fail2ban at startup:</p>
+<pre><code class="language-bash">sudo systemctl enable fail2ban
+</code></pre>
+<p>Check Fail2ban service status:</p>
+<pre><code class="language-bash">sudo systemctl status fail2ban
+</code></pre>
+<h2 id="3-reload-vs-restart">3. Reload vs Restart</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Action</strong></th>
+<th><strong>When to Use</strong></th>
+<th><strong>Impact</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fail2ban-client reload</code></td>
+<td>Use for minor configuration changes like adjusting <code>bantime</code>, <code>maxretry</code>, or adding new jails.</td>
+<td>Reloads the active configuration without disrupting bans. Active jails remain functional.</td>
+</tr>
+<tr>
+<td><code>systemctl restart fail2ban</code></td>
+<td>Use for major changes, like adjustments in <code>/etc/fail2ban/fail2ban.conf</code>, or when changing Fail2ban actions.</td>
+<td>Fully restarts Fail2ban, reinitializing all settings and clearing current ban lists.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Best Practice</strong>: Begin with <code>reload</code>. If changes are not applied or functional issues occur, use <code>restart</code>.</p>
+<h2 id="4-key-configuration-files">4. Key Configuration Files</h2>
+<ul>
+<li>Main Configuration: <code>/etc/fail2ban/fail2ban.conf</code></li>
+<li>Jail Configuration: <code>/etc/fail2ban/jail.conf</code> or <code>/etc/fail2ban/jail.local</code> (use <code>jail.local</code> for custom settings to avoid overwrites during updates).</li>
+<li>Log File: <code>/var/log/fail2ban.log</code></li>
+</ul>
+<h2 id="5-managing-jails">5. Managing Jails</h2>
+<p>View active jails:</p>
+<pre><code class="language-bash">sudo fail2ban-client status
+</code></pre>
+<p>Get detailed status of a specific jail:</p>
+<pre><code class="language-bash">sudo fail2ban-client status &lt;jail_name&gt;
+</code></pre>
+<p>Ban an IP manually in a jail:</p>
+<pre><code class="language-bash">sudo fail2ban-client set &lt;jail_name&gt; banip &lt;IP_address&gt;
+</code></pre>
+<p>Unban an IP from a jail:</p>
+<pre><code class="language-bash">sudo fail2ban-client set &lt;jail_name&gt; unbanip &lt;IP_address&gt;
+</code></pre>
+<p>Unban all IPs from a specific jail:</p>
+<pre><code class="language-bash">sudo fail2ban-client set &lt;jail_name&gt; unban --all
+</code></pre>
+<h2 id="6-sample-jail-configuration">6. Sample Jail Configuration</h2>
+<p>Customize <code>/etc/fail2ban/jail.local</code> to protect SSH:</p>
+<pre><code class="language-ini">[DEFAULT]
+# Defaults for all jails
+ignoreip = 127.0.0.1/8 192.168.1.0/24  # Whitelist specific IPs or ranges
+bantime = 3600                          # 1 hour ban duration
+findtime = 600                          # Time window to detect multiple failed attempts
+maxretry = 3                            # Max failed attempts before banning
+backend = auto                          # Log backend, usually auto-detected
+
+[sshd]
+enabled = true                          # Enable the SSH jail
+port = ssh                              # Override port if not default
+logpath = /var/log/auth.log             # Path to SSH authentication log
+filter = sshd                           # Use the SSH filter for matching logs
+</code></pre>
+<p>After editing:</p>
+<pre><code class="language-bash"># Reload Fail2ban to apply changes
+sudo fail2ban-client reload
+</code></pre>
+<h2 id="7-analyzing-logs">7. Analyzing Logs</h2>
+<p>Monitor Fail2ban activity:</p>
+<pre><code class="language-bash">sudo tail -f /var/log/fail2ban.log
+</code></pre>
+<p>Find banned IPs in the logs:</p>
+<pre><code class="language-bash">grep 'Ban' /var/log/fail2ban.log
+</code></pre>
+<h2 id="8-create-a-custom-jail">8. Create a Custom Jail</h2>
+<p>To protect Apache from login-related brute-force attacks:</p>
+<ol>
+<li>
+<p>Add this to <code>/etc/fail2ban/jail.local</code>:</p>
+<p><code>ini
+[apache-auth]
+enabled = true
+port = http,https
+filter = apache-auth
+logpath = /var/log/apache2/error.log
+maxretry = 3
+bantime = 3600</code></p>
+</li>
+<li>
+<p>Create the filter <code>/etc/fail2ban/filter.d/apache-auth.conf</code>:</p>
+<p><code>ini
+[Definition]
+failregex = .*client &lt;HOST&gt;.*authorization failed.*
+ignoreregex =</code></p>
+</li>
+<li>
+<p>Reload Fail2ban to apply:</p>
+<p><code>bash
+sudo fail2ban-client reload</code></p>
+</li>
+<li>
+<p>Test the custom filter:</p>
+<p><code>bash
+sudo fail2ban-regex /var/log/apache2/error.log /etc/fail2ban/filter.d/apache-auth.conf</code></p>
+</li>
+</ol>
+<h2 id="9-debugging">9. Debugging</h2>
+<p>Check configuration syntax:</p>
+<pre><code class="language-bash">sudo fail2ban-client -d
+</code></pre>
+<p>View system logs for Fail2ban:</p>
+<pre><code class="language-bash">journalctl -u fail2ban
+</code></pre>
+<h2 id="10-persistent-bans-across-restarts">10. Persistent Bans Across Restarts</h2>
+<p>If you want bans to persist after Fail2ban is restarted:</p>
+<ol>
+<li>
+<p>Enable persistent bans in <code>/etc/fail2ban/jail.local</code>:</p>
+<p><code>ini
+[DEFAULT]
+dbfile = /var/lib/fail2ban/fail2ban.sqlite3</code></p>
+</li>
+<li>
+<p>Restart Fail2ban:</p>
+<p><code>bash
+sudo systemctl restart fail2ban</code></p>
+</li>
+</ol>
+<h2 id="11-iptables-integration">11. iptables Integration</h2>
+<p>To view the <code>iptables</code> rules created by Fail2ban:</p>
+<pre><code class="language-bash">sudo iptables -L -n
+</code></pre>
+<p>To remove or flush all Fail2ban-related rules:</p>
+<pre><code class="language-bash">sudo iptables -F
+</code></pre>
+<h2 id="12-security-best-practices">12. Security Best Practices</h2>
+<ul>
+<li>Always whitelist critical IPs using <code>ignoreip</code> to prevent accidental bans.</li>
+<li>Customize <code>jail.local</code> for site-specific setups (avoid editing <code>jail.conf</code>).</li>
+<li>Regularly monitor <code>/var/log/fail2ban.log</code> for suspicious activity or misconfigurations.</li>
+<li>Periodically test your filters using: <code>sudo fail2ban-regex &lt;logfile&gt; &lt;filter_file&gt;</code>.</li>
+<li>Enable email alerts for ban events by customizing the <code>action</code> parameter in your jails.</li>
+</ul>
+<p>Fail2ban is a powerful tool to lock down your system against brute-force attacks. Regularly monitor logs, refine filters, and keep configs well-maintained for optimal performance and security.</p>
+<hr>
+<p>Thank you for reading!</p>
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
+    </item>
+    <item>
         <title><![CDATA[Build Mental Resilience: A 30-Day Challenge Inspired by Science]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/resilience-challenge-introduction/]]></link>
         <description><![CDATA[<p>Start building resilience with a free 30-day challenge. This introduction explains the science-backed daily practices for lasting mental strength.</p><img src="/img/tools/resilience-challenge.png" alt="Preview Image">]]></description>
@@ -893,261 +1139,6 @@ openssl dhparam -out /etc/ssl/certs/dh.pem 4096
 </ul>
 <h2 id="summary">Summary</h2>
 <p>The Dovecot DH parameter error is resolved by generating cryptographic parameters with OpenSSL and configuring Dovecot to use them. Choose 2048-bit for faster generation or 4096-bit for enhanced security. After configuration, restart Dovecot to enable secure IMAP connections with proper Diffie-Hellman key exchange.</p>
-<hr>
-<p>Thank you for reading!</p>
-<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
-    </item>
-    <item>
-        <title><![CDATA[How to Search and View mbox Email Archives]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/how-to-search-and-view-mbox-email-archives/]]></link>
-        <description><![CDATA[<p>Learn how to efficiently search, navigate, and extract emails from mbox files using mutt and other command-line tools in this comprehensive step-by-step tutorial.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/how-to-search-and-view-mbox-email-archives/]]></guid>
-        <pubDate>Tue, 20 May 2025 12:28:26 </pubDate>
-        <content:encoded><![CDATA[
-        <p>The mbox format is one of the oldest and most widely used mailbox formats in Unix-like systems. Unlike more modern formats that store each message as a separate file, mbox concatenates all emails into a single text file, with special separator lines starting with "From " (often called "From_" lines) to mark the beginning of each message. This tutorial provides detailed instructions on how to effectively view and search through these files.</p>
-<h2 id="understanding-mbox-files">Understanding mbox Files</h2>
-<p>An mbox file is essentially a plain text file containing multiple email messages. The structure looks like this:</p>
-<pre><code class="language-text">From sender@example.com Wed Jan 10 12:00:00 2025
-Subject: First email subject
-From: sender@example.com
-To: recipient@example.com
-
-Content of first email...
-
-From another@example.com Thu Jan 11 15:30:00 2025
-Subject: Second email subject
-From: another@example.com
-To: recipient@example.com
-
-Content of second email...
-</code></pre>
-<p>While you could technically view this with any text editor, specialized tools provide a much better experience by properly parsing and displaying each message as a separate entity.</p>
-<h2 id="basic-viewing-with-mutt">Basic Viewing with mutt</h2>
-<p><a href="http://www.mutt.org/">Mutt</a> is a powerful terminal-based email client that handles mbox files exceptionally well. It's lightweight, fast, and provides an intuitive interface for navigating through email collections.</p>
-<h3 id="opening-an-mbox-file">Opening an mbox file:</h3>
-<pre><code class="language-bash">mutt -f /path/to/your/mbox_file
-</code></pre>
-<p>This opens the mbox file in mutt, displaying a list of all emails in an index view. Mutt will properly parse the mbox format, showing each email as a separate item with sender, date, and subject information.</p>
-<h3 id="navigation-in-mutt">Navigation in mutt:</h3>
-<p>Once inside mutt, you can navigate through emails using these keyboard shortcuts:</p>
-<ul>
-<li><strong>j/k</strong>: Move down/up in the email list (also works with arrow keys)</li>
-<li><strong>Enter</strong>: Open the selected email to view its full content</li>
-<li><strong>q</strong>: Return to the email list when viewing an email</li>
-<li><strong>q</strong>: Exit mutt completely when viewing the email list</li>
-<li><strong>Page Up/Down</strong>: Scroll through long emails when viewing a message</li>
-<li><strong>Space</strong>: Page down when reading a message</li>
-<li><strong>-</strong>: Page up when reading a message</li>
-<li><strong>Home/End</strong>: Jump to the beginning/end of an email</li>
-<li><strong>\&lt;</strong> and <strong>&gt;</strong>: Jump to the first and last email in the list</li>
-<li><strong>?</strong>: Show help screen with all available commands</li>
-</ul>
-<h3 id="marking-and-tagging-emails">Marking and tagging emails:</h3>
-<ul>
-<li><strong>t</strong>: Tag/untag the current message (useful for batch operations)</li>
-<li><strong>T</strong>: Tag messages matching a pattern</li>
-<li><strong>;</strong>: Apply the next command to all tagged messages</li>
-</ul>
-<h2 id="advanced-searching-in-mutt">Advanced Searching in mutt</h2>
-<p>Mutt provides powerful search capabilities that are particularly useful when dealing with large mbox files.</p>
-<h3 id="quick-search">Quick search:</h3>
-<ol>
-<li>Press <code>/</code> while in the email list</li>
-<li>Type your search pattern (e.g., <code>^Subject:.*Invoice-2025</code>)</li>
-<li>Press Enter to jump to the first match</li>
-<li>Press <code>n</code> to find the next match or <code>N</code> for the previous match</li>
-</ol>
-<p>The search above looks for "Invoice-2025" anywhere in the subject line. The <code>^Subject:</code> part ensures we're looking in the subject header.</p>
-<h3 id="pattern-based-searching-and-limiting">Pattern-based searching and limiting:</h3>
-<p>Mutt offers a more powerful search mechanism using patterns:</p>
-<ol>
-<li>Press <code>l</code> (lowercase L) to limit the view</li>
-<li>Enter a pattern like <code>~s "Invoice-2025"</code> to show only emails with that subject</li>
-<li>To clear the limit and see all emails again, press <code>l</code> followed by <code>all</code> or just <code>^L</code> (Ctrl+L)</li>
-</ol>
-<h3 id="common-search-patterns">Common search patterns:</h3>
-<ul>
-<li><strong>Subject search</strong>: <code>~s "Invoice-2025"</code></li>
-<li><strong>From/sender search</strong>: <code>~f "john@example.com"</code></li>
-<li><strong>To/recipient search</strong>: <code>~t "accounting@company.com"</code></li>
-<li><strong>Content/body search</strong>: <code>~b "urgent payment"</code></li>
-<li><strong>Date search</strong>: <code>~d &gt;1w</code> (emails newer than 1 week)</li>
-<li><strong>Date range</strong>: <code>~d 01/01/2025-31/01/2025</code> (emails from January 2025)</li>
-<li><strong>Has attachment</strong>: <code>~h "Content-Type: multipart"</code></li>
-</ul>
-<p>You can combine patterns with logical operators:</p>
-<ul>
-<li><strong>AND</strong>: <code>~f "john" ~s "Invoice"</code></li>
-<li><strong>OR</strong>: <code>~f "john" | ~f "jane"</code></li>
-<li><strong>NOT</strong>: <code>! ~f "spam@example.com"</code></li>
-</ul>
-<h3 id="search-on-startup">Search on startup:</h3>
-<p>Launch mutt with a pre-defined search to immediately show relevant emails:</p>
-<pre><code class="language-bash">mutt -f /path/to/mbox_file -e &quot;push /^Subject:.*Invoice-2025&lt;enter&gt;&quot;
-</code></pre>
-<p>Or to limit the view immediately upon startup:</p>
-<pre><code class="language-bash">mutt -f /path/to/mbox_file -e &quot;push l~s Invoice-2025&lt;enter&gt;&quot;
-</code></pre>
-<h2 id="alternative-tools-for-working-with-mbox-files">Alternative Tools for Working with mbox Files</h2>
-<p>While mutt is the recommended tool, there are other approaches that can be useful in certain scenarios.</p>
-<h3 id="using-grep-for-quick-inspection">Using grep for quick inspection:</h3>
-<p>For a quick peek at emails matching a pattern without opening a full email client:</p>
-<pre><code class="language-bash">grep -A 10 -B 2 &quot;Subject: Invoice-2025&quot; /path/to/mbox_file | less
-</code></pre>
-<p>This shows 2 lines before and 10 lines after each occurrence of "Subject: Invoice-2025". Adjust the numbers as needed to see more or less context.</p>
-<p>For case-insensitive search:</p>
-<pre><code class="language-bash">grep -i -A 10 -B 2 &quot;subject: invoice&quot; /path/to/mbox_file | less
-</code></pre>
-<h3 id="using-formail-from-procmail-package">Using formail (from procmail package):</h3>
-<p>The formail utility can extract specific emails from an mbox file:</p>
-<pre><code class="language-bash">formail -s grep &quot;^Subject:.*Invoice-2025&quot; &lt; mbox_file &gt; matching_emails.mbox
-</code></pre>
-<p>This creates a new mbox file containing only the emails that match the pattern. You can then view this smaller file:</p>
-<pre><code class="language-bash">mutt -f matching_emails.mbox
-</code></pre>
-<p>For more complex filtering:</p>
-<pre><code class="language-bash">formail -s awk '/^Subject:.*Invoice/ &amp;&amp; /^From:.*john/' &lt; mbox_file &gt; filtered.mbox
-</code></pre>
-<p>This extracts emails with "Invoice" in the subject AND from someone named "john".</p>
-<h2 id="practical-tips-for-working-with-mbox-files">Practical Tips for Working with mbox Files</h2>
-<p><strong>Create a temporary .muttrc file for complex operations</strong>:</p>
-<pre><code class="language-text">echo &quot;set sort=date-received&quot; &gt; temp_muttrc
-mutt -F temp_muttrc -f mbox_file
-</code></pre>
-<p><strong>Backup before modifying</strong>: Always make a copy of your mbox file before performing operations that might modify it.</p>
-<p><strong>Extract a single email</strong>: To save a specific email as a separate file:</p>
-<pre><code class="language-text">formail -s procmail &lt; mbox_file
-</code></pre>
-<p>(Use this with a .procmailrc file that defines extraction rules)</p>
-<p><strong>Split large mbox files</strong>: For exceptionally large mbox files, consider:</p>
-<pre><code class="language-text">csplit -f email- mbox_file '/^From /' '{*}'
-</code></pre>
-<p>This creates separate files for each email.</p>
-<p><strong>Convert to other formats</strong>: To convert to Maildir format:</p>
-<pre><code class="language-text">mb2md -s /path/to/mbox -d /path/to/maildir
-</code></pre>
-<p>Remember that mbox files are simple text files, so any text processing tool can work with them, but mail-specific tools like mutt will provide the best viewing experience by properly parsing and formatting the messages.</p>
-<hr>
-<p>Thank you for reading!</p>
-<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
-    </item>
-    <item>
-        <title><![CDATA[Troubleshooting Database Load Issues on Debian Linux: A Practical Guide]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/troubleshooting-database-load-issues-on-debian-linux/]]></link>
-        <description><![CDATA[<p>Learn practical steps to diagnose and resolve high database load issues on Debian Linux servers. This guide covers essential monitoring tools, query optimization techniques, and proactive measures to keep your databases running smoothly.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/troubleshooting-database-load-issues-on-debian-linux/]]></guid>
-        <pubDate>Thu, 03 Apr 2025 19:22:07 </pubDate>
-        <content:encoded><![CDATA[
-        <p>As a database administrator or system engineer, you've likely encountered the dreaded alert informing you about critical load on the database server. In this guide, I'll walk you through a systematic approach to diagnose and resolve high database load issues on Debian Linux servers.</p>
-<h2 id="understanding-the-problem-what-causes-high-database-load">Understanding the Problem: What Causes High Database Load?</h2>
-<p>Before diving into troubleshooting, let's understand what we're looking for. Database load issues typically stem from one or more of these factors:</p>
-<ul>
-<li>Poorly optimized queries consuming excessive resources</li>
-<li>Insufficient system resources (CPU, memory, disk I/O)</li>
-<li>Connection bottlenecks or connection pool exhaustion</li>
-<li>Inadequate database configuration</li>
-<li>Background processes competing for resources</li>
-</ul>
-<h2 id="your-first-response-initial-assessment">Your First Response: Initial Assessment</h2>
-<p>When you first receive that critical alert, don't panic. Start with these essential commands to get a quick overview of the situation:</p>
-<pre><code class="language-bash"># Get an overview of system resource usage
-htop
-
-# Check disk I/O statistics
-iostat -xz 1
-
-# View memory statistics
-free -h
-vmstat 1
-</code></pre>
-<p>These commands will give you an immediate sense of whether you're dealing with CPU saturation, memory pressure, or I/O bottlenecks.</p>
-<h2 id="database-specific-intelligence-gathering">Database-Specific Intelligence Gathering</h2>
-<p>Now that you have a general understanding of the system state, it's time to look specifically at your database processes:</p>
-<h3 id="for-mysqlmariadb">For MySQL/MariaDB:</h3>
-<pre><code class="language-bash"># View current database processes
-sudo mysqladmin processlist
-
-# Check database status
-sudo mysqladmin status
-
-# Examine slow queries
-sudo mysql -e &quot;SHOW FULL PROCESSLIST;&quot;
-</code></pre>
-<h3 id="for-postgresql">For PostgreSQL:</h3>
-<pre><code class="language-bash"># View active connections and their states
-sudo -u postgres psql -c &quot;SELECT count(*), state FROM pg_stat_activity GROUP BY state;&quot;
-
-# Find long-running queries
-sudo -u postgres psql -c &quot;SELECT pid, now() - query_start AS duration, query FROM pg_stat_activity WHERE state = 'active' ORDER BY duration DESC LIMIT 10;&quot;
-</code></pre>
-<h2 id="digging-deeper-detailed-investigation">Digging Deeper: Detailed Investigation</h2>
-<p>If the initial assessment doesn't reveal the obvious culprit, it's time to dig deeper:</p>
-<h3 id="analyzing-process-details">Analyzing Process Details</h3>
-<p>If you've identified a specific process causing issues, examine it more closely:</p>
-<pre><code class="language-bash"># Get detailed info on a specific process
-ps -fp &lt;PID&gt;
-
-# See what files the process has open
-lsof -p &lt;PID&gt;
-
-# View process resource limits
-cat /proc/&lt;PID&gt;/limits
-</code></pre>
-<h3 id="examining-slow-queries">Examining Slow Queries</h3>
-<p>Slow queries are often the root cause of database load issues:</p>
-<pre><code class="language-bash"># For MySQL: Enable slow query log if not already enabled
-sudo mysql -e &quot;SET GLOBAL slow_query_log = 'ON';&quot;
-sudo mysql -e &quot;SET GLOBAL long_query_time = 1;&quot;
-
-# Analyze slow query log
-sudo mysqldumpslow /var/log/mysql/mysql-slow.log
-</code></pre>
-<h3 id="io-bottleneck-analysis">I/O Bottleneck Analysis</h3>
-<p>If you suspect I/O bottlenecks:</p>
-<pre><code class="language-bash"># Check for disk I/O issues
-iostat -xz 1 10
-
-# See which processes are causing most I/O
-iotop
-</code></pre>
-<h2 id="the-fix-common-solutions-to-database-load-issues">The Fix: Common Solutions to Database Load Issues</h2>
-<p>Based on your findings, here are some potential solutions:</p>
-<h3 id="query-optimization">Query Optimization</h3>
-<ul>
-<li>Add missing indexes based on slow query analysis</li>
-<li>Rewrite problematic queries identified in the slow query log</li>
-<li>Consider using query caching where appropriate</li>
-</ul>
-<h3 id="database-configuration-tuning">Database Configuration Tuning</h3>
-<pre><code class="language-bash"># MySQL: Key settings to examine
-innodb_buffer_pool_size
-max_connections
-query_cache_size
-innodb_log_file_size
-
-# PostgreSQL: Important parameters
-shared_buffers
-work_mem
-maintenance_work_mem
-max_connections
-</code></pre>
-<h3 id="system-level-optimizations">System-Level Optimizations</h3>
-<ul>
-<li>Increase swap space if experiencing memory pressure</li>
-<li>Consider I/O scheduling adjustments for database workloads</li>
-<li>Implement connection pooling to manage connection loads</li>
-</ul>
-<h2 id="preventing-future-issues-proactive-monitoring">Preventing Future Issues: Proactive Monitoring</h2>
-<p>To avoid being caught off guard again, implement these proactive measures:</p>
-<ul>
-<li>Set up Prometheus with database exporters</li>
-<li>Create Grafana dashboards for visual monitoring</li>
-<li>Implement automated alerting based on threshold values</li>
-<li>Schedule regular database maintenance</li>
-</ul>
-<h2 id="conclusion">Conclusion</h2>
-<p>Troubleshooting high database load issues requires a methodical approach and the right tools. By following the steps outlined in this guide, you'll be able to quickly identify and resolve performance bottlenecks in your Debian Linux database servers.</p>
-<p>Remember that the best solution to high load issues is preventing them in the first place through proper monitoring, regular maintenance, and proactive capacity planning.</p>
 <hr>
 <p>Thank you for reading!</p>
 <p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>

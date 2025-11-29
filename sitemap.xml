@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc><![CDATA[https://geeksta.net/geeklog/reduce-data-usage-guide/]]></loc><lastmod>2025-11-29</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/fail2ban-cheat-sheet/]]></loc><lastmod>2025-11-20</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/ai/chatlog/glm-4.6-2025-10-17/]]></loc><lastmod>2025-10-21</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/resilience-challenge-introduction/]]></loc><lastmod>2025-10-06</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/tools/resilience/]]></loc><lastmod>2025-10-14</lastmod></url>
@@ -18,7 +20,7 @@
 <url><loc><![CDATA[https://geeksta.net/design/word-art-shark-black/]]></loc><lastmod>2025-08-11</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/word-art-whale-white/]]></loc><lastmod>2025-08-11</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/word-art-whale-black/]]></loc><lastmod>2025-08-11</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/geeklog/image-prompt-creator-introduction/]]></loc><lastmod>2025-08-19</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/image-prompt-creator-introduction/]]></loc><lastmod>2025-11-29</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/love-grumpy-owl/]]></loc><lastmod>2025-08-11</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/server-failover-a-guide-for-system-administrators/]]></loc><lastmod>2025-06-02</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/fixing-dovecot-diffie-hellman-parameter-error/]]></loc><lastmod>2025-05-29</lastmod></url>
@@ -29,7 +31,7 @@
 <url><loc><![CDATA[https://geeksta.net/geeklog/how-to-use-sd-cards-for-backups-on-linux/]]></loc><lastmod>2025-03-18</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/no-class-no-state-lambda-propaganda-grunge/]]></loc><lastmod>2025-08-11</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/punk-rock-forever-anarchy/]]></loc><lastmod>2025-08-11</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/geeklog/wiki-story-introduction/]]></loc><lastmod>2025-02-12</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/wiki-story-introduction/]]></loc><lastmod>2025-11-29</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/how-to-determine-the-smtp-and-imap-servers-for-a-domain/]]></loc><lastmod>2025-08-05</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/how-to-determine-the-email-server-for-a-domain/]]></loc><lastmod>2025-05-22</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/tools/tts-samples/]]></loc><lastmod>2025-02-10</lastmod></url>
