@@ -59,7 +59,7 @@
 <p><strong>PLAIN</strong>: Similar to LOGIN but uses a slightly different transmission format.</p>
 <p><strong>CRAM-MD5</strong>: A more secure option that encrypts password data during transmission, though less commonly supported by older email clients.</p>
 <h2 id="the-threat-brute-force-attacks">The Threat: Brute Force Attacks</h2>
-<p>Cybercriminals frequently target email servers with automated brute force attacks, attempting thousands of username and password combinations to gain unauthorized access. These attacks typically appear in server logs as repeated SASL authentication failures from the same IP addresses.</p>
+<p>Cybercriminals frequently target email servers with automated brute force attacks, attempting thousands of username and password combinations to gain unauthorized access. These attacks typically appear in server logs as repeated SASL authentication failures from the same <a href="/tools/ip/">IP addresses</a>.</p>
 <p>Attackers often use botnets to distribute these attempts across multiple IP addresses, making detection more challenging. Once successful, compromised email accounts become vehicles for spam distribution, phishing campaigns, and further attacks against your network.</p>
 <h2 id="fail2ban-your-automated-defense-system">fail2ban: Your Automated Defense System</h2>
 <p>fail2ban acts as an intelligent security guard that monitors your server logs continuously. When it detects suspicious patterns—such as repeated authentication failures—it automatically blocks the offending IP addresses using your server's firewall.</p>
@@ -126,10 +126,10 @@
 <hr>
 <p>Published by <a href="https://ramiro.org/">Ramiro Gómez</a> on <time datetime="2025-09-05T21:34">September 05, 2025</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
 <p><strong>Tags:</strong>
-    <a class="button outline" href="/tags/email/">email</a>
-    <a class="button outline" href="/tags/sysadmin/">sysadmin</a>
     <a class="button outline" href="/tags/guide/">guide</a>
+    <a class="button outline" href="/tags/sysadmin/">sysadmin</a>
     <a class="button outline" href="/tags/security/">security</a>
+    <a class="button outline" href="/tags/email/">email</a>
 </p>
 <p class="text-grey"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p><hr>
 <p><strong>Share post:</strong>
@@ -199,7 +199,7 @@
     "headline": "Protecting Your Email Server: SASL Authentication and fail2ban Defense",
     "description": "Learn how to protect your email server from brute force attacks using SASL authentication and fail2ban. Complete guide with setup instructions and best practices.",
     "datePublished": "2025-09-05 21:34:28",
-    "dateModified": "2025-10-04 23:31:14.681008",
+    "dateModified": "2025-12-01 12:53:43.566106",
     "author": { "@type": "Person", "name": "Ramiro Gómez", "url": "https://geeksta.net" },
     "url": "https://geeksta.net/geeklog/protecting-your-email-server/",
     "keywords": ["email", "guide", "security", "sysadmin"],

@@ -1,0 +1,1 @@
+"use strict";fetch("https://ipapi.co/json/").then(function(response){return response.json()}).then(function(data){console.log(data);for(var _i=0,_arr=["ip","city"];_i<_arr.length;_i++){var item=_arr[_i];document.getElementById(item).textContent=data[item]}});
