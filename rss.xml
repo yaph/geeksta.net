@@ -7,6 +7,20 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[How Limiting My Internet Usage Changed the Way I Work and Live]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/limited-internet-changed-my-habits/]]></link>
+        <description><![CDATA[<p>Read about how a 30GB monthly data cap transformed my relationship with the Internet, improved productivity, reduced distractions, and encouraged more intentional habits in work and daily life.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/limited-internet-changed-my-habits/]]></guid>
+        <pubDate>Wed, 03 Dec 2025 13:11:51 </pubDate>
+    </item>
+    <item>
+        <title><![CDATA[What is my IP Address?]]></title>
+        <link><![CDATA[https://geeksta.net/tools/ip/]]></link>
+        <description><![CDATA[<p>View your public facing IP address and location.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/tools/ip/]]></guid>
+        <pubDate>Mon, 01 Dec 2025 12:51:35 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[Practical Tips to Reduce Data Usage on Phones, Tablets, and Computers]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/reduce-data-usage-guide/]]></link>
         <description><![CDATA[<p>Discover simple, effective tips to reduce data usage on phones, tablets, and computers. Save data, lower costs, and improve your online experience with practical steps.</p>]]></description>
@@ -61,19 +75,5 @@
         <description><![CDATA[<p>Future-proof your independence with the Centenarian Decathlon. Build resilience, energy, and confidence in your 50s through smart, practical training.</p>]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/the-centenarian-decathlon/]]></guid>
         <pubDate>Tue, 19 Aug 2025 00:43:41 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[The Pros and Cons of Cron Jobs]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/the-pros-and-cons-of-cron-jobs/]]></link>
-        <description><![CDATA[<p>Discover the pros and cons of cron jobs, their benefits, limitations, and best practices for effective task automation in Unix-based systems.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/the-pros-and-cons-of-cron-jobs/]]></guid>
-        <pubDate>Tue, 05 Aug 2025 23:38:33 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Fierce Leaping Tiger Word Art Silhouette Typography Design]]></title>
-        <link><![CDATA[https://geeksta.net/design/word-art-fierce-tiger-black/]]></link>
-        <description><![CDATA[<p>This word art design shows a tiger mid-leap, its silhouette filled with the word FIERCE, each letter crafted to flow with its muscular body. The typography blends seamlessly with the dynamic form, symbolizing raw power, determination, and untamed...</p><img src="https://geeksta.net/img/large/word-art-fierce-tiger-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/design/word-art-fierce-tiger-black/]]></guid>
-        <pubDate>Wed, 23 Jul 2025 00:00:00 </pubDate>
     </item>
 </channel></rss>

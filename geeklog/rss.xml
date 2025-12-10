@@ -7,6 +7,38 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[How Limiting My Internet Usage Changed the Way I Work and Live]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/limited-internet-changed-my-habits/]]></link>
+        <description><![CDATA[<p>Read about how a 30GB monthly data cap transformed my relationship with the Internet, improved productivity, reduced distractions, and encouraged more intentional habits in work and daily life.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/limited-internet-changed-my-habits/]]></guid>
+        <pubDate>Wed, 03 Dec 2025 13:11:51 </pubDate>
+        <content:encoded><![CDATA[
+        <p>After canceling my DSL subscription, I decided to rely solely on mobile data for my Internet access at home. To make things even more intentional, I chose a data plan capped at 30GB per month. For someone who works from home as a system administrator and programmer, this monthly limit might sound restrictive — especially when you factor in the need to update software and keep a reliable connection for work.</p>
+<p>But after over a month of living with this setup, I've found that the experience has noticeably changed my habits and workflow for the better. While it hasn't always been easy, it has caused me to reexamine how I use the Internet and how I approach my work and daily tasks. Here's what I've learned.</p>
+<h2 id="deliberate-internet-usage">Deliberate Internet Usage</h2>
+<p>With a limited data plan, I've had to think critically about when and how to use the Internet. In the past, I might have spent long stretches mindlessly browsing or keeping tabs open "just in case." Now, my online sessions are deliberate and focused on specific needs to avoid unnecessary data consumption.</p>
+<p>This shift in mindset has been unexpectedly liberating. It feels good to be mindful about Internet usage instead of passively being led by it.</p>
+<h2 id="reduced-social-media-and-procrastination">Reduced Social Media and Procrastination</h2>
+<p>One of the most notable changes in my daily life has been my reduced reliance on social media. Previously, I could easily get lost scrolling through feeds multiple times a day. With a 30GB limit, I've had to be stricter about that behavior, and this change has naturally curtailed procrastination.</p>
+<p>The result? I now spend more time on meaningful activities and less time falling into the black hole of endless content. It's refreshing to have that clarity.</p>
+<h2 id="once-a-day-routine-check-ins">Once-a-Day Routine Check-Ins</h2>
+<p>Like many others, I regularly visit certain websites for both personal and work-related reasons, such as dashboards with statistics, analytics, or updates on business matters. In the past, I would check these sites several times a day — largely out of habit.</p>
+<p>With my Internet usage now restricted, I've instituted a once-a-day routine for checking most of these sites. I haven't felt like I was missing anything important. This approach has reduced interruptions, minimized distractions, and given me more time to focus on single tasks at hand.</p>
+<h2 id="problem-solving-with-my-own-brain">Problem-Solving with My Own Brain</h2>
+<p>As a programmer and tech worker, it's natural to rely on tools like search engines, forums, or large language models (LLMs) to quickly troubleshoot problems. However, with more constrained access to the Internet, I've started depending less on these tools and more on my own problem-solving skills.</p>
+<p>For example, I turned off features like GitHub Copilot in my development environment because of how often I worked offline. This change has pushed me to reason through issues independently before seeking an external solution. Not only has this improved my productivity, but it's also reinforced confidence in my existing knowledge.</p>
+<h2 id="a-life-with-fewer-distractions">A Life with Fewer Distractions</h2>
+<p>Perhaps the biggest benefit of this experiment has been the calmness I've felt in my daily routine. Without constant connectivity, there's simply less noise.</p>
+<p>This reduced connectivity has helped me focus better on what matters and let go of things beyond my control. It's a small step, but it's had an outsized impact on my overall sense of well-being.</p>
+<h2 id="reflections-on-the-experiment">Reflections on the Experiment</h2>
+<p>Certainly, this lifestyle adjustment comes with its own challenges. For example, I've had to plan ahead for downloading essential updates and think twice about how I use my allotted data. However, these minor inconveniences have been outweighed by the benefits of living with a more intentional and efficient approach to the Internet.</p>
+<p>This experience has given me a new perspective: Having constant, unlimited Internet access isn't universally beneficial, especially if it fosters habits that detract from what you truly want to accomplish. Setting limits, whether self-imposed or due to a data cap, can help reset your relationship with technology in a constructive way.</p>
+<p>Will I stick with this 30GB limit for the long run? I'm not sure yet. But the lessons I've learned — about being conscious of my habits, staying focused, and reducing distractions — will remain with me regardless of my future Internet plans. For now, I'm enjoying life with less digital noise.</p>
+<hr>
+<p>Thank you for reading!</p>
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
+    </item>
+    <item>
         <title><![CDATA[Practical Tips to Reduce Data Usage on Phones, Tablets, and Computers]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/reduce-data-usage-guide/]]></link>
         <description><![CDATA[<p>Discover simple, effective tips to reduce data usage on phones, tablets, and computers. Save data, lower costs, and improve your online experience with practical steps.</p>]]></description>
@@ -532,7 +564,7 @@ rclone ls gdrive:Backups --max-depth 2 | tail -n 10
 <p><strong>PLAIN</strong>: Similar to LOGIN but uses a slightly different transmission format.</p>
 <p><strong>CRAM-MD5</strong>: A more secure option that encrypts password data during transmission, though less commonly supported by older email clients.</p>
 <h2 id="the-threat-brute-force-attacks">The Threat: Brute Force Attacks</h2>
-<p>Cybercriminals frequently target email servers with automated brute force attacks, attempting thousands of username and password combinations to gain unauthorized access. These attacks typically appear in server logs as repeated SASL authentication failures from the same IP addresses.</p>
+<p>Cybercriminals frequently target email servers with automated brute force attacks, attempting thousands of username and password combinations to gain unauthorized access. These attacks typically appear in server logs as repeated SASL authentication failures from the same <a href="/tools/ip/">IP addresses</a>.</p>
 <p>Attackers often use botnets to distribute these attempts across multiple IP addresses, making detection more challenging. Once successful, compromised email accounts become vehicles for spam distribution, phishing campaigns, and further attacks against your network.</p>
 <h2 id="fail2ban-your-automated-defense-system">fail2ban: Your Automated Defense System</h2>
 <p>fail2ban acts as an intelligent security guard that monitors your server logs continuously. When it detects suspicious patterns—such as repeated authentication failures—it automatically blocks the offending IP addresses using your server's firewall.</p>
@@ -1096,49 +1128,6 @@ rclone ls gdrive:Backups --max-depth 2 | tail -n 10
 <p>Server failover is not just a technical requirement - it's a business necessity in today's always-on digital world. The key to successful implementation lies in understanding your specific requirements, choosing the right failover type, and following proven best practices.</p>
 <p>Remember that failover systems are only as good as your preparation, testing, and maintenance efforts. Regular testing, comprehensive documentation, and continuous improvement will ensure your failover systems work when you need them most.</p>
 <p>Start with a clear assessment of your requirements, implement appropriate solutions gradually, and always prioritize testing and documentation. Your future self (and your users) will thank you when the inevitable server failure occurs and your systems seamlessly continue operating.</p>
-<hr>
-<p>Thank you for reading!</p>
-<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
-    </item>
-    <item>
-        <title><![CDATA[Fixing Dovecot Diffie-Hellman Parameter Error]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/fixing-dovecot-diffie-hellman-parameter-error/]]></link>
-        <description><![CDATA[<p>Learn how to fix Dovecot's Diffie-Hellman key exchange requested SSL error by generating DH parameters with OpenSSL and configuring ssl_dh properly.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/fixing-dovecot-diffie-hellman-parameter-error/]]></guid>
-        <pubDate>Thu, 29 May 2025 12:58:59 </pubDate>
-        <content:encoded><![CDATA[
-        <p>This guide helps you resolve SSL/TLS connection issues in Dovecot IMAP server when Diffie-Hellman parameters are missing. The error prevents secure email client connections and requires generating cryptographic parameters and updating the Dovecot configuration.</p>
-<h2 id="the-error">The Error</h2>
-<p>When you see this in your Dovecot logs:</p>
-<pre><code class="language-text">dovecot: imap-login: Error: Diffie-Hellman key exchange requested, but no DH parameters provided. Set ssl_dh=&lt;/path/to/dh.pem
-</code></pre>
-<p>This means Dovecot needs DH parameters for SSL/TLS connections but can't find the required file.</p>
-<h2 id="solution">Solution</h2>
-<h3 id="1-generate-dh-parameters">1. Generate DH Parameters</h3>
-<pre><code class="language-bash"># 2048-bit (recommended - faster generation, still secure)
-openssl dhparam -out /etc/ssl/certs/dh.pem 2048
-
-# OR 4096-bit (higher security, much slower generation)
-openssl dhparam -out /etc/ssl/certs/dh.pem 4096
-</code></pre>
-<p><strong>Important:</strong> The parameter order matters! The <code>-out</code> option must come before the bit size.</p>
-<p><strong>Note:</strong> Generation takes time, much more much longer for 4096-bit than for 2048-bit. This is normal as it's generating cryptographically secure prime numbers.</p>
-<h3 id="2-configure-dovecot">2. Configure Dovecot</h3>
-<p>Add this line to your Dovecot configuration (usually <code>/etc/dovecot/dovecot.conf</code> or <code>/etc/dovecot/conf.d/10-ssl.conf</code>):</p>
-<pre><code class="language-text">ssl_dh = &lt;/etc/ssl/certs/dh.pem
-</code></pre>
-<h3 id="3-restart-dovecot">3. Restart Dovecot</h3>
-<pre><code class="language-bash">systemctl restart dovecot
-</code></pre>
-<h2 id="key-points">Key Points</h2>
-<ul>
-<li>2048-bit is sufficient for most security requirements and generates much faster</li>
-<li>4096-bit provides higher security but takes significantly longer to generate</li>
-<li>Parameter order is critical in the openssl command</li>
-<li>Long Generation time is normal - the process is doing real cryptographic work</li>
-</ul>
-<h2 id="summary">Summary</h2>
-<p>The Dovecot DH parameter error is resolved by generating cryptographic parameters with OpenSSL and configuring Dovecot to use them. Choose 2048-bit for faster generation or 4096-bit for enhanced security. After configuration, restart Dovecot to enable secure IMAP connections with proper Diffie-Hellman key exchange.</p>
 <hr>
 <p>Thank you for reading!</p>
 <p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
