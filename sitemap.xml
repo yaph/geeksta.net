@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc><![CDATA[https://geeksta.net/modash/]]></loc><lastmod>2025-12-11</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/limited-internet-changed-my-habits/]]></loc><lastmod>2025-12-03</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/tools/ip/]]></loc><lastmod>2025-12-01</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/tools/ip/]]></loc><lastmod>2025-12-11</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/reduce-data-usage-guide/]]></loc><lastmod>2025-11-29</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/fail2ban-cheat-sheet/]]></loc><lastmod>2025-11-20</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/ai/chatlog/glm-4.6-2025-10-17/]]></loc><lastmod>2025-10-21</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/resilience-challenge-introduction/]]></loc><lastmod>2025-10-06</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/tools/resilience/]]></loc><lastmod>2025-12-08</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/tools/resilience/]]></loc><lastmod>2025-12-11</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/setting-up-google-drive-backups-on-ubuntu-with-rclone/]]></loc><lastmod>2025-09-30</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/protecting-your-email-server/]]></loc><lastmod>2025-12-01</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/the-centenarian-decathlon/]]></loc><lastmod>2025-08-19</lastmod></url>
@@ -837,7 +838,7 @@
 <url><loc><![CDATA[https://geeksta.net/tools/magic-numbers-shirt-generator/]]></loc><lastmod>2023-05-03</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/custom-matplotlib-styles/]]></loc><lastmod>2024-09-12</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/visualizations/cities-millionaire-density/]]></loc><lastmod>2023-06-13</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/visualizations/tell-weight/]]></loc><lastmod>2024-06-06</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/visualizations/tell-weight/]]></loc><lastmod>2025-12-11</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/automating-browser-tasks-without-distraction-on-ubuntu/]]></loc><lastmod>2024-09-12</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/videos/pycon-2015-beyond-pep-8/]]></loc><lastmod>2023-06-13</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/better-commit-messages/]]></loc><lastmod>2024-09-12</lastmod></url>
@@ -845,7 +846,7 @@
 <url><loc><![CDATA[https://geeksta.net/design/bin-sh-white/]]></loc><lastmod>2025-08-11</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/js-drawing/nyhc-logo/]]></loc><lastmod>2023-06-13</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/js-drawing/svg-crosshairs/]]></loc><lastmod>2023-06-13</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/tools/shirt-color-helper/]]></loc><lastmod>2023-06-13</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/tools/shirt-color-helper/]]></loc><lastmod>2025-12-11</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/may-the-source-be-with-you/]]></loc><lastmod>2025-08-11</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/shut-up-and-squat-black/]]></loc><lastmod>2025-08-11</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/events/geek-holidays/]]></loc><lastmod>2017-07-12</lastmod></url>
@@ -878,12 +879,12 @@
 <url><loc><![CDATA[https://geeksta.net/design/402-payment-required-black/]]></loc><lastmod>2025-08-11</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/visualizations/calories-us/]]></loc><lastmod>2023-06-13</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/tools/forces-horses-bookmarklet/]]></loc><lastmod>2023-06-13</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/geeklog/github-pullrequest-actors-2013/]]></loc><lastmod>2024-09-12</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/github-pullrequest-actors-2013/]]></loc><lastmod>2025-12-11</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/videos/automatic-code-reviews-carl-crowder/]]></loc><lastmod>2023-06-13</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/visualizations/us-housing-prices/]]></loc><lastmod>2023-06-13</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/geeklog/github-fork-events-2013/]]></loc><lastmod>2024-09-12</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/geeklog/github-follow-events-2013/]]></loc><lastmod>2024-09-12</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/geeklog/github-event-types-2013/]]></loc><lastmod>2024-09-12</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/github-fork-events-2013/]]></loc><lastmod>2025-12-11</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/github-follow-events-2013/]]></loc><lastmod>2025-12-11</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/github-event-types-2013/]]></loc><lastmod>2025-12-11</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/tools/make-reading-news-fun-bookmarklet/]]></loc><lastmod>2023-06-13</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/videos/python-asset-management-robert-kluin-beau-lyddon/]]></loc><lastmod>2023-06-13</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/videos/raymond-hettinger-beautiful-idiomatic-python/]]></loc><lastmod>2023-06-13</lastmod></url>
@@ -900,15 +901,15 @@
 <url><loc><![CDATA[https://geeksta.net/geeklog/quick-dirty-site-monitoring-google-apps-script/]]></loc><lastmod>2024-09-12</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/web-page-screenshots-phantomjs-python/]]></loc><lastmod>2024-09-12</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/free-software-content-licenses/]]></loc><lastmod>2024-09-12</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/visualizations/age-musicians-die/]]></loc><lastmod>2023-06-13</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/tools/leetspeak-shirt-generator/]]></loc><lastmod>2023-06-13</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/visualizations/github-commit-map/]]></loc><lastmod>2024-06-06</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/visualizations/age-musicians-die/]]></loc><lastmod>2025-12-11</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/tools/leetspeak-shirt-generator/]]></loc><lastmod>2025-12-11</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/visualizations/github-commit-map/]]></loc><lastmod>2025-12-11</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/visualizations/web-browser-word-clouds-github-commit-messages/]]></loc><lastmod>2023-06-13</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/exploring-expressions-emotions-github-commit-messages/]]></loc><lastmod>2024-09-12</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/events/free-software-programmers-birthdays/]]></loc><lastmod>2015-07-16</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/reviews/python-text-processing-nltk-cookbook/]]></loc><lastmod>2023-06-13</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/diving-into-ruby-sinatra-mongodb-openshift/]]></loc><lastmod>2024-09-12</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/reviews/mining-social-web/]]></loc><lastmod>2023-06-13</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/visualizations/programming-language-influence-by-paradigm-gallery/]]></loc><lastmod>2023-06-13</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/visualizations/programming-language-influence-by-paradigm-gallery/]]></loc><lastmod>2025-12-11</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/tools/born-at-unix-time/]]></loc><lastmod>2023-06-13</lastmod></url>
 </urlset>

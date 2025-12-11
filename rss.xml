@@ -7,6 +7,13 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Mobile Data Shortcuts - Android App Homepage]]></title>
+        <link><![CDATA[https://geeksta.net/modash/]]></link>
+        <description><![CDATA[<p>Monitor your mobile data usage and access relevant system settings in one place on mobile devices running Android.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/modash/]]></guid>
+        <pubDate>Mon, 08 Dec 2025 00:55:26 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[How Limiting My Internet Usage Changed the Way I Work and Live]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/limited-internet-changed-my-habits/]]></link>
         <description><![CDATA[<p>Read about how a 30GB monthly data cap transformed my relationship with the Internet, improved productivity, reduced distractions, and encouraged more intentional habits in work and daily life.</p>]]></description>
@@ -68,12 +75,5 @@
         <description><![CDATA[<p>Learn how to protect your email server from brute force attacks using SASL authentication and fail2ban. Complete guide with setup instructions and best practices.</p>]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/protecting-your-email-server/]]></guid>
         <pubDate>Fri, 05 Sep 2025 21:34:28 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[The Centenarian Decathlon: A Practical Guide to Thriving into Your 90s and Beyond]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/the-centenarian-decathlon/]]></link>
-        <description><![CDATA[<p>Future-proof your independence with the Centenarian Decathlon. Build resilience, energy, and confidence in your 50s through smart, practical training.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/the-centenarian-decathlon/]]></guid>
-        <pubDate>Tue, 19 Aug 2025 00:43:41 </pubDate>
     </item>
 </channel></rss>
