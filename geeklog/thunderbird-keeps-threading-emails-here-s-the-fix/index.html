@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thunderbird Keeps Threading Emails? Here&#39;s the Fix | Geeksta</title>
+<meta name="description" content="Thunderbird keeps switching to threaded view? Learn how to adjust settings and repair folders to keep your view the way you want it."><meta name="author" content="Ramiro Gómez"><link rel="canonical" itemprop="url" href="https://geeksta.net/geeklog/thunderbird-keeps-threading-emails-here-s-the-fix/">
+<link rel="icon" type="image/png" href="/img/icon-small.png">
+<link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Geeksta All Posts RSS feed">
+            <meta property="og:image" content="/img/geeklog/geeklog.png">
+    <link rel="stylesheet" href="/vendor/chota.min.css">
+    <link rel="stylesheet" href="/compiled/style.css">
+    <link rel="stylesheet" href="/compiled/dropdown.css">
+
+</head>
+<body>
+    <header><nav class="nav dark">
+        <div class="nav-left">
+            <a class="brand" href="/"><img class="logo" src="/img/icon-small.png" alt="logo">Geeksta</a>
+        </div>
+        <ul class="nav-right">
+            <li>
+                <a href="#">Sections ▾</a>
+                <ul class="dropdown">
+                    <li><a href="/reviews/">Book Reviews</a></li>
+                    <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
+                    <li><a href="/visualizations/">Data Visualizations</a></li>
+                    <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
+                    <li><a href="/events/">Geek Events</a></li>
+                    <li><a href="/screencasts/">Screencasts</a></li>
+                    <li><a href="/videos/">Videos</a></li>
+                </ul>
+            </li>
+            <li><a href="/geeklog/">Geeklog</a></li>
+            <li><a href="/merch/">Merch</a></li>
+            <li><a href="/tools/">Tools</a></li>
+        </ul>
+    </nav></header>
+
+    <main class="container">
+<div class="row">
+    <div class="col-9-md">
+        <h1>Thunderbird Keeps Threading Emails? Here's the Fix</h1>
+        <p>If Mozilla Thunderbird keeps switching your folders back to <strong>Threaded View</strong> even after you turn it off, you're not imagining things. This is a long-standing Thunderbird quirk caused by multiple, overlapping view settings.</p>
+<p>The good news: you <em>can</em> fix it permanently once you know where to look.</p>
+<h2 id="the-real-problem-too-many-view-settings">The Real Problem: Too Many View Settings</h2>
+<p>Thunderbird doesn't have just one "threaded view" setting. It has:</p>
+<ul>
+<li>Global default view settings</li>
+<li>Per-folder saved views</li>
+<li>Per-account overrides</li>
+<li>Special rules for Unified and virtual folders</li>
+</ul>
+<p>If even one of these still enables threading, Thunderbird will quietly turn it back on.</p>
+<h2 id="step-1-turn-off-threading-globally-most-important">Step 1: Turn Off Threading Globally (Most Important)</h2>
+<ol>
+<li>Open Thunderbird</li>
+<li>Go to <strong>View → Sort by</strong></li>
+<li>Make sure <strong>Threaded</strong> and <strong>Grouped By Sort</strong> are unchecked</li>
+<li>Select <strong>Unthreaded</strong></li>
+</ol>
+<p>💡 Tip: Do this while <em>no message is selected</em>, otherwise Thunderbird may only apply the change to the current folder.</p>
+<h2 id="step-2-repair-folders-that-keep-forgetting">Step 2: Repair Folders That Keep Forgetting</h2>
+<p>Some folders store their own corrupted view settings.</p>
+<p>For each problematic folder:</p>
+<ol>
+<li>Right-click the folder</li>
+<li>Choose <strong>Properties</strong></li>
+<li>Click <strong>Repair Folder</strong></li>
+<li>Reopen the folder and set <strong>Unthreaded</strong> again</li>
+</ol>
+<p>This clears cached metadata that can force threading back on.</p>
+<h2 id="step-3-stop-account-level-overrides">Step 3: Stop Account-Level Overrides</h2>
+<p>Some mail accounts override global defaults.</p>
+<ol>
+<li>Open <strong>Settings → Account Settings</strong></li>
+<li>Select the account</li>
+<li>Go to <strong>Server Settings</strong></li>
+<li>Enable <strong>"Use global default view settings for this account"</strong></li>
+</ol>
+<p>Restart Thunderbird afterward.</p>
+<h2 id="step-4-watch-out-for-unified-and-virtual-folders">Step 4: Watch Out for Unified and Virtual Folders</h2>
+<p>Folders like <strong>Unified Inbox</strong> and <strong>Saved Searches</strong> ignore per-folder settings and always inherit the global view.</p>
+<p>Make sure your global view is set to <strong>Unthreaded while viewing a Unified folder</strong>, then restart Thunderbird.</p>
+<h2 id="step-5-reset-view-preferences-if-all-else-fails">Step 5: Reset View Preferences (If All Else Fails)</h2>
+<p>If the issue persists, reset the internal preferences:</p>
+<ol>
+<li>Open <strong>Settings → General → Config Editor</strong></li>
+<li>
+<p>Reset:</p>
+<ul>
+<li><code>mailnews.default_view_flags</code></li>
+<li><code>mailnews.default_sort_type</code></li>
+<li><code>mailnews.default_sort_order</code></li>
+</ul>
+</li>
+</ol>
+<p>Restart Thunderbird.</p>
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>Thunderbird's folder view system is powerful but messy. Once global defaults, folder repairs, and account settings are aligned, threaded view usually stays gone for good.</p>
+<p>If threading keeps coming back even after all this, the profile itself may be partially corrupted, and creating a new Thunderbird profile can resolve the issue permanently.</p>
+    </div>
+    <div class="col">
+
+<h3>Featured Merch</h3>
+<figure class="preview">
+    <a href="/design/wontfix-white/">
+            <img class="b-lazy" src="/img/large/wontfix-white.jpg" alt="WONTFIX Say Forget It at Work in a Nicer Way - White Design" />
+        <figcaption>WONTFIX Say Forget It at Work in a Nicer Way - White Design</figcaption>
+    </a>
+</figure>
+
+
+<h3>Latest Posts</h3>
+<ul>
+        <li><a href="/geeklog/social-media-dimensions-cheat-sheet/">Social Media Dimensions Cheat Sheet 2025</a></li>
+        <li><a href="/geeklog/limited-internet-changed-my-habits/">How Limiting My Internet Usage Changed the Way I Work and Live</a></li>
+        <li><a href="/geeklog/reduce-data-usage-guide/">Practical Tips to Reduce Data Usage on Phones, Tablets, and Computers</a></li>
+        <li><a href="/geeklog/fail2ban-cheat-sheet/">Fail2ban Cheat Sheet for Sysadmins</a></li>
+</ul>
+
+<h3>Featured Book</h3>
+<figure class="preview">
+    <a href="https://www.amazon.com/dp/B0C5B9JG57?tag=geeksta-20">
+        <img alt="eBook cover" src="/img/books/chatgpt-interview-prompting.jpg"><br>
+        <figcaption>Buy on Amazon</figcaption>
+    </a>
+</figure>
+
+<hr>
+
+<a href="/rss.xml" class="button primary">Subscribe to RSS Feed</a></li>    </div>
+</div>
+<hr>
+<p>Published by <a href="https://ramiro.org/">Ramiro Gómez</a> on <time datetime="2026-01-26T20:49">January 26, 2026</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+<p><strong>Tags:</strong>
+    <a class="button outline" href="/tags/email/">email</a>
+    <a class="button outline" href="/tags/guide/">guide</a>
+    <a class="button outline" href="/tags/thunderbird/">thunderbird</a>
+</p>
+<p class="text-grey"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p><hr>
+<p><strong>Share post:</strong>
+<a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/geeklog/thunderbird-keeps-threading-emails-here-s-the-fix/&t=Thunderbird%20Keeps%20Threading%20Emails%3F%20Here%27s%20the%20Fix" class="button success">Facebook</a>
+<a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/geeklog/thunderbird-keeps-threading-emails-here-s-the-fix/&title=Thunderbird%20Keeps%20Threading%20Emails%3F%20Here%27s%20the%20Fix" class="button success">LinkedIn</a>
+<a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/geeklog/thunderbird-keeps-threading-emails-here-s-the-fix/&title=Thunderbird%20Keeps%20Threading%20Emails%3F%20Here%27s%20the%20Fix" class="button success">Reddit</a>
+<a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/geeklog/thunderbird-keeps-threading-emails-here-s-the-fix/&text=Thunderbird%20Keeps%20Threading%20Emails%3F%20Here%27s%20the%20Fix" class="button success">Twitter</a>
+</p>
+<div class="card vm">
+    <h3>Merchandise</h3>
+    <div class="row">
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/caution-i-test-in-production/">
+            <img class="b-lazy" src="/img/large/caution-i-test-in-production.jpg" alt="I Test in Production - Funny Developer Caution Sign Design" />
+        <figcaption>I Test in Production - Funny Developer Caution Sign Design</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/hack-the-planet-green/">
+            <img class="b-lazy" src="/img/large/hack-the-planet-green.jpg" alt="Hack the Planet - Green Globe Design for Computer Hackers" />
+        <figcaption>Hack the Planet - Green Globe Design for Computer Hackers</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/run-bsd/">
+            <img class="b-lazy" src="/img/large/run-bsd.jpg" alt="RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins" />
+        <figcaption>RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/shrug-it-works-on-my-machine-medium-white/">
+            <img class="b-lazy" src="/img/large/shrug-it-works-on-my-machine-medium-white.jpg" alt="Shrug It Works On My Machine Funny Programmer Excuse White Design" />
+        <figcaption>Shrug It Works On My Machine Funny Programmer Excuse White Design</figcaption>
+    </a>
+</figure>
+
+    </div>
+</div>
+
+</div>    </main>
+
+    <footer class="dark"><div class="container">
+        Geeksta elsewhere: <a href="https://www.instagram.com/g33ksta/">Instagram</a> • <a href="https://www.youtube.com/@geeksta">YouTube</a> • <a href="https://www.tiktok.com/@g33ksta">TikTok</a> • <a href="https://www.facebook.com/geeksta.net/">Facebook</a>
+        <br>
+        © 2010 - 2026 Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/rss.xml">RSS Feed</a></p>
+    </div></footer>
+
+    <script src="/compiled/script.js"></script>
+
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript><script type="application/ld+json">
+{
+    "@context": "https://schema.org/",
+    "@type": "BlogPosting",
+    "@id": "https://geeksta.net/geeklog/thunderbird-keeps-threading-emails-here-s-the-fix/#BlogPosting",
+    "mainEntityOfPage": "https://geeksta.net/geeklog/thunderbird-keeps-threading-emails-here-s-the-fix/",
+    "headline": "Thunderbird Keeps Threading Emails? Here's the Fix",
+    "description": "Thunderbird keeps switching to threaded view? Learn how to adjust settings and repair folders to keep your view the way you want it.",
+    "datePublished": "2026-01-26 20:49:16",
+    "dateModified": "2026-01-26 20:49:17.603606",
+    "author": { "@type": "Person", "name": "Ramiro Gómez", "url": "https://geeksta.net" },
+    "url": "https://geeksta.net/geeklog/thunderbird-keeps-threading-emails-here-s-the-fix/",
+    "keywords": ["email", "guide", "thunderbird"],
+    "inLanguage": "en"
+}
+</script>
+</body>
+</html>
