@@ -1,83 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
 <channel><title>Geeksta RSS Feed</title>
-    <link>/rss.xml</link>
+    <link>https://geeksta.net/rss.xml</link>
     <description></description>
     <lastBuildDate>Wed, 29 May 2024 23:11:40 </lastBuildDate>
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
         <title><![CDATA[How to Inspect All Cron Jobs on a Linux System: A Sysadmin's Guide]]></title>
-        <link><![CDATA[http://localhost:8080/geeklog/how-to-inspect-all-cron-jobs-on-a-linux-system/]]></link>
+        <link><![CDATA[https://geeksta.net/geeklog/how-to-inspect-all-cron-jobs-on-a-linux-system/]]></link>
         <description><![CDATA[<p>Learn how to inspect and audit cron jobs on Linux systems, identify suspicious tasks, and follow best practices to keep your scheduled tasks secure and efficient.</p>]]></description>
-        <guid><![CDATA[http://localhost:8080/geeklog/how-to-inspect-all-cron-jobs-on-a-linux-system/]]></guid>
+        <guid><![CDATA[https://geeksta.net/geeklog/how-to-inspect-all-cron-jobs-on-a-linux-system/]]></guid>
         <pubDate>Tue, 10 Feb 2026 19:28:05 </pubDate>
     </item>
     <item>
         <title><![CDATA[Building a 3D Elevation Photo Diary with deck.gl]]></title>
-        <link><![CDATA[http://localhost:8080/geeklog/building-a-3d-elevation-photo-diary/]]></link>
+        <link><![CDATA[https://geeksta.net/geeklog/building-a-3d-elevation-photo-diary/]]></link>
         <description><![CDATA[<p>How I turned GPS-tagged vacation photos into an interactive 3D journey through the terrain of Spain around Nerja.</p><img src="https://exploring-data.com/img/preview/elevation-diary-nerja.png" alt="Preview Image">]]></description>
-        <guid><![CDATA[http://localhost:8080/geeklog/building-a-3d-elevation-photo-diary/]]></guid>
+        <guid><![CDATA[https://geeksta.net/geeklog/building-a-3d-elevation-photo-diary/]]></guid>
         <pubDate>Thu, 05 Feb 2026 12:50:16 </pubDate>
     </item>
     <item>
         <title><![CDATA[Thunderbird Keeps Threading Emails? Here's the Fix]]></title>
-        <link><![CDATA[http://localhost:8080/geeklog/thunderbird-keeps-threading-emails-here-s-the-fix/]]></link>
+        <link><![CDATA[https://geeksta.net/geeklog/thunderbird-keeps-threading-emails-here-s-the-fix/]]></link>
         <description><![CDATA[<p>Thunderbird keeps switching to threaded view? Learn how to adjust settings and repair folders to keep your view the way you want it.</p>]]></description>
-        <guid><![CDATA[http://localhost:8080/geeklog/thunderbird-keeps-threading-emails-here-s-the-fix/]]></guid>
+        <guid><![CDATA[https://geeksta.net/geeklog/thunderbird-keeps-threading-emails-here-s-the-fix/]]></guid>
         <pubDate>Mon, 26 Jan 2026 20:49:16 </pubDate>
     </item>
     <item>
         <title><![CDATA[402 Payment Required - HTTP Status Code Developer Design]]></title>
-        <link><![CDATA[http://localhost:8080/design/402-payment-required-white/]]></link>
+        <link><![CDATA[https://geeksta.net/design/402-payment-required-white/]]></link>
         <description><![CDATA[<p>Every developer deserves fair compensation. This clever design features HTTP status code "402 Payment Required", a witty statement about valuing your work. Perfect for freelance developers, programmers, and IT professionals who know their worth.
 
-Clean...</p><img src="http://localhost:8080/img/large/402-payment-required-white.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[http://localhost:8080/design/402-payment-required-white/]]></guid>
+Clean...</p><img src="https://geeksta.net/img/large/402-payment-required-white.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/402-payment-required-white/]]></guid>
         <pubDate>Tue, 20 Jan 2026 00:00:00 </pubDate>
     </item>
     <item>
         <title><![CDATA[402 Payment Required - HTTP Status Code Developer Design]]></title>
-        <link><![CDATA[http://localhost:8080/design/402-payment-required-black/]]></link>
+        <link><![CDATA[https://geeksta.net/design/402-payment-required-black/]]></link>
         <description><![CDATA[<p>Every developer deserves fair compensation. This clever design features HTTP status code "402 Payment Required", a witty statement about valuing your work. Perfect for freelance developers, programmers, and IT professionals who know their worth.
 
-Clean...</p><img src="http://localhost:8080/img/large/402-payment-required-black.jpg" alt="Preview Image">]]></description>
-        <guid><![CDATA[http://localhost:8080/design/402-payment-required-black/]]></guid>
+Clean...</p><img src="https://geeksta.net/img/large/402-payment-required-black.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/402-payment-required-black/]]></guid>
         <pubDate>Tue, 20 Jan 2026 00:00:00 </pubDate>
     </item>
     <item>
         <title><![CDATA[Social Media Dimensions Cheat Sheet 2025]]></title>
-        <link><![CDATA[http://localhost:8080/geeklog/social-media-dimensions-cheat-sheet/]]></link>
+        <link><![CDATA[https://geeksta.net/geeklog/social-media-dimensions-cheat-sheet/]]></link>
         <description><![CDATA[<p>Comprehensive social media dimensions cheat sheet for Facebook, Instagram, YouTube, and TikTok. Includes profile pictures, cover photos, posts, stories, reels, and video sizes for optimal display.</p><img src="/img/geeklog/social-media-dimensions-cheat-sheet.webp" alt="Preview Image">]]></description>
-        <guid><![CDATA[http://localhost:8080/geeklog/social-media-dimensions-cheat-sheet/]]></guid>
+        <guid><![CDATA[https://geeksta.net/geeklog/social-media-dimensions-cheat-sheet/]]></guid>
         <pubDate>Fri, 19 Dec 2025 12:32:42 </pubDate>
     </item>
     <item>
         <title><![CDATA[Mobile Data Shortcuts - Android App Homepage]]></title>
-        <link><![CDATA[http://localhost:8080/modash/]]></link>
+        <link><![CDATA[https://geeksta.net/modash/]]></link>
         <description><![CDATA[<p>Monitor your mobile data usage and access relevant system settings in one place on mobile devices running Android.</p>]]></description>
-        <guid><![CDATA[http://localhost:8080/modash/]]></guid>
+        <guid><![CDATA[https://geeksta.net/modash/]]></guid>
         <pubDate>Mon, 08 Dec 2025 00:55:26 </pubDate>
     </item>
     <item>
         <title><![CDATA[How Limiting My Internet Usage Changed the Way I Work and Live]]></title>
-        <link><![CDATA[http://localhost:8080/geeklog/limited-internet-changed-my-habits/]]></link>
+        <link><![CDATA[https://geeksta.net/geeklog/limited-internet-changed-my-habits/]]></link>
         <description><![CDATA[<p>Read about how a 30GB monthly data cap transformed my relationship with the Internet, improved productivity, reduced distractions, and encouraged more intentional habits in work and daily life.</p>]]></description>
-        <guid><![CDATA[http://localhost:8080/geeklog/limited-internet-changed-my-habits/]]></guid>
+        <guid><![CDATA[https://geeksta.net/geeklog/limited-internet-changed-my-habits/]]></guid>
         <pubDate>Wed, 03 Dec 2025 13:11:51 </pubDate>
     </item>
     <item>
         <title><![CDATA[What is my IP Address?]]></title>
-        <link><![CDATA[http://localhost:8080/tools/ip/]]></link>
+        <link><![CDATA[https://geeksta.net/tools/ip/]]></link>
         <description><![CDATA[<p>View your public facing IP address and location.</p>]]></description>
-        <guid><![CDATA[http://localhost:8080/tools/ip/]]></guid>
+        <guid><![CDATA[https://geeksta.net/tools/ip/]]></guid>
         <pubDate>Mon, 01 Dec 2025 12:51:35 </pubDate>
     </item>
     <item>
         <title><![CDATA[Practical Tips to Reduce Data Usage on Phones, Tablets, and Computers]]></title>
-        <link><![CDATA[http://localhost:8080/geeklog/reduce-data-usage-guide/]]></link>
+        <link><![CDATA[https://geeksta.net/geeklog/reduce-data-usage-guide/]]></link>
         <description><![CDATA[<p>Discover simple, effective tips to reduce data usage on phones, tablets, and computers. Save data, lower costs, and improve your online experience with practical steps.</p>]]></description>
-        <guid><![CDATA[http://localhost:8080/geeklog/reduce-data-usage-guide/]]></guid>
+        <guid><![CDATA[https://geeksta.net/geeklog/reduce-data-usage-guide/]]></guid>
         <pubDate>Sat, 29 Nov 2025 12:30:15 </pubDate>
     </item>
 </channel></rss>
