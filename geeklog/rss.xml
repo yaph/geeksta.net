@@ -876,36 +876,26 @@ sudo fail2ban-client reload
 </code></pre>
 <h2 id="8-create-a-custom-jail">8. Create a Custom Jail</h2>
 <p>To protect Apache from login-related brute-force attacks:</p>
-<ol>
-<li>
 <p>Add this to <code>/etc/fail2ban/jail.local</code>:</p>
-<p><code>ini
-[apache-auth]
+<pre><code class="language-ini">[apache-auth]
 enabled = true
 port = http,https
 filter = apache-auth
 logpath = /var/log/apache2/error.log
 maxretry = 3
-bantime = 3600</code></p>
-</li>
-<li>
+bantime = 3600
+</code></pre>
 <p>Create the filter <code>/etc/fail2ban/filter.d/apache-auth.conf</code>:</p>
-<p><code>ini
-[Definition]
+<pre><code class="language-ini">[Definition]
 failregex = .*client &lt;HOST&gt;.*authorization failed.*
-ignoreregex =</code></p>
-</li>
-<li>
+ignoreregex =
+</code></pre>
 <p>Reload Fail2ban to apply:</p>
-<p><code>bash
-sudo fail2ban-client reload</code></p>
-</li>
-<li>
+<pre><code class="language-bash">sudo fail2ban-client reload
+</code></pre>
 <p>Test the custom filter:</p>
-<p><code>bash
-sudo fail2ban-regex /var/log/apache2/error.log /etc/fail2ban/filter.d/apache-auth.conf</code></p>
-</li>
-</ol>
+<pre><code class="language-bash">sudo fail2ban-regex /var/log/apache2/error.log /etc/fail2ban/filter.d/apache-auth.conf
+</code></pre>
 <h2 id="9-debugging">9. Debugging</h2>
 <p>Check configuration syntax:</p>
 <pre><code class="language-bash">sudo fail2ban-client -d
@@ -915,19 +905,13 @@ sudo fail2ban-regex /var/log/apache2/error.log /etc/fail2ban/filter.d/apache-aut
 </code></pre>
 <h2 id="10-persistent-bans-across-restarts">10. Persistent Bans Across Restarts</h2>
 <p>If you want bans to persist after Fail2ban is restarted:</p>
-<ol>
-<li>
 <p>Enable persistent bans in <code>/etc/fail2ban/jail.local</code>:</p>
-<p><code>ini
-[DEFAULT]
-dbfile = /var/lib/fail2ban/fail2ban.sqlite3</code></p>
-</li>
-<li>
+<pre><code class="language-ini">[DEFAULT]
+dbfile = /var/lib/fail2ban/fail2ban.sqlite3
+</code></pre>
 <p>Restart Fail2ban:</p>
-<p><code>bash
-sudo systemctl restart fail2ban</code></p>
-</li>
-</ol>
+<pre><code class="language-bash">sudo systemctl restart fail2ban
+</code></pre>
 <h2 id="11-iptables-integration">11. iptables Integration</h2>
 <p>To view the <code>iptables</code> rules created by Fail2ban:</p>
 <pre><code class="language-bash">sudo iptables -L -n
