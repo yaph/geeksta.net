@@ -59,10 +59,21 @@
 <p>After reconnecting the drive, open a terminal and check the <code>dmesg</code> output for any relevant messages:</p>
 <pre><code class="language-shell">sudo dmesg | grep -i usb
 </code></pre>
-<p>Look for error messages like <code>device descriptor read error</code> or <code>unable to enumerate USB device</code>, which indicate problems with the USB connection.</p>
+<p>Look for error messages like <code>device descriptor read error</code> or <code>unable to enumerate USB device</code>, which indicate problems with the USB connection. If the drive is recognised at the USB level but fails to mount or throws I/O errors, the relevant messages may not mention "usb" at all — also run the following to catch all recent kernel events:</p>
+<pre><code class="language-shell">sudo dmesg | tail -50
+</code></pre>
+<p>Look for lines referencing <code>sd</code>, <code>sda</code>, <code>sdb</code>, <code>EXT4-fs</code>, or <code>I/O error</code>, which point to filesystem or disk-level problems rather than USB issues.</p>
 <h2 id="step-4-list-usb-devices">Step 4: List USB Devices</h2>
 <p>Use <code>lsusb</code> to list all USB devices connected to your system and check if your external hard drive appears in the list. If it does, it means the drive is recognized at some level but may still have issues.</p>
-<h2 id="step-5-disable-usb-autosuspend">Step 5: Disable USB Autosuspend</h2>
+<h2 id="step-5-check-block-device-detection">Step 5: Check Block Device Detection</h2>
+<p>Even if <code>lsusb</code> shows the drive, confirm whether the OS has assigned it a block device node:</p>
+<pre><code class="language-shell">lsblk
+</code></pre>
+<p>Or for more detail including partition tables:</p>
+<pre><code class="language-shell">sudo fdisk -l
+</code></pre>
+<p>Look for a new entry like <code>/dev/sdb</code> or <code>/dev/sdc</code>. If the drive appears here, the OS has detected it at the storage level and you can attempt to mount it manually or inspect its filesystem. If it doesn't appear, the issue is at the hardware or driver level.</p>
+<h2 id="step-6-disable-usb-autosuspend">Step 6: Disable USB Autosuspend</h2>
 <p>Sometimes, USB autosuspend can cause issues. Disable it by editing the GRUB configuration:</p>
 <p>Open and edit the GRUB configuration file:</p>
 <pre><code class="language-shell">sudo vim /etc/default/grub
@@ -78,24 +89,27 @@ sudo reboot
 <pre><code class="language-shell">cat /sys/module/usbcore/parameters/autosuspend
 </code></pre>
 <p>If this doesn't help, I suggest undoing the changes.</p>
-<h2 id="step-6-use-a-live-usb">Step 6: Use a Live USB</h2>
+<h2 id="step-7-use-a-live-usb">Step 7: Use a Live USB</h2>
 <p>Create a live USB stick with a different Linux distribution and boot from it:</p>
 <ol>
-<li>Use a tool like <a href="https://rufus.ie/">Rufus</a> or <a href="https://unetbootin.github.io/">UNetbootin</a> to create a live USB stick.</li>
+<li>Use a tool like <a href="https://www.ventoy.net/">Ventoy</a>, <a href="https://etcher.balena.io/">Balena Etcher</a>, or <code>dd</code> to create a live USB stick. Note that Rufus is Windows-only and not suitable here.</li>
 <li>Boot your computer from the live USB stick.</li>
 <li>After booting, connect your external hard drive and see if it is recognized.</li>
 </ol>
-<h2 id="step-7-check-disk-health">Step 7: Check Disk Health</h2>
+<h2 id="step-8-check-disk-health">Step 8: Check Disk Health</h2>
 <p>If the drive is making unusual noises, it might indicate hardware failure. In this case, stop using the drive immediately to prevent further damage. If the data is critical, consider professional data recovery services.</p>
-<h2 id="step-8-attempt-data-recovery">Step 8: Attempt Data Recovery</h2>
+<h2 id="step-9-attempt-data-recovery">Step 9: Attempt Data Recovery</h2>
 <p>If the drive is recognized but you can't access the data, use tools like TestDisk and PhotoRec:</p>
 <p>Install TestDisk and PhotoRec:</p>
 <pre><code class="language-shell">sudo apt-get install testdisk
 </code></pre>
-<p>Run TestDisk:</p>
+<p>Run TestDisk to recover lost partitions or repair partition tables:</p>
 <pre><code class="language-shell">sudo testdisk
 </code></pre>
 <p>Follow the prompts to analyze and recover partitions or files.</p>
+<p>If the filesystem is too damaged for TestDisk, use PhotoRec (included in the same package) to recover individual files by scanning for known file signatures:</p>
+<pre><code class="language-shell">sudo photorec
+</code></pre>
 <h2 id="opening-the-case">Opening the Case</h2>
 <p>If none of the above steps helped and the warranty on your hard drive is still valid, contact the seller or manufacturer for assistance. If the warranty has expired and you decide to open the hard drive case, here are some tips:</p>
 <h3 id="what-to-look-out-for">What to Look Out For:</h3>
@@ -106,16 +120,15 @@ sudo reboot
 <li><strong>PCB Inspection</strong>: Examine the printed circuit board (PCB) for any signs of damage or burnt areas.</li>
 <li><strong>Heads and Platters</strong>: Avoid touching the platters or the read/write heads, as they are extremely sensitive and can be damaged easily.</li>
 </ol>
-<h3 id="handling-and-safety-tips">Handling and Safety Tips:</h3>
+<h3 id="handling-tips">Handling Tips:</h3>
 <ol>
-<li>Handle these materials minimally and wash your hands afterward.</li>
-<li>Avoid ingesting any part of the seal. Seek medical advice if accidentally ingested.</li>
-<li>Avoid inhaling any dust or particles if the seal is damaged.</li>
-<li>If you have sensitive skin, wear gloves when handling to avoid potential irritation.</li>
+<li>Work in a clean, static-free environment — away from fans, air vents, or anywhere dust could settle on the platters.</li>
+<li>Ground yourself before touching internal components to avoid electrostatic discharge.</li>
+<li>Keep the drive horizontal and stable while open.</li>
+<li>If you suspect a head crash or severe mechanical failure, stop here — opening the drive outside a professional cleanroom will make data recovery impossible.</li>
 </ol>
 <h2 id="conclusion">Conclusion</h2>
 <p>By following these steps, you should be able to diagnose and potentially resolve issues with your external hard drive on Linux. If the drive continues to malfunction, especially if it makes unusual noises, consider consulting professional data recovery services to avoid permanent data loss. Regular backups and careful handling of external drives can prevent many common issues.</p>
-<p>Keep your data safe and ensure your drives are functioning correctly to avoid any unnecessary headaches in the future.</p>
     </div>
     <div class="col">
 
@@ -152,9 +165,9 @@ sudo reboot
 <hr>
 <p>Published by <a href="https://ramiro.org/">Ramiro Gómez</a> on <time datetime="2024-06-06T13:18">June 06, 2024</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
 <p><strong>Tags:</strong>
+    <a class="button outline" href="/tags/hardware/">hardware</a>
     <a class="button outline" href="/tags/linux/">linux</a>
     <a class="button outline" href="/tags/guide/">guide</a>
-    <a class="button outline" href="/tags/hardware/">hardware</a>
 </p>
 <p class="text-grey"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p><hr>
 <p><strong>Share post:</strong>
@@ -224,7 +237,7 @@ sudo reboot
     "headline": "Troubleshooting External Hard Drives on Linux",
     "description": "Learn how to troubleshoot and resolve issues with your external hard drive on Linux. Follow these steps to diagnose problems, check connections, and recover data.",
     "datePublished": "2024-06-06 13:18:59",
-    "dateModified": "2025-02-07 00:41:22.734840",
+    "dateModified": "2026-04-03 20:19:43.992545",
     "author": { "@type": "Person", "name": "Ramiro Gómez", "url": "https://geeksta.net" },
     "url": "https://geeksta.net/geeklog/troubleshooting-external-hard-drives-on-linux/",
     "keywords": ["guide", "linux", "hardware"],

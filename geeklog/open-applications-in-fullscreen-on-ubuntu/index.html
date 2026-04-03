@@ -70,26 +70,24 @@ Exec=evince --fullscreen %U
 <h2 id="limitations">Limitations</h2>
 <p>While this method works fine for Evince, it's not a universal solution. Some applications require different approaches:</p>
 <h3 id="visual-studio-code">Visual Studio Code</h3>
-<p>For VS Code, the desktop file modification approach doesn't work. Instead, you'll need to adjust the application's settings:</p>
+<p>For VS Code, the desktop file modification approach doesn't work. Instead, adjust the application's settings:</p>
 <ol>
 <li>Open VS Code</li>
-<li>Go to Settings (Ctrl+,)</li>
-<li>Search for <code>window.titleBarStyle</code></li>
-<li>Set the value to <code>custom</code></li>
+<li>Go to Settings (<code>Ctrl+,</code>)</li>
+<li>Search for <code>window.newWindowDimensions</code></li>
+<li>Set the value to <code>maximized</code></li>
 </ol>
-<p>This setting ensures that VS Code windows open maximized across all new windows.</p>
-<h3 id="keepassx">KeePassX</h3>
-<p>Similarly, KeePassX lacks a command-line option to start in fullscreen and has no corresponding setting that I'm aware of either. For these cases, I use the keyboard shortcut <code>Super (Windows or Command key) + Up Arrow</code> or double-click the title bar to manually maximize the window.</p>
+<p>This ensures new VS Code windows open maximised by default.</p>
+<h3 id="keepassxc">KeePassXC</h3>
+<p>KeePassXC lacks a command-line option to start in fullscreen and has no corresponding setting either. For these cases, I use the keyboard shortcut <code>Super + Up Arrow</code> or double-click the title bar to manually maximise the window.</p>
 <h2 id="best-practices">Best Practices</h2>
 <ul>
-<li>Always create a local copy of the desktop file before modifying.</li>
-<li>Preserve the original file's structure, the local file must be a complete, standalone desktop file.</li>
-<li>Run the <code>update-desktop-database</code> command to ensure changes take effect.</li>
-<li>Remember that not all applications support fullscreen launch via desktop files.</li>
+<li>Always create a local copy of the desktop file rather than editing the system-wide original — it will survive package updates and only affects your user session.</li>
+<li>The local file must be a complete, standalone desktop file, not just a fragment with the changed line.</li>
+<li>Not all applications support a fullscreen or maximised launch flag — check <code>--help</code> first.</li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <p>Modifying desktop files offers a flexible way to customize application launch behaviors. While not a one-size-fits-all solution, it provides a powerful technique for personalizing your Linux desktop experience.</p>
-<p>Next time you find an application launching in a less-than-ideal window size, remember: a simple desktop file modification might be the solution you're looking for!</p>
     </div>
     <div class="col">
 
@@ -127,8 +125,8 @@ Exec=evince --fullscreen %U
 <p>Published by <a href="https://ramiro.org/">Ramiro Gómez</a> on <time datetime="2024-12-17T21:36">December 17, 2024</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
 <p><strong>Tags:</strong>
     <a class="button outline" href="/tags/sysadmin/">sysadmin</a>
-    <a class="button outline" href="/tags/ubuntu/">ubuntu</a>
     <a class="button outline" href="/tags/linux/">linux</a>
+    <a class="button outline" href="/tags/ubuntu/">ubuntu</a>
     <a class="button outline" href="/tags/guide/">guide</a>
 </p>
 <p class="text-grey"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p><hr>
@@ -199,7 +197,7 @@ Exec=evince --fullscreen %U
     "headline": "Open Applications in Fullscreen on Ubuntu",
     "description": "Learn how to make Ubuntu applications launch in fullscreen by modifying desktop files and application settings with this short step-by-step guide.",
     "datePublished": "2024-12-17 21:36:52",
-    "dateModified": "2025-05-22 11:38:34.967935",
+    "dateModified": "2026-04-03 20:30:00.743596",
     "author": { "@type": "Person", "name": "Ramiro Gómez", "url": "https://geeksta.net" },
     "url": "https://geeksta.net/geeklog/open-applications-in-fullscreen-on-ubuntu/",
     "keywords": ["guide", "linux", "sysadmin", "ubuntu"],

@@ -42,28 +42,6 @@
     <div class="col-9-md">
         <h1>How to Determine the SMTP and IMAP Servers for a Domain</h1>
         <p>When configuring an email client (e.g., Outlook, Thunderbird, Gmail), you need the <strong>SMTP (Simple Mail Transfer Protocol)</strong> server to send emails and the <strong>IMAP (Internet Message Access Protocol)</strong> server to receive them. These servers are tied to the email service provider of the domain you're working with, and determining their correct addresses typically involves a bit of research. This guide explains several methods to identify the appropriate SMTP and IMAP servers for an email domain.</p>
-<h2 id="before-you-begin-choosing-the-right-method-for-your-needs">Before You Begin: Choosing the Right Method for Your Needs</h2>
-<p>Determining SMTP and IMAP server settings can vary in complexity depending on your familiarity with email systems. This guide offers multiple approaches, so you can choose the one that best suits your technical expertise and situation:</p>
-<ul>
-<li><strong>For Beginners or Casual Users</strong>: Start with methods that require minimal technical knowledge, such as:</li>
-<li><strong>Checking the Provider's Documentation</strong> (Step 1).</li>
-<li>
-<p><strong>Using Auto-Detection Tools</strong> in your email client (Step 2).</p>
-</li>
-<li>
-<p><strong>For Intermediate Users</strong>: If you're working with a custom domain or can't find readily available documentation, methods like:</p>
-</li>
-<li><strong>Searching for Common Naming Patterns</strong> (Step 3).</li>
-<li>
-<p><strong>Consulting a Domain Administrator or Another User</strong> (Step 4).</p>
-</li>
-<li>
-<p><strong>For Advanced Users</strong>: If you need to troubleshoot or verify server settings, try:</p>
-</li>
-<li><strong>Checking MX Records</strong> (Step 5).</li>
-<li><strong>Testing Server Connectivity on Common Ports</strong> (Step 6).</li>
-</ul>
-<p>This breakdown will help you focus on the most efficient method for your specific situation, ensuring accurate email configuration without unnecessary effort.</p>
 <h2 id="methods-to-determine-smtp-and-imap-servers">Methods to Determine SMTP and IMAP Servers</h2>
 <h3 id="step-1-check-the-providers-documentation">Step 1. Check the Provider's Documentation</h3>
 <p>The easiest way to get the correct server addresses is by consulting your email provider's official documentation. Major email providers like Google (Gmail), Yahoo, and Microsoft (Outlook/Office 365) maintain detailed guides outlining their:</p>
@@ -88,7 +66,7 @@
 <td>Gmail</td>
 <td><code>smtp.gmail.com</code></td>
 <td><code>imap.gmail.com</code></td>
-<td>587 (TLS)</td>
+<td>587 (STARTTLS) / 465 (TLS)</td>
 <td>993 (SSL)</td>
 </tr>
 <tr>
@@ -122,7 +100,7 @@
 <li><strong>IMAP (Incoming Mail)</strong>: <code>imap.[yourdomain].com</code></li>
 </ul>
 <p>In some cases, providers use a shared server address for both sending and receiving emails, such as <code>mail.[yourdomain].com</code>. Be sure to verify these details with your provider, as not all domains adhere to these conventions.</p>
-<h3 id="step-4-consult-the-domain-administrator-or-check-another-email-account">Step 4: Consult the Domain Administrator or Check Another Email Account</h3>
+<h3 id="step-4-consult-the-domain-administrator-or-check-another-email-account">Step 4. Consult the Domain Administrator or Check Another Email Account</h3>
 <p>If you're using a custom domain or an email provider without readily available documentation, reaching out to the domain administrator or examining the settings of an existing email account associated with the same domain can help you identify the correct SMTP and IMAP server details.</p>
 <h4 id="option-a-contact-the-domain-administrator">Option a: Contact the Domain Administrator</h4>
 <p>The domain administrator is typically the person or organization managing the email service for the domain (e.g., your IT department, hosting provider, or website administrator). Here's what to ask for:</p>
@@ -153,10 +131,10 @@
 <li>Look for both <strong>incoming (IMAP)</strong> and <strong>outgoing (SMTP)</strong> server details, along with their respective ports and encryption protocols.</li>
 </ol>
 <p>By leveraging these options, you can gather the most accurate information specific to your domain with minimal effort. Whether you reach out to an administrator or reference an existing setup, these clues can help you configure your email client correctly.</p>
-<h3 id="step-5-check-mx-records">Step 5: Check MX Records</h3>
-<p>SMTP servers might share a naming relationship with MX records, which define how emails are routed to the mail servers of a domain. <a href="/geeklog/how-to-determine-the-email-server-for-a-domain/">Investigating MX records</a> can sometimes help identify the appropriate SMTP server, especially if consistent naming conventions are used.</p>
-<p>While MX records are primarily responsible for directing incoming emails, they can offer clues about related server subdomains that may also serve as SMTP or IMAP servers. For example, an MX record like <code>mail.example.com</code> might indicate that <code>smtp.example.com</code> or <code>imap.example.com</code> is part of the domain's email configuration. However, this should always be cross-verified with provider documentation.</p>
-<h3 id="step-6-test-server-connectivity-on-common-ports">Step 6: Test Server Connectivity on Common Ports</h3>
+<h3 id="step-5-check-mx-records">Step 5. Check MX Records</h3>
+<p>MX records define how incoming emails are routed to a domain's mail servers. While they don't reveal SMTP or IMAP submission servers directly, <a href="/geeklog/how-to-determine-the-email-server-for-a-domain/">looking up MX records</a> can tell you which provider handles the domain's email — and from there, you can look up that provider's documented server settings.</p>
+<p>Don't rely on MX record hostnames as guesses for SMTP or IMAP addresses. A record like <code>mail.example.com</code> does not reliably imply that <code>smtp.example.com</code> or <code>imap.example.com</code> exist — these are separate services with no guaranteed naming relationship.</p>
+<h3 id="step-6-test-server-connectivity-on-common-ports">Step 6. Test Server Connectivity on Common Ports</h3>
 <p>If you've identified potential SMTP or IMAP server addresses but want to confirm their functionality, testing their connectivity on common ports can be a helpful diagnostic step. Ports act as communication gateways that allow email clients to exchange data with servers. Here's how you can test server connectivity and ensure you're using the correct settings.</p>
 <h4 id="common-ports-for-smtp-sending-emails">Common Ports for SMTP (Sending Emails)</h4>
 <p>SMTP (Simple Mail Transfer Protocol) is responsible for sending outgoing emails. The table below lists the most commonly used ports for SMTP:</p>
@@ -178,9 +156,9 @@
 </tr>
 <tr>
 <td><strong>465</strong></td>
-<td>Sending emails (legacy setups)</td>
-<td>SSL</td>
-<td>Deprecated but still supported by some providers like Yahoo.</td>
+<td>Sending emails (modern alternative)</td>
+<td>Implicit TLS</td>
+<td>Reassigned as SMTPS by RFC 8314 (2018); actively recommended by providers like Gmail and Yahoo.</td>
 </tr>
 <tr>
 <td><strong>25</strong></td>
@@ -191,8 +169,8 @@
 </tbody>
 </table>
 <ul>
-<li><strong>Port 587</strong> is the default and recommended port for most email clients because it supports STARTTLS, enabling secure communication.</li>
-<li><strong>Port 465</strong> was previously assigned for secure email transmission using SSL encryption. While deprecated as an official standard, some email providers continue to support it for legacy setups.</li>
+<li><strong>Port 587</strong> is the standard port for most email clients, using STARTTLS to upgrade the connection to encrypted after initial handshake.</li>
+<li><strong>Port 465</strong> was historically deprecated, but RFC 8314 (2018) officially reassigned it for implicit TLS (SMTPS). It is now a valid modern choice and is actively recommended by providers including Gmail and Yahoo.</li>
 <li><strong>Port 25</strong> is primarily used for server-to-server email relay but is widely blocked by ISPs to prevent spamming. <strong>Avoid using Port 25 for email client configuration.</strong></li>
 </ul>
 <h4 id="common-ports-for-imap-receiving-emails">Common Ports for IMAP (Receiving Emails)</h4>
@@ -216,14 +194,14 @@
 <tr>
 <td><strong>143</strong></td>
 <td>Receiving emails (legacy, less secure)</td>
-<td>None</td>
-<td>Use only if encryption isn't required, which is very rare.</td>
+<td>STARTTLS (optional)</td>
+<td>Unencrypted by default; STARTTLS supported but rarely enforced. Not recommended for modern setups.</td>
 </tr>
 </tbody>
 </table>
 <ul>
 <li><strong>Port 993</strong> is widely used and considered the standard for encrypted IMAP connections.</li>
-<li><strong>Port 143</strong> supports unencrypted communication and is usually used in legacy or special configurations where encryption isn't mandatory. Given today's privacy and security standards, this port is generally not recommended.</li>
+<li><strong>Port 143</strong> supports STARTTLS but does not enforce encryption by default, making it unsuitable for most modern deployments. Use only in controlled environments where encryption is guaranteed by other means.</li>
 </ul>
 <h4 id="how-to-test-server-connectivity">How to Test Server Connectivity</h4>
 <p>Once you have the server address and port number, you can test their functionality using tools like <strong>Telnet</strong> or <strong>OpenSSL</strong>. These tools attempt to establish a connection to the server on the specified port.</p>
@@ -232,15 +210,13 @@
 <pre><code class="language-shell">telnet smtp.example.com 587
 </code></pre>
 <p>Replace <code>smtp.example.com</code> with the SMTP server's address and <code>587</code> with the port you wish to test. Successful responses indicate the server is reachable.</p>
+<p><strong>Note:</strong> Telnet is not installed by default on modern Windows or macOS. On those systems, use <code>nc</code> (netcat) as an alternative: <code>nc -zv smtp.example.com 587</code>.</p>
 <p><strong>Using OpenSSL</strong>:</p>
 <p>To test IMAP or older protocols that require SSL, use this command:</p>
 <pre><code class="language-shell">openssl s_client -connect imap.example.com:993
 </code></pre>
 <p>Replace <code>imap.example.com</code> with the IMAP server's address and <code>993</code> with the port. If the connection is successful, you will see the server's SSL certificate information.</p>
 <p>If these tools fail to connect, the server address or port configuration may be incorrect, or the ports may be blocked by firewalls or ISPs.</p>
-<h2 id="summary">Summary</h2>
-<p>To set up an email client like Outlook, Gmail, or Thunderbird, knowing your domain's SMTP (for sending emails) and IMAP (for receiving emails) server details is essential. SMTP ensures your outgoing messages are correctly delivered, while IMAP syncs incoming emails with your device. These server addresses vary depending on your email provider, and finding them often involves consulting provider documentation, using auto-detection tools, or identifying common naming conventions (e.g., <code>smtp.yourdomain.com</code> and <code>imap.yourdomain.com</code>). For major providers like Gmail or Outlook, these details are well-documented and often follow standardized formats, including encryption requirements and port numbers for secure communication.</p>
-<p>If standard documentation isn't available, reaching out to the domain administrator or inspecting the configuration of an existing account tied to the same domain can help locate the correct settings. Additionally, tools like Telnet or OpenSSL can test server connectivity and port functionality (e.g., SMTP uses port 587, and IMAP commonly uses port 993). Having the correct server details ensures that your email client connects securely and reliably, whether you're working with a major provider or a custom domain setup.</p>
     </div>
     <div class="col">
 
@@ -277,8 +253,8 @@
 <hr>
 <p>Published by <a href="https://ramiro.org/">Ramiro Gómez</a> on <time datetime="2025-02-07T00:09">February 07, 2025</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
 <p><strong>Tags:</strong>
-    <a class="button outline" href="/tags/email/">email</a>
     <a class="button outline" href="/tags/sysadmin/">sysadmin</a>
+    <a class="button outline" href="/tags/email/">email</a>
     <a class="button outline" href="/tags/guide/">guide</a>
 </p>
 <p class="text-grey"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p><hr>
@@ -349,7 +325,7 @@
     "headline": "How to Determine the SMTP and IMAP Servers for a Domain",
     "description": "Learn how to identify your domain&#39;s SMTP and IMAP server settings using MX records, naming patterns, and auto-configuration tools.",
     "datePublished": "2025-02-07 00:09:53",
-    "dateModified": "2025-08-05 22:42:44.597341",
+    "dateModified": "2026-04-03 20:11:21.885488",
     "author": { "@type": "Person", "name": "Ramiro Gómez", "url": "https://geeksta.net" },
     "url": "https://geeksta.net/geeklog/how-to-determine-the-smtp-and-imap-servers-for-a-domain/",
     "keywords": ["email", "guide", "sysadmin"],

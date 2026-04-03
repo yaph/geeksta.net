@@ -55,8 +55,7 @@ openssl dhparam -out /etc/ssl/certs/dh.pem 2048
 # OR 4096-bit (higher security, much slower generation)
 openssl dhparam -out /etc/ssl/certs/dh.pem 4096
 </code></pre>
-<p><strong>Important:</strong> The parameter order matters! The <code>-out</code> option must come before the bit size.</p>
-<p><strong>Note:</strong> Generation takes time, much more much longer for 4096-bit than for 2048-bit. This is normal as it's generating cryptographically secure prime numbers.</p>
+<p><strong>Note:</strong> Generation takes time — much longer for 4096-bit than for 2048-bit. This is normal; the process is generating cryptographically secure prime numbers.</p>
 <h3 id="2-configure-dovecot">2. Configure Dovecot</h3>
 <p>Add this line to your Dovecot configuration (usually <code>/etc/dovecot/dovecot.conf</code> or <code>/etc/dovecot/conf.d/10-ssl.conf</code>):</p>
 <pre><code class="language-text">ssl_dh = &lt;/etc/ssl/certs/dh.pem
@@ -66,13 +65,10 @@ openssl dhparam -out /etc/ssl/certs/dh.pem 4096
 </code></pre>
 <h2 id="key-points">Key Points</h2>
 <ul>
-<li>2048-bit is sufficient for most security requirements and generates much faster</li>
+<li>2048-bit is the minimum acceptable and generates much faster; modern recommendations (NIST, BSI) favour 3072-bit or higher for new deployments</li>
 <li>4096-bit provides higher security but takes significantly longer to generate</li>
-<li>Parameter order is critical in the openssl command</li>
-<li>Long Generation time is normal - the process is doing real cryptographic work</li>
+<li>Long generation time is normal — the process is doing real cryptographic work</li>
 </ul>
-<h2 id="summary">Summary</h2>
-<p>The Dovecot DH parameter error is resolved by generating cryptographic parameters with OpenSSL and configuring Dovecot to use them. Choose 2048-bit for faster generation or 4096-bit for enhanced security. After configuration, restart Dovecot to enable secure IMAP connections with proper Diffie-Hellman key exchange.</p>
     </div>
     <div class="col">
 
@@ -110,10 +106,10 @@ openssl dhparam -out /etc/ssl/certs/dh.pem 4096
 <p>Published by <a href="https://ramiro.org/">Ramiro Gómez</a> on <time datetime="2025-05-29T12:58">May 29, 2025</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
 <p><strong>Tags:</strong>
     <a class="button outline" href="/tags/howto/">howto</a>
-    <a class="button outline" href="/tags/linux/">linux</a>
     <a class="button outline" href="/tags/sysadmin/">sysadmin</a>
     <a class="button outline" href="/tags/email/">email</a>
     <a class="button outline" href="/tags/tutorial/">tutorial</a>
+    <a class="button outline" href="/tags/linux/">linux</a>
 </p>
 <p class="text-grey"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p><hr>
 <p><strong>Share post:</strong>
@@ -183,7 +179,7 @@ openssl dhparam -out /etc/ssl/certs/dh.pem 4096
     "headline": "Fixing Dovecot Diffie-Hellman Parameter Error",
     "description": "Learn how to fix Dovecot&#39;s Diffie-Hellman key exchange requested SSL error by generating DH parameters with OpenSSL and configuring ssl_dh properly.",
     "datePublished": "2025-05-29 12:58:59",
-    "dateModified": "2025-05-29 12:59:00.163457",
+    "dateModified": "2026-04-03 20:00:52.207390",
     "author": { "@type": "Person", "name": "Ramiro Gómez", "url": "https://geeksta.net" },
     "url": "https://geeksta.net/geeklog/fixing-dovecot-diffie-hellman-parameter-error/",
     "keywords": ["email", "howto", "linux", "sysadmin", "tutorial"],

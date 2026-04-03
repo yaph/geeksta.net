@@ -14,7 +14,7 @@
 <url><loc><![CDATA[https://geeksta.net/ai/chatlog/glm-4.6-2025-10-17/]]></loc><lastmod>2025-10-21</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/resilience-challenge-introduction/]]></loc><lastmod>2025-10-06</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/tools/resilience/]]></loc><lastmod>2025-12-11</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/geeklog/setting-up-google-drive-backups-on-ubuntu-with-rclone/]]></loc><lastmod>2025-09-30</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/setting-up-google-drive-backups-on-ubuntu-with-rclone/]]></loc><lastmod>2026-04-03</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/word-art-feroz-tiger-black/]]></loc><lastmod>2026-01-26</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/word-art-feroz-tiger-white/]]></loc><lastmod>2026-01-26</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/protecting-your-email-server/]]></loc><lastmod>2025-12-01</lastmod></url>
@@ -34,7 +34,7 @@
 <url><loc><![CDATA[https://geeksta.net/geeklog/image-prompt-creator-introduction/]]></loc><lastmod>2025-11-29</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/love-grumpy-owl/]]></loc><lastmod>2026-01-26</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/server-failover-a-guide-for-system-administrators/]]></loc><lastmod>2025-06-02</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/geeklog/fixing-dovecot-diffie-hellman-parameter-error/]]></loc><lastmod>2025-05-29</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/fixing-dovecot-diffie-hellman-parameter-error/]]></loc><lastmod>2026-04-03</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/how-to-search-and-view-mbox-email-archives/]]></loc><lastmod>2025-10-04</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/troubleshooting-database-load-issues-on-debian-linux/]]></loc><lastmod>2025-04-03</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/checking-dns-zone-files/]]></loc><lastmod>2025-12-01</lastmod></url>
@@ -43,7 +43,7 @@
 <url><loc><![CDATA[https://geeksta.net/design/no-class-no-state-lambda-propaganda-grunge/]]></loc><lastmod>2026-01-26</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/punk-rock-forever-anarchy/]]></loc><lastmod>2026-01-26</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/wiki-story-introduction/]]></loc><lastmod>2025-11-29</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/geeklog/how-to-determine-the-smtp-and-imap-servers-for-a-domain/]]></loc><lastmod>2025-08-05</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/how-to-determine-the-smtp-and-imap-servers-for-a-domain/]]></loc><lastmod>2026-04-03</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/how-to-determine-the-email-server-for-a-domain/]]></loc><lastmod>2025-12-01</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/tools/tts-samples/]]></loc><lastmod>2025-02-10</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/how-to-set-max-input-vars-in-php/]]></loc><lastmod>2025-05-22</lastmod></url>
@@ -58,14 +58,14 @@
 <url><loc><![CDATA[https://geeksta.net/geeklog/chat-gpt-prompts-for-limitless-creativity-and-productivity/]]></loc><lastmod>2024-12-29</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/preventing-user-registration-spam-in-word-press-with-fail2ban/]]></loc><lastmod>2025-12-01</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/find-lines-in-one-file-not-present-in-another-using-grep/]]></loc><lastmod>2025-05-22</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/geeklog/open-applications-in-fullscreen-on-ubuntu/]]></loc><lastmod>2025-05-22</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/open-applications-in-fullscreen-on-ubuntu/]]></loc><lastmod>2026-04-03</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/geeklog/manage-tasks-with-screen-remotely/]]></loc><lastmod>2025-02-07</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/viking-axe-man-guitars/]]></loc><lastmod>2026-01-26</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/shrug-it-works-on-127.0.0.1-black/]]></loc><lastmod>2026-01-26</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/shrug-it-works-on-127.0.0.1-white/]]></loc><lastmod>2026-01-26</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/shrug-it-works-on-127.0.0.1-white-green/]]></loc><lastmod>2026-01-26</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/always-speak-the-truth-but-dont-always-speak-orange-white/]]></loc><lastmod>2026-01-26</lastmod></url>
-<url><loc><![CDATA[https://geeksta.net/geeklog/troubleshooting-external-hard-drives-on-linux/]]></loc><lastmod>2025-02-07</lastmod></url>
+<url><loc><![CDATA[https://geeksta.net/geeklog/troubleshooting-external-hard-drives-on-linux/]]></loc><lastmod>2026-04-03</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/helloworld-obfuscated.c-rrt/]]></loc><lastmod>2026-01-26</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/italia-human-flag-al/]]></loc><lastmod>2026-01-26</lastmod></url>
 <url><loc><![CDATA[https://geeksta.net/design/italia-human-flag-it/]]></loc><lastmod>2026-01-26</lastmod></url>
