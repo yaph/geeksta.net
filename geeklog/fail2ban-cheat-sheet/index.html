@@ -87,7 +87,7 @@
 <tr>
 <td><code>systemctl restart fail2ban</code></td>
 <td>Use for major changes, like adjustments in <code>/etc/fail2ban/fail2ban.conf</code>, or when changing Fail2ban actions.</td>
-<td>Fully restarts Fail2ban, reinitializing all settings and clearing current ban lists.</td>
+<td>Fully restarts Fail2ban, reinitializing all settings. Active ban lists are cleared unless ban persistence is configured (see Section 10).</td>
 </tr>
 </tbody>
 </table>
@@ -112,23 +112,32 @@
 <pre><code class="language-bash">sudo fail2ban-client set &lt;jail_name&gt; unbanip &lt;IP_address&gt;
 </code></pre>
 <p>Unban all IPs from a specific jail:</p>
-<pre><code class="language-bash">sudo fail2ban-client set &lt;jail_name&gt; unban --all
+<pre><code class="language-bash">sudo fail2ban-client set &lt;jail_name&gt; unbanip --all
 </code></pre>
 <h2 id="6-sample-jail-configuration">6. Sample Jail Configuration</h2>
 <p>Customize <code>/etc/fail2ban/jail.local</code> to protect SSH:</p>
 <pre><code class="language-ini">[DEFAULT]
 # Defaults for all jails
-ignoreip = 127.0.0.1/8 192.168.1.0/24  # Whitelist specific IPs or ranges
-bantime = 3600                          # 1 hour ban duration
-findtime = 600                          # Time window to detect multiple failed attempts
-maxretry = 3                            # Max failed attempts before banning
-backend = auto                          # Log backend, usually auto-detected
+# Whitelist specific IPs or ranges
+ignoreip = 127.0.0.1/8 192.168.1.0/24
+# 1 hour ban duration
+bantime = 3600
+# Time window to detect multiple failed attempts
+findtime = 600
+# Max failed attempts before banning
+maxretry = 3
+# Log backend, usually auto-detected
+backend = auto
 
 [sshd]
-enabled = true                          # Enable the SSH jail
-port = ssh                              # Override port if not default
-logpath = /var/log/auth.log             # Path to SSH authentication log
-filter = sshd                           # Use the SSH filter for matching logs
+# Enable the SSH jail
+enabled = true
+# Override port if not default
+port = ssh
+# Path to SSH authentication log
+logpath = /var/log/auth.log
+# Use the SSH filter for matching logs
+filter = sshd
 </code></pre>
 <p>After editing:</p>
 <pre><code class="language-bash"># Reload Fail2ban to apply changes
@@ -164,28 +173,31 @@ ignoreregex =
 <pre><code class="language-bash">sudo fail2ban-regex /var/log/apache2/error.log /etc/fail2ban/filter.d/apache-auth.conf
 </code></pre>
 <h2 id="9-debugging">9. Debugging</h2>
-<p>Check configuration syntax:</p>
+<p>Dump the effective configuration (all parsed settings — useful for verifying what Fail2ban is actually using):</p>
 <pre><code class="language-bash">sudo fail2ban-client -d
+</code></pre>
+<p>Test configuration for syntax errors:</p>
+<pre><code class="language-bash">sudo fail2ban-client --test
 </code></pre>
 <p>View system logs for Fail2ban:</p>
 <pre><code class="language-bash">journalctl -u fail2ban
 </code></pre>
 <h2 id="10-persistent-bans-across-restarts">10. Persistent Bans Across Restarts</h2>
-<p>If you want bans to persist after Fail2ban is restarted:</p>
-<p>Enable persistent bans in <code>/etc/fail2ban/jail.local</code>:</p>
+<p>On most distributions, Fail2ban already enables ban persistence via SQLite by default. If bans are not surviving restarts, check whether <code>dbfile</code> is explicitly set in your configuration. You can confirm or set it in <code>/etc/fail2ban/jail.local</code>:</p>
 <pre><code class="language-ini">[DEFAULT]
 dbfile = /var/lib/fail2ban/fail2ban.sqlite3
 </code></pre>
-<p>Restart Fail2ban:</p>
+<p>Restart Fail2ban to apply:</p>
 <pre><code class="language-bash">sudo systemctl restart fail2ban
 </code></pre>
 <h2 id="11-iptables-integration">11. iptables Integration</h2>
 <p>To view the <code>iptables</code> rules created by Fail2ban:</p>
 <pre><code class="language-bash">sudo iptables -L -n
 </code></pre>
-<p>To remove or flush all Fail2ban-related rules:</p>
-<pre><code class="language-bash">sudo iptables -F
+<p>To remove Fail2ban-specific rules, target its chains directly (e.g., for the <code>sshd</code> jail):</p>
+<pre><code class="language-bash">sudo iptables -F f2b-sshd
 </code></pre>
+<p>Avoid <code>iptables -F</code> without specifying a chain. It flushes <em>all</em> rules across the entire firewall, not just Fail2ban's.</p>
 <h2 id="12-security-best-practices">12. Security Best Practices</h2>
 <ul>
 <li>Always whitelist critical IPs using <code>ignoreip</code> to prevent accidental bans.</li>
@@ -231,9 +243,9 @@ dbfile = /var/lib/fail2ban/fail2ban.sqlite3
 <hr>
 <p>Published by <a href="https://ramiro.org/">Ramiro Gómez</a> on <time datetime="2025-11-20T22:08">November 20, 2025</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
 <p><strong>Tags:</strong>
+    <a class="button outline" href="/tags/cheat-sheet/">cheat sheet</a>
     <a class="button outline" href="/tags/sysadmin/">sysadmin</a>
     <a class="button outline" href="/tags/fail2ban/">fail2ban</a>
-    <a class="button outline" href="/tags/cheat-sheet/">cheat sheet</a>
 </p>
 <p class="text-grey"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p><hr>
 <p><strong>Share post:</strong>
@@ -303,7 +315,7 @@ dbfile = /var/lib/fail2ban/fail2ban.sqlite3
     "headline": "Fail2ban Cheat Sheet for Sysadmins",
     "description": "Fail2ban is an essential tool for protecting Linux systems from brute-force attacks by monitoring logs and banning IPs that exhibit malicious behavior. This cheat sheet provides the most important concepts and commands for managing Fail2ban effectively.",
     "datePublished": "2025-11-20 22:08:28",
-    "dateModified": "2026-03-16 21:54:01.538541",
+    "dateModified": "2026-04-03 19:47:45.814827",
     "author": { "@type": "Person", "name": "Ramiro Gómez", "url": "https://geeksta.net" },
     "url": "https://geeksta.net/geeklog/fail2ban-cheat-sheet/",
     "keywords": ["fail2ban", "cheat sheet", "sysadmin"],
