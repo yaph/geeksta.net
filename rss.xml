@@ -7,6 +7,13 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[How to Check if an IP Address is Blocked on Linux]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/how-to-check-if-an-ip-address-is-blocked-on-linux/]]></link>
+        <description><![CDATA[<p>Learn how to check if an IP address is blocked on Linux using iptables, nftables, firewalld, Fail2Ban, and other security tools with practical examples.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/how-to-check-if-an-ip-address-is-blocked-on-linux/]]></guid>
+        <pubDate>Sat, 11 Apr 2026 23:35:32 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[How to Inspect All Cron Jobs on a Linux System: A Sysadmin's Guide]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/how-to-inspect-all-cron-jobs-on-a-linux-system/]]></link>
         <description><![CDATA[<p>Learn how to inspect and audit cron jobs on Linux systems, identify suspicious tasks, and follow best practices to keep your scheduled tasks secure and efficient.</p>]]></description>
@@ -72,12 +79,5 @@ Clean...</p><img src="https://geeksta.net/img/large/402-payment-required-black.j
         <description><![CDATA[<p>View your public facing IP address and location.</p>]]></description>
         <guid><![CDATA[https://geeksta.net/tools/ip/]]></guid>
         <pubDate>Mon, 01 Dec 2025 12:51:35 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[Practical Tips to Reduce Data Usage on Phones, Tablets, and Computers]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/reduce-data-usage-guide/]]></link>
-        <description><![CDATA[<p>Discover simple, effective tips to reduce data usage on phones, tablets, and computers. Save data, lower costs, and improve your online experience with practical steps.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/reduce-data-usage-guide/]]></guid>
-        <pubDate>Sat, 29 Nov 2025 12:30:15 </pubDate>
     </item>
 </channel></rss>

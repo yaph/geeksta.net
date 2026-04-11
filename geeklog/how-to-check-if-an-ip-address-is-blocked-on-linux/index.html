@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Check if an IP Address is Blocked on Linux | Geeksta</title>
+<meta name="description" content="Learn how to check if an IP address is blocked on Linux using iptables, nftables, firewalld, Fail2Ban, and other security tools with practical examples."><meta name="author" content="Ramiro Gómez"><link rel="canonical" itemprop="url" href="https://geeksta.net/geeklog/how-to-check-if-an-ip-address-is-blocked-on-linux/">
+<link rel="icon" type="image/png" href="/img/icon-small.png">
+<link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Geeksta All Posts RSS feed">
+            <meta property="og:image" content="/img/geeklog/geeklog-security.png">
+    <link rel="stylesheet" href="/vendor/chota.min.css">
+    <link rel="stylesheet" href="/compiled/style.css">
+    <link rel="stylesheet" href="/compiled/dropdown.css">
+
+</head>
+<body>
+    <header><nav class="nav dark">
+        <div class="nav-left">
+            <a class="brand" href="/"><img class="logo" src="/img/icon-small.png" alt="logo">Geeksta</a>
+        </div>
+        <ul class="nav-right">
+            <li>
+                <a href="#">Sections ▾</a>
+                <ul class="dropdown">
+                    <li><a href="/reviews/">Book Reviews</a></li>
+                    <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
+                    <li><a href="/visualizations/">Data Visualizations</a></li>
+                    <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
+                    <li><a href="/events/">Geek Events</a></li>
+                    <li><a href="/screencasts/">Screencasts</a></li>
+                    <li><a href="/videos/">Videos</a></li>
+                </ul>
+            </li>
+            <li><a href="/geeklog/">Geeklog</a></li>
+            <li><a href="/merch/">Merch</a></li>
+            <li><a href="/tools/">Tools</a></li>
+        </ul>
+    </nav></header>
+
+    <main class="container">
+<div class="row">
+    <div class="col-9-md">
+        <h1>How to Check if an IP Address is Blocked on Linux</h1>
+        <p>When troubleshooting network connectivity issues or managing server security, you may need to verify whether a specific IP address is being blocked by your Linux server. This guide covers the most common methods to check for IP blocks across different firewall and security tools.</p>
+<h2 id="checking-iptables-rules">Checking iptables Rules</h2>
+<p>If your server uses iptables as its firewall, you can search for the IP address in the firewall rules:</p>
+<pre><code class="language-bash"># Search all chains for a specific IP
+sudo iptables -L -n -v | grep 203.0.113.50
+
+# Check the INPUT chain specifically
+sudo iptables -L INPUT -n -v | grep 203.0.113.50
+
+# List all rules in a more parseable format
+sudo iptables -S | grep 203.0.113.50
+</code></pre>
+<p>The <code>-n</code> flag shows numeric addresses without DNS resolution, <code>-v</code> provides verbose output with packet counts, and <code>-S</code> displays rules in a format similar to how they were added.</p>
+<h2 id="checking-nftables-rules">Checking nftables Rules</h2>
+<p>For systems using nftables (the successor to iptables):</p>
+<pre><code class="language-bash"># List entire ruleset and search for IP
+sudo nft list ruleset | grep 203.0.113.50
+</code></pre>
+<h2 id="checking-firewalld">Checking firewalld</h2>
+<p>If you're using firewalld (common on RHEL/CentOS/Fedora):</p>
+<pre><code class="language-bash"># Check all firewall rules
+sudo firewall-cmd --list-all | grep 203.0.113.50
+
+# Check rich rules specifically
+sudo firewall-cmd --list-rich-rules | grep 203.0.113.50
+
+# Check direct rules
+sudo firewall-cmd --direct --get-all-rules | grep 203.0.113.50
+</code></pre>
+<h2 id="checking-fail2ban">Checking Fail2Ban</h2>
+<p>Fail2Ban automatically blocks IPs after repeated failed login attempts. To check if an IP is banned:</p>
+<pre><code class="language-bash"># See all active jails
+sudo fail2ban-client status
+
+# Check a specific jail (e.g., sshd)
+sudo fail2ban-client status sshd
+
+# Search for a specific IP in a jail
+sudo fail2ban-client status sshd | grep 203.0.113.50
+
+# Get all banned IPs (Fail2Ban 0.11+)
+sudo fail2ban-client banned
+</code></pre>
+<p>To unban an IP from Fail2Ban:</p>
+<pre><code class="language-bash">sudo fail2ban-client set sshd unbanip 203.0.113.50
+</code></pre>
+<h2 id="checking-tcp-wrappers">Checking TCP Wrappers</h2>
+<p>Older systems may use TCP Wrappers for access control:</p>
+<pre><code class="language-bash"># Check hosts.deny
+grep 203.0.113.50 /etc/hosts.deny
+
+# Check hosts.allow
+grep 203.0.113.50 /etc/hosts.allow
+</code></pre>
+<h2 id="checking-csf-configserver-security-firewall">Checking CSF (ConfigServer Security &amp; Firewall)</h2>
+<p>If you're running CSF:</p>
+<pre><code class="language-bash"># Check if an IP is blocked
+sudo csf -g 203.0.113.50
+
+# Search the deny list
+grep 203.0.113.50 /etc/csf/csf.deny
+
+# Search temporary blocks
+grep 203.0.113.50 /var/lib/csf/csf.tempban
+</code></pre>
+<h2 id="testing-connectivity">Testing Connectivity</h2>
+<p>To verify whether an IP can actually connect to your server, test from the client side:</p>
+<pre><code class="language-bash"># Test a specific port with netcat
+nc -zv yourserver.com 22
+
+# Test with telnet
+telnet yourserver.com 22
+
+# Test HTTP/HTTPS
+curl -v http://yourserver.com
+</code></pre>
+<p>If the connection times out or is refused immediately, the IP may be blocked.</p>
+<h2 id="checking-system-logs">Checking System Logs</h2>
+<p>Don't forget to check your system logs for blocking events:</p>
+<pre><code class="language-bash"># Check firewall logs (location varies by distribution)
+sudo grep &quot;203.0.113.50&quot; /var/log/syslog
+sudo grep &quot;203.0.113.50&quot; /var/log/messages
+
+# Check kernel logs for dropped packets
+sudo dmesg | grep &quot;203.0.113.50&quot;
+
+# For systemd-based systems
+sudo journalctl | grep &quot;203.0.113.50&quot;
+</code></pre>
+<h2 id="quick-reference-table">Quick Reference Table</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Check Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>iptables</td>
+<td><code>sudo iptables -L -n -v \| grep &lt;IP&gt;</code></td>
+</tr>
+<tr>
+<td>nftables</td>
+<td><code>sudo nft list ruleset \| grep &lt;IP&gt;</code></td>
+</tr>
+<tr>
+<td>firewalld</td>
+<td><code>sudo firewall-cmd --list-all \| grep &lt;IP&gt;</code></td>
+</tr>
+<tr>
+<td>Fail2Ban</td>
+<td><code>sudo fail2ban-client status &lt;jail&gt;</code></td>
+</tr>
+<tr>
+<td>TCP Wrappers</td>
+<td><code>grep &lt;IP&gt; /etc/hosts.deny</code></td>
+</tr>
+<tr>
+<td>CSF</td>
+<td><code>sudo csf -g &lt;IP&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="conclusion">Conclusion</h2>
+<p>The method you use depends on your server's security configuration. Most modern Linux distributions use either iptables/nftables or firewalld as their primary firewall, often combined with Fail2Ban for intrusion prevention. Start by identifying which firewall system your server uses, then apply the appropriate commands from this guide.</p>
+    </div>
+    <div class="col">
+
+<h3>Featured Merch</h3>
+<figure class="preview">
+    <a href="/design/bash-fork-bomb-white/">
+            <img class="b-lazy" src="/img/large/bash-fork-bomb-white.jpg" alt="Bash Fork Bomb - White Text for Unix/Linux Hackers" />
+        <figcaption>Bash Fork Bomb - White Text for Unix/Linux Hackers</figcaption>
+    </a>
+</figure>
+
+
+<h3>Latest Posts</h3>
+<ul>
+        <li><a href="/geeklog/how-to-inspect-all-cron-jobs-on-a-linux-system/">How to Inspect All Cron Jobs on a Linux System: A Sysadmin's Guide</a></li>
+        <li><a href="/geeklog/building-a-3d-elevation-photo-diary/">Building a 3D Elevation Photo Diary with deck.gl</a></li>
+        <li><a href="/geeklog/thunderbird-keeps-threading-emails-here-s-the-fix/">Thunderbird Keeps Threading Emails? Here's the Fix</a></li>
+        <li><a href="/geeklog/social-media-dimensions-cheat-sheet/">Social Media Dimensions Cheat Sheet 2025</a></li>
+</ul>
+
+<h3>Featured Book</h3>
+<figure class="preview">
+    <a href="https://www.amazon.com/dp/B0C5B9JG57?tag=geeksta-20">
+        <img alt="eBook cover" src="/img/books/chatgpt-interview-prompting.jpg"><br>
+        <figcaption>Buy on Amazon</figcaption>
+    </a>
+</figure>
+
+<hr>
+
+<a href="/rss.xml" class="button primary">Subscribe to RSS Feed</a></li>    </div>
+</div>
+<hr>
+<p>Published by <a href="https://ramiro.org/">Ramiro Gómez</a> on <time datetime="2026-04-11T23:35">April 11, 2026</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
+<p><strong>Tags:</strong>
+    <a class="button outline" href="/tags/networking/">networking</a>
+    <a class="button outline" href="/tags/sysadmin/">sysadmin</a>
+    <a class="button outline" href="/tags/security/">security</a>
+    <a class="button outline" href="/tags/guide/">guide</a>
+</p>
+<p class="text-grey"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p><hr>
+<p><strong>Share post:</strong>
+<a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/geeklog/how-to-check-if-an-ip-address-is-blocked-on-linux/&t=How%20to%20Check%20if%20an%20IP%20Address%20is%20Blocked%20on%20Linux" class="button success">Facebook</a>
+<a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/geeklog/how-to-check-if-an-ip-address-is-blocked-on-linux/&title=How%20to%20Check%20if%20an%20IP%20Address%20is%20Blocked%20on%20Linux" class="button success">LinkedIn</a>
+<a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/geeklog/how-to-check-if-an-ip-address-is-blocked-on-linux/&title=How%20to%20Check%20if%20an%20IP%20Address%20is%20Blocked%20on%20Linux" class="button success">Reddit</a>
+<a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/geeklog/how-to-check-if-an-ip-address-is-blocked-on-linux/&text=How%20to%20Check%20if%20an%20IP%20Address%20is%20Blocked%20on%20Linux" class="button success">Twitter</a>
+</p>
+<div class="card vm">
+    <h3>Merchandise</h3>
+    <div class="row">
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/caution-i-test-in-production/">
+            <img class="b-lazy" src="/img/large/caution-i-test-in-production.jpg" alt="I Test in Production - Funny Developer Caution Sign Design" />
+        <figcaption>I Test in Production - Funny Developer Caution Sign Design</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/hack-the-planet-green/">
+            <img class="b-lazy" src="/img/large/hack-the-planet-green.jpg" alt="Hack the Planet - Green Globe Design for Computer Hackers" />
+        <figcaption>Hack the Planet - Green Globe Design for Computer Hackers</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/run-bsd/">
+            <img class="b-lazy" src="/img/large/run-bsd.jpg" alt="RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins" />
+        <figcaption>RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins</figcaption>
+    </a>
+</figure>
+
+    </div>
+    <div class="col-3-md">
+        <figure class="preview">
+    <a href="/design/shrug-it-works-on-my-machine-medium-white/">
+            <img class="b-lazy" src="/img/large/shrug-it-works-on-my-machine-medium-white.jpg" alt="Shrug It Works On My Machine Funny Programmer Excuse White Design" />
+        <figcaption>Shrug It Works On My Machine Funny Programmer Excuse White Design</figcaption>
+    </a>
+</figure>
+
+    </div>
+</div>
+
+</div>    </main>
+
+    <footer class="dark"><div class="container">
+        Geeksta elsewhere: <a href="https://www.instagram.com/g33ksta/">Instagram</a> • <a href="https://www.youtube.com/@geeksta">YouTube</a> • <a href="https://www.tiktok.com/@g33ksta">TikTok</a> • <a href="https://www.facebook.com/geeksta.net/">Facebook</a>
+        <br>
+        © 2010 - 2026 Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/rss.xml">RSS Feed</a></p>
+    </div></footer>
+
+    <script src="/compiled/script.js"></script>
+
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript><script type="application/ld+json">
+{
+    "@context": "https://schema.org/",
+    "@type": "BlogPosting",
+    "@id": "https://geeksta.net/geeklog/how-to-check-if-an-ip-address-is-blocked-on-linux/#BlogPosting",
+    "mainEntityOfPage": "https://geeksta.net/geeklog/how-to-check-if-an-ip-address-is-blocked-on-linux/",
+    "headline": "How to Check if an IP Address is Blocked on Linux",
+    "description": "Learn how to check if an IP address is blocked on Linux using iptables, nftables, firewalld, Fail2Ban, and other security tools with practical examples.",
+    "datePublished": "2026-04-11 23:35:32",
+    "dateModified": "2026-04-11 23:35:32.882066",
+    "author": { "@type": "Person", "name": "Ramiro Gómez", "url": "https://geeksta.net" },
+    "url": "https://geeksta.net/geeklog/how-to-check-if-an-ip-address-is-blocked-on-linux/",
+    "keywords": ["guide", "networking", "security", "sysadmin"],
+    "inLanguage": "en"
+}
+</script>
+</body>
+</html>

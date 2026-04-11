@@ -7,6 +7,143 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[How to Check if an IP Address is Blocked on Linux]]></title>
+        <link><![CDATA[https://geeksta.net/geeklog/how-to-check-if-an-ip-address-is-blocked-on-linux/]]></link>
+        <description><![CDATA[<p>Learn how to check if an IP address is blocked on Linux using iptables, nftables, firewalld, Fail2Ban, and other security tools with practical examples.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/geeklog/how-to-check-if-an-ip-address-is-blocked-on-linux/]]></guid>
+        <pubDate>Sat, 11 Apr 2026 23:35:32 </pubDate>
+        <content:encoded><![CDATA[
+        <p>When troubleshooting network connectivity issues or managing server security, you may need to verify whether a specific IP address is being blocked by your Linux server. This guide covers the most common methods to check for IP blocks across different firewall and security tools.</p>
+<h2 id="checking-iptables-rules">Checking iptables Rules</h2>
+<p>If your server uses iptables as its firewall, you can search for the IP address in the firewall rules:</p>
+<pre><code class="language-bash"># Search all chains for a specific IP
+sudo iptables -L -n -v | grep 203.0.113.50
+
+# Check the INPUT chain specifically
+sudo iptables -L INPUT -n -v | grep 203.0.113.50
+
+# List all rules in a more parseable format
+sudo iptables -S | grep 203.0.113.50
+</code></pre>
+<p>The <code>-n</code> flag shows numeric addresses without DNS resolution, <code>-v</code> provides verbose output with packet counts, and <code>-S</code> displays rules in a format similar to how they were added.</p>
+<h2 id="checking-nftables-rules">Checking nftables Rules</h2>
+<p>For systems using nftables (the successor to iptables):</p>
+<pre><code class="language-bash"># List entire ruleset and search for IP
+sudo nft list ruleset | grep 203.0.113.50
+</code></pre>
+<h2 id="checking-firewalld">Checking firewalld</h2>
+<p>If you're using firewalld (common on RHEL/CentOS/Fedora):</p>
+<pre><code class="language-bash"># Check all firewall rules
+sudo firewall-cmd --list-all | grep 203.0.113.50
+
+# Check rich rules specifically
+sudo firewall-cmd --list-rich-rules | grep 203.0.113.50
+
+# Check direct rules
+sudo firewall-cmd --direct --get-all-rules | grep 203.0.113.50
+</code></pre>
+<h2 id="checking-fail2ban">Checking Fail2Ban</h2>
+<p>Fail2Ban automatically blocks IPs after repeated failed login attempts. To check if an IP is banned:</p>
+<pre><code class="language-bash"># See all active jails
+sudo fail2ban-client status
+
+# Check a specific jail (e.g., sshd)
+sudo fail2ban-client status sshd
+
+# Search for a specific IP in a jail
+sudo fail2ban-client status sshd | grep 203.0.113.50
+
+# Get all banned IPs (Fail2Ban 0.11+)
+sudo fail2ban-client banned
+</code></pre>
+<p>To unban an IP from Fail2Ban:</p>
+<pre><code class="language-bash">sudo fail2ban-client set sshd unbanip 203.0.113.50
+</code></pre>
+<h2 id="checking-tcp-wrappers">Checking TCP Wrappers</h2>
+<p>Older systems may use TCP Wrappers for access control:</p>
+<pre><code class="language-bash"># Check hosts.deny
+grep 203.0.113.50 /etc/hosts.deny
+
+# Check hosts.allow
+grep 203.0.113.50 /etc/hosts.allow
+</code></pre>
+<h2 id="checking-csf-configserver-security-firewall">Checking CSF (ConfigServer Security &amp; Firewall)</h2>
+<p>If you're running CSF:</p>
+<pre><code class="language-bash"># Check if an IP is blocked
+sudo csf -g 203.0.113.50
+
+# Search the deny list
+grep 203.0.113.50 /etc/csf/csf.deny
+
+# Search temporary blocks
+grep 203.0.113.50 /var/lib/csf/csf.tempban
+</code></pre>
+<h2 id="testing-connectivity">Testing Connectivity</h2>
+<p>To verify whether an IP can actually connect to your server, test from the client side:</p>
+<pre><code class="language-bash"># Test a specific port with netcat
+nc -zv yourserver.com 22
+
+# Test with telnet
+telnet yourserver.com 22
+
+# Test HTTP/HTTPS
+curl -v http://yourserver.com
+</code></pre>
+<p>If the connection times out or is refused immediately, the IP may be blocked.</p>
+<h2 id="checking-system-logs">Checking System Logs</h2>
+<p>Don't forget to check your system logs for blocking events:</p>
+<pre><code class="language-bash"># Check firewall logs (location varies by distribution)
+sudo grep &quot;203.0.113.50&quot; /var/log/syslog
+sudo grep &quot;203.0.113.50&quot; /var/log/messages
+
+# Check kernel logs for dropped packets
+sudo dmesg | grep &quot;203.0.113.50&quot;
+
+# For systemd-based systems
+sudo journalctl | grep &quot;203.0.113.50&quot;
+</code></pre>
+<h2 id="quick-reference-table">Quick Reference Table</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Check Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>iptables</td>
+<td><code>sudo iptables -L -n -v \| grep &lt;IP&gt;</code></td>
+</tr>
+<tr>
+<td>nftables</td>
+<td><code>sudo nft list ruleset \| grep &lt;IP&gt;</code></td>
+</tr>
+<tr>
+<td>firewalld</td>
+<td><code>sudo firewall-cmd --list-all \| grep &lt;IP&gt;</code></td>
+</tr>
+<tr>
+<td>Fail2Ban</td>
+<td><code>sudo fail2ban-client status &lt;jail&gt;</code></td>
+</tr>
+<tr>
+<td>TCP Wrappers</td>
+<td><code>grep &lt;IP&gt; /etc/hosts.deny</code></td>
+</tr>
+<tr>
+<td>CSF</td>
+<td><code>sudo csf -g &lt;IP&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="conclusion">Conclusion</h2>
+<p>The method you use depends on your server's security configuration. Most modern Linux distributions use either iptables/nftables or firewalld as their primary firewall, often combined with Fail2Ban for intrusion prevention. Start by identifying which firewall system your server uses, then apply the appropriate commands from this guide.</p>
+<hr>
+<p>Thank you for reading!</p>
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
+    </item>
+    <item>
         <title><![CDATA[How to Inspect All Cron Jobs on a Linux System: A Sysadmin's Guide]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/how-to-inspect-all-cron-jobs-on-a-linux-system/]]></link>
         <description><![CDATA[<p>Learn how to inspect and audit cron jobs on Linux systems, identify suspicious tasks, and follow best practices to keep your scheduled tasks secure and efficient.</p>]]></description>
@@ -1200,67 +1337,6 @@ rclone ls gdrive:Backups --max-depth 2 | tail -n 10
 </code></pre>
 <p>Keep rclone updated — Ubuntu's package manager handles this during system updates. For the latest version, install directly from rclone.org.</p>
 <p>For advanced features and options, see the official documentation at rclone.org.</p>
-<hr>
-<p>Thank you for reading!</p>
-<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
-    </item>
-    <item>
-        <title><![CDATA[Protecting Your Email Server: SASL Authentication and fail2ban Defense]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/protecting-your-email-server/]]></link>
-        <description><![CDATA[<p>Learn how to protect your email server from brute force attacks using SASL authentication and fail2ban. Complete guide with setup instructions and best practices.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/protecting-your-email-server/]]></guid>
-        <pubDate>Fri, 05 Sep 2025 21:34:28 </pubDate>
-        <content:encoded><![CDATA[
-        <p>Email servers are prime targets for cybercriminals looking to exploit authentication systems for spam distribution and unauthorized access. Understanding SASL authentication and implementing proper fail2ban protection is crucial for maintaining email security. This guide explains these concepts in simple terms and provides practical implementation strategies.</p>
-<h2 id="understanding-sasl-authentication">Understanding SASL Authentication</h2>
-<p>SASL (Simple Authentication and Security Layer) serves as the security checkpoint for your email server. Think of it as a bouncer at an exclusive venue—it verifies that only authorized users can send emails through your server.</p>
-<h3 id="how-sasl-works">How SASL Works</h3>
-<p>The authentication process follows a straightforward sequence:</p>
-<ol>
-<li>An email client requests to send a message through your server</li>
-<li>The server demands authentication credentials</li>
-<li>The client provides username and password</li>
-<li>SASL verifies these credentials against your user database</li>
-<li>Access is granted or denied based on the verification result</li>
-</ol>
-<p>Without SASL authentication, your email server would be like an unlocked door—anyone could walk in and use your resources to send spam or malicious content.</p>
-<h3 id="common-sasl-authentication-methods">Common SASL Authentication Methods</h3>
-<p><strong>LOGIN</strong>: The most widely used method, transmitting credentials in a basic format that most email clients understand.</p>
-<p><strong>PLAIN</strong>: Similar to LOGIN but uses a slightly different transmission format.</p>
-<p><strong>CRAM-MD5</strong>: A more secure option that encrypts password data during transmission, though less commonly supported by older email clients.</p>
-<h2 id="the-threat-brute-force-attacks">The Threat: Brute Force Attacks</h2>
-<p>Cybercriminals frequently target email servers with automated brute force attacks, attempting thousands of username and password combinations to gain unauthorized access. These attacks typically appear in server logs as repeated SASL authentication failures from the same <a href="/tools/ip/">IP addresses</a>.</p>
-<p>Attackers often use botnets to distribute these attempts across multiple IP addresses, making detection more challenging. Once successful, compromised email accounts become vehicles for spam distribution, phishing campaigns, and further attacks against your network.</p>
-<h2 id="fail2ban-your-automated-defense-system">fail2ban: Your Automated Defense System</h2>
-<p>fail2ban acts as an intelligent security guard that monitors your server logs continuously. When it detects suspicious patterns—such as repeated authentication failures—it automatically blocks the offending IP addresses using your server's firewall.</p>
-<h3 id="setting-up-sasl-protection-with-fail2ban">Setting Up SASL Protection with fail2ban</h3>
-<p>Creating an effective fail2ban configuration requires three components: a filter to identify attack patterns, a jail configuration to define response rules, and proper log monitoring.</p>
-<h4 id="creating-the-filter">Creating the Filter</h4>
-<p>The filter uses regular expressions to identify SASL authentication failures in your mail logs. A properly configured filter should match the specific format of your email server's log entries while accurately capturing the attacking IP addresses.</p>
-<p>For Postfix servers, the filter needs to account for various log formats, including entries where the hostname appears as "unknown" and cases where additional information like usernames are logged.</p>
-<h4 id="configuring-the-jail">Configuring the Jail</h4>
-<p>The jail configuration determines how aggressively fail2ban responds to detected attacks. Key parameters include:</p>
-<p><strong>Maximum Retries</strong>: The number of failed attempts before triggering a ban. For SASL attacks, this should be set quite low (2-3 attempts) since legitimate users rarely fail authentication multiple times consecutively.</p>
-<p><strong>Find Time</strong>: The time window for counting failures. Setting this to 30 minutes or 1 hour provides a reasonable balance between catching distributed attacks and avoiding false positives.</p>
-<p><strong>Ban Time</strong>: How long IP addresses remain blocked. Initial bans of 24-48 hours are effective, with progressive increases for repeat offenders.</p>
-<p><strong>Ports</strong>: Include all relevant email ports (SMTP, SMTPS, submission, IMAP, IMAPS, POP3, POP3S) to ensure comprehensive protection.</p>
-<h4 id="progressive-banning-strategy">Progressive Banning Strategy</h4>
-<p>Implementing escalating ban times for repeat offenders significantly improves security effectiveness. Configure fail2ban to double ban durations for subsequent violations, with maximum ban periods extending to 30-90 days for persistent attackers.</p>
-<h3 id="monitoring-and-log-paths">Monitoring and Log Paths</h3>
-<p>Ensure fail2ban monitors all relevant log files where SASL authentication events are recorded. Common locations include <code>/var/log/mail.log</code> and <code>/var/log/mail.warn</code>, though specific paths vary depending on your syslog configuration.</p>
-<h2 id="best-practices-for-implementation">Best Practices for Implementation</h2>
-<p><strong>Start Conservatively, Then Adjust</strong>: Begin with moderate settings and tighten security based on your specific attack patterns and false positive rates.</p>
-<p><strong>Whitelist Trusted Sources</strong>: Add your office IP addresses, backup systems, and other legitimate sources to the ignore list to prevent accidental lockouts.</p>
-<p><strong>Regular Monitoring</strong>: Review fail2ban logs regularly to ensure it's functioning correctly and not blocking legitimate users.</p>
-<p><strong>Coordinate with Other Security Measures</strong>: fail2ban works best as part of a comprehensive security strategy including strong passwords, regular updates, and network monitoring.</p>
-<p><strong>Test Your Configuration</strong>: Verify that your filters correctly identify attack patterns by testing against actual log entries.</p>
-<h2 id="advanced-considerations">Advanced Considerations</h2>
-<p>For servers under heavy attack, consider implementing additional measures such as rate limiting at the network level, geographic IP blocking for regions where you don't conduct business, and implementing stronger authentication methods like two-factor authentication where supported.</p>
-<p>Monitor your email server's performance impact from fail2ban, as very large ban lists can occasionally affect system resources on high-traffic servers.</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>SASL authentication attacks represent a persistent threat to email server security, but fail2ban provides an effective automated defense mechanism. By properly configuring filters and jail settings, system administrators can significantly reduce successful brute force attempts while maintaining accessibility for legitimate users.</p>
-<p>The key to success lies in understanding your specific environment's needs and adjusting fail2ban parameters accordingly. Regular monitoring and fine-tuning ensure your email server remains both secure and accessible to authorized users.</p>
-<p>Remember that security is an ongoing process rather than a one-time setup. Stay informed about emerging attack patterns and adjust your defenses as the threat landscape evolves.</p>
 <hr>
 <p>Thank you for reading!</p>
 <p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
