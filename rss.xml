@@ -7,13 +7,6 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
-        <title><![CDATA[The Centenarian Decathlon: A Practical Guide to Aging Strong and Independent]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/centenarian-decathlon/]]></link>
-        <description><![CDATA[<p>Future-proof your independence with the Centenarian Decathlon. Build resilience, energy, and confidence in your 50s through smart, practical training.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/centenarian-decathlon/]]></guid>
-        <pubDate>Fri, 05 Jun 2026 23:50:18 </pubDate>
-    </item>
-    <item>
         <title><![CDATA[How to Check if an IP Address is Blocked on Linux]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/how-to-check-if-an-ip-address-is-blocked-on-linux/]]></link>
         <description><![CDATA[<p>Learn how to check if an IP address is blocked on Linux using iptables, nftables, firewalld, Fail2Ban, and other security tools with practical examples.</p>]]></description>
@@ -79,5 +72,12 @@ Clean...</p><img src="https://geeksta.net/img/large/402-payment-required-black.j
         <description><![CDATA[<p>Read about how a 30GB monthly data cap transformed my relationship with the Internet, improved productivity, reduced distractions, and encouraged more intentional habits in work and daily life.</p>]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/limited-internet-changed-my-habits/]]></guid>
         <pubDate>Wed, 03 Dec 2025 13:11:51 </pubDate>
+    </item>
+    <item>
+        <title><![CDATA[What is my IP Address?]]></title>
+        <link><![CDATA[https://geeksta.net/tools/ip/]]></link>
+        <description><![CDATA[<p>View your public facing IP address and location.</p>]]></description>
+        <guid><![CDATA[https://geeksta.net/tools/ip/]]></guid>
+        <pubDate>Mon, 01 Dec 2025 12:51:35 </pubDate>
     </item>
 </channel></rss>
