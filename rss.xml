@@ -7,6 +7,15 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[Vintage Mountain Design for Nature Lovers and Mountaineers]]></title>
+        <link><![CDATA[https://geeksta.net/design/alps-matterhorn/]]></link>
+        <description><![CDATA[<p>Stylized vector art of the Matterhorn peak in the Swiss Alps in bold crimson and golden sunset tones, featuring Alpine flora and fauna and a text banner at the bottom.
+
+Great for outdoor enthusiasts, hikers, mountain lovers, and travelers. Ideal for...</p><img src="https://geeksta.net/img/large/alps-matterhorn.jpg" alt="Preview Image">]]></description>
+        <guid><![CDATA[https://geeksta.net/design/alps-matterhorn/]]></guid>
+        <pubDate>Fri, 31 Jul 2026 00:00:00 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[Social Media Dimensions Cheat Sheet 2026]]></title>
         <link><![CDATA[https://geeksta.net/geeklog/social-media-dimensions-cheat-sheet/]]></link>
         <description><![CDATA[<p>Comprehensive social media dimensions cheat sheet for Facebook, Instagram, YouTube, and TikTok. Includes profile pictures, cover photos, posts, stories, reels, and video sizes for optimal display.</p><img src="/img/geeklog/social-media-dimensions-cheat-sheet.webp" alt="Preview Image">]]></description>
@@ -72,12 +81,5 @@ Clean...</p><img src="https://geeksta.net/img/large/402-payment-required-black.j
         <description><![CDATA[<p>Read about how a 30GB monthly data cap transformed my relationship with the Internet, improved productivity, reduced distractions, and encouraged more intentional habits in work and daily life.</p>]]></description>
         <guid><![CDATA[https://geeksta.net/geeklog/limited-internet-changed-my-habits/]]></guid>
         <pubDate>Wed, 03 Dec 2025 13:11:51 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[What is my IP Address?]]></title>
-        <link><![CDATA[https://geeksta.net/tools/ip/]]></link>
-        <description><![CDATA[<p>View your public facing IP address and location.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/tools/ip/]]></guid>
-        <pubDate>Mon, 01 Dec 2025 12:51:35 </pubDate>
     </item>
 </channel></rss>
