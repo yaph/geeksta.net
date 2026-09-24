@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stalker — what your browser gives away</title>
+<style>
+  :root {
+    --bg: #0a0e0c;
+    --panel: #11170f;
+    --panel-2: #151d17;
+    --border: #223028;
+    --text: #d9e2dc;
+    --muted: #7c8c84;
+    --dim: #4d5a53;
+    --low: #59d98e;
+    --med: #f2b544;
+    --high: #ff6b5e;
+    --mono: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Consolas, "Liberation Mono", monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--mono);
+  }
+
+  body {
+    background-image:
+      radial-gradient(ellipse at 20% -10%, rgba(89, 217, 142, 0.06), transparent 45%),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.012) 0px, rgba(255,255,255,0.012) 1px, transparent 1px, transparent 3px);
+  }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+  }
+
+  header {
+    margin-bottom: 40px;
+  }
+
+  .eyebrow {
+    color: var(--muted);
+    font-size: 13px;
+    letter-spacing: 0.02em;
+  }
+
+  h1 {
+    font-size: clamp(28px, 6vw, 42px);
+    line-height: 1.15;
+    margin: 10px 0 14px;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  h1 span {
+    color: var(--low);
+  }
+
+  .lede {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 60ch;
+  }
+
+  .subject-card {
+    margin-top: 28px;
+    border: 1px solid var(--border);
+    background: var(--panel);
+    padding: 20px 22px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .subject-id-label {
+    color: var(--muted);
+    font-size: 12px;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .subject-id {
+    font-size: clamp(18px, 4vw, 24px);
+    color: var(--low);
+    letter-spacing: 0.04em;
+  }
+
+  .redact-btn {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--text);
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    padding: 9px 14px;
+    cursor: pointer;
+  }
+
+  .redact-btn:hover { border-color: var(--muted); }
+  .redact-btn:focus-visible { outline: 2px solid var(--low); outline-offset: 2px; }
+  .redact-btn.on { color: var(--high); border-color: var(--high); }
+
+  section.category {
+    margin-top: 34px;
+    border: 1px solid var(--border);
+    background: var(--panel);
+  }
+
+  .cat-head {
+    padding: 12px 18px;
+    border-bottom: 1px solid var(--border);
+    background: var(--panel-2);
+    font-size: 12.5px;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cat-head .n {
+    color: var(--dim);
+  }
+
+  .row {
+    display: flex;
+    gap: 14px;
+    padding: 11px 18px;
+    border-bottom: 1px solid var(--border);
+    font-size: 13.5px;
+    align-items: flex-start;
+    opacity: 0;
+    transform: translateY(3px);
+  }
+
+  .row.show {
+    animation: rowIn 0.35s ease forwards;
+  }
+
+  @keyframes rowIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .row:last-child { border-bottom: none; }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-top: 5px;
+    flex-shrink: 0;
+  }
+
+  .dot.low { background: var(--low); }
+  .dot.med { background: var(--med); }
+  .dot.high { background: var(--high); }
+
+  .label {
+    color: var(--muted);
+    min-width: 190px;
+    flex-shrink: 0;
+  }
+
+  .value {
+    color: var(--text);
+    word-break: break-word;
+    flex: 1;
+  }
+
+  .value.redactable.blurred {
+    filter: blur(5px);
+    user-select: none;
+  }
+
+  .value .hint {
+    color: var(--dim);
+    font-size: 12px;
+    display: block;
+    margin-top: 2px;
+  }
+
+  .geo-btn {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--low);
+    background: none;
+    border: 1px solid var(--border);
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  .geo-btn:hover { border-color: var(--low); }
+
+  footer {
+    margin-top: 44px;
+    color: var(--muted);
+    font-size: 12.5px;
+    line-height: 1.7;
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+  }
+
+  footer a { color: var(--low); }
+
+  .legend {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .row { animation: none !important; opacity: 1 !important; transform: none !important; }
+  }
+
+  @media (max-width: 520px) {
+    .label { min-width: 130px; font-size: 12.5px; }
+    .row { font-size: 12.5px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="eyebrow">geeksta.net / tools</span>
+    <h1>Everyone you talk to<br><span>online is taking notes.</span></h1>
+    <p class="lede">Every request your browser makes carries a small file's worth of detail about you: who you are, what you're running, and how you're set up. Nothing here leaves your browser except one lookup against a public IP database — everything else is read locally and shown only to you.</p>
+
+    <div class="subject-card">
+      <div>
+        <span class="subject-id-label">SUBJECT ID (derived from the signals below)</span>
+        <span class="subject-id" id="subjectId">computing&hellip;</span>
+      </div>
+      <button class="redact-btn" id="redactBtn" type="button" aria-pressed="false">Redact findings</button>
+    </div>
+
+    <div class="legend">
+      <span><i class="dot low" style="display:inline-block"></i> low — common to many visitors</span>
+      <span><i class="dot med" style="display:inline-block"></i> medium — narrows you down</span>
+      <span><i class="dot high" style="display:inline-block"></i> high — identifies you specifically</span>
+    </div>
+  </header>
+
+  <main id="sections"></main>
+
+  <footer>
+    <p>Everything above comes from standard browser APIs (<code>navigator</code>, <code>screen</code>, <code>canvas</code>, <code>WebGL</code>) plus one call to <a href="https://ipapi.co" target="_blank" rel="noopener">ipapi.co</a> to resolve your IP to a rough location. No data is sent to geeksta.net's servers, no cookies are set, and none of it is stored anywhere — reload the page and it's gone.</p>
+    <p>Canvas and WebGL rendering, screen size, timezone, and installed fonts are the signals that make browser fingerprinting possible even with cookies fully blocked. A privacy-focused browser (or extensions like uBlock Origin / CanvasBlocker) can flatten several of these to the same generic value for every visitor.</p>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  const sectionsEl = document.getElementById("sections");
+  const subjectIdEl = document.getElementById("subjectId");
+  const redactBtn = document.getElementById("redactBtn");
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // ---------- helpers ----------
+
+  function safe(fn, fallback) {
+    try { return fn(); } catch (e) { return fallback; }
+  }
+
+  async function safeAsync(fn, fallback) {
+    try { return await fn(); } catch (e) { return fallback; }
+  }
+
+  function parseUA(ua) {
+    let browser = "Unknown", version = "";
+    const patterns = [
+      [/Edg\/([\d.]+)/, "Edge"],
+      [/OPR\/([\d.]+)/, "Opera"],
+      [/Firefox\/([\d.]+)/, "Firefox"],
+      [/Chrome\/([\d.]+)/, "Chrome"],
+      [/Version\/([\d.]+).*Safari/, "Safari"],
+    ];
+    for (const [re, name] of patterns) {
+      const m = ua.match(re);
+      if (m) { browser = name; version = m[1]; break; }
+    }
+    let os = "Unknown";
+    if (/Windows NT 10/.test(ua)) os = "Windows 10/11";
+    else if (/Windows/.test(ua)) os = "Windows";
+    else if (/Mac OS X ([\d_]+)/.test(ua)) os = "macOS " + ua.match(/Mac OS X ([\d_]+)/)[1].replace(/_/g, ".");
+    else if (/Android ([\d.]+)/.test(ua)) os = "Android " + ua.match(/Android ([\d.]+)/)[1];
+    else if (/iPhone OS ([\d_]+)/.test(ua)) os = "iOS " + ua.match(/iPhone OS ([\d_]+)/)[1].replace(/_/g, ".");
+    else if (/Linux/.test(ua)) os = "Linux";
+    return { browser, version, os };
+  }
+
+  async function sha256(str) {
+    const buf = new TextEncoder().encode(str);
+    const hash = await crypto.subtle.digest("SHA-256", buf);
+    return Array.from(new Uint8Array(hash)).map(b => b.toString(16).padStart(2, "0")).join("");
+  }
+
+  function canvasFingerprint() {
+    const c = document.createElement("canvas");
+    c.width = 240; c.height = 60;
+    const ctx = c.getContext("2d");
+    if (!ctx) return null;
+    ctx.textBaseline = "top";
+    ctx.font = "14px 'Arial'";
+    ctx.fillStyle = "#f60";
+    ctx.fillRect(0, 0, 60, 20);
+    ctx.fillStyle = "#069";
+    ctx.fillText("stalker fingerprint 🕵 v1", 2, 15);
+    ctx.strokeStyle = "rgba(120,20,180,0.7)";
+    ctx.beginPath();
+    ctx.arc(50, 40, 15, 0, Math.PI * 2);
+    ctx.stroke();
+    return c.toDataURL();
+  }
+
+  function webglInfo() {
+    const c = document.createElement("canvas");
+    const gl = c.getContext("webgl") || c.getContext("experimental-webgl");
+    if (!gl) return null;
+    const dbg = gl.getExtension("WEBGL_debug_renderer_info");
+    return {
+      vendor: dbg ? gl.getParameter(dbg.UNMASKED_VENDOR_WEBGL) : gl.getParameter(gl.VENDOR),
+      renderer: dbg ? gl.getParameter(dbg.UNMASKED_RENDERER_WEBGL) : gl.getParameter(gl.RENDERER),
+    };
+  }
+
+  function row(label, value, level, extraNode) {
+    const r = document.createElement("div");
+    r.className = "row";
+    const dot = document.createElement("div");
+    dot.className = "dot " + level;
+    const l = document.createElement("div");
+    l.className = "label";
+    l.textContent = label;
+    const v = document.createElement("div");
+    v.className = "value" + (level === "high" || level === "med" ? " redactable" : "");
+    v.textContent = value;
+    if (extraNode) v.appendChild(extraNode);
+    r.appendChild(dot); r.appendChild(l); r.appendChild(v);
+    return r;
+  }
+
+  function renderSection(title, count, rows) {
+    const sec = document.createElement("section");
+    sec.className = "category";
+    const head = document.createElement("div");
+    head.className = "cat-head";
+    head.innerHTML = `<span>${title}</span><span class="n">${count} signal${count === 1 ? "" : "s"}</span>`;
+    sec.appendChild(head);
+    rows.forEach((r) => sec.appendChild(r));
+    sectionsEl.appendChild(sec);
+    requestAnimationFrame(() => {
+      rows.forEach((r, i) => {
+        if (prefersReduced) { r.classList.add("show"); return; }
+        setTimeout(() => r.classList.add("show"), Math.min(i, 12) * 35);
+      });
+    });
+  }
+
+  // ---------- gather ----------
+
+  async function build() {
+    const ua = navigator.userAgent;
+    const { browser, version, os } = parseUA(ua);
+    const nav = navigator;
+
+    // Network & location
+    const ipData = await safeAsync(async () => {
+      const res = await fetch("https://ipapi.co/json/");
+      if (!res.ok) throw new Error("bad response");
+      return await res.json();
+    }, null);
+
+    const netRows = [];
+    if (ipData && ipData.ip) {
+      netRows.push(row("Public IP address", ipData.ip, "high"));
+      netRows.push(row("Approx. location", [ipData.city, ipData.region, ipData.country_name].filter(Boolean).join(", ") || "unknown", "med"));
+      netRows.push(row("Internet provider", ipData.org || "unknown", "med"));
+      netRows.push(row("ISP-reported timezone", ipData.timezone || "unknown", "low"));
+    } else {
+      netRows.push(row("Public IP address", "lookup blocked or unavailable", "low"));
+    }
+    netRows.push(row("Referring page", document.referrer || "(none — direct visit or referrer stripped)", document.referrer ? "med" : "low"));
+
+    // Geolocation on demand
+    const geoWrap = document.createElement("div");
+    const geoBtn = document.createElement("button");
+    geoBtn.className = "geo-btn";
+    geoBtn.type = "button";
+    geoBtn.textContent = "Reveal exact GPS location";
+    const geoResult = document.createElement("span");
+    geoResult.className = "hint";
+    geoResult.textContent = "Requires your explicit permission — nothing happens until you click.";
+    geoBtn.addEventListener("click", () => {
+      if (!("geolocation" in navigator)) { geoResult.textContent = "Not supported in this browser."; return; }
+      geoBtn.disabled = true;
+      geoResult.textContent = "Waiting for permission…";
+      navigator.geolocation.getCurrentPosition(
+        (pos) => {
+          geoResult.textContent = `${pos.coords.latitude.toFixed(5)}, ${pos.coords.longitude.toFixed(5)} (±${Math.round(pos.coords.accuracy)}m) — this is what any site can get if you click "Allow".`;
+        },
+        (err) => { geoResult.textContent = "Permission denied — this is exactly why the browser asks first."; geoBtn.disabled = false; },
+        { timeout: 8000 }
+      );
+    });
+    geoWrap.appendChild(document.createElement("br"));
+    geoWrap.appendChild(geoBtn);
+    geoWrap.appendChild(geoResult);
+    netRows.push(row("Precise location", "not revealed — click to test", "high", geoWrap));
+
+    renderSection("Network & location", netRows.length, netRows);
+
+    // Browser & system
+    const conn = nav.connection || nav.mozConnection || nav.webkitConnection;
+    const sysRows = [
+      row("Browser", `${browser} ${version}`, "med"),
+      row("Operating system", os, "med"),
+      row("Full user-agent string", ua, "high"),
+      row("Language(s)", (nav.languages || [nav.language]).join(", "), "low"),
+      row("CPU cores reported", String(nav.hardwareConcurrency || "unavailable"), "low"),
+      row("Device memory (approx.)", nav.deviceMemory ? nav.deviceMemory + " GB" : "unavailable (Firefox/Safari hide this)", "low"),
+      row("Network type", conn ? `${conn.effectiveType || "?"}, ~${conn.downlink || "?"} Mbps` : "unavailable", "low"),
+      row("Data-saver mode", conn && "saveData" in conn ? String(conn.saveData) : "unavailable", "low"),
+    ];
+    renderSection("Browser & system", sysRows.length, sysRows);
+
+    // Display
+    const dispRows = [
+      row("Screen resolution", `${screen.width} × ${screen.height}`, "med"),
+      row("Available screen space", `${screen.availWidth} × ${screen.availHeight}`, "low"),
+      row("Viewport size", `${window.innerWidth} × ${window.innerHeight}`, "low"),
+      row("Color depth", `${screen.colorDepth}-bit`, "low"),
+      row("Pixel ratio", String(window.devicePixelRatio || 1), "low"),
+      row("Orientation", safe(() => screen.orientation.type, "unavailable"), "low"),
+      row("Timezone (from your clock)", Intl.DateTimeFormat().resolvedOptions().timeZone, "med"),
+      row("UTC offset", `UTC${-new Date().getTimezoneOffset() / 60 >= 0 ? "+" : ""}${-new Date().getTimezoneOffset() / 60}`, "low"),
+    ];
+    renderSection("Display & clock", dispRows.length, dispRows);
+
+    // Fingerprint surface
+    const canvasData = safe(canvasFingerprint, null);
+    const canvasHash = canvasData ? await sha256(canvasData) : null;
+    const gl = safe(webglInfo, null);
+    const fpRows = [
+      row("Canvas render hash", canvasHash ? canvasHash.slice(0, 24) + "…" : "blocked (good — an extension is likely stopping this)", canvasHash ? "high" : "low"),
+      row("GPU vendor", gl ? String(gl.vendor) : "unavailable", "med"),
+      row("GPU renderer", gl ? String(gl.renderer) : "unavailable", "high"),
+      row("Touch support", ("ontouchstart" in window || nav.maxTouchPoints > 0) ? `yes (${nav.maxTouchPoints} points)` : "no", "low"),
+    ];
+    renderSection("Fingerprint surface", fpRows.length, fpRows);
+
+    // Privacy signals
+    const cookiesOn = nav.cookieEnabled;
+    let lsOk = safe(() => { localStorage.setItem("t", "1"); localStorage.removeItem("t"); return true; }, false);
+    let ssOk = safe(() => { sessionStorage.setItem("t", "1"); sessionStorage.removeItem("t"); return true; }, false);
+
+    const permNames = ["geolocation", "camera", "microphone", "notifications"];
+    const permStates = {};
+    if (nav.permissions && nav.permissions.query) {
+      await Promise.all(permNames.map(async (name) => {
+        permStates[name] = await safeAsync(async () => {
+          const p = await nav.permissions.query({ name });
+          return p.state;
+        }, "unsupported");
+      }));
+    }
+
+    const mediaCounts = await safeAsync(async () => {
+      const devices = await nav.mediaDevices.enumerateDevices();
+      const counts = { audioinput: 0, videoinput: 0, audiooutput: 0 };
+      devices.forEach(d => { if (counts[d.kind] !== undefined) counts[d.kind]++; });
+      return counts;
+    }, null);
+
+    const privRows = [
+      row("Do Not Track", nav.doNotTrack === "1" ? "enabled" : "not sent (most browsers ignore it now)", "low"),
+      row("Global Privacy Control", nav.globalPrivacyControl ? "enabled" : "not sent", "low"),
+      row("Cookies enabled", cookiesOn ? "yes" : "no", "low"),
+      row("Local/session storage", `${lsOk ? "available" : "blocked"} / ${ssOk ? "available" : "blocked"}`, "low"),
+      row("Camera / microphone permission", permStates.camera && permStates.microphone ? `${permStates.camera} / ${permStates.microphone}` : "unsupported in this browser", "med"),
+      row("Location permission (already asked before)", permStates.geolocation || "unsupported", "med"),
+      row("A/V devices detected", mediaCounts ? `${mediaCounts.audioinput} mic, ${mediaCounts.videoinput} camera, ${mediaCounts.audiooutput} speaker` : "unavailable", "low"),
+      row("Tab history length", String(history.length), "low"),
+    ];
+    renderSection("Privacy signals", privRows.length, privRows);
+
+    // Subject ID = hash of the stable-ish signals
+    const idSource = [ua, screen.width, screen.height, screen.colorDepth, Intl.DateTimeFormat().resolvedOptions().timeZone, canvasHash, gl ? gl.renderer : "", nav.hardwareConcurrency].join("|");
+    const idHash = await sha256(idSource);
+    subjectIdEl.textContent = idHash.slice(0, 4).toUpperCase() + "-" + idHash.slice(4, 8).toUpperCase() + "-" + idHash.slice(8, 12).toUpperCase();
+  }
+
+  redactBtn.addEventListener("click", () => {
+    const on = redactBtn.classList.toggle("on");
+    redactBtn.setAttribute("aria-pressed", String(on));
+    redactBtn.textContent = on ? "Show findings" : "Redact findings";
+    document.querySelectorAll(".value.redactable").forEach(v => v.classList.toggle("blurred", on));
+  });
+
+  build();
+})();
+</script>
+</body>
+</html>

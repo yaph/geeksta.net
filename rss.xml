@@ -7,6 +7,13 @@
     <generator>Logya</generator>
     <docs>http://blogs.law.harvard.edu/tech/rss</docs>
     <item>
+        <title><![CDATA[stalker]]></title>
+        <link><![CDATA[https://geeksta.net/tools/stalker/]]></link>
+        <description><![CDATA[<p></p>]]></description>
+        <guid><![CDATA[https://geeksta.net/tools/stalker/]]></guid>
+        <pubDate>Fri, 25 Sep 2026 00:38:10 </pubDate>
+    </item>
+    <item>
         <title><![CDATA[Vintage Mountain Design for Nature Lovers and Mountaineers]]></title>
         <link><![CDATA[https://geeksta.net/design/alps-matterhorn/]]></link>
         <description><![CDATA[<p>Stylized vector art of the Matterhorn peak in the Swiss Alps in bold crimson and golden sunset tones, featuring Alpine flora and fauna and a text banner at the bottom.
@@ -74,12 +81,5 @@ Clean...</p><img src="https://geeksta.net/img/large/402-payment-required-black.j
         <description><![CDATA[<p>Monitor your mobile data usage and access relevant system settings in one place on mobile devices running Android.</p>]]></description>
         <guid><![CDATA[https://geeksta.net/modash/]]></guid>
         <pubDate>Mon, 08 Dec 2025 00:55:26 </pubDate>
-    </item>
-    <item>
-        <title><![CDATA[How Limiting My Internet Usage Changed the Way I Work and Live]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/limited-internet-changed-my-habits/]]></link>
-        <description><![CDATA[<p>Read about how a 30GB monthly data cap transformed my relationship with the Internet, improved productivity, reduced distractions, and encouraged more intentional habits in work and daily life.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/limited-internet-changed-my-habits/]]></guid>
-        <pubDate>Wed, 03 Dec 2025 13:11:51 </pubDate>
     </item>
 </channel></rss>
