@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Stalker — what your browser gives away</title>
+<meta name="description" content="See exactly what your browser and network connection reveal about you: IP address, location, canvas and WebGL fingerprints, screen and system details, and privacy signals.">
+<title>Stalker - what your browser gives away</title>
 <style>
   :root {
     --bg: #0a0e0c;
@@ -34,6 +35,8 @@
       radial-gradient(ellipse at 20% -10%, rgba(89, 217, 142, 0.06), transparent 45%),
       repeating-linear-gradient(0deg, rgba(255,255,255,0.012) 0px, rgba(255,255,255,0.012) 1px, transparent 1px, transparent 3px);
   }
+
+  a:visited, a:link { color: var(--low); text-decoration: none; }
 
   .wrap {
     max-width: 760px;
@@ -67,7 +70,6 @@
     color: var(--muted);
     font-size: 15px;
     line-height: 1.6;
-    max-width: 60ch;
   }
 
   .subject-card {
@@ -154,6 +156,7 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
+
     margin-top: 5px;
     flex-shrink: 0;
   }
@@ -232,9 +235,9 @@
 <div class="wrap">
 
   <header>
-    <span class="eyebrow">geeksta.net / tools</span>
+    <span class="eyebrow"><a href="/">geeksta.net</a> / <a href="/tools/">tools</a></span>
     <h1>Everyone you talk to<br><span>online is taking notes.</span></h1>
-    <p class="lede">Every request your browser makes carries a small file's worth of detail about you: who you are, what you're running, and how you're set up. Nothing here leaves your browser except one lookup against a public IP database — everything else is read locally and shown only to you.</p>
+    <p class="lede">Every request your browser makes carries a small file's worth of detail about you: who you are, what you're running, and how you're set up. Nothing here leaves your browser except one lookup against a public IP database - everything else is read locally and shown only to you.</p>
 
     <div class="subject-card">
       <div>
@@ -245,16 +248,16 @@
     </div>
 
     <div class="legend">
-      <span><i class="dot low" style="display:inline-block"></i> low — common to many visitors</span>
-      <span><i class="dot med" style="display:inline-block"></i> medium — narrows you down</span>
-      <span><i class="dot high" style="display:inline-block"></i> high — identifies you specifically</span>
+      <span><i class="dot low" style="display:inline-block;margin-top:2px;"></i>low - common to many visitors</span>
+      <span><i class="dot med" style="display:inline-block;margin-top:2px;"></i> medium - narrows you down</span>
+      <span><i class="dot high" style="display:inline-block;margin-top:2px;"></i> high - identifies you specifically</span>
     </div>
   </header>
 
   <main id="sections"></main>
 
   <footer>
-    <p>Everything above comes from standard browser APIs (<code>navigator</code>, <code>screen</code>, <code>canvas</code>, <code>WebGL</code>) plus one call to <a href="https://ipapi.co" target="_blank" rel="noopener">ipapi.co</a> to resolve your IP to a rough location. No data is sent to geeksta.net's servers, no cookies are set, and none of it is stored anywhere — reload the page and it's gone.</p>
+    <p>Everything above comes from standard browser APIs (<code>navigator</code>, <code>screen</code>, <code>canvas</code>, <code>WebGL</code>) plus one call to <a href="https://ipapi.co" target="_blank" rel="noopener">ipapi.co</a> to resolve your IP to a rough location. No data is sent to geeksta.net's servers, no cookies are set, and none of it is stored anywhere - reload the page and it's gone.</p>
     <p>Canvas and WebGL rendering, screen size, timezone, and installed fonts are the signals that make browser fingerprinting possible even with cookies fully blocked. A privacy-focused browser (or extensions like uBlock Origin / CanvasBlocker) can flatten several of these to the same generic value for every visitor.</p>
   </footer>
 
@@ -393,7 +396,7 @@
     } else {
       netRows.push(row("Public IP address", "lookup blocked or unavailable", "low"));
     }
-    netRows.push(row("Referring page", document.referrer || "(none — direct visit or referrer stripped)", document.referrer ? "med" : "low"));
+    netRows.push(row("Referring page", document.referrer || "(none - direct visit or referrer stripped)", document.referrer ? "med" : "low"));
 
     // Geolocation on demand
     const geoWrap = document.createElement("div");
@@ -403,23 +406,23 @@
     geoBtn.textContent = "Reveal exact GPS location";
     const geoResult = document.createElement("span");
     geoResult.className = "hint";
-    geoResult.textContent = "Requires your explicit permission — nothing happens until you click.";
+    geoResult.textContent = "Requires your explicit permission - nothing happens until you click.";
     geoBtn.addEventListener("click", () => {
       if (!("geolocation" in navigator)) { geoResult.textContent = "Not supported in this browser."; return; }
       geoBtn.disabled = true;
       geoResult.textContent = "Waiting for permission…";
       navigator.geolocation.getCurrentPosition(
         (pos) => {
-          geoResult.textContent = `${pos.coords.latitude.toFixed(5)}, ${pos.coords.longitude.toFixed(5)} (±${Math.round(pos.coords.accuracy)}m) — this is what any site can get if you click "Allow".`;
+          geoResult.textContent = `${pos.coords.latitude.toFixed(5)}, ${pos.coords.longitude.toFixed(5)} (±${Math.round(pos.coords.accuracy)}m) - this is what any site can get if you click "Allow".`;
         },
-        (err) => { geoResult.textContent = "Permission denied — this is exactly why the browser asks first."; geoBtn.disabled = false; },
+        (err) => { geoResult.textContent = "Permission denied - this is exactly why the browser asks first."; geoBtn.disabled = false; },
         { timeout: 8000 }
       );
     });
     geoWrap.appendChild(document.createElement("br"));
     geoWrap.appendChild(geoBtn);
     geoWrap.appendChild(geoResult);
-    netRows.push(row("Precise location", "not revealed — click to test", "high", geoWrap));
+    netRows.push(row("Precise location", "not revealed - click to test", "high", geoWrap));
 
     renderSection("Network & location", netRows.length, netRows);
 
@@ -455,7 +458,7 @@
     const canvasHash = canvasData ? await sha256(canvasData) : null;
     const gl = safe(webglInfo, null);
     const fpRows = [
-      row("Canvas render hash", canvasHash ? canvasHash.slice(0, 24) + "…" : "blocked (good — an extension is likely stopping this)", canvasHash ? "high" : "low"),
+      row("Canvas render hash", canvasHash ? canvasHash.slice(0, 24) + "…" : "blocked (good - an extension is likely stopping this)", canvasHash ? "high" : "low"),
       row("GPU vendor", gl ? String(gl.vendor) : "unavailable", "med"),
       row("GPU renderer", gl ? String(gl.renderer) : "unavailable", "high"),
       row("Touch support", ("ontouchstart" in window || nav.maxTouchPoints > 0) ? `yes (${nav.maxTouchPoints} points)` : "no", "low"),
