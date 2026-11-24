@@ -1,54 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Introducing b2tob3: Easier Migration to Bootstrap 3 | Geeksta</title>
-<meta name="description" content="b2tob3 is a command line tool to help migrate Web projects from bootstrap 2 to bootstrap 3 by performing a set of replacements that reflect bootstrap 3 class name changes."><meta name="author" content="Ramiro Gómez"><link rel="canonical" itemprop="url" href="https://geeksta.net/tools/b2tob3-migrate-bootstrap/">
-<link rel="icon" type="image/png" href="/img/icon-small.png">
-<link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Geeksta All Posts RSS feed">    <link rel="stylesheet" href="/vendor/chota.min.css">
-    <link rel="stylesheet" href="/compiled/style.css">
-    <link rel="stylesheet" href="/compiled/dropdown.css">
-
-</head>
-<body>
-    <header><nav class="nav dark">
-        <div class="nav-left">
-            <a class="brand" href="/"><img class="logo" src="/img/icon-small.png" alt="logo">Geeksta</a>
-        </div>
-        <ul class="nav-right">
-            <li>
-                <a href="#">Sections ▾</a>
-                <ul class="dropdown">
-                    <li><a href="/reviews/">Book Reviews</a></li>
-                    <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
-                    <li><a href="/visualizations/">Data Visualizations</a></li>
-                    <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
-                    <li><a href="/events/">Geek Events</a></li>
-                    <li><a href="/screencasts/">Screencasts</a></li>
-                    <li><a href="/videos/">Videos</a></li>
-                </ul>
-            </li>
-            <li><a href="/geeklog/">Geeklog</a></li>
-            <li><a href="/merch/">Merch</a></li>
-            <li><a href="/tools/">Tools</a></li>
-        </ul>
-    </nav></header>
-
-    <main class="container">
-<div class="row">
-    <div class="col-9-md">
-        <h1>Introducing b2tob3: Easier Migration to Bootstrap 3</h1>
-        <p>Having created several Web sites with Bootstrap 2 and migrated just 2 of them
+<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Introducing b2tob3: Easier Migration to Bootstrap 3 | Geeksta</title><meta name=description content="b2tob3 is a command line tool to help migrate Web projects from bootstrap 2 to bootstrap 3 by performing a set of replacements that reflect bootstrap 3 class name changes."><meta name=author content="Ramiro Gómez"><link rel=canonical itemprop=url href=https://geeksta.net/tools/b2tob3-migrate-bootstrap/><link rel=icon type=image/png href=/img/icon-small.png><link rel=alternate type=application/rss+xml href=/rss.xml title="Geeksta All Posts RSS feed"><link rel=stylesheet href=/vendor/chota.min.css><link rel=stylesheet href=/compiled/style.css><link rel=stylesheet href=/compiled/dropdown.css><header><nav class="nav dark"><div class=nav-left><a class=brand href=/><img class=logo src=/img/icon-small.png alt=logo>Geeksta</a></div><ul class=nav-right><li><a href=#>Sections ▾</a><ul class=dropdown><li><a href=/reviews/>Book Reviews</a><li><a href=/cover-art-overboard/>Cover Art Overboard</a><li><a href=/visualizations/>Data Visualizations</a><li><a href=/js-drawing/>Drawing with JavaScript</a><li><a href=/events/>Geek Events</a><li><a href=/screencasts/>Screencasts</a><li><a href=/videos/>Videos</a></ul><li><a href=/geeklog/>Geeklog</a><li><a href=/merch/>Merch</a><li><a href=/tools/>Tools</a></ul></nav></header><main class=container><div class=row><div class=col-9-md><h1>Introducing b2tob3: Easier Migration to Bootstrap 3</h1><p>Having created several Web sites with Bootstrap 2 and migrated just 2 of them
 to the new version using command line tools like find, sed and a text editor,
-I figured that this process could be better automated.</p>
-<p>So I started working on <a href="https://github.com/yaph/b2tob3">b2tob3</a> a command
+I figured that this process could be better automated.<p>So I started working on <a href=https://github.com/yaph/b2tob3>b2tob3</a> a command
 line Python script, that replaces class names that changed form Bootstrap
-version 2 to Bootstrap 3 in HTML files.</p>
-<h2 id="quickstart">Quickstart</h2>
-<p>Before you use b2tob3 make sure to have your project files under version
-control so you can review and if necessary revert the changes made by b2tob3.</p>
-<pre><code># install b2tob3 from PyPI
+version 2 to Bootstrap 3 in HTML files.<h2 id=quickstart>Quickstart</h2><p>Before you use b2tob3 make sure to have your project files under version
+control so you can review and if necessary revert the changes made by b2tob3.<pre><code># install b2tob3 from PyPI
 pip install b2tob3
 
 # change to your version controlled project directory
@@ -56,119 +11,19 @@ cd /my/web/project
 
 # run b2tob3
 b2tob3
-</code></pre>
-<h2 id="what-is-changed">What is Changed?</h2>
-<p>b2tob3 searches all files ending in .html, .htm, .css or .js in the current
+</code></pre><h2 id=what-is-changed>What is Changed?</h2><p>b2tob3 searches all files ending in .html, .htm, .css or .js in the current
 directory and its subdirectories and replaces most of the changed class names
-listed in the <a href="http://getbootstrap.com/getting-started/#migration">Bootstrap documentation</a>.</p>
-<p>Some of the Bootstrap 2 class names like <code>inline</code> or <code>add-on</code> may be replaced
+listed in the <a href=http://getbootstrap.com/getting-started/#migration>Bootstrap documentation</a>.<p>Some of the Bootstrap 2 class names like <code>inline</code> or <code>add-on</code> may be replaced
 in places where they shouldn't, especially when your html files are not
-templates, but contain the content too.</p>
-<h2 id="review-and-edit">Review and Edit</h2>
-<p>b2tob3 takes away part of the tedious work of migrating a Web project, but most
+templates, but contain the content too.<h2 id=review-and-edit>Review and Edit</h2><p>b2tob3 takes away part of the tedious work of migrating a Web project, but most
 likely not all of it. So you need to review and test the changes and fix things
-manually that are not working in Bootstrap 3.</p>
-<p>That being said, I <a href="https://github.com/yaph/b2tob3">appreciate your help</a>
-making b2tob3 better and migrating from Bootstrap 2 to 3 easier.</p>
-    </div>
-    <div class="col">
-
-<h3>Featured Merch</h3>
-<figure class="preview">
-    <a href="/design/no-class-no-state-lambda-propaganda/">
-            <img class="b-lazy" src="/img/large/no-class-no-state-lambda-propaganda.jpg" alt="No Class No State Functional Programmer Propaganda Parody" />
-        <figcaption>No Class No State Functional Programmer Propaganda Parody</figcaption>
-    </a>
-</figure>
-
-
-<h3>Latest Posts</h3>
-<ul>
-        <li><a href="/geeklog/social-media-dimensions-cheat-sheet/">Social Media Dimensions Cheat Sheet 2026</a></li>
-        <li><a href="/geeklog/how-to-check-if-an-ip-address-is-blocked-on-linux/">How to Check if an IP Address is Blocked on Linux</a></li>
-        <li><a href="/geeklog/how-to-inspect-all-cron-jobs-on-a-linux-system/">How to Inspect All Cron Jobs on a Linux System: A Sysadmin's Guide</a></li>
-        <li><a href="/geeklog/building-a-3d-elevation-photo-diary/">Building a 3D Elevation Photo Diary with deck.gl</a></li>
-        <li><a href="/geeklog/thunderbird-keeps-threading-emails-here-s-the-fix/">Thunderbird Keeps Threading Emails? Here's the Fix</a></li>
-</ul>
-
-<h3>Featured Book</h3>
-<figure class="preview">
-    <a href="https://www.amazon.com/dp/B0C5B9JG57?tag=geeksta-20">
-        <img alt="eBook cover" src="/img/books/chatgpt-interview-prompting.jpg"><br>
-        <figcaption>Buy on Amazon</figcaption>
-    </a>
-</figure>
-
-<hr>
-
-<a href="/rss.xml" class="button primary">Subscribe to RSS Feed</a></li>    </div>
-</div>
-<hr>
-<p>Published by <a href="https://ramiro.org/">Ramiro Gómez</a> on <time datetime="2013-09-09T20:22">September 09, 2013</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
-<p><strong>Tags:</strong>
-    <a class="button outline" href="/tags/web-development/">web development</a>
-    <a class="button outline" href="/tags/migration/">migration</a>
-    <a class="button outline" href="/tags/command-line/">command line</a>
-    <a class="button outline" href="/tags/python/">python</a>
-</p>
-<p class="text-grey"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p><hr>
-<p><strong>Share post:</strong>
-<a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/tools/b2tob3-migrate-bootstrap/&t=Introducing%20b2tob3%3A%20Easier%20Migration%20to%20Bootstrap%203" class="button success">Facebook</a>
-<a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/tools/b2tob3-migrate-bootstrap/&title=Introducing%20b2tob3%3A%20Easier%20Migration%20to%20Bootstrap%203" class="button success">LinkedIn</a>
-<a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/tools/b2tob3-migrate-bootstrap/&title=Introducing%20b2tob3%3A%20Easier%20Migration%20to%20Bootstrap%203" class="button success">Reddit</a>
-<a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/tools/b2tob3-migrate-bootstrap/&text=Introducing%20b2tob3%3A%20Easier%20Migration%20to%20Bootstrap%203" class="button success">Twitter</a>
-</p>
-<div class="card vm">
-    <h3>Merchandise</h3>
-    <div class="row">
-        <div class="col-3-md">
-            <figure class="preview">
-    <a href="/design/caution-i-test-in-production/">
-            <img class="b-lazy" src="/img/large/caution-i-test-in-production.jpg" alt="I Test in Production - Funny Developer Caution Sign Design" />
-        <figcaption>I Test in Production - Funny Developer Caution Sign Design</figcaption>
-    </a>
-</figure>
-
-        </div>
-        <div class="col-3-md">
-            <figure class="preview">
-    <a href="/design/hack-the-planet-green/">
-            <img class="b-lazy" src="/img/large/hack-the-planet-green.jpg" alt="Hack the Planet - Green Globe Design for Computer Hackers" />
-        <figcaption>Hack the Planet - Green Globe Design for Computer Hackers</figcaption>
-    </a>
-</figure>
-
-        </div>
-        <div class="col-3-md">
-            <figure class="preview">
-    <a href="/design/run-bsd/">
-            <img class="b-lazy" src="/img/large/run-bsd.jpg" alt="RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins" />
-        <figcaption>RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins</figcaption>
-    </a>
-</figure>
-
-        </div>
-        <div class="col-3-md">
-            <figure class="preview">
-    <a href="/design/shrug-it-works-on-my-machine-medium-white/">
-            <img class="b-lazy" src="/img/large/shrug-it-works-on-my-machine-medium-white.jpg" alt="Shrug It Works On My Machine Funny Programmer Excuse White Design" />
-        <figcaption>Shrug It Works On My Machine Funny Programmer Excuse White Design</figcaption>
-    </a>
-</figure>
-
-        </div>
-</div>
-
-</div>    </main>
-
-    <footer class="dark"><div class="container">
-        Geeksta elsewhere: <a href="https://www.instagram.com/g33ksta/">Instagram</a> • <a href="https://www.youtube.com/@geeksta">YouTube</a> • <a href="https://www.tiktok.com/@g33ksta">TikTok</a> • <a href="https://www.facebook.com/geeksta.net/">Facebook</a>
-        <br>
-        © 2010 - 2026 Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/rss.xml">RSS Feed</a></p>
-    </div></footer>
-
-    <script src="/compiled/script.js"></script>
-
-<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript></body>
-</html>
+manually that are not working in Bootstrap 3.<p>That being said, I <a href=https://github.com/yaph/b2tob3>appreciate your help</a>
+making b2tob3 better and migrating from Bootstrap 2 to 3 easier.</div><div class=col><h3>Featured Merch</h3><figure class=preview><a href=/design/no-class-no-state-lambda-propaganda/><img class=b-lazy src=/img/large/no-class-no-state-lambda-propaganda.jpg alt="No Class No State Functional Programmer Propaganda Parody"><figcaption>No Class No State Functional Programmer Propaganda Parody</figcaption></a></figure><h3>Latest Posts</h3><ul><li><a href=/geeklog/social-media-dimensions-cheat-sheet/>Social Media Dimensions Cheat Sheet 2026</a><li><a href=/geeklog/how-to-check-if-an-ip-address-is-blocked-on-linux/>How to Check if an IP Address is Blocked on Linux</a><li><a href=/geeklog/how-to-inspect-all-cron-jobs-on-a-linux-system/>How to Inspect All Cron Jobs on a Linux System: A Sysadmin's Guide</a><li><a href=/geeklog/building-a-3d-elevation-photo-diary/>Building a 3D Elevation Photo Diary with deck.gl</a><li><a href=/geeklog/thunderbird-keeps-threading-emails-here-s-the-fix/>Thunderbird Keeps Threading Emails? Here's the Fix</a></ul><h3>Featured Book</h3><figure class=preview><a href="https://www.amazon.com/dp/B0C5B9JG57?tag=geeksta-20"><img alt="eBook cover" src=/img/books/chatgpt-interview-prompting.jpg><br><figcaption>Buy on Amazon</figcaption></a></figure><hr><a href=/rss.xml class="button primary">Subscribe to RSS Feed</a></div></div><hr><p>Published by <a href=https://ramiro.org/>Ramiro Gómez</a> on <time datetime=2013-09-09T20:22>September 09, 2013</time>. Subscribe to the <a href=/rss.xml>Geeksta RSS feed</a> to be informed about new posts.<p><strong>Tags:</strong>
+<a class="button outline" href=/tags/web-development/>web development</a>
+<a class="button outline" href=/tags/migration/>migration</a>
+<a class="button outline" href=/tags/python/>python</a>
+<a class="button outline" href=/tags/command-line/>command line</a><p class=text-grey><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href=/about/>about page</a>.<hr><p><strong>Share post:</strong>
+<a rel=nofollow href="https://www.facebook.com/sharer.php?u=https://geeksta.net/tools/b2tob3-migrate-bootstrap/&t=Introducing%20b2tob3%3A%20Easier%20Migration%20to%20Bootstrap%203" class="button success">Facebook</a>
+<a rel=nofollow href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/tools/b2tob3-migrate-bootstrap/&title=Introducing%20b2tob3%3A%20Easier%20Migration%20to%20Bootstrap%203" class="button success">LinkedIn</a>
+<a rel=nofollow href="https://reddit.com/submit?url=https://geeksta.net/tools/b2tob3-migrate-bootstrap/&title=Introducing%20b2tob3%3A%20Easier%20Migration%20to%20Bootstrap%203" class="button success">Reddit</a>
+<a rel=nofollow href="https://twitter.com/share?url=https://geeksta.net/tools/b2tob3-migrate-bootstrap/&text=Introducing%20b2tob3%3A%20Easier%20Migration%20to%20Bootstrap%203" class="button success">Twitter</a><div class="card vm"><h3>Merchandise</h3><div class=row><div class=col-3-md><figure class=preview><a href=/design/caution-i-test-in-production/><img class=b-lazy src=/img/large/caution-i-test-in-production.jpg alt="I Test in Production - Funny Developer Caution Sign Design"><figcaption>I Test in Production - Funny Developer Caution Sign Design</figcaption></a></figure></div><div class=col-3-md><figure class=preview><a href=/design/hack-the-planet-green/><img class=b-lazy src=/img/large/hack-the-planet-green.jpg alt="Hack the Planet - Green Globe Design for Computer Hackers"><figcaption>Hack the Planet - Green Globe Design for Computer Hackers</figcaption></a></figure></div><div class=col-3-md><figure class=preview><a href=/design/run-bsd/><img class=b-lazy src=/img/large/run-bsd.jpg alt="RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins"><figcaption>RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins</figcaption></a></figure></div><div class=col-3-md><figure class=preview><a href=/design/shrug-it-works-on-my-machine-medium-white/><img class=b-lazy src=/img/large/shrug-it-works-on-my-machine-medium-white.jpg alt="Shrug It Works On My Machine Funny Programmer Excuse White Design"><figcaption>Shrug It Works On My Machine Funny Programmer Excuse White Design</figcaption></a></figure></div></div></div></main><footer class=dark><div class=container>Geeksta elsewhere: <a href=https://www.instagram.com/g33ksta/>Instagram</a> • <a href=https://www.youtube.com/@geeksta>YouTube</a> • <a href=https://www.tiktok.com/@g33ksta>TikTok</a> • <a href=https://www.facebook.com/geeksta.net/>Facebook</a><br>© 2010 - 2026 Ramiro Gómez. <a href=/about/>About/Legal info</a> • <a href=/rss.xml>RSS Feed</a></div></footer><script src=/compiled/script.js></script>

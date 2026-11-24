@@ -1,4 +1,1 @@
-$(function(){
-var timeline = new VMM.Timeline();
-timeline.init();
-});
+$(function(){var e=new VMM.Timeline;e.init()})

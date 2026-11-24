@@ -1,18 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-<channel><title>Geeklog RSS Feed from geeksta.net</title>
-    <link>https://geeksta.net/geeklog/rss.xml</link>
-    <description></description>
-    <lastBuildDate>Wed, 29 May 2024 23:14:45 </lastBuildDate>
-    <generator>Logya</generator>
-    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
-    <item>
-        <title><![CDATA[Social Media Dimensions Cheat Sheet 2026]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/social-media-dimensions-cheat-sheet/]]></link>
-        <description><![CDATA[<p>Comprehensive social media dimensions cheat sheet for Facebook, Instagram, YouTube, and TikTok. Includes profile pictures, cover photos, posts, stories, reels, and video sizes for optimal display.</p><img src="/img/geeklog/social-media-dimensions-cheat-sheet.webp" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/social-media-dimensions-cheat-sheet/]]></guid>
-        <pubDate>Wed, 10 Jun 2026 12:32:42 </pubDate>
-        <content:encoded><![CDATA[
+<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Geeklog RSS Feed from geeksta.net</title><link>https://geeksta.net/geeklog/rss.xml</link><description/><lastBuildDate>Wed, 29 May 2024 23:14:45</lastBuildDate><generator>Logya</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Social Media Dimensions Cheat Sheet 2026</title><link>https://geeksta.net/geeklog/social-media-dimensions-cheat-sheet/</link><description>&lt;p>Comprehensive social media dimensions cheat sheet for Facebook, Instagram, YouTube, and TikTok. Includes profile pictures, cover photos, posts, stories, reels, and video sizes for optimal display.&lt;/p>&lt;img src="/img/geeklog/social-media-dimensions-cheat-sheet.webp" alt="Preview Image"></description><guid>https://geeksta.net/geeklog/social-media-dimensions-cheat-sheet/</guid><pubDate>Wed, 10 Jun 2026 12:32:42</pubDate><content:encoded><![CDATA[
         <p>Getting your images and videos to look perfect across social media platforms can be frustrating when you're working with the wrong dimensions. Each platform enforces its own specific layout requirements. This comprehensive cheat sheet provides all the current dimensions you need for Facebook, Instagram, YouTube, and TikTok in one convenient reference guide.</p>
 <p>Whether you're creating content for a personal brand, a business page, or client projects, bookmark this page to ensure your visuals always render at pristine quality.</p>
 <hr />
@@ -125,15 +111,7 @@
 <p>Having the correct dimensions for your content makes the difference between a professional digital presence and a sloppy, poorly cropped feed. This cheat sheet gives you the foundation needed to design once and deploy accurately across Facebook, Instagram, YouTube, and TikTok. Be sure to test your dynamic graphics across both desktop environments and mobile viewports before you publish.</p>
 <hr>
 <p>Thank you for reading!</p>
-<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
-    </item>
-    <item>
-        <title><![CDATA[How to Check if an IP Address is Blocked on Linux]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/how-to-check-if-an-ip-address-is-blocked-on-linux/]]></link>
-        <description><![CDATA[<p>Learn how to check if an IP address is blocked on Linux using iptables, nftables, firewalld, Fail2Ban, and other security tools with practical examples.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/how-to-check-if-an-ip-address-is-blocked-on-linux/]]></guid>
-        <pubDate>Sat, 11 Apr 2026 23:35:32 </pubDate>
-        <content:encoded><![CDATA[
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded></item><item><title>How to Check if an IP Address is Blocked on Linux</title><link>https://geeksta.net/geeklog/how-to-check-if-an-ip-address-is-blocked-on-linux/</link><description>&lt;p>Learn how to check if an IP address is blocked on Linux using iptables, nftables, firewalld, Fail2Ban, and other security tools with practical examples.&lt;/p></description><guid>https://geeksta.net/geeklog/how-to-check-if-an-ip-address-is-blocked-on-linux/</guid><pubDate>Sat, 11 Apr 2026 23:35:32</pubDate><content:encoded><![CDATA[
         <p>When troubleshooting network connectivity issues or managing server security, you may need to verify whether a specific IP address is being blocked by your Linux server. This guide covers the most common methods to check for IP blocks across different firewall and security tools.</p>
 <h2 id="checking-iptables-rules">Checking iptables Rules</h2>
 <p>If your server uses iptables as its firewall, you can search for the IP address in the firewall rules:</p>
@@ -262,15 +240,7 @@ sudo journalctl | grep &quot;203.0.113.50&quot;
 <p>The method you use depends on your server's security configuration. Most modern Linux distributions use either iptables/nftables or firewalld as their primary firewall, often combined with Fail2Ban for intrusion prevention. Start by identifying which firewall system your server uses, then apply the appropriate commands from this guide.</p>
 <hr>
 <p>Thank you for reading!</p>
-<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
-    </item>
-    <item>
-        <title><![CDATA[How to Inspect All Cron Jobs on a Linux System: A Sysadmin's Guide]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/how-to-inspect-all-cron-jobs-on-a-linux-system/]]></link>
-        <description><![CDATA[<p>Learn how to inspect and audit cron jobs on Linux systems, identify suspicious tasks, and follow best practices to keep your scheduled tasks secure and efficient.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/how-to-inspect-all-cron-jobs-on-a-linux-system/]]></guid>
-        <pubDate>Tue, 10 Feb 2026 19:28:05 </pubDate>
-        <content:encoded><![CDATA[
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded></item><item><title>How to Inspect All Cron Jobs on a Linux System: A Sysadmin's Guide</title><link>https://geeksta.net/geeklog/how-to-inspect-all-cron-jobs-on-a-linux-system/</link><description>&lt;p>Learn how to inspect and audit cron jobs on Linux systems, identify suspicious tasks, and follow best practices to keep your scheduled tasks secure and efficient.&lt;/p></description><guid>https://geeksta.net/geeklog/how-to-inspect-all-cron-jobs-on-a-linux-system/</guid><pubDate>Tue, 10 Feb 2026 19:28:05</pubDate><content:encoded><![CDATA[
         <p>Cron is one of the most fundamental tools in a Linux sysadmin's toolkit. It powers everything from nightly database backups to certificate renewals, log rotations, and application health checks. Once scheduled, cron jobs run silently in the background, which is both their strength and their risk.</p>
 <p>Because cron jobs run unattended, they are easy to overlook. Over time, a server accumulates scheduled tasks added by different users, applications, and installers. Without periodic audits, it becomes impossible to know exactly what is running on your system, when, and as whom.</p>
 <p>This guide will teach you where cron jobs live on a Linux system, how to inspect them for all users at once, what normal cron jobs look like, and what suspicious ones look like. By the end, you will have a repeatable process for auditing scheduled tasks on any Linux server.</p>
@@ -594,15 +564,7 @@ grep CRON /var/log/syslog | tail -100
 <p>Make auditing your cron jobs a regular routine rather than a reactive measure when something goes wrong. Performing this audit quarterly or including it in your server onboarding checklist will provide a much clearer understanding of what your systems are doing, even during those early hours of the morning.</p>
 <hr>
 <p>Thank you for reading!</p>
-<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
-    </item>
-    <item>
-        <title><![CDATA[Building a 3D Elevation Photo Diary with deck.gl]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/building-a-3d-elevation-photo-diary/]]></link>
-        <description><![CDATA[<p>How I turned GPS-tagged vacation photos into an interactive 3D journey through the terrain of Spain around Nerja.</p><img src="https://exploring-data.com/img/preview/elevation-diary-nerja.png" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/building-a-3d-elevation-photo-diary/]]></guid>
-        <pubDate>Thu, 05 Feb 2026 12:50:16 </pubDate>
-        <content:encoded><![CDATA[
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded></item><item><title>Building a 3D Elevation Photo Diary with deck.gl</title><link>https://geeksta.net/geeklog/building-a-3d-elevation-photo-diary/</link><description>&lt;p>How I turned GPS-tagged vacation photos into an interactive 3D journey through the terrain of Spain around Nerja.&lt;/p>&lt;img src="https://exploring-data.com/img/preview/elevation-diary-nerja.png" alt="Preview Image"></description><guid>https://geeksta.net/geeklog/building-a-3d-elevation-photo-diary/</guid><pubDate>Thu, 05 Feb 2026 12:50:16</pubDate><content:encoded><![CDATA[
         <p>During a recent two-week vacation in Nerja, Spain, I took hundreds of photos with my phone. Many of them captured GPS coordinates and altitude data. Instead of letting that metadata sit unused, I decided to build an interactive 3D visualization that plots each photo on the actual terrain where it was taken.</p>
 <div class="flex-video widescreen">
     <iframe width="640" height="360" src="https://www.youtube.com/embed/6Ul_n-zxAv4" frameborder="0" allowfullscreen title="3D Elevation Photo Diary Demo"></iframe>
@@ -698,15 +660,7 @@ IMG_20260106_132810881,36.78705,-3.883663888888889,197.6,2026:01:06 13:28:12
 </ul>
 <hr>
 <p>Thank you for reading!</p>
-<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
-    </item>
-    <item>
-        <title><![CDATA[Thunderbird Keeps Threading Emails? Here's the Fix]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/thunderbird-keeps-threading-emails-here-s-the-fix/]]></link>
-        <description><![CDATA[<p>Thunderbird keeps switching to threaded view? Learn how to adjust settings and repair folders to keep your view the way you want it.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/thunderbird-keeps-threading-emails-here-s-the-fix/]]></guid>
-        <pubDate>Mon, 26 Jan 2026 20:49:16 </pubDate>
-        <content:encoded><![CDATA[
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded></item><item><title>Thunderbird Keeps Threading Emails? Here's the Fix</title><link>https://geeksta.net/geeklog/thunderbird-keeps-threading-emails-here-s-the-fix/</link><description>&lt;p>Thunderbird keeps switching to threaded view? Learn how to adjust settings and repair folders to keep your view the way you want it.&lt;/p></description><guid>https://geeksta.net/geeklog/thunderbird-keeps-threading-emails-here-s-the-fix/</guid><pubDate>Mon, 26 Jan 2026 20:49:16</pubDate><content:encoded><![CDATA[
         <p>If Mozilla Thunderbird keeps switching your folders back to <strong>Threaded View</strong> even after you turn it off, you're not imagining things. This is a long-standing Thunderbird quirk caused by multiple, overlapping view settings.</p>
 <p>The good news: you <em>can</em> fix it permanently once you know where to look.</p>
 <h2 id="the-real-problem-too-many-view-settings">The Real Problem: Too Many View Settings</h2>
@@ -767,15 +721,7 @@ IMG_20260106_132810881,36.78705,-3.883663888888889,197.6,2026:01:06 13:28:12
 <p>If threading keeps coming back even after all this, the profile itself may be partially corrupted, and creating a new Thunderbird profile can resolve the issue permanently.</p>
 <hr>
 <p>Thank you for reading!</p>
-<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
-    </item>
-    <item>
-        <title><![CDATA[How Limiting My Internet Usage Changed the Way I Work and Live]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/limited-internet-changed-my-habits/]]></link>
-        <description><![CDATA[<p>Read about how a 30GB monthly data cap transformed my relationship with the Internet, improved productivity, reduced distractions, and encouraged more intentional habits in work and daily life.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/limited-internet-changed-my-habits/]]></guid>
-        <pubDate>Wed, 03 Dec 2025 13:11:51 </pubDate>
-        <content:encoded><![CDATA[
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded></item><item><title>How Limiting My Internet Usage Changed the Way I Work and Live</title><link>https://geeksta.net/geeklog/limited-internet-changed-my-habits/</link><description>&lt;p>Read about how a 30GB monthly data cap transformed my relationship with the Internet, improved productivity, reduced distractions, and encouraged more intentional habits in work and daily life.&lt;/p></description><guid>https://geeksta.net/geeklog/limited-internet-changed-my-habits/</guid><pubDate>Wed, 03 Dec 2025 13:11:51</pubDate><content:encoded><![CDATA[
         <p>After canceling my DSL subscription, I decided to rely solely on mobile data for my Internet access at home. To make things even more intentional, I chose a data plan capped at 30GB per month. For someone who works from home as a system administrator and programmer, this monthly limit might sound restrictive — especially when you factor in the need to update software and keep a reliable connection for work.</p>
 <p>But after over a month of living with this setup, I've found that the experience has noticeably changed my habits and workflow for the better. While it hasn't always been easy, it has caused me to reexamine how I use the Internet and how I approach my work and daily tasks. Here's what I've learned.</p>
 <h2 id="deliberate-internet-usage">Deliberate Internet Usage</h2>
@@ -799,15 +745,7 @@ IMG_20260106_132810881,36.78705,-3.883663888888889,197.6,2026:01:06 13:28:12
 <p>Will I stick with this 30GB limit for the long run? I'm not sure yet. But the lessons I've learned — about being conscious of my habits, staying focused, and reducing distractions — will remain with me regardless of my future Internet plans. For now, I'm enjoying life with less digital noise.</p>
 <hr>
 <p>Thank you for reading!</p>
-<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
-    </item>
-    <item>
-        <title><![CDATA[Practical Tips to Reduce Data Usage on Phones, Tablets, and Computers]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/reduce-data-usage-guide/]]></link>
-        <description><![CDATA[<p>Discover simple, effective tips to reduce data usage on phones, tablets, and computers. Save data, lower costs, and improve your online experience with practical steps.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/reduce-data-usage-guide/]]></guid>
-        <pubDate>Sat, 29 Nov 2025 12:30:15 </pubDate>
-        <content:encoded><![CDATA[
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded></item><item><title>Practical Tips to Reduce Data Usage on Phones, Tablets, and Computers</title><link>https://geeksta.net/geeklog/reduce-data-usage-guide/</link><description>&lt;p>Discover simple, effective tips to reduce data usage on phones, tablets, and computers. Save data, lower costs, and improve your online experience with practical steps.&lt;/p></description><guid>https://geeksta.net/geeklog/reduce-data-usage-guide/</guid><pubDate>Sat, 29 Nov 2025 12:30:15</pubDate><content:encoded><![CDATA[
         <p>With the growing reliance on the Internet, managing your data usage has become more critical than ever, especially if you're on a limited or expensive mobile data plan. Excessive consumption can lead to hefty overage fees, slower tethered speeds, or simply running out of data altogether. Whether you're using a smartphone, tablet, or computer, this guide offers practical tips to help reduce data usage while staying connected and productive.</p>
 <h2 id="general-tips-for-saving-data-across-all-devices">General Tips for Saving Data Across All Devices</h2>
 <p>Before diving into device-specific suggestions, here are some universal strategies for data savings:</p>
@@ -864,15 +802,7 @@ IMG_20260106_132810881,36.78705,-3.883663888888889,197.6,2026:01:06 13:28:12
 <p>Take control of your data plan and ensure you're making the most of your Internet experience without unnecessary stress or expense!</p>
 <hr>
 <p>Thank you for reading!</p>
-<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
-    </item>
-    <item>
-        <title><![CDATA[Fail2ban Cheat Sheet for Sysadmins]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/fail2ban-cheat-sheet/]]></link>
-        <description><![CDATA[<p>Fail2ban is an essential tool for protecting Linux systems from brute-force attacks by monitoring logs and banning IPs that exhibit malicious behavior. This cheat sheet provides the most important concepts and commands for managing Fail2ban effectively.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/fail2ban-cheat-sheet/]]></guid>
-        <pubDate>Thu, 20 Nov 2025 22:08:28 </pubDate>
-        <content:encoded><![CDATA[
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded></item><item><title>Fail2ban Cheat Sheet for Sysadmins</title><link>https://geeksta.net/geeklog/fail2ban-cheat-sheet/</link><description>&lt;p>Fail2ban is an essential tool for protecting Linux systems from brute-force attacks by monitoring logs and banning IPs that exhibit malicious behavior. This cheat sheet provides the most important concepts and commands for managing Fail2ban effectively.&lt;/p></description><guid>https://geeksta.net/geeklog/fail2ban-cheat-sheet/</guid><pubDate>Thu, 20 Nov 2025 22:08:28</pubDate><content:encoded><![CDATA[
         <p>Fail2ban is a critical tool for safeguarding servers against brute-force attacks by monitoring logs and banning malicious IPs. This cheat sheet provides the most important concepts and commands for managing Fail2ban effectively.</p>
 <h2 id="1-core-concepts">1. Core Concepts</h2>
 <ul>
@@ -1041,15 +971,7 @@ dbfile = /var/lib/fail2ban/fail2ban.sqlite3
 <p>Fail2ban is a powerful tool to lock down your system against brute-force attacks. Regularly monitor logs, refine filters, and keep configs well-maintained for optimal performance and security.</p>
 <hr>
 <p>Thank you for reading!</p>
-<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
-    </item>
-    <item>
-        <title><![CDATA[Build Mental Resilience: A 30-Day Challenge Inspired by Science]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/resilience-challenge-introduction/]]></link>
-        <description><![CDATA[<p>Start building resilience with a free 30-day challenge. This introduction explains the science-backed daily practices for lasting mental strength.</p><img src="/img/tools/resilience-challenge.png" alt="Preview Image">]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/resilience-challenge-introduction/]]></guid>
-        <pubDate>Mon, 06 Oct 2025 14:17:37 </pubDate>
-        <content:encoded><![CDATA[
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded></item><item><title>Build Mental Resilience: A 30-Day Challenge Inspired by Science</title><link>https://geeksta.net/geeklog/resilience-challenge-introduction/</link><description>&lt;p>Start building resilience with a free 30-day challenge. This introduction explains the science-backed daily practices for lasting mental strength.&lt;/p>&lt;img src="/img/tools/resilience-challenge.png" alt="Preview Image"></description><guid>https://geeksta.net/geeklog/resilience-challenge-introduction/</guid><pubDate>Mon, 06 Oct 2025 14:17:37</pubDate><content:encoded><![CDATA[
         <p>After listening to the insightful discussion on resilience research in the SOLVED Podcast with Mark Manson and Drew Bernie, I felt inspired to create something practical. The episode highlighted that resilience isn't a mysterious trait but a skill that can be developed. This led me to create <a href="/tools/resilience/">a free, simple online tool</a> designed to help people build resilience through daily practice. Here's an example of a daily challenge from the tool.</p>
 <p><img alt="Resilience Challenge Example Screen" src="/img/tools/resilience-challenge.png" /></p>
 <h2 id="the-science-behind-this-approach">The Science Behind This Approach</h2>
@@ -1102,15 +1024,7 @@ dbfile = /var/lib/fail2ban/fail2ban.sqlite3
 <p>Ready to get started? <a href="/tools/resilience/">Join the challenge here</a>.</p>
 <hr>
 <p>Thank you for reading!</p>
-<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
-    </item>
-    <item>
-        <title><![CDATA[Setting Up Google Drive Backups on Ubuntu with rclone]]></title>
-        <link><![CDATA[https://geeksta.net/geeklog/setting-up-google-drive-backups-on-ubuntu-with-rclone/]]></link>
-        <description><![CDATA[<p>Learn how to set up automated backups from Ubuntu Linux to Google Drive using rclone, including OAuth setup, backup scripts, and scheduling with cron.</p>]]></description>
-        <guid><![CDATA[https://geeksta.net/geeklog/setting-up-google-drive-backups-on-ubuntu-with-rclone/]]></guid>
-        <pubDate>Tue, 30 Sep 2025 13:55:47 </pubDate>
-        <content:encoded><![CDATA[
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded></item><item><title>Setting Up Google Drive Backups on Ubuntu with rclone</title><link>https://geeksta.net/geeklog/setting-up-google-drive-backups-on-ubuntu-with-rclone/</link><description>&lt;p>Learn how to set up automated backups from Ubuntu Linux to Google Drive using rclone, including OAuth setup, backup scripts, and scheduling with cron.&lt;/p></description><guid>https://geeksta.net/geeklog/setting-up-google-drive-backups-on-ubuntu-with-rclone/</guid><pubDate>Tue, 30 Sep 2025 13:55:47</pubDate><content:encoded><![CDATA[
         <p>This tutorial will show you how to set up automated backups from Ubuntu Linux to Google Drive using rclone. You'll need Ubuntu Linux, a Google account with Google Drive, and terminal access with sudo privileges.</p>
 <h2 id="installing-rclone">Installing rclone</h2>
 <p>If you haven't already installed rclone, open a terminal and run the following commands. The first updates your package list, and the second installs rclone from the Ubuntu repositories.</p>
@@ -1301,6 +1215,4 @@ rclone ls gdrive:Backups --max-depth 2 | tail -n 10
 <p>For advanced features and options, see the official documentation at rclone.org.</p>
 <hr>
 <p>Thank you for reading!</p>
-<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded>
-    </item>
-</channel></rss>
+<p>This article was written by Ramiro Gómez using open source software and the assistance of AI tools. While I strive to ensure accurate information, please verify any details independently before taking action. For more articles, visit the <a href="https://geeksta.net/geeklog/">Geeklog on geeksta.net</a>.</p>        ]]></content:encoded></item></channel></rss>

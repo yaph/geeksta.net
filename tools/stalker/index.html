@@ -1,41 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stalker: Free Browser Fingerprint and Privacy Checker Tool | Geeksta</title>
-<meta name="description" content="See exactly what your browser and network connection reveal about you: IP address, location, canvas and WebGL fingerprints, screen and system details, and privacy signals."><meta name="author" content="Ramiro Gómez"><link rel="canonical" itemprop="url" href="https://geeksta.net/tools/stalker/">
-<link rel="icon" type="image/png" href="/img/icon-small.png">
-<link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Geeksta All Posts RSS feed"><link rel="stylesheet" href="/compiled/stalker.css"></head>
-<body>
-    <div class="wrap">
-  <header>
-    <span class="eyebrow"><a href="/">geeksta.net</a> / <a href="/tools/">tools</a></span>
-    <h1>Everyone you talk to<br><span>online is taking notes.</span></h1>
-    <p class="lede">Every request your browser makes carries a small file's worth of detail about you: who you are, what you're running, and how you're set up. Nothing here leaves your browser except one lookup against a public IP database - everything else is read locally and shown only to you.</p>
-
-    <div class="subject-card">
-      <div>
-        <span class="subject-id-label">SUBJECT ID (derived from the signals below)</span>
-        <span class="subject-id" id="subjectId">computing&hellip;</span>
-      </div>
-      <button class="redact-btn" id="redactBtn" type="button" aria-pressed="false">Redact findings</button>
-    </div>
-
-    <div class="legend">
-      <span><i class="dot low" style="display:inline-block;margin-top:2px;"></i>low - common to many visitors</span>
-      <span><i class="dot med" style="display:inline-block;margin-top:2px;"></i> medium - narrows you down</span>
-      <span><i class="dot high" style="display:inline-block;margin-top:2px;"></i> high - identifies you specifically</span>
-    </div>
-  </header>
-
-  <main id="sections"></main>
-
-  <footer>
-    <p>Everything above comes from standard browser APIs (<code>navigator</code>, <code>screen</code>, <code>canvas</code>, <code>WebGL</code>) plus one call to <a href="https://ipapi.co" target="_blank" rel="noopener">ipapi.co</a> to resolve your IP to a rough location. No data is sent to geeksta.net's servers, no cookies are set, and none of it is stored anywhere - reload the page and it's gone.</p>
-    <p>Canvas and WebGL rendering, screen size, timezone, and installed fonts are the signals that make browser fingerprinting possible even with cookies fully blocked. A privacy-focused browser (or extensions like uBlock Origin / CanvasBlocker) can flatten several of these to the same generic value for every visitor.</p>
-  </footer>
-</div>
-<script src="/compiled/stalker.js"></script><script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript></body>
-</html>
+<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Stalker: Free Browser Fingerprint and Privacy Checker Tool | Geeksta</title><meta name=description content="See exactly what your browser and network connection reveal about you: IP address, location, canvas and WebGL fingerprints, screen and system details, and privacy signals."><meta name=author content="Ramiro Gómez"><link rel=canonical itemprop=url href=https://geeksta.net/tools/stalker/><link rel=icon type=image/png href=/img/icon-small.png><link rel=alternate type=application/rss+xml href=/rss.xml title="Geeksta All Posts RSS feed"><link rel=stylesheet href=/compiled/stalker.css><div class=wrap><header><span class=eyebrow><a href=/>geeksta.net</a> / <a href=/tools/>tools</a></span><h1>Everyone you talk to<br><span>online is taking notes.</span></h1><p class=lede>Every request your browser makes carries a small file's worth of detail about you: who you are, what you're running, and how you're set up. Nothing here leaves your browser except one lookup against a public IP database - everything else is read locally and shown only to you.<div class=subject-card><div><span class=subject-id-label>SUBJECT ID (derived from the signals below)</span>
+<span class=subject-id id=subjectId>computing&mldr;</span></div><button class=redact-btn id=redactBtn type=button aria-pressed=false>Redact findings</button></div><div class=legend><span><i class="dot low" style=display:inline-block;margin-top:2px></i>low - common to many visitors</span>
+<span><i class="dot med" style=display:inline-block;margin-top:2px></i> medium - narrows you down</span>
+<span><i class="dot high" style=display:inline-block;margin-top:2px></i> high - identifies you specifically</span></div></header><main id=sections></main><footer><p>Everything above comes from standard browser APIs (<code>navigator</code>, <code>screen</code>, <code>canvas</code>, <code>WebGL</code>) plus one call to <a href=https://ipapi.co target=_blank rel=noopener>ipapi.co</a> to resolve your IP to a rough location. No data is sent to geeksta.net's servers, no cookies are set, and none of it is stored anywhere - reload the page and it's gone.<p>Canvas and WebGL rendering, screen size, timezone, and installed fonts are the signals that make browser fingerprinting possible even with cookies fully blocked. A privacy-focused browser (or extensions like uBlock Origin / CanvasBlocker) can flatten several of these to the same generic value for every visitor.</footer></div><script src=/compiled/stalker.js></script>

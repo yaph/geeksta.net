@@ -1,1 +1,1 @@
-"use strict";fetch("https://ipapi.co/json/").then(function(response){return response.json()}).then(function(data){for(var _i=0,_arr=["ip","city"];_i<_arr.length;_i++){var item=_arr[_i];document.getElementById(item).textContent=data[item]}});
+"use strict";fetch("https://ipapi.co/json/").then(function(e){return e.json()}).then(function(e){for(var n,t=0,s=["ip","city"];t<s.length;t++)n=s[t],document.getElementById(n).textContent=e[n]})

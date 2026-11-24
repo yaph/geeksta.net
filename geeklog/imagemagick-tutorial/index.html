@@ -1,243 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Unlock the Power of ImageMagick: A Beginner&#39;s Guide to Image Processing | Geeksta</title>
-<meta name="description" content="ImageMagick is a powerful open-source tool for image processing. This tutorial covers the basic commands for image conversion, resizing, cropping, rotating, and adding effects. Learn how to..."><meta name="author" content="Ramiro Gómez"><link rel="canonical" itemprop="url" href="https://geeksta.net/geeklog/imagemagick-tutorial/">
-<link rel="icon" type="image/png" href="/img/icon-small.png">
-<link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Geeksta All Posts RSS feed">
-            <meta property="og:image" content="/img/geeklog/geeklog.png">
-    <link rel="stylesheet" href="/vendor/chota.min.css">
-    <link rel="stylesheet" href="/compiled/style.css">
-    <link rel="stylesheet" href="/compiled/dropdown.css">
-
-<link rel="stylesheet" href="/vendor/highlight/styles/idea.css">
-</head>
-<body>
-    <header><nav class="nav dark">
-        <div class="nav-left">
-            <a class="brand" href="/"><img class="logo" src="/img/icon-small.png" alt="logo">Geeksta</a>
-        </div>
-        <ul class="nav-right">
-            <li>
-                <a href="#">Sections ▾</a>
-                <ul class="dropdown">
-                    <li><a href="/reviews/">Book Reviews</a></li>
-                    <li><a href="/cover-art-overboard/">Cover Art Overboard</a>
-                    <li><a href="/visualizations/">Data Visualizations</a></li>
-                    <li><a href="/js-drawing/">Drawing with JavaScript</a></li>
-                    <li><a href="/events/">Geek Events</a></li>
-                    <li><a href="/screencasts/">Screencasts</a></li>
-                    <li><a href="/videos/">Videos</a></li>
-                </ul>
-            </li>
-            <li><a href="/geeklog/">Geeklog</a></li>
-            <li><a href="/merch/">Merch</a></li>
-            <li><a href="/tools/">Tools</a></li>
-        </ul>
-    </nav></header>
-
-    <main class="container">
-<div class="row">
-    <div class="col-9-md">
-        <h1>Unlock the Power of ImageMagick: A Beginner's Guide to Image Processing</h1>
-        <p>ImageMagick is a free and open-source command-line tool that allows users to perform various image processing tasks, such as image conversion, resizing, cropping, rotating, adding effects, and more. It supports a wide range of image formats and can be used on Linux, Windows, and macOS. In this tutorial, we'll cover some of the most common commands and options in ImageMagick.</p>
-<h2 id="installation">Installation</h2>
-<p>Before we get started, you'll need to have ImageMagick installed on your system. You can download it from the <a href="https://imagemagick.org/">official website</a>, or install it via your package manager. On Ubuntu/Debian:</p>
-<pre><code class="language-shell">sudo apt install imagemagick
-</code></pre>
-<p>To check the installed version:</p>
-<pre><code class="language-shell">convert --version
-</code></pre>
-<blockquote>
-<p><strong>ImageMagick 6 vs 7:</strong> Ubuntu 24.04 and earlier (and current Debian releases) ship ImageMagick 6, where <code>convert</code> is the main command. ImageMagick 7 (available on Ubuntu 26.04+, macOS via Homebrew, and from source) replaced <code>convert</code> with <code>magick</code>. All commands in this article use the ImageMagick 6 syntax. If you are on ImageMagick 7, replace <code>convert</code> with <code>magick</code> and <code>composite</code> with <code>magick composite</code> throughout.</p>
-</blockquote>
-<h2 id="basic-commands">Basic Commands</h2>
-<p>Let's start with some basic commands that you'll use frequently:</p>
-<h3 id="convert-an-image-format">Convert an image format</h3>
-<p>To convert an image from one format to another, use the <code>convert</code> command followed by the input and output file names. For example, to convert a JPEG image to PNG, run:</p>
-<pre><code class="language-shell">convert input.jpg output.png
-</code></pre>
-<p>You can also convert multiple files at once by specifying a wildcard character:</p>
-<pre><code class="language-shell">convert *.jpg output/%03d.png
-</code></pre>
-<p>This will convert all JPEG files in the current directory to PNG and save them in the <code>output</code> directory with a three-digit sequence number as the filename.</p>
-<h3 id="resize-an-image">Resize an image</h3>
-<p>To resize an image, use the <code>convert</code> command with the <code>-resize</code> option followed by the new dimensions. For example, to resize an image to fit within <code>800x600</code> pixels, run:</p>
-<pre><code class="language-shell">convert input.jpg -resize 800x600 output.jpg
-</code></pre>
-<p>Note that by default ImageMagick preserves the aspect ratio, so the output dimensions may not be exactly <code>800x600</code> unless the image already matches that ratio. To force exact dimensions regardless of aspect ratio, append <code>!</code>:</p>
-<pre><code class="language-shell">convert input.jpg -resize 800x600! output.jpg
-</code></pre>
-<p>You can also specify the new dimensions as a percentage:</p>
-<pre><code class="language-shell">convert input.jpg -resize 50% output.jpg
-</code></pre>
-<p>This will resize the image to 50% of its original size.</p>
-<h3 id="crop-an-image">Crop an image</h3>
-<p>To crop an image, use the <code>convert</code> command with the <code>-crop</code> option followed by the new dimensions. For example, to crop an image to 400x400 pixels starting from the top left corner, run:</p>
-<pre><code class="language-shell">convert input.jpg -crop 400x400+0+0 output.jpg
-</code></pre>
-<p>The <code>400x400</code> part specifies the new dimensions, and <code>0+0</code> specifies the starting point of the crop. You can also specify the starting point as a percentage of the image size:</p>
-<pre><code class="language-shell">convert input.jpg -crop 50%x50%+0+0 output.jpg
-</code></pre>
-<p>This will crop the image to 50% of its original size, starting from the top left corner of the image.</p>
-<h3 id="rotate-an-image">Rotate an image</h3>
-<p>To rotate an image, use the <code>convert</code> command with the <code>-rotate</code> option followed by the angle. For example, to rotate an image 90 degrees clockwise, run:</p>
-<pre><code class="language-shell">convert input.jpg -rotate 90 output.jpg
-</code></pre>
-<p>You can also specify the rotation angle as a negative value to rotate counterclockwise:</p>
-<pre><code class="language-shell">convert input.jpg -rotate -45 output.jpg
-</code></pre>
-<h3 id="add-a-border-to-an-image">Add a border to an image</h3>
-<p>To add a border to an image, use the <code>convert</code> command with the <code>-border</code> option followed by the border width and color. To add a black border with a width of 10 pixels, run:</p>
-<pre><code class="language-shell">convert input.jpg -bordercolor black -border 10x10 output.jpg
-</code></pre>
-<p>Note that the <code>bordercolor</code> option must precede the <code>border</code> option.</p>
-<h3 id="add-a-blur-effect">Add a blur effect</h3>
-<p>To add a blur effect to an image, use the <code>convert</code> command with the <code>-blur</code> option followed by radius and sigma values. Sigma controls the strength of the blur; radius defines the pixel neighbourhood considered. Setting radius to <code>0</code> lets ImageMagick choose an appropriate value automatically based on sigma, which is the recommended approach:</p>
-<pre><code class="language-shell">convert input.jpg -blur 0x5 output.jpg
-</code></pre>
-<h3 id="add-a-sharpen-effect">Add a sharpen effect</h3>
-<p>To add a sharpen effect to an image, use the <code>convert</code> command with the <code>-sharpen</code> option followed by the radius and sigma. To add a sharpen effect with a radius of 0 and a sigma of 1, run:</p>
-<pre><code class="language-shell">convert input.jpg -sharpen 0x1 output.jpg
-</code></pre>
-<p>You can adjust the radius and sigma values to create different levels of sharpening.</p>
-<h3 id="add-a-sepia-effect">Add a sepia effect</h3>
-<p>To add a sepia effect to an image, use the <code>convert</code> command with the <code>-sepia-tone</code> option followed by the threshold as a percentage of the intensity (0–100%). To add a sepia effect with a threshold of <code>80%</code>, run:</p>
-<pre><code class="language-shell">convert input.jpg -sepia-tone 80% output.jpg
-</code></pre>
-<h3 id="add-a-grayscale-effect">Add a grayscale effect</h3>
-<p>To add a grayscale effect to an image, use the <code>convert</code> command with the <code>-colorspace</code> option followed by the colorspace name. For example, to convert an image to grayscale, run:</p>
-<pre><code class="language-shell">convert input.jpg -colorspace Gray output.jpg
-</code></pre>
-<p>You can also use the <code>brightness-contrast</code> option to adjust the brightness and contrast of the image:</p>
-<pre><code class="language-shell">convert input.jpg -brightness-contrast -20x10 output.jpg
-</code></pre>
-<p>This will decrease the brightness by 20 and increase the contrast by 10, on a scale of -100 to +100 (not percentages).</p>
-<h3 id="add-a-watermark">Add a watermark</h3>
-<p>To add a watermark image to an image, use the <code>composite</code> command with the <code>-dissolve</code> option followed by the opacity and the watermark image. For example, to add a watermark image with an opacity of <code>50%</code> to the bottom right corner of an image, run:</p>
-<pre><code class="language-shell">composite -dissolve 50% -gravity southeast watermark.png input.jpg output.jpg
-</code></pre>
-<p>You can adjust the opacity and gravity values to position the watermark wherever you like. There are many more effects you can add to your images. Experiment with different options and see what kind of creative effects you can come up with!</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>These are just some basic commands to get started with ImageMagick. There are many more advanced features and options available, so be sure to check out the <a href="https://imagemagick.org/script/command-line-processing.php">ImageMagick documentation</a> for more information.</p>
-    </div>
-    <div class="col">
-
-<h3>Featured Merch</h3>
-<figure class="preview">
-    <a href="/design/no-class-no-state-lambda-propaganda/">
-            <img class="b-lazy" src="/img/large/no-class-no-state-lambda-propaganda.jpg" alt="No Class No State Functional Programmer Propaganda Parody" />
-        <figcaption>No Class No State Functional Programmer Propaganda Parody</figcaption>
-    </a>
-</figure>
-
-
-<h3>Latest Posts</h3>
-<ul>
-        <li><a href="/geeklog/social-media-dimensions-cheat-sheet/">Social Media Dimensions Cheat Sheet 2026</a></li>
-        <li><a href="/geeklog/how-to-check-if-an-ip-address-is-blocked-on-linux/">How to Check if an IP Address is Blocked on Linux</a></li>
-        <li><a href="/geeklog/how-to-inspect-all-cron-jobs-on-a-linux-system/">How to Inspect All Cron Jobs on a Linux System: A Sysadmin's Guide</a></li>
-        <li><a href="/geeklog/building-a-3d-elevation-photo-diary/">Building a 3D Elevation Photo Diary with deck.gl</a></li>
-        <li><a href="/geeklog/thunderbird-keeps-threading-emails-here-s-the-fix/">Thunderbird Keeps Threading Emails? Here's the Fix</a></li>
-</ul>
-
-<h3>Featured Book</h3>
-<figure class="preview">
-    <a href="https://www.amazon.com/dp/B0C5B9JG57?tag=geeksta-20">
-        <img alt="eBook cover" src="/img/books/chatgpt-interview-prompting.jpg"><br>
-        <figcaption>Buy on Amazon</figcaption>
-    </a>
-</figure>
-
-<hr>
-
-<a href="/rss.xml" class="button primary">Subscribe to RSS Feed</a></li>    </div>
-</div>
-<hr>
-<p>Published by <a href="https://ramiro.org/">Ramiro Gómez</a> on <time datetime="2023-04-17T01:35">April 17, 2023</time>. Subscribe to the <a href="/rss.xml">Geeksta RSS feed</a> to be informed about new posts.</p>
-<p><strong>Tags:</strong>
-    <a class="button outline" href="/tags/command-line/">command line</a>
-    <a class="button outline" href="/tags/image-processing/">image processing</a>
-    <a class="button outline" href="/tags/tutorial/">tutorial</a>
-</p>
-<p class="text-grey"><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href="/about/">about page</a>.</p><hr>
-<p><strong>Share post:</strong>
-<a rel="nofollow" href="https://www.facebook.com/sharer.php?u=https://geeksta.net/geeklog/imagemagick-tutorial/&t=Unlock%20the%20Power%20of%20ImageMagick%3A%20A%20Beginner%27s%20Guide%20to%20Image%20Processing" class="button success">Facebook</a>
-<a rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/geeklog/imagemagick-tutorial/&title=Unlock%20the%20Power%20of%20ImageMagick%3A%20A%20Beginner%27s%20Guide%20to%20Image%20Processing" class="button success">LinkedIn</a>
-<a rel="nofollow" href="https://reddit.com/submit?url=https://geeksta.net/geeklog/imagemagick-tutorial/&title=Unlock%20the%20Power%20of%20ImageMagick%3A%20A%20Beginner%27s%20Guide%20to%20Image%20Processing" class="button success">Reddit</a>
-<a rel="nofollow" href="https://twitter.com/share?url=https://geeksta.net/geeklog/imagemagick-tutorial/&text=Unlock%20the%20Power%20of%20ImageMagick%3A%20A%20Beginner%27s%20Guide%20to%20Image%20Processing" class="button success">Twitter</a>
-</p>
-<div class="card vm">
-    <h3>Merchandise</h3>
-    <div class="row">
-        <div class="col-3-md">
-            <figure class="preview">
-    <a href="/design/caution-i-test-in-production/">
-            <img class="b-lazy" src="/img/large/caution-i-test-in-production.jpg" alt="I Test in Production - Funny Developer Caution Sign Design" />
-        <figcaption>I Test in Production - Funny Developer Caution Sign Design</figcaption>
-    </a>
-</figure>
-
-        </div>
-        <div class="col-3-md">
-            <figure class="preview">
-    <a href="/design/hack-the-planet-green/">
-            <img class="b-lazy" src="/img/large/hack-the-planet-green.jpg" alt="Hack the Planet - Green Globe Design for Computer Hackers" />
-        <figcaption>Hack the Planet - Green Globe Design for Computer Hackers</figcaption>
-    </a>
-</figure>
-
-        </div>
-        <div class="col-3-md">
-            <figure class="preview">
-    <a href="/design/run-bsd/">
-            <img class="b-lazy" src="/img/large/run-bsd.jpg" alt="RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins" />
-        <figcaption>RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins</figcaption>
-    </a>
-</figure>
-
-        </div>
-        <div class="col-3-md">
-            <figure class="preview">
-    <a href="/design/shrug-it-works-on-my-machine-medium-white/">
-            <img class="b-lazy" src="/img/large/shrug-it-works-on-my-machine-medium-white.jpg" alt="Shrug It Works On My Machine Funny Programmer Excuse White Design" />
-        <figcaption>Shrug It Works On My Machine Funny Programmer Excuse White Design</figcaption>
-    </a>
-</figure>
-
-        </div>
-</div>
-
-</div>    </main>
-
-    <footer class="dark"><div class="container">
-        Geeksta elsewhere: <a href="https://www.instagram.com/g33ksta/">Instagram</a> • <a href="https://www.youtube.com/@geeksta">YouTube</a> • <a href="https://www.tiktok.com/@g33ksta">TikTok</a> • <a href="https://www.facebook.com/geeksta.net/">Facebook</a>
-        <br>
-        © 2010 - 2026 Ramiro Gómez. <a href="/about/">About/Legal info</a> • <a href="/rss.xml">RSS Feed</a></p>
-    </div></footer>
-
-    <script src="/compiled/script.js"></script>
-
-<script src="/vendor/highlight/highlight.pack.js"></script>
-<script src="/js/highlight.js"></script>
-<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript><script type="application/ld+json">
-{
-    "@context": "https://schema.org/",
-    "@type": "BlogPosting",
-    "@id": "https://geeksta.net/geeklog/imagemagick-tutorial/#BlogPosting",
-    "mainEntityOfPage": "https://geeksta.net/geeklog/imagemagick-tutorial/",
-    "headline": "Unlock the Power of ImageMagick: A Beginner's Guide to Image Processing",
-    "description": "ImageMagick is a powerful open-source tool for image processing. This tutorial covers the basic commands for image conversion, resizing, cropping, rotating, and adding effects. Learn how to manipulate your images with this tutorial.",
-    "datePublished": "2023-04-17 01:35:24",
-    "dateModified": "2026-06-11 12:58:45.233816",
-    "author": { "@type": "Person", "name": "Ramiro Gómez", "url": "https://geeksta.net" },
-    "url": "https://geeksta.net/geeklog/imagemagick-tutorial/",
-    "keywords": ["command line", "image processing", "tutorial"],
-    "inLanguage": "en"
-}
-</script>
-</body>
-</html>
+<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unlock the Power of ImageMagick: A Beginner's Guide to Image Processing | Geeksta</title><meta name=description content="ImageMagick is a powerful open-source tool for image processing. This tutorial covers the basic commands for image conversion, resizing, cropping, rotating, and adding effects. Learn how to..."><meta name=author content="Ramiro Gómez"><link rel=canonical itemprop=url href=https://geeksta.net/geeklog/imagemagick-tutorial/><link rel=icon type=image/png href=/img/icon-small.png><link rel=alternate type=application/rss+xml href=/rss.xml title="Geeksta All Posts RSS feed"><meta property="og:image" content="/img/geeklog/geeklog.png"><link rel=stylesheet href=/vendor/chota.min.css><link rel=stylesheet href=/compiled/style.css><link rel=stylesheet href=/compiled/dropdown.css><link rel=stylesheet href=/vendor/highlight/styles/idea.css><header><nav class="nav dark"><div class=nav-left><a class=brand href=/><img class=logo src=/img/icon-small.png alt=logo>Geeksta</a></div><ul class=nav-right><li><a href=#>Sections ▾</a><ul class=dropdown><li><a href=/reviews/>Book Reviews</a><li><a href=/cover-art-overboard/>Cover Art Overboard</a><li><a href=/visualizations/>Data Visualizations</a><li><a href=/js-drawing/>Drawing with JavaScript</a><li><a href=/events/>Geek Events</a><li><a href=/screencasts/>Screencasts</a><li><a href=/videos/>Videos</a></ul><li><a href=/geeklog/>Geeklog</a><li><a href=/merch/>Merch</a><li><a href=/tools/>Tools</a></ul></nav></header><main class=container><div class=row><div class=col-9-md><h1>Unlock the Power of ImageMagick: A Beginner's Guide to Image Processing</h1><p>ImageMagick is a free and open-source command-line tool that allows users to perform various image processing tasks, such as image conversion, resizing, cropping, rotating, adding effects, and more. It supports a wide range of image formats and can be used on Linux, Windows, and macOS. In this tutorial, we'll cover some of the most common commands and options in ImageMagick.<h2 id=installation>Installation</h2><p>Before we get started, you'll need to have ImageMagick installed on your system. You can download it from the <a href=https://imagemagick.org/>official website</a>, or install it via your package manager. On Ubuntu/Debian:<pre><code class=language-shell>sudo apt install imagemagick
+</code></pre><p>To check the installed version:<pre><code class=language-shell>convert --version
+</code></pre><blockquote><p><strong>ImageMagick 6 vs 7:</strong> Ubuntu 24.04 and earlier (and current Debian releases) ship ImageMagick 6, where <code>convert</code> is the main command. ImageMagick 7 (available on Ubuntu 26.04+, macOS via Homebrew, and from source) replaced <code>convert</code> with <code>magick</code>. All commands in this article use the ImageMagick 6 syntax. If you are on ImageMagick 7, replace <code>convert</code> with <code>magick</code> and <code>composite</code> with <code>magick composite</code> throughout.</blockquote><h2 id=basic-commands>Basic Commands</h2><p>Let's start with some basic commands that you'll use frequently:<h3 id=convert-an-image-format>Convert an image format</h3><p>To convert an image from one format to another, use the <code>convert</code> command followed by the input and output file names. For example, to convert a JPEG image to PNG, run:<pre><code class=language-shell>convert input.jpg output.png
+</code></pre><p>You can also convert multiple files at once by specifying a wildcard character:<pre><code class=language-shell>convert *.jpg output/%03d.png
+</code></pre><p>This will convert all JPEG files in the current directory to PNG and save them in the <code>output</code> directory with a three-digit sequence number as the filename.<h3 id=resize-an-image>Resize an image</h3><p>To resize an image, use the <code>convert</code> command with the <code>-resize</code> option followed by the new dimensions. For example, to resize an image to fit within <code>800x600</code> pixels, run:<pre><code class=language-shell>convert input.jpg -resize 800x600 output.jpg
+</code></pre><p>Note that by default ImageMagick preserves the aspect ratio, so the output dimensions may not be exactly <code>800x600</code> unless the image already matches that ratio. To force exact dimensions regardless of aspect ratio, append <code>!</code>:<pre><code class=language-shell>convert input.jpg -resize 800x600! output.jpg
+</code></pre><p>You can also specify the new dimensions as a percentage:<pre><code class=language-shell>convert input.jpg -resize 50% output.jpg
+</code></pre><p>This will resize the image to 50% of its original size.<h3 id=crop-an-image>Crop an image</h3><p>To crop an image, use the <code>convert</code> command with the <code>-crop</code> option followed by the new dimensions. For example, to crop an image to 400x400 pixels starting from the top left corner, run:<pre><code class=language-shell>convert input.jpg -crop 400x400+0+0 output.jpg
+</code></pre><p>The <code>400x400</code> part specifies the new dimensions, and <code>0+0</code> specifies the starting point of the crop. You can also specify the starting point as a percentage of the image size:<pre><code class=language-shell>convert input.jpg -crop 50%x50%+0+0 output.jpg
+</code></pre><p>This will crop the image to 50% of its original size, starting from the top left corner of the image.<h3 id=rotate-an-image>Rotate an image</h3><p>To rotate an image, use the <code>convert</code> command with the <code>-rotate</code> option followed by the angle. For example, to rotate an image 90 degrees clockwise, run:<pre><code class=language-shell>convert input.jpg -rotate 90 output.jpg
+</code></pre><p>You can also specify the rotation angle as a negative value to rotate counterclockwise:<pre><code class=language-shell>convert input.jpg -rotate -45 output.jpg
+</code></pre><h3 id=add-a-border-to-an-image>Add a border to an image</h3><p>To add a border to an image, use the <code>convert</code> command with the <code>-border</code> option followed by the border width and color. To add a black border with a width of 10 pixels, run:<pre><code class=language-shell>convert input.jpg -bordercolor black -border 10x10 output.jpg
+</code></pre><p>Note that the <code>bordercolor</code> option must precede the <code>border</code> option.<h3 id=add-a-blur-effect>Add a blur effect</h3><p>To add a blur effect to an image, use the <code>convert</code> command with the <code>-blur</code> option followed by radius and sigma values. Sigma controls the strength of the blur; radius defines the pixel neighbourhood considered. Setting radius to <code>0</code> lets ImageMagick choose an appropriate value automatically based on sigma, which is the recommended approach:<pre><code class=language-shell>convert input.jpg -blur 0x5 output.jpg
+</code></pre><h3 id=add-a-sharpen-effect>Add a sharpen effect</h3><p>To add a sharpen effect to an image, use the <code>convert</code> command with the <code>-sharpen</code> option followed by the radius and sigma. To add a sharpen effect with a radius of 0 and a sigma of 1, run:<pre><code class=language-shell>convert input.jpg -sharpen 0x1 output.jpg
+</code></pre><p>You can adjust the radius and sigma values to create different levels of sharpening.<h3 id=add-a-sepia-effect>Add a sepia effect</h3><p>To add a sepia effect to an image, use the <code>convert</code> command with the <code>-sepia-tone</code> option followed by the threshold as a percentage of the intensity (0–100%). To add a sepia effect with a threshold of <code>80%</code>, run:<pre><code class=language-shell>convert input.jpg -sepia-tone 80% output.jpg
+</code></pre><h3 id=add-a-grayscale-effect>Add a grayscale effect</h3><p>To add a grayscale effect to an image, use the <code>convert</code> command with the <code>-colorspace</code> option followed by the colorspace name. For example, to convert an image to grayscale, run:<pre><code class=language-shell>convert input.jpg -colorspace Gray output.jpg
+</code></pre><p>You can also use the <code>brightness-contrast</code> option to adjust the brightness and contrast of the image:<pre><code class=language-shell>convert input.jpg -brightness-contrast -20x10 output.jpg
+</code></pre><p>This will decrease the brightness by 20 and increase the contrast by 10, on a scale of -100 to +100 (not percentages).<h3 id=add-a-watermark>Add a watermark</h3><p>To add a watermark image to an image, use the <code>composite</code> command with the <code>-dissolve</code> option followed by the opacity and the watermark image. For example, to add a watermark image with an opacity of <code>50%</code> to the bottom right corner of an image, run:<pre><code class=language-shell>composite -dissolve 50% -gravity southeast watermark.png input.jpg output.jpg
+</code></pre><p>You can adjust the opacity and gravity values to position the watermark wherever you like. There are many more effects you can add to your images. Experiment with different options and see what kind of creative effects you can come up with!<h2 id=conclusion>Conclusion</h2><p>These are just some basic commands to get started with ImageMagick. There are many more advanced features and options available, so be sure to check out the <a href=https://imagemagick.org/script/command-line-processing.php>ImageMagick documentation</a> for more information.</div><div class=col><h3>Featured Merch</h3><figure class=preview><a href=/design/no-class-no-state-lambda-propaganda/><img class=b-lazy src=/img/large/no-class-no-state-lambda-propaganda.jpg alt="No Class No State Functional Programmer Propaganda Parody"><figcaption>No Class No State Functional Programmer Propaganda Parody</figcaption></a></figure><h3>Latest Posts</h3><ul><li><a href=/geeklog/social-media-dimensions-cheat-sheet/>Social Media Dimensions Cheat Sheet 2026</a><li><a href=/geeklog/how-to-check-if-an-ip-address-is-blocked-on-linux/>How to Check if an IP Address is Blocked on Linux</a><li><a href=/geeklog/how-to-inspect-all-cron-jobs-on-a-linux-system/>How to Inspect All Cron Jobs on a Linux System: A Sysadmin's Guide</a><li><a href=/geeklog/building-a-3d-elevation-photo-diary/>Building a 3D Elevation Photo Diary with deck.gl</a><li><a href=/geeklog/thunderbird-keeps-threading-emails-here-s-the-fix/>Thunderbird Keeps Threading Emails? Here's the Fix</a></ul><h3>Featured Book</h3><figure class=preview><a href="https://www.amazon.com/dp/B0C5B9JG57?tag=geeksta-20"><img alt="eBook cover" src=/img/books/chatgpt-interview-prompting.jpg><br><figcaption>Buy on Amazon</figcaption></a></figure><hr><a href=/rss.xml class="button primary">Subscribe to RSS Feed</a></div></div><hr><p>Published by <a href=https://ramiro.org/>Ramiro Gómez</a> on <time datetime=2023-04-17T01:35>April 17, 2023</time>. Subscribe to the <a href=/rss.xml>Geeksta RSS feed</a> to be informed about new posts.<p><strong>Tags:</strong>
+<a class="button outline" href=/tags/tutorial/>tutorial</a>
+<a class="button outline" href=/tags/image-processing/>image processing</a>
+<a class="button outline" href=/tags/command-line/>command line</a><p class=text-grey><strong>Disclosure:</strong> External links on this website may contain affiliate IDs, which means that I earn a commission if you make a purchase using these links. This allows me to offer hopefully valuable content for free while keeping this website sustainable. For more information, please see the disclosure section on the <a href=/about/>about page</a>.<hr><p><strong>Share post:</strong>
+<a rel=nofollow href="https://www.facebook.com/sharer.php?u=https://geeksta.net/geeklog/imagemagick-tutorial/&t=Unlock%20the%20Power%20of%20ImageMagick%3A%20A%20Beginner%27s%20Guide%20to%20Image%20Processing" class="button success">Facebook</a>
+<a rel=nofollow href="https://www.linkedin.com/shareArticle?mini=true&url=https://geeksta.net/geeklog/imagemagick-tutorial/&title=Unlock%20the%20Power%20of%20ImageMagick%3A%20A%20Beginner%27s%20Guide%20to%20Image%20Processing" class="button success">LinkedIn</a>
+<a rel=nofollow href="https://reddit.com/submit?url=https://geeksta.net/geeklog/imagemagick-tutorial/&title=Unlock%20the%20Power%20of%20ImageMagick%3A%20A%20Beginner%27s%20Guide%20to%20Image%20Processing" class="button success">Reddit</a>
+<a rel=nofollow href="https://twitter.com/share?url=https://geeksta.net/geeklog/imagemagick-tutorial/&text=Unlock%20the%20Power%20of%20ImageMagick%3A%20A%20Beginner%27s%20Guide%20to%20Image%20Processing" class="button success">Twitter</a><div class="card vm"><h3>Merchandise</h3><div class=row><div class=col-3-md><figure class=preview><a href=/design/caution-i-test-in-production/><img class=b-lazy src=/img/large/caution-i-test-in-production.jpg alt="I Test in Production - Funny Developer Caution Sign Design"><figcaption>I Test in Production - Funny Developer Caution Sign Design</figcaption></a></figure></div><div class=col-3-md><figure class=preview><a href=/design/hack-the-planet-green/><img class=b-lazy src=/img/large/hack-the-planet-green.jpg alt="Hack the Planet - Green Globe Design for Computer Hackers"><figcaption>Hack the Planet - Green Globe Design for Computer Hackers</figcaption></a></figure></div><div class=col-3-md><figure class=preview><a href=/design/run-bsd/><img class=b-lazy src=/img/large/run-bsd.jpg alt="RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins"><figcaption>RUN BSD - Cool White/Red Design for Unix Hackers & Sysadmins</figcaption></a></figure></div><div class=col-3-md><figure class=preview><a href=/design/shrug-it-works-on-my-machine-medium-white/><img class=b-lazy src=/img/large/shrug-it-works-on-my-machine-medium-white.jpg alt="Shrug It Works On My Machine Funny Programmer Excuse White Design"><figcaption>Shrug It Works On My Machine Funny Programmer Excuse White Design</figcaption></a></figure></div></div></div></main><footer class=dark><div class=container>Geeksta elsewhere: <a href=https://www.instagram.com/g33ksta/>Instagram</a> • <a href=https://www.youtube.com/@geeksta>YouTube</a> • <a href=https://www.tiktok.com/@g33ksta>TikTok</a> • <a href=https://www.facebook.com/geeksta.net/>Facebook</a><br>© 2010 - 2026 Ramiro Gómez. <a href=/about/>About/Legal info</a> • <a href=/rss.xml>RSS Feed</a></div></footer><script src=/compiled/script.js></script><script src=/vendor/highlight/highlight.pack.js></script><script src=/js/highlight.js></script><script type=application/ld+json>{"@context":"https://schema.org/","@type":"BlogPosting","@id":"https://geeksta.net/geeklog/imagemagick-tutorial/#BlogPosting","mainEntityOfPage":"https://geeksta.net/geeklog/imagemagick-tutorial/","headline":"Unlock the Power of ImageMagick: A Beginner's Guide to Image Processing","description":"ImageMagick is a powerful open-source tool for image processing. This tutorial covers the basic commands for image conversion, resizing, cropping, rotating, and adding effects. Learn how to manipulate your images with this tutorial.","datePublished":"2023-04-17 01:35:24","dateModified":"2026-06-11 12:58:45.233816","author":{"@type":"Person","name":"Ramiro Gómez","url":"https://geeksta.net"},"url":"https://geeksta.net/geeklog/imagemagick-tutorial/","keywords":["command line","image processing","tutorial"],"inLanguage":"en"}</script>
